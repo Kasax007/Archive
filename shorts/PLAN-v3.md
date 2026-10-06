@@ -249,8 +249,8 @@ kopieren. Dort holt der Hauptagent sie zum Verschicken ab.
 
 ## Stand
 
-- [ ] 0. Plan gelesen, TTS-Umgebung aufgesetzt, Werkzeuge nach `shorts/tools/` kopiert
-- [ ] 1. Sprechtexte aller 5 Shorts final (`shorts/v3/scripts.md`)
+- [x] 0. Plan gelesen, TTS-Umgebung aufgesetzt, Werkzeuge nach `shorts/tools/` kopiert
+- [x] 1. Sprechtexte aller 5 Shorts final (`shorts/v3/scripts.md`)
 - [ ] 2. Stimme: challenges_v3
 - [ ] 3. Schnitt und Render: challenges_v3
 - [ ] 4. Stimme, Schnitt, Render: casino_v3
@@ -265,3 +265,4 @@ kopieren. Dort holt der Hauptagent sie zum Verschicken ab.
 ## Protokoll
 
 - (Hauptagent) Plan angelegt; Footage als MP4 ins Archiv; Remotion-Skills unter `.claude/skills/`.
+- (Agent, 20:5x UTC) Schritte 0+1 erledigt. TTS-Umgebung (tts/, hf/ im Scratchpad) war noch da. Neue Werkzeuge in `shorts/tools/`: `tts_v3.py` (Chatterbox absatzweise, Referenzstimme = erster Absatz, Whisper-Check mit Neuwurf), `v3lib.py` (Stimme zuerst, Wortzeiten per Whisper auf den Skripttext ausgerichtet, Untertitel in Satz-Chunks, Schnitt per Anker-Phrasen, Zoom-Begrenzung 1,08/1,12, Ducking, loudnorm), je Short ein Beat-Skript (`*_v3.py`). Sprechtexte: `shorts/v3/scripts.md`. Maschine ist durch Benchmarks stark ausgelastet: ein TTS-Absatz braucht ca. 5-10 min. Remotion-Projekt `motion/` angelegt (npm install ok, Quellcode geschrieben, noch nicht gerendert).

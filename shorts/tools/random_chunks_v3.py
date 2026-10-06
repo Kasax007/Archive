@@ -16,12 +16,16 @@ BEATS = [
         (H + 'chunk_walk', 1.2, 1.3, G(speed=0.8), [(0.8, 'mc', 'random/pop', 0.5)]),
     ]),
     dict(at='One chunk is gold', clips=[
-        (H + 'chunk_walk', 0.0, 1.0, G(speed=0.6, focus=(0.5, 0.75)), [(0, 'casino', 'coins3', 0.5)]),
-        (H + 'chunk_walk', 0.8, 1.0, G(speed=0.6, focus=(0.5, 0.75)), [(0, 'mc', 'random/orb', 0.5)]),
+        (H + 'chunk_walk', 0.0, 1.0, G(speed=0.35, focus=(0.5, 0.75)), [(0, 'casino', 'coins3', 0.5)]),
+    ]),
+    dict(at='the next is redstone', clips=[
+        (H + 'chunk_walk', 0.42, 1.0, G(speed=0.5, focus=(0.5, 0.75)), [(0, 'mc', 'random/orb', 0.5)]),
     ]),
     dict(at='then diamond', clips=[
-        (H + 'chunk_walk', 1.6, 1.0, G(speed=0.8, focus=(0.5, 0.75)), [(0, 'mc', 'random/levelup', 0.4)]),
-        (H + 'chunk_walk', 2.6, 1.0, G(speed=0.8, focus=(0.5, 0.75)), [(0, 'mc', 'random/orb', 0.6)]),
+        (H + 'chunk_walk', 1.15, 1.0, G(speed=0.6, focus=(0.5, 0.75)), [(0, 'mc', 'random/levelup', 0.4)]),
+    ]),
+    dict(at='then emerald', clips=[
+        (H + 'chunk_walk', 2.0, 1.0, G(speed=0.6, focus=(0.5, 0.75)), [(0, 'mc', 'random/orb', 0.6)]),
     ]),
     dict(at='And from above', clips=[
         (H + 'chunk_blocks', 1.8, 1.2, G(1.0, 1.07), [(0, 'whoosh', None, 0.4)]),
@@ -36,7 +40,7 @@ BEATS = [
         ('ui/ui_select', 0.5, 1.2, dict(zoom=(1.7, 1.8), focus=(0.5, 0.35), ui=True), [(0.0, 'mc', 'random/click', 0.5)]),
         ('ui/ui_journey', 0.3, 1.2, dict(zoom=(1.25, 1.32), focus=(0.55, 0.45), ui=True), [(0.0, 'mc', 'random/levelup', 0.4)]),
     ]),
-    dict(at='Would you survive', cap_y=1400, end='WOULD YOU *SURVIVE*?', end_at=0.1, clips=[
+    dict(at='Would you survive', cap_y=1400, clips=[
         (CARD, 0, 1.0, dict(zoom=(1.0, 1.06)), [(0, 'impact', None, 0.7)]),
     ]),
 ]

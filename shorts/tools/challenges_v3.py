@@ -53,7 +53,7 @@ BEATS = [
         (H + 'skyblock', 0.3, 1.0, dict(zoom=(1.0, 1.06)), []),
         (CARD, 0, 1.0, dict(zoom=(1.0, 1.04)), [(0, 'impact', None, 0.7)]),
     ]),
-    dict(at='So which', cap_y=1400, end='WHICH ONE *NEXT*?', end_at=0.2, clips=[
+    dict(at='So which', cap_y=1400, clips=[
         (CARD, 0, 1.0, dict(zoom=(1.04, 1.07)), []),
     ]),
 ]

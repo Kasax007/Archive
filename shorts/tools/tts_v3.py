@@ -52,7 +52,7 @@ for name in sys.argv[1:]:
             print(f'{name} p{i} try {attempt} miss={miss} dur={a.shape[-1]/model.sr:.1f}', flush=True)
             if best is None or score < best[0]:
                 best = (score, a)
-            if score <= 2:
+            if score <= 0 or (score <= 1 and attempt >= 1):
                 break
         ta.save(out, best[1].unsqueeze(0), model.sr)
         open(out[:-4] + '.txt', 'w').write(text)

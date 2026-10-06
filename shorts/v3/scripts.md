@@ -1,6 +1,6 @@
 # V3 voice-over scripts (final)
 
-One continuous pitch per short, spoken in paragraphs by one voice. `*word*` = accent colour in the captions.
+One continuous pitch per short, spoken in paragraphs by one voice (Chatterbox, same reference voice for all, played at 0.95x). `*word*` = accent colour in the captions. The spoken text was checked by transcribing the finished mix with Whisper.
 
 ## challenges_v3 (104 words)
 
@@ -12,13 +12,13 @@ One continuous pitch per short, spoken in paragraphs by one voice. `*word*` = ac
 
 > It's called Challenge Craft, and it's free on CurseForge. So, which challenge should I add next?
 
-## casino_v3 (97 words)
+## casino_v3 (107 words)
 
 > I built a real casino inside Minecraft, and the *House* always wins. Every item you own is worth chips, and the dealer will happily buy your loot.
 
 > But every ten minutes, the House collects its fee, and if you can't pay, your run is *over*. So you can grind, or you can gamble.
 
-> Spin the slots for free spins, drop the Plinko ball, and cash out of Crash before the rocket blows up. And if you die? You play *Blackjack* for your life.
+> Spin the slots for free spins, drop the Plinko ball, and cash out of Crash before the rocket blows up. Lose a bet, and the House sends monsters after you. And if you die? You play *Blackjack* for your life.
 
 > It's one of fifty challenges in Challenge Craft, free on CurseForge. Would you gamble?
 
@@ -26,7 +26,7 @@ One continuous pitch per short, spoken in paragraphs by one voice. `*word*` = ac
 
 > What if dying in Minecraft meant playing a hand of *Blackjack*? In my casino challenge, the House collects a fee every ten minutes, and if you can't pay it, your run is over.
 
-> But when you die, the House makes you an offer. Beat the dealer at Blackjack, and you *live*. Hit, stand, or double down, and pray the dealer busts.
+> But when you die, the House makes you an offer. Beat the dealer in Blackjack, and you *live*. Hit, stand, or double down, and pray the dealer busts.
 
 > And when he does, you're back on your feet. It's one of fifty challenges in Challenge Craft, free on CurseForge. Would you gamble?
 

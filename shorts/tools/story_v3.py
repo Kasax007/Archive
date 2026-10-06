@@ -25,11 +25,10 @@ BEATS = [
     ]),
     dict(at='Then came more', clips=[
         M('cushion', 1.0), M('chunk_blocks', 3.0), M('floor_lava', 2.0), M('size_matters', 1.3),
-        M('dice_throw', 1.0), M('double_trouble', 1.7), M('red_light', 4.0), M('upside_down', 2.0),
+        M('double_trouble', 1.7), M('red_light', 4.0),
     ]),
     dict(at='a level tree', clips=[
-        ('ui/ui_journey', 0.2, 1.4, dict(zoom=(1.25, 1.32), focus=(0.55, 0.45), ui=True), [(0, 'mc', 'random/levelup', 0.5)]),
-        ('ui/ui_journey', 1.8, 1.0, dict(zoom=(1.32, 1.25), focus=(0.55, 0.6), ui=True), []),
+        ('ui/ui_journey', 0.2, 1.0, dict(zoom=(1.25, 1.3), focus=(0.55, 0.45), ui=True), [(0, 'mc', 'random/levelup', 0.5)]),
     ]),
     dict(at='until there were', clips=[
         ('ui/ui_select', 1.4, 1.0, dict(zoom=(1.8, 1.7), focus=(0.5, 0.6), ui=True), [(0.2, 'mc', 'random/click', 0.5)]),
@@ -47,7 +46,7 @@ BEATS = [
         (H + 'lockout_bob_run', 2.0, 1.0, G(), []),
     ]),
     dict(at="It's called", cap_y=1400, clips=[(CARD, 0, 1.0, dict(zoom=(1.0, 1.04)), [(0, 'impact', None, 0.7)])]),
-    dict(at='and this is only', cap_y=1400, end='THIS IS ONLY THE *BEGINNING*', end_at=0.0, clips=[(CARD, 0, 1.0, dict(zoom=(1.04, 1.07)), [])]),
+    dict(at='and this is only', cap_y=1400, clips=[(CARD, 0, 1.0, dict(zoom=(1.04, 1.07)), [])]),
 ]
 if __name__ == '__main__':
     v3lib.build('story_v3', BEATS, plan_only='--plan' in sys.argv)

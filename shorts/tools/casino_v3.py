@@ -44,9 +44,12 @@ BEATS = [
         (C + 'casino_crash_climb', 0.0, 1.0, G(speed=4.0, focus=(0.62, 0.42)), [(0.0, 'casino', 'rocket_flight', 0.6)]),
         (C + 'casino_crash_cashout', 0.4, 1.2, G(focus=(0.62, 0.45), flash=True), [(0.1, 'casino', 'cash_out', 0.9), (0.2, 'casino', 'coin_shower2', 0.7)]),
     ]),
+    dict(at='Lose a bet', clips=[
+        (C + 'casino_wave', 5.4, 1.2, G(1.0, 1.07, shake=0.3), [(0.2, 'casino', 'house_sends', 0.8)]),
+        (C + 'casino_wave', 6.6, 1.2, G(1.0, 1.07), [(0.2, 'mc', 'mob/ravager/roar1', 0.6)]),
+    ]),
     dict(at='And if you die', clips=[
-        (C + 'casino_wave', 5.3, 1.0, G(shake=0.3), [(0.2, 'casino', 'house_sends', 0.8)]),
-        (C + 'casino_blackjack', 0.0, 1.0, G(1.0, 1.05), [(0.0, 'mc', 'damage/hit1', 0.7)]),
+        (C + 'casino_blackjack', 0.0, 1.0, G(1.0, 1.05, flash=True), [(0.0, 'mc', 'damage/hit1', 0.7)]),
     ]),
     dict(at='You play Blackjack', clips=[
         (C + 'casino_blackjack', 0.8, 1.5, G(speed=1.3, focus=(0.5, 0.42)), [(0.0, 'casino', 'card_slide1', 0.8), (0.4, 'casino', 'card_place1', 0.8)]),
@@ -56,7 +59,7 @@ BEATS = [
         ('ui/ui_select', 0.5, 1.3, dict(zoom=(1.7, 1.8), focus=(0.5, 0.35), ui=True), [(0.0, 'mc', 'random/click', 0.5)]),
         ('ui/ui_journey', 0.3, 1.3, dict(zoom=(1.25, 1.32), focus=(0.55, 0.45), ui=True), [(0.0, 'mc', 'random/levelup', 0.4)]),
     ]),
-    dict(at='Would you gamble', cap_y=1400, end='WOULD YOU *GAMBLE*?', end_at=0.1, clips=[
+    dict(at='Would you gamble', cap_y=1400, clips=[
         (CARD, 0, 1.0, dict(zoom=(1.0, 1.06)), [(0, 'impact', None, 0.7)]),
     ]),
 ]

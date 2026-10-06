@@ -1,0 +1,84 @@
+1
+00:00:00,079 --> 00:00:01,560
+For years, I watched creators play
+
+2
+00:00:01,560 --> 00:00:03,439
+the craziest Minecraft challenges.
+
+3
+00:00:03,439 --> 00:00:04,679
+The floor is lava.
+
+4
+00:00:04,679 --> 00:00:06,440
+Every block drops something random.
+
+5
+00:00:06,440 --> 00:00:07,960
+One heart for the whole game.
+
+6
+00:00:07,960 --> 00:00:09,779
+And every time, I thought: why can't
+
+7
+00:00:09,779 --> 00:00:11,009
+I just play this myself?
+
+8
+00:00:11,315 --> 00:00:12,655
+So in April twenty twenty-five,
+
+9
+00:00:12,655 --> 00:00:13,635
+I wrote the first few challenges
+
+10
+00:00:13,635 --> 00:00:15,635
+into a mod. Then came more.
+
+11
+00:00:15,635 --> 00:00:17,135
+A timer, a challenge picker,
+
+12
+00:00:17,135 --> 00:00:18,035
+a level tree with XP,
+
+13
+00:00:18,035 --> 00:00:19,975
+until there were fifty of them.
+
+14
+00:00:19,975 --> 00:00:21,095
+Then I went further.
+
+15
+00:00:21,095 --> 00:00:21,515
+A whole casino,
+
+16
+00:00:21,515 --> 00:00:23,435
+where the House always wins.
+
+17
+00:00:23,435 --> 00:00:25,175
+And now I'm teaching an AI called Bob
+
+18
+00:00:25,175 --> 00:00:27,285
+to play Lockout Bingo against you.
+
+19
+00:00:27,452 --> 00:00:28,572
+It's called Challenge Craft,
+
+20
+00:00:28,572 --> 00:00:29,792
+it's free on CurseForge,
+
+21
+00:00:29,792 --> 00:00:31,482
+and this is only the beginning.
+

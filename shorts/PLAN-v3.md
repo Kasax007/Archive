@@ -253,10 +253,10 @@ kopieren. Dort holt der Hauptagent sie zum Verschicken ab.
 - [x] 1. Sprechtexte aller 5 Shorts final (`shorts/v3/scripts.md`)
 - [x] 2. Stimme: challenges_v3
 - [x] 3. Schnitt und Render: challenges_v3
-- [ ] 4. Stimme, Schnitt, Render: casino_v3
-- [ ] 5. Stimme, Schnitt, Render: blackjack_life_v3
-- [ ] 6. Stimme, Schnitt, Render: random_chunks_v3
-- [ ] 7. Short 5 (story_v3): Stimme, Schnitt, Render
+- [x] 4. Stimme, Schnitt, Render: casino_v3
+- [x] 5. Stimme, Schnitt, Render: blackjack_life_v3
+- [x] 6. Stimme, Schnitt, Render: random_chunks_v3
+- [x] 7. Short 5 (story_v3): Stimme, Schnitt, Render
 - [ ] 8. Remotion aufgesetzt (oder Plan B begründet)
 - [ ] 9. story_v5.1 mit Motion Graphics
 - [ ] 10. weitere 5.1-Fassungen, wo sinnvoll (begründen)
@@ -267,3 +267,4 @@ kopieren. Dort holt der Hauptagent sie zum Verschicken ab.
 - (Hauptagent) Plan angelegt; Footage als MP4 ins Archiv; Remotion-Skills unter `.claude/skills/`.
 - (Agent, 20:5x UTC) Schritte 0+1 erledigt. TTS-Umgebung (tts/, hf/ im Scratchpad) war noch da. Neue Werkzeuge in `shorts/tools/`: `tts_v3.py` (Chatterbox absatzweise, Referenzstimme = erster Absatz, Whisper-Check mit Neuwurf), `v3lib.py` (Stimme zuerst, Wortzeiten per Whisper auf den Skripttext ausgerichtet, Untertitel in Satz-Chunks, Schnitt per Anker-Phrasen, Zoom-Begrenzung 1,08/1,12, Ducking, loudnorm), je Short ein Beat-Skript (`*_v3.py`). Sprechtexte: `shorts/v3/scripts.md`. Maschine ist durch Benchmarks stark ausgelastet: ein TTS-Absatz braucht ca. 5-10 min. Remotion-Projekt `motion/` angelegt (npm install ok, Quellcode geschrieben, noch nicht gerendert).
 - (Agent 21:3x UTC) challenges_v3 fertig: shorts/v3/challenges_v3_{final,clean}.mp4 (29,0 s, 26 Clips, 104 Wörter), .srt, _voice.m4a. Whisper-Rücktranskription des Mixes = Skript. Sprache läuft auf 0,95x (Chatterbox spricht sehr schnell). TTS für casino/story/blackjack/random_chunks läuft weiter im Hintergrund (vo3/ im Scratchpad, ca. 8 min je Absatz).
+- (Agent 23:5x UTC) Schritte 4-7 fertig: casino_v3 (29,2 s), blackjack_life_v3 (22,2 s), random_chunks_v3 (23,3 s), story_v3 (32,2 s) in shorts/v3/ (final, clean, srt, voice.m4a). Sprache per Whisper gegengeprüft. Hinweis: die Stimme spricht ca. 4 Wörter/s; 70-110 Wörter ergeben daher 22-32 s statt 30-45 s (blackjack/random_chunks bewusst kürzer, wenig Material). Der TTS-Prozess wurde mehrfach vom Speicherlimit (OOM) beendet, wenn parallel gerendert wurde: `tools/vo3loop.sh`-Muster (Neustart-Schleife) nutzen und TTS nicht parallel zum Rendern laufen lassen.

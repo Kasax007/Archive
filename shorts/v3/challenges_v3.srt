@@ -1,0 +1,76 @@
+1
+00:00:00,079 --> 00:00:01,700
+I coded the most viral Minecraft challenges
+
+2
+00:00:01,700 --> 00:00:02,560
+into one mod,
+
+3
+00:00:02,560 --> 00:00:04,259
+so now you can actually play them.
+
+4
+00:00:04,259 --> 00:00:05,400
+In Red Light, Green Light,
+
+5
+00:00:05,400 --> 00:00:07,150
+one step on red and you're dead.
+
+6
+00:00:07,362 --> 00:00:08,302
+Dice lets you walk only
+
+7
+00:00:08,302 --> 00:00:09,282
+as far as you roll.
+
+8
+00:00:09,282 --> 00:00:10,762
+Every chunk is one random block,
+
+9
+00:00:10,762 --> 00:00:12,322
+the floor burns if you stand still,
+
+10
+00:00:12,322 --> 00:00:13,932
+and one zombie becomes ten.
+
+11
+00:00:14,117 --> 00:00:15,377
+And here's the best part.
+
+12
+00:00:15,377 --> 00:00:16,977
+Race your friends in Lockout Bingo,
+
+13
+00:00:16,977 --> 00:00:17,817
+or play against Bob,
+
+14
+00:00:17,817 --> 00:00:19,657
+an AI I'm teaching to beat you.
+
+15
+00:00:19,657 --> 00:00:20,877
+Stack challenges for more XP
+
+16
+00:00:20,877 --> 00:00:22,947
+and unlock all fifty.
+
+17
+00:00:22,947 --> 00:00:24,227
+It's called Challenge Craft,
+
+18
+00:00:24,227 --> 00:00:25,877
+and it's free on CurseForge.
+
+19
+00:00:26,047 --> 00:00:28,077
+So, which challenge should I add next?
+

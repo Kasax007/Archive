@@ -24,6 +24,7 @@ FPS = cut.FPS
 SR = 48000
 os.makedirs(OUT, exist_ok=True)
 SCRIPTS = json.load(open(os.path.dirname(os.path.abspath(__file__)) + '/scripts_v3.json'))
+SLOW = 0.95        # the TTS speaks fast; a touch slower (pitch kept) is easier to follow
 GAP = 0.32          # pause between paragraphs, s
 TAIL = 0.9          # picture after the last word, s
 LEAD = 0.07         # a cut lands this much before the word it belongs to
@@ -60,7 +61,11 @@ def voice(name, whisper=None):
     wav = [np.zeros(int(0.12 * SR), np.float32)]
     wm = None
     for i, para in enumerate(paras):
-        a = _load(f'{VO}/{name}/p{i:02d}.wav')
+        src = f'{VO}/{name}/p{i:02d}.wav'
+        slow = f'{VO}/{name}/p{i:02d}.s.wav'
+        if not os.path.exists(slow):
+            subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', src, '-filter:a', f'atempo={SLOW}', slow], check=True)
+        a = _load(slow)
         a = a / (np.abs(a).max() + 1e-6) * 0.85
         starts.append(t)
         jf = f'{VO}/{name}/p{i:02d}.words.json'
@@ -70,7 +75,7 @@ def voice(name, whisper=None):
             if wm is None:
                 from faster_whisper import WhisperModel
                 wm = WhisperModel('base.en', device='cpu', compute_type='int8', cpu_threads=2)
-            segs, _ = wm.transcribe(f'{VO}/{name}/p{i:02d}.wav', language='en', word_timestamps=True)
+            segs, _ = wm.transcribe(slow, language='en', word_timestamps=True)
             words = [(w.word.strip(), w.start, w.end) for s in segs for w in s.words]
             json.dump(words, open(jf, 'w'))
         allw.extend(align(script_tokens(para), words, len(a) / SR, t))
@@ -116,7 +121,8 @@ def align(toks, words, dur, off):
 
 # ------------------------------------------------------------------ captions
 
-MAXC, MAXW = 44, 9
+MAXC, MAXW = 42, 9
+BREAK_BEFORE = {'and', 'or', 'but', 'so', 'then', 'until', 'into', 'in', 'on', 'of', 'to', 'for', 'with', 'against', 'from', 'where', 'that', 'if', 'as'}
 
 
 def _chunks(words):
@@ -157,9 +163,9 @@ def _chunks(words):
             while not ok(c):
                 # break at a conjunction nearest the middle, else the middle
                 mid = len(c) / 2
-                cands = [k for k in range(2, len(c) - 1) if c[k][0].lower() in ('and', 'or', 'but', 'so', 'then', 'until')]
+                cands = [k for k in range(2, len(c) - 1) if c[k][0].lower().strip(',.') in BREAK_BEFORE]
                 k = min(cands, key=lambda k: abs(k - mid)) if cands else int(round(mid))
-                if cands and abs(k - mid) > len(c) / 3:
+                if cands and abs(k - mid) > 3:
                     k = int(round(mid))
                 out.append(c[:k])
                 c = c[k:]
@@ -229,7 +235,7 @@ def plan(beats, words, total):
         starts.append(int(round(max(0, words[k][2] - LEAD) * FPS)))
         k += 1
     starts.append(n_total)
-    out, extra = [], []
+    out, extra, capy = [], [], []
     for bi, b in enumerate(beats):
         f0, f1 = starts[bi], starts[bi + 1]
         if f1 - f0 < 6:
@@ -252,7 +258,7 @@ def plan(beats, words, total):
             if os.path.isdir(d):
                 n = len(cut._files(d))
                 last = c.source_index(c.frames - 1)
-                if last > n - 1 + 3:
+                if n > 1 and last > n - 1 + 3:
                     print(f'  note: {shot} runs past its end ({last} > {n - 1}) at {f / FPS:.1f}s (last frame held)')
             else:
                 raise SystemExit('missing shot ' + shot)
@@ -260,11 +266,13 @@ def plan(beats, words, total):
                 print(f'  note: clip {length:.2f}s at {f / FPS:.1f}s ({shot})')
             out.append((c, f / FPS, cues))
             f = fe
+        if b.get('cap_y'):
+            capy.append((f0 / FPS, f1 / FPS, b['cap_y']))
         if b.get('hook'):
             extra.append(Caption(f0 / FPS, f1 / FPS, b['hook'], 'hook', y=b.get('hook_y', 330)))
         if b.get('end'):
             extra.append(Caption(f0 / FPS + b.get('end_at', 0.0), f1 / FPS, b['end'], y=b.get('end_y', 1580)))
-    return out, extra, [s / FPS for s in starts]
+    return out, extra, [s / FPS for s in starts], capy
 
 
 def sfx_track(pl, total, whoosh_gain=0.14):
@@ -305,12 +313,16 @@ def ts(x):
     return f'{h:02d}:{m:02d}:{int(s):02d},{int((s % 1) * 1000):03d}'
 
 
-def build(name, beats, final_only=False, plan_only=False, cap_y=None, cap_size=72):
+def build(name, beats, final_only=False, plan_only=False, cap_y=None, cap_size=80):
     """name e.g. 'challenges_v3'"""
     wav, words, vend = voice(name)
     total = round((vend + TAIL) * FPS) / FPS
     caps = captions(words, total, size=cap_size, y=cap_y)
-    pl, extra, bstarts = plan(beats, words, total)
+    pl, extra, bstarts, capy = plan(beats, words, total)
+    for c in caps:
+        for a, b2, y in capy:
+            if a - 0.01 <= c.t0 < b2:
+                c.y = y
     clips = [c for c, _, _ in pl]
     print(f'{name}: voice {vend:.1f} s, cut {total:.1f} s, {len(clips)} clips, avg {total / len(clips):.2f} s/clip, '
           f'{sum(len(w) for w in [words])} words')

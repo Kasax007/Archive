@@ -14,8 +14,10 @@ VO = SP + '/vo3'
 S = json.load(open(HERE + '/scripts_v3.json'))
 model = ChatterboxTTS.from_pretrained(device='cpu')
 wh = WhisperModel('base.en', device='cpu', compute_type='int8', cpu_threads=2)
-norm = lambda s: re.sub(r'[^a-z0-9 ]', '', s.lower().replace('-', ' ')).split()
-NUM = {'20': 'twenty', '2025': 'twenty twenty five'}
+def norm(s):
+    s = s.lower().replace('-', ' ').replace('2025', 'twenty twenty five').replace('50', 'fifty').replace('96', 'ninety six')
+    s = re.sub(r'\b20\b', 'twenty', s)
+    return re.sub(r'[^a-z0-9 ]', '', s).split()
 REF = VO + '/ref.wav'
 
 
@@ -50,7 +52,7 @@ for name in sys.argv[1:]:
             print(f'{name} p{i} try {attempt} miss={miss} dur={a.shape[-1]/model.sr:.1f}', flush=True)
             if best is None or score < best[0]:
                 best = (score, a)
-            if score <= 1:
+            if score <= 2:
                 break
         ta.save(out, best[1].unsqueeze(0), model.sr)
         open(out[:-4] + '.txt', 'w').write(text)

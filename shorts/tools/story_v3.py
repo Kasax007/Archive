@@ -46,8 +46,8 @@ BEATS = [
         (H + 'lockout_board', 0.5, 1.2, G(), [(0, 'mc', 'random/click', 0.4)]),
         (H + 'lockout_bob_run', 2.0, 1.0, G(), []),
     ]),
-    dict(at="It's called", clips=[(CARD, 0, 1.0, dict(zoom=(1.0, 1.04)), [(0, 'impact', None, 0.7)])]),
-    dict(at='and this is only', end='THIS IS ONLY THE *BEGINNING*', end_at=0.0, clips=[(CARD, 0, 1.0, dict(zoom=(1.04, 1.07)), [])]),
+    dict(at="It's called", cap_y=1400, clips=[(CARD, 0, 1.0, dict(zoom=(1.0, 1.04)), [(0, 'impact', None, 0.7)])]),
+    dict(at='and this is only', cap_y=1400, end='THIS IS ONLY THE *BEGINNING*', end_at=0.0, clips=[(CARD, 0, 1.0, dict(zoom=(1.04, 1.07)), [])]),
 ]
 if __name__ == '__main__':
     v3lib.build('story_v3', BEATS, plan_only='--plan' in sys.argv)

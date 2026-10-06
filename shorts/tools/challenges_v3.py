@@ -32,7 +32,7 @@ BEATS = [
         (H + 'floor_lava', 3.0, 1.0, dict(zoom=(1.0, 1.06), focus=(0.5, 0.45)), [(0.0, 'mc', 'damage/hit2', 0.5)]),
     ]),
     dict(at='and one zombie', clips=[
-        (H + 'double_trouble', 0.4, 1.0, dict(zoom=(1.0, 1.06), focus=(0.45, 0.55)), [(0.0, 'mc', 'mob/zombie/say1', 0.6)]),
+        (H + 'double_trouble', 0.9, 1.0, dict(zoom=(1.0, 1.06), focus=(0.45, 0.55)), [(0.0, 'mc', 'mob/zombie/say1', 0.6)]),
         (H + 'double_trouble', 1.7, 1.8, dict(zoom=(1.0, 1.12), focus=(0.5, 0.55), shake=0.35, flash=True, punch=True), [(0.0, 'impact', None, 0.6), (0.5, 'mc', 'mob/zombie/say2', 0.6)]),
     ]),
     dict(at="And here's the best", clips=[
@@ -49,11 +49,11 @@ BEATS = [
         ('ui/ui_select', 1.6, 1.0, dict(zoom=(1.8, 1.7), focus=(0.5, 0.6), ui=True), [(0.2, 'mc', 'random/click', 0.5)]),
         ('ui/ui_journey', 0.2, 1.4, dict(zoom=(1.25, 1.32), focus=(0.55, 0.45), ui=True), [(0.0, 'mc', 'random/levelup', 0.4)]),
     ]),
-    dict(at="It's called", clips=[
+    dict(at="It's called", cap_y=1400, clips=[
         (H + 'skyblock', 0.3, 1.0, dict(zoom=(1.0, 1.06)), []),
         (CARD, 0, 1.0, dict(zoom=(1.0, 1.04)), [(0, 'impact', None, 0.7)]),
     ]),
-    dict(at='So which', end='WHICH ONE *NEXT*?', end_at=0.2, clips=[
+    dict(at='So which', cap_y=1400, end='WHICH ONE *NEXT*?', end_at=0.2, clips=[
         (CARD, 0, 1.0, dict(zoom=(1.04, 1.07)), []),
     ]),
 ]

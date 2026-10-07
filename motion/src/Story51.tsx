@@ -11,11 +11,9 @@ const COMMITS: Commit[] = [
   {date: '2025-04-24', msg: 'Added Timer'},
   {date: '2025-04-30', msg: 'SkyBlock world generator'},
   {date: '2026-03-01', msg: 'Chunk made of random blocks added as challenge'},
-  {date: '2026-03-01', msg: 'Added blockdrop randomizer'},
   {date: '2026-03-04', msg: 'Added multiplayer server compatibility'},
   {date: '2026-05-15', msg: 'lockout bingo, no food'},
   {date: '2026-07-20', msg: 'added chal 41-45'},
-  {date: '2026-08-07', msg: 'added dice challenge and bug fixes'},
 ];
 
 /** a scene between two phrases of the voice-over */
@@ -65,7 +63,7 @@ export const Story51: React.FC<{captions: boolean}> = ({captions}) => {
   const tMore = at('Then came more');
   const tLevel = at('a level tree');
   const tFifty = at('until there were');
-  const tHouse = at('Then I went');
+  const tHouse = at('A whole casino');
   const tBob = at('And now');
   const tCalled = at("It's called");
   const inHook = (c: {t0: number}) => c.t0 < tHook - 0.05;
@@ -100,7 +98,7 @@ export const Story51: React.FC<{captions: boolean}> = ({captions}) => {
       {captions && chunkList.map((c, i) => (
         inHook(c) ? null : (
           <Sequence key={i} from={fr(c.t0)} durationInFrames={Math.max(2, fr(c.t1) - fr(c.t0))}>
-            <KineticCaption chunk={c} />
+            <KineticCaption chunk={c} y={c.t0 >= tCalled - 0.05 ? 1400 : 1190} />
           </Sequence>
         )
       ))}

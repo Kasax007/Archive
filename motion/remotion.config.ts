@@ -5,3 +5,4 @@ Config.setVideoImageFormat('jpeg');
 Config.setJpegQuality(92);
 Config.setCrf(21);
 Config.setConcurrency(2);
+Config.setPixelFormat('yuv420p');

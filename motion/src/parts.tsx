@@ -113,9 +113,9 @@ const D0 = Date.UTC(2025, 3, 24), D1 = Date.UTC(2026, 9, 1);
 const dx = (y: number, m: number, d: number) => (Date.UTC(y, m - 1, d) - D0) / (D1 - D0);
 export const MILESTONES = [
   {p: dx(2025, 4, 24), label: 'FIRST COMMIT', sub: 'APR 2025'},
-  {p: dx(2026, 3, 2), label: 'LEVEL SYSTEM', sub: 'MAR 2026'},
-  {p: dx(2026, 5, 15), label: 'LOCKOUT BINGO', sub: 'MAY 2026'},
-  {p: dx(2026, 7, 20), label: 'CHALLENGES 41-45', sub: 'JUL 2026'},
+  {p: dx(2026, 3, 2), label: 'LEVELS + XP', sub: 'MAR 2026'},
+  {p: dx(2026, 5, 15), label: 'LOCKOUT', sub: 'MAY 2026'},
+  {p: dx(2026, 7, 20), label: 'CHALLENGE 45', sub: 'JUL 2026'},
   {p: dx(2026, 9, 28), label: 'CHALLENGE 50', sub: 'SEP 2026'},
 ];
 export const Timeline: React.FC<{y?: number}> = ({y = 1500}) => {
@@ -135,11 +135,11 @@ export const Timeline: React.FC<{y?: number}> = ({y = 1500}) => {
         const x = L + W * m.p;
         const born = interpolate(prog, [m.p - 0.002, m.p + 0.04], [0, 1], clamp);
         return (
-          <div key={i} style={{position: 'absolute', left: x - 110, width: 220, top: above ? 4 : 128, textAlign: 'center', opacity: on ? 1 : 0.28,
+          <div key={i} style={{position: 'absolute', left: x - 140, width: 280, top: above ? 4 : 128, textAlign: 'center', opacity: on ? 1 : 0.28,
             transform: `scale(${on ? 0.8 + 0.2 * born : 0.9})`}}>
             {above && <Label m={m} on={on} />}
             {!above && <Label m={m} on={on} />}
-            <div style={{position: 'absolute', left: 95, top: above ? 62 : -22, width: 30, height: 30, borderRadius: 4, background: on ? GOLD : '#555d75', border: '4px solid #10131c', transform: 'rotate(45deg)'}} />
+            <div style={{position: 'absolute', left: 125, top: above ? 70 : -22, width: 30, height: 30, borderRadius: 4, background: on ? GOLD : '#555d75', border: '4px solid #10131c', transform: 'rotate(45deg)'}} />
           </div>
         );
       })}
@@ -148,8 +148,8 @@ export const Timeline: React.FC<{y?: number}> = ({y = 1500}) => {
 };
 const Label: React.FC<{m: {label: string; sub: string}; on: boolean}> = ({m, on}) => (
   <div style={{display: 'inline-block', padding: '8px 10px', background: 'rgba(12,14,22,.85)', borderRadius: 8, border: `2px solid ${on ? GOLD : '#394058'}`}}>
-    <div style={{fontFamily: PIXEL, fontSize: 15, color: '#fff', whiteSpace: 'nowrap'}}>{m.label}</div>
-    <div style={{fontFamily: PIXEL, fontSize: 12, color: GOLD, marginTop: 6}}>{m.sub}</div>
+    <div style={{fontFamily: PIXEL, fontSize: 18, color: '#fff', whiteSpace: 'nowrap'}}>{m.label}</div>
+    <div style={{fontFamily: PIXEL, fontSize: 16, color: GOLD, marginTop: 8}}>{m.sub}</div>
   </div>
 );
 
@@ -184,6 +184,7 @@ export const Counter: React.FC = () => {
   const vers = ['1.21.5', '26.1.2', '26.2', '26.3'];
   return (
     <>
+      <div style={{position: 'absolute', left: 30, right: 30, top: 190, height: 700, borderRadius: 24, background: 'rgba(8,10,16,.78)', border: '3px solid #2b3144'}} />
       <div style={{position: 'absolute', left: 0, right: 0, top: 215, textAlign: 'center', transform: `scale(${sc})`}}>
         <div style={{fontFamily: FONT, fontSize: 330, lineHeight: 0.95, color: n >= 50 ? YELLOW : '#fff', ...outline(18)}}>{n}</div>
         <div style={{fontFamily: FONT, fontSize: 92, color: '#fff', ...outline(10), marginTop: -6}}>CHALLENGES</div>

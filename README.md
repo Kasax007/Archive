@@ -11,4 +11,5 @@ Ablage für alles rund um den Mod *Challenge Craft*, das nicht in den Mod-Code g
 | `stills/` | Standbilder und Kontaktbögen |
 | `motion/` | Motion-Graphics-Projekt (Remotion) |
 | `research/` | Recherche, z. B. Transkripte von Lockout-Bingo-Videos für Bob |
+| `curseforge/` | CurseForge-Beschreibungen (Mod und Modpack, Markdown) und der Changelog 1.1.2 |
 | `.claude/skills/` | Agenten-Skills (Remotion), werden beim Einbinden des Repos geladen |

@@ -1,0 +1,864 @@
+1
+00:00:00,559 --> 00:00:02,390
+You've seen these videos.
+
+2
+00:00:03,040 --> 00:00:04,929
+Minecraft, but the floor is lava.
+
+3
+00:00:05,419 --> 00:00:07,040
+Minecraft, but every chunk is made
+
+4
+00:00:07,040 --> 00:00:08,750
+of one random block.
+
+5
+00:00:09,259 --> 00:00:11,300
+Minecraft, but if you move on a red light,
+
+6
+00:00:11,300 --> 00:00:14,541
+you die. They look like the most fun
+
+7
+00:00:14,541 --> 00:00:17,051
+anyone has ever had in this game.
+
+8
+00:00:17,361 --> 00:00:18,741
+And for a long time,
+
+9
+00:00:18,741 --> 00:00:20,261
+the only way to play them was
+
+10
+00:00:20,261 --> 00:00:22,291
+to watch somebody else do it.
+
+11
+00:00:22,980 --> 00:00:26,160
+Not anymore. This is Challenge Craft,
+
+12
+00:00:26,160 --> 00:00:27,580
+a free mod that puts fifty
+
+13
+00:00:27,580 --> 00:00:30,100
+of those challenges into your own world,
+
+14
+00:00:30,100 --> 00:00:32,990
+ready to play, alone or with your friends.
+
+15
+00:00:34,348 --> 00:00:35,958
+Here's how it works.
+
+16
+00:00:36,248 --> 00:00:37,728
+When you create a new world,
+
+17
+00:00:37,728 --> 00:00:39,698
+there's a new tab called Challenges.
+
+18
+00:00:40,128 --> 00:00:41,508
+Every challenge is a card,
+
+19
+00:00:41,508 --> 00:00:42,928
+and you can pick just one,
+
+20
+00:00:42,928 --> 00:00:45,378
+or stack as many as you dare.
+
+21
+00:00:46,190 --> 00:00:47,750
+Every combination gets
+
+22
+00:00:47,750 --> 00:00:48,650
+a difficulty rating,
+
+23
+00:00:48,650 --> 00:00:51,520
+and that rating decides your reward.
+
+24
+00:00:51,850 --> 00:00:53,900
+A gentle twist pays a little.
+
+25
+00:00:54,050 --> 00:00:56,740
+A truly brutal combination pays a lot.
+
+26
+00:00:57,523 --> 00:01:00,083
+Then you play. The goal is the same
+
+27
+00:01:00,083 --> 00:01:02,913
+as always: beat the Ender Dragon.
+
+28
+00:01:03,143 --> 00:01:04,703
+A timer tracks your run,
+
+29
+00:01:04,703 --> 00:01:06,123
+and every challenge shows you
+
+30
+00:01:06,123 --> 00:01:08,453
+on screen exactly what it's doing.
+
+31
+00:01:09,254 --> 00:01:10,964
+When the dragon falls,
+
+32
+00:01:11,174 --> 00:01:13,624
+you get a run summary card with your time,
+
+33
+00:01:13,834 --> 00:01:15,354
+your difficulty and your XP.
+
+34
+00:01:15,354 --> 00:01:17,094
+You can save it as an image
+
+35
+00:01:17,094 --> 00:01:19,024
+and share it right away.
+
+36
+00:01:20,309 --> 00:01:22,939
+And that XP is the clever part.
+
+37
+00:01:23,209 --> 00:01:24,749
+It's Lifetime XP,
+
+38
+00:01:24,749 --> 00:01:26,859
+which means it never goes away.
+
+39
+00:01:27,069 --> 00:01:29,029
+It carries over into every new world
+
+40
+00:01:29,029 --> 00:01:31,219
+and every server you play on.
+
+41
+00:01:31,937 --> 00:01:34,557
+Lifetime XP fills a level tree
+
+42
+00:01:34,557 --> 00:01:36,147
+from one to twenty.
+
+43
+00:01:36,497 --> 00:01:38,157
+Every level unlocks new challenges,
+
+44
+00:01:38,157 --> 00:01:40,197
+so you start with a handful
+
+45
+00:01:40,197 --> 00:01:44,068
+and slowly work your way up to all fifty.
+
+46
+00:01:44,068 --> 00:01:47,008
+Levels also unlock permanent perks,
+
+47
+00:01:47,008 --> 00:01:48,288
+like night vision,
+
+48
+00:01:48,288 --> 00:01:50,408
+extra hearts or extra strength,
+
+49
+00:01:50,408 --> 00:01:52,738
+for every run you start from then on.
+
+50
+00:01:53,068 --> 00:01:54,688
+And past level twenty,
+
+51
+00:01:54,688 --> 00:01:56,628
+you collect Infinity Stars,
+
+52
+00:01:56,628 --> 00:01:58,408
+which give your name a colored aura
+
+53
+00:01:58,408 --> 00:02:00,958
+that everyone on the server can see.
+
+54
+00:02:02,122 --> 00:02:04,332
+So what can you actually play?
+
+55
+00:02:04,602 --> 00:02:05,522
+Let's take a look at some
+
+56
+00:02:05,522 --> 00:02:07,502
+of the challenges, because this is
+
+57
+00:02:07,502 --> 00:02:09,432
+where the mod really shines.
+
+58
+00:02:10,893 --> 00:02:11,793
+Red Light,
+
+59
+00:02:11,793 --> 00:02:13,613
+Green Light turns the whole world
+
+60
+00:02:13,613 --> 00:02:15,103
+into the famous game.
+
+61
+00:02:15,453 --> 00:02:17,473
+While the light is green, you can run,
+
+62
+00:02:17,473 --> 00:02:19,893
+mine and fight. When it turns yellow,
+
+63
+00:02:19,893 --> 00:02:21,483
+you have three seconds.
+
+64
+00:02:21,713 --> 00:02:24,083
+And on red, nothing is allowed to move.
+
+65
+00:02:24,313 --> 00:02:25,753
+Not a step, not a jump,
+
+66
+00:02:25,753 --> 00:02:27,163
+not even your camera.
+
+67
+00:02:28,001 --> 00:02:30,761
+In Dice Movement, you throw a real die
+
+68
+00:02:30,761 --> 00:02:32,851
+that tumbles across the ground.
+
+69
+00:02:33,201 --> 00:02:35,301
+However many pips land face up,
+
+70
+00:02:35,301 --> 00:02:37,381
+that's how many blocks you may walk,
+
+71
+00:02:37,381 --> 00:02:38,561
+and a ring around you shows
+
+72
+00:02:38,561 --> 00:02:40,531
+how far you can still go.
+
+73
+00:02:41,359 --> 00:02:42,939
+And in Cushion Only,
+
+74
+00:02:42,939 --> 00:02:44,349
+you can't walk at all.
+
+75
+00:02:44,619 --> 00:02:46,639
+You place a cushion, you sit on it,
+
+76
+00:02:46,639 --> 00:02:48,429
+and you stand up where it was.
+
+77
+00:02:48,639 --> 00:02:50,019
+Every journey becomes a chain
+
+78
+00:02:50,019 --> 00:02:51,289
+of little hops.
+
+79
+00:02:52,606 --> 00:02:55,516
+Some challenges change the world itself.
+
+80
+00:02:55,986 --> 00:02:57,486
+With Random Chunk Blocks,
+
+81
+00:02:57,486 --> 00:02:59,106
+every single chunk is rebuilt
+
+82
+00:02:59,106 --> 00:03:01,076
+from one random block.
+
+83
+00:03:01,406 --> 00:03:03,586
+One step you're walking on gold,
+
+84
+00:03:03,586 --> 00:03:05,166
+the next on redstone,
+
+85
+00:03:05,166 --> 00:03:05,586
+and the next
+
+86
+00:03:05,586 --> 00:03:07,696
+on something completely different.
+
+87
+00:03:08,434 --> 00:03:09,994
+Skyblock drops you
+
+88
+00:03:09,994 --> 00:03:11,594
+on a tiny island in the void.
+
+89
+00:03:11,594 --> 00:03:13,844
+And in The Floor is Lava,
+
+90
+00:03:14,034 --> 00:03:16,054
+you start burning the moment you stand still
+
+91
+00:03:16,054 --> 00:03:17,014
+for three seconds,
+
+92
+00:03:17,014 --> 00:03:20,144
+or the moment you touch natural ground.
+
+93
+00:03:21,085 --> 00:03:23,175
+Chunk Hunt is even stranger.
+
+94
+00:03:23,705 --> 00:03:25,755
+Every time you enter a new chunk,
+
+95
+00:03:25,985 --> 00:03:27,705
+the border locks around you,
+
+96
+00:03:27,705 --> 00:03:29,245
+and you have to defeat a glowing
+
+97
+00:03:29,245 --> 00:03:31,995
+target mob before you're allowed to leave.
+
+98
+00:03:33,241 --> 00:03:35,291
+Then there are the mob challenges.
+
+99
+00:03:35,881 --> 00:03:36,921
+In Size Matters,
+
+100
+00:03:36,921 --> 00:03:39,551
+every mob spawns at a random size.
+
+101
+00:03:40,041 --> 00:03:41,441
+Tiny ones are fast,
+
+102
+00:03:41,441 --> 00:03:42,861
+and giant ones have more health
+
+103
+00:03:42,861 --> 00:03:44,331
+and a longer reach.
+
+104
+00:03:44,661 --> 00:03:47,301
+And Double Trouble multiplies every spawn,
+
+105
+00:03:47,301 --> 00:03:48,811
+up to ten times.
+
+106
+00:03:49,121 --> 00:03:51,671
+One zombie is never just one zombie.
+
+107
+00:03:52,542 --> 00:03:54,672
+Drops get the same treatment.
+
+108
+00:03:55,022 --> 00:03:56,702
+With Upside Down Drops,
+
+109
+00:03:56,702 --> 00:03:58,222
+everything you break floats up
+
+110
+00:03:58,222 --> 00:03:58,762
+into the sky,
+
+111
+00:03:58,762 --> 00:04:01,232
+so you'd better catch it fast.
+
+112
+00:04:01,622 --> 00:04:03,302
+Random Block Drops makes every
+
+113
+00:04:03,302 --> 00:04:06,042
+block drop something completely different,
+
+114
+00:04:06,042 --> 00:04:08,562
+and Progressive Block Drops only unlocks a block
+
+115
+00:04:08,562 --> 00:04:10,212
+once you've mined the target shown
+
+116
+00:04:10,212 --> 00:04:14,349
+on your screen. And some challenges are
+
+117
+00:04:14,349 --> 00:04:17,989
+complete game modes. In Force Item Battle,
+
+118
+00:04:17,989 --> 00:04:19,149
+every player gets their
+
+119
+00:04:19,149 --> 00:04:21,209
+own random target item,
+
+120
+00:04:21,209 --> 00:04:23,159
+floating right above their head.
+
+121
+00:04:23,449 --> 00:04:25,509
+Whoever collects the most items before
+
+122
+00:04:25,509 --> 00:04:27,499
+the timer runs out wins.
+
+123
+00:04:28,505 --> 00:04:30,845
+Lockout Bingo puts up to four teams
+
+124
+00:04:30,845 --> 00:04:33,675
+on one shared five by five board.
+
+125
+00:04:34,065 --> 00:04:36,405
+Every goal can only be claimed once,
+
+126
+00:04:36,405 --> 00:04:38,005
+so every tile you take is
+
+127
+00:04:38,005 --> 00:04:40,555
+a tile your rivals will never get.
+
+128
+00:04:41,296 --> 00:04:43,426
+There's also All Biomes,
+
+129
+00:04:43,616 --> 00:04:44,276
+where the whole server
+
+130
+00:04:44,276 --> 00:04:47,356
+shares one checklist, Minecraft Trivia,
+
+131
+00:04:47,356 --> 00:04:49,436
+where you answer a question every two minutes
+
+132
+00:04:49,436 --> 00:04:51,796
+or die, and the ultimate grinds,
+
+133
+00:04:51,796 --> 00:04:53,946
+All Items and All Entities.
+
+134
+00:04:55,364 --> 00:04:56,724
+But the challenge everyone
+
+135
+00:04:56,724 --> 00:04:58,944
+talks about is number fifty,
+
+136
+00:04:58,944 --> 00:05:00,634
+The House Always Wins.
+
+137
+00:05:01,004 --> 00:05:02,444
+It turns your survival world
+
+138
+00:05:02,444 --> 00:05:06,186
+into a casino. Every item you own
+
+139
+00:05:06,186 --> 00:05:08,396
+is suddenly worth casino chips.
+
+140
+00:05:08,746 --> 00:05:09,026
+You cash
+
+141
+00:05:09,026 --> 00:05:10,686
+in at the dealer's booth at spawn,
+
+142
+00:05:10,686 --> 00:05:13,096
+and he will happily buy your loot.
+
+143
+00:05:13,366 --> 00:05:14,606
+But every ten minutes,
+
+144
+00:05:14,606 --> 00:05:15,806
+the House collects a fee
+
+145
+00:05:15,806 --> 00:05:16,686
+from the whole team,
+
+146
+00:05:16,686 --> 00:05:18,796
+and that fee keeps climbing.
+
+147
+00:05:19,186 --> 00:05:20,846
+If you can't pay, the House wins,
+
+148
+00:05:20,846 --> 00:05:22,796
+and your run is over.
+
+149
+00:05:23,579 --> 00:05:25,759
+So you can farm the money the slow way,
+
+150
+00:05:25,759 --> 00:05:27,119
+or you can gamble.
+
+151
+00:05:27,119 --> 00:05:31,139
+Mine Fever is a five reel slot machine with free spins
+
+152
+00:05:31,139 --> 00:05:32,379
+and a top prize
+
+153
+00:05:32,379 --> 00:05:34,789
+of five thousand times your bet.
+
+154
+00:05:35,059 --> 00:05:36,839
+You can even bet a whole stack of items,
+
+155
+00:05:36,839 --> 00:05:39,069
+and win it back as a fountain.
+
+156
+00:05:39,908 --> 00:05:42,048
+There's Plinko, where you drop the ball
+
+157
+00:05:42,048 --> 00:05:43,618
+and pray for the edges.
+
+158
+00:05:43,928 --> 00:05:45,888
+There's Crash, where a rocket climbs
+
+159
+00:05:45,888 --> 00:05:47,408
+and the multiplier grows,
+
+160
+00:05:47,408 --> 00:05:50,198
+until you cash out, or it explodes.
+
+161
+00:05:50,608 --> 00:05:52,088
+And there's a full roulette table,
+
+162
+00:05:52,088 --> 00:05:53,948
+where you place your chips right
+
+163
+00:05:53,948 --> 00:05:56,829
+on the felt. Of course,
+
+164
+00:05:56,829 --> 00:05:59,019
+the House always wins in the end.
+
+165
+00:05:59,349 --> 00:06:01,689
+Every game pays back ninety six percent
+
+166
+00:06:01,689 --> 00:06:03,549
+on average, and every lost bet
+
+167
+00:06:03,549 --> 00:06:05,829
+sends monsters after you.
+
+168
+00:06:05,829 --> 00:06:08,719
+The bigger the loss, the nastier the wave.
+
+169
+00:06:09,612 --> 00:06:10,992
+And if you die?
+
+170
+00:06:10,992 --> 00:06:12,492
+You lose a quarter of your chips,
+
+171
+00:06:12,492 --> 00:06:14,112
+and the dealer deals you a hand
+
+172
+00:06:14,112 --> 00:06:16,132
+of Blackjack. Win,
+
+173
+00:06:16,132 --> 00:06:17,732
+and you stand up right where you fell,
+
+174
+00:06:17,732 --> 00:06:19,482
+with everything you had.
+
+175
+00:06:19,672 --> 00:06:21,762
+Lose, and you're dead for real.
+
+176
+00:06:23,042 --> 00:06:24,742
+Every single challenge works
+
+177
+00:06:24,742 --> 00:06:25,772
+in multiplayer.
+
+178
+00:06:26,602 --> 00:06:28,702
+Levels and XP sync to every player,
+
+179
+00:06:28,702 --> 00:06:31,402
+and name tags show everyone's level
+
+180
+00:06:31,402 --> 00:06:32,332
+and aura.
+
+181
+00:06:33,195 --> 00:06:35,015
+You can save your favorite setups
+
+182
+00:06:35,015 --> 00:06:37,415
+as presets, or turn any run
+
+183
+00:06:37,415 --> 00:06:38,895
+into a short challenge code,
+
+184
+00:06:38,895 --> 00:06:41,735
+seed included. Send it to a friend,
+
+185
+00:06:41,735 --> 00:06:44,235
+and they play the exact same world
+
+186
+00:06:44,235 --> 00:06:45,815
+with the exact same rules.
+
+187
+00:06:45,815 --> 00:06:48,615
+And every day there's a Daily Challenge,
+
+188
+00:06:48,615 --> 00:06:51,415
+one ruleset and one seed for everyone,
+
+189
+00:06:51,415 --> 00:06:53,135
+so you can come back tomorrow
+
+190
+00:06:53,135 --> 00:06:54,985
+and beat your best time.
+
+191
+00:06:56,178 --> 00:06:58,188
+And if nobody's online?
+
+192
+00:06:58,438 --> 00:06:59,558
+Open the Lockout lobby
+
+193
+00:06:59,558 --> 00:07:01,228
+and play against Bob.
+
+194
+00:07:01,558 --> 00:07:03,378
+Bob is an AI player who
+
+195
+00:07:03,378 --> 00:07:05,518
+plays the board just like you do.
+
+196
+00:07:05,518 --> 00:07:08,818
+He reads the goals, plans a route, mines,
+
+197
+00:07:08,818 --> 00:07:10,018
+crafts, fights,
+
+198
+00:07:10,018 --> 00:07:11,518
+and even builds a Nether portal
+
+199
+00:07:11,518 --> 00:07:12,988
+to claim his tiles.
+
+200
+00:07:13,970 --> 00:07:15,030
+Bob is still
+
+201
+00:07:15,030 --> 00:07:17,310
+in an early stage of development,
+
+202
+00:07:17,310 --> 00:07:18,930
+so he makes mistakes,
+
+203
+00:07:18,930 --> 00:07:20,150
+and sometimes he dies
+
+204
+00:07:20,150 --> 00:07:22,120
+in very creative ways.
+
+205
+00:07:22,470 --> 00:07:23,610
+But he learns new tricks
+
+206
+00:07:23,610 --> 00:07:27,459
+with every update. So whether you want
+
+207
+00:07:27,459 --> 00:07:29,869
+to play your favorite YouTube challenge,
+
+208
+00:07:30,159 --> 00:07:31,409
+race your friends,
+
+209
+00:07:31,579 --> 00:07:33,299
+or find out how long you can survive
+
+210
+00:07:33,299 --> 00:07:34,859
+against the House,
+
+211
+00:07:34,859 --> 00:07:36,889
+there's a run waiting for you.
+
+212
+00:07:37,601 --> 00:07:39,821
+Challenge Craft is completely free
+
+213
+00:07:39,821 --> 00:07:41,171
+on CurseForge.
+
+214
+00:07:41,501 --> 00:07:43,031
+The link is in the description.
+
+215
+00:07:43,421 --> 00:07:45,301
+Pick a challenge, invite your friends,
+
+216
+00:07:45,301 --> 00:07:47,371
+and see how far you can get.
+

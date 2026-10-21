@@ -7,7 +7,8 @@ Ablage für alles rund um den Mod *Challenge Craft*, das nicht in den Mod-Code g
 | `shorts/v1`, `shorts/v2` | Fertige TikTok/YouTube-Shorts (mit/ohne Untertitel, SRT, Sprachspur) |
 | `shorts/v3`, `shorts/v5.1` | Nächste Fassungen (siehe `shorts/PLAN-v3.md`) |
 | `shorts/tools` | Schnitt-, Sound- und Voice-Over-Skripte |
-| `footage/` | Gefilmtes Rohmaterial, eine MP4 pro Szene (1080×1920, 30 fps) |
+| `longform/` | Long-form Showcase (7:50, 9:16): Videos mit/ohne Musik und Untertitel, SRT, Sprachspur, Post-Text, Werkzeuge, Musik (CC BY 4.0) – siehe `longform/README.md` |
+| `footage/` | Gefilmtes Rohmaterial, eine MP4 pro Szene (1080×1920, 30 fps); `footage/long/` = die Aufnahmen für den Long-form Showcase |
 | `stills/` | Standbilder und Kontaktbögen |
 | `motion/` | Motion-Graphics-Projekt (Remotion) |
 | `research/` | Recherche, z. B. Transkripte von Lockout-Bingo-Videos für Bob |

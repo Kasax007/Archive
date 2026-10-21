@@ -2,7 +2,8 @@
 
 Dieses Repo (`Kasax007/Archive`, lokal `/home/user/archive`, Branch `main`) ist die Ablage für alles rund um den
 Mod Challenge Craft, das nicht in den Mod-Code gehört. Das Projektwissen zum Mod selbst (Bob, Training, Tests,
-Branches, Vorlieben des Nutzers) steht im Mod-Repo in `CLAUDE.md` (Branch `26.3-lockout-bot`).
+Branches, Vorlieben des Nutzers) steht in **`memory/challenge-craft-projekt.md`**: zu Beginn jeder Sitzung lesen, nach wichtigen Änderungen aktualisieren.
+Im Mod-Repo ist `CLAUDE.md` vom Nutzer per `.gitignore` ausgeschlossen (seine lokale Datei) – dort nichts einchecken.
 
 ## Regeln für dieses Repo
 
@@ -35,6 +36,7 @@ Branches, Vorlieben des Nutzers) steht im Mod-Repo in `CLAUDE.md` (Branch `26.3-
 | `fonts/` | Schriften für Untertitel und Titel (vor dem Rendern nach `$SP/fonts` kopieren) |
 | `motion/` | Remotion-Projekt (Motion Graphics für Story 5.1) |
 | `stills/`, `research/`, `curseforge/` | Kontaktbögen, Recherche, Mod- und Modpack-Beschreibung, Changelog |
+| `memory/` | Langzeitgedächtnis: `challenge-craft-projekt.md` (Mod, Bob, Training, Regeln, Vorlieben des Nutzers) |
 | `Testrun Lockout against Bob` | Log einer Runde des Nutzers gegen Bob |
 
 ## Was der Nutzer bei Videos will

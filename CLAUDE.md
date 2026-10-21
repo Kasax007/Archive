@@ -32,7 +32,8 @@ Im Mod-Repo ist `CLAUDE.md` vom Nutzer per `.gitignore` ausgeschlossen (seine lo
 | `shorts/v1`, `v2`, `v3`, `v5.1` | Die Shorts (Challenges, Casino, Blackjack-ums-Leben, Random Chunks, Story); `PLAN-v3.md` |
 | `shorts/tools` | Schnitt (`cut.py`, `v3lib.py`), SFX (`sfx.py`), Stimme der Shorts (`tts_v3.py`, Chatterbox) |
 | `longform/` | Long-form Showcase v1 (7:50, 9:16). Siehe `longform/README.md` |
-| `footage/<gruppe>/` | Rohmaterial, eine MP4 pro Szene (`chal`, `casino`, `ui`, `cards`, `long`) |
+| `footage/<gruppe>/` | Rohmaterial, eine MP4 pro Szene (`chal`, `casino`, `ui`, `cards`, `long`; `tama` für den Tamagotchi-Mod) |
+| `tamagotchi/` | Videos zum Mod Tamagotchi (Short und 2-Minuten-Showcase), Werkzeuge, Endkarten. Siehe `tamagotchi/README.md` |
 | `fonts/` | Schriften für Untertitel und Titel (vor dem Rendern nach `$SP/fonts` kopieren) |
 | `motion/` | Remotion-Projekt (Motion Graphics für Story 5.1) |
 | `stills/`, `research/`, `curseforge/` | Kontaktbögen, Recherche, Mod- und Modpack-Beschreibung, Changelog |

@@ -1,0 +1,15 @@
+# TODO(user): the CurseForge slug 'tamagotchi' is an assumption - check the link before posting.
+TITLE (suggestion)
+Tamagotchi - every feature with the real game sounds (review cut, not for posting)
+
+DESCRIPTION
+Review cut for checking the mod before release: every feature of Tamagotchi 1.1 with the sounds the game
+really plays (recorded while filming), the new plushies, incubator, treat dispenser, toy box, pet flap, portrait,
+egg lamp and dyes included.
+
+Tamagotchi is free on CurseForge: https://www.curseforge.com/minecraft/mc-mods/tamagotchi
+
+Music by Kevin MacLeod (incompetech.com) - "Itty Bitty 8 Bit"
+Licensed under Creative Commons: By Attribution 4.0 - http://creativecommons.org/licenses/by/4.0/
+
+

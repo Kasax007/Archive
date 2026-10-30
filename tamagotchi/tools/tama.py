@@ -13,7 +13,7 @@ import os, sys, json, math, subprocess, shutil
 import numpy as np
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-import cut, sfx, v3lib
+import cut, sfx, v3lib, gamesound
 from cut import Clip, Caption
 from v3lib import _load, script_tokens, align, captions, write_wav, ts, SR, FPS, norm1
 from script import SCRIPTS, POST
@@ -37,6 +37,12 @@ CFG = dict(
     long=dict(file='tamagotchi_showcase', dir='longform', slow=1.06, lead_in=0.6, gap=0.5, gap_ch=0.9, tail=2.5,
               cap_size=68, cap_y=1390, maxc=42, maxw=9, maxclip=3.4, crf=26, preset='slow', whoosh=0.06,
               fade_in=1.5, fade_out=3.0, title_len=3.6),
+    # Review cut for the user: the real game sounds of every shot (gamesound.py) instead of the SHOT_SFX cues, each shot
+    # played from its start in one piece, sounds only lightly ducked under the voice, the music quieter.
+    review=dict(file='tamagotchi_review', dir='review', slow=1.06, lead_in=0.6, gap=0.5, gap_ch=0.9, tail=2.5,
+                cap_size=68, cap_y=1390, maxc=42, maxw=9, maxclip=99, crf=26, preset='slow', whoosh=0.0,
+                fade_in=1.5, fade_out=3.0, title_len=3.0, game_sounds=True, game_gain=3.2, duck=0.4, music_under=0.06,
+                music_gaps=0.15, endcard='long'),
 )
 END_CAP_Y = 1560
 
@@ -94,7 +100,7 @@ def voice(name, cfg):
     pstart, wbp = [], []
     for pi, p in enumerate(paras):
         if pi > 0:
-            g = cfg['gap_ch'] if p.get('ch') else cfg['gap']
+            g = (cfg['gap_ch'] if p.get('ch') else cfg['gap']) + paras[pi - 1].get('pause', 0)   # pause: room for game sounds
             wav.append(np.zeros(int(g * SR), np.float32)); t += g
         pstart.append(t)
         src = f'{VO}/u{pi:03d}.wav'
@@ -131,7 +137,7 @@ def _find(words, phrase, para):
 
 def shot_dir(name, shot, root, fill):
     if shot == 'endcard':
-        return f'{VID}/cards/endcard_{name}'
+        return f'{VID}/cards/endcard_{CFG[name].get("endcard", name)}'
     d = f'{root}/{shot}'
     if os.path.isdir(d) and cut._files(d):
         return d
@@ -197,7 +203,7 @@ def plan(name, cfg, words_by_para, pstart, total, root, fill):
                 if max(o['zoom']) > 1.12 + 1e-6 or (max(o['zoom']) > 1.08 + 1e-6 and shot not in SHOT_OPTS):
                     raise SystemExit('zoom rule broken for ' + shot)
                 c = Clip(d, start, l, speed=speed, zoom=o['zoom'], hold_last=hold, label=shot)
-                cues = [] if j else [(off, nm, g) for off, nm, g in SHOT_SFX.get(shot, [])]
+                cues = [] if j or cfg.get('game_sounds') else [(off, nm, g) for off, nm, g in SHOT_SFX.get(shot, [])]
                 out.append((c, fa / FPS, cues))
                 gi += 1
                 fa = fb
@@ -385,17 +391,25 @@ def build(name, plan_only=False, audio_only=False, root=REAL_FILM, fill=False, d
               open(f'{OUT}/timeline.json', 'w'), indent=1)
     if plan_only:
         return OUT
-    mix = sfx_track(pl, wcues, total, cfg['whoosh'])
-    swav = f'{OUT}/sfx.wav'
-    mix.write(swav, total)
     n = int(total * SR)
+    if cfg.get('game_sounds'):
+        s, glog = gamesound.track(pl, total)                     # what the game really played while filming
+        # all game sounds lifted together (their balance stays the game's own), the loudest softly limited
+        s = np.tanh(s * cfg.get('game_gain', 1.0) / 0.8) * 0.8
+        json.dump(glog, open(f'{OUT}/game_sounds.json', 'w'), indent=1)
+        missing_logs = sorted({c.label for c, _, _ in pl if c.label != 'endcard' and gamesound.shot_sounds(c.shot) is None})
+        print(f'  game sounds: {len(glog)} placed' + (f', shots without a sound log: {missing_logs}' if missing_logs else ''))
+    else:
+        mix = sfx_track(pl, wcues, total, cfg['whoosh'])
+        swav = f'{OUT}/sfx.wav'
+        mix.write(swav, total)
+        s = _load(swav)
     v = np.pad(wav, (0, max(0, n - len(wav))))[:n]
-    s = _load(swav)
     s = np.pad(s, (0, max(0, n - len(s))))[:n]
     env = movavg((np.abs(v) > 0.02).astype(np.float32), int(0.3 * SR))
-    s = s * (1.0 - 0.75 * np.clip(env * 3, 0, 1))               # game sounds ducked under the voice
+    s = s * (1.0 - cfg.get('duck', 0.75) * np.clip(env * 3, 0, 1))   # game sounds ducked under the voice
     write_wav(f'{OUT}/voice.wav', v)
-    mb = music_bed(total, v, cfg['fade_in'], cfg['fade_out'])
+    mb = music_bed(total, v, cfg['fade_in'], cfg['fade_out'], under=cfg.get('music_under', 0.115), gaps=cfg.get('music_gaps', 0.34))
     sp = np.abs(v) > 0.02
     print(f'  music vs voice during speech: {20 * np.log10(np.sqrt((mb[sp] ** 2).mean()) / np.sqrt((v[sp] ** 2).mean())):.1f} dB (target about -14)')
     for tag, bed in (('nomusic', None), ('music', mb)):
@@ -477,7 +491,7 @@ def deliver(name):
 if __name__ == '__main__':
     a = sys.argv[1:]
     flags = {x for x in a if x.startswith('--')}
-    names = [x for x in a if x in ('short', 'long', 'all')]
+    names = [x for x in a if x in ('short', 'long', 'review', 'all')]
     names = ['short', 'long'] if (not names or 'all' in names) else names
     root = REAL_FILM
     if '--film' in a:
@@ -489,9 +503,10 @@ if __name__ == '__main__':
     fill = '--fill-missing' in flags or '--placeholder' in flags
     if fill and '--deliver' in flags:
         raise SystemExit('refusing to deliver placeholder footage')
-    for nm in ('short', 'long'):
-        if nm in names and not os.path.isdir(f'{VID}/cards/endcard_{nm}'):
-            subprocess.run([sys.executable, HERE + '/endcard.py', nm], check=True)
+    for nm in names:
+        card = CFG[nm].get('endcard', nm)
+        if not os.path.isdir(f'{VID}/cards/endcard_{card}'):
+            subprocess.run([sys.executable, HERE + '/endcard.py', card], check=True)
     if '--fill-missing' in flags and not os.path.isdir(PH_FILM):
         subprocess.run([sys.executable, HERE + '/placeholder.py'], check=True)
     for nm in names:

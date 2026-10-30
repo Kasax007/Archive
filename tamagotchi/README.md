@@ -7,6 +7,7 @@ Zwei Videos über den Minecraft-Mod **Tamagotchi** (Pets finden, zähmen, pflege
 | --- | --- | --- |
 | `short/` | ca. 43 s | Hook (Drache in der Pyramide), zehn seltene Pets, Zähmen, Rucksack, Pflege, Talente, Goldener Apfel, Endkarte |
 | `longform/` | ca. 2:03 | Showcase in acht Kapiteln: Finding pets, Taming, Care, Play, Backpack, Talents, Adventures, The Tamacon |
+| `review/` | ca. 3:05 | Review-Schnitt fuer den Nutzer (nicht zum Posten): jedes Feature von Version 1.1 mit den **echten Spielgeraeuschen**, inkl. Pluesch, Brutkasten, Leckerli-Spender, Spielzeugkiste, Haustierklappe, Portraet, Eierlampe, Farben |
 
 ## Dateien (pro Video, nach `--deliver`)
 
@@ -58,6 +59,29 @@ Rendern: ca. 5 min (Short) und 15 min (Long) auf 4 Kernen (`TAMA_WORKERS`).
   (`assets/tamagotchi/sounds`, Env `TAMA_SOUNDS`), Untertitelschrift aus `../fonts`.
 - `endcard.py`: Endkarte im Tamagotchi-Stil aus dem CurseForge-Header des Mod-Repos.
 - `placeholder.py`: Test-Footage, `check.py`: Whisper-Abgleich.
+
+## Echte Spielgeraeusche (Review-Schnitt)
+
+Der Film-Client hat kein Audiogeraet. Deshalb protokolliert der Film-Harness im Mod-Repo (`src/film`, `FilmSound` +
+`SoundLogMixin`) jedes Geraeusch, das das Spiel waehrend eines Shots startet, in `<shot>/sounds.jsonl`: Zeitpunkt
+(Sekunden Spielzeit), Sounddatei (`minecraft:sounds/...ogg` aus dem Loom-Asset-Cache oder `tamagotchi:sounds/...`),
+Lautstaerke, Tonhoehe, Position, Hoerweite und Kameraposition; `shot.json` haelt die Bildrate. Waehrend des Filmens
+schickt der Server alle Geraeusche unabhaengig von der Entfernung (`SoundRangeMixin`), weil die freie Kamera oft weit
+von der Spielfigur steht. `gamesound.py` mischt daraus die Spur entlang des Schnitts wie das Spiel: Tonhoehe als
+Abspielgeschwindigkeit, Lautstaerke, lineare Abnahme bis zur Hoerweite (von der Kamera aus). Musik, Ambiente, Wetter
+und Kulissen-Geraeusche der Buehne (Lagerfeuer, Tresor) bleiben draussen. Im Review-Video werden alle Spielgeraeusche
+gemeinsam angehoben (`game_gain`, weich begrenzt) und unter der Stimme nur leicht geduckt; die Musik liegt leiser.
+
+```sh
+# im Mod-Repo: filmen (eine Film-JVM), dann im Archiv schneiden
+./gradlew runFilm -Pfilm=<shots> -PfilmOut=$SP/film/tama2
+$PY tts_kokoro.py review
+$PY tama.py review --deliver --film $SP/film/tama2
+```
+
+Das Material des Review-Schnitts liegt als `footage/tama2/<shot>.mp4` mit `<shot>.sounds.jsonl` und `<shot>.shot.json`
+im Archiv. Wiederherstellen: `ffmpeg -i footage/tama2/x.mp4 -q:v 2 -start_number 0 $SP/film/tama2/x/f%05d.jpg`, dann die
+beiden JSON-Dateien als `sounds.jsonl` und `shot.json` in denselben Ordner kopieren.
 
 ## Footage-Konvention
 

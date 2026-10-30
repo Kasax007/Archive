@@ -1,0 +1,280 @@
+1
+00:00:00,559 --> 00:00:03,700
+This is Tamagotchi: ten rare pets to find,
+
+2
+00:00:03,700 --> 00:00:05,119
+tame and take care of.
+
+3
+00:00:05,119 --> 00:00:06,699
+Here is every feature,
+
+4
+00:00:06,699 --> 00:00:08,429
+with the real game sounds.
+
+5
+00:00:09,722 --> 00:00:12,382
+The pets hide in structures: a dragon
+
+6
+00:00:12,382 --> 00:00:13,952
+in the desert pyramid,
+
+7
+00:00:14,242 --> 00:00:15,802
+a penguin in an igloo,
+
+8
+00:00:15,802 --> 00:00:17,022
+and a living treasure chest
+
+9
+00:00:17,022 --> 00:00:18,572
+in trial chambers.
+
+10
+00:00:20,656 --> 00:00:22,756
+Give a wild pet a Tamagotchi Heart,
+
+11
+00:00:22,756 --> 00:00:24,426
+and it trusts you.
+
+12
+00:00:26,677 --> 00:00:28,177
+Pet it with an empty hand,
+
+13
+00:00:28,177 --> 00:00:30,347
+and it shows you heart eyes.
+
+14
+00:00:32,795 --> 00:00:36,335
+Every pet has four needs: hunger, fun,
+
+15
+00:00:36,335 --> 00:00:37,585
+energy and hygiene.
+
+16
+00:00:38,135 --> 00:00:40,695
+The Tama Pager tells it to stay or follow,
+
+17
+00:00:40,695 --> 00:00:42,685
+and it beeps when a pet needs you.
+
+18
+00:00:43,970 --> 00:00:45,930
+Pets eat from the food bowl,
+
+19
+00:00:45,930 --> 00:00:47,980
+and they splash around in the bath.
+
+20
+00:00:49,774 --> 00:00:51,054
+They snore in their beds,
+
+21
+00:00:51,054 --> 00:00:53,164
+and they love a good brushing.
+
+22
+00:00:55,857 --> 00:00:57,437
+They chase the laser pointer,
+
+23
+00:00:57,437 --> 00:00:58,997
+jump at the feather wand,
+
+24
+00:00:58,997 --> 00:01:01,007
+and fetch the squeaky ball.
+
+25
+00:01:05,338 --> 00:01:07,148
+They bounce on the mushroom,
+
+26
+00:01:07,318 --> 00:01:08,798
+run in the running wheel,
+
+27
+00:01:08,798 --> 00:01:09,618
+and sharpen their claws
+
+28
+00:01:09,618 --> 00:01:11,348
+on the scratching post.
+
+29
+00:01:13,973 --> 00:01:16,083
+A chest becomes a backpack.
+
+30
+00:01:16,433 --> 00:01:17,713
+Put golden apples inside,
+
+31
+00:01:17,713 --> 00:01:19,193
+and when you are hurt,
+
+32
+00:01:19,193 --> 00:01:20,763
+your pet brings you one.
+
+33
+00:01:23,291 --> 00:01:25,221
+Every pet has a talent:
+
+34
+00:01:25,591 --> 00:01:27,771
+the Desert Dragon roasts food,
+
+35
+00:01:27,771 --> 00:01:29,811
+the Pebble Golem finds ores,
+
+36
+00:01:29,811 --> 00:01:31,571
+the penguin freezes water,
+
+37
+00:01:31,571 --> 00:01:33,781
+and the Ember Pup swims in lava.
+
+38
+00:01:35,848 --> 00:01:38,648
+Dragons fly after you, and in a fight,
+
+39
+00:01:38,648 --> 00:01:40,098
+your pets have your back.
+
+40
+00:01:41,838 --> 00:01:43,478
+And they never die.
+
+41
+00:01:43,478 --> 00:01:45,408
+They faint into an egg instead.
+
+42
+00:01:47,642 --> 00:01:49,462
+New in this update: plushies
+
+43
+00:01:49,462 --> 00:01:50,782
+of all ten pets.
+
+44
+00:01:50,782 --> 00:01:51,752
+Squeeze them!
+
+45
+00:01:54,092 --> 00:01:56,012
+Lonely pets cuddle them,
+
+46
+00:01:56,012 --> 00:01:57,532
+and a pet sleeps better next
+
+47
+00:01:57,532 --> 00:01:59,502
+to a plush of its own kind.
+
+48
+00:02:01,799 --> 00:02:03,959
+Put a Tama Egg into the incubator,
+
+49
+00:02:03,959 --> 00:02:06,519
+and thirty seconds later your pet hatches,
+
+50
+00:02:06,519 --> 00:02:07,990
+fully healed.
+
+51
+00:02:11,042 --> 00:02:12,382
+Press a button,
+
+52
+00:02:12,382 --> 00:02:14,102
+and the treat dispenser shoots a treat
+
+53
+00:02:14,102 --> 00:02:15,752
+to your hungriest pet.
+
+54
+00:02:18,704 --> 00:02:20,424
+Bored pets open the toy box
+
+55
+00:02:20,424 --> 00:02:22,654
+and play with the toys inside.
+
+56
+00:02:25,330 --> 00:02:27,630
+And the pet flap lets your pets through,
+
+57
+00:02:27,630 --> 00:02:29,000
+but nobody else.
+
+58
+00:02:32,028 --> 00:02:33,988
+The portrait paints your nearest pet,
+
+59
+00:02:33,988 --> 00:02:35,718
+with its name on the plate.
+
+60
+00:02:36,108 --> 00:02:37,248
+Click again for the next pet,
+
+61
+00:02:37,248 --> 00:02:39,489
+or use a dye.
+
+62
+00:02:40,899 --> 00:02:43,259
+The egg lamp is a little night light,
+
+63
+00:02:43,259 --> 00:02:44,659
+and beds, baskets,
+
+64
+00:02:44,659 --> 00:02:46,809
+lamps and portraits take any dye.
+
+65
+00:02:49,363 --> 00:02:50,823
+Pets dance to music
+
+66
+00:02:50,823 --> 00:02:52,953
+and warm up at the campfire.
+
+67
+00:02:55,319 --> 00:02:57,279
+And if you forget something,
+
+68
+00:02:57,279 --> 00:02:58,599
+just read the Tamacon,
+
+69
+00:02:58,599 --> 00:03:00,649
+your little guide to everything.
+
+70
+00:03:02,335 --> 00:03:05,125
+That's Tamagotchi. Thanks for watching!
+

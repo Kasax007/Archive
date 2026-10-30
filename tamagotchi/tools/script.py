@@ -89,7 +89,89 @@ LONG = [
          shots=[('endcard', None)]),
 ]
 
-SCRIPTS = dict(short=SHORT, long=LONG)
+# Review-Video (fuer den Nutzer zum Pruefen, nicht zum Posten): alle Features mit den echten Spielgeraeuschen.
+# pause = zusaetzliche Sekunden ohne Stimme nach dem Absatz, damit man die Geraeusche hoert.
+REVIEW = [
+    dict(id='R1', ch=None,
+         text="This is *Tamagotchi*: ten rare pets to find, tame and take care of. Here is every feature, with the real "
+              "*game sounds*.",
+         shots=[('lineup_dolly', None)]),
+    dict(id='R2', ch='FINDING *PETS*',
+         text="The pets hide in structures: a *dragon* in the desert pyramid, a penguin in an igloo, and a living "
+              "*treasure chest* in trial chambers.",
+         shots=[('pyramid_wild', None), ('igloo_penguin', 'a penguin'), ('mimic_chamber', 'and a living')], pause=0.8),
+    dict(id='R3', ch='*TAMING*',
+         text="Give a wild pet a *Tamagotchi Heart*, and it trusts you.",
+         shots=[('tame_heart', None)], pause=1.6),
+    dict(id='R4', ch=None,
+         text="Pet it with an empty hand, and it shows you *heart eyes*.",
+         shots=[('petting_closeups', None), ('hook_petting', 'and it shows')], pause=1.2),
+    dict(id='R5', ch='*CARE*',
+         text="Every pet has four needs: hunger, fun, energy and hygiene. The *Tama Pager* tells it to stay or follow, "
+              "and it beeps when a pet needs you.",
+         shots=[('pet_screen', None), ('pager_sit', 'The Tama Pager')], pause=0.6),
+    dict(id='R6', ch=None,
+         text="Pets eat from the *food bowl*, and they splash around in the *bath*.",
+         shots=[('bowl_eat', None), ('bath', 'and they splash')], pause=1.0),
+    dict(id='R6b', ch=None,
+         text="They snore in their beds, and they love a good *brushing*.",
+         shots=[('bed_sleep', None), ('brush', 'and they love')], pause=1.4),
+    dict(id='R7', ch='*PLAY*',
+         text="They chase the *laser pointer*, jump at the feather wand, and fetch the *squeaky ball*.",
+         shots=[('laser_chase', None), ('feather_wand', 'jump at'), ('fetch_ball', 'and fetch')], pause=3.5),
+    dict(id='R8', ch=None,
+         text="They bounce on the *mushroom*, run in the running wheel, and sharpen their claws on the scratching post.",
+         shots=[('bounce', None), ('wheel', 'run in'), ('scratch_post', 'and sharpen')], pause=1.4),
+    dict(id='R9', ch='THE *BACKPACK*',
+         text="A chest becomes a *backpack*. Put golden apples inside, and when you are hurt, your pet brings you one.",
+         shots=[('backpack_on', None), ('feed_owner', 'Put golden')], pause=1.4),
+    dict(id='R10', ch='*TALENTS*',
+         text="Every pet has a *talent*: the Desert Dragon roasts food, the Pebble Golem finds ores, the penguin freezes "
+              "water, and the Ember Pup swims in *lava*.",
+         shots=[('roast', None), ('ore_glow', 'the Pebble Golem'), ('frost_steps', 'the penguin'), ('lava_swim', 'and the Ember')],
+         pause=0.8),
+    dict(id='R11', ch='*ADVENTURES*',
+         text="Dragons *fly* after you, and in a fight, your pets have your *back*.",
+         shots=[('fly_follow', None), ('fight', 'and in a fight')], pause=1.0),
+    dict(id='R11b', ch=None,
+         text="And they never die. They faint into an *egg* instead.",
+         shots=[('faint_egg', None)], pause=1.0),
+    dict(id='R12', ch='NEW: *PLUSHIES*',
+         text="New in this update: *plushies* of all ten pets. Squeeze them!",
+         shots=[('plush_shelf', None), ('plush_squeeze', 'Squeeze')], pause=1.6),
+    dict(id='R13', ch=None,
+         text="Lonely pets *cuddle* them, and a pet sleeps better next to a plush of its own kind.",
+         shots=[('plush_cuddle', None), ('plush_sleep', 'and a pet')], pause=1.0),
+    dict(id='R14', ch='NEW: *GADGETS*',
+         text="Put a Tama Egg into the *incubator*, and thirty seconds later your pet hatches, fully healed.",
+         shots=[('incubator_in', None), ('incubator_hatch', 'and thirty')], pause=2.2),
+    dict(id='R15', ch=None,
+         text="Press a button, and the *treat dispenser* shoots a treat to your hungriest pet.",
+         shots=[('treat_dispenser', None)], pause=2.2),
+    dict(id='R16', ch=None,
+         text="Bored pets open the *toy box* and play with the toys inside.",
+         shots=[('toy_box_open', None), ('toy_box_play', 'and play')], pause=1.8),
+    dict(id='R17', ch=None,
+         text="And the *pet flap* lets your pets through, but nobody else.",
+         shots=[('pet_flap', None)], pause=1.8),
+    dict(id='R18', ch='NEW: *DECORATION*',
+         text="The *portrait* paints your nearest pet, with its name on the plate. Click again for the next pet, or use a dye.",
+         shots=[('portrait_paint', None)], pause=1.4),
+    dict(id='R19', ch=None,
+         text="The *egg lamp* is a little night light, and beds, baskets, lamps and portraits take *any dye*.",
+         shots=[('egg_lamp', None), ('dye_bed', 'and beds')], pause=1.4),
+    dict(id='R20', ch='LITTLE *MOMENTS*',
+         text="Pets *dance* to music and warm up at the campfire.",
+         shots=[('dance', None), ('campfire_warm', 'and warm')], pause=1.2),
+    dict(id='R21', ch='THE *TAMACON*',
+         text="And if you forget something, just read the *Tamacon*, your little guide to everything.",
+         shots=[('tamacon_book', None)], pause=0.8),
+    dict(id='R22', ch=None, end=True,
+         text="That's *Tamagotchi*. Thanks for watching!",
+         shots=[('endcard', None)]),
+]
+
+SCRIPTS = dict(short=SHORT, long=LONG, review=REVIEW)
 
 # Wie der Sprecher einzelne Woerter sagt (Kokoro/misaki: [Wort](/IPA/); nur die Aussprache, Untertitel behalten den Skripttext).
 # Die Betonung wurde mit Whisper geprueft (Tamacon/Tama Pager wurden sonst als "tarmac on" / "time I'll page" verstanden).
@@ -113,6 +195,13 @@ Tame them, feed them, play with them, give them a backpack. Every pet has its ow
 Tamagotchi is a free Minecraft mod on CurseForge (link in bio / description).
 """,
         tags="#minecraft #minecraftmods #tamagotchi #minecraftpets #cutepets #moddedminecraft #curseforge #gaming #fyp"),
+    review=dict(
+        title="Tamagotchi - every feature with the real game sounds (review cut, not for posting)",
+        body="""Review cut for checking the mod before release: every feature of Tamagotchi 1.1 with the sounds the game
+really plays (recorded while filming), the new plushies, incubator, treat dispenser, toy box, pet flap, portrait,
+egg lamp and dyes included.
+""",
+        tags=""),
     long=dict(
         title="Minecraft, but you can tame and raise your own pets (Tamagotchi mod showcase)",
         body="""Ten rare pets hide in Minecraft's structures: the Desert Dragon, the Jungle Dragon, the Tide Dragon, a Frost

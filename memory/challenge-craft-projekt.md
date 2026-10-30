@@ -49,10 +49,10 @@ neueste Anweisung des Nutzers.
 - **Bob-Bot standalone:** `Kasax007/Bob-Bot`. Bob als eigener Begleiter-Mod; später als KI-Mitspieler für
   Challenge Craft gedacht.
 
-## Der Mod (Stand 1.1.2, Minecraft 26.3, Fabric, Java 25)
+## Der Mod (Stand 1.1.2 veröffentlicht, 1.1.3 vorbereitet; Minecraft 26.3, Fabric, Java 25)
 
 - **Inhalt:**
-  - 50 Challenges, einzeln oder gestapelt; jede Kombination bekommt eine Difficulty Rating.
+  - 51 Challenges (seit 1.1.3), einzeln oder gestapelt; jede Kombination bekommt eine Difficulty Rating.
   - Lifetime XP, Level 1–20 mit Freischaltungen und Perks, danach Infinity Stars (Namens-Auren).
   - Weitere Features: Daily Challenge, Challenge Codes und Presets, Run Summary Card, Hub, Multiplayer.
 - **Challenge 50 „The House Always Wins“** (Level 8): Casino.
@@ -60,10 +60,23 @@ neueste Anweisung des Nutzers.
   - Mechaniken: Mob-Wellen bei Verlust, Tod = Blackjack um das Leben.
   - Alle Spiele zahlen 96 % zurück (RTP).
   - Konzept: `docs/konzept-the-house-always-wins.md`.
+- **Challenge 51 „Void Trail“** (Level 11, Difficulty 6.0, Icon Grundgestein, Okt. 2026):
+  - Wer einen Block verlässt, löscht dessen ganze Säule (Bauhöhe bis Weltboden, inkl. Grundgestein, Wasser, Lava).
+  - Bleiben: nur Endportalrahmen und Endportal. Netherportale werden mitgelöscht (laut Vorgabe des Nutzers).
+  - Schnelle Bewegung: alle überquerten Säulen; Teleport/Perle/Portal: nur die verlassene. Kreativ/Zuschauer löschen nichts.
+  - Konflikte: Skyblock, Level = Border, Damage = Border, Chunk Hunt. Game-Test `void_trail_tests_void_trail`.
 - **Bob:** KI-Gegner für Lockout Bingo, im Lobby-Menü „Play against Bob“, auf Easy, Normal und Hard.
   - Öffentlich immer als *Early Development Stage* bezeichnen.
   - Konzept: `docs/konzept-bot.md`. Plan und Messungen: `docs/bob-plan.md`, `docs/bob-leagues/`.
-- **CurseForge-Texte:** `docs/curseforge/` (Mod, Modpack, Changelog 1.1.2).
+- **CurseForge-Texte:** `docs/curseforge/` (Mod, Modpack, Changelogs 1.1.2 und 1.1.3).
+- **Veröffentlichen (seit Okt. 2026 automatisch):**
+  - `build.gradle`: mod-publish-plugin (`publishMods`) → CurseForge (Projekt 1508454), Modrinth (`3qs3GQyx`,
+    Slug `challenge_craft`) und GitHub-Release `v<version>`. Changelog: `docs/curseforge/changelog-<version>.md`.
+  - `.github/workflows/publish.yml`: ein Push auf `26.3` oder `26.3-lockout-bot`, der `mod_version` in
+    `gradle.properties` ändert, veröffentlicht – nur solange es den Tag `v<version>` noch nicht gibt.
+  - Secrets (setzt der Nutzer): `CURSEFORGE_TOKEN`, `MODRINTH_TOKEN` (Scopes: Create/Read/Write versions).
+  - Veröffentlichen ist nach außen sichtbar: Version nur nach ausdrücklichem Go des Nutzers erhöhen.
+  - Modrinth hatte zuletzt nur 1.1.1 (1.1.2 fehlt dort).
 - **Links:**
   - Mod: `https://www.curseforge.com/minecraft/mc-mods/challenge` (der Slug ist `challenge`).
   - Modpack: `https://www.curseforge.com/minecraft/modpacks/challenge-craft`.
@@ -116,7 +129,9 @@ neueste Anweisung des Nutzers.
 
 ## Bauen und Testen (Container)
 
-- **JDK:** `JAVA_HOME=/opt/jdk25/jdk-25.0.4.1+1` (das System-Java ist 21).
+- **JDK:** unter `/opt/jdk25/` (zuletzt `jdk-25.0.5+8`, vorher `jdk-25.0.4.1+1`; mit `ls /opt/jdk25` prüfen).
+- **Maven Central 429:** Gradle-Init-Skript `~/.gradle/init.d/central-mirror.gradle`, das `repo.maven.apache.org`
+  auf `https://maven-central.storage-download.googleapis.com/maven2/` umbiegt (nur vorhandene Central-URLs ersetzen).
 - **Kompilieren:** `sh ./gradlew compileJava -q`. Film-Quellen: `compileFilmJava`.
 - **Game-Tests:**
   - Alle: `sh ./gradlew runGameTest`.
@@ -134,6 +149,8 @@ neueste Anweisung des Nutzers.
 
 ## Film-Harness (`src/film`, für Shorts und Showcase)
 
+- **Neuer Container:** `apt-get update && apt-get install -y libegl1 libegl-mesa0`, Xvfb `:98` und
+  `SDL_VIDEO_FORCE_EGL=1` setzen. Sonst „Couldn't find matching GLX visual“ bzw. „Could not load EGL library“.
 - **Aufruf:** Client-Gametest mit eigenem Source-Set: `./gradlew runFilm -Pfilm=szeneA,szeneB -PfilmOut=DIR`.
   Bilder werden Tick für Tick aufgenommen (1080×1920, 30 fps).
 - **Szenen:** `CasinoScenes`, `ChallengeScenes`, `UiScenes`, `WorldScenes`, `MenuScenes`.

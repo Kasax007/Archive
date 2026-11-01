@@ -49,7 +49,7 @@ neueste Anweisung des Nutzers.
 - **Bob-Bot standalone:** `Kasax007/Bob-Bot`. Bob als eigener Begleiter-Mod; später als KI-Mitspieler für
   Challenge Craft gedacht.
 
-## Der Mod (Stand 1.1.2 veröffentlicht, 1.1.3 vorbereitet; Minecraft 26.3, Fabric, Java 25)
+## Der Mod (Stand 1.1.3, veröffentlicht am 1.11.2026; Minecraft 26.3, Fabric, Java 25)
 
 - **Inhalt:**
   - 51 Challenges (seit 1.1.3), einzeln oder gestapelt; jede Kombination bekommt eine Difficulty Rating.
@@ -76,7 +76,23 @@ neueste Anweisung des Nutzers.
     `gradle.properties` ändert, veröffentlicht – nur solange es den Tag `v<version>` noch nicht gibt.
   - Secrets (setzt der Nutzer): `CURSEFORGE_TOKEN`, `MODRINTH_TOKEN` (Scopes: Create/Read/Write versions).
   - Veröffentlichen ist nach außen sichtbar: Version nur nach ausdrücklichem Go des Nutzers erhöhen.
-  - Modrinth hatte zuletzt nur 1.1.1 (1.1.2 fehlt dort).
+  - Der Workflow prüft je Plattform, ob die Version schon da ist: CurseForge-Dateiliste (Fallback cfwidget),
+    Modrinth-Versionen, GitHub-Tag. Er lädt nur hoch, was fehlt. Fehlt ein Secret, gibt es eine Warnung statt eines Abbruchs.
+  - Eine Sitzung darf keine Tags pushen (HTTP 403). Den Tag `v<version>` legt der Workflow über das GitHub-Release an.
+  - Von Hand (Token nur als Datei außerhalb der Repos): `CURSEFORGE_TOKEN=… ./gradlew publishCurseforge`.
+  - Stand 1.1.3: CurseForge-Datei 9399763 (nach ca. 10 Min. freigegeben), GitHub-Release `v1.1.3`. Modrinth hat
+    noch 1.1.1 (1.1.2 und 1.1.3 fehlen; der Nutzer hat noch keinen Modrinth-Token gegeben).
+  - Projektbeschreibungen lassen sich bei CurseForge nicht per API ändern (Idee CF-I-6366, „Future consideration“).
+    Der Nutzer fügt `docs/curseforge/mod-description.md` und `modpack-description.md` von Hand ein.
+- **Modpack** (CurseForge-Projekt 1653698, Dateien „Challenge Craft 26.3-vN.zip“ plus Zusatzdatei
+  „Serverpack Challenge Craft 26.3-vN.zip“):
+  - v4 (1.11.2026): Modpack 9399868, Server-Pack 9399871. Nur Challenge Craft 1.1.3 neu, sonst gleich wie v3.
+  - Werkzeuge: `curseforge/modpack-tools/` im Archiv. `mkpacks.py` baut aus dem letzten Pack das nächste (nur die
+    Challenge-Craft-Datei bzw. -Jar wird getauscht). `upload.sh` lädt über die Upload-API hoch.
+  - Reihenfolge: zuerst die Mod hochladen und die Freigabe abwarten, dann das Modpack (Game-Versions 26.3 = 17045,
+    Fabric = 7499). Danach den Server-Pack mit `parentFileID` des Modpacks und `isServerPack: true`, ohne gameVersions.
+  - Den Server-Pack herunterzuladen und zu starten, hat die Sicherheitsprüfung blockiert (fremder Code). Die
+    Server-Seite der Mod prüfen die Game-Tests: Sie laufen als Dedicated Server.
 - **Links:**
   - Mod: `https://www.curseforge.com/minecraft/mc-mods/challenge` (der Slug ist `challenge`).
   - Modpack: `https://www.curseforge.com/minecraft/modpacks/challenge-craft`.

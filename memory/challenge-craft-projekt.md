@@ -89,8 +89,13 @@ neueste Anweisung des Nutzers.
   - v4 (1.11.2026): Modpack 9399868, Server-Pack 9399871. Nur Challenge Craft 1.1.3 neu, sonst gleich wie v3.
   - Werkzeuge: `curseforge/modpack-tools/` im Archiv. `mkpacks.py` baut aus dem letzten Pack das nächste (nur die
     Challenge-Craft-Datei bzw. -Jar wird getauscht). `upload.sh` lädt über die Upload-API hoch.
-  - Reihenfolge: zuerst die Mod hochladen und die Freigabe abwarten, dann das Modpack (Game-Versions 26.3 = 17045,
-    Fabric = 7499). Danach den Server-Pack mit `parentFileID` des Modpacks und `isServerPack: true`, ohne gameVersions.
+  - Reihenfolge: zuerst die Mod hochladen und die Freigabe abwarten (ca. 10 Min.), dann das Modpack (Game-Versions
+    26.3 = 17045, Fabric = 7499; Freigabe ca. 15 Min.). Danach den Server-Pack mit `parentFileID` des Modpacks, ohne
+    gameVersions.
+  - **Server-Pack-Markierung geht nicht per API:** `isServerPack: true` wird beim Upload ignoriert (`hasServerPack`
+    bleibt false). `update-file` mit dem Feld gibt HTTP 500, übernimmt aber den Changelog. Der Nutzer muss die
+    Zusatzdatei auf CurseForge von Hand als Server Pack markieren (bei v4 offen, Stand 1.11.2026).
+  - CurseForge ersetzt Leerzeichen im Dateinamen durch Bindestriche; der Anzeigename behält sie.
   - Den Server-Pack herunterzuladen und zu starten, hat die Sicherheitsprüfung blockiert (fremder Code). Die
     Server-Seite der Mod prüfen die Game-Tests: Sie laufen als Dedicated Server.
 - **Links:**

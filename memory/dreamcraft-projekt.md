@@ -10,8 +10,10 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
 | --- | --- | --- |
 | Modpack-Quelle (Overrides, Quests, Menü, Tools, Beschreibung) | `Kasax007/Modpack-Development`, Branch `26.3` | Modpack 545167 |
 | Quest Icons (Quest-System im FTB-Quests-Stil + Icons) | `Kasax007/Kasax_Quests_Items_Mod-1.19.2`, Branch `26.3` | 690531, Datei 9402494 (1.0.0+26.3) |
-| Raft-Mod, auf CurseForge **„Beach Craft“** | `Kasax007/Kasax_Raft_Mod`, Branch `26.3` | 1010922, Datei 9402661 (2.0.0+26.3) |
-| TikTok und Werkzeuge | `Archive/dreamcraft/tiktok` | – |
+| Raft-Mod, auf CurseForge **„Beach Craft“** | `Kasax007/Kasax_Raft_Mod`, Branch `26.3` | 1010922, Datei 9402661 (2.0.0+26.3), 9408472 (2.0.1+26.3) |
+| TikTok und Werkzeuge | `Archive/dreamcraft/tiktok` (v2 mit Shadern) | – |
+| Beach-Craft-Review und Prüfbericht | `Archive/beachcraft/review` | – |
+| Modpack-Dateien | | V1: 9403038 (+ Server-Pack). V1.1: 9408516, Server-Pack 9408519 (Beach Craft 2.0.1, Quests korrigiert) |
 
 - FTB Quests gibt es für 26.3 Fabric nicht. Das Quest-System steckt deshalb in Quest Icons: Buch mit Taste J,
   SNBT-Dateien in `config/questsicons/quests`, Befehle `/quests` (open, reload, complete, reset, team).
@@ -41,8 +43,29 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
 - **Client-Gametest-Projekt:** `/home/user/dctest`, die Quelle liegt im Modpack-Repo unter `tools/dctest`. Szenen sind
   boot, smoke, quests und film. Die Pack-Mods und -Configs liegen in `build/run/client`.
 - **`KeyFix`:** füllt fehlende Tastenbelegungen im Gametest auf.
-- **Filmen:** `sh ./gradlew runPack -Pxmx=5G -Pscene=film -Pshots=a,b -Pout=$SP/film`. Mehr als 6 GB führte einmal
-  zum SIGKILL.
+- **Filmen:** `sh ./gradlew runPack -Pxmx=5G -Pscene=film -Pshots=a,b -Pout=$SP/film [-Prd=12] [-Pnostills=1]`.
+  Mehr als 6 GB Heap führte einmal zum SIGKILL.
+- **Speicherleck der Fabric-Gametest-API (6.0.11):** `takeScreenshot` gibt das `NativeImage` nie frei, also 8 MB pro
+  Bild bei 1080×1920. Nach rund 600 Bildern hat der OOM-Killer den Client beendet (Grenze etwa 13 GB RSS, mit und
+  ohne Shader). Behoben mit `mixin/ScreenshotLeakMixin` im Harness: Er schließt das Bild nach dem Speichern.
+  Trotzdem filmt `$SP/bc_batches.sh` in Batches zu 5–7 Shots, eine JVM pro Batch.
+- **26.3 nutzt SDL statt GLFW:** Maustaste 1 ist dort LINKS, rechts ist 3. `pressMouse(1)` hat deshalb Blöcke
+  abgebaut (Truhe zerbrochen). Klicks immer über die Tastenbelegung auslösen: `pressKey(o -> o.keyUse)` bzw.
+  `holdKey(o -> o.keyAttack)`.
+- **Shader:** Iris + Complementary Reimagined r5.9.3 (`run/client/shaderpacks`, `config/iris.properties`
+  `enableShaders`). Auf llvmpipe dauert ein Bild 5–7 s. Das End mit Shadern blieb hängen (Server verhungert).
+- **Minikarte:** Für Aufnahmen mit HUD steht in `config/xaero/minimap/profiles/default.cfg` `display_minimap = false`.
+- **Film-Takt:** Der integrierte Server tickt in Echtzeit weiter, während ein Bild 0,5–2 s braucht. Serverseitige
+  Abläufe (Öfen, Wachstum, Treibgut, Portal) laufen pro Filmsekunde deshalb 3–5-mal schneller. Dinge, die man sehen
+  soll, erst im Shot starten (z. B. Setzling bei Tick 1 setzen, Treibgut laufend nachspawnen).
+- **Kamera hinter dem Spieler:** Mit `tp … facing <Ziel>` landet das Ziel genau hinter der Figur. Besser seitlich
+  versetzt stellen und geradeaus schauen lassen.
+- **Koordinaten:** Nie `"%d.5"` formatieren, das ergibt bei negativen Werten einen halben Block daneben. Stattdessen
+  `%.1f` mit `+0.5`.
+- **Raft-Dimension:** Sie nutzt die Geländeform der Oberwelt mit Meeresspiegel 100, deshalb stehen dort große
+  Steinmassive. `BcShots.sea()` sucht über die Basishöhen offenes Meer für die Bühnen.
+- **Review-Shots:** `BcShots.java` (`bc_*`). Die meisten spielen auf einer 13×13-Floß-Bühne in `raft:raftdim`, eine
+  Bühne alle 200 Blöcke ab x=3000.
 - **Shots im Meer:** Der Seed `dreamcraft-film` startet im Ozean. Für Szenen an Land deshalb `findLand()`
   verwenden; es sucht über die Basis-Höhen des Generators trockenes, flaches Land.
 - **Luftaufnahmen:** Den Spieler auf einen Barriere-Block stellen. Fliegen per Abilities hat nicht gehalten.

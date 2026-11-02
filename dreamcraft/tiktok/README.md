@@ -1,6 +1,10 @@
 # Dreamcraft 26.3 – Promo-TikTok
 
 Schneller Short (ca. 44 s, 1080×1920, 30 fps, Englisch) für das Modpack Dreamcraft auf Minecraft 26.3.
+Version 2 (2. November): mit Shadern (Iris + Complementary Reimagined r5.9.3) und Sichtweite 12 neu gefilmt.
+Der Film-Harness wartet vor jedem Shot, bis alle Chunks im Umkreis geladen und gezeichnet sind, deshalb lädt im Bild
+nichts nach. Nur der End-Shot stammt aus Version 1, weil das End mit Shadern auf der Software-GPU hängen blieb.
+
 Hook: Luftaufnahme einer Burg mit Titel „MINECRAFT 26.3 MODPACK“. Dann folgen Menü, Quest-Buch, Kirschblüten-Dorf,
 Feuer-Magier, Mutant, Küche, Tech Reborn, Floß mit Hai, Nether und End. Endkarte: „FREE ON CURSEFORGE“.
 
@@ -29,7 +33,10 @@ $SP/tts/bin/python tools/dc.py --deliver          # Render + Kopie hierher
 ```
 
 Das Footage liegt in `$SP/film/<shot>/f%05d.png`. Gefilmt wird mit dem Film-Harness im Modpack-Repo
-(`Modpack-Development`, Branch `26.3`, `tools/dctest`, `-Pscene=film`).
+(`Modpack-Development`, Branch `26.3`, `tools/dctest`, `-Pscene=film -Prd=12 -Pnostills=1`).
+Shader: in `run/client/config/iris.properties` `enableShaders=true` setzen und das Shaderpack nach `run/client/shaderpacks`
+legen. Auf llvmpipe dauert ein Bild 5–7 s, und der Client braucht 10–13 GB. Deshalb keine Fenster-Größenwechsel
+(`-Pnostills`) und nichts anderes Speicherhungriges parallel laufen lassen, sonst greift der OOM-Killer.
 Shots: castle, village, vista, magic, mutant, kitchen, tech, raft, shark, nether, end, questbook, menu.
 Dazu kommt `menu_land`, ein Hochformat-Ausschnitt aus dem Querformat-Standbild des Menüs, weil das Menü im
 Hochformat gequetscht aussieht.

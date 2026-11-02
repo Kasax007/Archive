@@ -18,7 +18,7 @@ FONT = cut.CAPTION_FONT
 VIOLET, DEEP, WHITE = (176, 84, 255), (52, 18, 96), (255, 255, 255)
 CF_ORANGE = (241, 100, 54)
 N = 150
-TILES = ['castle', 'raft', 'magic', 'nether']
+TILES = ['castle', 'village', 'magic', 'mutant']
 
 
 def background():

@@ -55,7 +55,13 @@ ablegen (`$SP/.cf_token`), nie committen.
   - Client: Datei 9408516.
   - Server-Pack: Datei 9408519.
 
+- [x] **Dreamcraft V1.2:**
+  - Nach einem Test der echten CurseForge-Installation: Menü-Fixes, Ego-Perspektive, JER entfernt, Quest Icons 1.0.1.
+  - Client: Datei 9409459, Server-Pack: Datei 9409463.
+- [x] **Beschreibungen** im Stil des Nutzers mit Bisect-Bannern und Spoilern, je in `docs/curseforge/description.html`.
+
 Von Hand zu erledigen:
-- Beschreibungen auf CurseForge einfügen. Für Beach Craft gibt es eine korrigierte Fassung:
-  `Kasax_Raft_Mod/docs/curseforge/description.md`.
+- Beschreibungen auf CurseForge einfügen:
+  - Im Editor auf die Quellcode-Ansicht umschalten, den Inhalt der jeweiligen `description.html` einfügen.
+  - Die Dateien liegen in Modpack-Development, Kasax_Quests_Items_Mod-1.19.2 und Kasax_Raft_Mod, jeweils `docs/curseforge`.
 - Den Server-Pack auf der CurseForge-Seite als Server-Pack markieren; das geht nicht per API.

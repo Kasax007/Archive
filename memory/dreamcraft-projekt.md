@@ -9,11 +9,11 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
 | Was | Wo | CurseForge |
 | --- | --- | --- |
 | Modpack-Quelle (Overrides, Quests, Menü, Tools, Beschreibung) | `Kasax007/Modpack-Development`, Branch `26.3` | Modpack 545167 |
-| Quest Icons (Quest-System im FTB-Quests-Stil + Icons) | `Kasax007/Kasax_Quests_Items_Mod-1.19.2`, Branch `26.3` | 690531, Datei 9402494 (1.0.0+26.3) |
+| Quest Icons (Quest-System im FTB-Quests-Stil + Icons) | `Kasax007/Kasax_Quests_Items_Mod-1.19.2`, Branch `26.3` | 690531, Datei 9402494 (1.0.0+26.3), 9409345 (1.0.1+26.3) |
 | Raft-Mod, auf CurseForge **„Beach Craft“** | `Kasax007/Kasax_Raft_Mod`, Branch `26.3` | 1010922, Datei 9402661 (2.0.0+26.3), 9408472 (2.0.1+26.3) |
 | TikTok und Werkzeuge | `Archive/dreamcraft/tiktok` (v2 mit Shadern) | – |
 | Beach-Craft-Review und Prüfbericht | `Archive/beachcraft/review` | – |
-| Modpack-Dateien | | V1: 9403038 (+ Server-Pack). V1.1: 9408516, Server-Pack 9408519 (Beach Craft 2.0.1, Quests korrigiert) |
+| Modpack-Dateien | | V1: 9403038 (+ Server-Pack). V1.1: 9408516, Server-Pack 9408519 (Beach Craft 2.0.1, Quests korrigiert). V1.2: 9409459, Server-Pack 9409463 (Menü-Fixes, ohne JER) |
 
 - FTB Quests gibt es für 26.3 Fabric nicht. Das Quest-System steckt deshalb in Quest Icons: Buch mit Taste J,
   SNBT-Dateien in `config/questsicons/quests`, Befehle `/quests` (open, reload, complete, reset, team).
@@ -72,8 +72,38 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
 - **Server:** `tools/srv.sh` startet einen Test-Server. Chunky lief in allen Dimensionen inklusive `raft:raftdim`
   ohne Fehler.
 
+## Wie Spieler das Pack bekommen (Produktiv-Test)
+
+- **Warum:** Der Loom-Gametest ist eine Entwicklungsumgebung. Nur ein echter Launcher-Start zeigt, was Spieler sehen.
+  Werkzeuge in `Modpack-Development/tools/prodtest`:
+  - `cf_install.py` lädt das Pack und jede Manifest-Datei von CurseForge.
+  - `launch.py` startet Fabric produktiv.
+  - `xin.py` sendet Klicks und Tasten, `xwin.py` ändert die Fenstergröße.
+- **Vor jedem Pack-Upload:**
+  - Installieren wie ein Launcher.
+  - Hauptmenü bei 854×480, 1366×768 und 1920×1080 ansehen und jeden Button klicken.
+  - Welt laden, Questbuch (J) öffnen.
+  - Server-Pack aus der Zip starten.
+- **Funde in V1.1, behoben in V1.2:**
+  - Menü zu groß für kleine Fenster. Jetzt FancyMenu `autoscale` mit Basis 1920×1080 bei `setscale 2`.
+  - Mods- und Rent-a-Server-Button ohne Aktion: `fresh_ids` vergab für dieselbe UUID verschiedene neue IDs.
+  - Drippy-Balken weiß; der Vanilla-Balken ignoriert Farben, deshalb jetzt `drippy_vanilla_bar` mit `color`.
+  - Shoulder Surfing startete in der Schulterkamera.
+  - JER scheitert an BetterNether-Biomen und wurde entfernt.
+  - In den Quests stand noch REI statt JEI.
+- **Neue Datei auf CurseForge:** Sie ist erst nach rund 10 Minuten Prüfung herunterladbar. Erst dann ein Pack hochladen,
+  das sie referenziert.
+- **Beschreibungen:**
+  - Als HTML in `docs/curseforge/description.html` jedes Repos, für die Quellcode-Ansicht des CurseForge-Editors.
+  - Spoiler sind `<div class="spoiler">`.
+  - Dreamcraft behält die BisectHosting-Grafiken (`bh_header`, `bh_promo`, `bh_1`…`bh_6`).
+  - Quest Icons behält den Stil des Nutzers (Logo, „Made with love, sweat and tears“, Bisect-Banner, Abschnittsbilder).
+  - Beach Craft hat ein eigenes Bisect-Banner `img/bisect.png`.
+  - Für Beschreibungen gibt es keine API, der Nutzer fügt sie selbst ein.
+
 ## Was der Nutzer will (hier gelernt)
 
 - Ohne Rückfragen durcharbeiten; höchstens ein Sonnet-Subagent.
 - Der CurseForge-Token liegt nur in `$SP/.cf_token`. Nie committen und nie ausgeben.
 - Beschreibungen im Stil der Tamagotchi-Seite: Header-Bild, Abschnitts-Streifen, Screenshots und Badges.
+- Beschreibungen mit BisectHosting-Banner (Code KASAX007) und vielen Spoilern; Pack immer so testen, wie Spieler es installieren.

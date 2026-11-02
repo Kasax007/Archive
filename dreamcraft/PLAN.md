@@ -43,6 +43,19 @@ ablegen (`$SP/.cf_token`), nie committen.
     Branch `26.3`.
 - [x] 9 **TikTok:** `dreamcraft/tiktok/` (44 s, Hook mit Burg-Luftaufnahme).
 
+## Nachtrag (2.11.2026, zweiter Auftrag)
+
+- [x] **TikTok v2:** Shader (Complementary Reimagined), Sichtweite 12. Jeder Shot wartet, bis alle Chunks gezeichnet
+  sind. Das Rohmaterial liegt in `footage/dc`.
+- [x] **Beach-Craft-Review:** `beachcraft/review/` (5:07). Jedes Feature ist gefilmt und erklärt, Prüfbericht in
+  `REPORT.md`, Rohmaterial in `footage/bc`.
+- [x] **Beach Craft 2.0.1:** über 20 Fehler behoben, darunter das Paddel, das erst beim Filmen auffiel.
+  CurseForge-Datei 9408472.
+- [x] **Dreamcraft V1.1:** Beach Craft 2.0.1 und korrigierte Raft-Quests („Driftwood Ahoy!“).
+  - Client: Datei 9408516.
+  - Server-Pack: Datei 9408519.
+
 Von Hand zu erledigen:
-- Beschreibungen auf CurseForge einfügen.
+- Beschreibungen auf CurseForge einfügen. Für Beach Craft gibt es eine korrigierte Fassung:
+  `Kasax_Raft_Mod/docs/curseforge/description.md`.
 - Den Server-Pack auf der CurseForge-Seite als Server-Pack markieren; das geht nicht per API.

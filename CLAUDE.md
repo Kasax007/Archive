@@ -33,11 +33,12 @@ Im Mod-Repo ist `CLAUDE.md` vom Nutzer per `.gitignore` ausgeschlossen (seine lo
 | `shorts/tools` | Schnitt (`cut.py`, `v3lib.py`), SFX (`sfx.py`), Stimme der Shorts (`tts_v3.py`, Chatterbox) |
 | `longform/` | Long-form Showcase v1 (7:50, 9:16). Siehe `longform/README.md` |
 | `footage/<gruppe>/` | Rohmaterial, eine MP4 pro Szene (`chal`, `casino`, `ui`, `cards`, `long`; `tama` für den Tamagotchi-Mod, `tama2` mit Ton-Protokoll je Shot: `<shot>.sounds.jsonl`, `<shot>.shot.json`) |
+| `dreamcraft/` | Dreamcraft 26.3: `PLAN.md` (Stand), `tiktok/` (Promo-Short mit Werkzeugen, Endkarte). Gedächtnis: `memory/dreamcraft-projekt.md` |
 | `tamagotchi/` | Videos zum Mod Tamagotchi (Short, 2-Minuten-Showcase, Review-Schnitt mit echten Spielgeräuschen), Werkzeuge, Endkarten. Siehe `tamagotchi/README.md` |
 | `fonts/` | Schriften für Untertitel und Titel (vor dem Rendern nach `$SP/fonts` kopieren) |
 | `motion/` | Remotion-Projekt (Motion Graphics für Story 5.1) |
 | `stills/`, `research/`, `curseforge/` | Kontaktbögen, Recherche, Mod- und Modpack-Beschreibung, Changelog |
-| `memory/` | Langzeitgedächtnis: `challenge-craft-projekt.md` (Mod, Bob, Training, Regeln, Vorlieben des Nutzers) |
+| `memory/` | Langzeitgedächtnis: `challenge-craft-projekt.md` (Mod, Bob, Training, Regeln, Vorlieben des Nutzers), `dreamcraft-projekt.md` (Modpack Dreamcraft 26.3, Quest Icons, Beach Craft/Raft) |
 | `Testrun Lockout against Bob` | Log einer Runde des Nutzers gegen Bob |
 
 ## Was der Nutzer bei Videos will

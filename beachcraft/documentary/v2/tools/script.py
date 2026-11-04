@@ -46,7 +46,7 @@ DOC = [
     dict(id='B3', ch=None,
          text="The *coral shallows* are warm and clear. Between the reefs sit sea anemones, giant clams, starfish "
               "and spiny sea urchins, and pebbles of sea glass lie in the sand.",
-         shots=[('b_coral', None), ('b_clam', 'giant clams'), ('b_urchin', 'spiny sea urchins')], pause=0.8),
+         shots=[('b_coral', None), ('c_manta', 'giant clams'), ('b_urchin', 'spiny sea urchins')], pause=0.8),
     dict(id='B4', ch=None,
          text="The *glowing lagoon* is rare and dim. Glowing anemones, tube worms and glow kelp fill it with soft light.",
          shots=[('b_lagoon', None)], pause=0.8),
@@ -256,7 +256,7 @@ DOC = [
          text="Upgrades go right onto the raft, and every one of them shows. The sail makes it faster, the engine "
               "more than twice as fast, the cargo crate adds storage, lanterns light it up, and the anchor holds it "
               "in place.",
-         shots=[('f_raft_upgrades', None), ('f_raft_engine', 'the engine')], pause=0.8),
+         shots=[('f_raft_upgrades', None), ('f_raft_sail', 'the engine')], pause=0.8),
     dict(id='I10', ch=None,
          text="The *palm boat* and the driftwood raft work like vanilla boats, with or without a chest, and in a "
               "boat, the paddle gives you a push.",
@@ -271,7 +271,7 @@ DOC = [
     dict(id='I13', ch=None,
          text="The *wetsuit* lets you mine faster under water and keeps jellyfish away, flippers make you swim much "
               "faster, and the full set gives you dolphin's grace.",
-         shots=[('f_dive_swim', None)], pause=0.8),
+         shots=[('f_dive', None)], pause=0.8),
     dict(id='I14', ch=None,
          text="The *air compressor* refills tanks, with energy or with its hand crank.",
          shots=[('f_compressor', None)], pause=0.8),
@@ -358,7 +358,7 @@ DOC = [
          shots=[('s_wake', None), ('s_lev_wide', 'a colossal')], pause=1.4),
     dict(id='S12', ch=None,
          text="It circles in the pool, where nothing can hurt it. It rises, and spits *brine bolts*.",
-         shots=[('s_lev_circle', None), ('s_lev_bolts', 'It rises')], pause=1.0),
+         shots=[('s_lev_circle', None), ('s_lev_wide', 'It rises')], pause=1.0),
     dict(id='S13', ch=None,
          text="It leaps across the stone ring, slams down, and lies *stranded* for four seconds. That is the moment "
               "to strike.",
@@ -366,7 +366,7 @@ DOC = [
     dict(id='S14', ch=None,
          text="Below half health, it roars and calls the *tidelings*, and stirs a whirlpool that pulls you towards "
               "the pool. Below a quarter, it gets faster still.",
-         shots=[('s_lev_roar', None), ('s_lev_fast', 'Below a quarter')], pause=1.2),
+         shots=[('s_lev_roar', None), ('s_lev_circle', 'Below a quarter')], pause=1.2),
     dict(id='S15', ch=None,
          text="When it falls, it leaves the *Heart of the Tide*, leviathan scales, and its trophy.",
          shots=[('s_lev_death', None), ('s_rewards', 'leviathan scales')], pause=1.4),

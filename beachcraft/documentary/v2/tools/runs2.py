@@ -425,13 +425,12 @@ def run_e():
     s.add('third on')
     s.clip('f_raft_sail', 8, cam='128,106,150,-120,18', look='raft:expedition_raft', chase='14,5', smooth=0.08,
            at=[(4, 'press forward'), (110, 'press left'), (140, 'release left'), (236, 'release forward')])
-    s.clip('f_raft_engine', 5, cam='150,104,175,160,15', look='raft:expedition_raft', chase='11,3', smooth=0.08,
-           at=[(2, 'press forward'), (146, 'release forward')])
     s.add('cmd ride @p dismount', 'cmd kill @e[type=raft:expedition_raft]', 'cmd execute in raft:raftdim run tp @p 140.5 100 140.5 0 20', 'wait 5')
     s.r('summon raft:palm_boat 147.5 99.6 136.5 {Rotation:[90f,0f]}', 'summon raft:palm_chest_boat 147.5 99.6 139.5 {Rotation:[90f,0f]}',
         'summon raft:driftwood_raft 147.5 99.6 142.5 {Rotation:[90f,0f]}', 'summon raft:driftwood_chest_raft 147.5 99.6 145.5 {Rotation:[90f,0f]}')
     s.spec()
-    s.dolly('f_boats', 5, (153, 102.5, 133), (153.5, 102, 139), (147.5, 99.8, 141), settle=10)
+    s.go(153.5, 102, 139, 147.5, 99.8, 141, settle=10)
+    s.add('still f_boats 1.25')
     for e in ('palm_boat', 'palm_chest_boat', 'driftwood_raft', 'driftwood_chest_raft'):
         s.cmd(f'kill @e[type=raft:{e}]')
     # cannon (fired twice), turbine, compressor and battery screens, seats, hammock
@@ -461,9 +460,12 @@ def run_e():
     s.add('third off', 'cmd execute in raft:raftdim run tp @p 137.5 100 143.5 180 40', 'wait 3', 'faceblock raft:simple_grill 4',
           'slot 1', 'use', 'slot 2', 'use', 'slot 3', 'use', 'wait 10')
     s.spec()
-    s.dolly('f_grill', 4, (138.8, 101.8, 144.2), (138.2, 101.5, 143.2), (137.5, 100.5, 141.5), settle=10)
-    s.dolly('f_crops', 4, (143.5, 102, 135.6), (143.5, 101.8, 136.4), (143.5, 100.5, 140), settle=10)
-    s.dolly('f_machines', 4, (137.8, 102.2, 132.0), (137.8, 102.0, 133.0), (137.8, 100.8, 136.5), settle=10)
+    s.go(138.2, 101.5, 143.2, 137.5, 100.5, 141.5, settle=10)
+    s.add('still f_grill 1.25')
+    s.go(143.5, 101.8, 136.4, 143.5, 100.5, 140, settle=10)
+    s.add('still f_crops 1.25')
+    s.go(137.8, 102.0, 133.0, 137.8, 100.8, 136.5, settle=10)
+    s.add('still f_machines 1.25')
     s.dolly('f_deck', 6, (154, 108, 154), (151, 106, 151), (140, 100, 140), settle=10)
     # terminal and radio (first person; the radio broadcast shows in the chat)
     s.cmd('gamemode creative @p')
@@ -477,8 +479,6 @@ def run_e():
     s.add('cmd execute in raft:raftdim run tp @p 150.5 90 140.5 90 10', 'wait 60', 'hud on', 'third off', 'shot f_gauge', 'hud off')
     s.add('third on')
     s.clip('f_dive', 5, cam='154,91.5,136,40,10', look='150.5,91,140.5')
-    s.clip('f_dive_swim', 6, cam='156,92,134,60,8', look='raft:anglerfish' if False else '150.5,90.8,140.5',
-           at=[(3, 'press sprint'), (4, 'press forward'), (176, 'release forward'), (177, 'release sprint')], chase='5,0.8')
     s.cmd('execute in raft:raftdim run tp @p 150.5 90 140.5 90 10')
     s.cmd('item replace entity @p hotbar.0 with raft:harpoon_gun', 'item replace entity @p hotbar.1 with raft:harpoon 16')
     s.add('slot 1', 'pcmd summon minecraft:cod ^ ^ ^7 {NoAI:1b}', 'wait 3')
@@ -545,14 +545,12 @@ def run_f():
     s.hands('raft:tidebreaker')
     s.clip('s_lev_wide', 6, cam='-480,80,-303,140,25', look='raft:leviathan', smooth=0.05, at=hold)
     s.clip('s_lev_circle', 6, cam=cam, look='raft:leviathan', smooth=0.05, at=hold)
-    s.clip('s_lev_bolts', 6, cam='-506,74,-310,-140,15', look='raft:leviathan', smooth=0.05, at=hold)
     s.clip('s_lev_leap', 7, cam=cam, look='raft:leviathan', smooth=0.06, at=hold)
     s.clip('s_lev_strike', 5, cam='-490,72,-311,150,10', look='raft:leviathan', smooth=0.08,
            at=hold + [(k, 'lookat raft:leviathan') for k in range(5, 150, 10)] + [(k + 1, 'attack') for k in range(5, 150, 10)])
     s.add('cmd data merge entity @e[type=raft:leviathan,limit=1] {Health:280f}')
     s.clip('s_lev_roar', 6, cam=cam, look='raft:leviathan', smooth=0.05, at=hold)
     s.add('cmd data merge entity @e[type=raft:leviathan,limit=1] {Health:120f}')
-    s.clip('s_lev_fast', 5, cam='-506,74,-310,-140,15', look='raft:leviathan', smooth=0.06, at=hold)
     s.clip('s_lev_death', 5, cam=cam, look='raft:leviathan', smooth=0.05,
            at=[(12, 'cmd damage @e[type=raft:leviathan,limit=1] 2000 minecraft:generic_kill by @p')])
     s.add('wait 60', 'cmd gamemode creative @p', 'cmd kill @e[type=raft:tideling]')
@@ -594,6 +592,13 @@ def run_g():
     s.add('cmd execute in raft:raftdim run tp @p 244 110 571', 'settle 200')
     s.loot('pirate_treasure', 80, 'p_cove_chest')
     s.loot('story/pirate_captain', 80, 's_cove_captain')
+    # penguins on a natural ice floe of the frost floes
+    s.add('cmd execute in raft:raftdim run tp @p -96 105 96', 'settle 200', 'find minecraft:snow_block 48')
+    s.go(v('fx', 5), v('fy', 3.2), v('fz', 5), v('fx'), v('fy', 1), v('fz'), settle=60)
+    s.r(*(f"summon raft:penguin {v('fx', dx)} {v('fy', 1)} {v('fz', dz)}" for dx, dz in ((0, 0), (1, -1), (-1, 1), (1, 1))))
+    s.add('wait 40')
+    s.clip('c_penguin', 5, look='raft:penguin', smooth=0.06)
+    s.kill('raft:penguin')
     # jungle and mangrove flowers in new terrain (far from everything filmed so far)
     s.add('cmd execute in raft:raftdim run tp @p 2400 160 -2400', 'tpbiome raft:jungle_isle', 'where', 'settle 300')
     for name, block in (('b_orchid', 'raft:tropical_orchid'), ('b_heliconia', 'raft:heliconia'), ('b_pineapple', 'raft:pineapple_bush')):

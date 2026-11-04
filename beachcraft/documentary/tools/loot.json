@@ -1,0 +1,157 @@
+{
+ "p_galleon_chest": [
+  "Saltjaw's Treasure Chart",
+  "Cutlass",
+  "Cannonball x4",
+  "Gold Coin x8"
+ ],
+ "p_galleon_treasure": [
+  "Gold Coin x6",
+  "Cannonball x10",
+  "Cutlass",
+  "Gold Ingot x2"
+ ],
+ "p_cargo_chest": [
+  "Leather x2",
+  "Scrap Metal x4",
+  "Coal x2",
+  "Copper Ingot x6",
+  "Plastic x6"
+ ],
+ "p_cargo_barrel": [
+  "Titanium Nugget x5",
+  "Plastic x6",
+  "Copper Ingot x6",
+  "Circuit Board",
+  "Coal x2",
+  "Scrap Metal x2"
+ ],
+ "p_plane_crate": [
+  "Golden Carrot x3",
+  "Pineapple x3",
+  "Plastic x3",
+  "Compass"
+ ],
+ "p_ruins_chest": [
+  "Gold Nugget x2",
+  "Pearl"
+ ],
+ "p_raft_chest": [
+  "Shark Tooth x2",
+  "Plastic x2",
+  "Scrap Metal x2",
+  "Marlow's Second Note"
+ ],
+ "p_fishing_barrel": [
+  "Raw Salmon x2",
+  "Rope x4",
+  "Raw Cod x4",
+  "String x4"
+ ],
+ "p_sanctum_reward": [
+  "Ancient Crystal x2",
+  "Gold Ingot x14",
+  "Diamond x4",
+  "Emerald x10",
+  "Heart of the Sea",
+  "Enchanted Book"
+ ],
+ "p_sanctum_offer": [
+  "Pearl x4"
+ ],
+ "p_temple_chest": [
+  "The Tidewarden Prophecy",
+  "Prismarine Shard x7",
+  "Chart to the Abyssal Sanctum",
+  "Glow Ink Sac x5",
+  "Prismarine Crystals x2"
+ ],
+ "p_temple_offer": [
+  "Emerald x3",
+  "Pearl x3",
+  "Prismarine Shard x8",
+  "Ancient Energy",
+  "Nautilus Shell"
+ ],
+ "s_saltmere_elder": [
+  "Diving Helmet",
+  "Dried Kelp x6",
+  "Chart to Helix Station",
+  "Cooked Salmon x2",
+  "Letters of Nana Kalea"
+ ],
+ "s_saltmere_shrine": [
+  "Pearl x3",
+  "Seashell x5",
+  "Prismarine Crystals x2",
+  "Coral Sigil"
+ ],
+ "p_saltmere_market": [
+  "Raw Salmon x4",
+  "Pearl",
+  "Kelp x9",
+  "Coconut"
+ ],
+ "p_saltmere_house": [
+  "SOS",
+  "Raw Cod x5",
+  "Dried Kelp x5",
+  "Item Catcher Net",
+  "Fresh Water"
+ ],
+ "p_buoy_crate": [
+  "Plastic x2",
+  "Iron Nugget x4",
+  "Driftwood Planks x4",
+  "Palm Planks x2",
+  "Fresh Water x2"
+ ],
+ "p_iceberg_chest": [
+  "Iron Ingot x3",
+  "Book and Quill",
+  "Coal x4",
+  "Snowball x4",
+  "Warning!"
+ ],
+ "p_rig_chest": [
+  "Scrap Metal x6",
+  "Titanium Ingot x3",
+  "Redstone Dust x3",
+  "Circuit Board"
+ ],
+ "s_lighthouse": [
+  "Coal x5",
+  "Rope x2",
+  "Lantern",
+  "Chart to Saltmere",
+  "Spyglass",
+  "Fenn's Logbook",
+  "Compass"
+ ],
+ "p_lighthouse_storage": [
+  "String x4",
+  "Lantern x2",
+  "Rope x3",
+  "Torch x8"
+ ],
+ "p_shack_crate": [
+  "Pina Colada x2",
+  "Hibiscus",
+  "Sugar x4",
+  "Coconut x4"
+ ],
+ "s_cove_captain": [
+  "Gold Coin x7",
+  "Cutlass",
+  "Gold Ingot x5",
+  "Saltjaw's Log",
+  "Spyglass"
+ ],
+ "p_cove_loot": [
+  "Gold Ingot x11",
+  "Diamond x3",
+  "Gold Coin x13",
+  "Golden Apple",
+  "Gold Coin Pile"
+ ]
+}

@@ -1,0 +1,1729 @@
+{
+"i_building_1": [
+{
+"text": "Weathered Planks",
+"x": 0.1373,
+"y": 0.2021
+},
+{
+"text": "Weathered Stairs",
+"x": 0.3791,
+"y": 0.2021
+},
+{
+"text": "Weathered Slab",
+"x": 0.6209,
+"y": 0.2021
+},
+{
+"text": "Weathered Fence",
+"x": 0.8627,
+"y": 0.2021
+},
+{
+"text": "Weathered Fence Gate",
+"x": 0.1373,
+"y": 0.3721
+},
+{
+"text": "Weathered Door",
+"x": 0.3791,
+"y": 0.3721
+},
+{
+"text": "Weathered Hatch",
+"x": 0.6209,
+"y": 0.3721
+},
+{
+"text": "Teak Planks",
+"x": 0.8627,
+"y": 0.3721
+},
+{
+"text": "Teak Stairs",
+"x": 0.1373,
+"y": 0.5422
+},
+{
+"text": "Teak Slab",
+"x": 0.3791,
+"y": 0.5422
+},
+{
+"text": "Teak Fence",
+"x": 0.6209,
+"y": 0.5422
+},
+{
+"text": "Teak Fence Gate",
+"x": 0.8627,
+"y": 0.5422
+},
+{
+"text": "Teak Door",
+"x": 0.1373,
+"y": 0.7122
+},
+{
+"text": "Teak Hatch Grating",
+"x": 0.3791,
+"y": 0.7122
+},
+{
+"text": "Aqua Sea Glass",
+"x": 0.6209,
+"y": 0.7122
+},
+{
+"text": "Green Sea Glass",
+"x": 0.8627,
+"y": 0.7122
+},
+{
+"text": "Blue Sea Glass",
+"x": 0.1373,
+"y": 0.8822
+},
+{
+"text": "Aqua Sea Glass Pane",
+"x": 0.3791,
+"y": 0.8822
+},
+{
+"text": "Green Sea Glass Pane",
+"x": 0.6209,
+"y": 0.8822
+},
+{
+"text": "Blue Sea Glass Pane",
+"x": 0.8627,
+"y": 0.8822
+}
+],
+"i_building_2": [
+{
+"text": "Coral Stone",
+"x": 0.1373,
+"y": 0.2021
+},
+{
+"text": "Coral Stone Stairs",
+"x": 0.3791,
+"y": 0.2021
+},
+{
+"text": "Coral Stone Slab",
+"x": 0.6209,
+"y": 0.2021
+},
+{
+"text": "Coral Stone Wall",
+"x": 0.8627,
+"y": 0.2021
+},
+{
+"text": "Polished Coral Stone",
+"x": 0.1373,
+"y": 0.3721
+},
+{
+"text": "Polished Coral Stone Stairs",
+"x": 0.3791,
+"y": 0.3721
+},
+{
+"text": "Polished Coral Stone Slab",
+"x": 0.6209,
+"y": 0.3721
+},
+{
+"text": "Coral Stone Bricks",
+"x": 0.8627,
+"y": 0.3721
+},
+{
+"text": "Coral Stone Brick Stairs",
+"x": 0.1373,
+"y": 0.5422
+},
+{
+"text": "Coral Stone Brick Slab",
+"x": 0.3791,
+"y": 0.5422
+},
+{
+"text": "Coral Stone Brick Wall",
+"x": 0.6209,
+"y": 0.5422
+},
+{
+"text": "Mossy Coral Stone Bricks",
+"x": 0.8627,
+"y": 0.5422
+},
+{
+"text": "Mossy Coral Stone Brick Stairs",
+"x": 0.1373,
+"y": 0.7122
+},
+{
+"text": "Mossy Coral Stone Brick Slab",
+"x": 0.3791,
+"y": 0.7122
+},
+{
+"text": "Mossy Coral Stone Brick Wall",
+"x": 0.6209,
+"y": 0.7122
+},
+{
+"text": "Tidestone",
+"x": 0.8627,
+"y": 0.7122
+},
+{
+"text": "Tidestone Stairs",
+"x": 0.1373,
+"y": 0.8822
+},
+{
+"text": "Tidestone Slab",
+"x": 0.3791,
+"y": 0.8822
+},
+{
+"text": "Tidestone Wall",
+"x": 0.6209,
+"y": 0.8822
+},
+{
+"text": "Tidestone Bricks",
+"x": 0.8627,
+"y": 0.8822
+}
+],
+"i_building_3": [
+{
+"text": "Tidestone Brick Stairs",
+"x": 0.1373,
+"y": 0.2021
+},
+{
+"text": "Tidestone Brick Slab",
+"x": 0.3791,
+"y": 0.2021
+},
+{
+"text": "Tidestone Brick Wall",
+"x": 0.6209,
+"y": 0.2021
+},
+{
+"text": "Cracked Tidestone Bricks",
+"x": 0.8627,
+"y": 0.2021
+},
+{
+"text": "Mossy Tidestone Bricks",
+"x": 0.1373,
+"y": 0.3721
+},
+{
+"text": "Mossy Tidestone Brick Stairs",
+"x": 0.3791,
+"y": 0.3721
+},
+{
+"text": "Mossy Tidestone Brick Slab",
+"x": 0.6209,
+"y": 0.3721
+},
+{
+"text": "Mossy Tidestone Brick Wall",
+"x": 0.8627,
+"y": 0.3721
+},
+{
+"text": "Chiseled Tidestone",
+"x": 0.1373,
+"y": 0.5422
+},
+{
+"text": "Tidestone Pillar",
+"x": 0.3791,
+"y": 0.5422
+},
+{
+"text": "Glowing Tidestone",
+"x": 0.6209,
+"y": 0.5422
+},
+{
+"text": "Cracked Concrete",
+"x": 0.8627,
+"y": 0.5422
+},
+{
+"text": "Cracked Concrete Stairs",
+"x": 0.1373,
+"y": 0.7122
+},
+{
+"text": "Cracked Concrete Slab",
+"x": 0.3791,
+"y": 0.7122
+},
+{
+"text": "Cracked Concrete Wall",
+"x": 0.6209,
+"y": 0.7122
+},
+{
+"text": "Mossy Concrete",
+"x": 0.8627,
+"y": 0.7122
+},
+{
+"text": "Rebar Concrete",
+"x": 0.1373,
+"y": 0.8822
+},
+{
+"text": "Asphalt",
+"x": 0.3791,
+"y": 0.8822
+},
+{
+"text": "Asphalt Lane Line",
+"x": 0.6209,
+"y": 0.8822
+},
+{
+"text": "Asphalt Slab",
+"x": 0.8627,
+"y": 0.8822
+}
+],
+"i_building_4": [
+{
+"text": "Asphalt Stairs",
+"x": 0.1373,
+"y": 0.2021
+},
+{
+"text": "Cracked Glass",
+"x": 0.3791,
+"y": 0.2021
+},
+{
+"text": "Cracked Glass Pane",
+"x": 0.6209,
+"y": 0.2021
+},
+{
+"text": "Riveted Hull",
+"x": 0.8627,
+"y": 0.2021
+},
+{
+"text": "Rusty Hull",
+"x": 0.1373,
+"y": 0.3721
+},
+{
+"text": "Corrugated Metal",
+"x": 0.3791,
+"y": 0.3721
+},
+{
+"text": "Corrugated Metal Stairs",
+"x": 0.6209,
+"y": 0.3721
+},
+{
+"text": "Corrugated Metal Slab",
+"x": 0.8627,
+"y": 0.3721
+},
+{
+"text": "Rusted Plate",
+"x": 0.1373,
+"y": 0.5422
+},
+{
+"text": "Steel Beam",
+"x": 0.3791,
+"y": 0.5422
+},
+{
+"text": "Catwalk",
+"x": 0.6209,
+"y": 0.5422
+},
+{
+"text": "Steel Railing",
+"x": 0.8627,
+"y": 0.5422
+},
+{
+"text": "Porthole",
+"x": 0.1373,
+"y": 0.7122
+},
+{
+"text": "Bulkhead Door",
+"x": 0.3791,
+"y": 0.7122
+},
+{
+"text": "Metal Hatch",
+"x": 0.6209,
+"y": 0.7122
+},
+{
+"text": "Rusty Pipe",
+"x": 0.8627,
+"y": 0.7122
+},
+{
+"text": "Rusty Pipe Valve",
+"x": 0.1373,
+"y": 0.8822
+},
+{
+"text": "Red Shipping Container",
+"x": 0.3791,
+"y": 0.8822
+},
+{
+"text": "Blue Shipping Container",
+"x": 0.6209,
+"y": 0.8822
+},
+{
+"text": "Green Shipping Container",
+"x": 0.8627,
+"y": 0.8822
+}
+],
+"i_building_5": [
+{
+"text": "Control Panel",
+"x": 0.1373,
+"y": 0.2021
+},
+{
+"text": "Server Rack",
+"x": 0.3791,
+"y": 0.2021
+},
+{
+"text": "Satellite Dish",
+"x": 0.6209,
+"y": 0.2021
+},
+{
+"text": "Wind Turbine",
+"x": 0.8627,
+"y": 0.2021
+}
+],
+"i_decor_1": [
+{
+"text": "Warm String Lights",
+"x": 0.1373,
+"y": 0.2021
+},
+{
+"text": "Colorful String Lights",
+"x": 0.3791,
+"y": 0.2021
+},
+{
+"text": "Red and White Bunting",
+"x": 0.6209,
+"y": 0.2021
+},
+{
+"text": "Rainbow Bunting",
+"x": 0.8627,
+"y": 0.2021
+},
+{
+"text": "White Paper Lantern",
+"x": 0.1373,
+"y": 0.3721
+},
+{
+"text": "Red Paper Lantern",
+"x": 0.3791,
+"y": 0.3721
+},
+{
+"text": "Orange Paper Lantern",
+"x": 0.6209,
+"y": 0.3721
+},
+{
+"text": "Yellow Paper Lantern",
+"x": 0.8627,
+"y": 0.3721
+},
+{
+"text": "Lime Paper Lantern",
+"x": 0.1373,
+"y": 0.5422
+},
+{
+"text": "Cyan Paper Lantern",
+"x": 0.3791,
+"y": 0.5422
+},
+{
+"text": "Blue Paper Lantern",
+"x": 0.6209,
+"y": 0.5422
+},
+{
+"text": "Purple Paper Lantern",
+"x": 0.8627,
+"y": 0.5422
+},
+{
+"text": "Pink Paper Lantern",
+"x": 0.1373,
+"y": 0.7122
+},
+{
+"text": "Ship Lantern",
+"x": 0.3791,
+"y": 0.7122
+},
+{
+"text": "Jelly Lamp",
+"x": 0.6209,
+"y": 0.7122
+},
+{
+"text": "Tiki Torch",
+"x": 0.8627,
+"y": 0.7122
+},
+{
+"text": "Brazier",
+"x": 0.1373,
+"y": 0.8822
+},
+{
+"text": "Driftwood Lamp",
+"x": 0.3791,
+"y": 0.8822
+},
+{
+"text": "Seashell Lamp",
+"x": 0.6209,
+"y": 0.8822
+},
+{
+"text": "Cyan Neon Tube",
+"x": 0.8627,
+"y": 0.8822
+}
+],
+"i_decor_2": [
+{
+"text": "Pink Neon Tube",
+"x": 0.1373,
+"y": 0.2021
+},
+{
+"text": "Red Buoy",
+"x": 0.3791,
+"y": 0.2021
+},
+{
+"text": "Green Buoy",
+"x": 0.6209,
+"y": 0.2021
+},
+{
+"text": "Lighthouse Lens",
+"x": 0.8627,
+"y": 0.2021
+},
+{
+"text": "Ship Cannon",
+"x": 0.1373,
+"y": 0.3721
+},
+{
+"text": "Cannonball",
+"x": 0.3791,
+"y": 0.3721
+},
+{
+"text": "Ship Anchor",
+"x": 0.6209,
+"y": 0.3721
+},
+{
+"text": "Treasure Chest",
+"x": 0.8627,
+"y": 0.3721
+},
+{
+"text": "Gold Coin",
+"x": 0.1373,
+"y": 0.5422
+},
+{
+"text": "Gold Coin Pile",
+"x": 0.3791,
+"y": 0.5422
+},
+{
+"text": "Jolly Roger",
+"x": 0.6209,
+"y": 0.5422
+},
+{
+"text": "Wanted Poster",
+"x": 0.8627,
+"y": 0.5422
+},
+{
+"text": "Rum Bottles",
+"x": 0.1373,
+"y": 0.7122
+},
+{
+"text": "Powder Keg",
+"x": 0.3791,
+"y": 0.7122
+},
+{
+"text": "Wooden Crate",
+"x": 0.6209,
+"y": 0.7122
+},
+{
+"text": "Ship Bell",
+"x": 0.8627,
+"y": 0.7122
+},
+{
+"text": "Chart Table",
+"x": 0.1373,
+"y": 0.8822
+},
+{
+"text": "Spyglass Stand",
+"x": 0.3791,
+"y": 0.8822
+},
+{
+"text": "Mermaid Figurehead",
+"x": 0.6209,
+"y": 0.8822
+},
+{
+"text": "Life Ring",
+"x": 0.8627,
+"y": 0.8822
+}
+],
+"i_decor_3": [
+{
+"text": "Rope Railing",
+"x": 0.1373,
+"y": 0.2021
+},
+{
+"text": "Cargo Net",
+"x": 0.3791,
+"y": 0.2021
+},
+{
+"text": "Hammock",
+"x": 0.6209,
+"y": 0.2021
+},
+{
+"text": "Deck Chair",
+"x": 0.8627,
+"y": 0.2021
+},
+{
+"text": "Red Beach Umbrella",
+"x": 0.1373,
+"y": 0.3721
+},
+{
+"text": "Blue Beach Umbrella",
+"x": 0.3791,
+"y": 0.3721
+},
+{
+"text": "Yellow Beach Umbrella",
+"x": 0.6209,
+"y": 0.3721
+},
+{
+"text": "White Cushion",
+"x": 0.8627,
+"y": 0.3721
+},
+{
+"text": "Red Cushion",
+"x": 0.1373,
+"y": 0.5422
+},
+{
+"text": "Blue Cushion",
+"x": 0.3791,
+"y": 0.5422
+},
+{
+"text": "Yellow Cushion",
+"x": 0.6209,
+"y": 0.5422
+},
+{
+"text": "Green Cushion",
+"x": 0.8627,
+"y": 0.5422
+},
+{
+"text": "Woven Rug",
+"x": 0.1373,
+"y": 0.7122
+},
+{
+"text": "Driftwood Table",
+"x": 0.3791,
+"y": 0.7122
+},
+{
+"text": "Palm Table",
+"x": 0.6209,
+"y": 0.7122
+},
+{
+"text": "Driftwood Chair",
+"x": 0.8627,
+"y": 0.7122
+},
+{
+"text": "Palm Chair",
+"x": 0.1373,
+"y": 0.8822
+},
+{
+"text": "Driftwood Shelf",
+"x": 0.3791,
+"y": 0.8822
+},
+{
+"text": "Wind Chime",
+"x": 0.6209,
+"y": 0.8822
+},
+{
+"text": "Aquarium",
+"x": 0.8627,
+"y": 0.8822
+}
+],
+"i_decor_4": [
+{
+"text": "Hanging Planter",
+"x": 0.1373,
+"y": 0.2021
+}
+],
+"i_nature_1": [
+{
+"text": "Shell Sand",
+"x": 0.1373,
+"y": 0.2021
+},
+{
+"text": "Black Sand",
+"x": 0.3791,
+"y": 0.2021
+},
+{
+"text": "Volcanic Ash",
+"x": 0.6209,
+"y": 0.2021
+},
+{
+"text": "Pumice",
+"x": 0.8627,
+"y": 0.2021
+},
+{
+"text": "Bubble Vent",
+"x": 0.1373,
+"y": 0.3721
+},
+{
+"text": "Beach Grass",
+"x": 0.3791,
+"y": 0.3721
+},
+{
+"text": "Sea Oats",
+"x": 0.6209,
+"y": 0.3721
+},
+{
+"text": "Tropical Fern",
+"x": 0.8627,
+"y": 0.3721
+},
+{
+"text": "Hibiscus",
+"x": 0.1373,
+"y": 0.5422
+},
+{
+"text": "Bird of Paradise",
+"x": 0.3791,
+"y": 0.5422
+},
+{
+"text": "Pineapple Bush",
+"x": 0.6209,
+"y": 0.5422
+},
+{
+"text": "Glow Kelp",
+"x": 0.8627,
+"y": 0.5422
+},
+{
+"text": "Red Sea Anemone",
+"x": 0.1373,
+"y": 0.7122
+},
+{
+"text": "Purple Sea Anemone",
+"x": 0.3791,
+"y": 0.7122
+},
+{
+"text": "Glowing Sea Anemone",
+"x": 0.6209,
+"y": 0.7122
+},
+{
+"text": "Tube Worms",
+"x": 0.8627,
+"y": 0.7122
+},
+{
+"text": "Giant Clam",
+"x": 0.1373,
+"y": 0.8822
+},
+{
+"text": "Orange Starfish",
+"x": 0.3791,
+"y": 0.8822
+},
+{
+"text": "Purple Starfish",
+"x": 0.6209,
+"y": 0.8822
+},
+{
+"text": "Red Starfish",
+"x": 0.8627,
+"y": 0.8822
+}
+],
+"i_nature_2": [
+{
+"text": "Sea Urchin",
+"x": 0.1373,
+"y": 0.2021
+},
+{
+"text": "Barnacles",
+"x": 0.3791,
+"y": 0.2021
+},
+{
+"text": "Pineapple",
+"x": 0.6209,
+"y": 0.2021
+},
+{
+"text": "Pineapple Crown",
+"x": 0.8627,
+"y": 0.2021
+},
+{
+"text": "Pearl",
+"x": 0.1373,
+"y": 0.3721
+},
+{
+"text": "Seashell",
+"x": 0.3791,
+"y": 0.3721
+},
+{
+"text": "Sea Glass Shard",
+"x": 0.6209,
+"y": 0.3721
+},
+{
+"text": "Urchin Spine",
+"x": 0.8627,
+"y": 0.3721
+}
+],
+"i_voyage_1": [
+{
+"text": "Expedition Raft",
+"x": 0.1373,
+"y": 0.2021
+},
+{
+"text": "Raft Sail",
+"x": 0.3791,
+"y": 0.2021
+},
+{
+"text": "Raft Engine",
+"x": 0.6209,
+"y": 0.2021
+},
+{
+"text": "Raft Anchor",
+"x": 0.8627,
+"y": 0.2021
+},
+{
+"text": "Raft Cargo Crate",
+"x": 0.1373,
+"y": 0.3721
+},
+{
+"text": "Raft Lanterns",
+"x": 0.3791,
+"y": 0.3721
+},
+{
+"text": "Palm Boat",
+"x": 0.6209,
+"y": 0.3721
+},
+{
+"text": "Palm Boat with Chest",
+"x": 0.8627,
+"y": 0.3721
+},
+{
+"text": "Driftwood Raft",
+"x": 0.1373,
+"y": 0.5422
+},
+{
+"text": "Driftwood Raft with Chest",
+"x": 0.3791,
+"y": 0.5422
+},
+{
+"text": "Diving Helmet",
+"x": 0.6209,
+"y": 0.5422
+},
+{
+"text": "Diving Helmet with Lamp",
+"x": 0.8627,
+"y": 0.5422
+},
+{
+"text": "Oxygen Tank",
+"x": 0.1373,
+"y": 0.7122
+},
+{
+"text": "Titanium Oxygen Tank",
+"x": 0.3791,
+"y": 0.7122
+},
+{
+"text": "Wetsuit",
+"x": 0.6209,
+"y": 0.7122
+},
+{
+"text": "Flippers",
+"x": 0.8627,
+"y": 0.7122
+},
+{
+"text": "Air Compressor",
+"x": 0.1373,
+"y": 0.8822
+},
+{
+"text": "Harpoon Gun",
+"x": 0.3791,
+"y": 0.8822
+},
+{
+"text": "Harpoon",
+"x": 0.6209,
+"y": 0.8822
+},
+{
+"text": "Sea Scooter",
+"x": 0.8627,
+"y": 0.8822
+}
+],
+"i_creatures_1": [
+{
+"text": "Crab Spawn Egg",
+"x": 0.1373,
+"y": 0.2021
+},
+{
+"text": "Ember Crab Spawn Egg",
+"x": 0.3791,
+"y": 0.2021
+},
+{
+"text": "Seagull Spawn Egg",
+"x": 0.6209,
+"y": 0.2021
+},
+{
+"text": "Penguin Spawn Egg",
+"x": 0.8627,
+"y": 0.2021
+},
+{
+"text": "Sea Otter Spawn Egg",
+"x": 0.1373,
+"y": 0.3721
+},
+{
+"text": "Drowned Corsair Spawn Egg",
+"x": 0.3791,
+"y": 0.3721
+},
+{
+"text": "Crab Claw",
+"x": 0.6209,
+"y": 0.3721
+},
+{
+"text": "Cooked Crab Claw",
+"x": 0.8627,
+"y": 0.3721
+},
+{
+"text": "Ember Shell",
+"x": 0.1373,
+"y": 0.5422
+},
+{
+"text": "Cutlass",
+"x": 0.3791,
+"y": 0.5422
+},
+{
+"text": "Bruce the Shark Spawn Egg",
+"x": 0.6209,
+"y": 0.5422
+},
+{
+"text": "Hammerhead Shark Spawn Egg",
+"x": 0.8627,
+"y": 0.5422
+},
+{
+"text": "Whale Spawn Egg",
+"x": 0.1373,
+"y": 0.7122
+},
+{
+"text": "Manta Ray Spawn Egg",
+"x": 0.3791,
+"y": 0.7122
+},
+{
+"text": "Jellyfish Spawn Egg",
+"x": 0.6209,
+"y": 0.7122
+},
+{
+"text": "Anglerfish Spawn Egg",
+"x": 0.8627,
+"y": 0.7122
+},
+{
+"text": "Moray Eel Spawn Egg",
+"x": 0.1373,
+"y": 0.8822
+},
+{
+"text": "Jelly Blob",
+"x": 0.3791,
+"y": 0.8822
+},
+{
+"text": "Glow Jelly",
+"x": 0.6209,
+"y": 0.8822
+},
+{
+"text": "Angler Lure",
+"x": 0.8627,
+"y": 0.8822
+}
+],
+"i_creatures_2": [
+{
+"text": "Raw Eel Fillet",
+"x": 0.1373,
+"y": 0.2021
+},
+{
+"text": "Cooked Eel Fillet",
+"x": 0.3791,
+"y": 0.2021
+}
+],
+"i_story_1": [
+{
+"text": "Expedition Journal",
+"x": 0.1373,
+"y": 0.2021
+},
+{
+"text": "Message in a Bottle",
+"x": 0.3791,
+"y": 0.2021
+},
+{
+"text": "Supply Barrel",
+"x": 0.6209,
+"y": 0.2021
+},
+{
+"text": "Coral Sigil",
+"x": 0.8627,
+"y": 0.2021
+},
+{
+"text": "Pearl Sigil",
+"x": 0.1373,
+"y": 0.3721
+},
+{
+"text": "Storm Sigil",
+"x": 0.3791,
+"y": 0.3721
+},
+{
+"text": "Ember Sigil",
+"x": 0.6209,
+"y": 0.3721
+},
+{
+"text": "Tidewarden Key",
+"x": 0.8627,
+"y": 0.3721
+},
+{
+"text": "Tidewarden Altar",
+"x": 0.1373,
+"y": 0.5422
+},
+{
+"text": "Sigil Pedestal",
+"x": 0.3791,
+"y": 0.5422
+},
+{
+"text": "Research Terminal",
+"x": 0.6209,
+"y": 0.5422
+},
+{
+"text": "Expedition Radio",
+"x": 0.8627,
+"y": 0.5422
+},
+{
+"text": "Tide Seal",
+"x": 0.1373,
+"y": 0.7122
+},
+{
+"text": "Sanctum Tidestone",
+"x": 0.3791,
+"y": 0.7122
+},
+{
+"text": "Sanctum Glass",
+"x": 0.6209,
+"y": 0.7122
+},
+{
+"text": "Leviathan Altar",
+"x": 0.8627,
+"y": 0.7122
+},
+{
+"text": "Leviathan Scale",
+"x": 0.1373,
+"y": 0.8822
+},
+{
+"text": "Tidebreaker",
+"x": 0.3791,
+"y": 0.8822
+},
+{
+"text": "Heart of the Tide",
+"x": 0.6209,
+"y": 0.8822
+},
+{
+"text": "Leviathan Trophy",
+"x": 0.8627,
+"y": 0.8822
+}
+],
+"i_story_2": [
+{
+"text": "Leviathan Spawn Egg",
+"x": 0.1373,
+"y": 0.2021
+},
+{
+"text": "Tideling Spawn Egg",
+"x": 0.3791,
+"y": 0.2021
+},
+{
+"text": "Seafarer's Almanac",
+"x": 0.6209,
+"y": 0.2021
+}
+],
+"i_raft_1": [
+{
+"text": "Ancient Broken Ring",
+"x": 0.1373,
+"y": 0.2021
+},
+{
+"text": "Ancient Energy",
+"x": 0.3791,
+"y": 0.2021
+},
+{
+"text": "Ancient Crystal",
+"x": 0.6209,
+"y": 0.2021
+},
+{
+"text": "Plastic",
+"x": 0.8627,
+"y": 0.2021
+},
+{
+"text": "Circuit Board",
+"x": 0.1373,
+"y": 0.3721
+},
+{
+"text": "Trash Cube",
+"x": 0.3791,
+"y": 0.3721
+},
+{
+"text": "Unrefined Ocean Garbage",
+"x": 0.6209,
+"y": 0.3721
+},
+{
+"text": "Energy Staff",
+"x": 0.8627,
+"y": 0.3721
+},
+{
+"text": "Raft Dimension Teleporter",
+"x": 0.1373,
+"y": 0.5422
+},
+{
+"text": "Metal Detector",
+"x": 0.3791,
+"y": 0.5422
+},
+{
+"text": "Driftwood Portal Frame",
+"x": 0.6209,
+"y": 0.5422
+},
+{
+"text": "Stripped Driftwood Log",
+"x": 0.8627,
+"y": 0.5422
+},
+{
+"text": "Stripped Driftwood Wood",
+"x": 0.1373,
+"y": 0.7122
+},
+{
+"text": "Driftwood Leaves",
+"x": 0.3791,
+"y": 0.7122
+},
+{
+"text": "Driftwood Sapling",
+"x": 0.6209,
+"y": 0.7122
+},
+{
+"text": "Driftwood Log",
+"x": 0.8627,
+"y": 0.7122
+},
+{
+"text": "Driftwood Wood",
+"x": 0.1373,
+"y": 0.8822
+},
+{
+"text": "Driftwood Planks",
+"x": 0.3791,
+"y": 0.8822
+},
+{
+"text": "Driftwood Stairs",
+"x": 0.6209,
+"y": 0.8822
+},
+{
+"text": "Driftwood Slab",
+"x": 0.8627,
+"y": 0.8822
+}
+],
+"i_raft_2": [
+{
+"text": "Driftwood Door",
+"x": 0.1373,
+"y": 0.2021
+},
+{
+"text": "Driftwood Trapdoor",
+"x": 0.3791,
+"y": 0.2021
+},
+{
+"text": "Driftwood Fence",
+"x": 0.6209,
+"y": 0.2021
+},
+{
+"text": "Driftwood Fence Gate",
+"x": 0.8627,
+"y": 0.2021
+},
+{
+"text": "Driftwood Button",
+"x": 0.1373,
+"y": 0.3721
+},
+{
+"text": "Driftwood Pressure Plate",
+"x": 0.3791,
+"y": 0.3721
+},
+{
+"text": "Stripped Palm Log",
+"x": 0.6209,
+"y": 0.3721
+},
+{
+"text": "Stripped Palm Wood",
+"x": 0.8627,
+"y": 0.3721
+},
+{
+"text": "Palm Leaves",
+"x": 0.1373,
+"y": 0.5422
+},
+{
+"text": "Palm Coconut Leaves",
+"x": 0.3791,
+"y": 0.5422
+},
+{
+"text": "Coconut",
+"x": 0.6209,
+"y": 0.5422
+},
+{
+"text": "Pina Colada",
+"x": 0.8627,
+"y": 0.5422
+},
+{
+"text": "Palm Sapling",
+"x": 0.1373,
+"y": 0.7122
+},
+{
+"text": "Palm Log",
+"x": 0.3791,
+"y": 0.7122
+},
+{
+"text": "Palm Wood",
+"x": 0.6209,
+"y": 0.7122
+},
+{
+"text": "Palm Planks",
+"x": 0.8627,
+"y": 0.7122
+},
+{
+"text": "Palm Stairs",
+"x": 0.1373,
+"y": 0.8822
+},
+{
+"text": "Palm Slab",
+"x": 0.3791,
+"y": 0.8822
+},
+{
+"text": "Palm Door",
+"x": 0.6209,
+"y": 0.8822
+},
+{
+"text": "Palm Trapdoor",
+"x": 0.8627,
+"y": 0.8822
+}
+],
+"i_raft_3": [
+{
+"text": "Palm Fence",
+"x": 0.1373,
+"y": 0.2021
+},
+{
+"text": "Palm Fence Gate",
+"x": 0.3791,
+"y": 0.2021
+},
+{
+"text": "Palm Button",
+"x": 0.6209,
+"y": 0.2021
+},
+{
+"text": "Palm Pressure Plate",
+"x": 0.8627,
+"y": 0.2021
+},
+{
+"text": "Titanium Ore",
+"x": 0.1373,
+"y": 0.3721
+},
+{
+"text": "Deepslate Titanium Ore",
+"x": 0.3791,
+"y": 0.3721
+},
+{
+"text": "Raw Titanium Block",
+"x": 0.6209,
+"y": 0.3721
+},
+{
+"text": "Titanium Block",
+"x": 0.8627,
+"y": 0.3721
+},
+{
+"text": "Raw Titanium",
+"x": 0.1373,
+"y": 0.5422
+},
+{
+"text": "Titanium Ingot",
+"x": 0.3791,
+"y": 0.5422
+},
+{
+"text": "Titanium Nugget",
+"x": 0.6209,
+"y": 0.5422
+},
+{
+"text": "Titanium Helmet",
+"x": 0.8627,
+"y": 0.5422
+},
+{
+"text": "Titanium Chestplate",
+"x": 0.1373,
+"y": 0.7122
+},
+{
+"text": "Titanium Leggings",
+"x": 0.3791,
+"y": 0.7122
+},
+{
+"text": "Titanium Boots",
+"x": 0.6209,
+"y": 0.7122
+},
+{
+"text": "Titanium Grates",
+"x": 0.8627,
+"y": 0.7122
+},
+{
+"text": "Makeshift Solar Panel",
+"x": 0.1373,
+"y": 0.8822
+},
+{
+"text": "Makeshift Battery",
+"x": 0.3791,
+"y": 0.8822
+},
+{
+"text": "Copper Cable",
+"x": 0.6209,
+"y": 0.8822
+},
+{
+"text": "Titanium Cable",
+"x": 0.8627,
+"y": 0.8822
+}
+],
+"i_raft_4": [
+{
+"text": "Quarry",
+"x": 0.1373,
+"y": 0.2021
+},
+{
+"text": "Chunk Destroyer",
+"x": 0.3791,
+"y": 0.2021
+},
+{
+"text": "Some Game Music Disc",
+"x": 0.6209,
+"y": 0.2021
+},
+{
+"text": "Lofi Beat Music Disc",
+"x": 0.8627,
+"y": 0.2021
+},
+{
+"text": "Crystal Castles Music Disc",
+"x": 0.1373,
+"y": 0.3721
+},
+{
+"text": "Item Catcher",
+"x": 0.3791,
+"y": 0.3721
+},
+{
+"text": "Item Catcher Net",
+"x": 0.6209,
+"y": 0.3721
+},
+{
+"text": "Palm Thatch",
+"x": 0.8627,
+"y": 0.3721
+},
+{
+"text": "Palm Thatch Stairs",
+"x": 0.1373,
+"y": 0.5422
+},
+{
+"text": "Palm Thatch Slab",
+"x": 0.3791,
+"y": 0.5422
+},
+{
+"text": "Raft Foundation",
+"x": 0.6209,
+"y": 0.5422
+},
+{
+"text": "Reinforced Foundation",
+"x": 0.8627,
+"y": 0.5422
+},
+{
+"text": "Scrap Metal Block",
+"x": 0.1373,
+"y": 0.7122
+},
+{
+"text": "Plastic Block",
+"x": 0.3791,
+"y": 0.7122
+},
+{
+"text": "Rope Ladder",
+"x": 0.6209,
+"y": 0.7122
+},
+{
+"text": "Rope Coil",
+"x": 0.8627,
+"y": 0.7122
+},
+{
+"text": "Sail Canvas",
+"x": 0.1373,
+"y": 0.8822
+},
+{
+"text": "Red Striped Sail Canvas",
+"x": 0.3791,
+"y": 0.8822
+},
+{
+"text": "Ship Wheel",
+"x": 0.6209,
+"y": 0.8822
+},
+{
+"text": "Shark Jaw Trophy",
+"x": 0.8627,
+"y": 0.8822
+}
+],
+"i_raft_5": [
+{
+"text": "Raft Flag",
+"x": 0.1373,
+"y": 0.2021
+},
+{
+"text": "Coconut Lantern",
+"x": 0.3791,
+"y": 0.2021
+},
+{
+"text": "Crop Plot",
+"x": 0.6209,
+"y": 0.2021
+},
+{
+"text": "Simple Grill",
+"x": 0.8627,
+"y": 0.2021
+},
+{
+"text": "Water Purifier",
+"x": 0.1373,
+"y": 0.3721
+},
+{
+"text": "Scarecrow",
+"x": 0.3791,
+"y": 0.3721
+},
+{
+"text": "Rope",
+"x": 0.6209,
+"y": 0.3721
+},
+{
+"text": "Scrap Metal",
+"x": 0.8627,
+"y": 0.3721
+},
+{
+"text": "Fresh Water",
+"x": 0.1373,
+"y": 0.5422
+},
+{
+"text": "Coconut Milk",
+"x": 0.3791,
+"y": 0.5422
+},
+{
+"text": "Receiver",
+"x": 0.6209,
+"y": 0.5422
+},
+{
+"text": "Plastic Hook",
+"x": 0.8627,
+"y": 0.5422
+},
+{
+"text": "Paddle",
+"x": 0.1373,
+"y": 0.7122
+},
+{
+"text": "Shark Tooth",
+"x": 0.3791,
+"y": 0.7122
+},
+{
+"text": "Raw Shark Meat",
+"x": 0.6209,
+"y": 0.7122
+},
+{
+"text": "Cooked Shark Meat",
+"x": 0.8627,
+"y": 0.7122
+},
+{
+"text": "Bruce the Shark Spawn Egg",
+"x": 0.1373,
+"y": 0.8822
+},
+{
+"text": "Brick Furnace",
+"x": 0.3791,
+"y": 0.8822
+},
+{
+"text": "Titanium Furnace",
+"x": 0.6209,
+"y": 0.8822
+}
+]
+}

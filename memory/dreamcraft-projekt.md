@@ -137,6 +137,12 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   nicht), Dreamcraft V1.3 (9431378, Server 9431379). Challenge Craft: Fixes nur auf
   Branch `bugcheck-2026-11` (Bericht `docs/BUGCHECK-2026-11.md`), keine Versionsänderung.
 
+- **Testrunde (Aufgabe des Nutzers, verschoben auf Mo 9.11.2026 14:10, Reminder gesetzt):** Werkzeuge im Repo
+  Modpack-Development: `tools/qsource.py` (statisch: Quelle jedes Quest-Items; 292/298 gefunden, 6 per Mechanik/Code-Loot
+  im Spiel prüfen), `tools/qrun_plan.py` + dctest-Szene `qrun` (alle 328 Quests im Spiel), Szene `bccheck` (Checkliste
+  Beach Craft/Dreamcraft, BcCheck noch nicht kompiliert), `tools/prodtest/mk121.py` (Upgrade-Test V1.2.1 -> V1.3).
+  Details: `tools/dctest/README.md`.
+
 ## Was der Nutzer will (hier gelernt)
 
 - Ohne Rückfragen durcharbeiten; höchstens ein, wenn nötig zwei Subagenten (Wunsch vom 4.11.2026).

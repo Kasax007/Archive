@@ -463,7 +463,10 @@ def plan(name, words_by_para, pstart, total, allow_missing=False):
                 if not opt:
                     missing_.append(shot)
                 continue
-            t = t_start if not segs else max(0.0, wp[_find(wp, anchor, p['id'])][2] - LEAD) if anchor else None
+            if segs and anchor and anchor.startswith('@'):            # '@<s>': seconds after the paragraph start
+                t = t_start + float(anchor[1:])
+            else:
+                t = t_start if not segs else max(0.0, wp[_find(wp, anchor, p['id'])][2] - LEAD) if anchor else None
             if t is None:
                 raise SystemExit(f'{p["id"]}: shot {shot} needs an anchor')
             if segs and t - segs[-1][1] < 1.2:
@@ -548,7 +551,7 @@ def _render_part(args):
         return subprocess.Popen(['ffmpeg', '-v', 'error', '-y', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{W}x{H}',
                                  '-r', str(FPS), '-i', '-', '-c:v', 'libx264', '-preset', CFG['preset'], '-crf', str(CFG['crf']),
                                  '-pix_fmt', 'yuv420p', '-threads', '2', path], stdin=subprocess.PIPE)
-    pc, pk = enc(f'{prefix}_part{k:02d}_captions.mp4'), enc(f'{prefix}_part{k:02d}_clean.mp4')
+    pc = enc(f'{prefix}_part{k:02d}_captions.mp4')            # only the version with captions (user decision)
     fade_in, fade_out = CFG['fade_in'] * 0.5, CFG['fade_out'] * 0.5
     subs = [c for c in caps if c.kind == 'cap']
     overlays = [c for c in caps if c.kind != 'cap']           # chapter titles and loot panels: in both versions
@@ -559,13 +562,11 @@ def _render_part(args):
             arr = (arr.astype(np.float32) * (t / fade_in)).astype(np.uint8)
         im = Image.fromarray(arr).convert('RGBA')
         draw_caps(im, t, overlays)
-        pk.stdin.write(im.convert('RGB').tobytes())
         draw_caps(im, t, subs)
         pc.stdin.write(im.convert('RGB').tobytes())
     r.close()
-    for p in (pc, pk):
-        p.stdin.close()
-        p.wait()
+    pc.stdin.close()
+    pc.wait()
     return k
 
 
@@ -577,7 +578,7 @@ def render_parallel(shots, caps, prefix, total, workers=4):
     with mp.get_context('fork').Pool(workers) as pool:
         for k in pool.imap_unordered(_render_part, jobs):
             print('  part', k, 'done', flush=True)
-    for vid in ('captions', 'clean'):
+    for vid in ('captions',):
         lst = f'{prefix}_{vid}_parts.txt'
         with open(lst, 'w') as f:
             for k in range(workers):
@@ -775,6 +776,16 @@ def contact_sheet(video, out_png, every=6.0, cols=12, thumb=150):
 
 # ------------------------------------------------------------------ build
 
+def museum_top(caps, shots):
+    """Over the exhibition stills the subtitles go to the top: the bottom row of items and names sits where they
+    normally are."""
+    spans = [(s.t0, s.t1) for s in shots if s.name in LABELS]
+    for c in caps:
+        mid = (c.t0 + c.t1) / 2
+        if any(a <= mid < b for a, b in spans):
+            c.y = 150
+
+
 def build(name='doc', plan_only=False, audio_only=False, do_verify=True, limit=None, allow_missing=False):
     cfg = CFG
     OUT = f'{WORK}/out/{name}'
@@ -788,10 +799,11 @@ def build(name='doc', plan_only=False, audio_only=False, do_verify=True, limit=N
         for c in v3lib.captions(wp, nxt, size=cfg['cap_size'], y=cfg['cap_y']):
             caps.append(Cap(c.t0, c.t1, c.text, 'cap'))
     shots, titles, table, miss = plan(name, wbp, pstart, total, allow_missing=allow_missing)
+    museum_top(caps, shots)
     if SCRIPTS[name][-1].get('end'):
         for c in caps:
             if c.t0 >= pstart[-1] - 0.2:
-                c.y = 1680
+                c.noburn = True                                  # the end card says it already (still in the SRT)
     print(f'{name}: voice ends {vend:.1f} s, video {total:.1f} s ({total / 60:.1f} min), {len(shots)} shots, '
           f'avg {total / max(1, len(shots)):.2f} s/shot, {len(caps)} captions' + (f', MISSING {miss}' if miss else ''))
     for t in table:
@@ -818,7 +830,7 @@ def build(name='doc', plan_only=False, audio_only=False, do_verify=True, limit=N
     mb, used = music_bed(SCRIPTS[name], pstart, total, v)
     sp = np.abs(v) > 0.02
     print(f'  music vs voice during speech: {20 * np.log10(np.sqrt((mb[sp] ** 2).mean()) / np.sqrt((v[sp] ** 2).mean())):.1f} dB')
-    for tag, bed in (('nomusic', None), ('music', mb)):
+    for tag, bed in (('music', mb),):
         m = v + g
         if bed is not None:
             m = m + bed
@@ -833,22 +845,20 @@ def build(name='doc', plan_only=False, audio_only=False, do_verify=True, limit=N
                     f'{OUT}/{cfg["file"]}_voice.m4a'], check=True)
     write_post(name, OUT, table, used)
     if do_verify:
-        for tag in ('music', 'nomusic'):
+        for tag in ('music',):
             verify(name, f'{OUT}/{tag}.wav', tag, OUT)
     if audio_only:
         return OUT
     rtotal = min(total, limit) if limit else total
-    render_parallel(shots, caps + titles, f'{OUT}/v', rtotal, workers=int(os.environ.get('DOC_WORKERS', '4')))
-    for vid in ('captions', 'clean'):
-        for tag in ('music', 'nomusic'):
-            subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', f'{OUT}/v_{vid}_video.mp4', '-i', f'{OUT}/{tag}.wav', '-c:v', 'copy',
-                            '-af', f'volume=2dB,alimiter=limit=0.89,afade=t=out:st={max(0, rtotal - 2.5):.2f}:d=2.5',
-                            '-c:a', 'aac', '-b:a', '160k', '-t', f'{rtotal:.2f}',
-                            '-movflags', '+faststart', f'{OUT}/{cfg["file"]}_{vid}_{tag}.mp4'], check=True)
-    flicker_check(f'{OUT}/v_clean_video.mp4', [s.t0 for s in shots])
+    burn = [c for c in caps if not getattr(c, 'noburn', False)]
+    render_parallel(shots, burn + titles, f'{OUT}/v', rtotal, workers=int(os.environ.get('DOC_WORKERS', '4')))
+    subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', f'{OUT}/v_captions_video.mp4', '-i', f'{OUT}/music.wav', '-c:v', 'copy',
+                    '-af', f'volume=2dB,alimiter=limit=0.89,afade=t=out:st={max(0, rtotal - 2.5):.2f}:d=2.5',
+                    '-c:a', 'aac', '-b:a', '160k', '-t', f'{rtotal:.2f}',
+                    '-movflags', '+faststart', f'{OUT}/{cfg["file"]}.mp4'], check=True)
+    flicker_check(f'{OUT}/v_captions_video.mp4', [s.t0 for s in shots])
     contact_sheet(f'{OUT}/v_captions_video.mp4', f'{OUT}/sheet.png')
-    for vid in ('captions', 'clean'):
-        os.remove(f'{OUT}/v_{vid}_video.mp4')
+    os.remove(f'{OUT}/v_captions_video.mp4')
     print('done', name, f'{rtotal:.1f} s ->', OUT)
     return OUT
 
@@ -882,7 +892,7 @@ def deliver(name='doc'):
     OUT = f'{WORK}/out/{name}'
     dst = ARCH
     total = json.load(open(f'{OUT}/timeline.json'))['total']
-    files = [f'{cfg["file"]}_{v}_{t}.mp4' for v in ('captions', 'clean') for t in ('music', 'nomusic')]
+    files = [f'{cfg["file"]}.mp4']                     # captions burned in, with music (the only version rendered)
     for f in files:
         src = f'{OUT}/{f}'
         if not os.path.exists(src):

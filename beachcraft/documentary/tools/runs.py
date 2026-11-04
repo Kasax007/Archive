@@ -876,15 +876,6 @@ def r16():
         s.add('pose 64.5 88 -27.5 175 8', 'wait 4', f'still {name} 1.25')
         s.r(f'kill @e[type={ent},distance=..30,x=64,y=88,z=-30]')
     # free swimmers past a fixed camera
-    s.r('summon raft:manta_ray 70 90 -40', 'summon raft:manta_ray 58 91 -42')
-    s.add('pose 64.5 88 -27.5 180 4', 'wait 5')
-    s.rec('c_manta', 90, 15)
-    s.r('kill @e[type=raft:manta_ray,distance=..60,x=64,y=88,z=-30]')
-    s.r('summon raft:jellyfish 66 89 -33 {Variant:"moon"}', 'summon raft:jellyfish 62 91 -36 {Variant:"crimson"}', 'summon raft:jellyfish 68 92 -38 {Variant:"moon"}',
-        'summon raft:jellyfish 61 88 -40 {Variant:"glow"}', 'summon raft:jellyfish 65 93 -41 {Variant:"crimson"}')
-    s.add('pose 64.5 88 -27.5 180 -4', 'wait 5')
-    s.rec('c_jelly', 75, 15)
-    s.r('kill @e[type=raft:jellyfish,distance=..60,x=64,y=88,z=-30]')
     s.r('summon raft:shark 72 90 -42 {PersistenceRequired:1b}', 'summon raft:hammerhead_shark 56 89 -44 {PersistenceRequired:1b}')
     s.add('pose 64.5 88 -27.5 180 4', 'wait 5')
     s.rec('c_sharks', 90, 15)
@@ -926,6 +917,15 @@ def r16():
     s.rec('c_ember', 90, 15)
     s.add('cmd gamemode creative @p', 'cmd effect clear @p')
     s.r('kill @e[type=raft:ember_crab,distance=..40,x=-402,y=100,z=-370]')
+    s.r('summon raft:manta_ray 70 90 -40', 'summon raft:manta_ray 58 91 -42')
+    s.add('pose 64.5 88 -27.5 180 4', 'wait 5')
+    s.rec('c_manta', 90, 15)
+    s.r('kill @e[type=raft:manta_ray,distance=..60,x=64,y=88,z=-30]')
+    s.r('summon raft:jellyfish 66 89 -33 {Variant:"moon"}', 'summon raft:jellyfish 62 91 -36 {Variant:"crimson"}', 'summon raft:jellyfish 68 92 -38 {Variant:"moon"}',
+        'summon raft:jellyfish 61 88 -40 {Variant:"glow"}', 'summon raft:jellyfish 65 93 -41 {Variant:"crimson"}')
+    s.add('pose 64.5 88 -27.5 180 -4', 'wait 5')
+    s.rec('c_jelly', 75, 15)
+    s.r('kill @e[type=raft:jellyfish,distance=..60,x=64,y=88,z=-30]')
     return s
 
 
@@ -1221,14 +1221,14 @@ def creatures2_clips(s):
     # free swimmers on the under-water stage
     s.gear('dive').effects('conduit_power')
     s.add('cmd execute in raft:raftdim run tp @p 64.5 88 -27.5 180 4', 'fly on', 'settle 30', 'cmd attribute @p minecraft:camera_distance base set 4')
-    s.r('summon raft:manta_ray 70 90 -40', 'summon raft:manta_ray 58 91 -42')
-    s.add('pose 64.5 88 -27.5 180 4', 'wait 5')
-    s.rec('c_manta', 90, 15)
-    s.r('kill @e[type=raft:manta_ray,distance=..60,x=64,y=88,z=-30]')
     s.r('summon raft:shark 72 90 -42 {PersistenceRequired:1b}', 'summon raft:hammerhead_shark 56 89 -44 {PersistenceRequired:1b}')
     s.add('pose 64.5 88 -27.5 180 4', 'wait 5')
     s.rec('c_sharks', 90, 15)
     s.r('kill @e[type=raft:shark,distance=..60,x=64,y=88,z=-30]', 'kill @e[type=raft:hammerhead_shark,distance=..60,x=64,y=88,z=-30]')
+    s.r('summon raft:manta_ray 70 90 -40', 'summon raft:manta_ray 58 91 -42')
+    s.add('pose 64.5 88 -27.5 180 4', 'wait 5')
+    s.rec('c_manta', 90, 15)
+    s.r('kill @e[type=raft:manta_ray,distance=..60,x=64,y=88,z=-30]')
     return s
 
 
@@ -1275,10 +1275,31 @@ def beach_retake(s):
     return s
 
 
+def radio_retake(s):
+    """The expedition radio (140 100 138 on the deck): in r11 and r22 a use between unrendered ticks did nothing, so
+    here the use happens inside a recorded clip (frames drawn in between, like the cannon that worked)."""
+    s.cmd('clear @p').mode('creative').gear('none').hands()
+    s.effects()
+    s.add('cmd execute in raft:raftdim run tp @p 140.5 100 140.2 180 30', 'fly on', 'settle 30', 'third off', 'hud on', 'chat on',
+          'faceblock raft:expedition_radio 4', 'wait 3 render')
+    s.rec('f_radio_use', 30, 15, at=[(2, 'faceblock raft:expedition_radio 4'), (4, 'use')])
+    s.add('wait 10 render', 'shot f_radio', 'chat off', 'hud off')
+    # a Helix log on the research terminal next to it (the use inside a clip as well): the drilling, minute by minute
+    s.r('setblock 141 100 138 raft:research_terminal[facing=south]{LogId:"helix_5"}')
+    s.add('cmd execute in raft:raftdim run tp @p 141.5 100 140.2 180 30', 'wait 5 render', 'faceblock raft:research_terminal 4', 'wait 3 render')
+    s.rec('s_helix_log_use', 20, 15, at=[(2, 'faceblock raft:research_terminal 4'), (4, 'use')])
+    s.add('wait 60 render', 'shot s_helix_log', 'esc')
+    # the mangrove isle at 383 14 (in r13 the still came out empty: settle returned before the terrain was drawn)
+    s.add('cmd execute in raft:raftdim run tp @p 383.5 112 14.5 0 25', 'fly on', 'wait 20', 'settle 60', 'wait 20 render', 'third on',
+          'cmd attribute @p minecraft:camera_distance base set 7', 'pose 383.5 112 14.5 0 25', 'wait 5 render', 'still b_mangrove 1.25',
+          'pose 383.5 112 14.5 140 25', 'wait 5 render', 'still b_mangrove2 1.25')
+    return s
+
+
 def r23():
     """The beach stumps again, creatures (portraits, diver), the altar and the seal (r17), whale, swimmers, otters,
     penguins."""
-    return merged(18.5, beach_retake(Script()), creatures2(Script()), r17(), creatures2_clips(Script()))
+    return merged(19.0, beach_retake(Script()), radio_retake(Script()), creatures2(Script()), r17(), creatures2_clips(Script()))
 
 
 RUNS = {'r21': r21, 'r22': r22, 'r23': r23, 'r20': r20, 'r18': r18, 'r19': r19, 'r17': r17, 'r16': r16, 'r15': r15, 'r14': r14, 'r13': r13, 'r12': r12, 'r11': r11, 'r08': r08, 'r10': r10, 'r07': r07, 'r06': r06, 'r03': r03, 'r04': r04, 'r05': r05, 'r09': r09}

@@ -6,7 +6,8 @@ import os, sys, json, zlib, struct, io, gzip
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 WORLD = '/home/user/Kasax_Raft_Mod/build/run/bctest/saves/bcdoc'
-VANILLA_LANG = '/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/vanilla/assets/minecraft/lang/en_us.json'
+SP = os.environ.get('SP') or '/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad'
+VANILLA_LANG = SP + '/vanilla/assets/minecraft/lang/en_us.json'   # aus dem Minecraft-Client-Jar entpackt
 R = 'raft/raftdim'
 CHESTS = {
     'p_galleon_chest': (R, -343, 46, -250), 'p_galleon_treasure': (R, -324, 53, -250), 'p_cargo_chest': (R, -304, 70, -224),
@@ -157,7 +158,8 @@ def from_logs(runs_dir):
                 continue
             m = re.search(r'\[bctest\] \d+: shot (\S+)', line)
             if m and pos:
-                found[m.group(1)] = (R,) + pos
+                if m.group(1).startswith(('p_', 's_')):        # chests only, not the screens of machines (f_...)
+                    found[m.group(1)] = (R,) + pos
                 pos = None
     return found
 
@@ -165,7 +167,7 @@ def from_logs(runs_dir):
 def main(world=WORLD):
     N = names()
     out = {}
-    CHESTS.update({k: v for k, v in from_logs('/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/doc3/runs').items()
+    CHESTS.update({k: v for k, v in from_logs(SP + '/doc3/runs').items()
                    if k not in CHESTS})
     for shot, (dim, x, y, z) in CHESTS.items():
         ch = chunk(world, dim, x >> 4, z >> 4)

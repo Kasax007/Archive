@@ -13,6 +13,7 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
 | Raft-Mod, auf CurseForge **„Beach Craft“** | `Kasax007/Kasax_Raft_Mod`, Branch `26.3` | 1010922, Datei 9402661 (2.0.0+26.3), 9408472 (2.0.1+26.3), 9431301 (3.0.0+26.3) |
 | TikTok und Werkzeuge | `Archive/dreamcraft/tiktok` (v2 mit Shadern) | – |
 | Beach-Craft-Review und Prüfbericht | `Archive/beachcraft/review` | – |
+| Beach-Craft-3.0-Doku „Tides of the Deep“ (18:35, nur Fassung mit Untertiteln + Musik) | `Archive/beachcraft/documentary`, Rohmaterial `footage/bc3` | – |
 | Modpack-Dateien | | V1: 9403038 (+ Server-Pack). V1.1: 9408516, Server-Pack 9408519 (Beach Craft 2.0.1, Quests korrigiert). V1.2: 9409459, Server-Pack 9409463 (Menü-Fixes, ohne JER). V1.2.1: 9415062, Server-Pack 9415063 (Quest-Buch-Klick-Hotfix). V1.3: 9431378, Server-Pack 9431379 (Beach Craft 3.0.0, Tamagotchi 1.2.0 = 9431312, Dream Star, 328 Quests) |
 
 - FTB Quests gibt es für 26.3 Fabric nicht. Das Quest-System steckt deshalb in Quest Icons: Buch mit Taste J,
@@ -131,6 +132,10 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   - `/give` erzeugt zuerst ein Fake-Item: Despawn-Schutz im ENTITY_LOAD-Event muss Fake-Items (Alter 5999) auslassen.
   - Gametest-Rechner ist langsam (neues Gebiet 3–5 min bei rd 8, Oberwelt ähnlich): `rd 5`, Läufe bündeln.
   - Nutzungslimit: höchstens ein, wenn nötig zwei Subagenten (Wunsch des Nutzers, 4.11.); Arbeit vorher in WIP-Commits sichern.
+  - Doku-Filmen mit bctest (`rec`/`still`, Welt `saves/bcdoc`): nach `fill`/`setblock` und nach weiten Teleports ein
+    `settle`, sonst zeigen Bilder alte Chunk-Meshes; `faceblock`+`use` nur innerhalb eines `rec`; in der dritten Person
+    das Ziel seitlich legen (sonst hinter dem Kopf); die Raft-Dimension hat feste Tageszeit (Hängematte setzt nur den
+    Spawn). Details und weitere Lehren: `beachcraft/documentary/README.md`.
 - **Weitere Releases dieser Runde:** Quest Icons 1.0.2 (Klick-Hotfix, Datei 9415031) und 1.1.0 (Dream Star, Datei
   9429010); Dreamcraft V1.2.1 (9415062, Server 9415063). Am 4.11. mit Freigabe des Nutzers hochgeladen: Beach Craft 3.0.0
   (9431301), Tamagotchi 1.2.0 (9431312, direkt per CurseForge-API; Tag `v1.2.0` fehlt, Tag-Push geht aus der Sitzung

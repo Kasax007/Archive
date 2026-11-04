@@ -1,0 +1,1648 @@
+1
+00:00:01,159 --> 00:00:03,020
+Far beyond the overworld
+
+2
+00:00:03,020 --> 00:00:04,850
+lies the Endless Sea.
+
+3
+00:00:05,440 --> 00:00:07,550
+Warm islands, bright reefs,
+
+4
+00:00:07,799 --> 00:00:10,259
+a drowned city, and a trench so deep
+
+5
+00:00:10,259 --> 00:00:11,620
+that the sunlight never
+
+6
+00:00:11,620 --> 00:00:13,109
+reaches its floor.
+
+7
+00:00:15,060 --> 00:00:17,960
+This is Beach Craft three point oh,
+
+8
+00:00:17,960 --> 00:00:18,699
+Tides of the Deep,
+
+9
+00:00:18,699 --> 00:00:22,420
+for Minecraft twenty six point three.
+
+10
+00:00:22,420 --> 00:00:24,709
+In this film we take our time.
+
+11
+00:00:24,920 --> 00:00:26,660
+We visit every biome,
+
+12
+00:00:26,660 --> 00:00:28,780
+every place and every creature,
+
+13
+00:00:28,780 --> 00:00:29,600
+we look at the blocks
+
+14
+00:00:29,600 --> 00:00:31,889
+and items and how they work,
+
+15
+00:00:32,160 --> 00:00:32,679
+and at the end
+
+16
+00:00:32,679 --> 00:00:34,799
+we follow the whole story,
+
+17
+00:00:34,799 --> 00:00:36,609
+the way a player would.
+
+18
+00:00:39,635 --> 00:00:41,735
+The journey starts in the overworld.
+
+19
+00:00:41,735 --> 00:00:44,135
+On sandy beaches stand short,
+
+20
+00:00:44,135 --> 00:00:46,365
+dark stumps of driftwood.
+
+21
+00:00:47,785 --> 00:00:50,645
+Four driftwood logs around one ancient
+
+22
+00:00:50,645 --> 00:00:53,455
+energy make four portal frames.
+
+23
+00:00:54,085 --> 00:00:54,825
+The energy comes
+
+24
+00:00:54,825 --> 00:00:56,425
+from ancient broken rings,
+
+25
+00:00:56,425 --> 00:00:58,665
+which hide in shipwreck treasure
+
+26
+00:00:58,665 --> 00:01:00,275
+and ocean ruins.
+
+27
+00:01:01,960 --> 00:01:04,419
+The frame is built like a nether portal,
+
+28
+00:01:04,419 --> 00:01:07,189
+and the energy staff lights it.
+
+29
+00:01:08,934 --> 00:01:10,774
+Step through, and you arrive
+
+30
+00:01:10,774 --> 00:01:12,154
+on a driftwood platform
+
+31
+00:01:12,154 --> 00:01:13,804
+high above the waves,
+
+32
+00:01:14,014 --> 00:01:15,804
+with a portal back home.
+
+33
+00:01:18,784 --> 00:01:20,224
+The Endless Sea is
+
+34
+00:01:20,224 --> 00:01:22,724
+an archipelago: open water,
+
+35
+00:01:22,724 --> 00:01:24,684
+islands, reefs and deep trenches,
+
+36
+00:01:24,684 --> 00:01:27,214
+spread over twelve biomes.
+
+37
+00:01:28,934 --> 00:01:31,814
+The Endless Sea itself is deep blue,
+
+38
+00:01:31,814 --> 00:01:33,184
+open water.
+
+39
+00:01:33,474 --> 00:01:35,434
+Kelp and seagrass grow on the floor,
+
+40
+00:01:35,434 --> 00:01:37,474
+and bubble vents send columns
+
+41
+00:01:37,474 --> 00:01:39,524
+of air up to the surface.
+
+42
+00:01:41,259 --> 00:01:42,939
+In the kelp forest,
+
+43
+00:01:42,939 --> 00:01:44,359
+the kelp grows very tall,
+
+44
+00:01:44,359 --> 00:01:45,179
+and patches
+
+45
+00:01:45,179 --> 00:01:47,929
+of glow kelp light the green water.
+
+46
+00:01:48,219 --> 00:01:50,029
+Barnacles cover the rocks.
+
+47
+00:01:51,809 --> 00:01:54,779
+The coral shallows are warm and clear.
+
+48
+00:01:55,349 --> 00:01:57,169
+Between the reefs sit sea anemones,
+
+49
+00:01:57,169 --> 00:01:58,729
+giant clams,
+
+50
+00:01:58,729 --> 00:02:01,089
+starfish and spiny sea urchins,
+
+51
+00:02:01,089 --> 00:02:02,849
+and pebbles of sea glass lie
+
+52
+00:02:02,849 --> 00:02:03,959
+in the sand.
+
+53
+00:02:05,634 --> 00:02:08,564
+The glowing lagoon is rare and dim.
+
+54
+00:02:08,814 --> 00:02:10,174
+Glowing anemones,
+
+55
+00:02:10,174 --> 00:02:12,114
+tube worms and glow kelp fill it
+
+56
+00:02:12,114 --> 00:02:13,464
+with soft light.
+
+57
+00:02:15,134 --> 00:02:17,114
+The drowned shelf is a flat,
+
+58
+00:02:17,114 --> 00:02:20,734
+murky floor covered in concrete rubble: the ground
+
+59
+00:02:20,734 --> 00:02:22,944
+of a city that the sea swallowed.
+
+60
+00:02:24,859 --> 00:02:27,399
+The abyssal trench is the deepest water
+
+61
+00:02:27,399 --> 00:02:31,059
+of all. Down there it is almost black,
+
+62
+00:02:31,059 --> 00:02:32,179
+and only tube worms
+
+63
+00:02:32,179 --> 00:02:35,029
+and glowing anemones light the basalt.
+
+64
+00:02:36,684 --> 00:02:38,704
+The wreck graveyard is foggy,
+
+65
+00:02:38,704 --> 00:02:41,414
+grey water, full of sunken ships.
+
+66
+00:02:43,159 --> 00:02:44,439
+In the frost floes,
+
+67
+00:02:44,439 --> 00:02:47,359
+icebergs and ice floes drift on cold,
+
+68
+00:02:47,359 --> 00:02:48,929
+clear water.
+
+69
+00:02:50,484 --> 00:02:52,944
+The palm isles have sandy beaches
+
+70
+00:02:52,944 --> 00:02:56,054
+with shell sand, palm trees,
+
+71
+00:02:56,324 --> 00:02:59,054
+beach grass and tall sea oats.
+
+72
+00:02:59,584 --> 00:03:00,724
+Hibiscus and bird
+
+73
+00:03:00,724 --> 00:03:03,674
+of paradise flowers grow between them,
+
+74
+00:03:03,824 --> 00:03:06,224
+and seashells and sea glass wash up
+
+75
+00:03:06,224 --> 00:03:07,294
+on the shore.
+
+76
+00:03:09,059 --> 00:03:11,849
+Jungle isles are warm and wet,
+
+77
+00:03:12,059 --> 00:03:14,029
+with jungle trees, bamboo,
+
+78
+00:03:14,459 --> 00:03:15,299
+tropical ferns
+
+79
+00:03:15,299 --> 00:03:17,109
+and wild pineapple bushes.
+
+80
+00:03:18,984 --> 00:03:21,864
+Mangrove isles are low and muddy,
+
+81
+00:03:21,864 --> 00:03:24,134
+with tangled roots and lily pads.
+
+82
+00:03:25,959 --> 00:03:28,099
+And the volcanic isles are dark
+
+83
+00:03:28,099 --> 00:03:30,319
+and rough: black sand,
+
+84
+00:03:30,319 --> 00:03:33,409
+volcanic ash, pumice and basalt columns.
+
+85
+00:03:35,434 --> 00:03:36,834
+Some of these natural
+
+86
+00:03:36,834 --> 00:03:38,444
+blocks do something.
+
+87
+00:03:38,814 --> 00:03:41,294
+A giant clam opens and closes,
+
+88
+00:03:41,294 --> 00:03:43,644
+and an open clam gives you a pearl.
+
+89
+00:03:44,014 --> 00:03:45,904
+A new one grows in time.
+
+90
+00:03:48,009 --> 00:03:50,409
+A sea urchin hurts when you touch it,
+
+91
+00:03:50,409 --> 00:03:51,979
+and drops spines.
+
+92
+00:03:52,389 --> 00:03:54,189
+A wild pineapple bush is ripe
+
+93
+00:03:54,189 --> 00:03:56,299
+when its fruit turns golden.
+
+94
+00:03:56,589 --> 00:03:58,449
+And a bubble vent makes a bubble column,
+
+95
+00:03:58,449 --> 00:04:01,199
+where divers can catch their breath.
+
+96
+00:04:04,159 --> 00:04:05,819
+The sea is full of places
+
+97
+00:04:05,819 --> 00:04:08,599
+to explore: seven places of the story,
+
+98
+00:04:08,599 --> 00:04:10,649
+and twelve smaller ones.
+
+99
+00:04:11,039 --> 00:04:12,949
+Almost all of them have chests,
+
+100
+00:04:13,179 --> 00:04:14,849
+each with its own loot.
+
+101
+00:04:17,334 --> 00:04:18,974
+The old lighthouse stands
+
+102
+00:04:18,974 --> 00:04:20,524
+on a rocky base.
+
+103
+00:04:20,914 --> 00:04:22,434
+A spiral stair leads up
+
+104
+00:04:22,434 --> 00:04:24,944
+to the lantern room with its great lens,
+
+105
+00:04:25,234 --> 00:04:27,114
+and next to it are the keeper's cottage
+
+106
+00:04:27,114 --> 00:04:29,624
+and a small dock with buoys.
+
+107
+00:04:32,334 --> 00:04:34,914
+Saltmere is an abandoned fishing village
+
+108
+00:04:34,914 --> 00:04:36,784
+on stilts above the reef,
+
+109
+00:04:37,154 --> 00:04:39,014
+with huts, rope bridges,
+
+110
+00:04:39,014 --> 00:04:40,884
+a little market and a shrine.
+
+111
+00:04:43,784 --> 00:04:45,704
+Helix Research Station rests
+
+112
+00:04:45,704 --> 00:04:48,344
+on the sea floor: glass domes
+
+113
+00:04:48,344 --> 00:04:50,274
+and tunnels, an airlock,
+
+114
+00:04:50,504 --> 00:04:53,264
+labs with research terminals, aquariums,
+
+115
+00:04:53,264 --> 00:04:54,654
+and a flooded wing.
+
+116
+00:04:57,409 --> 00:05:00,119
+Port Solace is the drowned city.
+
+117
+00:05:00,509 --> 00:05:02,799
+Asphalt streets with wrecked cars,
+
+118
+00:05:03,029 --> 00:05:06,289
+a plaza with a statue, and skyscrapers,
+
+119
+00:05:06,289 --> 00:05:08,389
+some so tall that their broken tops
+
+120
+00:05:08,389 --> 00:05:10,019
+reach above the waves.
+
+121
+00:05:10,469 --> 00:05:11,209
+In the middle stands
+
+122
+00:05:11,209 --> 00:05:13,199
+the City Hall tower.
+
+123
+00:05:14,984 --> 00:05:17,104
+The Ashen Forge is a temple
+
+124
+00:05:17,104 --> 00:05:18,964
+of the Tidewardens,
+
+125
+00:05:18,964 --> 00:05:20,994
+built into the slope of a volcano,
+
+126
+00:05:21,684 --> 00:05:24,694
+with channels of lava, a giant forge,
+
+127
+00:05:24,964 --> 00:05:25,884
+and a vault behind
+
+128
+00:05:25,884 --> 00:05:27,854
+a bridge over the fire.
+
+129
+00:05:29,560 --> 00:05:32,280
+The Coral Temple rises from the reef,
+
+130
+00:05:32,280 --> 00:05:34,009
+overgrown and half flooded,
+
+131
+00:05:34,220 --> 00:05:36,360
+with a courtyard, colonnades,
+
+132
+00:05:36,360 --> 00:05:38,710
+statues and an inner sanctum.
+
+133
+00:05:41,235 --> 00:05:41,975
+And deep
+
+134
+00:05:41,975 --> 00:05:44,725
+in the trench waits the Abyssal Sanctum.
+
+135
+00:05:44,915 --> 00:05:46,935
+Its walls cannot be broken,
+
+136
+00:05:46,935 --> 00:05:49,564
+and only one key opens its seal.
+
+137
+00:05:51,460 --> 00:05:53,420
+A pirate galleon lies tilted
+
+138
+00:05:53,420 --> 00:05:54,220
+on the floor,
+
+139
+00:05:54,220 --> 00:05:56,940
+with broken masts, cannons,
+
+140
+00:05:56,940 --> 00:05:59,390
+a captain's cabin and a cargo hold.
+
+141
+00:06:00,060 --> 00:06:02,140
+Its chests hold gold coins,
+
+142
+00:06:02,140 --> 00:06:03,970
+cannonballs and cutlasses,
+
+143
+00:06:04,140 --> 00:06:06,250
+and sometimes a treasure chart.
+
+144
+00:06:09,160 --> 00:06:11,600
+A rusty cargo ship broke in two,
+
+145
+00:06:11,600 --> 00:06:13,120
+and spilled its shipping
+
+146
+00:06:13,120 --> 00:06:15,390
+containers across the floor.
+
+147
+00:06:18,185 --> 00:06:19,785
+Small fishing boats sank
+
+148
+00:06:19,785 --> 00:06:21,495
+with their nets and crates.
+
+149
+00:06:24,410 --> 00:06:26,490
+The pirate Saltjaw hid his cove
+
+150
+00:06:26,490 --> 00:06:29,550
+inside a rocky island: a sea entrance,
+
+151
+00:06:29,550 --> 00:06:31,170
+a dock with a ship,
+
+152
+00:06:31,170 --> 00:06:33,720
+and a treasure room full of gold.
+
+153
+00:06:36,760 --> 00:06:38,220
+The rusted rig stands
+
+154
+00:06:38,220 --> 00:06:41,190
+on steel legs high above the open sea,
+
+155
+00:06:41,460 --> 00:06:44,620
+with cranes, containers, a helipad,
+
+156
+00:06:44,620 --> 00:06:47,070
+a radio mast and a wind turbine.
+
+157
+00:06:50,185 --> 00:06:53,085
+Crashed planes rest on the sea floor,
+
+158
+00:06:53,085 --> 00:06:55,925
+an airliner and a seaplane.
+
+159
+00:06:57,985 --> 00:07:00,525
+Small Tidewarden ruins lie scattered
+
+160
+00:07:00,525 --> 00:07:02,805
+on the reefs: columns,
+
+161
+00:07:02,805 --> 00:07:04,855
+arches and broken statues.
+
+162
+00:07:08,010 --> 00:07:09,610
+On palm isles you
+
+163
+00:07:09,610 --> 00:07:11,720
+find tiny castaway camps,
+
+164
+00:07:12,050 --> 00:07:12,940
+with a shelter,
+
+165
+00:07:13,250 --> 00:07:16,100
+a campfire and an SOS in the sand.
+
+166
+00:07:19,060 --> 00:07:21,660
+Abandoned rafts drift on the open sea,
+
+167
+00:07:21,660 --> 00:07:23,400
+with a sail,
+
+168
+00:07:23,400 --> 00:07:25,230
+a chest and a little farm.
+
+169
+00:07:28,160 --> 00:07:29,400
+In the frost floes,
+
+170
+00:07:29,400 --> 00:07:30,880
+a research hut sits
+
+171
+00:07:30,880 --> 00:07:33,570
+on the ice: the iceberg outpost.
+
+172
+00:07:36,710 --> 00:07:38,410
+Beach shacks are little bars,
+
+173
+00:07:38,410 --> 00:07:40,330
+with deck chairs,
+
+174
+00:07:40,330 --> 00:07:42,180
+umbrellas and tiki torches.
+
+175
+00:07:45,210 --> 00:07:47,390
+And a buoy field marks a channel,
+
+176
+00:07:47,390 --> 00:07:48,890
+with a supply crate
+
+177
+00:07:48,890 --> 00:07:50,760
+chained between the buoys.
+
+178
+00:07:54,735 --> 00:07:56,375
+The sea is full of life.
+
+179
+00:07:56,375 --> 00:07:58,295
+Most creatures are peaceful.
+
+180
+00:07:58,295 --> 00:08:00,505
+A few of them bite back.
+
+181
+00:08:01,935 --> 00:08:05,445
+Bruce the shark hunts anyone who swims.
+
+182
+00:08:05,595 --> 00:08:07,195
+On your raft you are safe,
+
+183
+00:08:07,195 --> 00:08:09,795
+but your raft is not: he circles it
+
+184
+00:08:09,795 --> 00:08:11,155
+and bites the edge foundations,
+
+185
+00:08:11,155 --> 00:08:13,145
+until one breaks.
+
+186
+00:08:13,595 --> 00:08:16,425
+Reinforced foundations are never bitten.
+
+187
+00:08:18,360 --> 00:08:20,500
+The hammerhead is bigger and tougher,
+
+188
+00:08:20,500 --> 00:08:23,390
+and lives in the deep, open sea.
+
+189
+00:08:25,110 --> 00:08:27,520
+The whale is a gentle giant.
+
+190
+00:08:27,970 --> 00:08:28,810
+It cruises a few
+
+191
+00:08:28,810 --> 00:08:30,730
+blocks below the surface,
+
+192
+00:08:30,730 --> 00:08:32,410
+comes up to breathe and spout,
+
+193
+00:08:32,410 --> 00:08:34,460
+and sings now and then.
+
+194
+00:08:36,560 --> 00:08:39,160
+Manta rays glide through the warm shallows
+
+195
+00:08:39,160 --> 00:08:41,250
+in slow, wide loops.
+
+196
+00:08:43,160 --> 00:08:45,510
+Jellyfish drift and pulse.
+
+197
+00:08:46,120 --> 00:08:47,590
+Moon jellies are white,
+
+198
+00:08:47,840 --> 00:08:49,040
+crimson jellies red,
+
+199
+00:08:49,040 --> 00:08:50,220
+and glow jellies light
+
+200
+00:08:50,220 --> 00:08:52,240
+up the dark lagoons.
+
+201
+00:08:52,240 --> 00:08:53,260
+Their touch stings,
+
+202
+00:08:53,260 --> 00:08:55,310
+unless you wear a wetsuit.
+
+203
+00:08:57,110 --> 00:08:59,160
+In the darkness of the trench,
+
+204
+00:08:59,490 --> 00:09:00,390
+the anglerfish waits
+
+205
+00:09:00,390 --> 00:09:02,220
+with its glowing lure,
+
+206
+00:09:02,370 --> 00:09:04,120
+then darts forward to bite.
+
+207
+00:09:06,060 --> 00:09:08,040
+Moray eels hide in holes
+
+208
+00:09:08,040 --> 00:09:09,750
+in the reefs and ruins,
+
+209
+00:09:10,200 --> 00:09:11,360
+with only their head showing,
+
+210
+00:09:11,360 --> 00:09:15,070
+and lunge at anyone who swims too close.
+
+211
+00:09:16,960 --> 00:09:20,090
+On the beaches, crabs scuttle sideways.
+
+212
+00:09:20,740 --> 00:09:21,540
+Sprint towards one,
+
+213
+00:09:21,540 --> 00:09:24,030
+and it digs itself into the sand.
+
+214
+00:09:25,960 --> 00:09:29,290
+Ember crabs live on the volcanic isles.
+
+215
+00:09:29,540 --> 00:09:30,400
+Up close they attack,
+
+216
+00:09:30,400 --> 00:09:32,450
+and set you on fire.
+
+217
+00:09:34,309 --> 00:09:35,489
+Seagulls fly
+
+218
+00:09:35,489 --> 00:09:38,509
+in flocks over islands and rafts.
+
+219
+00:09:38,509 --> 00:09:39,209
+They peck at crops
+
+220
+00:09:39,209 --> 00:09:41,049
+and snatch food from the ground,
+
+221
+00:09:41,049 --> 00:09:43,919
+unless a scarecrow stands nearby.
+
+222
+00:09:46,059 --> 00:09:48,419
+Penguins waddle over the frost floes,
+
+223
+00:09:48,419 --> 00:09:50,279
+slide on their bellies
+
+224
+00:09:50,279 --> 00:09:52,009
+and dive for fish.
+
+225
+00:09:53,759 --> 00:09:55,799
+Sea otters float on their backs
+
+226
+00:09:55,799 --> 00:09:56,859
+in the kelp forest
+
+227
+00:09:56,859 --> 00:09:59,509
+and crack shells on their bellies.
+
+228
+00:10:00,039 --> 00:10:02,739
+Feed one a seashell, and it follows you,
+
+229
+00:10:02,739 --> 00:10:04,709
+and brings you pearls.
+
+230
+00:10:06,609 --> 00:10:09,289
+And the drowned corsairs are the cursed crew
+
+231
+00:10:09,289 --> 00:10:11,309
+of the pirate Saltjaw.
+
+232
+00:10:11,309 --> 00:10:13,969
+They swim, fight with cutlasses,
+
+233
+00:10:13,969 --> 00:10:16,379
+and even climb onto rafts.
+
+234
+00:10:19,084 --> 00:10:21,944
+Beach Craft adds more than three hundred blocks
+
+235
+00:10:21,944 --> 00:10:23,984
+and items. They are sorted
+
+236
+00:10:23,984 --> 00:10:26,354
+into six new creative tabs,
+
+237
+00:10:26,604 --> 00:10:29,874
+plus the tab of Beach Craft two.
+
+238
+00:10:30,534 --> 00:10:32,674
+Building: weathered and teak wood,
+
+239
+00:10:32,674 --> 00:10:35,834
+sea glass, coral stone and tidestone,
+
+240
+00:10:35,834 --> 00:10:37,744
+cracked concrete and asphalt,
+
+241
+00:10:38,374 --> 00:10:40,574
+steel hulls, beams, catwalks,
+
+242
+00:10:40,574 --> 00:10:42,604
+shipping containers and portholes.
+
+243
+00:10:57,559 --> 00:11:00,079
+Decoration: paper lanterns
+
+244
+00:11:00,079 --> 00:11:01,259
+in nine colours,
+
+245
+00:11:01,259 --> 00:11:03,999
+string lights, buoys and neon tubes,
+
+246
+00:11:03,999 --> 00:11:05,379
+furniture, treasure chests
+
+247
+00:11:05,379 --> 00:11:07,629
+and everything a pirate needs.
+
+248
+00:11:18,659 --> 00:11:20,599
+Nature: the sands,
+
+249
+00:11:20,599 --> 00:11:22,399
+plants and sea life of the biomes,
+
+250
+00:11:22,399 --> 00:11:24,709
+and the things they give you.
+
+251
+00:11:27,959 --> 00:11:30,069
+Voyage: the boats,
+
+252
+00:11:30,279 --> 00:11:32,019
+the expedition raft with its upgrades,
+
+253
+00:11:32,019 --> 00:11:33,769
+and the diving gear.
+
+254
+00:11:36,184 --> 00:11:38,504
+Creatures: the spawn eggs,
+
+255
+00:11:38,504 --> 00:11:40,114
+and what the creatures drop.
+
+256
+00:11:46,484 --> 00:11:49,764
+Tides of the Deep: the story items,
+
+257
+00:11:49,764 --> 00:11:50,884
+the four sigils,
+
+258
+00:11:50,884 --> 00:11:52,464
+the blocks of the sanctum,
+
+259
+00:11:52,464 --> 00:11:54,214
+and the treasures of the Leviathan.
+
+260
+00:11:56,559 --> 00:11:57,779
+And the Raft tab
+
+261
+00:11:57,779 --> 00:12:00,119
+of Beach Craft two: driftwood
+
+262
+00:12:00,119 --> 00:12:01,439
+and palm wood,
+
+263
+00:12:01,439 --> 00:12:04,259
+raft foundations, the survival tools,
+
+264
+00:12:04,259 --> 00:12:05,889
+titanium and the machines.
+
+265
+00:12:17,109 --> 00:12:19,109
+The expedition raft is made
+
+266
+00:12:19,109 --> 00:12:20,659
+from six foundations,
+
+267
+00:12:21,089 --> 00:12:22,759
+two rope and a paddle.
+
+268
+00:12:23,089 --> 00:12:24,889
+It is a big three by three raft,
+
+269
+00:12:24,889 --> 00:12:26,269
+with four seats
+
+270
+00:12:26,269 --> 00:12:28,519
+and twenty seven storage slots.
+
+271
+00:12:28,909 --> 00:12:31,309
+It never sinks, it never tips over,
+
+272
+00:12:31,309 --> 00:12:33,279
+and sharks cannot hurt it.
+
+273
+00:12:34,859 --> 00:12:36,939
+Upgrades go right onto the raft,
+
+274
+00:12:36,939 --> 00:12:38,949
+and every one of them shows.
+
+275
+00:12:39,599 --> 00:12:41,269
+The sail makes it faster,
+
+276
+00:12:41,459 --> 00:12:43,769
+the engine more than twice as fast,
+
+277
+00:12:44,019 --> 00:12:46,189
+the cargo crate adds storage,
+
+278
+00:12:46,579 --> 00:12:47,899
+lanterns light it up,
+
+279
+00:12:47,899 --> 00:12:49,849
+and the anchor holds it in place.
+
+280
+00:12:51,884 --> 00:12:54,184
+The palm boat and the driftwood raft
+
+281
+00:12:54,184 --> 00:12:55,664
+work like vanilla boats,
+
+282
+00:12:55,664 --> 00:12:57,244
+with or without a chest,
+
+283
+00:12:57,244 --> 00:12:58,504
+and in a boat,
+
+284
+00:12:58,504 --> 00:13:00,734
+the paddle gives you a push.
+
+285
+00:13:02,534 --> 00:13:04,984
+For the deep there is diving gear.
+
+286
+00:13:05,334 --> 00:13:06,394
+The diving helmet lets
+
+287
+00:13:06,394 --> 00:13:07,574
+you see far under water,
+
+288
+00:13:07,574 --> 00:13:10,194
+and with an oxygen tank you breathe
+
+289
+00:13:10,194 --> 00:13:11,404
+from the tank.
+
+290
+00:13:11,734 --> 00:13:14,444
+A gauge shows how much air is left.
+
+291
+00:13:16,184 --> 00:13:18,594
+Crafted with an angler lure,
+
+292
+00:13:18,764 --> 00:13:19,924
+the helmet gets a lamp,
+
+293
+00:13:19,924 --> 00:13:22,674
+and the dark trench becomes visible.
+
+294
+00:13:24,434 --> 00:13:26,954
+The wetsuit lets you mine faster under water
+
+295
+00:13:26,954 --> 00:13:29,064
+and keeps jellyfish away,
+
+296
+00:13:29,314 --> 00:13:31,484
+flippers make you swim much faster,
+
+297
+00:13:31,734 --> 00:13:32,474
+and the full set
+
+298
+00:13:32,474 --> 00:13:34,304
+gives you dolphin's grace.
+
+299
+00:13:36,109 --> 00:13:38,169
+The air compressor refills tanks,
+
+300
+00:13:38,169 --> 00:13:41,259
+with energy or with its hand crank.
+
+301
+00:13:42,784 --> 00:13:45,574
+The harpoon gun shoots harpoons,
+
+302
+00:13:45,904 --> 00:13:47,804
+eight damage under water,
+
+303
+00:13:47,804 --> 00:13:48,584
+and the sea scooter
+
+304
+00:13:48,584 --> 00:13:50,254
+pulls you through the deep.
+
+305
+00:13:52,184 --> 00:13:53,704
+The ship cannon fires
+
+306
+00:13:53,704 --> 00:13:56,104
+cannonballs about forty blocks far,
+
+307
+00:13:56,104 --> 00:13:58,374
+without breaking any blocks.
+
+308
+00:14:00,784 --> 00:14:02,544
+The wind turbine makes
+
+309
+00:14:02,544 --> 00:14:04,124
+energy high above the sea,
+
+310
+00:14:04,124 --> 00:14:06,104
+just like the solar panel.
+
+311
+00:14:06,104 --> 00:14:07,704
+Cables carry it
+
+312
+00:14:07,704 --> 00:14:09,354
+to batteries and machines.
+
+313
+00:14:11,384 --> 00:14:12,444
+Chairs,
+
+314
+00:14:12,444 --> 00:14:14,964
+cushions and deck chairs can be sat on,
+
+315
+00:14:14,964 --> 00:14:16,064
+and the hammock is a real
+
+316
+00:14:16,064 --> 00:14:18,934
+bed: it sets your spawn point.
+
+317
+00:14:20,609 --> 00:14:22,169
+And when it gets dark,
+
+318
+00:14:22,169 --> 00:14:23,599
+the lights come alive.
+
+319
+00:14:26,159 --> 00:14:26,919
+The tools
+
+320
+00:14:26,919 --> 00:14:29,549
+of raft survival are still here.
+
+321
+00:14:29,839 --> 00:14:31,779
+The item catcher fishes debris out
+
+322
+00:14:31,779 --> 00:14:32,919
+of the water,
+
+323
+00:14:32,919 --> 00:14:35,219
+the water purifier turns sea water
+
+324
+00:14:35,219 --> 00:14:37,699
+into fresh water, and the simple grill
+
+325
+00:14:37,699 --> 00:14:39,969
+cooks two foods at once.
+
+326
+00:14:41,559 --> 00:14:43,909
+Crop plots never dry out,
+
+327
+00:14:44,159 --> 00:14:46,359
+pineapples grow from their crowns,
+
+328
+00:14:46,359 --> 00:14:48,949
+and a scarecrow keeps the seagulls away.
+
+329
+00:14:50,409 --> 00:14:53,309
+The machines of Beach Craft two still run
+
+330
+00:14:53,309 --> 00:14:55,639
+on energy: the quarry,
+
+331
+00:14:55,849 --> 00:14:57,109
+the chunk destroyer,
+
+332
+00:14:57,109 --> 00:14:59,359
+and the brick and titanium furnaces.
+
+333
+00:15:01,109 --> 00:15:02,189
+The Seafarer's
+
+334
+00:15:02,189 --> 00:15:04,639
+Almanac explains everything,
+
+335
+00:15:04,909 --> 00:15:06,349
+chapter by chapter,
+
+336
+00:15:06,349 --> 00:15:08,799
+with a page for every creature.
+
+337
+00:15:10,584 --> 00:15:13,244
+Research terminals still show the logs
+
+338
+00:15:13,244 --> 00:15:14,634
+of the expedition,
+
+339
+00:15:15,024 --> 00:15:16,544
+and old radios crackle
+
+340
+00:15:16,544 --> 00:15:18,914
+with broadcasts from long ago.
+
+341
+00:15:21,809 --> 00:15:23,649
+Now let us follow the story,
+
+342
+00:15:23,649 --> 00:15:24,989
+the way a player would.
+
+343
+00:15:24,989 --> 00:15:27,519
+From here on, there are spoilers.
+
+344
+00:15:29,409 --> 00:15:33,709
+On the arrival platform waits a castaway chest: a note
+
+345
+00:15:33,709 --> 00:15:35,529
+from Captain Rhea Marlow,
+
+346
+00:15:35,529 --> 00:15:37,859
+the expedition journal, a chart,
+
+347
+00:15:38,069 --> 00:15:39,939
+and a basic kit to survive.
+
+348
+00:15:43,084 --> 00:15:45,164
+The expedition journal always
+
+349
+00:15:45,164 --> 00:15:46,854
+knows the next goal.
+
+350
+00:15:47,104 --> 00:15:49,154
+The first one is the Old Lighthouse.
+
+351
+00:15:51,134 --> 00:15:52,894
+With a raft and the chart,
+
+352
+00:15:52,894 --> 00:15:53,944
+you set sail.
+
+353
+00:15:56,109 --> 00:15:58,949
+In the keeper's cottage lies the logbook
+
+354
+00:15:58,949 --> 00:16:01,209
+of Tobias Fenn, and a chart
+
+355
+00:16:01,209 --> 00:16:03,539
+to the stilt village of Saltmere.
+
+356
+00:16:06,434 --> 00:16:08,954
+In Saltmere, the elder's hut holds
+
+357
+00:16:08,954 --> 00:16:10,964
+Nana Kalea's letters,
+
+358
+00:16:11,234 --> 00:16:13,444
+a diving helmet and the next chart.
+
+359
+00:16:13,874 --> 00:16:14,774
+And behind the statue
+
+360
+00:16:14,774 --> 00:16:16,234
+in the shrine lies the
+
+361
+00:16:16,234 --> 00:16:18,784
+first sigil: the Coral Sigil.
+
+362
+00:16:21,659 --> 00:16:24,569
+Deep below, at Helix Station,
+
+363
+00:16:24,799 --> 00:16:26,399
+the terminals of Dr.
+
+364
+00:16:26,399 --> 00:16:28,879
+Imara Voss tell how the expedition drilled
+
+365
+00:16:28,879 --> 00:16:31,609
+into the abyss, and woke something.
+
+366
+00:16:32,099 --> 00:16:34,729
+Her lab vault holds the Pearl Sigil.
+
+367
+00:16:37,434 --> 00:16:39,294
+In Port Solace,
+
+368
+00:16:39,294 --> 00:16:41,414
+Mayor Crane sealed the Storm Sigil
+
+369
+00:16:41,414 --> 00:16:42,754
+in a vault near the top
+
+370
+00:16:42,754 --> 00:16:44,504
+of the City Hall tower.
+
+371
+00:16:47,334 --> 00:16:49,204
+In the Ashen Forge,
+
+372
+00:16:49,434 --> 00:16:51,434
+the Ember Sigil waits beyond the river
+
+373
+00:16:51,434 --> 00:16:52,584
+of fire.
+
+374
+00:16:55,509 --> 00:16:57,709
+With all four sigils,
+
+375
+00:16:57,709 --> 00:16:59,069
+the altar of the Coral Temple
+
+376
+00:16:59,069 --> 00:17:01,439
+forges the Tidewarden Key.
+
+377
+00:17:03,584 --> 00:17:05,564
+The key opens the Tide Seal
+
+378
+00:17:05,564 --> 00:17:07,484
+of the Abyssal Sanctum.
+
+379
+00:17:07,484 --> 00:17:09,724
+Behind it lies a dome full of air,
+
+380
+00:17:09,724 --> 00:17:11,754
+around a deep pool.
+
+381
+00:17:13,709 --> 00:17:14,649
+At the altar
+
+382
+00:17:14,649 --> 00:17:16,569
+on the edge of the pool,
+
+383
+00:17:16,569 --> 00:17:18,219
+the key wakes the Leviathan,
+
+384
+00:17:18,629 --> 00:17:20,009
+a colossal sea serpent
+
+385
+00:17:20,009 --> 00:17:21,959
+with six hundred health.
+
+386
+00:17:24,284 --> 00:17:25,704
+It circles in the pool,
+
+387
+00:17:25,704 --> 00:17:27,584
+where nothing can hurt it.
+
+388
+00:17:27,584 --> 00:17:30,174
+It rises, and spits brine bolts.
+
+389
+00:17:32,134 --> 00:17:34,694
+It leaps across the stone ring,
+
+390
+00:17:34,694 --> 00:17:35,434
+slams down,
+
+391
+00:17:35,434 --> 00:17:38,144
+and lies stranded for four seconds.
+
+392
+00:17:38,594 --> 00:17:40,284
+That is the moment to strike.
+
+393
+00:17:42,209 --> 00:17:43,829
+Below half health,
+
+394
+00:17:43,829 --> 00:17:45,729
+it roars and calls the tidelings,
+
+395
+00:17:45,729 --> 00:17:47,589
+and stirs a whirlpool
+
+396
+00:17:47,589 --> 00:17:49,799
+that pulls you towards the pool.
+
+397
+00:17:50,389 --> 00:17:53,059
+Below a quarter, it gets faster still.
+
+398
+00:17:55,159 --> 00:17:56,459
+When it falls,
+
+399
+00:17:56,459 --> 00:17:58,229
+it leaves the Heart of the Tide,
+
+400
+00:17:58,479 --> 00:18:00,829
+leviathan scales, and its trophy.
+
+401
+00:18:03,309 --> 00:18:04,949
+Placed in the water,
+
+402
+00:18:04,949 --> 00:18:06,409
+the Heart of the Tide gives every
+
+403
+00:18:06,409 --> 00:18:08,429
+swimmer nearby conduit power
+
+404
+00:18:08,429 --> 00:18:11,559
+and dolphin's grace. Four scales,
+
+405
+00:18:12,169 --> 00:18:13,229
+titanium and a trident
+
+406
+00:18:13,229 --> 00:18:15,624
+make the Tidebreaker.
+
+407
+00:18:16,484 --> 00:18:19,234
+And the journal has one last entry.
+
+408
+00:18:19,404 --> 00:18:20,574
+The sea is calm.
+
+409
+00:18:20,884 --> 00:18:22,834
+Thank you, keeper of the tides.
+
+410
+00:18:25,309 --> 00:18:28,199
+This was Beach Craft three point oh.
+
+411
+00:18:28,529 --> 00:18:29,909
+Free on CurseForge,
+
+412
+00:18:29,909 --> 00:18:31,519
+the link is in the description.
+

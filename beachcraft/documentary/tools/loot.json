@@ -153,5 +153,81 @@
   "Gold Coin x13",
   "Golden Apple",
   "Gold Coin Pile"
+ ],
+ "s_storm": [
+  "Gold Ingot x4",
+  "Storm Sigil",
+  "Gold Coin x4",
+  "Titanium Ingot x2"
+ ],
+ "s_solace_hall": [
+  "Crane's Last Broadcast",
+  "Gold Nugget x3",
+  "Chart to the Ashen Forge"
+ ],
+ "p_solace_office": [
+  "Gold Nugget x4",
+  "Paper x5",
+  "Circuit Board x2",
+  "Book x3",
+  "Book and Quill"
+ ],
+ "p_solace_apartment": [
+  "String x2",
+  "Bread x2",
+  "White Wool x2",
+  "Glass Bottle x2"
+ ],
+ "s_ember": [
+  "Ember Sigil"
+ ],
+ "s_forge_chest": [
+  "Iron Ingot x4",
+  "Chart to the Coral Temple",
+  "Coal x11",
+  "Tablet of the Forge"
+ ],
+ "p_forge_storage": [
+  "Ember Shell x4",
+  "Iron Ingot x5",
+  "Coal x7",
+  "Blaze Powder"
+ ],
+ "p_camp_loot": [
+  "Palm Planks x3",
+  "Coconut x2",
+  "Bread"
+ ],
+ "s_helix_lab": [
+  "Paper x4",
+  "Voss's Journal",
+  "Chart to Port Solace",
+  "Oxygen Tank"
+ ],
+ "s_pearl": [
+  "Pearl Sigil",
+  "Circuit Board x4",
+  "Titanium Ingot x2"
+ ],
+ "p_helix_storage": [
+  "Redstone Dust x6",
+  "Iron Ingot x4",
+  "Glass x2",
+  "Plastic x2",
+  "Copper Ingot x6",
+  "Oxygen Tank"
+ ],
+ "s_chest": [
+  "Rope x3",
+  "Chart to the Old Lighthouse",
+  "Cooked Cod",
+  "String x2",
+  "Paddle",
+  "Expedition Journal",
+  "Fresh Water x3",
+  "Bread x5",
+  "Seafarer's Almanac",
+  "Plastic Hook",
+  "Marlow's Note"
  ]
 }

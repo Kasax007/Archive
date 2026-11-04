@@ -1,0 +1,1 @@
+{"t": 11.100, "event": "minecraft:block.vine.break", "file": "minecraft:sounds/block/vine/break4.ogg", "volume": 0.900, "pitch": 0.800, "x": 915.50, "y": 112.50, "z": 812.50, "attenuation": "LINEAR", "relative": false, "distance": 16, "source": "block", "cam_x": 940.72, "cam_y": 138.00, "cam_z": 778.78}

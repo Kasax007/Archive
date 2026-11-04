@@ -1,0 +1,1 @@
+{"t": 4.400, "event": "minecraft:block.campfire.crackle", "file": "minecraft:sounds/block/campfire/crackle6.ogg", "volume": 0.665, "pitch": 0.967, "x": 1316.50, "y": 105.80, "z": 408.50, "attenuation": "LINEAR", "relative": false, "distance": 16, "source": "block", "cam_x": 1331.30, "cam_y": 100.87, "cam_z": 388.30}

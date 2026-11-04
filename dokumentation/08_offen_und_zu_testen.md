@@ -59,7 +59,17 @@ Stand 4.11.2026. Alle Repos sind gepusht (lokaler Stand = GitHub). Seit dem 4.11
 - [ ] Im Spiel beobachten: Anglerfische im Graben (Gewicht 4) gegenüber Leuchttintenfischen (Gewicht 3, vorher 10).
 - [ ] Offene Design-Fragen aus 2.0.1 entscheiden: Titanofen verdoppelt alles, Energieverlust beim Abbauen, Chunk
   Destroyer kostet leere Säulen, ein Ausgabe-Slot im Item Catcher, seltener Treibholz-Setzling, Haken zieht durch Wände.
-- [ ] Optional: ein Video (Short oder Review) zu Beach Craft 3.0.
+- [x] Video zu Beach Craft 3.0: Doku „Tides of the Deep“ (18:35, `beachcraft/documentary/`), fertig am 4.11.
+- [ ] Beim Filmen aufgefallen (prüfen, ggf. beheben):
+  - Der Tresor des Storm Sigil (−1072 89 207) liegt unter dem Meeresspiegel (100). Die Story sagt „high above the
+    water line“ (Cranes Funkspruch, Radiozeile 13, Terminal solace_3).
+  - Vulkaninsel bei (−400, −300) ohne Lava an der Oberfläche, nur tief unten. Prüfen, ob die Lava-Sperre um die Ashen
+    Forge (CraterLavaFeature) zu viel wegnimmt.
+  - In der Raft-Dimension ist immer Tag: Hängematte und Bett setzen dort nur den Spawnpunkt (Absicht oder ändern?).
+  - Der alte Leuchtturm steckt in hohen Dschungelbäumen der Nachbarinsel.
+  - Der Coral Temple nahe dem Spawn ragt zur Hälfte aus dem Meer.
+  - Neue Gebiete der Raft-Dimension: Der Server fällt 90–180 s zurück.
+  - Log: „Dev warning – Untranslated Item Tags“.
 
 ## E. Quest Icons – zu testen
 - [ ] Teams auf einem echten Server: einladen per Klick im Chat, beitreten, Server neu starten – kein leeres Team mehr.

@@ -106,7 +106,8 @@ Im Mod-Repo ist `CLAUDE.md` vom Nutzer per `.gitignore` ausgeschlossen (seine lo
   - Was bleiben soll, ins Archiv.
 - **Ressourcen:**
   - Plattenplatz knapp halten: Zwischenstände löschen, `df -h /` prüfen.
-  - Höchstens 2 JVMs gleichzeitig.
+  - Höchstens 2 JVMs gleichzeitig. Ausnahme (Freigabe des Nutzers, 4.11.2026): kurze Kompilier-Läufe (~1 GB) dürfen
+    zusätzlich laufen; Spiel-Clients, Server und Testläufe weiter nacheinander über den Build-Lock.
   - Nie `pkill -f <muster>` mit einem Muster aus dem eigenen Befehl.
 - **Fehlende Werkzeuge:** Kein `ffprobe` (Dauer mit `ffmpeg -i x 2>&1 | grep Duration`), kein drawtext (Text mit
   PIL zeichnen).

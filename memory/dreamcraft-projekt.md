@@ -148,6 +148,8 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   Beach Craft/Dreamcraft, BcCheck noch nicht kompiliert), `tools/prodtest/mk121.py` (Upgrade-Test V1.2.1 -> V1.3).
   Details: `tools/dctest/README.md`.
 
+- **Stand 4.11. abends:** Challenge Craft Modpack v5 (Upgraded Iron Chests + Storage Drawers) gebaut und Server-Test ok, Upload erst nach der Testrunde (Wunsch des Nutzers). Dreamcraft V1.4 in Arbeit: Upgraded Iron Chests + Kapitel „Quality of Life“ (344 Quests, 15 Kapitel). Beach Craft: Fixes + Doku v2 (Agent), Floß-Bau, Sounds/Musik, NPCs (je ein Agent, Worktrees /home/user/wt/*, Branches feature/*), danach Merge nach 26.3 und Release als 3.1.0.
+
 ## Was der Nutzer will (hier gelernt)
 
 - Ohne Rückfragen durcharbeiten; höchstens ein, wenn nötig zwei Subagenten (Wunsch vom 4.11.2026).

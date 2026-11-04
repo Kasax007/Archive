@@ -119,6 +119,7 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   id/properties, preview.py isometrische Vorschau), `tools/bctest/run.sh <skript> <out>` = skriptbarer Client-Gametest
   (world/cmd/pcmd/settle/shot/count/sneakuse/esc/slot; `BC_JFR=` für Profiling), `$SP/ref/jc.sh` = schneller javac-Check
   unter dem gemeinsamen Lock `$SP/ref/build.lock`.
+- **Gesamtdokumentation** (Deutsch, alle Projekte): `dokumentation/README.md` und Kapitel 01–08.
 - **Lehren:**
   - 26.3/SDL: Maustasten links=1, Mitte=2, rechts=3 und Escape=41 – nie feste GLFW-Zahlen; GUIs mit echten Klicks testen.
   - Strukturvorlagen: Blöcke ohne `rotate()/mirror()`-Override (BaseEntityBlock mit FACING) drehen sich bei gedrehten
@@ -131,8 +132,8 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   - Gametest-Rechner ist langsam (neues Gebiet 3–5 min bei rd 8, Oberwelt ähnlich): `rd 5`, Läufe bündeln.
   - Nutzungslimit: Höchstens 4 Agenten gleichzeitig (Wunsch des Nutzers); Arbeit vorher in WIP-Commits sichern.
 - **Weitere Releases dieser Runde:** Quest Icons 1.0.2 (Klick-Hotfix, Datei 9415031) und 1.1.0 (Dream Star, Datei
-  9429010); Dreamcraft V1.2.1 (9415062, Server 9415063). Tamagotchi 1.2.0 liegt fertig auf `26.3`/`bugcheck-wip`
-  (Release per Tag `v1.2.0` über GitHub Actions – braucht die Freigabe des Nutzers). Challenge Craft: Fixes nur auf
+  9429010); Dreamcraft V1.2.1 (9415062, Server 9415063). Tamagotchi 1.2.0 liegt fertig auf `26.3` (Commit aa45ba7,
+  noch kein Tag; Release per Tag `v1.2.0` oder „Run workflow“ über GitHub Actions – braucht die Freigabe des Nutzers). Challenge Craft: Fixes nur auf
   Branch `bugcheck-2026-11` (Bericht `docs/BUGCHECK-2026-11.md`), keine Versionsänderung.
 
 ## Was der Nutzer will (hier gelernt)

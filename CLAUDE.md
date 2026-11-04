@@ -39,6 +39,7 @@ Im Mod-Repo ist `CLAUDE.md` vom Nutzer per `.gitignore` ausgeschlossen (seine lo
 | `fonts/` | Schriften für Untertitel und Titel (vor dem Rendern nach `$SP/fonts` kopieren) |
 | `motion/` | Remotion-Projekt (Motion Graphics für Story 5.1) |
 | `stills/`, `research/`, `curseforge/` | Kontaktbögen, Recherche, Mod- und Modpack-Beschreibung, Changelog |
+| `dokumentation/` | Gesamtdokumentation auf Deutsch (Dreamcraft, Quest Icons, Beach Craft, Tamagotchi, Challenge-Craft-Bug-Check, Videos, Entscheidungen, offene Punkte); Einstieg `dokumentation/README.md` |
 | `memory/` | Langzeitgedächtnis: `challenge-craft-projekt.md` (Mod, Bob, Training, Regeln, Vorlieben des Nutzers), `dreamcraft-projekt.md` (Modpack Dreamcraft 26.3, Quest Icons, Beach Craft/Raft) |
 | `Testrun Lockout against Bob` | Log einer Runde des Nutzers gegen Bob |
 

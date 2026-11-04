@@ -11,7 +11,7 @@ Wasser und wehrt den Hai Bruce ab. Mit 3.0 wurde daraus eine ganze Inselwelt mit
 | --- | --- | --- |
 | 2.0.0+26.3 | 9402661 | veröffentlicht (2.11.2026), Port auf 26.3 mit neuem Überlebens-Inhalt |
 | 2.0.1+26.3 | 9408472 | veröffentlicht (2.11.2026), über 20 Fehler aus dem Review-Video behoben |
-| **3.0.0+26.3** | – | **fertig, nicht hochgeladen** (Upload hat das Berechtigungssystem blockiert) |
+| **3.0.0+26.3** | 9431301 | **veröffentlicht** (4.11.2026), „Tides of the Deep“; in Dreamcraft ab V1.3 |
 
 - **Branch:** `26.3` und `3.0-dev` zeigen beide auf Commit `e16c820` („Beach Craft 3.0.0: CurseForge page, changelog and
   images“), lokal und auf GitHub gleich. `gradle.properties`: `mod_version=3.0.0+26.3`.

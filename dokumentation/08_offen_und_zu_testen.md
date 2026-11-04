@@ -1,29 +1,18 @@
 # 08 – Offen und zu testen (Checkliste)
 
-Stand 4.11.2026. Alle Repos sind gepusht (lokaler Stand = GitHub). Offen ist vor allem, was **deine Freigabe** braucht.
+Stand 4.11.2026. Alle Repos sind gepusht (lokaler Stand = GitHub). Seit dem 4.11. sind Beach Craft 3.0.0, Tamagotchi 1.2.0 und Dreamcraft V1.3 hochgeladen.
 
 ## A. Deine Entscheidungen (blockieren die nächsten Schritte)
 
-- [ ] **Beach Craft 3.0.0 hochladen** – vom Berechtigungssystem blockiert; du musst den Upload freigeben oder selbst
-  hochladen.
-  - Projekt 1010922, Datei `$SP/release_bc3/raft-3.0.0+26.3.jar` (oder neu bauen: Branch `26.3`, `./gradlew build`),
-    Changelog `docs/curseforge/changelog-3.0.0+26.3.md`, Spielversion 26.3, Fabric.
-  - Danach rund 10 Minuten auf die CurseForge-Freigabe warten.
-- [ ] **Tamagotchi 1.2.0 veröffentlichen** – Tag `v1.2.0` pushen oder den Workflow „Release“ von Hand starten (GitHub
-  Actions); braucht deine Freigabe.
-  - 1.2.0 liegt auf Branch **`26.3`** (`aa45ba7`, am 4.11. nachgezogen und gepusht). Für das Release nur noch den Tag
-    `v1.2.0` pushen oder den Workflow „Release“ auf `26.3` starten.
-  - Prüfen, ob das Secret `CURSEFORGE_TOKEN` im Tamagotchi-Repo gesetzt ist (sonst gibt es nur das GitHub-Release).
-- [ ] **Dreamcraft V1.3 bauen und hochladen** – erst wenn Beach Craft 3.0.0 (und am besten Tamagotchi 1.2.0) auf
-  CurseForge freigegeben ist.
-  - `python3 tools/mkpack.py V1.3 9429010 <BC-3.0.0-Datei> <Tamagotchi-1.2.0-Datei>`.
-  - Ohne viertes Argument käme Tamagotchi 1.1.0 (9399713) ins Pack – die V1.3-Quests beschreiben aber 1.2.0
-    (Look-alike-Strukturen, Mod-Essen, Mod-Erze).
-  - Danach Produktiv-Test (Abschnitt C), Upload, Server-Pack hochladen und von Hand als Server Pack markieren.
+- [x] **Beach Craft 3.0.0 hochgeladen** (4.11., mit deiner Freigabe) – Datei 9431301, freigegeben.
+- [x] **Tamagotchi 1.2.0 hochgeladen** (4.11.) – Datei 9431312 direkt über die CurseForge-API, freigegeben.
+  - [ ] GitHub-Release/Tag `v1.2.0` fehlt noch (Tag-Push geht aus der Sitzung nicht), siehe [04](04_tamagotchi.md).
+- [x] **Dreamcraft V1.3 gebaut, getestet und hochgeladen** (4.11.) – Client 9431378, Server-Pack 9431379.
+  - [ ] Auf CurseForge prüfen, ob 9431379 als Server Pack markiert ist (geht nur von Hand).
 - [ ] **Neue Beschreibungen einfügen** (Quellcode-Ansicht, siehe [06](06_videos_und_beschreibungen.md#4-die-curseforge-beschreibungen-finale-fassungen)):
-  - [ ] Quest Icons – **jetzt** (1.1.0 ist veröffentlicht).
-  - [ ] Beach Craft – nach dem Upload von 3.0.0.
-  - [ ] Dreamcraft – mit V1.3 (die Datei ist schon auf V1.3).
+  - [ ] Quest Icons (1.1.0 ist veröffentlicht).
+  - [ ] Beach Craft (3.0.0 ist veröffentlicht).
+  - [ ] Dreamcraft (V1.3 ist hochgeladen).
   - [ ] Dreamcraft-Kurzbeschreibung (Summary) prüfen: stand am 2.11. noch „800+ quests“.
 - [ ] **Challenge Craft: Crafter-Änderung** – der Crafter baut keine Infinite Chest und keine Casino-Geräte mehr
   (Branch `bugcheck-2026-11`). Behalten (dann 1.1.4 veröffentlichen) oder anders lösen? Siehe
@@ -77,8 +66,8 @@ Stand 4.11.2026. Alle Repos sind gepusht (lokaler Stand = GitHub). Offen ist vor
 - [ ] Edit-Modus als OP auf einem Server: Quest ziehen, SNBT bearbeiten, „Reload files from disk“.
 - [ ] Mystery Reward ein paarmal öffnen (keine Creative-Blöcke).
 
-## F. Tamagotchi – nach dem Release
-- [ ] CurseForge-Datei-ID von 1.2.0 notieren und für Dreamcraft V1.3 verwenden.
+## F. Tamagotchi – nach dem Release (1.2.0 = 9431312)
+- [x] CurseForge-Datei-ID von 1.2.0 (9431312) notiert und in Dreamcraft V1.3 verwendet.
 - [ ] Optional: CurseForge-Beschreibung um die Modpack-Funktionen von 1.2.0 ergänzen (sie ist noch auf 1.1.0).
 - [ ] Modrinth: nur wenn `MODRINTH_TOKEN` und `modrinth_id` gesetzt sind.
 

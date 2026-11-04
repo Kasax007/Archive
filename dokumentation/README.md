@@ -25,26 +25,22 @@ damit sie exakt stimmen. Wo sich etwas nicht prüfen ließ, steht „unklar“.
 ### Veröffentlicht auf CurseForge
 | Projekt | Versionen (Datei-ID) |
 | --- | --- |
-| **Dreamcraft** (Modpack 545167) | V1 9403038 (Server 9403042) · V1.1 9408516 (Server 9408519) · V1.2 9409459 (Server 9409463) · **V1.2.1 9415062 (Server 9415063)** |
+| **Dreamcraft** (Modpack 545167) | V1 9403038 (Server 9403042) · V1.1 9408516 (Server 9408519) · V1.2 9409459 (Server 9409463) · V1.2.1 9415062 (Server 9415063) · **V1.3 9431378 (Server 9431379)** |
 | **Quest Icons** (690531) | 1.0.0 9402494 · 1.0.1 9409345 · 1.0.2 9415031 · **1.1.0 9429010** |
-| **Beach Craft** (1010922) | 2.0.0 9402661 · **2.0.1 9408472** |
-| **Tamagotchi** (1758309) | 1.0.0 9281396 · **1.1.0 9399713** |
+| **Beach Craft** (1010922) | 2.0.0 9402661 · 2.0.1 9408472 · **3.0.0 9431301** |
+| **Tamagotchi** (1758309) | 1.0.0 9281396 · 1.1.0 9399713 · **1.2.0 9431312** |
 
 ### Fertig, aber noch nicht veröffentlicht
 | Was | Wo | Warum noch nicht |
 | --- | --- | --- |
-| **Beach Craft 3.0.0** „Tides of the Deep“ | Branch `26.3` (= `3.0-dev`, `e16c820`); Jar in `$SP/release_bc3/` | Upload vom Berechtigungssystem blockiert – du gibst frei oder lädst selbst hoch |
-| **Tamagotchi 1.2.0** (modpack-tauglich, viele Fixes) | Branch **`26.3`** (`aa45ba7`), noch kein Tag | Release per Tag `v1.2.0` / GitHub Actions braucht deine Freigabe |
-| **Dreamcraft V1.3** (Beach Craft 3.0, Tamagotchi, Dream Star, 328 Quests) | Branch `26.3` (`1a8ad17`), Changelog und Beschreibung fertig | wird erst gebaut, wenn Beach Craft 3.0.0 (und Tamagotchi 1.2.0) auf CurseForge sind |
 | **Challenge Craft 1.1.4** (Bug-Check-Fixes) | Branch `bugcheck-2026-11` (`1474c3d`), Changelog-Entwurf | wartet auf deine Entscheidung zum Crafter und dein Go |
 
 ### Was du als Nächstes tun musst
-1. Beach Craft 3.0.0 hochladen (oder freigeben) und ~10 Minuten auf die Freigabe warten.
-2. Tamagotchi 1.2.0 veröffentlichen (Tag `v1.2.0` pushen oder den Workflow „Release“ auf `26.3` starten).
-3. Dreamcraft V1.3 bauen (`mkpack.py V1.3 9429010 <BC-Datei> <Tama-Datei>`), wie ein Spieler testen, hochladen,
-   Server-Pack von Hand markieren.
-4. Beschreibungen einfügen: Quest Icons jetzt, Beach Craft nach 3.0.0, Dreamcraft mit V1.3.
-5. Entscheiden: Crafter in Challenge Craft – und ob 1.1.4 kommt.
+Am 4.11.2026 hochgeladen (mit deiner Freigabe): Beach Craft 3.0.0 (9431301), Tamagotchi 1.2.0 (9431312, direkt auf
+CurseForge – ein GitHub-Release mit Tag `v1.2.0` fehlt noch) und Dreamcraft V1.3 (9431378, Server-Pack 9431379).
+1. Beschreibungen einfügen: Quest Icons, Beach Craft (3.0), Dreamcraft (V1.3); Tamagotchi optional um 1.2.0 ergänzen.
+2. Prüfen, ob das V1.3-Server-Pack auf CurseForge als Server Pack markiert ist (geht nur von Hand).
+3. Entscheiden: Crafter in Challenge Craft – und ob 1.1.4 kommt.
 
 ### Das Wichtigste in Sätzen
 - **Dreamcraft** läuft auf Minecraft 26.3 (Fabric 0.20.1, Java 25) mit 250 CurseForge-Mods, eigenem Menü, Server-Pack

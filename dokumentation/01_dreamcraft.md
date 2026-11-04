@@ -16,8 +16,8 @@ Menü. Die Quelle liegt im Repo `Kasax007/Modpack-Development`, Branch **`26.3`*
 | Menü | FancyMenu mit 8 zufälligen Hintergründen, Drippy-Ladebildschirm mit lila Balken |
 | Shader | Iris mit BSL und Complementary Reimagined, standardmäßig **aus** |
 | Server | Server-Pack mit Startskripten für Linux, macOS und Windows |
-| Aktuell veröffentlicht | **V1.2.1** (Datei 9415062, Server-Pack 9415063) |
-| In Vorbereitung | **V1.3** (Beach Craft 3.0, Tamagotchi, Dream Star, 328 Quests) – im Repo fertig, noch nicht gebaut |
+| Aktuell veröffentlicht | **V1.3** (Datei 9431378, Server-Pack 9431379, hochgeladen am 4.11.2026) |
+| Davor | V1.2.1 (Datei 9415062, Server-Pack 9415063) |
 
 ### Was im Repo liegt
 | Pfad | Inhalt |
@@ -89,7 +89,7 @@ angegebenen Datei-ID hinzu):
 | --- | --- | --- |
 | [Quest Icons](https://www.curseforge.com/minecraft/mc-mods/quest-icons) | Quest-Buch (Taste J), Loot Crates, Icons, Dream Star | V1.2.1: 1.0.2 · V1.3: 1.1.0 |
 | [Beach Craft (Raft)](https://www.curseforge.com/minecraft/mc-mods/beach-craft) | Die Raft-Dimension „Endless Sea“: Floß-Überleben, Story, Boss | V1.2.1: 2.0.1 · V1.3: 3.0.0 |
-| [Tamagotchi](https://www.curseforge.com/minecraft/mc-mods/tamagotchi) | Zehn seltene Haustiere | ab V1.3 (in `mods.json`: 1.1.0, siehe [04](04_tamagotchi.md)) |
+| [Tamagotchi](https://www.curseforge.com/minecraft/mc-mods/tamagotchi) | Zehn seltene Haustiere | ab V1.3: 1.2.0 (Datei 9431312, siehe [04](04_tamagotchi.md)) |
 
 #### Welt, Gelände und Biome (6)
 
@@ -512,7 +512,7 @@ Fehler (Oberwelt 1521 Chunks in 1:43, Raft-Dimension 729 Chunks, früher auch Ne
 | **V1.1** | 9408516 | 9408519 | Beach Craft 2.0.1 (über 20 Fehler behoben); Raft-Quests korrigiert: Treibholz-Stümpfe an Stränden, „Land Ho!“ wurde **„Driftwood Ahoy!“** (16 Treibholz-Stämme), Titan-Quest nennt Diamantspitzhacke und Metalldetektor, echter Set-Bonus der Titan-Rüstung |
 | **V1.2** | 9409459 | 9409463 | nach dem Test der echten Installation: Menü passt in jedes Fenster, Mods- und Rent-a-Server-Knopf gehen, lila Ladebalken, Start in der Ego-Sicht, Quest Icons 1.0.1 (kein zweites Quest-Buch), Quests nennen JEI statt REI; **Just Enough Resources entfernt** |
 | **V1.2.1** | 9415062 | 9415063 | Hotfix: Quest Icons 1.0.2 – das Quest-Buch reagiert wieder auf Klicks (26.3-Maustasten) |
-| **V1.3** | – | – | **vorbereitet, nicht gebaut:** Beach Craft 3.0, Tamagotchi, Quest Icons 1.1.0 mit Dream Star, Quests 164 → 328 |
+| **V1.3** | 9431378 | 9431379 | Beach Craft 3.0.0 (9431301), Tamagotchi 1.2.0 (9431312), Quest Icons 1.1.0 (9429010) mit Dream Star, Quests 164 → 328 (hochgeladen am 4.11.2026) |
 
 ### Was V1.3 bringt (Changelog `changelog-26.3-V1.3.md`)
 - **Beach Craft 3.0 „Tides of the Deep“** – Inselwelt, Story, Boss, Expedition Raft, Tauchen ([03](03_beach_craft.md)).
@@ -533,15 +533,17 @@ Fehler (Oberwelt 1521 Chunks in 1:43, Raft-Dimension 729 Chunks, früher auch Ne
   Ankunftsplattformen haben keine Castaway-Truhe: Expedition Journal herstellen (Buch, Kompass, Papier) und auf See
   schleichend benutzen.
 
-### So wird V1.3 gebaut (Reihenfolge ist wichtig)
-1. Beach Craft 3.0.0 hochladen und die CurseForge-Prüfung abwarten (eine neue Datei ist erst nach rund 10 Minuten
-   herunterladbar; erst dann darf ein Pack sie referenzieren).
-2. Tamagotchi 1.2.0 veröffentlichen (siehe [04](04_tamagotchi.md)) – die V1.3-Quests beschreiben schon 1.2.0.
-3. `python3 tools/mkpack.py V1.3 9429010 <Beach-Craft-3.0.0-Datei> <Tamagotchi-1.2.0-Datei>` – Quest Icons 1.1.0 ist
-   Datei 9429010. Ohne viertes Argument nimmt das Skript die Tamagotchi-Datei aus `pack/mods.json` (zurzeit 1.1.0,
-   9399713).
-4. Wie bei jeder Version: wie ein Launcher installieren und testen (unten), dann Client und Server-Pack hochladen,
-   Server-Pack von Hand markieren, neue Beschreibung einfügen.
+### So wurde V1.3 gebaut (4.11.2026, Reihenfolge ist wichtig)
+1. Beach Craft 3.0.0 hochgeladen (Datei 9431301) und die CurseForge-Prüfung abgewartet: Eine neue Datei ist erst nach
+   rund 10 Minuten herunterladbar (der öffentliche Download-Link antwortet dann mit 307); erst dann darf ein Pack sie
+   referenzieren.
+2. Tamagotchi 1.2.0 direkt auf CurseForge hochgeladen (Datei 9431312). Der Weg über den Release-Workflow ging aus der
+   Sitzung nicht (Tag-Push bricht ab, `workflow_dispatch` braucht den Workflow auf dem Default-Branch `main`).
+   `pack/mods.json` zeigt jetzt auf 9431312.
+3. `python3 tools/mkpack.py V1.3 9429010 9431301` – Quest Icons 1.1.0 ist 9429010; Tamagotchi kommt aus
+   `pack/mods.json` (ein viertes Argument würde es überschreiben).
+4. Wie ein Launcher installiert und getestet (unten), dann Client (9431378) und Server-Pack (9431379, mit
+   `parentFileID`) hochgeladen. Ob das Server-Pack als Server Pack markiert ist, muss man auf CurseForge von Hand prüfen.
 
 ### Der Produktiv-Installationstest (`tools/prodtest`)
 **Warum:** Der Client-Test in `tools/dctest` läuft in Loom, einer Entwicklungsumgebung. Er lässt z. B. Neruina weg
@@ -1189,5 +1191,8 @@ Dream“ frei. Rezepte und Sockel im Detail: [02_quest_icons.md](02_quest_icons.
   Fabric-Gametest-API (8 MB pro Bild), `FilmSound` + `SoundLogMixin` protokollieren alle Spielgeräusche für die Videos.
 - **V1.3 wurde so geprüft:** Smoke-Lauf und Kapitel-Screenshots (Ordner `$SP/v13/run/`), Registry-Dump mit
   Dream-Star-Rezept-Check (`dream_star` geladen, `dream_star_vanilla` nicht, Sockel geladen), `qcheck.py` ohne Fehler.
-  Gelaufen ist das mit den Jars aus `$SP/ownjars` (Quest Icons 1.1.0, Beach Craft 3.0.0, Tamagotchi 1.2.0). Ein
-  Produktiv-Installationstest von V1.3 fehlt noch, weil V1.3 noch nicht gebaut ist.
+  Gelaufen ist das mit den Jars aus `$SP/ownjars` (Quest Icons 1.1.0, Beach Craft 3.0.0, Tamagotchi 1.2.0). Der
+  Produktiv-Test folgte am 4.11.: das fertige Zip wie ein Launcher installiert (252 Mods, 0 Fehler), Client bis ins
+  Spiel (Hauptmenü, neue Welt, Quest-Buch mit 14 Kapiteln; „0/203“ zählt nur Pflicht-Quests, dazu 125 optionale = 328),
+  Server-Pack gestartet (363 Mods, „Done“ nach 33 s, 328 Quests, Raft-Strukturen per `/locate` gefunden). Im Log nur
+  Umgebungsfehler (kein Ton, keine Anmeldung, kein Discord).

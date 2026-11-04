@@ -112,27 +112,24 @@ aus anderen Mods. Plan und Stand stehen in `docs/PLAN.md` (Abschnitt „Round 3�
 | Version | CurseForge-Datei | Stand |
 | --- | --- | --- |
 | 1.0.0 | 9281396 | veröffentlicht |
-| 1.1.0 | 9399713 | veröffentlicht, **aktuell** – steht so in Dreamcrafts `pack/mods.json` |
-| 1.2.0 | – | **fertig, nicht veröffentlicht** |
+| 1.1.0 | 9399713 | veröffentlicht |
+| 1.2.0 | 9431312 | veröffentlicht (4.11.2026), **aktuell**; in Dreamcraft ab V1.3 (`pack/mods.json`) |
 
 **Wo 1.2.0 liegt:** auf dem Branch **`26.3`** (Commit `aa45ba7`, `mod_version=1.2.0`, am 4.11. per Fast-Forward von
-`bugcheck-wip` nachgezogen und auf GitHub gepusht). Es gibt noch keinen Git-Tag `v1.2.0`, also noch kein Release.
+`bugcheck-wip` nachgezogen und auf GitHub gepusht).
 
-**Wie veröffentlicht wird** (README, Abschnitt „Releasing“, und `.github/workflows/release.yml`):
-- Entweder den Tag **`v1.2.0`** pushen – der Workflow prüft, dass der Tag zu `mod_version` passt –, oder den Workflow
-  „Release“ im Actions-Tab von Hand starten („Run workflow“ auf dem Branch mit 1.2.0). Der Workflow baut den Mod und
-  veröffentlicht: GitHub-Release (legt den Tag an, falls er fehlt), CurseForge (wenn das Secret `CURSEFORGE_TOKEN`
-  gesetzt ist), Modrinth (wenn `MODRINTH_TOKEN` und `modrinth_id` gesetzt sind). Der Changelog ist der Abschnitt
-  `## 1.2.0` aus `CHANGELOG.md`.
-- Ein Release ist nach außen sichtbar; das Pushen des Tags wurde in der Sitzung von der Rechteprüfung blockiert.
-  **Deshalb braucht es deine Freigabe**, oder du startest es selbst: Tag `v1.2.0` auf `26.3` pushen oder im Actions-Tab
-  „Release“ → „Run workflow“ auf `26.3`.
+**Wie 1.2.0 veröffentlicht wurde:** Mit deiner Freigabe habe ich das Jar (`tamagotchi-1.2.0.jar`, gebaut aus `26.3`)
+direkt über die CurseForge-API hochgeladen; Changelog ist der Abschnitt `## 1.2.0` aus `CHANGELOG.md`. Der
+eigentliche Release-Weg (README, „Releasing“, `.github/workflows/release.yml`) ging aus der Sitzung nicht: Das
+Pushen des Tags `v1.2.0` bricht am Proxy ab, und „Run workflow“ per API findet den Workflow nicht, weil der
+Default-Branch `main` nur eine README hat. **Noch offen:** ein GitHub-Release/Tag `v1.2.0` – das kannst du selbst
+anlegen (Tag `v1.2.0` auf `26.3`). Achtung: Der Workflow würde dann auch noch einmal auf CurseForge hochladen, falls das
+Secret `CURSEFORGE_TOKEN` gesetzt ist; dann die doppelte Datei auf CurseForge löschen oder nur das GitHub-Release von
+Hand anlegen.
 
-**Zusammenhang mit Dreamcraft V1.3:** Der V1.3-Quest-Seitenpfad beschreibt schon 1.2.0-Verhalten („In Dreamcraft
-they also live in the look-alikes … of Repurposed Structures“, „modded ores too“, „Pets eat modded food too“), und der
-V1.3-Test lief mit dem 1.2.0-Jar. `pack/mods.json` nennt aber noch 1.1.0 (9399713). Also: **erst Tamagotchi 1.2.0
-veröffentlichen und die Freigabe abwarten, dann V1.3 mit der neuen Datei-ID bauen** (`mkpack.py` nimmt sie als viertes
-Argument oder `pack/mods.json` wird angepasst). Sonst stimmen die Quest-Texte nicht mit dem Mod im Pack überein.
+**Zusammenhang mit Dreamcraft V1.3:** Der V1.3-Quest-Seitenpfad beschreibt 1.2.0-Verhalten („In Dreamcraft they also
+live in the look-alikes … of Repurposed Structures“, „modded ores too“, „Pets eat modded food too“). V1.3 enthält
+deshalb genau die CurseForge-Datei 9431312.
 
 ## 4. Videos zu Tamagotchi
 

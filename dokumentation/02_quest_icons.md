@@ -303,7 +303,7 @@ Polished Blackstone | Polished Blackstone | Polished Blackstone
 | **1.1.0+26.3** | 9429010 | 3./4.11.2026 | Dream Star und Pedestal; Escape schließt zuerst das offene Fenster; keine Klicks mehr „durch“ Auswahlfenster und Menüs; weggescrollte Knöpfe reagieren nicht mehr; Team-Reparatur nach Server-Neustart; kaputte Aufgaben werden abgeschaltet statt Log-Spam; Quests ohne ID überschreiben sich nicht; XP-Aufgaben zählen die aktuellen XP; 99 % statt Haken; Mystery Reward ohne Creative-Blöcke; Loot Crates in normalen Stapeln; kein Barrier-Block für unbekannte Items |
 
 Die Changelogs liegen in `docs/curseforge/changelog-<version>.md` im Mod-Repo. Dreamcraft nutzte 1.0.0 (V1, V1.1),
-1.0.1 (V1.2), 1.0.2 (V1.2.1); V1.3 ist für 1.1.0 vorbereitet.
+1.0.1 (V1.2), 1.0.2 (V1.2.1); V1.3 (4.11.2026) nutzt 1.1.0.
 
 ### Wie es zum Hotfix 1.0.2 kam
 1. **Das Symptom:** Spieler meldeten im Discord (Dreamcraft V1.2 mit Quest Icons 1.0.1), dass sie keine Quest öffnen

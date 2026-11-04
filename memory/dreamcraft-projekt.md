@@ -9,11 +9,11 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
 | Was | Wo | CurseForge |
 | --- | --- | --- |
 | Modpack-Quelle (Overrides, Quests, Menü, Tools, Beschreibung) | `Kasax007/Modpack-Development`, Branch `26.3` | Modpack 545167 |
-| Quest Icons (Quest-System im FTB-Quests-Stil + Icons) | `Kasax007/Kasax_Quests_Items_Mod-1.19.2`, Branch `26.3` | 690531, Datei 9402494 (1.0.0+26.3), 9409345 (1.0.1+26.3), 9415031 (1.0.2+26.3) |
-| Raft-Mod, auf CurseForge **„Beach Craft“** | `Kasax007/Kasax_Raft_Mod`, Branch `26.3` | 1010922, Datei 9402661 (2.0.0+26.3), 9408472 (2.0.1+26.3) |
+| Quest Icons (Quest-System im FTB-Quests-Stil + Icons) | `Kasax007/Kasax_Quests_Items_Mod-1.19.2`, Branch `26.3` | 690531, Datei 9402494 (1.0.0+26.3), 9409345 (1.0.1+26.3), 9415031 (1.0.2+26.3), 9429010 (1.1.0+26.3, Dream Star) |
+| Raft-Mod, auf CurseForge **„Beach Craft“** | `Kasax007/Kasax_Raft_Mod`, Branch `26.3` | 1010922, Datei 9402661 (2.0.0+26.3), 9408472 (2.0.1+26.3), 9431301 (3.0.0+26.3) |
 | TikTok und Werkzeuge | `Archive/dreamcraft/tiktok` (v2 mit Shadern) | – |
 | Beach-Craft-Review und Prüfbericht | `Archive/beachcraft/review` | – |
-| Modpack-Dateien | | V1: 9403038 (+ Server-Pack). V1.1: 9408516, Server-Pack 9408519 (Beach Craft 2.0.1, Quests korrigiert). V1.2: 9409459, Server-Pack 9409463 (Menü-Fixes, ohne JER). V1.2.1: 9415062, Server-Pack 9415063 (Quest-Buch-Klick-Hotfix) |
+| Modpack-Dateien | | V1: 9403038 (+ Server-Pack). V1.1: 9408516, Server-Pack 9408519 (Beach Craft 2.0.1, Quests korrigiert). V1.2: 9409459, Server-Pack 9409463 (Menü-Fixes, ohne JER). V1.2.1: 9415062, Server-Pack 9415063 (Quest-Buch-Klick-Hotfix). V1.3: 9431378, Server-Pack 9431379 (Beach Craft 3.0.0, Tamagotchi 1.2.0 = 9431312, Dream Star, 328 Quests) |
 
 - FTB Quests gibt es für 26.3 Fabric nicht. Das Quest-System steckt deshalb in Quest Icons: Buch mit Taste J,
   SNBT-Dateien in `config/questsicons/quests`, Befehle `/quests` (open, reload, complete, reset, team).
@@ -130,15 +130,16 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   - Spawns: Kreaturen-Dichte über Spawn-Kosten (Fabric `addMobCharge`), sonst füllen Korsaren/Wale/Mantas die Caps.
   - `/give` erzeugt zuerst ein Fake-Item: Despawn-Schutz im ENTITY_LOAD-Event muss Fake-Items (Alter 5999) auslassen.
   - Gametest-Rechner ist langsam (neues Gebiet 3–5 min bei rd 8, Oberwelt ähnlich): `rd 5`, Läufe bündeln.
-  - Nutzungslimit: Höchstens 4 Agenten gleichzeitig (Wunsch des Nutzers); Arbeit vorher in WIP-Commits sichern.
+  - Nutzungslimit: höchstens ein, wenn nötig zwei Subagenten (Wunsch des Nutzers, 4.11.); Arbeit vorher in WIP-Commits sichern.
 - **Weitere Releases dieser Runde:** Quest Icons 1.0.2 (Klick-Hotfix, Datei 9415031) und 1.1.0 (Dream Star, Datei
-  9429010); Dreamcraft V1.2.1 (9415062, Server 9415063). Tamagotchi 1.2.0 liegt fertig auf `26.3` (Commit aa45ba7,
-  noch kein Tag; Release per Tag `v1.2.0` oder „Run workflow“ über GitHub Actions – braucht die Freigabe des Nutzers). Challenge Craft: Fixes nur auf
+  9429010); Dreamcraft V1.2.1 (9415062, Server 9415063). Am 4.11. mit Freigabe des Nutzers hochgeladen: Beach Craft 3.0.0
+  (9431301), Tamagotchi 1.2.0 (9431312, direkt per CurseForge-API; Tag `v1.2.0` fehlt, Tag-Push geht aus der Sitzung
+  nicht), Dreamcraft V1.3 (9431378, Server 9431379). Challenge Craft: Fixes nur auf
   Branch `bugcheck-2026-11` (Bericht `docs/BUGCHECK-2026-11.md`), keine Versionsänderung.
 
 ## Was der Nutzer will (hier gelernt)
 
-- Ohne Rückfragen durcharbeiten; höchstens ein Sonnet-Subagent.
+- Ohne Rückfragen durcharbeiten; höchstens ein, wenn nötig zwei Subagenten (Wunsch vom 4.11.2026).
 - Der CurseForge-Token liegt nur in `$SP/.cf_token`. Nie committen und nie ausgeben.
 - Beschreibungen im Stil der Tamagotchi-Seite: Header-Bild, Abschnitts-Streifen, Screenshots und Badges.
 - Beschreibungen mit BisectHosting-Banner (Code KASAX007) und vielen Spoilern; Pack immer so testen, wie Spieler es installieren.

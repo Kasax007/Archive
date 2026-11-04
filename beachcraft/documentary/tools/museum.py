@@ -27,14 +27,16 @@ def project(x, y, z):
     return round(sx, 4), round(sy, 4)
 
 
-def museum(s, tabs_file=None, names_file=None):
+def museum(s, tabs_file=None, names_file=None, only=None, build=True, write_labels=True):
+    """only: set of still names to take again (the wall is already there when build is False)."""
     tabs = json.load(open(tabs_file or os.path.join(HERE, 'tabs.json')))
     names = json.load(open(names_file or os.path.join(HERE, 'names.json')))
     zp = CZ - D
     s.add(f'cmd execute in raft:raftdim run tp @p {CX} {EY - 1.62:.2f} {CZ} 180 0', 'settle 60')
-    s.r(f'fill {int(CX) - 8} {int(EY) - 9} {int(zp) - 2} {int(CX) + 8} {int(EY) + 9} {int(zp) - 2} minecraft:smooth_sandstone',
-        f'fill {int(CX) - 8} {int(EY) - 9} {int(zp) - 1} {int(CX) + 8} {int(EY) + 9} {int(zp) + 12} minecraft:air')
-    s.add('third off', 'fly on', 'fov 70', 'hud off')
+    if build:
+        s.r(f'fill {int(CX) - 8} {int(EY) - 9} {int(zp) - 2} {int(CX) + 8} {int(EY) + 9} {int(zp) - 2} minecraft:smooth_sandstone',
+            f'fill {int(CX) - 8} {int(EY) - 9} {int(zp) - 1} {int(CX) + 8} {int(EY) + 9} {int(zp) + 12} minecraft:air')
+    s.add('settle 20', 'third off', 'fly on', 'fov 70', 'hud off')
     labels = {}
     for tab, short in TABS:
         ids = tabs[tab]
@@ -42,6 +44,8 @@ def museum(s, tabs_file=None, names_file=None):
         pages = [ids[i:i + 20] for i in range(0, len(ids), 20)]
         for pi, page in enumerate(pages):
             name = f'i_{short}_{pi + 1}'
+            if only is not None and name not in only:
+                continue
             entries = []
             for k, iid in enumerate(page):
                 col, row = k % 4, k // 4
@@ -62,5 +66,6 @@ def museum(s, tabs_file=None, names_file=None):
                   f'pose {CX} {EY - 1.62:.2f} {CZ} 180 0', f'still {name} 1.25')
             s.r('kill @e[type=minecraft:item_display,tag=bcmus]')
             labels[name] = entries
-    json.dump(labels, open(os.path.join(HERE, 'labels.json'), 'w'), indent=0)
+    if write_labels:
+        json.dump(labels, open(os.path.join(HERE, 'labels.json'), 'w'), indent=0)
     return s

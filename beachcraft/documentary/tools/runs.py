@@ -455,7 +455,7 @@ def r08():
     s.add('pcmd fill ~-3 ~ ~1 ~4 ~6 ~7 minecraft:air', 'pcmd fill ~-3 ~-1 ~1 ~4 ~-1 ~7 minecraft:sand',
           'pcmd fill ~-1 ~ ~5 ~2 ~4 ~5 raft:driftwood_portal_frame', 'pcmd fill ~ ~1 ~5 ~1 ~3 ~5 minecraft:air')
     s.hands('raft:energy_staff')
-    s.add('wait 10')
+    s.add('settle 20')
     s.rec('w_light', 60, 15, at=[(8, 'faceblock raft:driftwood_portal_frame 8'), (10, 'use')])
     s.add('still w_portal_lit 1.25')
     # the trip in survival (the swirl needs the HUD), first person
@@ -711,6 +711,8 @@ def r13():
     s.rec('b_pineapple', 60, 15, at=[(14, 'third off'), (16, 'faceblock raft:pineapple_bush 6'), (22, 'use'), (44, 'third on')])
     s.add('tpbiome raft:mangrove_isle', 'settle 60', 'cmd execute as @p at @p run tp @p ~ ~10 ~ ~ 20', 'fly on', 'wait 10',
           'third on', 'cmd attribute @p minecraft:camera_distance base set 8', 'still b_mangrove 1.25')
+    # --- the buoy field (96..116 / 95..99 / 4..16) from the water side
+    s.view('p_buoy_a', 104.5, 101, 26.5, 106, 99, 10, dist=6, settle=40, yaw_off=10)
     # --- the open Endless Sea: on the surface and under it
     s.add('cmd execute in raft:raftdim run tp @p 175 99.8 190 200 2', 'settle 40', 'fly on', 'third on', 'cmd attribute @p minecraft:camera_distance base set 6',
           'wait 5', 'still b_ocean_top 1.25')
@@ -1010,9 +1012,7 @@ def r18():
 
 def r19():
     """r15 (Beach Craft 2 tools on the deck) and r17 (altar first person, seal from close by) in one run."""
-    a, b = r15(), r17()
-    a.L = [l if not l.startswith('deadline') else 'deadline 19.0' for l in a.L] + b.L[12:]
-    return a
+    return merged(19.0, r15(), r17())
 
 
 def r20():
@@ -1081,7 +1081,207 @@ def r20():
     return s
 
 
-RUNS = {'r20': r20, 'r18': r18, 'r19': r19, 'r17': r17, 'r16': r16, 'r15': r15, 'r14': r14, 'r13': r13, 'r12': r12, 'r11': r11, 'r08': r08, 'r10': r10, 'r07': r07, 'r06': r06, 'r03': r03, 'r04': r04, 'r05': r05, 'r09': r09}
+def deck_demos(s):
+    """Retakes of r11 on the deck 134..146 / 99 / 134..146 (props from r11 still in place): radio, raft menu by the
+    inventory key while riding, the battery, compressor and purifier screens from within reach, the cannon from the
+    side and fired first person, the wind turbine from the deck, a seat seen from the front, the hammock at night."""
+    s.cmd('clear @p').mode('creative').gear('none').hands()
+    s.effects()
+    s.add('cmd execute in raft:raftdim run tp @p 140.5 101 146.5 0 20', 'fly on', 'settle 60')
+    s.add('cmd execute as @p at @p run kill @e[type=raft:expedition_raft,distance=..60]')
+    # radio first (fresh state), chat visible
+    s.add('third off', 'hud on', 'chat on', 'cmd execute in raft:raftdim run tp @p 140.5 100 140.2 180 30', 'wait 10',
+          'faceblock raft:expedition_radio 4', 'wait 2', 'use', 'wait 20 render', 'shot f_radio', 'chat off', 'hud off')
+    # the raft menu: ride the raft, press the inventory key
+    s.r('summon raft:expedition_raft 140.5 99.6 152.5 {Upgrades:27,Rotation:[0f,0f],Items:[{Slot:0b,id:"raft:plastic",count:24},'
+        '{Slot:1b,id:"raft:driftwood_planks",count:32},{Slot:2b,id:"raft:rope",count:8},{Slot:3b,id:"raft:fresh_water",count:3},'
+        '{Slot:4b,id:"minecraft:cooked_cod",count:6},{Slot:54b,id:"minecraft:coal",count:32}]}')
+    s.add('wait 5', 'cmd ride @p mount @e[type=raft:expedition_raft,limit=1,sort=nearest]', 'wait 5', 'third off', 'key inventory', 'wait 8 render',
+          'shot f_raft_menu', 'esc', 'wait 2', 'cmd ride @p dismount', 'cmd execute as @p at @p run kill @e[type=raft:expedition_raft,distance=..60]')
+    # the energy screens from within reach
+    s.chest('f_battery', 136, 104, 145)
+    s.chest('f_compressor', 138, 100, 138)
+    s.chest('f_purifier', 136, 100, 141, gui_wait=30)
+    # the cannon: from the side, then fired first person
+    s.hands('raft:cannonball 16')
+    s.view('f_cannon_still', 144.5, 100, 138.5, 142.5, 100.5, 136.5, dist=3.5, settle=10, yaw_off=-32)
+    s.add('third off', 'cmd execute in raft:raftdim run tp @p 142.5 100 138.6 180 25', 'wait 5', 'faceblock raft:ship_cannon 4')
+    s.rec('f_cannon_fp', 50, 15, at=[(8, 'use'), (32, 'use')])
+    # the wind turbine (135 104 145) from the deck, the rotor turning
+    s.hands()
+    s.view('f_turbine_still', 143.5, 100, 145.5, 135.5, 104.5, 145.5, dist=4, settle=10, yaw_off=14, pitch_off=6)
+    s.rec('f_turbine', 45, 15, to='143.5,100.001,145.5,~,~', ease=0)
+    # a deck chair (141 100 143, facing south), seen from the front
+    s.add('third off', 'cmd execute in raft:raftdim run tp @p 141.5 100 141.5 180 30', 'wait 5', 'faceblock raft:deck_chair 4', 'use', 'wait 10',
+          'face 141.5 101.4 150', 'cmd attribute @p minecraft:camera_distance base set 3', 'third front', 'wait 3', 'still f_sit 1.25', 'third on')
+    s.add('cmd ride @p dismount', 'wait 3')
+    # the hammock at night (143..144 100 144): lie down
+    s.effects('night_vision')
+    s.add('cmd time set 18000', 'cmd execute in raft:raftdim run tp @p 143.5 100 142.5 0 30', 'wait 5', 'third off', 'faceblock raft:hammock 4', 'use', 'wait 25',
+          'third on', 'cmd attribute @p minecraft:camera_distance base set 4', 'wait 3', 'still f_hammock 1.25', 'cmd time set 6000', 'wait 5')
+    s.effects()
+    return s
+
+
+def creatures2(s):
+    """Creature retakes. Under water on the sand stage of r16 (coral shallows, 54..74 / 85..98 / -46..-24, already built:
+    only a settle, so the meshes are fresh): ten portraits (NoAI), the diver in clear water (also in survival with the
+    HUD for the air gauge), then the free swimmers past a fixed camera; a whale beside a raft; sea otters around a little
+    raft in the kelp forest; penguins on an ice floe. Every stage is built with the player already there, and a settle
+    follows every build (r16 showed stale meshes otherwise)."""
+    s.cmd('clear @p').mode('creative').gear('dive').hands()
+    s.effects('conduit_power')
+    s.add('cmd execute in raft:raftdim run tp @p 64.5 88 -27.5 180 8', 'fly on', 'settle 40')
+    s.r('kill @e[type=!minecraft:player,distance=..40,x=64,y=88,z=-34]')
+    s.add('third on', 'cmd attribute @p minecraft:camera_distance base set 4', 'wait 10')
+    portraits = [('raft:shark', 'c_p_shark', ''), ('raft:hammerhead_shark', 'c_p_hammerhead', ''), ('raft:manta_ray', 'c_p_manta', ''),
+                 ('raft:jellyfish', 'c_p_jelly_moon', 'Variant:"moon"'), ('raft:jellyfish', 'c_p_jelly_crimson', 'Variant:"crimson"'),
+                 ('raft:jellyfish', 'c_p_jelly_glow', 'Variant:"glow"'), ('raft:moray_eel', 'c_p_moray', ''), ('raft:anglerfish', 'c_p_angler', ''),
+                 ('raft:drowned_corsair', 'c_p_corsair', ''), ('raft:tideling', 'c_p_tideling', '')]
+    for ent, name, extra in portraits:
+        tag = '{NoAI:1b,NoGravity:1b,PersistenceRequired:1b,Silent:1b,Rotation:[60f,0f],Tags:["bcpor"]' + (',' + extra if extra else '') + '}'
+        s.r(f'summon {ent} 66.5 87.5 -34.5 {tag}')
+        s.add('pose 64.5 88 -27.5 175 8', 'wait 6', f'still {name} 1.25')
+        # away from the camera before it dies (no death puff in the next portrait)
+        s.r('tp @e[tag=bcpor] 64 160 -34', 'kill @e[tag=bcpor]')
+    s.add('pose 64.5 88 -27.5 150 12', 'wait 4', 'still f_dive 1.25')
+    s.cmd('gamemode survival @p', 'effect give @p minecraft:resistance infinite 4 true')
+    s.add('wait 60', 'hud on', 'third off', 'pose 64.5 88 -27.5 180 8', 'wait 3', 'still f_dive_gauge 1.0', 'hud off', 'third on')
+    s.add('pose 64.5 88 -27.5 200 0', 'third front', 'cmd attribute @p minecraft:camera_distance base set 3', 'wait 3', 'still f_suit 1.25', 'third on',
+          'cmd attribute @p minecraft:camera_distance base set 4')
+    s.cmd('item replace entity @p hotbar.0 with raft:harpoon_gun', 'item replace entity @p hotbar.1 with raft:harpoon 16')
+    s.add('slot 1', 'pose 64.5 88 -27.5 180 2')
+    s.r('summon minecraft:cod 64.5 89.2 -36.5 {NoAI:1b,PersistenceRequired:1b}')
+    s.add('wait 3')
+    s.rec('f_harpoon', 45, 15, at=[(6, 'use'), (26, 'use')])
+    s.r('kill @e[type=minecraft:cod,distance=..30,x=64,y=88,z=-34]', 'kill @e[type=minecraft:item,distance=..30,x=64,y=88,z=-34]')
+    s.cmd('clear @p', 'gamemode creative @p')
+    s.add('fly on')
+    return s
+
+
+def creatures2_clips(s):
+    """The free swimmers past the fixed camera on the stage, the whale portrait, otters, penguins."""
+    s.cmd('clear @p').mode('creative').gear('dive').hands()
+    s.effects('conduit_power')
+    s.add('cmd execute in raft:raftdim run tp @p 64.5 88 -27.5 180 4', 'fly on', 'settle 30', 'third on',
+          'cmd attribute @p minecraft:camera_distance base set 4')
+    # a whale beside a raft on the open sea (portrait first: it is the only footage of the whale)
+    s.effects().gear('none')
+    s.add('cmd execute in raft:raftdim run tp @p 160.5 112 160.5 0 10', 'fly on', 'settle 60')
+    s.r('fill 159 99 159 161 99 161 raft:raft_foundation', 'fill 159 100 159 161 104 161 air')
+    s.add('cmd execute in raft:raftdim run tp @p 160.5 100 160.5 0 6', 'settle 20', 'cmd attribute @p minecraft:camera_distance base set 6')
+    s.r('summon raft:whale 163 96 172 {NoAI:1b,NoGravity:1b,PersistenceRequired:1b,Silent:1b,Rotation:[90f,0f],Tags:["bcpor"]}')
+    s.add('pose 160.5 100 160.5 10 12', 'wait 6', 'still c_p_whale 1.25')
+    s.r('tp @e[tag=bcpor] 160 200 160', 'kill @e[tag=bcpor]')
+    # land stages built in r16 (only a settle now): crabs and a seagull on sand, an ember crab on black sand
+    s.effects().gear('none')
+    s.add('cmd execute in raft:raftdim run tp @p -259 100 -277.5 180 24', 'fly on', 'settle 40', 'third on', 'cmd attribute @p minecraft:camera_distance base set 4')
+    s.r('kill @e[type=!minecraft:player,distance=..30,x=-259,y=100,z=-282]')
+    for ent, name, nbt in [('raft:crab', 'c_p_crab_red', 'Variant:"red"'), ('raft:crab', 'c_p_crab_blue', 'Variant:"blue"'),
+                           ('raft:crab', 'c_p_crab_sand', 'Variant:"sand"'), ('raft:seagull', 'c_p_gull', '')]:
+        tag = '{NoAI:1b,PersistenceRequired:1b,Silent:1b,Rotation:[60f,0f],Tags:["bcpor"]' + (',' + nbt if nbt else '') + '}'
+        s.r(f'summon {ent} -258 100 -282 {tag}')
+        s.add('pose -259 100 -277.5 178 30', 'wait 6', f'still {name} 1.25')
+        s.r('tp @e[tag=bcpor] -259 200 -282', 'kill @e[tag=bcpor]')
+    s.add('cmd execute in raft:raftdim run tp @p -402 100 -366.5 180 22', 'fly on', 'settle 40')
+    s.r('kill @e[type=!minecraft:player,distance=..30,x=-402,y=100,z=-371]')
+    s.r('summon raft:ember_crab -401 100 -371 {NoAI:1b,PersistenceRequired:1b,Silent:1b,Rotation:[60f,0f],Tags:["bcpor"]}')
+    s.add('pose -402 100 -366.5 178 28', 'wait 6', 'still c_p_ember 1.25')
+    s.r('tp @e[tag=bcpor] -402 200 -371', 'kill @e[tag=bcpor]')
+    s.r('summon raft:ember_crab -401 100 -373', 'summon raft:ember_crab -404 100 -375')
+    s.cmd('gamemode survival @p', 'effect give @p minecraft:resistance infinite 4 true', 'effect give @p minecraft:fire_resistance infinite 0 true')
+    s.add('pose -402 100 -366.5 180 24', 'wait 5')
+    s.rec('c_ember', 60, 15)
+    s.add('cmd gamemode creative @p', 'cmd effect clear @p')
+    s.r('kill @e[type=raft:ember_crab,distance=..40,x=-402,y=100,z=-370]')
+    # sea otters around a little raft in the kelp forest
+    s.effects().gear('none')
+    s.add('cmd execute in raft:raftdim run tp @p 1.5 112 1.5 0 30', 'fly on', 'settle 60')
+    s.r('fill 0 99 0 2 99 2 raft:raft_foundation', 'fill 0 100 0 2 103 2 air', 'fill -6 99 4 8 99 14 minecraft:water replace minecraft:kelp',
+        'fill -6 90 4 8 99 14 minecraft:water replace minecraft:kelp_plant')
+    s.add('cmd execute in raft:raftdim run tp @p 1.5 100 1.5 0 30', 'settle 20', 'third on', 'cmd attribute @p minecraft:camera_distance base set 5',
+          'cmd execute in raft:raftdim run summon raft:sea_otter 2.5 99.6 6.5', 'cmd execute in raft:raftdim run summon raft:sea_otter -1.5 99.6 7.5',
+          'cmd execute in raft:raftdim run summon raft:sea_otter 4.5 99.6 9.5', 'wait 60', 'pose 1.5 100 1.5 0 28')
+    s.add('cmd item replace entity @p weapon.mainhand with raft:seashell 8')
+    s.rec('c_otter', 90, 15, at=[(50, 'lookat raft:sea_otter'), (51, 'use'), (53, 'pose 1.5 100 1.5 0 28')])
+    s.hands()
+    s.add('cmd kill @e[type=raft:sea_otter,distance=..40]')
+    # penguins on an ice floe (frost floes)
+    s.add('cmd execute in raft:raftdim run tp @p -96.5 112 101.5 180 20', 'fly on', 'settle 60')
+    s.r('fill -101 99 91 -91 99 101 minecraft:packed_ice', 'fill -101 100 91 -91 104 101 air', 'fill -99 100 93 -93 100 99 minecraft:snow',
+        'fill -101 98 91 -91 98 101 minecraft:packed_ice')
+    s.add('cmd execute in raft:raftdim run tp @p -96 101 101.5 180 20', 'settle 20', 'cmd attribute @p minecraft:camera_distance base set 4',
+          'cmd execute in raft:raftdim run summon raft:penguin -95.5 101 97.5', 'cmd execute in raft:raftdim run summon raft:penguin -97.5 101 95.5',
+          'cmd execute in raft:raftdim run summon raft:penguin -94.5 101 94.5', 'cmd execute in raft:raftdim run summon raft:penguin -96.5 101 96.5 {Age:-24000}',
+          'wait 30', 'pose -96 101 101.5 180 22')
+    s.rec('c_penguin', 90, 15)
+    s.add('still b_frost_floe 1.25')
+    s.add('cmd kill @e[type=raft:penguin,distance=..40]')
+    # free swimmers on the under-water stage
+    s.gear('dive').effects('conduit_power')
+    s.add('cmd execute in raft:raftdim run tp @p 64.5 88 -27.5 180 4', 'fly on', 'settle 30', 'cmd attribute @p minecraft:camera_distance base set 4')
+    s.r('summon raft:manta_ray 70 90 -40', 'summon raft:manta_ray 58 91 -42')
+    s.add('pose 64.5 88 -27.5 180 4', 'wait 5')
+    s.rec('c_manta', 90, 15)
+    s.r('kill @e[type=raft:manta_ray,distance=..60,x=64,y=88,z=-30]')
+    s.r('summon raft:shark 72 90 -42 {PersistenceRequired:1b}', 'summon raft:hammerhead_shark 56 89 -44 {PersistenceRequired:1b}')
+    s.add('pose 64.5 88 -27.5 180 4', 'wait 5')
+    s.rec('c_sharks', 90, 15)
+    s.r('kill @e[type=raft:shark,distance=..60,x=64,y=88,z=-30]', 'kill @e[type=raft:hammerhead_shark,distance=..60,x=64,y=88,z=-30]')
+    return s
+
+
+def merged(deadline, *parts):
+    """Several runs in one game start: the header of the first, the bodies of the others."""
+    a = parts[0]
+    a.L = [l if not l.startswith('deadline') else f'deadline {deadline}' for l in a.L]
+    for b in parts[1:]:
+        a.L += b.L[b.L.index('cmd recipe give @p *') + 1:]
+    return a
+
+
+def r21():
+    """The museum (r09) and the Leviathan fight (r18)."""
+    return merged(19.0, r09(), r18())
+
+
+def museum_retake(s):
+    """i_building_1 again: in r21 its wall was not drawn yet (sky behind the items)."""
+    from museum import museum
+    s.cmd('clear @p').mode('creative').gear('none').hands()
+    s.effects()
+    museum(s, only={'i_building_1'}, build=False, write_labels=False)
+    s.add('wait 10', 'cmd execute in raft:raftdim run kill @e[type=minecraft:item_display,tag=bcmus]')
+    return s
+
+
+def r22():
+    """The overworld and the story start (r08), then the deck demos and one museum still again."""
+    return merged(18.5, museum_retake(Script()), r08(), deck_demos(Script()))
+
+
+def beach_retake(s):
+    """The driftwood stumps again (in r22 the stump stood right behind the player's head): the 3 high stump at
+    194 65..67 221 on the overworld beach of r22, seen from two sides with the stump beside the player."""
+    s.cmd('clear @p').mode('creative').gear('none').hands()
+    s.effects()
+    s.cmd('execute in minecraft:overworld run time set 6000')
+    s.add('cmd execute in minecraft:overworld run tp @p 190.5 80 225.5 -113 8', 'fly on', 'settle 60',
+          'cmd execute in minecraft:overworld positioned 190.5 0 225.5 positioned over world_surface run tp @p ~ ~ ~ -113 8', 'fly on', 'settle 10',
+          'third on', 'cmd attribute @p minecraft:camera_distance base set 4', 'wait 5', 'still w_beach 1.25')
+    s.add('cmd execute in minecraft:overworld positioned 198.5 0 217.5 positioned over world_surface run tp @p ~ ~ ~ 23 8', 'fly on', 'settle 20',
+          'wait 5', 'still w_beach2 1.25')
+    return s
+
+
+def r23():
+    """The beach stumps again, creatures (portraits, diver), the altar and the seal (r17), whale, swimmers, otters,
+    penguins."""
+    return merged(18.5, beach_retake(Script()), creatures2(Script()), r17(), creatures2_clips(Script()))
+
+
+RUNS = {'r21': r21, 'r22': r22, 'r23': r23, 'r20': r20, 'r18': r18, 'r19': r19, 'r17': r17, 'r16': r16, 'r15': r15, 'r14': r14, 'r13': r13, 'r12': r12, 'r11': r11, 'r08': r08, 'r10': r10, 'r07': r07, 'r06': r06, 'r03': r03, 'r04': r04, 'r05': r05, 'r09': r09}
 
 if __name__ == '__main__':
     n = RUNS[sys.argv[1]]().write(sys.argv[2])

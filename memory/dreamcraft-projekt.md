@@ -105,6 +105,36 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   - Beach Craft hat ein eigenes Bisect-Banner `img/bisect.png`.
   - Für Beschreibungen gibt es keine API, der Nutzer fügt sie selbst ein.
 
+## Beach Craft 3.0 (Nov 2026) – Aufbau und Lehren
+
+- **Branch:** `Kasax_Raft_Mod` `3.0-dev` (Version 3.0.0+26.3), Spezifikation `docs/design/beachcraft3.md` (Abschnitt 14 =
+  Abweichungen, gilt vor dem Plan). Inhalt: Inselwelt mit 12 Biomen, Story „Tides of the Deep“ (8 Kapitel, 4 Siegel,
+  Tidewarden-Schlüssel, Boss Leviathan), 7 Story- und 12 Nebenstrukturen, 13 Kreaturen, Expeditionsfloß + 4 Boote,
+  Tauchausrüstung, ~150 Bau-/Dekoblöcke, Guide Book „Seafarer's Almanac“, 95 überarbeitete 2.0-Texturen.
+- **Module:** `net.kasax.raft.content.<modul>` (world, building, decor, shore, marine, voyage, diving, story, boss, guide)
+  plus Strukturmodule (nur Daten). Jedes Modul hat eigene Ressourcen in `src/main/modules/<modul>/`, eigene Mixin-Config
+  `raft-<modul>.mixins.json` und Python-Generatoren `tools/content/<modul>/gen.py`. Gradle `mergeResources` führt Lang,
+  Tags und sounds.json zusammen; jede andere doppelte Datei bricht den Build ab.
+- **Werkzeuge:** `tools/bclib` (assets.py 26.3-JSON, tex.py Pixel-Art, nbt.py Strukturvorlagen im 26.3-Format
+  id/properties, preview.py isometrische Vorschau), `tools/bctest/run.sh <skript> <out>` = skriptbarer Client-Gametest
+  (world/cmd/pcmd/settle/shot/count/sneakuse/esc/slot; `BC_JFR=` für Profiling), `$SP/ref/jc.sh` = schneller javac-Check
+  unter dem gemeinsamen Lock `$SP/ref/build.lock`.
+- **Lehren:**
+  - 26.3/SDL: Maustasten links=1, Mitte=2, rechts=3 und Escape=41 – nie feste GLFW-Zahlen; GUIs mit echten Klicks testen.
+  - Strukturvorlagen: Blöcke ohne `rotate()/mirror()`-Override (BaseEntityBlock mit FACING) drehen sich bei gedrehten
+    Jigsaw-Starts nicht mit. Teppiche/Fackeln in überfluteten Strukturen werden weggespült (Items liegen herum).
+  - Jigsaw-Start mit fester Höhe liegt 1 Block unter `start_height` (Ground-Level-Delta).
+  - Dimension-Licht: `ambient_light` 0.0 + `ambient_light_color` #0a0a0a wie die Oberwelt, sonst ist alles immer hell.
+    Vanilla hellt Wasser-Nebel nach ein paar Sekunden auf (Kanal-Skalierung) – Tiefsee-Nebel ohne Rotanteil wählen.
+  - Spawns: Kreaturen-Dichte über Spawn-Kosten (Fabric `addMobCharge`), sonst füllen Korsaren/Wale/Mantas die Caps.
+  - `/give` erzeugt zuerst ein Fake-Item: Despawn-Schutz im ENTITY_LOAD-Event muss Fake-Items (Alter 5999) auslassen.
+  - Gametest-Rechner ist langsam (neues Gebiet 3–5 min bei rd 8, Oberwelt ähnlich): `rd 5`, Läufe bündeln.
+  - Nutzungslimit: Höchstens 4 Agenten gleichzeitig (Wunsch des Nutzers); Arbeit vorher in WIP-Commits sichern.
+- **Weitere Releases dieser Runde:** Quest Icons 1.0.2 (Klick-Hotfix, Datei 9415031) und 1.1.0 (Dream Star, Datei
+  9429010); Dreamcraft V1.2.1 (9415062, Server 9415063). Tamagotchi 1.2.0 liegt fertig auf `26.3`/`bugcheck-wip`
+  (Release per Tag `v1.2.0` über GitHub Actions – braucht die Freigabe des Nutzers). Challenge Craft: Fixes nur auf
+  Branch `bugcheck-2026-11` (Bericht `docs/BUGCHECK-2026-11.md`), keine Versionsänderung.
+
 ## Was der Nutzer will (hier gelernt)
 
 - Ohne Rückfragen durcharbeiten; höchstens ein Sonnet-Subagent.

@@ -69,7 +69,7 @@ DOC = [
               "Hibiscus, plumeria, aloe and beach morning glory grow between them, and seashells and sea glass "
               "wash up on the shore.",
          shots=[('b_palm_air', None), ('b_seaoats', 'tall sea oats'), ('b_hibiscus', 'Hibiscus'),
-                ('b_plumeria', 'plumeria'), ('b_glory', 'beach morning'), ('b_shells', 'seashells and')], pause=0.8),
+                ('b_plumeria', 'plumeria'), ('b_aloe', 'aloe and'), ('b_glory', 'beach morning')], pause=0.8),
     dict(id='B10', ch=None,
          text="*Jungle isles* are warm and wet, with jungle trees and bamboo, tropical ferns, orchids, red "
               "heliconias, birds of paradise and wild pineapple bushes.",

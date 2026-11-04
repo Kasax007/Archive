@@ -233,62 +233,6 @@ def run_c():
     s.kill('raft:drowned_corsair')
     s.hands()
     s.spec()
-    # palm isle (-256 -288): crabs, one digs in when the player sprints at it; seagulls
-    s.add('height -259 -281')
-    s.go(-259, v('hy', 1.4), -281, -259, v('hy', 0.2), -276, settle=420)
-    s.summon('raft:crab', 3, spread=1.5, ahead=4, nbt='{Variant:"red"}')
-    s.add('wait 20')
-    s.clip('c_crab', 5, look='raft:crab', smooth=0.08)
-    s.kill('raft:crab')
-    s.add(f"cmd execute in raft:raftdim run tp @p -259 {v('hy')} -281 0 10")
-    s.actor('survival')
-    s.cmd('effect give @p minecraft:resistance infinite 4 true')
-    s.summon('raft:crab', 1, ahead=7, nbt='{Variant:"blue"}')
-    s.add('wait 10')
-    s.clip('c_crab_dig', 5, cam=f"-254,{v('hy', 2.6)},-275,135,18", look=f"-259,{v('hy', 0.5)},-278",
-           at=[(4, 'press sprint'), (5, 'press forward'), (70, 'release forward'), (71, 'release sprint')])
-    s.kill('raft:crab')
-    s.spec()
-    s.go(-262, v('hy', 2.5), -282, -262, v('hy', 7), -270, settle=60)
-    s.summon('raft:seagull', 7, spread=4, ahead=10, dy=8)
-    s.add('wait 40')
-    s.clip('c_gulls', 7, look='raft:seagull', smooth=0.04)
-    s.add('pcmd fill ^-2 ^-2 ^3 ^2 ^-2 ^6 minecraft:farmland[moisture=7]', 'pcmd fill ^-2 ^-1 ^3 ^2 ^-1 ^6 minecraft:wheat[age=6]',
-          'wait 200')
-    s.go(-262, v('hy', 2.0), -282, -262, v('hy', -1), -277, settle=30)
-    s.clip('c_gull_peck', 6)
-    s.kill('raft:seagull')
-    for name, block in (('b_glory', 'raft:beach_morning_glory'), ('b_aloe', 'raft:aloe_vera'), ('b_hibiscus', 'raft:hibiscus'),
-                        ('b_plumeria', 'raft:plumeria'), ('b_seaoats', 'raft:sea_oats'), ('b_bird', 'raft:bird_of_paradise')):
-        flower(s, name, block, r=128)
-    # volcanic isle and ember crabs
-    s.orb('b_volcano', 8, (-400, 108, -300), 75, 152, 40, start=330)
-    s.add('height -402 -372')
-    s.go(-402, v('hy', 1.5), -368, -402, v('hy', 0.3), -374, settle=200)
-    s.summon('raft:ember_crab', 3, spread=1.5, ahead=4)
-    s.add('wait 20')
-    s.clip('c_ember', 5, look='raft:ember_crab', smooth=0.08)
-    s.kill('raft:ember_crab')
-    # a giant clam with a pearl: the pearl is taken (first person, creative)
-    under(s)
-    s.add('height -295 -265')
-    s.go(-295, v('hy', 1.8), -262, -295, v('hy', 0.2), -265, settle=200)
-    s.r(f"setblock -295 {v('hy')} -265 raft:giant_clam[facing=south,open=true,pearl=true,waterlogged=true]")
-    s.cmd('gamemode creative @p')
-    s.add('wait 10', 'faceblock raft:giant_clam 8')
-    s.clip('b_clam_open', 4, at=[(40, 'faceblock raft:giant_clam 8'), (41, 'use')])
-    s.spec()
-    # Helix Research Station (-408 51 -37 .. -352 67 16)
-    s.clear_kelp(-420, 48, -50, -330, 80, 40)
-    s.orb('p_helix_air', 8, (-380, 59, -10), 42, 72, 50, start=60)
-    s.add('openloot story/helix_lab 90 peek')
-    s.push('p_helix_in', 5, ('ox', 'oy', 'oz'), 5, 2.5, dy=0.0, ang=180, look_dy=0.6, settle=60)
-    s.loot('story/helix_lab', 90, 's_helix_lab')
-    s.loot('story/helix_vault', 90, 's_helix_vault')
-    s.cmd('gamemode creative @p')
-    s.add('hud on', 'faceblock raft:research_terminal 8', 'use', 'wait 8 render', 'shot s_helix_terminal', 'esc', 'hud off')
-    s.spec()
-    s.fx()
     return s
 
 
@@ -570,6 +514,67 @@ def run_f():
     return s
 
 
+def c_rest(s):
+    """Rest of run C (there the player fell out of the world after a height query in an unloaded chunk)."""
+    # palm isle (-256 -288): crabs, one digs in when the player sprints at it; seagulls
+    s.add('height -259 -281')
+    s.go(-259, v('hy', 1.4), -281, -259, v('hy', 0.2), -276, settle=420)
+    s.summon('raft:crab', 3, spread=1.5, ahead=4, nbt='{Variant:"red"}')
+    s.add('wait 20')
+    s.clip('c_crab', 5, look='raft:crab', smooth=0.08)
+    s.kill('raft:crab')
+    s.add(f"cmd execute in raft:raftdim run tp @p -259 {v('hy')} -281 0 10")
+    s.actor('survival')
+    s.cmd('effect give @p minecraft:resistance infinite 4 true')
+    s.summon('raft:crab', 1, ahead=7, nbt='{Variant:"blue"}')
+    s.add('wait 10')
+    s.clip('c_crab_dig', 5, cam=f"-254,{v('hy', 2.6)},-275,135,18", look=f"-259,{v('hy', 0.5)},-278",
+           at=[(4, 'press sprint'), (5, 'press forward'), (70, 'release forward'), (71, 'release sprint')])
+    s.kill('raft:crab')
+    s.spec()
+    s.go(-262, v('hy', 2.5), -282, -262, v('hy', 7), -270, settle=60)
+    s.summon('raft:seagull', 7, spread=4, ahead=10, dy=8)
+    s.add('wait 40')
+    s.clip('c_gulls', 7, look='raft:seagull', smooth=0.04)
+    s.add('pcmd fill ^-2 ^-2 ^3 ^2 ^-2 ^6 minecraft:farmland[moisture=7]', 'pcmd fill ^-2 ^-1 ^3 ^2 ^-1 ^6 minecraft:wheat[age=6]',
+          'wait 200')
+    s.go(-262, v('hy', 2.0), -282, -262, v('hy', -1), -277, settle=30)
+    s.clip('c_gull_peck', 6)
+    s.kill('raft:seagull')
+    for name, block in (('b_glory', 'raft:beach_morning_glory'), ('b_aloe', 'raft:aloe_vera'), ('b_hibiscus', 'raft:hibiscus'),
+                        ('b_plumeria', 'raft:plumeria'), ('b_seaoats', 'raft:sea_oats'), ('b_bird', 'raft:bird_of_paradise')):
+        flower(s, name, block, r=128)
+    # volcanic isle and ember crabs
+    s.orb('b_volcano', 8, (-400, 108, -300), 75, 152, 40, start=330)
+    s.add('height -402 -372')
+    s.go(-402, v('hy', 1.5), -368, -402, v('hy', 0.3), -374, settle=200)
+    s.summon('raft:ember_crab', 3, spread=1.5, ahead=4)
+    s.add('wait 20')
+    s.clip('c_ember', 5, look='raft:ember_crab', smooth=0.08)
+    s.kill('raft:ember_crab')
+    # a giant clam with a pearl: the pearl is taken (first person, creative)
+    under(s)
+    s.add('height -295 -265')
+    s.go(-295, v('hy', 1.8), -262, -295, v('hy', 0.2), -265, settle=200)
+    s.r(f"setblock -295 {v('hy')} -265 raft:giant_clam[facing=south,open=true,pearl=true,waterlogged=true]")
+    s.cmd('gamemode creative @p')
+    s.add('wait 10', 'faceblock raft:giant_clam 8')
+    s.clip('b_clam_open', 4, at=[(40, 'faceblock raft:giant_clam 8'), (41, 'use')])
+    s.spec()
+    # Helix Research Station (-408 51 -37 .. -352 67 16)
+    s.clear_kelp(-420, 48, -50, -330, 80, 40)
+    s.orb('p_helix_air', 8, (-380, 59, -10), 42, 72, 50, start=60)
+    s.add('openloot story/helix_lab 90 peek')
+    s.push('p_helix_in', 5, ('ox', 'oy', 'oz'), 5, 2.5, dy=0.0, ang=180, look_dy=0.6, settle=60)
+    s.loot('story/helix_lab', 90, 's_helix_lab')
+    s.loot('story/helix_vault', 90, 's_helix_vault')
+    s.cmd('gamemode creative @p')
+    s.add('hud on', 'faceblock raft:research_terminal 8', 'use', 'wait 8 render', 'shot s_helix_terminal', 'esc', 'hud off')
+    s.spec()
+    s.fx()
+    return s
+
+
 def run_g():
     """Nachholen: Kisten-Bildschirme aus A und B (dort noch als Zuschauer, der keine Kisten oeffnen kann), Blumen der
     Dschungel- und Mangroveninseln in neu erzeugtem Gelaende (mit der neuen Blumen-Verteilung)."""
@@ -592,6 +597,11 @@ def run_g():
     s.add('cmd execute in raft:raftdim run tp @p 244 110 571', 'settle 200')
     s.loot('pirate_treasure', 80, 'p_cove_chest')
     s.loot('story/pirate_captain', 80, 's_cove_captain')
+    # the coral temple from under water (its box reaches the surface only with the kelp growing on it)
+    s.add('scout raft:coral_temple')
+    under(s)
+    s.orb('p_temple_air', 6, (v('cx'), v('y0', 11), v('cz')), 30, v('y0', 19), 55, start=160, settle=300)
+    s.fx()
     # penguins on a natural ice floe of the frost floes
     s.add('cmd execute in raft:raftdim run tp @p -96 105 96', 'settle 200', 'find minecraft:snow_block 48')
     s.go(v('fx', 5), v('fy', 3.2), v('fz', 5), v('fx'), v('fy', 1), v('fz'), settle=60)
@@ -605,6 +615,7 @@ def run_g():
         flower(s, name, block, r=128)
     s.add('tpbiome raft:mangrove_isle', 'where', 'settle 300')
     flower(s, 'b_spiderlily', 'raft:spider_lily', r=128)
+    c_rest(s)
     return s
 
 

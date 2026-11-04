@@ -1,0 +1,1 @@
+{"t": 0.500, "event": "raft:radio_static", "file": "raft:sounds/story/radio_static1.ogg", "volume": 0.900, "pitch": 1.025, "x": 140.50, "y": 100.50, "z": 138.50, "attenuation": "LINEAR", "relative": false, "distance": 16, "source": "block", "cam_x": 140.50, "cam_y": 101.62, "cam_z": 140.20}

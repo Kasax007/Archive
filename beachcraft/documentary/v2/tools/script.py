@@ -331,22 +331,48 @@ DOC = [
               "turns back into blocks.",
          shots=[('r_sail_wide', None), ('r_anchor', 'Use the wheel'), ('r_anchored', 'turns back')], pause=1.4),
     dict(id='N0', ch='PEOPLE OF THE *SEA*', music='wholesome',
-         text="A few people stayed behind on the Endless Sea, and they are glad to see a new face.",
-         shots=[('n_fenn_place|p_lighthouse_air', None)], pause=0.8),
+         text="A few people stayed behind on the Endless Sea. Talk to them, and they tell you who they are, what you "
+              "should do next, and the rumours they have heard. Most of them trade, for pirate gold and pearls.",
+         shots=[('n_fenn_place', None)], pause=0.8),
     dict(id='N1', ch=None,
-         text="*Keeper Fenn* still tends the lighthouse. In Saltmere, *Nalu* waits for news of his grandmother, and "
-              "*Old Tamo* fishes from the pier. *Doctor Voss* studies the tablets of the Ashen Forge.",
-         shots=[('n_fenn_work|p_lighthouse_lens', None), ('n_nalu_work|n_nalu_talk|p_saltmere_deck', 'In Saltmere'), ('n_tamo_work|p_saltmere_air', 'Old Tamo'), ('p_forge_in', 'Doctor Voss')],
-         pause=0.8),
+         text="*Keeper Tobias Fenn* still lives in the cottage beside the old lighthouse. He welcomes you with a "
+              "spyglass, points you on to Saltmere, buys your fish, and sells candles, lanterns and glowstone.",
+         shots=[('n_fenn_talk', None), ('n_fenn_greet', 'He welcomes'), ('n_fenn_next', 'points you'), ('n_fenn_trade', 'buys your fish')],
+         pause=1.0),
     dict(id='N2', ch=None,
-         text="*Teo* runs the tiki bar, *Kai* waits by his campfire, *Doctor Lund* measures the ice at the iceberg "
-              "outpost, and *Patience Okafor* keeps the old rig running.",
-         shots=[('n_teo_work|p_shack', None), ('n_kai_work|p_camp', 'Kai waits'), ('n_lund_work|p_iceberg_hut', 'Doctor Lund'), ('n_okafor_work|p_rig_deck', 'and Patience')],
-         pause=0.8),
+         text="In Saltmere, *Nalu* keeps the shrine lamps of his grandmother burning. He gives you a potion of water "
+              "breathing for the reef, and trades the crafts of the village for pearls: lanterns, rugs, wind chimes, "
+              "and a spare diving helmet.",
+         shots=[('n_nalu_place', None), ('n_nalu_work', 'keeps the shrine'), ('n_nalu_gift', 'He gives you'), ('n_nalu_trade', 'and trades')],
+         pause=1.0),
     dict(id='N3', ch=None,
-         text="Talk to them, and they tell you about their place, give you a hint for your next step, and share the "
-              "rumours of the sea. Most of them have a small gift for you, and most of them like to *trade*.",
-         shots=[('n_fenn_greet', None), ('n_nalu_next', 'they tell you'), ('n_teo_greet', 'give you a hint'), ('n_kai_trade', 'and share'), ('n_lund_trade', 'Most of them'), ('n_okafor_gift', 'a small gift'), ('n_fenn_rumor', 'like to trade')], pause=7.0),
+         text="*Old Tamo* has fished from the pier of Saltmere for sixty years. He hands you a supper of cooked cod, "
+              "buys fish, crab claws and eel for pirate gold, and sells a lucky fishing rod, glow kelp, sea pickles "
+              "and even a palm boat.",
+         shots=[('n_tamo_work', None), ('n_tamo_greet', 'He hands you'), ('n_tamo_trade', 'buys fish')], pause=1.0),
+    dict(id='N4', ch=None,
+         text="*Doctor Imara Voss* cracked the Tide Seal, and now she studies the tablets in the storeroom of the "
+              "Ashen Forge. She does not trade, but she gives you a potion of fire resistance for the river of lava, "
+              "and another one if you lose it.",
+         shots=[('n_voss_work', None), ('n_voss_greet', 'She does not'), ('n_voss_gift', 'a potion of fire')], pause=1.0),
+    dict(id='N5', ch=None,
+         text="*Teo* runs the last bar on the Endless Sea. The first drink, a piña colada, is on the house. He sells "
+              "drinks and island food, and buys pineapples, coconuts and rum.",
+         shots=[('n_teo_work', None), ('n_teo_greet', 'The first drink'), ('n_teo_trade', 'He sells')], pause=1.0),
+    dict(id='N6', ch=None,
+         text="*Kai* is the castaway who wrote the SOS. He waits by his campfire and hopes you brought biscuits, and "
+              "he trades everything that washes up, bottle letters, rope, plastic, scrap and supply barrels, for cookies.",
+         shots=[('n_kai_work', None), ('n_kai_greet', 'He waits'), ('n_kai_trade', 'and he trades')], pause=1.0),
+    dict(id='N7', ch=None,
+         text="*Doctor Elin Lund* studies the weather and the wildlife at the iceberg outpost. She offers you a cup of "
+              "tea with honey, sells harpoons, wetsuits, flippers and oxygen tanks, and buys jellies, angler lures, "
+              "shark teeth and leviathan scales.",
+         shots=[('n_lund_work', None), ('n_lund_greet', 'She offers you'), ('n_lund_trade', 'sells harpoons')], pause=1.0),
+    dict(id='N8', ch=None,
+         text="And *Patience Okafor* is the chief engineer of the old rig, and the only crew left. She gives you a "
+              "spare circuit board, sells scrap, redstone, cables, circuit boards, titanium and batteries, and buys "
+              "copper, iron and plastic.",
+         shots=[('n_okafor_work', None), ('n_okafor_gift', 'She gives you'), ('n_okafor_trade', 'sells scrap')], pause=1.6),
 
     # ------------------------------------------------------------------ the story
     dict(id='S0', ch='THE *STORY*', music='journey',
@@ -426,8 +452,9 @@ import importlib.util as _u, os as _os
 _spec = _u.spec_from_file_location('v1script', _os.path.join(_os.path.dirname(__file__), '..', '..', 'tools', 'script.py'))
 _v1 = _u.module_from_spec(_spec)
 _spec.loader.exec_module(_v1)
-SAY = dict(_v1.SAY, plumeria='ploo-meria', heliconias='heli-conias')
-HEARD = dict(_v1.HEARD, heliconias=['helicanias', 'heliconias'], plumeria=['plumeria', 'plumaria'])
+SAY = dict(_v1.SAY, plumeria='ploo-meria', heliconias='heli-conias', Okafor='Oh-ka-for', Nalu='Na-loo', Tamo='Ta-mo')
+HEARD = dict(_v1.HEARD, heliconias=['helicanias', 'heliconias'], plumeria=['plumeria', 'plumaria'], tamo=['tomo', 'tamo'],
+             doctor=['dr', 'doctor'], lund=['lund', 'lunde', 'lune', 'lunn'], rumours=['rumors', 'rumours'])
 NUMS = dict(_v1.NUMS, **{'3.1': 'three point one'})
 POST = dict(doc=dict(
     title="Beach Craft 3.1 - Tides of the Deep: a calm documentary of the whole mod (with shaders)",

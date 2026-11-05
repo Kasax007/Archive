@@ -77,7 +77,7 @@ DOC = [
     dict(id='B10', ch=None,
          text="*Jungle isles* are warm and wet, with jungle trees and bamboo, tropical ferns, orchids, red "
               "heliconias, birds of paradise and wild pineapple bushes.",
-         shots=[('b_jungle_air', None), ('b_orchid', 'orchids'), ('b_heliconia', 'red heliconias'), ('b_bird', 'birds of paradise')], pause=0.8),
+         shots=[('b_jungle_air', None), ('b_orchid', 'orchids'), ('b_heliconia', 'red heliconias')], pause=0.8),
     dict(id='B11', ch=None,
          text="*Mangrove isles* are low and muddy, with tangled roots, lily pads and white spider lilies.",
          shots=[('b_mangrove', None), ('b_spiderlily', 'white spider')], pause=0.8),
@@ -91,7 +91,7 @@ DOC = [
     dict(id='B14', ch=None,
          text="A *sea urchin* hurts when you touch it, and drops spines. A wild pineapple bush is ripe when its "
               "fruit turns golden. And a bubble vent makes a bubble column, where divers can catch their breath.",
-         shots=[('b_urchin', None), ('b_pineapple', 'A wild pineapple'), ('b_vent', 'And a bubble')], pause=1.4),
+         shots=[('b_urchin', None), ('b_jungle_air', 'A wild pineapple'), ('b_vent', 'And a bubble')], pause=1.4),
 
     # ------------------------------------------------------------------ the places
     dict(id='P0', ch='THE *PLACES*', music='infinite',
@@ -110,7 +110,7 @@ DOC = [
     dict(id='P3', ch=None,
          text="*Helix Research Station* rests on the sea floor: glass domes and tunnels, an airlock, labs with "
               "research terminals, aquariums, and a flooded wing.",
-         shots=[('p_helix_air', None), ('p_helix_in', 'labs with')], pause=0.8),
+         shots=[('p_helix_air', None), ('s_helix_terminal', 'labs with')], pause=0.8),
     dict(id='P4', ch=None,
          text="*Port Solace* is the drowned city. Asphalt streets with wrecked cars, a plaza with a statue, and "
               "skyscrapers, some so tall that their broken tops reach above the waves. In the middle stands the "
@@ -344,7 +344,7 @@ DOC = [
          text="In Saltmere, *Nalu* keeps the shrine lamps of his grandmother burning. He gives you a potion of water "
               "breathing for the reef, and trades the crafts of the village for pearls: lanterns, rugs, wind chimes, "
               "and a spare diving helmet.",
-         shots=[('n_nalu_place', None), ('n_nalu_work', 'keeps the shrine'), ('n_nalu_gift', 'He gives you'), ('n_nalu_trade', 'and trades')],
+         shots=[('n_nalu_place', None), ('n_nalu_talk', 'keeps the shrine'), ('n_nalu_gift', 'He gives you'), ('n_nalu_trade', 'and trades')],
          pause=1.0),
     dict(id='N3', ch=None,
          text="*Old Tamo* has fished from the pier of Saltmere for sixty years. He hands you a supper of cooked cod, "
@@ -402,7 +402,7 @@ DOC = [
     dict(id='S6', ch=None,
          text="Deep below, at *Helix Station*, the terminals of Dr. Imara Voss tell how the expedition drilled into "
               "the abyss, and woke something. Her lab vault holds the *Pearl Sigil*.",
-         shots=[('p_helix_in', None), ('s_helix_terminal', 'the terminals'), ('s_helix_vault', 'Her lab vault')], pause=1.4),
+         shots=[('p_helix_air', None), ('s_helix_terminal', 'the terminals'), ('s_helix_vault', 'Her lab vault')], pause=1.4),
     dict(id='S7', ch=None,
          text="In *Port Solace*, Mayor Crane sealed the *Storm Sigil* in a vault near the top of the City Hall tower.",
          shots=[('p_solace_hall', None), ('s_solace_vault', 'in a vault')], pause=1.4),
@@ -437,7 +437,7 @@ DOC = [
     dict(id='S16', ch=None, music='hope',
          text="Placed in the water, the Heart of the Tide gives every swimmer nearby conduit power and dolphin's "
               "grace. Four scales, titanium and a trident make the *Tidebreaker*.",
-         shots=[('s_heart', None), ('s_tidebreaker', 'Four scales')], pause=0.8),
+         shots=[('s_heart', None), ('i_tab_story', 'Four scales')], pause=0.8),
     dict(id='S17', ch=None,
          text="And the journal has one last entry. The sea is calm. *Thank you, keeper of the tides.*",
          shots=[('s_end', None)], pause=1.6),

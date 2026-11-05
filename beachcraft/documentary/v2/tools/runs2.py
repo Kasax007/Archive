@@ -1067,7 +1067,28 @@ def run_p2():
     return s
 
 
-RUNS = {'a': run_a, 'b': run_b, 'c': run_c, 'd': run_d, 'e': run_e, 'f': run_f, 'g': run_g, 'w': run_w, 'x': run_x, 'y': run_y, 'z': run_z, 'n': run_n, 'r': run_r, 'v': run_v, 'u': run_u, 'p1': run_p1, 'p2': run_p2}
+def run_p3():
+    """Dr. Voss in der eigenen Welt (bei der anderen Sitzung steckt ihr Lagerraum im Fels): Arbeit, Gespraech,
+    Bildschirme (Begruessung mit Feuerresistenz, naechster Schritt, Geruecht), Geschenk in der Hand, der Ort."""
+    s = S2(deadline=60)
+    s.cmd('effect give @p minecraft:fire_resistance infinite 0 true')
+    s.add('cmd execute in raft:raftdim run tp @p -1150 195 510', 'settle 300', 'count raft:raftdim')
+    s.add('openloot ashen_storage 120 peek')
+    s.go(v('ox'), v('oy', 1.7), v('oz', 2.5), v('ox'), v('oy', 1), v('oz'), settle=120)
+    s.add('wait 6 render', 'shot voss_check', 'lookat raft:dr_voss', 'wait 6 render', 'shot voss_check2')
+    s.clip('n_voss_work', 5, look='raft:dr_voss', smooth=0.08)
+    s.cmd('gamemode creative @p')
+    s.add('lookat raft:dr_voss', 'wait 5', 'hud on')
+    s.clip('n_voss_talk', 4, at=[(60, 'lookat raft:dr_voss'), (62, 'use')])
+    s.add('wait 10 render', 'shot n_voss_greet', 'click 848 962', 'wait 12 render', 'shot n_voss_next',
+          'click 828 996', 'wait 12 render', 'shot n_voss_rumor', 'esc', 'wait 10 render', 'shot n_voss_gift', 'hud off')
+    s.spec()
+    s.add('scout raft:ashen_forge')
+    s.orbit('n_voss_place', 5, 70, -22, 35, start=200, look_dy=-8)
+    return s
+
+
+RUNS = {'a': run_a, 'b': run_b, 'c': run_c, 'd': run_d, 'e': run_e, 'f': run_f, 'g': run_g, 'w': run_w, 'x': run_x, 'y': run_y, 'z': run_z, 'n': run_n, 'r': run_r, 'v': run_v, 'u': run_u, 'p1': run_p1, 'p2': run_p2, 'p3': run_p3}
 
 if __name__ == '__main__':
     if sys.argv[2].endswith('.txt'):

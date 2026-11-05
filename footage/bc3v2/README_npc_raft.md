@@ -46,6 +46,14 @@ three-high sail, two oars, outboard motor (fuelled), helm, two ship lanterns.
 | n_lund_rumor.mp4 | Rumour: the angry penguins | 2.5 |
 | n_lund_trade.mp4 | Lund's trade screen | 2.5 |
 | n_lund_gift.mp4 | The honey bottle in hand, Lund in front | 2.5 |
+| n_okafor_place.mp4 | Orbit around the rusted rig (Rig Seven) on the open sea | 4.5 |
+| n_okafor_work.mp4 | Patience Okafor at the control panels of the rig's control room | 4.5 |
+| n_okafor_talk.mp4 | The player talks to Okafor in the control room, dialogue opens | 3.0 |
+| n_okafor_greet.mp4 | Okafor's greeting, "You received: Circuit Board" | 2.5 |
+| n_okafor_next.mp4 | Hint: the Coral Sigil in the shrine | 2.5 |
+| n_okafor_rumor.mp4 | Rumour: the radio picks up singing static at night | 2.5 |
+| n_okafor_trade.mp4 | Okafor's trade screen (tech parts) | 2.5 |
+| n_okafor_gift.mp4 | The circuit board in hand, Okafor in front | 2.5 |
 
 Still coming: `r_sea_chest.mp4` (open the chest at sea and move items; the survival take did not open the chest,
 retake planned).

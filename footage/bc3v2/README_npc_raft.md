@@ -106,7 +106,13 @@ the person turns to them, the dialogue panel opens at the end (over-the-shoulder
 | n_teo_trade.mp4 | Teo's trade screen (drinks and island food) | 2.5 |
 | n_teo_gift.mp4 | The piña colada in hand, Teo in front | 2.5 |
 | n_teo_work.mp4 | Teo at work behind the counter of his tiki bar (beach shack on the palm isles) | 4.5 |
-| n_kai_work.mp4 | Kai, the SOS castaway, sitting at his camp fire by the tent (smoke drifts past at the end) | 4.5 |
+| n_kai_place.mp4 | Low orbit through the palms to the castaway camp (tent, camp fire, crates) | 4.5 |
+| n_kai_work.mp4 | Kai, the SOS castaway, sitting at his camp fire; camera beside the fire, smoke clear of his face | 4.5 |
+| n_kai_talk.mp4 | The player talks to Kai by the tent (a tiki torch partly in front), dialogue opens | 3.0 |
+| n_kai_greet.mp4 | Kai's greeting: "A real person! ... Did you bring biscuits?" (no gift) | 2.5 |
+| n_kai_next.mp4 | Hint: the Coral Sigil in the shrine | 2.5 |
+| n_kai_rumor.mp4 | Rumour: abandoned rafts drifting out there | 2.5 |
+| n_kai_trade.mp4 | Kai's trade screen (cookies for flotsam) | 2.5 |
 
 Still coming: n_lund_work and n_okafor_work with their screens, n_fenn_place and n_nalu_work
 retakes, the screens of Teo and Kai, then optional extras

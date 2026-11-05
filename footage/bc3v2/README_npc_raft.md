@@ -85,6 +85,8 @@ the person turns to them, the dialogue panel opens at the end (over-the-shoulder
 | n_nalu_rumor.mp4 | Rumour: a light on the fire island where the old forge stands | 2.5 |
 | n_nalu_trade.mp4 | Nalu's trade screen (Saltmere crafts for pearls) | 2.5 |
 | n_nalu_gift.mp4 | The water breathing potion in hand, Nalu in front | 2.5 |
+| n_voss_place.mp4 | Orbit over the volcanic isle of the Ashen Forge (lava, ash, the forge walls in the middle) | 4.5 |
+| n_voss_talk.mp4 | World `bcnpc3`, hall re-placed as designed: the player meets Dr. Imara Voss in her storeroom (chests, anvils, ore), first-meeting line "Stay back, I... oh. You're not crew" opens with the Potion of Fire Resistance | 3.0 |
 | n_tamo_place.mp4 | Orbit over the Saltmere docks (pier, huts, boats) | 4.5 |
 | n_tamo_work.mp4 | Old Tamo fishing from the pier (rod, casts) | 4.5 |
 | n_tamo_talk.mp4 | The player talks to Tamo on the pier, dialogue opens | 3.0 |
@@ -93,13 +95,6 @@ the person turns to them, the dialogue panel opens at the end (over-the-shoulder
 | n_tamo_rumor.mp4 | Rumour: Teo's beach bar on the palm isles | 2.5 |
 | n_tamo_trade.mp4 | Tamo's trade screen (buys fish, sells a rod and more) | 2.5 |
 | n_tamo_gift.mp4 | Cooked cod in hand, Tamo in front | 2.5 |
-| n_voss_place.mp4 | Orbit over the volcanic isle of the Ashen Forge (lava, ash, the forge walls in the middle) | 4.5 |
-| n_voss_work.mp4 | Dr. Imara Voss reading her notes in the storeroom of the Ashen Forge, between two chests (night vision for the camera: the storeroom is dark) | 4.5 |
-| n_voss_talk.mp4 | The player talks to Voss in the forge hall, dialogue opens (Voss moved two blocks from her spot for this shot, a 1×2 gap cleared for the player) | 3.0 |
-| n_voss_greet.mp4 | Voss's greeting with a gift: "You lost the potion? ... here, another one", "You received: Potion of Fire Resistance" (her re-gift line; the first meeting happened in an earlier take) | 2.5 |
-| n_voss_next.mp4 | Hint: the Coral Sigil in the shrine | 2.5 |
-| n_voss_rumor.mp4 | Rumour: the Leviathan's back breaking the water | 2.5 |
-| n_voss_gift.mp4 | The fire resistance potion in hand, Voss in front (she has no trades) | 2.5 |
 | n_teo_place.mp4 | Orbit over the tiki-bar beach shack on the palm isles | 4.5 |
 | n_teo_talk.mp4 | The player talks to Teo across the bar, dialogue opens | 3.0 |
 | n_teo_greet.mp4 | Teo's greeting ("the first drink is on the house"), "You received: Pina Colada" | 2.5 |

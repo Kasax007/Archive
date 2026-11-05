@@ -780,7 +780,106 @@ def run_z():
     return s
 
 
-RUNS = {'a': run_a, 'b': run_b, 'c': run_c, 'd': run_d, 'e': run_e, 'f': run_f, 'g': run_g, 'w': run_w, 'x': run_x, 'y': run_y, 'z': run_z}
+def npc_visit(s, npc, table, peek_r, dz=2.0, dx=0.0, tag=None):
+    """an NPC of 3.1.0 at its place (summoned there: the chunks are older than 3.1.0): portrait still from the side,
+    then its conversation panel (creative, first person)"""
+    tag = tag or npc.split(':')[1]
+    s.add(f'openloot {table} {peek_r} peek')
+    s.go(v('ox', dx + 2.0), v('oy', 2.4), v('oz', dz + 2.6), v('ox', dx), v('oy', 1.2), v('oz', dz), settle=240)
+    s.r(f"summon {npc} {v('ox', dx)} {v('oy')} {v('oz', dz)} {{PersistenceRequired:1b,NoAI:1b,Rotation:[0f,0f]}}")
+    s.cmd('gamemode creative @p')
+    s.add(f"cmd execute in raft:raftdim run tp @p {v('ox', dx)} {v('oy')} {v('oz', dz + 2.4)} 180 10", 'wait 10',
+          f"freecam {v('ox', dx + 1.9)} {v('oy', 2.3)} {v('oz', dz - 0.8)} 120 18", 'third on', 'wait 6 render',
+          f'still n_{tag} 1.25', 'freecam off', 'third off')
+    s.add(f'lookat {npc}', 'wait 3', 'use', 'wait 12 render', f'shot n_{tag}_talk', 'esc', 'wait 5')
+    s.cmd(f'kill @e[type={npc}]')
+    s.cmd('gamemode spectator @p')
+    return s
+
+
+def run_n():
+    """3.1.0: die acht Menschen der See an ihren Orten (Portraet und Gespraech)."""
+    s = S2(deadline=85)
+    s.add('scout raft:old_lighthouse', f"cmd execute in raft:raftdim run tp @p {v('cx')} {v('y1', 3)} {v('cz')}", 'settle 200')
+    npc_visit(s, 'raft:keeper_fenn', 'story/lighthouse', 120)
+    s.add('scout raft:beach_shack', f"cmd execute in raft:raftdim run tp @p {v('cx')} {v('y1', 3)} {v('cz')}", 'settle 200')
+    npc_visit(s, 'raft:teo', 'beach_shack', 60, dz=1.5)
+    s.add('cmd execute in raft:raftdim run tp @p 234 125 152', 'settle 200')
+    npc_visit(s, 'raft:okafor', 'rusted_rig', 80)
+    s.add('scout raft:iceberg_outpost', f"cmd execute in raft:raftdim run tp @p {v('cx')} {v('y1', 3)} {v('cz')}", 'settle 200')
+    npc_visit(s, 'raft:dr_lund', 'iceberg_outpost', 60, dz=0.0, dx=-1.5)
+    s.add('cmd execute in raft:raftdim run tp @p 172 112 -12', 'settle 200')
+    npc_visit(s, 'raft:nalu', 'story/saltmere_elder', 80)
+    npc_visit(s, 'raft:old_tamo', 'saltmere_market', 80)
+    s.add('scout raft:castaway_camp', f"cmd execute in raft:raftdim run tp @p {v('cx')} {v('y1', 3)} {v('cz')}", 'settle 200')
+    npc_visit(s, 'raft:kai', 'castaway_camp', 60, dz=3.0)
+    s.add('cmd execute in raft:raftdim run tp @p -1150 190 510', 'settle 200')
+    s.cmd('effect give @p minecraft:fire_resistance infinite 0 true')
+    npc_visit(s, 'raft:dr_voss', 'ashen_storage', 120)
+    return s
+
+
+def run_r():
+    """3.1.0: ein selbst gebautes Floss (Fundamente, Ruder/Steuerrad, Segel, Riemen): fertig gebaut, Segel setzen, an Bord
+    funktioniert alles weiter (Kiste, Ofen, Feld, Hebel und Lampe, Bloecke setzen), segeln, Anker werfen."""
+    s = S2(deadline=85)
+    X, Z = 196, 196
+    s.go(X + 9, 106, Z + 9, X, 100, Z, settle=420)
+    s.cmd('gamerule raft:shark_bites false', 'gamerule random_tick_speed 0')
+    s.r(f'kill @e[type=!minecraft:player,distance=..60,x={X},y=100,z={Z}]',
+        f'fill {X - 8} 100 {Z - 9} {X + 8} 106 {Z + 9} air',
+        f'fill {X - 3} 99 {Z - 4} {X + 3} 99 {Z + 4} raft:raft_foundation',
+        f'fill {X - 3} 100 {Z - 4} {X + 3} 100 {Z - 4} minecraft:oak_planks',
+        f'setblock {X} 100 {Z - 3} raft:helm[facing=south]',
+        f'setblock {X + 2} 100 {Z + 1} minecraft:chest[facing=west]{{Items:[{{Slot:0b,id:"minecraft:diamond",count:5}},{{Slot:1b,id:"minecraft:apple",count:12}}]}}',
+        f'setblock {X - 2} 100 {Z - 2} minecraft:furnace[facing=east]{{Items:[{{Slot:0b,id:"minecraft:raw_iron",count:8}},{{Slot:1b,id:"minecraft:coal",count:4}}]}}',
+        f'setblock {X} 100 {Z + 2} raft:sail[facing=south]', f'setblock {X} 101 {Z + 2} raft:sail[facing=south]',
+        f'setblock {X - 3} 100 {Z} raft:oar[facing=west]', f'setblock {X + 3} 100 {Z} raft:oar[facing=east]',
+        f'fill {X - 3} 100 {Z + 2} {X - 1} 100 {Z + 4} minecraft:farmland[moisture=7]',
+        f'fill {X - 3} 101 {Z + 2} {X - 1} 101 {Z + 4} minecraft:wheat[age=0]',
+        f'setblock {X + 2} 100 {Z + 3} minecraft:lever[face=floor,facing=west]', f'setblock {X + 3} 100 {Z + 3} minecraft:redstone_lamp')
+    s.add('swait 20')
+    s.orb('r_built', 5, (X, 100, Z), 10, 105, 60, start=135, settle=30)
+    # set sail: the player takes the helm
+    s.actor('creative')
+    s.add(f'cmd execute in raft:raftdim run tp @p {X + 0.5} 100 {Z - 1.5} 180 20', 'swait 10', 'nearblock raft:helm 48 1.3 0.5 0', 'swait 5')
+    s.clip('r_setsail', 4, cam=f'{X + 7},104.5,{Z - 8},40,18', look=f'{X},100.5,{Z - 2}', at=[(15, 'use')])
+    s.add('swaitfor 600 execute in raft:raftdim if entity @e[type=raft:vessel]', 'swait 10', 'hold sneak 8', 'swait 10')
+    # on board while it lies still: chest, furnace, lever and lamp, crops, a new block
+    s.add(f'pose {X - 0.5} 100 {Z - 0.5} 0 20', 'third off', 'hud on', f'face {X + 2.5} 100.5 {Z + 1.5}', 'swait 3', 'use', 'wait 10 render',
+          'shot r_chest', 'esc', f'face {X - 1.5} 100.5 {Z - 1.5}', 'swait 3', 'use', 'wait 60 render', 'shot r_furnace', 'esc', 'hud off', 'third on')
+    s.add(f'pose {X + 1.5} 100 {Z + 4.5} 0 40', f'face {X + 2.5} 100.1 {Z + 3.5}', 'swait 3')
+    s.clip('r_lever', 4, cam=f'{X + 6},102.6,{Z + 7},135,22', look=f'{X + 3},100.6,{Z + 3.5}', at=[(30, 'use')])
+    s.cmd('gamerule random_tick_speed 400')
+    s.clip('r_crops', 5, cam=f'{X - 2},102.4,{Z + 7},180,35', look=f'{X - 2},101,{Z + 3}')
+    s.cmd('gamerule random_tick_speed 3', 'item replace entity @p weapon.mainhand with raft:paper_lantern_orange 4')
+    s.add(f'pose {X + 0.5} 100 {Z - 0.5} 90 40', f'face {X - 0.5} 99.95 {Z - 0.5}', 'swait 3')
+    s.clip('r_place', 4, cam=f'{X - 4},103,{Z - 5},-40,25', look=f'{X - 0.5},100.5,{Z - 0.5}', at=[(30, 'use')])
+    # back to the helm and sail; then drop anchor with the wheel
+    s.add('cmd execute as @e[type=raft:vessel,limit=1] at @s rotated as @s positioned ^ ^1.5 ^-3 run tp @p ^1.6 ^-0.4 ^', 'swait 10',
+          'where', 'face {px-1.6} {py+0.3} {pz}', 'swait 3', 'use', 'swait 10')
+    s.clip('r_sail', 6, cam=f'{X + 10},106,{Z - 10},40,20', look='raft:vessel', chase='15,5', smooth=0.08,
+           at=[(2, 'press forward'), (100, 'press left'), (130, 'release left'), (176, 'release forward')])
+    s.clip('r_anchor', 5, cam=f'{X + 10},106,{Z - 10},40,20', look='raft:vessel', chase='13,5', smooth=0.08, at=[(10, 'use')])
+    s.add('swaitfor 600 execute in raft:raftdim unless entity @e[type=raft:vessel]', 'swait 20')
+    s.spec()
+    s.add('find raft:helm 64')
+    s.go(v('fx', 7), 105, v('fz', 7), v('fx'), 100, v('fz'), settle=30)
+    s.add('still r_anchored 1.25')
+    return s
+
+
+def run_v():
+    """Blumen der Palmeninsel nachholen (Plumeria, Strandhafer, Paradiesvogelblume) in neuem Gelaende."""
+    s = S2(deadline=40)
+    s.add('cmd execute in raft:raftdim run tp @p -2400 160 2400', 'tpbiome raft:palm_isle', 'where', 'settle 300')
+    for name, block in (('b_plumeria', 'raft:plumeria'), ('b_seaoats', 'raft:sea_oats'), ('b_bird', 'raft:bird_of_paradise'),
+                        ('b_hibiscus2', 'raft:hibiscus')):
+        flower(s, name, block, r=128)
+    return s
+
+
+RUNS = {'a': run_a, 'b': run_b, 'c': run_c, 'd': run_d, 'e': run_e, 'f': run_f, 'g': run_g, 'w': run_w, 'x': run_x, 'y': run_y, 'z': run_z, 'n': run_n, 'r': run_r, 'v': run_v}
 
 if __name__ == '__main__':
     if sys.argv[2].endswith('.txt'):

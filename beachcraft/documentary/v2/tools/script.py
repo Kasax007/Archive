@@ -8,7 +8,7 @@ DOC = [
               "and a trench so deep that the sunlight never reaches its floor.",
          shots=[('o_dawn', None), ('p_solace_air', 'a drowned city'), ('b_trench', 'a trench so deep')], pause=1.0),
     dict(id='O2', ch=None,
-         text="This is *Beach Craft three point oh*, Tides of the Deep, for Minecraft twenty six point three. "
+         text="This is *Beach Craft three point one*, Tides of the Deep, for Minecraft twenty six point three. "
               "In this film we take our time. We visit every biome, every place and every creature, "
               "we look at the blocks and items and how they work, and at the end we follow the whole story, "
               "the way a player would.",
@@ -35,6 +35,10 @@ DOC = [
          text="The Endless Sea is an *archipelago*: open water, islands, reefs and deep trenches, spread over twelve "
               "biomes. The sun rises and sets here, just like in the overworld.",
          shots=[('b_archi', None), ('b_daynight', 'The sun rises')], pause=1.0),
+    dict(id='B0b', ch=None,
+         text="The sea sounds alive, too: waves and wind, creaking wood, the calls of its creatures, and a piece of "
+              "music for every place.",
+         shots=[('b_ocean', None), ('o_dawn', 'and a piece')], pause=0.8),
     dict(id='B1', ch=None,
          text="The *Endless Sea* itself is deep blue, open water. Kelp and seagrass grow on the floor, and bubble "
               "vents send columns of air up to the surface.",
@@ -69,12 +73,11 @@ DOC = [
               "Hibiscus, plumeria, aloe and beach morning glory grow between them, and seashells and sea glass "
               "wash up on the shore.",
          shots=[('b_palm_air', None), ('b_seaoats', 'tall sea oats'), ('b_hibiscus', 'Hibiscus'),
-                ('b_plumeria', 'plumeria'), ('b_aloe', 'aloe and'), ('b_glory', 'beach morning')], pause=0.8),
+                ('b_plumeria', 'plumeria'), ('b_aloe', 'aloe and'), ('b_hibiscus', 'beach morning')], pause=0.8),
     dict(id='B10', ch=None,
          text="*Jungle isles* are warm and wet, with jungle trees and bamboo, tropical ferns, orchids, red "
               "heliconias, birds of paradise and wild pineapple bushes.",
-         shots=[('b_jungle_air', None), ('b_orchid', 'orchids'), ('b_heliconia', 'red heliconias'),
-                ('b_bird', 'birds of paradise')], pause=0.8),
+         shots=[('b_jungle_air', None), ('b_heliconia', 'red heliconias'), ('b_bird', 'birds of paradise')], pause=0.8),
     dict(id='B11', ch=None,
          text="*Mangrove isles* are low and muddy, with tangled roots, lily pads and white spider lilies.",
          shots=[('b_mangrove', None), ('b_spiderlily', 'white spider')], pause=0.8),
@@ -88,7 +91,7 @@ DOC = [
     dict(id='B14', ch=None,
          text="A *sea urchin* hurts when you touch it, and drops spines. A wild pineapple bush is ripe when its "
               "fruit turns golden. And a bubble vent makes a bubble column, where divers can catch their breath.",
-         shots=[('b_urchin', None), ('b_pineapple', 'A wild pineapple'), ('b_vent', 'And a bubble')], pause=1.4),
+         shots=[('b_urchin', None), ('b_jungle_air', 'A wild pineapple'), ('b_vent', 'And a bubble')], pause=1.4),
 
     # ------------------------------------------------------------------ the places
     dict(id='P0', ch='THE *PLACES*', music='infinite',
@@ -311,6 +314,42 @@ DOC = [
               "from long ago.",
          shots=[('f_terminal', None), ('f_radio', 'and old radios')], pause=1.6),
 
+    # ------------------------------------------------------------------ 3.1: your own raft, the people of the sea
+    dict(id='R0', ch='YOUR OWN *RAFT*', music='voyage',
+         text="Since version three point one, you can also build your own raft, block by block: foundations on the "
+              "water, a *helm*, and sails, oars or a motor to move it.",
+         shots=[('r_built', None)], pause=0.8),
+    dict(id='R1', ch=None,
+         text="Use the helm, and the raft *sets sail*. Everything on it sails along.",
+         shots=[('r_setsail', None), ('r_sail', 'Everything')], pause=0.8),
+    dict(id='R2', ch=None,
+         text="And everything on board keeps working at sea: *chests* and furnaces, growing crops, levers and lamps. "
+              "You can even keep building.",
+         shots=[('r_chest', None), ('r_furnace', 'and furnaces'), ('r_crops', 'growing crops'), ('r_lever', 'levers and'),
+                ('r_place', 'You can even')], pause=0.8),
+    dict(id='R3', ch=None,
+         text="At the helm you steer with the movement keys. Use the wheel once more, and the raft *drops anchor* and "
+              "turns back into blocks.",
+         shots=[('r_sail', None), ('r_anchor', 'Use the wheel')], pause=1.4),
+    dict(id='N0', ch='PEOPLE OF THE *SEA*', music='wholesome',
+         text="A few people stayed behind on the Endless Sea, and they are glad to see a new face.",
+         shots=[('n_keeper_fenn', None)], pause=0.8),
+    dict(id='N1', ch=None,
+         text="*Keeper Fenn* still tends the lighthouse. In Saltmere, *Nalu* waits for news of his grandmother, and "
+              "*Old Tamo* fishes from the pier. *Doctor Voss* studies the tablets of the Ashen Forge.",
+         shots=[('n_keeper_fenn', None), ('n_nalu', 'In Saltmere'), ('n_old_tamo', 'Old Tamo'), ('n_dr_voss', 'Doctor Voss')],
+         pause=0.8),
+    dict(id='N2', ch=None,
+         text="*Teo* runs the tiki bar, *Kai* waits by his campfire, *Doctor Lund* measures the ice at the iceberg "
+              "outpost, and *Patience Okafor* keeps the old rig running.",
+         shots=[('n_teo', None), ('n_kai', 'Kai waits'), ('n_dr_lund', 'Doctor Lund'), ('n_okafor', 'and Patience')],
+         pause=0.8),
+    dict(id='N3', ch=None,
+         text="Talk to them, and they tell you about their place, give you a hint for your next step, and share the "
+              "rumours of the sea. Most of them have a small gift for you, and all of them like to *trade*.",
+         shots=[('n_keeper_fenn_talk', None), ('n_nalu_talk', 'give you a hint'), ('n_teo_talk', 'Most of them'),
+                ('n_okafor_trade', 'and all of them')], pause=1.6),
+
     # ------------------------------------------------------------------ the story
     dict(id='S0', ch='THE *STORY*', music='journey',
          text="Now let us follow the story, the way a player would. From here on, there are spoilers.",
@@ -378,7 +417,7 @@ DOC = [
          text="And the journal has one last entry. The sea is calm. *Thank you, keeper of the tides.*",
          shots=[('s_end', None)], pause=1.6),
     dict(id='E1', ch=None, end=True,
-         text="This was *Beach Craft three point oh*. Free on *CurseForge*, the link is in the description.",
+         text="This was *Beach Craft three point one*. Free on *CurseForge*, the link is in the description.",
          shots=[('endcard', None)]),
 ]
 
@@ -391,7 +430,7 @@ _v1 = _u.module_from_spec(_spec)
 _spec.loader.exec_module(_v1)
 SAY = dict(_v1.SAY, plumeria='ploo-meria', heliconias='heli-conias')
 HEARD = dict(_v1.HEARD, heliconias=['helicanias', 'heliconias'], plumeria=['plumeria', 'plumaria'])
-NUMS = dict(_v1.NUMS)
+NUMS = dict(_v1.NUMS, **{'3.1': 'three point one'})
 POST = dict(doc=dict(
     title="Beach Craft 3.0 - Tides of the Deep: a calm documentary of the whole mod (with shaders)",
     body="""A slow, calm walk through everything in Beach Craft 3.0 "Tides of the Deep" for Minecraft 26.3 (Fabric),

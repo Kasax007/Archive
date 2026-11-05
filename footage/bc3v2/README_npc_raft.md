@@ -153,3 +153,5 @@ retakes, the screens of Teo and Kai, then optional extras
 | b_pineapple.mp4 | Palm isle (Kai's island), a ripe wild pineapple bush: the player (survival) picks the fruit and holds it (the bush is small in frame) | 4.0 |
 | s_tidebreaker.mp4 | First person with HUD, beach of the jungle isle in rain: the Tidebreaker big in hand, two swings, then the charged throw pose (no surge visible) | 5.0 |
 | s_tidebreaker2.mp4 | First person under water: the Tidebreaker swung and charged under the surface | 5.0 |
+| p_helix_in.mp4 | Inside Helix Research Station (night vision, conduit power): slow pan through the lab, lectern and research terminal, glass tanks, coral floor (first ~1 s a wall edge at the left) | 5.0 |
+| c_penguin.mp4 | Frost floes, natural ice floe, camera at penguin height: an adult penguin on the floe edge the whole clip; the others (and the chick) slide into the water at the start | 5.0 |

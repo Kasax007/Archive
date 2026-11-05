@@ -1,0 +1,1 @@
+{"t": 5.500, "event": "minecraft:entity.shulker.open", "file": "minecraft:sounds/entity/shulker/open3.ogg", "volume": 0.600, "pitch": 0.751, "x": -387.50, "y": 55.50, "z": -15.50, "attenuation": "LINEAR", "relative": false, "distance": 16, "source": "block", "cam_x": -396.50, "cam_y": 56.62, "cam_z": -14.50}

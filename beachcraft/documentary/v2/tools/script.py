@@ -267,7 +267,7 @@ DOC = [
     dict(id='I15', ch=None,
          text="The *harpoon gun* shoots harpoons, eight damage under water, and the *sea scooter* pulls you through "
               "the deep, for almost four minutes on one charge.",
-         shots=[('f_harpoon', None), ('f_scooter', 'and the sea')], pause=0.8),
+         shots=[('f_harpoon', None), ('f_scooter', 'and the sea'), ('f_dive', 'for almost four')], pause=0.8),
     dict(id='I17', ch=None,
          text="The *wind turbine* makes energy high above the sea, and the solar panel by day. Cables carry it to "
               "batteries and machines.",

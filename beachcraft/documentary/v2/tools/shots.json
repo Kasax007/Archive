@@ -537,6 +537,13 @@
   },
   "p_helix_in": {
    "start": 1.2
+  },
+  "p_saltmere_deck": {
+   "start": 1.95
+  },
+  "f_scooter": {
+   "start": 0.0,
+   "speed": 0.62
   }
  }
 }

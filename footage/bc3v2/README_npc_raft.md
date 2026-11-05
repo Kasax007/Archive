@@ -39,6 +39,13 @@ three-high sail, two oars, outboard motor (fuelled), helm, two ship lanterns.
 | r_sea_place.mp4 | At sea: places a teak plank on the deck | 3.0 |
 | r_anchor.mp4 | Next to the helm, sneak + use: drop anchor, the raft lines up with the grid and turns back into blocks | 5.0 |
 | r_anchored.mp4 | The anchored raft as blocks again among the ice floes (the run timed out: only 2 s) | 2.0 |
+| n_lund_work.mp4 | Dr. Elin Lund at the research terminal in her iceberg outpost hut | 4.5 |
+| n_lund_talk.mp4 | The player talks to Lund in the hut, dialogue opens | 3.0 |
+| n_lund_greet.mp4 | Lund's greeting, "You received: Honey Bottle" (her "tea") | 2.5 |
+| n_lund_next.mp4 | Hint: the Coral Sigil in the shrine | 2.5 |
+| n_lund_rumor.mp4 | Rumour: the angry penguins | 2.5 |
+| n_lund_trade.mp4 | Lund's trade screen | 2.5 |
+| n_lund_gift.mp4 | The honey bottle in hand, Lund in front | 2.5 |
 
 Still coming: `r_sea_chest.mp4` (open the chest at sea and move items; the survival take did not open the chest,
 retake planned).

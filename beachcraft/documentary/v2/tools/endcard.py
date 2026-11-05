@@ -120,8 +120,8 @@ def paste(canvas, im, cx, cy, a=1.0, dy=0.0):
 def make(still_dir, frames_dir):
     rnd = random.Random(30)
     bg = background()
-    logo = text_img('BEACH CRAFT 3.0', FONTS + '/InterDisplay-Black.otf', 120, WHITE, 0, DEEP, track=4, max_w=1000)
-    sub = text_img('TIDES OF THE DEEP', FONTS + '/InterDisplay-SemiBold.otf', 60, AQUA, 0, DEEP, track=14)
+    logo = text_img('BEACH CRAFT 3.1', FONTS + '/InterDisplay-Black.otf', 112, WHITE, 0, DEEP, track=4, max_w=820)
+    sub = text_img('TIDES OF THE DEEP', FONTS + '/InterDisplay-SemiBold.otf', 56, AQUA, 0, DEEP, track=12, max_w=820)
     mos = mosaic()
     p1 = pill('FREE ON CURSEFORGE', 74)
     link = text_img('LINK IN DESCRIPTION', FONTS + '/InterDisplay-SemiBold.otf', 50, SAND, 0, DEEP, track=8)
@@ -135,11 +135,11 @@ def make(still_dir, frames_dir):
             y = (y0 - sp * t) % (H + 200) - 100
             xx = x + 8 * math.sin(t * 1.4 + ph)
             d.ellipse([xx - r, y - r, xx + r, y + r], outline=(200, 240, 255, 150), width=3)
-        paste(f, logo, W * 0.30, 330, ease(t, 0.2), 30 * (1 - ease(t, 0.2)))
-        paste(f, sub, W * 0.30, 450, ease(t, 0.7), 20 * (1 - ease(t, 0.7)))
-        paste(f, mos, W * 0.74, 520, ease(t, 0.4), 40 * (1 - ease(t, 0.4)))
-        paste(f, p1, W * 0.30, 690 + 6 * math.sin(t * 2.2), ease(t, 1.2))
-        paste(f, link, W * 0.30, 820, ease(t, 1.6))
+        paste(f, logo, W * 0.265, 330, ease(t, 0.2), 30 * (1 - ease(t, 0.2)))
+        paste(f, sub, W * 0.265, 450, ease(t, 0.7), 20 * (1 - ease(t, 0.7)))
+        paste(f, mos, W * 0.745, 520, ease(t, 0.4), 40 * (1 - ease(t, 0.4)))
+        paste(f, p1, W * 0.265, 690 + 6 * math.sin(t * 2.2), ease(t, 1.2))
+        paste(f, link, W * 0.265, 820, ease(t, 1.6))
         out = f.convert('RGB')
         out.save(f'{frames_dir}/f{i:05d}.jpg', quality=93)
         if i == 240:

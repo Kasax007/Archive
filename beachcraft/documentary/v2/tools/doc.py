@@ -597,9 +597,27 @@ def render_parallel(shots, caps, prefix, total, workers=4):
 
 MC_INDEX = '/root/.gradle/caches/fabric-loom/assets/indexes/26.3-34.json'
 MC_OBJECTS = '/root/.gradle/caches/fabric-loom/assets/objects'
+import glob as _glob
 MOD_ASSET_DIRS = ['/home/user/Kasax_Raft_Mod/src/main/resources/assets'] + \
-    [f'/home/user/Kasax_Raft_Mod/src/main/modules/{m}/assets' for m in
-     ('marine', 'shore', 'boss', 'story', 'decor', 'diving', 'voyage', 'building', 'world', 'guide')]
+    sorted(_glob.glob('/home/user/Kasax_Raft_Mod/src/main/modules/*/assets'))
+
+
+def _event_files():
+    """raft sound events -> files as defined by the mod now (3.1 gave many creatures new sounds): older clips logged
+    the files of 3.0, so the mix plays what the game plays today"""
+    ev = {}
+    for base in MOD_ASSET_DIRS:
+        f = f'{base}/raft/sounds.json'
+        if os.path.exists(f):
+            for k, d in json.load(open(f)).items():
+                names = [s if isinstance(s, str) else s.get('name') for s in d.get('sounds', [])]
+                names = [n for n in names if n and not (isinstance(n, dict))]
+                if names:
+                    ev['raft:' + k] = ['raft:sounds/' + n.split(':', 1)[-1] + '.ogg' for n in names]
+    return ev
+
+
+EVENT_FILES = _event_files()
 SKIP_SOURCES = {'music', 'ambient', 'weather', 'record'}
 _index, _scache = None, {}
 
@@ -630,7 +648,15 @@ def clip_sounds(src):
     f = src + '/sounds.jsonl' if os.path.isdir(src) else src[:-4] + '.sounds.jsonl'
     if not os.path.exists(f):
         return []
-    return [e for e in (json.loads(l) for l in open(f) if l.strip()) if e['source'] not in SKIP_SOURCES]
+    out = []
+    for e in (json.loads(l) for l in open(f) if l.strip()):
+        if e['source'] in SKIP_SOURCES:
+            continue
+        files = EVENT_FILES.get(e.get('event'))
+        if files and e.get('file') not in files:
+            e['file'] = files[int(e['t'] * 1000) % len(files)]
+        out.append(e)
+    return out
 
 
 def game_track(shots, total):

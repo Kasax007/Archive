@@ -57,7 +57,7 @@ DOC = [
     dict(id='B5', ch=None,
          text="The *drowned shelf* is a flat, murky floor covered in concrete rubble: the ground of a city that "
               "the sea swallowed.",
-         shots=[('b_shelf', None)], pause=0.8),
+         shots=[('b_shelf', None), ('p_solace_street', 'the ground of')], pause=0.8),
     dict(id='B6', ch=None,
          text="The *abyssal trench* is the deepest water of all. Down there it is almost black, and only tube "
               "worms and glowing anemones light the basalt.",
@@ -83,11 +83,11 @@ DOC = [
          shots=[('b_mangrove', None), ('b_spiderlily', 'white spider')], pause=0.8),
     dict(id='B12', ch=None,
          text="And the *volcanic isles* are dark and rough: black sand, volcanic ash, pumice and basalt columns.",
-         shots=[('b_volcano', None)], pause=1.0),
+         shots=[('b_volcano', None), ('c_ember', 'pumice and')], pause=1.0),
     dict(id='B13', ch=None,
          text="Some of these natural blocks do something. A *giant clam* opens and closes, and an open clam gives "
               "you a pearl. A new one grows in time.",
-         shots=[('b_clam_open', None)], pause=0.8),
+         shots=[('b_clam_open', None), ('b_coral', 'A new one')], pause=0.8),
     dict(id='B14', ch=None,
          text="A *sea urchin* hurts when you touch it, and drops spines. A wild pineapple bush is ripe when its "
               "fruit turns golden. And a bubble vent makes a bubble column, where divers can catch their breath.",
@@ -97,7 +97,7 @@ DOC = [
     dict(id='P0', ch='THE *PLACES*', music='infinite',
          text="The sea is full of places to explore: seven places of the story, and twelve smaller ones. Almost all "
               "of them have chests, each with its own loot.",
-         shots=[('p_saltmere_air', None)], pause=0.8),
+         shots=[('p_saltmere_air', None), ('p_rig_air', 'Almost all')], pause=0.8),
     dict(id='P1', ch=None,
          text="The *old lighthouse* stands on a rocky base. A spiral stair leads up to the lantern room with its "
               "great lens, and next to it are the keeper's cottage and a small dock with buoys.",
@@ -155,7 +155,7 @@ DOC = [
          shots=[('p_ruins', None)], pause=0.8),
     dict(id='P15', ch=None,
          text="On palm isles you find tiny *castaway camps*, with a shelter, a campfire and an SOS in the sand.",
-         shots=[('p_camp', None)], pause=0.8),
+         shots=[('p_camp', None), ('p_camp_chest', 'and an SOS')], pause=0.8),
     dict(id='P16', ch=None,
          text="*Abandoned rafts* drift on the open sea, with a sail, a chest and a little farm.",
          shots=[('p_raft', None)], pause=0.8),
@@ -176,7 +176,7 @@ DOC = [
     dict(id='C1', ch=None,
          text="*Bruce* the shark hunts anyone who swims. On your raft you are safe, but your raft is not: he circles "
               "it and bites the edge foundations, until one breaks. Reinforced foundations are never bitten.",
-         shots=[('c_shark', None)], pause=0.8),
+         shots=[('c_shark', None), ('b_ocean', 'Reinforced')], pause=0.8),
     dict(id='C2', ch=None,
          text="The *hammerhead* is bigger and tougher, and lives in the deep, open sea.",
          shots=[('c_hammer', None)], pause=0.8),
@@ -197,7 +197,7 @@ DOC = [
     dict(id='C7', ch=None,
          text="*Moray eels* hide in holes in the reefs and ruins, with only their head showing, and lunge at anyone "
               "who swims too close.",
-         shots=[('c_moray', None)], pause=0.8),
+         shots=[('c_moray', None), ('p_ruins', 'and lunge')], pause=0.8),
     dict(id='C8', ch=None,
          text="On the beaches, *crabs* scuttle sideways. Sprint towards one, and it digs itself into the sand.",
          shots=[('c_crab', None), ('c_crab_dig', 'Sprint towards')], pause=0.8),
@@ -214,7 +214,7 @@ DOC = [
     dict(id='C12', ch=None,
          text="*Sea otters* float on their backs in the kelp forest and crack shells on their bellies. Feed one a "
               "seashell, and it follows you, and brings you pearls.",
-         shots=[('c_otter', None)], pause=0.8),
+         shots=[('c_otter', None), ('b_kelp', 'Feed one')], pause=0.8),
     dict(id='C13', ch=None,
          text="And the *drowned corsairs* are the cursed crew of the pirate Saltjaw. They swim, fight with "
               "cutlasses, and even climb onto rafts.",
@@ -259,7 +259,7 @@ DOC = [
          text="Upgrades go right onto the raft, and every one of them shows. The sail makes it faster, the engine "
               "more than twice as fast, the cargo crate adds storage, lanterns light it up, and the anchor holds it "
               "in place.",
-         shots=[('f_raft_sail', None), ('f_raft_place', 'the engine')], pause=0.8),
+         shots=[('f_raft_sail', None), ('f_deck', 'the engine')], pause=0.8),
     dict(id='I10', ch=None,
          text="The *palm boat* and the driftwood raft work like vanilla boats, with or without a chest, and in a "
               "boat, the paddle gives you a push.",
@@ -274,7 +274,7 @@ DOC = [
     dict(id='I13', ch=None,
          text="The *wetsuit* lets you mine faster under water and keeps jellyfish away, flippers make you swim much "
               "faster, and the full set gives you dolphin's grace.",
-         shots=[('f_dive', None)], pause=0.8),
+         shots=[('f_dive', None), ('f_gauge', 'and the full set')], pause=0.8),
     dict(id='I14', ch=None,
          text="The *air compressor* refills tanks, with energy or with its hand crank.",
          shots=[('f_deck', None)], pause=0.8),
@@ -288,7 +288,7 @@ DOC = [
     dict(id='I17', ch=None,
          text="The *wind turbine* makes energy high above the sea, and the solar panel by day. Cables carry it to "
               "batteries and machines.",
-         shots=[('f_turbine', None)], pause=0.8),
+         shots=[('f_turbine', None), ('f_deck', 'Cables carry')], pause=0.8),
     dict(id='I18', ch=None,
          text="Chairs, cushions and deck chairs can be sat on, and the *hammock* is a real bed: it sets your spawn point.",
          shots=[('f_seats', None), ('f_hammock', 'and the hammock')], pause=0.8),

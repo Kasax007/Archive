@@ -747,7 +747,40 @@ def run_y():
     return s
 
 
-RUNS = {'a': run_a, 'b': run_b, 'c': run_c, 'd': run_d, 'e': run_e, 'f': run_f, 'g': run_g, 'w': run_w, 'x': run_x, 'y': run_y}
+def run_z():
+    """Leviathan neu (in f2 verdeckten Pfeiler die Kamera): Kamera hinter dem Spieler auf dem Steinring wie in v1, weiter
+    Blickwinkel; Belohnungen."""
+    s = S2(deadline=60)
+    P = (-494.5, 69, -316.5)
+    s.fx('night_vision', 'water_breathing')
+    s.go(P[0], P[1] + 3.5, P[2] + 7, -497, 66, -327, settle=300)
+    s.cmd('kill @e[type=raft:leviathan]', 'kill @e[type=raft:tideling]', 'kill @e[type=minecraft:item]')
+    s.add('fov 90', f'cmd execute in raft:raftdim run tp @p {P[0]} {P[1]} {P[2]} 180 6')
+    s.actor('survival')
+    s.fx('night_vision', 'water_breathing', 'regeneration', 'saturation', 'fire_resistance')
+    s.cmd('effect give @p minecraft:resistance infinite 4 true')
+    s.hands('raft:tidebreaker')
+    s.r('summon raft:leviathan -496.5 65 -326.5')
+    s.add('wait 30')
+    cam = f'{P[0]},{P[1] + 3.2},{P[2] + 7},180,10'
+    hold = [(k, f'cmd execute in raft:raftdim run tp @p {P[0]} {P[1]} {P[2]} 180 6') for k in range(0, 150, 15)]
+    for name in ('s_lev_wide', 's_lev_circle', 's_lev_leap'):
+        s.clip(name, 5, cam=cam, look='raft:leviathan', smooth=0.05, at=hold)
+    s.clip('s_lev_strike', 5, cam=f'{P[0] + 4},{P[1] + 2.5},{P[2] + 4},150,12', look='raft:leviathan', smooth=0.08,
+           at=[(k, 'lookat raft:leviathan') for k in range(5, 150, 10)] + [(k + 1, 'attack') for k in range(5, 150, 10)])
+    s.add('cmd data merge entity @e[type=raft:leviathan,limit=1] {Health:280f}')
+    s.clip('s_lev_roar', 5, cam=cam, look='raft:leviathan', smooth=0.05, at=hold)
+    s.add('cmd data merge entity @e[type=raft:leviathan,limit=1] {Health:100f}')
+    s.clip('s_lev_death', 5, cam=cam, look='raft:leviathan', smooth=0.05,
+           at=hold[:1] + [(12, 'cmd damage @e[type=raft:leviathan,limit=1] 2000 minecraft:generic_kill by @p')])
+    s.add('wait 60', 'fov 70')
+    s.spec()
+    s.add(f'cmd execute in raft:raftdim run tp @p {P[0]} {P[1] + 1.5} {P[2] + 1} 180 30', 'wait 5', 'lookat minecraft:item',
+          'wait 6 render', 'still s_rewards 1.25')
+    return s
+
+
+RUNS = {'a': run_a, 'b': run_b, 'c': run_c, 'd': run_d, 'e': run_e, 'f': run_f, 'g': run_g, 'w': run_w, 'x': run_x, 'y': run_y, 'z': run_z}
 
 if __name__ == '__main__':
     if sys.argv[2].endswith('.txt'):

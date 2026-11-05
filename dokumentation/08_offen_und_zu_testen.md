@@ -6,6 +6,8 @@ Stand 5.11.2026. Alle Repos sind gepusht (lokaler Stand = GitHub). Seit dem 4.11
 `tools/qrun_plan.py`; 317 im ersten Lauf, die 27 übrigen nach Harness-Fixes im zweiten). Die statische Quellen-Prüfung
 (`tools/qsource.py`) findet für 292 von 298 Quest-Items eine Quelle im Überlebensmodus; die 6 übrigen kommen aus
 Spielmechaniken oder per Code eingefügter Beute. Die Beach-Craft-Checks (Szene `bccheck`) stehen unten in D.
+Dreamcraft V1.4 (348 Quests) mit Beach Craft 3.1.0 im vollen Pack: startet ohne neue Fehler, die 4 neuen Quests
+(eigenes Floß, Segel und Motor, ein NPC, alle 8 NPCs) und „Raft Lanterns“ lassen sich erfüllen und abholen (`qrun3`).
 
 **Noch nicht hochgeladen (wartet auf deine Freigabe):** Beach Craft 3.1.0 (Floß selbst bauen, NPCs, Sounds und Musik,
 Welt-Fixes), Dreamcraft V1.4 (Upgraded Iron Chests, Kapitel „Quality of Life“, Beach Craft 3.1.0) und das
@@ -59,8 +61,9 @@ Challenge-Craft-Modpack v5 (erst nach deiner Testrunde, falls Quests sich noch �
 - [x] Hängematte nachts schlafen: Nacht wird übersprungen, im Nether passiert nichts (BcCheck 5.11.).
 - [x] Handkurbel des Air Compressor (im Sound-Test 5.11. bedient und gehört).
 - [x] Bosskampf im Test durchgespielt (Sound-Test 5.11.).
-- [ ] Bosskampf im Überlebensmodus mit Freunden; erneutes Rufen mit Schlüssel + Ancient Crystal; Heilung nach 30 s
-  ohne Spieler (bisher nur im Code geprüft).
+- [x] Heilung nach 30 s ohne Spieler (bctest 5.11., `tools/content/boss/tests/boss_heal.txt`): mit einem Spieler im
+  Überlebensmodus in der Arena bleibt der Leviathan bei 450 von 600, ohne Spieler ist er nach 35 s wieder voll.
+- [ ] Bosskampf im Überlebensmodus mit Freunden; erneutes Rufen mit Schlüssel + Ancient Crystal.
 - [ ] Natürliche Piratenbucht auf echten Inseln, Leuchtturm-Steg (zeigt er oft ins Land?), Castaway Camp, Sunken Plane,
   Fishing Boat Wreck in freier Natur.
 - [ ] Büro-Etagen und Rathaus-Treppenhaus in Port Solace ohne Nachtsicht (seit der dunkleren Dimension).

@@ -788,11 +788,16 @@ def verify(name, wav, tag, out):
 # ------------------------------------------------------------------ checks
 
 def flicker_check(video, cut_times):
-    w, h = 108, 192
+    # small landscape frames, differences in chunks: the whole 21 min film at 60 fps as float32 needed ~14 GB
+    w, h = 128, 72
     raw = subprocess.run(['ffmpeg', '-v', 'error', '-i', video, '-vf', f'scale={w}:{h},format=gray', '-f', 'rawvideo', '-'],
                          check=True, capture_output=True).stdout
-    fr = np.frombuffer(raw, np.uint8).reshape(-1, h, w).astype(np.float32)
-    d = np.abs(np.diff(fr, axis=0)).mean(axis=(1, 2))
+    fr = np.frombuffer(raw, np.uint8).reshape(-1, h, w)
+    d = np.empty(max(0, len(fr) - 1), np.float32)
+    for s0 in range(0, len(d), 2000):
+        a = fr[s0:s0 + 2001].astype(np.int16)
+        d[s0:s0 + len(a) - 1] = np.abs(np.diff(a, axis=0)).mean(axis=(1, 2))
+    del raw, fr
     cuts = {int(round(t * FPS)) for t in cut_times}
     bad = []
     for i in range(2, len(d) - 2):

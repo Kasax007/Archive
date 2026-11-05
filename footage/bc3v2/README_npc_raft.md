@@ -45,7 +45,25 @@ retake planned).
 
 ## NPCs (module npc)
 
-Coming in the next pushes, per person: `n_<npc>_place` (establishing orbit of the place), `n_<npc>_work` (the
-person at their activity), `n_<npc>_talk` (the player walks up and talks, the dialogue panel opens at the end),
-`n_<npc>_greet` / `_next` / `_rumor` / `_trade` (dialogue and trade screens, stills) and `n_<npc>_gift` (first person
-with the gift in hand, HUD on).
+World: seed `beachcraft`, survival player (resistance, saturation), first meeting with each person. Dialogue and
+trade screens are first-person stills at GUI scale 3 (greeting with the gift line, "What should I do next?",
+"Heard any rumours?", trade screen); `_gift` shows the player holding the gift (HUD on). `_talk`: the player walks up,
+the person turns to them, the dialogue panel opens at the end (over-the-shoulder camera).
+
+| File | What it shows | s |
+| --- | --- | --- |
+| n_fenn_work.mp4 | Keeper Tobias Fenn in his cottage at the Old Lighthouse, walking between desk and stove | 4.5 |
+| n_fenn_greet.mp4 | Fenn's greeting, "You received: Spyglass" | 2.5 |
+| n_fenn_next.mp4 | Hint: sail for Saltmere | 2.5 |
+| n_fenn_rumor.mp4 | Rumour: the old Meridian rig | 2.5 |
+| n_fenn_trade.mp4 | Fenn's trade screen | 2.5 |
+| n_fenn_gift.mp4 | The spyglass in hand, Fenn in front | 2.5 |
+| n_nalu_talk.mp4 | The player talks to Nalu on the elder's veranda in Saltmere, dialogue opens | 3.0 |
+| n_nalu_greet.mp4 | Nalu's greeting, "You received: Potion of Water Breathing" | 2.5 |
+| n_nalu_next.mp4 | Hint: the Coral Sigil in Saltmere's shrine | 2.5 |
+| n_nalu_rumor.mp4 | Rumour: a light on the fire island where the old forge stands | 2.5 |
+| n_nalu_trade.mp4 | Nalu's trade screen (Saltmere crafts for pearls) | 2.5 |
+| n_nalu_gift.mp4 | The water breathing potion in hand, Nalu in front | 2.5 |
+
+Still coming: n_fenn_place, n_fenn_talk, n_nalu_place, n_nalu_work (retakes), and Old Tamo, Dr. Voss, Teo, Kai,
+Dr. Lund, Okafor (place, work, talk, greet, next, rumor, trade, gift each; Voss has no trades).

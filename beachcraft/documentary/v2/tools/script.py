@@ -77,7 +77,7 @@ DOC = [
     dict(id='B10', ch=None,
          text="*Jungle isles* are warm and wet, with jungle trees and bamboo, tropical ferns, orchids, red "
               "heliconias, birds of paradise and wild pineapple bushes.",
-         shots=[('b_jungle_air', None), ('b_heliconia', 'red heliconias'), ('b_hibiscus2', 'birds of paradise')], pause=0.8),
+         shots=[('b_jungle_air', None), ('b_orchid', 'orchids'), ('b_heliconia', 'red heliconias'), ('b_bird', 'birds of paradise')], pause=0.8),
     dict(id='B11', ch=None,
          text="*Mangrove isles* are low and muddy, with tangled roots, lily pads and white spider lilies.",
          shots=[('b_mangrove', None), ('b_spiderlily', 'white spider')], pause=0.8),
@@ -91,7 +91,7 @@ DOC = [
     dict(id='B14', ch=None,
          text="A *sea urchin* hurts when you touch it, and drops spines. A wild pineapple bush is ripe when its "
               "fruit turns golden. And a bubble vent makes a bubble column, where divers can catch their breath.",
-         shots=[('b_urchin', None), ('b_jungle_air', 'A wild pineapple'), ('b_vent', 'And a bubble')], pause=1.4),
+         shots=[('b_urchin', None), ('b_pineapple', 'A wild pineapple'), ('b_vent', 'And a bubble')], pause=1.4),
 
     # ------------------------------------------------------------------ the places
     dict(id='P0', ch='THE *PLACES*', music='infinite',
@@ -221,10 +221,64 @@ DOC = [
          shots=[('c_corsair', None), ('c_corsair_fight', 'fight with')], pause=1.4),
 
     # ------------------------------------------------------------------ blocks and items
-    dict(id='I0', ch='BLOCKS AND *ITEMS*', music='wholesome',
-         text="Beach Craft adds more than three hundred blocks and items. They are sorted into six new creative "
-              "tabs, plus the tab of Beach Craft two.",
-         shots=[('i_tab_building', None)], pause=0.6),
+    dict(id='I23', ch='BLOCKS AND *ITEMS*', music='wholesome',
+         text="Now to the blocks and items, in the order a player finds them. First the *Seafarer's Almanac*: it "
+              "explains everything, chapter by chapter, with a page for every creature.",
+         shots=[('f_almanac', None), ('f_almanac_page', 'with a page')], pause=0.8),
+    dict(id='I20', ch=None,
+         text="The tools of raft survival are still here. The item catcher fishes debris out of the water, the "
+              "water purifier turns sea water into fresh water, and the simple grill cooks two foods at once.",
+         shots=[('f_deck', None), ('f_catcher', 'The item catcher'), ('f_grill', 'and the simple grill')], pause=0.8),
+    dict(id='I21', ch=None,
+         text="Crop plots never dry out, pineapples grow from their crowns, and a *scarecrow* keeps the seagulls away.",
+         shots=[('f_crops', None)], pause=0.8),
+    dict(id='I7', ch=None,
+         text="And the *Raft* tab of Beach Craft two: driftwood and palm wood, raft foundations, the survival tools, "
+              "titanium and the machines.",
+         shots=[('i_tab_raft', None)], pause=1.0),
+    dict(id='I10', ch=None,
+         text="The *palm boat* and the driftwood raft work like vanilla boats, with or without a chest, and in a "
+              "boat, the paddle gives you a push.",
+         shots=[('f_boats', None)], pause=0.8),
+    dict(id='I8', ch=None,
+         text="The *expedition raft* is made from six foundations, two rope and a paddle. It is a big three by three "
+              "raft, with four seats and twenty seven storage slots. It never sinks, it never tips over, and sharks "
+              "cannot hurt it.",
+         shots=[('f_raft_place', None), ('f_raft_sail', 'It never sinks')], pause=0.8),
+    dict(id='I9', ch=None,
+         text="Upgrades go right onto the raft, and every one of them shows. The sail makes it faster, the engine "
+              "more than twice as fast, the cargo crate adds storage, lanterns light it up, and the anchor holds it "
+              "in place.",
+         shots=[('f_raft_upgrades', None), ('f_raft_sail', 'and the anchor')], pause=0.8),
+    dict(id='I11', ch=None,
+         text="For the deep there is *diving gear*. The diving helmet lets you see far under water, and with an "
+              "oxygen tank you breathe from the tank. A gauge shows how much air is left.",
+         shots=[('f_dive', None), ('f_gauge', 'A gauge')], pause=0.8),
+    dict(id='I13', ch=None,
+         text="The *wetsuit* lets you mine faster under water and keeps jellyfish away, flippers make you swim much "
+              "faster, and the full set gives you dolphin's grace.",
+         shots=[('f_dive', None), ('f_gauge', 'and the full set')], pause=0.8),
+    dict(id='I12', ch=None,
+         text="Crafted with an angler lure, the helmet gets a *lamp*, and the dark trench becomes visible.",
+         shots=[('f_lamp', None)], pause=0.8),
+    dict(id='I14', ch=None,
+         text="The *air compressor* refills tanks, with energy or with its hand crank.",
+         shots=[('f_compressor', None)], pause=0.8),
+    dict(id='I15', ch=None,
+         text="The *harpoon gun* shoots harpoons, eight damage under water, and the *sea scooter* pulls you through "
+              "the deep, for almost four minutes on one charge.",
+         shots=[('f_harpoon', None), ('f_scooter', 'and the sea')], pause=0.8),
+    dict(id='I17', ch=None,
+         text="The *wind turbine* makes energy high above the sea, and the solar panel by day. Cables carry it to "
+              "batteries and machines.",
+         shots=[('f_turbine', None), ('f_deck', 'Cables carry')], pause=0.8),
+    dict(id='I22', ch=None,
+         text="The *machines* of Beach Craft two still run on energy: the quarry, the chunk destroyer, and the brick "
+              "and titanium furnaces.",
+         shots=[('f_machines', None)], pause=0.8),
+    dict(id='I16', ch=None,
+         text="The *ship cannon* fires cannonballs about forty blocks far, without breaking any blocks.",
+         shots=[('f_cannon', None)], pause=0.8),
     dict(id='I1', ch=None,
          text="*Building*: weathered and teak wood, sea glass, coral stone and tidestone, cracked concrete and "
               "asphalt, steel hulls, beams, catwalks, shipping containers and portholes.",
@@ -236,6 +290,16 @@ DOC = [
     dict(id='I3', ch=None,
          text="*Nature*: the sands, plants, flowers and sea life of the biomes, and the things they give you.",
          shots=[('i_tab_nature', None)], pause=0.6),
+    dict(id='I18', ch=None,
+         text="Chairs, cushions and deck chairs can be sat on, and the *hammock* is a real bed: it sets your spawn point.",
+         shots=[('f_seats', None), ('f_hammock', 'and the hammock')], pause=0.8),
+    dict(id='I19', ch=None,
+         text="And when night falls, the *lights* come alive.",
+         shots=[('b_night', None), ('f_lights', 'the lights')], pause=1.6),
+    dict(id='I0', ch=None,
+         text="All in all, Beach Craft adds more than three hundred blocks and items, sorted into six new creative "
+              "tabs, plus the tab of Beach Craft two.",
+         shots=[('i_tab_building', None)], pause=0.6),
     dict(id='I4', ch=None,
          text="*Voyage*: the boats, the expedition raft with its upgrades, and the diving gear.",
          shots=[('i_tab_voyage', None)], pause=0.6),
@@ -246,69 +310,6 @@ DOC = [
          text="*Tides of the Deep*: the story items, the four sigils, the blocks of the sanctum, and the treasures "
               "of the Leviathan.",
          shots=[('i_tab_story', None)], pause=0.6),
-    dict(id='I7', ch=None,
-         text="And the *Raft* tab of Beach Craft two: driftwood and palm wood, raft foundations, the survival tools, "
-              "titanium and the machines.",
-         shots=[('i_tab_raft', None)], pause=1.0),
-    dict(id='I8', ch=None,
-         text="The *expedition raft* is made from six foundations, two rope and a paddle. It is a big three by three "
-              "raft, with four seats and twenty seven storage slots. It never sinks, it never tips over, and sharks "
-              "cannot hurt it.",
-         shots=[('f_raft_place', None), ('f_raft_sail', 'It never sinks')], pause=0.8),
-    dict(id='I9', ch=None,
-         text="Upgrades go right onto the raft, and every one of them shows. The sail makes it faster, the engine "
-              "more than twice as fast, the cargo crate adds storage, lanterns light it up, and the anchor holds it "
-              "in place.",
-         shots=[('f_raft_sail', None), ('f_deck', 'the engine')], pause=0.8),
-    dict(id='I10', ch=None,
-         text="The *palm boat* and the driftwood raft work like vanilla boats, with or without a chest, and in a "
-              "boat, the paddle gives you a push.",
-         shots=[('f_boats', None)], pause=0.8),
-    dict(id='I11', ch=None,
-         text="For the deep there is *diving gear*. The diving helmet lets you see far under water, and with an "
-              "oxygen tank you breathe from the tank. A gauge shows how much air is left.",
-         shots=[('f_dive', None), ('f_gauge', 'A gauge')], pause=0.8),
-    dict(id='I12', ch=None,
-         text="Crafted with an angler lure, the helmet gets a *lamp*, and the dark trench becomes visible.",
-         shots=[('f_lamp', None)], pause=0.8),
-    dict(id='I13', ch=None,
-         text="The *wetsuit* lets you mine faster under water and keeps jellyfish away, flippers make you swim much "
-              "faster, and the full set gives you dolphin's grace.",
-         shots=[('f_dive', None), ('f_gauge', 'and the full set')], pause=0.8),
-    dict(id='I14', ch=None,
-         text="The *air compressor* refills tanks, with energy or with its hand crank.",
-         shots=[('f_deck', None)], pause=0.8),
-    dict(id='I15', ch=None,
-         text="The *harpoon gun* shoots harpoons, eight damage under water, and the *sea scooter* pulls you through "
-              "the deep, for almost four minutes on one charge.",
-         shots=[('f_harpoon', None), ('f_scooter', 'and the sea')], pause=0.8),
-    dict(id='I16', ch=None,
-         text="The *ship cannon* fires cannonballs about forty blocks far, without breaking any blocks.",
-         shots=[('f_cannon', None)], pause=0.8),
-    dict(id='I17', ch=None,
-         text="The *wind turbine* makes energy high above the sea, and the solar panel by day. Cables carry it to "
-              "batteries and machines.",
-         shots=[('f_turbine', None), ('f_deck', 'Cables carry')], pause=0.8),
-    dict(id='I18', ch=None,
-         text="Chairs, cushions and deck chairs can be sat on, and the *hammock* is a real bed: it sets your spawn point.",
-         shots=[('f_seats', None), ('f_hammock', 'and the hammock')], pause=0.8),
-    dict(id='I19', ch=None,
-         text="And when night falls, the *lights* come alive.",
-         shots=[('b_night', None), ('f_lights', 'the lights')], pause=1.6),
-    dict(id='I20', ch=None,
-         text="The tools of raft survival are still here. The item catcher fishes debris out of the water, the "
-              "water purifier turns sea water into fresh water, and the simple grill cooks two foods at once.",
-         shots=[('f_deck', None), ('f_grill', 'and the simple grill')], pause=0.8),
-    dict(id='I21', ch=None,
-         text="Crop plots never dry out, pineapples grow from their crowns, and a *scarecrow* keeps the seagulls away.",
-         shots=[('f_crops', None)], pause=0.8),
-    dict(id='I22', ch=None,
-         text="The *machines* of Beach Craft two still run on energy: the quarry, the chunk destroyer, and the brick "
-              "and titanium furnaces.",
-         shots=[('f_machines', None)], pause=0.8),
-    dict(id='I23', ch=None,
-         text="The *Seafarer's Almanac* explains everything, chapter by chapter, with a page for every creature.",
-         shots=[('f_almanac', None), ('f_almanac_page', 'with a page')], pause=0.8),
     dict(id='I24', ch=None,
          text="*Research terminals* still show the logs of the expedition, and old radios crackle with broadcasts "
               "from long ago.",
@@ -355,25 +356,25 @@ DOC = [
               "Ashen Forge. She does not trade, but she gives you a potion of fire resistance for the river of lava, "
               "and another one if you lose it.",
          shots=[('n_voss_work', None), ('n_voss_greet', 'She does not'), ('n_voss_gift', 'a potion of fire')], pause=1.0),
-    dict(id='N5', ch=None,
-         text="*Teo* runs the last bar on the Endless Sea. The first drink, a piña colada, is on the house. He sells "
-              "drinks and island food, and buys pineapples, coconuts and rum.",
-         shots=[('n_teo_work', None), ('n_teo_greet', 'The first drink'), ('n_teo_trade', 'He sells')], pause=1.0),
     dict(id='N6', ch=None,
          text="*Kai* is the castaway who wrote the SOS. He waits by his campfire and hopes you brought biscuits, and "
               "he trades everything that washes up, bottle letters, rope, plastic, scrap and supply barrels, for cookies.",
          shots=[('n_kai_work', None), ('n_kai_greet', 'He waits'), ('n_kai_trade', 'and he trades')], pause=1.0),
-    dict(id='N7', ch=None,
-         text="*Doctor Elin Lund* studies the weather and the wildlife at the iceberg outpost. She offers you a cup of "
-              "tea with honey, sells harpoons, wetsuits, flippers and oxygen tanks, and buys jellies, angler lures, "
-              "shark teeth and leviathan scales.",
-         shots=[('n_lund_work', None), ('n_lund_greet', 'She offers you'), ('n_lund_trade', 'sells harpoons')], pause=1.0),
+    dict(id='N5', ch=None,
+         text="*Teo* runs the last bar on the Endless Sea. The first drink, a piña colada, is on the house. He sells "
+              "drinks and island food, and buys pineapples, coconuts and rum.",
+         shots=[('n_teo_work', None), ('n_teo_greet', 'The first drink'), ('n_teo_trade', 'He sells')], pause=1.0),
     dict(id='N8', ch=None,
-         text="And *Patience Okafor* is the chief engineer of the old rig, and the only crew left. She gives you a "
+         text="*Patience Okafor* is the chief engineer of the old rig, and the only crew left. She gives you a "
               "spare circuit board, sells scrap, redstone, cables, circuit boards, titanium and batteries, and buys "
               "copper, iron and plastic.",
-         shots=[('n_okafor_work', None), ('n_okafor_gift', 'She gives you'), ('n_okafor_trade', 'sells scrap')], pause=1.6),
+         shots=[('n_okafor_work', None), ('n_okafor_gift', 'She gives you'), ('n_okafor_trade', 'sells scrap')], pause=1.0),
 
+    dict(id='N7', ch=None,
+         text="And *Doctor Elin Lund* studies the weather and the wildlife at the iceberg outpost. She offers you a cup of "
+              "tea with honey, sells harpoons, wetsuits, flippers and oxygen tanks, and buys jellies, angler lures, "
+              "shark teeth and leviathan scales.",
+         shots=[('n_lund_work', None), ('n_lund_greet', 'She offers you'), ('n_lund_trade', 'sells harpoons')], pause=1.6),
     # ------------------------------------------------------------------ the story
     dict(id='S0', ch='THE *STORY*', music='journey',
          text="Now let us follow the story, the way a player would. From here on, there are spoilers.",

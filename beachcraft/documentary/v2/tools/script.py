@@ -355,7 +355,7 @@ DOC = [
          text="*Doctor Imara Voss* cracked the Tide Seal, and now she studies the tablets in the storeroom of the "
               "Ashen Forge. She does not trade, but she gives you a potion of fire resistance for the river of lava, "
               "and another one if you lose it.",
-         shots=[('p_forge_in', None), ('p_forge_bridge', 'She does not'), ('s_forge_vault', 'a potion of fire')], pause=1.0),   # Voss clips still missing (see README)
+         shots=[('n_voss_place', None), ('n_voss_talk', 'and now she studies'), ('n_voss_greet', 'She does not'), ('n_voss_gift', 'and another one')], pause=1.0),
     dict(id='N6', ch=None,
          text="*Kai* is the castaway who wrote the SOS. He waits by his campfire and hopes you brought biscuits, and "
               "he trades everything that washes up, bottle letters, rope, plastic, scrap and supply barrels, for cookies.",

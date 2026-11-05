@@ -148,3 +148,8 @@ retakes, the screens of Teo and Kai, then optional extras
 | s_lev_strike6.mp4 | Close, from the other side: the Leviathan rises high above the pool and spits brine bolts at the player on the ring (best "rise and spit" take) | 5.0 |
 | s_lev_strike7.mp4 | Close: the Leviathan leaps out onto the stone ring and lies stranded, then slithers back (the leap) | 5.0 |
 | s_helix_terminal.mp4 | Inside Helix Research Station: a research terminal opened ("Meridian Expedition – Terminal", Helix Log 04 – Drill Order), GUI still | 2.5 |
+| b_orchid.mp4 | Jungle isle: slow push towards a tropical orchid (pink) on the shore, a red hibiscus beside it in the foreground | 4.0 |
+| b_bird.mp4 | Jungle isle: push in on a bird of paradise; the first ~2 s pass through leaves, from 2 s the flower is clear | 4.0 |
+| b_pineapple.mp4 | Palm isle (Kai's island), a ripe wild pineapple bush: the player (survival) picks the fruit and holds it (the bush is small in frame) | 4.0 |
+| s_tidebreaker.mp4 | First person with HUD, beach of the jungle isle in rain: the Tidebreaker big in hand, two swings, then the charged throw pose (no surge visible) | 5.0 |
+| s_tidebreaker2.mp4 | First person under water: the Tidebreaker swung and charged under the surface | 5.0 |

@@ -1088,7 +1088,61 @@ def run_p3():
     return s
 
 
-RUNS = {'a': run_a, 'b': run_b, 'c': run_c, 'd': run_d, 'e': run_e, 'f': run_f, 'g': run_g, 'w': run_w, 'x': run_x, 'y': run_y, 'z': run_z, 'n': run_n, 'r': run_r, 'v': run_v, 'u': run_u, 'p1': run_p1, 'p2': run_p2, 'p3': run_p3}
+def run_p4():
+    """Pinguine neu: drei, vier Pinguine stehen und watscheln auf einer flachen Scholle, Kamera auf ihrer Hoehe."""
+    s = S2(deadline=30)
+    s.add('cmd execute in raft:raftdim run tp @p -96 105 96', 'settle 300', 'find minecraft:snow_block 48')
+    s.r(f"fill {v('fx', -4)} {v('fy')} {v('fz', -4)} {v('fx', 4)} {v('fy')} {v('fz', 4)} minecraft:snow_block",
+        f"fill {v('fx', -4)} {v('fy', -1)} {v('fz', -4)} {v('fx', 4)} {v('fy', -1)} {v('fz', 4)} minecraft:packed_ice",
+        f"fill {v('fx', -4)} {v('fy', 1)} {v('fz', -4)} {v('fx', 4)} {v('fy', 5)} {v('fz', 4)} minecraft:air",
+        *(f"summon raft:penguin {v('fx', dx)} {v('fy', 1)} {v('fz', dz)}" for dx, dz in ((0, 0), (1, -1), (-1, 1), (-1.5, -1), (1, 1.5))))
+    s.go(v('fx', 5), v('fy', 2.3), v('fz', 1.5), v('fx'), v('fy', 1.4), v('fz'), settle=30)
+    s.add('wait 20')
+    s.clip('c_penguin', 5, look=f"{v('fx')},{v('fy', 1.4)},{v('fz')}")
+    s.kill('raft:penguin')
+    return s
+
+
+def run_p5():
+    """Dr. Voss in der intakten Halle der Ashen Forge (in der eigenen Welt war sie nicht da): beschworen neben der
+    Story-Kiste, als Kreativ-Spieler angesprochen (Bildschirme), Arbeit, Geschenk in der Hand."""
+    s = S2(deadline=40)
+    s.cmd('effect give @p minecraft:fire_resistance infinite 0 true')
+    s.add('cmd execute in raft:raftdim run tp @p -1160 175 508', 'settle 300', 'openloot story/ashen_forge 120 peek')
+    s.cmd('gamemode creative @p')
+    s.add(f"cmd execute in raft:raftdim run tp @p {v('ox')} {v('oy')} {v('oz', 4.5)} 180 10", 'wait 20')
+    s.r(f"summon raft:dr_voss {v('ox')} {v('oy')} {v('oz', 2)} {{Rotation:[0f,0f]}}")
+    s.add('wait 20', 'lookat raft:dr_voss', 'wait 3')
+    s.add(f"freecam {v('ox', 2.6)} {v('oy', 2.2)} {v('oz', 4.2)} 150 18", 'third on', 'wait 8 render', 'shot voss_check', 'freecam off', 'third off')
+    s.clip('n_voss_work', 5, cam=f"{v('ox', 2.6)},{v('oy', 2.2)},{v('oz', 4.2)},150,18", look='raft:dr_voss', smooth=0.1)
+    s.add('third off', 'lookat raft:dr_voss', 'wait 3', 'hud on')
+    s.clip('n_voss_talk', 3, at=[(40, 'lookat raft:dr_voss'), (42, 'use')])
+    s.add('wait 10 render', 'shot n_voss_greet', 'click 848 962', 'wait 12 render', 'shot n_voss_next',
+          'click 828 996', 'wait 12 render', 'shot n_voss_rumor', 'esc', 'wait 10 render', 'shot n_voss_gift', 'hud off')
+    s.spec()
+    return s
+
+
+def run_p6():
+    """Pinguine, dritter Versuch: eine flache Scholle aus Packeis und Schnee im offenen Wasser der Eisschollen, ein
+    unsichtbarer Barrier-Ring am Rand (sonst springen sie sofort ins Wasser), Kamera auf ihrer Hoehe."""
+    s = S2(deadline=30)
+    X, Y, Z = -110, 99, 80
+    s.go(X + 6, Y + 3.2, Z + 2, X, Y + 1.5, Z, settle=300)
+    s.r(f'fill {X - 6} {Y - 2} {Z - 6} {X + 6} {Y} {Z + 6} minecraft:packed_ice',
+        f'fill {X - 6} {Y + 1} {Z - 6} {X + 6} {Y + 6} {Z + 6} minecraft:air',
+        f'fill {X - 5} {Y} {Z - 5} {X + 5} {Y} {Z + 5} minecraft:snow_block',
+        f'fill {X - 6} {Y + 1} {Z - 6} {X + 6} {Y + 2} {Z + 6} minecraft:barrier hollow',
+        f'fill {X - 5} {Y + 1} {Z - 5} {X + 5} {Y + 2} {Z + 5} minecraft:air',
+        f'fill {X - 6} {Y + 2} {Z - 6} {X + 6} {Y + 2} {Z + 6} minecraft:air replace minecraft:barrier',
+        *(f'summon raft:penguin {X + dx} {Y + 1} {Z + dz}' for dx, dz in ((0, 0), (1, -1), (-1, 1), (-1.5, -1), (1, 1.5))))
+    s.add('wait 30')
+    s.clip('c_penguin', 5, look=f'{X},{Y + 1.4},{Z}')
+    s.kill('raft:penguin')
+    return s
+
+
+RUNS = {'a': run_a, 'b': run_b, 'c': run_c, 'd': run_d, 'e': run_e, 'f': run_f, 'g': run_g, 'w': run_w, 'x': run_x, 'y': run_y, 'z': run_z, 'n': run_n, 'r': run_r, 'v': run_v, 'u': run_u, 'p1': run_p1, 'p2': run_p2, 'p3': run_p3, 'p4': run_p4, 'p5': run_p5, 'p6': run_p6}
 
 if __name__ == '__main__':
     if sys.argv[2].endswith('.txt'):

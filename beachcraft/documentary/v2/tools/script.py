@@ -355,7 +355,7 @@ DOC = [
          text="*Doctor Imara Voss* cracked the Tide Seal, and now she studies the tablets in the storeroom of the "
               "Ashen Forge. She does not trade, but she gives you a potion of fire resistance for the river of lava, "
               "and another one if you lose it.",
-         shots=[('n_voss_work', None), ('n_voss_greet', 'She does not'), ('n_voss_gift', 'a potion of fire')], pause=1.0),
+         shots=[('p_forge_in', None), ('p_forge_bridge', 'She does not'), ('s_forge_vault', 'a potion of fire')]   # Voss clips still missing (see README), pause=1.0),
     dict(id='N6', ch=None,
          text="*Kai* is the castaway who wrote the SOS. He waits by his campfire and hopes you brought biscuits, and "
               "he trades everything that washes up, bottle letters, rope, plastic, scrap and supply barrels, for cookies.",
@@ -363,7 +363,7 @@ DOC = [
     dict(id='N5', ch=None,
          text="*Teo* runs the last bar on the Endless Sea. The first drink, a piña colada, is on the house. He sells "
               "drinks and island food, and buys pineapples, coconuts and rum.",
-         shots=[('n_teo_work', None), ('n_teo_greet', 'The first drink'), ('n_teo_trade', 'He sells')], pause=1.0),
+         shots=[('n_teo_talk', None), ('n_teo_greet', 'The first drink'), ('n_teo_trade', 'He sells')], pause=1.0),
     dict(id='N8', ch=None,
          text="*Patience Okafor* is the chief engineer of the old rig, and the only crew left. She gives you a "
               "spare circuit board, sells scrap, redstone, cables, circuit boards, titanium and batteries, and buys "

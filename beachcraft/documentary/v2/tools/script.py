@@ -419,14 +419,14 @@ DOC = [
     dict(id='S11', ch=None, music='deep',
          text="At the altar on the edge of the pool, the key wakes the *Leviathan*, a colossal sea serpent with six "
               "hundred health.",
-         shots=[('s_wake', None), ('s_lev_wide', 'a colossal')], pause=1.4),
+         shots=[('s_wake', None), ('s_lev_strike5', 'a colossal')], pause=1.4),
     dict(id='S12', ch=None,
          text="It circles in the pool, where nothing can hurt it. It rises, and spits *brine bolts*.",
-         shots=[('s_lev_circle', None), ('s_lev_wide', 'It rises')], pause=1.0),
+         shots=[('s_lev_circle', None), ('s_lev_strike6', 'It rises')], pause=1.0),
     dict(id='S13', ch=None,
          text="It leaps across the stone ring, slams down, and lies *stranded* for four seconds. That is the moment "
               "to strike.",
-         shots=[('s_lev_leap', None), ('s_lev_strike3', 'That is the moment')], pause=1.0),
+         shots=[('s_lev_strike7', None), ('s_lev_strike3', 'That is the moment')], pause=1.0),
     dict(id='S14', ch=None,
          text="Below half health, it roars and calls the *tidelings*, and stirs a whirlpool that pulls you towards "
               "the pool. Below a quarter, it gets faster still.",

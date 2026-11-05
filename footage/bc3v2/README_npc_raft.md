@@ -132,3 +132,10 @@ retakes, the screens of Teo and Kai, then optional extras
   206 123 39 (Nalu 153.5 103 -11.5, Tamo 201.5 102 -13.5), tiki bar 960 102 2042 .. 980 110 2064 (Teo 977 104 2054.9),
   castaway tent -1022 120 863 .. -1008 124 880 (Kai -1010.5 121 871.5), iceberg outpost 16 81 240 .. 48 115 277
   (Lund 29.75 102.06 261.75), rusted rig 212 20 128 .. 256 144 175 (Okafor 244.5 111 162.5).
+
+## Extra shots for the documentary (world `bcnpc2`, same seed and look)
+
+| File | What it shows | s |
+| --- | --- | --- |
+| s_lev_strike.mp4 | Abyssal Sanctum, camera high above the pool: the Leviathan circling and surfacing below, the player (survival, Tidebreaker) on the stone ring | 5.0 |
+| s_lev_strike3.mp4 | Raised camera outside the ring: the Leviathan rises out of the pool and spits brine bolts at the player | 5.0 |

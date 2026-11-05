@@ -87,10 +87,16 @@ the person turns to them, the dialogue panel opens at the end (over-the-shoulder
 | n_tamo_rumor.mp4 | Rumour: Teo's beach bar on the palm isles | 2.5 |
 | n_tamo_trade.mp4 | Tamo's trade screen (buys fish, sells a rod and more) | 2.5 |
 | n_tamo_gift.mp4 | Cooked cod in hand, Tamo in front | 2.5 |
-| n_voss_work.mp4 | Dr. Imara Voss reading her notes in the storeroom of the Ashen Forge (dark: night vision for the camera). Note: in this seed her template spot is inside volcanic rock; for filming she was moved two blocks onto the open floor and a 1×2 gap was cleared for the player | 4.5 |
+| n_voss_place.mp4 | Orbit over the volcanic isle of the Ashen Forge (lava, ash, the forge walls in the middle) | 4.5 |
+| n_voss_work.mp4 | Dr. Imara Voss reading her notes in the storeroom of the Ashen Forge, between two chests (night vision for the camera: the storeroom is dark) | 4.5 |
+| n_voss_talk.mp4 | The player talks to Voss in the forge hall, dialogue opens (Voss moved two blocks from her spot for this shot, a 1×2 gap cleared for the player) | 3.0 |
+| n_voss_greet.mp4 | Voss's greeting with a gift: "You lost the potion? ... here, another one", "You received: Potion of Fire Resistance" (her re-gift line; the first meeting happened in an earlier take) | 2.5 |
+| n_voss_next.mp4 | Hint: the Coral Sigil in the shrine | 2.5 |
+| n_voss_rumor.mp4 | Rumour: the Leviathan's back breaking the water | 2.5 |
+| n_voss_gift.mp4 | The fire resistance potion in hand, Voss in front (she has no trades) | 2.5 |
 | n_teo_work.mp4 | Teo at work behind the counter of his tiki bar (beach shack on the palm isles) | 4.5 |
 | n_kai_work.mp4 | Kai, the SOS castaway, sitting at his camp fire by the tent (smoke drifts past at the end) | 4.5 |
 
-Still coming: n_lund_work and n_okafor_work with their screens, n_voss_work retake, n_fenn_place and n_nalu_work
+Still coming: n_lund_work and n_okafor_work with their screens, n_fenn_place and n_nalu_work
 retakes, the screens of Teo and Kai, then optional extras
 (r_sea_chest, n_fenn_place / n_fenn_talk / n_nalu_place / n_nalu_work / n_voss_place retakes).

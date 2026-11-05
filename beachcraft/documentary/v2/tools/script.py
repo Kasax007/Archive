@@ -430,11 +430,11 @@ SAY = dict(_v1.SAY, plumeria='ploo-meria', heliconias='heli-conias')
 HEARD = dict(_v1.HEARD, heliconias=['helicanias', 'heliconias'], plumeria=['plumeria', 'plumaria'])
 NUMS = dict(_v1.NUMS, **{'3.1': 'three point one'})
 POST = dict(doc=dict(
-    title="Beach Craft 3.0 - Tides of the Deep: a calm documentary of the whole mod (with shaders)",
-    body="""A slow, calm walk through everything in Beach Craft 3.0 "Tides of the Deep" for Minecraft 26.3 (Fabric),
+    title="Beach Craft 3.1 - Tides of the Deep: a calm documentary of the whole mod (with shaders)",
+    body="""A slow, calm walk through everything in Beach Craft 3.1 "Tides of the Deep" for Minecraft 26.3 (Fabric),
 filmed with shaders (Iris + Complementary Reimagined): the biomes of the Endless Sea with day and night, all nineteen
-structures and their loot, every creature, the blocks and items and how they work, and at the end the whole story from
-the castaway chest to the fight against the Leviathan.
+structures and their loot, every creature, the blocks and items and how they work, building your own raft and meeting
+the people of the sea, and at the end the whole story from the castaway chest to the fight against the Leviathan.
 
 Chapters:
 00:00 The Endless Sea

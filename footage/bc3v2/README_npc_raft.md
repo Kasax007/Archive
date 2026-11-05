@@ -104,3 +104,21 @@ the person turns to them, the dialogue panel opens at the end (over-the-shoulder
 Still coming: n_lund_work and n_okafor_work with their screens, n_fenn_place and n_nalu_work
 retakes, the screens of Teo and Kai, then optional extras
 (r_sea_chest, n_fenn_place / n_fenn_talk / n_nalu_place / n_nalu_work / n_voss_place retakes).
+
+## Worlds and the Ashen Forge (for a structure check)
+
+- NPC footage: world `bcnpc2`, seed `beachcraft`, created 5 Nov 2026 ~14:24 UTC by the bctest harness with the mod at
+  `Kasax_Raft_Mod` 26.3 commit `e6b344b` (3.1.0 + deck fix). Calibration world `bcnpc` (same seed) was made at
+  `cf5ceb8`.
+- Raft footage: world `bcraft`, same seed, built at x 147..153, z 146..154, y 99 (mod at `cf5ceb8`, sailing part at
+  `e6b344b`).
+- Ashen Forge in this seed (raft dimension): structure start chunk at -1184, 528; bounding box -1196 150 476 ..
+  -1096 209 543; piece `ashen_forge/hall` COUNTERCLOCKWISE_90 at -1184 163 488 .. -1139 197 528; piece
+  `ashen_forge/vault` at -1138 162 505 .. -1108 183 531. Dr. Voss spawned at -1159.5 168 524.5 (template spot hall
+  4.5 5 24.5). Around that spot the storeroom was mostly filled with rock and volcanic ash: only her own column was
+  free, a camera or player next to her ended up inside blocks. For the talk shot she was moved to -1157.5 168 524.5 and
+  the cells -1158..-1156, 168..169, 524 were cleared.
+- Other places in this seed: Old Lighthouse 868 96 716 .. 934 174 812 (Fenn 901.7 121 793.2), Saltmere 141 72 -41 ..
+  206 123 39 (Nalu 153.5 103 -11.5, Tamo 201.5 102 -13.5), tiki bar 960 102 2042 .. 980 110 2064 (Teo 977 104 2054.9),
+  castaway tent -1022 120 863 .. -1008 124 880 (Kai -1010.5 121 871.5), iceberg outpost 16 81 240 .. 48 115 277
+  (Lund 29.75 102.06 261.75), rusted rig 212 20 128 .. 256 144 175 (Okafor 244.5 111 162.5).

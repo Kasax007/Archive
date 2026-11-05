@@ -926,7 +926,148 @@ def run_u():
     return s
 
 
-RUNS = {'a': run_a, 'b': run_b, 'c': run_c, 'd': run_d, 'e': run_e, 'f': run_f, 'g': run_g, 'w': run_w, 'x': run_x, 'y': run_y, 'z': run_z, 'n': run_n, 'r': run_r, 'v': run_v, 'u': run_u}
+def closeup(s, name, block, r=128, d=2.6, h=1.9, ang=135.0):
+    """still of the nearest such block: the camera stands d away and h above it, in a small air pocket (leaves or
+    grass right at the camera would fill the picture otherwise)"""
+    import math
+    a = math.radians(ang)
+    dx, dz = round(math.sin(a) * d, 2), round(-math.cos(a) * d, 2)
+    s.add(f'find {block} {r}')
+    s.r(f"fill {v('fx', dx - 0.5)} {v('fy', h - 0.5)} {v('fz', dz - 0.5)} {v('fx', dx + 0.5)} {v('fy', h + 1.5)} {v('fz', dz + 0.5)} air "
+        f"replace #minecraft:replaceable_by_trees")
+    s.r(f"fill {v('fx', dx - 0.5)} {v('fy', h - 0.5)} {v('fz', dz - 0.5)} {v('fx', dx + 0.5)} {v('fy', h + 1.5)} {v('fz', dz + 0.5)} air "
+        f"replace #minecraft:leaves")
+    s.go(v('fx', dx), v('fy', h + EYE * 0), v('fz', dz), v('fx'), v('fy', 0.6), v('fz'), settle=60)
+    return s.add('wait 6 render', f'still {name} 1.25')
+
+
+def run_p1():
+    """Luecken (Liste an die Leitung): Expedition-Floss-Upgrades, Kompressor, Plastikhaken, Topfpflanzen, Funkspruch,
+    Pinguine, Glutkrabben."""
+    s = S2(deadline=80)
+    s.go(140.5, 112, 152, 140.5, 100, 140, settle=300)
+    s.r('kill @e[type=raft:expedition_raft]', 'kill @e[type=minecraft:item,distance=..60,x=140,y=100,z=140]',
+        'summon raft:expedition_raft 140.5 99.6 151.5 {Rotation:[0f,0f]}')
+    s.add('cmd execute in raft:raftdim run tp @p 140.5 100 146.5 0 35')
+    s.actor('creative')
+    s.cmd('item replace entity @p hotbar.0 with raft:raft_sail', 'item replace entity @p hotbar.1 with raft:raft_engine',
+          'item replace entity @p hotbar.2 with raft:raft_crate', 'item replace entity @p hotbar.3 with raft:raft_lantern',
+          'item replace entity @p hotbar.4 with raft:raft_anchor')
+    s.add('wait 10', 'lookat raft:expedition_raft')
+    at = []
+    for k in range(5):
+        f0 = 8 + k * 30
+        at += [(f0, f'slot {k + 1}'), (f0 + 2, 'lookat raft:expedition_raft'), (f0 + 4, 'use')]
+    s.clip('f_raft_upgrades', 5, cam='147.5,103.6,147.5,70,20', look='140.5,100.3,151.5', at=at)
+    s.cmd('kill @e[type=raft:expedition_raft]', 'clear @p')
+    # air compressor screen
+    s.add('cmd execute in raft:raftdim run tp @p 138.5 100 140.2 180 35', 'wait 5', 'faceblock raft:air_compressor 6', 'hud on',
+          'use', 'wait 12 render', 'shot f_compressor', 'esc', 'hud off')
+    # plastic hook pulling drifting debris in (survival: only then the hook pulls)
+    s.add('cmd execute in raft:raftdim run tp @p 134.5 100 140.5 90 25', 'wait 10')
+    s.actor('survival')
+    s.cmd('effect give @p minecraft:resistance infinite 4 true')
+    s.hands('raft:plastic_hook')
+    items = ['raft:plastic', 'raft:scrap_metal', 'raft:driftwood_planks', 'raft:palm_leaves', 'raft:plastic', 'raft:coconut']
+    for k, it in enumerate(items):
+        s.r(f'summon minecraft:item {124.5 + (k % 3) * 2.0:.1f} 99.6 {137.5 + k:.1f} '
+            f'{{Item:{{id:"{it}",count:{1 + k % 2}}},Tags:["raft_debris"],PickupDelay:10s}}')
+    s.add('wait 5', 'pose 134.5 100 140.5 90 22')
+    s.clip('f_catcher', 5, cam='133,103,146.5,-150,20', look='128.5,99.8,140', at=[(6, 'press use'), (140, 'release use')])
+    s.cmd('gamemode creative @p', 'clear @p', 'kill @e[type=minecraft:item,distance=..40]')
+    # flower pots on the deck
+    s.r('setblock 143 100 137 raft:potted_plumeria', 'setblock 144 100 137 raft:potted_tropical_orchid',
+        'setblock 145 100 137 raft:potted_aloe_vera')
+    s.spec()
+    s.go(144, 101.7, 134.6, 144, 100.4, 137, settle=10)
+    s.add('wait 6 render', 'still f_pots 1.25')
+    # the radio: its broadcast line in the chat (HUD on)
+    s.cmd('gamemode creative @p')
+    s.add('third off', 'hud on', 'chat on', 'cmd execute in raft:raftdim run tp @p 140.5 100 140.5 180 30', 'wait 3',
+          'faceblock raft:expedition_radio 4', 'use', 'wait 60 render', 'shot f_radio', 'hud off')
+    s.spec()
+    # penguins on an ice floe, close
+    s.add('cmd execute in raft:raftdim run tp @p -96 105 96', 'settle 200', 'find minecraft:snow_block 48')
+    s.go(v('fx', 3.2), v('fy', 2.6), v('fz', 3.2), v('fx'), v('fy', 1), v('fz'), settle=60)
+    s.r(*(f"summon raft:penguin {v('fx', dx)} {v('fy', 1)} {v('fz', dz)}" for dx, dz in ((0, 0), (1, -1), (-1, 1), (0.5, 1))))
+    s.add('wait 30')
+    s.clip('c_penguin', 5, look='raft:penguin', smooth=0.06)
+    s.kill('raft:penguin')
+    # ember crabs on black sand, close
+    s.add('height -402 -372', f"cmd execute in raft:raftdim run tp @p -402 {v('hy', 4)} -372", 'settle 200', 'find raft:black_sand 40')
+    s.go(v('fx', 3), v('fy', 2.6), v('fz', 3), v('fx'), v('fy', 1), v('fz'), settle=60)
+    s.r(*(f"summon raft:ember_crab {v('fx', dx)} {v('fy', 1)} {v('fz', dz)}" for dx, dz in ((0, 0), (1, -1), (-1, 0.5))))
+    s.add('wait 20')
+    s.clip('c_ember', 5, look='raft:ember_crab', smooth=0.06)
+    s.kill('raft:ember_crab')
+    return s
+
+
+def run_p2():
+    """Luecken, Teil 2: Helix innen und Terminal, Orchidee, Paradiesvogelblume, reife Ananas, Tidebreaker gross,
+    der Leviathan ueber Wasser."""
+    s = S2(deadline=85)
+    # Helix Research Station, inside the dry domes
+    s.go(-380, 75, -10, -380, 60, -10, settle=300)
+    s.cmd('gamemode creative @p')
+    s.fx('night_vision', 'conduit_power', 'water_breathing')
+    s.add('openloot story/helix_lab 90', 'wait 10', 'esc', 'wait 10 render', 'still p_helix_in 1.25')
+    s.add('nearblock raft:research_terminal 40 0 0 2', 'wait 5', 'faceblock raft:research_terminal 4', 'hud on', 'use',
+          'wait 12 render', 'shot s_helix_terminal', 'esc', 'hud off')
+    s.spec()
+    s.fx()
+    # island flowers in new terrain
+    s.add('cmd execute in raft:raftdim run tp @p -2304 140 2112', 'settle 300')
+    closeup(s, 'b_bird', 'raft:bird_of_paradise', h=2.2)
+    s.add('tpbiome raft:jungle_isle', 'settle 300')
+    closeup(s, 'b_orchid', 'raft:tropical_orchid')
+    # a ripe pineapple bush, picked
+    s.add('find minecraft:grass_block 24')
+    s.r(f"setblock {v('fx')} {v('fy', 1)} {v('fz')} raft:pineapple_bush[age=3]",
+        f"fill {v('fx', -1)} {v('fy', 2)} {v('fz', 1)} {v('fx', 1)} {v('fy', 4)} {v('fz', 3)} air")
+    s.add(f"cmd execute in raft:raftdim run tp @p {v('fx', 0.5)} {v('fy', 1)} {v('fz', 2.5)} 180 40")
+    s.actor('creative')
+    s.add('wait 10', 'faceblock raft:pineapple_bush 6')
+    s.clip('b_pineapple', 4, cam=f"{v('fx', 2.8)},{v('fy', 2.6)},{v('fz', 2.6)},135,30", look=f"{v('fx', 0.5)},{v('fy', 1.4)},{v('fz', 0.5)}",
+           at=[(40, 'faceblock raft:pineapple_bush 6'), (42, 'use')])
+    s.spec()
+    # the Tidebreaker, held, from the front
+    P = (-494.5, 69, -316.5)
+    s.fx('night_vision', 'water_breathing')
+    s.go(P[0], P[1] + 3.5, P[2] + 7, -497, 66, -327, settle=300)
+    s.add(f'cmd execute in raft:raftdim run tp @p {P[0]} {P[1]} {P[2]} 0 10')
+    s.actor('creative')
+    s.hands('raft:tidebreaker')
+    s.add(f"freecam {P[0] - 0.9} {P[1] + 1.55} {P[2] + 1.5} 150 22", 'wait 8 render', 'still s_tidebreaker 1.25', 'freecam off')
+    # the Leviathan: a survival player on the stone ring makes it rise, spit and leap; the camera above the pool
+    s.cmd('kill @e[type=raft:leviathan]', 'kill @e[type=raft:tideling]')
+    s.add(f'cmd execute in raft:raftdim run tp @p {P[0]} {P[1]} {P[2]} 180 6')
+    s.actor('survival')
+    s.fx('night_vision', 'water_breathing', 'regeneration', 'saturation', 'fire_resistance')
+    s.cmd('effect give @p minecraft:resistance infinite 4 true')
+    s.r('summon raft:leviathan -496.5 65 -326.5')
+    s.add('wait 200')
+    top = '-497,84,-312,180,55'
+    hold = [(k, f'cmd execute in raft:raftdim run tp @p {P[0]} {P[1]} {P[2]} 180 6') for k in range(0, 150, 15)]
+    s.clip('s_lev_wide', 5, cam=top, look='-497,64,-327', at=hold)
+    s.add('wait 100')
+    s.clip('s_lev_circle', 5, cam=top, look='raft:leviathan', smooth=0.08, at=hold)
+    s.add('wait 100')
+    s.clip('s_lev_leap', 5, cam=f'{P[0] + 5},{P[1] + 4},{P[2] + 5},150,20', look='raft:leviathan', smooth=0.08, at=hold)
+    s.add('wait 60')
+    s.clip('s_lev_strike', 5, cam=f'{P[0] + 4},{P[1] + 2.5},{P[2] + 4},150,12', look='raft:leviathan', smooth=0.08,
+           at=[(k, 'lookat raft:leviathan') for k in range(5, 150, 10)] + [(k + 1, 'attack') for k in range(5, 150, 10)])
+    s.add('cmd data merge entity @e[type=raft:leviathan,limit=1] {Health:280f}', 'wait 60')
+    s.clip('s_lev_roar', 5, cam=top, look='raft:leviathan', smooth=0.08, at=hold)
+    s.add('cmd data merge entity @e[type=raft:leviathan,limit=1] {Health:100f}', 'wait 40')
+    s.clip('s_lev_death', 5, cam=top, look='raft:leviathan', smooth=0.06,
+           at=hold[:1] + [(20, 'cmd damage @e[type=raft:leviathan,limit=1] 2000 minecraft:generic_kill by @p')])
+    s.add('wait 60')
+    s.spec()
+    return s
+
+
+RUNS = {'a': run_a, 'b': run_b, 'c': run_c, 'd': run_d, 'e': run_e, 'f': run_f, 'g': run_g, 'w': run_w, 'x': run_x, 'y': run_y, 'z': run_z, 'n': run_n, 'r': run_r, 'v': run_v, 'u': run_u, 'p1': run_p1, 'p2': run_p2}
 
 if __name__ == '__main__':
     if sys.argv[2].endswith('.txt'):

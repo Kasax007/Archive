@@ -374,7 +374,7 @@ DOC = [
          text="And *Doctor Elin Lund* studies the weather and the wildlife at the iceberg outpost. She offers you a cup of "
               "tea with honey, sells harpoons, wetsuits, flippers and oxygen tanks, and buys jellies, angler lures, "
               "shark teeth and leviathan scales.",
-         shots=[('n_lund_work', None), ('n_lund_greet', 'She offers you'), ('n_lund_trade', 'sells harpoons')], pause=1.6),
+         shots=[('n_lund_talk', None), ('n_lund_greet', 'She offers you'), ('n_lund_trade', 'sells harpoons')], pause=1.6),
     # ------------------------------------------------------------------ the story
     dict(id='S0', ch='THE *STORY*', music='journey',
          text="Now let us follow the story, the way a player would. From here on, there are spoilers.",

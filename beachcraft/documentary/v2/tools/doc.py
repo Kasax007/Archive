@@ -591,6 +591,11 @@ def render_parallel(shots, caps, prefix, total, workers=4):
     only = {int(x) for x in os.environ.get('DOC_ONLY', '').split(',') if x.strip()}
     nf = int(round(total * FPS))
     bounds = [int(round(nf * i / nparts)) for i in range(nparts + 1)]
+    keep = int(os.environ.get('DOC_KEEP_BOUNDS', '0'))     # the first parts end where they ended last time
+    if keep and os.path.exists(f'{prefix}_parts.json'):
+        old = [int(round(b * FPS)) for b in json.load(open(f'{prefix}_parts.json'))['bounds_s']]
+        rest = nparts - keep
+        bounds = old[:keep + 1] + [int(round(old[keep] + (nf - old[keep]) * i / rest)) for i in range(1, rest + 1)]
     todo = [k for k in range(nparts) if (k in only if only else True)
             or not os.path.exists(f'{prefix}_part{k:02d}_captions.mp4')]
     jobs = [(k, bounds[k], bounds[k + 1], shots, caps, prefix, total) for k in todo]

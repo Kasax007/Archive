@@ -336,7 +336,7 @@ DOC = [
     dict(id='N1', ch=None,
          text="*Keeper Fenn* still tends the lighthouse. In Saltmere, *Nalu* waits for news of his grandmother, and "
               "*Old Tamo* fishes from the pier. *Doctor Voss* studies the tablets of the Ashen Forge.",
-         shots=[('n_fenn_work|p_lighthouse_lens', None), ('n_nalu_work|n_nalu_talk|p_saltmere_deck', 'In Saltmere'), ('n_tamo_work|p_saltmere_air', 'Old Tamo'), ('n_voss_work|p_forge_in', 'Doctor Voss')],
+         shots=[('n_fenn_work|p_lighthouse_lens', None), ('n_nalu_work|n_nalu_talk|p_saltmere_deck', 'In Saltmere'), ('n_tamo_work|p_saltmere_air', 'Old Tamo'), ('p_forge_in', 'Doctor Voss')],
          pause=0.8),
     dict(id='N2', ch=None,
          text="*Teo* runs the tiki bar, *Kai* waits by his campfire, *Doctor Lund* measures the ice at the iceberg "
@@ -345,8 +345,8 @@ DOC = [
          pause=0.8),
     dict(id='N3', ch=None,
          text="Talk to them, and they tell you about their place, give you a hint for your next step, and share the "
-              "rumours of the sea. Most of them have a small gift for you, and all of them like to *trade*.",
-         shots=[('n_fenn_greet|s_lighthouse_in', None), ('n_nalu_next|s_journal', 'give you a hint'), ('n_fenn_rumor|p_shack_crate', 'and share'), ('n_nalu_gift|p_camp_chest', 'Most of them'), ('n_fenn_trade|p_rig_chest', 'and all of them')], pause=1.6),
+              "rumours of the sea. Most of them have a small gift for you, and most of them like to *trade*.",
+         shots=[('n_fenn_greet', None), ('n_nalu_next', 'they tell you'), ('n_teo_greet', 'give you a hint'), ('n_kai_trade', 'and share'), ('n_lund_trade', 'Most of them'), ('n_okafor_gift', 'a small gift'), ('n_fenn_rumor', 'like to trade')], pause=7.0),
 
     # ------------------------------------------------------------------ the story
     dict(id='S0', ch='THE *STORY*', music='journey',

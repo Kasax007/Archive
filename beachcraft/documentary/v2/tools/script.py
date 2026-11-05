@@ -77,7 +77,7 @@ DOC = [
     dict(id='B10', ch=None,
          text="*Jungle isles* are warm and wet, with jungle trees and bamboo, tropical ferns, orchids, red "
               "heliconias, birds of paradise and wild pineapple bushes.",
-         shots=[('b_jungle_air', None), ('b_orchid', 'orchids'), ('b_heliconia', 'red heliconias')], pause=0.8),
+         shots=[('b_jungle_air', None), ('b_orchid', 'orchids'), ('b_heliconia', 'red heliconias'), ('b_bird', 'birds of paradise')], pause=0.8),
     dict(id='B11', ch=None,
          text="*Mangrove isles* are low and muddy, with tangled roots, lily pads and white spider lilies.",
          shots=[('b_mangrove', None), ('b_spiderlily', 'white spider')], pause=0.8),
@@ -91,7 +91,7 @@ DOC = [
     dict(id='B14', ch=None,
          text="A *sea urchin* hurts when you touch it, and drops spines. A wild pineapple bush is ripe when its "
               "fruit turns golden. And a bubble vent makes a bubble column, where divers can catch their breath.",
-         shots=[('b_urchin', None), ('b_jungle_air', 'A wild pineapple'), ('b_vent', 'And a bubble')], pause=1.4),
+         shots=[('b_urchin', None), ('b_pineapple', 'A wild pineapple'), ('b_vent', 'And a bubble')], pause=1.4),
 
     # ------------------------------------------------------------------ the places
     dict(id='P0', ch='THE *PLACES*', music='infinite',
@@ -437,7 +437,7 @@ DOC = [
     dict(id='S16', ch=None, music='hope',
          text="Placed in the water, the Heart of the Tide gives every swimmer nearby conduit power and dolphin's "
               "grace. Four scales, titanium and a trident make the *Tidebreaker*.",
-         shots=[('s_heart', None), ('i_tab_story', 'Four scales')], pause=0.8),
+         shots=[('s_heart', None), ('s_tidebreaker', 'Four scales')], pause=0.8),
     dict(id='S17', ch=None,
          text="And the journal has one last entry. The sea is calm. *Thank you, keeper of the tides.*",
          shots=[('s_end', None)], pause=1.6),

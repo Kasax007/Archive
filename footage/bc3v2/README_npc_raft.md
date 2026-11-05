@@ -56,8 +56,9 @@ three-high sail, two oars, outboard motor (fuelled), helm, two ship lanterns.
 | n_okafor_trade.mp4 | Okafor's trade screen (tech parts) | 2.5 |
 | n_okafor_gift.mp4 | The circuit board in hand, Okafor in front | 2.5 |
 
-Still coming: `r_sea_chest.mp4` (open the chest at sea and move items; the survival take did not open the chest,
-retake planned).
+Not filmed: `r_sea_chest` (in this world the chest at sea did not open: a stray second chest from a retake stood
+between the player and the chest, and the clean-up commands failed). The furnace, lever and farm clips show using
+blocks at sea instead.
 
 ## NPCs (module npc)
 
@@ -69,6 +70,7 @@ the person turns to them, the dialogue panel opens at the end (over-the-shoulder
 | File | What it shows | s |
 | --- | --- | --- |
 | n_fenn_place.mp4 | Orbit over the Old Lighthouse on its jungle isle, the keeper's cottage below | 4.5 |
+| n_fenn_talk.mp4 | The player talks to Fenn in his cottage, he turns to them and the dialogue opens (second meeting: "So you've seen Saltmere" line) | 3.0 |
 | n_fenn_work.mp4 | Keeper Tobias Fenn in his cottage at the Old Lighthouse, walking between desk and stove | 4.5 |
 | n_fenn_greet.mp4 | Fenn's greeting, "You received: Spyglass" | 2.5 |
 | n_fenn_next.mp4 | Hint: sail for Saltmere | 2.5 |

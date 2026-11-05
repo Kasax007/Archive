@@ -426,7 +426,7 @@ DOC = [
     dict(id='S13', ch=None,
          text="It leaps across the stone ring, slams down, and lies *stranded* for four seconds. That is the moment "
               "to strike.",
-         shots=[('s_lev_leap', None), ('s_lev_strike', 'That is the moment')], pause=1.0),
+         shots=[('s_lev_leap', None), ('s_lev_strike3', 'That is the moment')], pause=1.0),
     dict(id='S14', ch=None,
          text="Below half health, it roars and calls the *tidelings*, and stirs a whirlpool that pulls you towards "
               "the pool. Below a quarter, it gets faster still.",

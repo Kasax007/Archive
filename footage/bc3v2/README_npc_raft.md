@@ -85,6 +85,7 @@ the person turns to them, the dialogue panel opens at the end (over-the-shoulder
 | n_nalu_rumor.mp4 | Rumour: a light on the fire island where the old forge stands | 2.5 |
 | n_nalu_trade.mp4 | Nalu's trade screen (Saltmere crafts for pearls) | 2.5 |
 | n_nalu_gift.mp4 | The water breathing potion in hand, Nalu in front | 2.5 |
+| n_voss_work.mp4 | World `bcnpc4`, hall re-placed as designed: Dr. Imara Voss reading her notes in her storeroom (anvil, cauldron, chests, ore blocks), static camera inside the room (night vision: the room is dark) | 4.3 |
 | n_voss_talk.mp4 | World `bcnpc4`, hall re-placed as designed (`place template raft:ashen_forge/hall -1184 163 528 counterclockwise_90`), Voss summoned at her spot: the player meets her in the storeroom (chests, anvil, ore blocks), the first-meeting dialogue opens | 3.0 |
 | n_voss_greet.mp4 | First meeting: "Stay back, I... oh. You're not crew. ... I'm Imara Voss. Yes, that Voss. I cracked the Tide Seal", "You received: Potion of Fire Resistance" | 2.5 |
 | n_voss_next.mp4 | Hint: the Coral Sigil in the shrine | 2.5 |

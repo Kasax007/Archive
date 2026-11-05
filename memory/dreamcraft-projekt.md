@@ -150,6 +150,9 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
 
 - **Stand 4.11. abends:** Challenge Craft Modpack v5 (Upgraded Iron Chests + Storage Drawers) gebaut und Server-Test ok, Upload erst nach der Testrunde (Wunsch des Nutzers). Dreamcraft V1.4 in Arbeit: Upgraded Iron Chests + Kapitel „Quality of Life“ (344 Quests, 15 Kapitel). Beach Craft: Fixes + Doku v2 (Agent), Floß-Bau, Sounds/Musik, NPCs (je ein Agent, Worktrees /home/user/wt/*, Branches feature/*), danach Merge nach 26.3 und Release als 3.1.0.
 
+- **Beach Craft 3.1.0+26.3 (5.11.):** Floß selbst bauen (Werft: Blöcke laufen beim Segeln weiter), Sounds und Musik (Kevin MacLeod, Credits im Jar und in der Beschreibung), 8 NPCs, dazu Tag/Nacht, Coral Temple, keine harten Kanten, neue Pflanzen und Deko. Gemergt nach 26.3 (cf5ceb8), Smoke-Test 15/15, nicht hochgeladen. Jar $SP/release_bc31/. Offen: Spieler unter Deck nach Teleport auf treibendes Floß (Branch fix/raft-deck-arrival).
+- **Testrunde 5.11.:** Quest-Prüflauf aller 344 Dreamcraft-Quests im Spiel bestanden (nach Harness-Fixes; Mutant-Zombie-Text ergänzt), Beach-Craft-Checks bestanden (Deck, Hängematte, Pets, Sounds, Dream Star, Strukturen).
+
 ## Was der Nutzer will (hier gelernt)
 
 - Ohne Rückfragen durcharbeiten; höchstens ein, wenn nötig zwei Subagenten (Wunsch vom 4.11.2026).

@@ -64,6 +64,15 @@ the person turns to them, the dialogue panel opens at the end (over-the-shoulder
 | n_nalu_rumor.mp4 | Rumour: a light on the fire island where the old forge stands | 2.5 |
 | n_nalu_trade.mp4 | Nalu's trade screen (Saltmere crafts for pearls) | 2.5 |
 | n_nalu_gift.mp4 | The water breathing potion in hand, Nalu in front | 2.5 |
+| n_tamo_place.mp4 | Orbit over the Saltmere docks (pier, huts, boats) | 4.5 |
+| n_tamo_work.mp4 | Old Tamo fishing from the pier (rod, casts) | 4.5 |
+| n_tamo_talk.mp4 | The player talks to Tamo on the pier, dialogue opens | 3.0 |
+| n_tamo_greet.mp4 | Tamo's greeting, "You received: Cooked Cod" | 2.5 |
+| n_tamo_next.mp4 | Hint: the Coral Sigil in the shrine | 2.5 |
+| n_tamo_rumor.mp4 | Rumour: Teo's beach bar on the palm isles | 2.5 |
+| n_tamo_trade.mp4 | Tamo's trade screen (buys fish, sells a rod and more) | 2.5 |
+| n_tamo_gift.mp4 | Cooked cod in hand, Tamo in front | 2.5 |
+| n_voss_work.mp4 | Dr. Imara Voss reading her notes in the storeroom of the Ashen Forge (dark: night vision for the camera). Note: in this seed her template spot is inside volcanic rock; for filming she was moved two blocks onto the open floor and a 1×2 gap was cleared for the player | 4.5 |
 
-Still coming: n_fenn_place, n_fenn_talk, n_nalu_place, n_nalu_work (retakes), and Old Tamo, Dr. Voss, Teo, Kai,
-Dr. Lund, Okafor (place, work, talk, greet, next, rumor, trade, gift each; Voss has no trades).
+Still coming: n_teo_work, n_kai_work, n_lund_work, n_okafor_work (one portrait each), then optional extras
+(r_sea_chest, n_fenn_place / n_fenn_talk / n_nalu_place / n_nalu_work / n_voss_place retakes).

@@ -332,21 +332,21 @@ DOC = [
          shots=[('r_sail_wide', None), ('r_anchor', 'Use the wheel'), ('r_anchored', 'turns back')], pause=1.4),
     dict(id='N0', ch='PEOPLE OF THE *SEA*', music='wholesome',
          text="A few people stayed behind on the Endless Sea, and they are glad to see a new face.",
-         shots=[('n_keeper_fenn_place', None)], pause=0.8),
+         shots=[('n_fenn_place|p_lighthouse_air', None)], pause=0.8),
     dict(id='N1', ch=None,
          text="*Keeper Fenn* still tends the lighthouse. In Saltmere, *Nalu* waits for news of his grandmother, and "
               "*Old Tamo* fishes from the pier. *Doctor Voss* studies the tablets of the Ashen Forge.",
-         shots=[('n_keeper_fenn_work', None), ('n_nalu_work', 'In Saltmere'), ('n_old_tamo_work', 'Old Tamo'), ('n_dr_voss_work', 'Doctor Voss')],
+         shots=[('n_fenn_work|p_lighthouse_lens', None), ('n_nalu_work|n_nalu_talk|p_saltmere_deck', 'In Saltmere'), ('n_tamo_work|p_saltmere_air', 'Old Tamo'), ('n_voss_work|p_forge_in', 'Doctor Voss')],
          pause=0.8),
     dict(id='N2', ch=None,
          text="*Teo* runs the tiki bar, *Kai* waits by his campfire, *Doctor Lund* measures the ice at the iceberg "
               "outpost, and *Patience Okafor* keeps the old rig running.",
-         shots=[('n_teo_work', None), ('n_kai_work', 'Kai waits'), ('n_dr_lund_work', 'Doctor Lund'), ('n_okafor_work', 'and Patience')],
+         shots=[('n_teo_work|p_shack', None), ('n_kai_work|p_camp', 'Kai waits'), ('n_lund_work|p_iceberg_hut', 'Doctor Lund'), ('n_okafor_work|p_rig_deck', 'and Patience')],
          pause=0.8),
     dict(id='N3', ch=None,
          text="Talk to them, and they tell you about their place, give you a hint for your next step, and share the "
               "rumours of the sea. Most of them have a small gift for you, and all of them like to *trade*.",
-         shots=[('n_keeper_fenn_talk', None), ('n_nalu_next', 'give you a hint'), ('n_teo_rumor', 'and share'), ('n_kai_gift', 'Most of them'), ('n_okafor_trade', 'and all of them')], pause=1.6),
+         shots=[('n_fenn_greet|s_lighthouse_in', None), ('n_nalu_next|s_journal', 'give you a hint'), ('n_fenn_rumor|p_shack_crate', 'and share'), ('n_nalu_gift|p_camp_chest', 'Most of them'), ('n_fenn_trade|p_rig_chest', 'and all of them')], pause=1.6),
 
     # ------------------------------------------------------------------ the story
     dict(id='S0', ch='THE *STORY*', music='journey',

@@ -72,7 +72,14 @@ opts_file()
 # ------------------------------------------------------------------ sources
 
 def find_source(name):
-    """-> ('still', path) | ('clip', path, fps) | ('card', dir, fps) | None"""
+    """-> ('still', path) | ('clip', path, fps) | ('card', dir, fps) | None
+    'a|b': a, or b while a is not there yet (placeholders for footage that is still being filmed elsewhere)"""
+    if '|' in name:
+        for alt in name.split('|'):
+            s = find_source(alt)
+            if s:
+                return s
+        return None
     if name == 'endcard':
         d = WORK + '/cards/endcard'
         return ('clip', d, 60.0) if os.path.isdir(d) else None
@@ -407,10 +414,11 @@ class Shot:
     def setup(self, k):
         L = self.t1 - self.t0 + D
         self.span = L
+        key = next((a for a in self.name.split('|') if find_source(a)), self.name)    # placeholder names a|b
         if self.kind == 'still':
-            gui = self.name in GUI or (still_image(self.src[1]).size == (W, H) and 'zoom' not in self.opts)
+            gui = key in GUI or (still_image(self.src[1]).size == (W, H) and 'zoom' not in self.opts)
             if gui:
-                z, fc = GUI.get(self.name, (1.75, (0.5, 0.45)))
+                z, fc = GUI.get(key, (1.75, (0.5, 0.45)))
                 self.zoom, self.focus = (z, z * 1.02), (tuple(fc), tuple(fc))
             elif self.name in LABELS:
                 self.zoom, self.focus = (1.0, 1.025), ((0.5, 0.5), (0.5, 0.5))
@@ -574,22 +582,30 @@ def _render_part(args):
 
 
 def render_parallel(shots, caps, prefix, total, workers=4):
+    """DOC_PARTS (default 12) parts of equal length, rendered by `workers` processes (a fresh one per part). The part
+    files stay: with DOC_ONLY=3,4 only those parts are rendered again (e.g. after new footage arrived for them), the
+    others are reused; then all are joined."""
     import multiprocessing as mp
+    import time as _time
+    nparts = int(os.environ.get('DOC_PARTS', '12'))
+    only = {int(x) for x in os.environ.get('DOC_ONLY', '').split(',') if x.strip()}
     nf = int(round(total * FPS))
-    bounds = [int(round(nf * i / workers)) for i in range(workers + 1)]
-    jobs = [(k, bounds[k], bounds[k + 1], shots, caps, prefix, total) for k in range(workers)]
-    with mp.get_context('fork').Pool(workers) as pool:
+    bounds = [int(round(nf * i / nparts)) for i in range(nparts + 1)]
+    todo = [k for k in range(nparts) if (k in only if only else True)
+            or not os.path.exists(f'{prefix}_part{k:02d}_captions.mp4')]
+    jobs = [(k, bounds[k], bounds[k + 1], shots, caps, prefix, total) for k in todo]
+    json.dump({'parts': nparts, 'bounds_s': [b / FPS for b in bounds]}, open(f'{prefix}_parts.json', 'w'))
+    t0 = _time.time()
+    with mp.get_context('fork').Pool(workers, maxtasksperchild=1) as pool:
         for k in pool.imap_unordered(_render_part, jobs):
-            print('  part', k, 'done', flush=True)
+            print(f'  part {k} done ({bounds[k] / FPS:.0f}-{bounds[k + 1] / FPS:.0f} s) after {_time.time() - t0:.0f} s', flush=True)
     for vid in ('captions',):
         lst = f'{prefix}_{vid}_parts.txt'
         with open(lst, 'w') as f:
-            for k in range(workers):
+            for k in range(nparts):
                 f.write(f"file '{prefix}_part{k:02d}_{vid}.mp4'\n")
         subprocess.run(['ffmpeg', '-v', 'error', '-y', '-f', 'concat', '-safe', '0', '-i', lst, '-c', 'copy',
                         f'{prefix}_{vid}_video.mp4'], check=True)
-        for k in range(workers):
-            os.remove(f'{prefix}_part{k:02d}_{vid}.mp4')
         os.remove(lst)
 
 

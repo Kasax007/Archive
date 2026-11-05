@@ -39,6 +39,7 @@ three-high sail, two oars, outboard motor (fuelled), helm, two ship lanterns.
 | r_sea_place.mp4 | At sea: places a teak plank on the deck | 3.0 |
 | r_anchor.mp4 | Next to the helm, sneak + use: drop anchor, the raft lines up with the grid and turns back into blocks | 5.0 |
 | r_anchored.mp4 | The anchored raft as blocks again among the ice floes (the run timed out: only 2 s) | 2.0 |
+| n_lund_place.mp4 | Orbit around the iceberg outpost among the frost floes | 4.5 |
 | n_lund_work.mp4 | Dr. Elin Lund at the research terminal in her iceberg outpost hut | 4.5 |
 | n_lund_talk.mp4 | The player talks to Lund in the hut, dialogue opens | 3.0 |
 | n_lund_greet.mp4 | Lund's greeting, "You received: Honey Bottle" (her "tea") | 2.5 |
@@ -67,12 +68,15 @@ the person turns to them, the dialogue panel opens at the end (over-the-shoulder
 
 | File | What it shows | s |
 | --- | --- | --- |
+| n_fenn_place.mp4 | Orbit over the Old Lighthouse on its jungle isle, the keeper's cottage below | 4.5 |
 | n_fenn_work.mp4 | Keeper Tobias Fenn in his cottage at the Old Lighthouse, walking between desk and stove | 4.5 |
 | n_fenn_greet.mp4 | Fenn's greeting, "You received: Spyglass" | 2.5 |
 | n_fenn_next.mp4 | Hint: sail for Saltmere | 2.5 |
 | n_fenn_rumor.mp4 | Rumour: the old Meridian rig | 2.5 |
 | n_fenn_trade.mp4 | Fenn's trade screen | 2.5 |
 | n_fenn_gift.mp4 | The spyglass in hand, Fenn in front | 2.5 |
+| n_nalu_place.mp4 | High orbit over Saltmere, the stilt village on the coral reef | 4.5 |
+| n_nalu_work.mp4 | Nalu on the elder's veranda (close, she walks towards the camera) | 4.5 |
 | n_nalu_talk.mp4 | The player talks to Nalu on the elder's veranda in Saltmere, dialogue opens | 3.0 |
 | n_nalu_greet.mp4 | Nalu's greeting, "You received: Potion of Water Breathing" | 2.5 |
 | n_nalu_next.mp4 | Hint: the Coral Sigil in Saltmere's shrine | 2.5 |

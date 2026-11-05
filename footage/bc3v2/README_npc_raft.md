@@ -98,6 +98,13 @@ the person turns to them, the dialogue panel opens at the end (over-the-shoulder
 | n_voss_next.mp4 | Hint: the Coral Sigil in the shrine | 2.5 |
 | n_voss_rumor.mp4 | Rumour: the Leviathan's back breaking the water | 2.5 |
 | n_voss_gift.mp4 | The fire resistance potion in hand, Voss in front (she has no trades) | 2.5 |
+| n_teo_place.mp4 | Orbit over the tiki-bar beach shack on the palm isles | 4.5 |
+| n_teo_talk.mp4 | The player talks to Teo across the bar, dialogue opens | 3.0 |
+| n_teo_greet.mp4 | Teo's greeting ("the first drink is on the house"), "You received: Pina Colada" | 2.5 |
+| n_teo_next.mp4 | Hint: the Coral Sigil in the shrine | 2.5 |
+| n_teo_rumor.mp4 | Rumour: seagulls steal anything not nailed down | 2.5 |
+| n_teo_trade.mp4 | Teo's trade screen (drinks and island food) | 2.5 |
+| n_teo_gift.mp4 | The piña colada in hand, Teo in front | 2.5 |
 | n_teo_work.mp4 | Teo at work behind the counter of his tiki bar (beach shack on the palm isles) | 4.5 |
 | n_kai_work.mp4 | Kai, the SOS castaway, sitting at his camp fire by the tent (smoke drifts past at the end) | 4.5 |
 

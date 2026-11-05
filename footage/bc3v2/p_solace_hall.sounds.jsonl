@@ -1,0 +1,1 @@
+{"t": 2.950, "event": "minecraft:block.grass.break", "file": "minecraft:sounds/dig/grass4.ogg", "volume": 1.000, "pitch": 0.800, "x": -1073.50, "y": 101.50, "z": 216.50, "attenuation": "LINEAR", "relative": false, "distance": 16, "source": "block", "cam_x": -1046.97, "cam_y": 126.00, "cam_z": 233.15}

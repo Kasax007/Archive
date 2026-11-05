@@ -306,7 +306,7 @@ def run_e():
     """Overworld (Strand mit Treibholz, Portal, Reise), Ankunftsplattform mit Kiste und Journal, Almanach, Tabs; Deck auf
     offener See (134..146 / 99): Expedition-Floss, Boote, Kanone, Windturbine, Sitze, Haengematte, Grill, Beete,
     Maschinen, Terminal, Funk; Tauchen (Anzeige, Lampe, Harpune, Scooter); Lichter bei Nacht."""
-    s = S2(deadline=330)
+    s = S2(deadline=95)
     O = 'minecraft:overworld'
     s.add('tpbiome minecraft:beach minecraft:overworld', 'settle 400', 'find raft:driftwood_log 64')
     s.cmd('execute in minecraft:overworld run time set 6000')
@@ -348,6 +348,7 @@ def run_e():
                             ('raft:bc_creatures', 0, 'i_tab_creatures'), ('raft:bc_story', 0, 'i_tab_story'),
                             ('raft:raft', 0, 'i_tab_raft')):
         s.add(f'tab {tab} {rows}', 'wait 4 render', f'shot {name}', 'esc')
+    s.part()
     # the deck on the open sea
     s.cmd('gamemode spectator @p')
     s.go(140.5, 114, 152, 140.5, 100, 140, settle=420)
@@ -417,6 +418,7 @@ def run_e():
           'faceblock raft:research_terminal 4', 'use', 'wait 8 render', 'shot f_terminal', 'esc')
     s.add('cmd execute in raft:raftdim run tp @p 140.5 100 140.5 180 30', 'wait 3', 'faceblock raft:expedition_radio 4', 'use',
           'wait 30 render', 'shot f_radio', 'hud off')
+    s.part()
     # diving: gauge (first person), the diver (free camera), lamp, harpoon, scooter
     s.gear('dive')
     s.cmd('gamemode survival @p', 'effect give @p minecraft:resistance infinite 4 true')
@@ -450,7 +452,7 @@ def run_e():
 def run_f():
     """Ende der Story: die vier Siegel in den Altar des Korallentempels (scout), das Gezeitensiegel, die Kuppel, der
     Leviathan (freie Kamera, Spieler kaempft auf dem Steinring), Belohnungen, Tidebreaker, letzte Journalseite."""
-    s = S2(deadline=300)
+    s = S2(deadline=95)
     s.add('scout raft:coral_temple', 'find raft:tidewarden_altar 90')
     s.fx('night_vision', 'water_breathing')
     s.go(v('fx'), v('fy', 3), v('fz', 4), v('fx'), v('fy'), v('fz'), settle=420)
@@ -472,6 +474,7 @@ def run_f():
     s.spec()
     s.fx('night_vision', 'water_breathing')
     s.dolly('s_dome', 6, (-497, 75, -305), (-497, 74, -311), (-497, 66, -327), settle=60)
+    s.part()
     # the Leviathan: the player stands on the stone ring, the camera is free
     s.cmd('kill @e[type=raft:leviathan]', 'kill @e[type=raft:tideling]')
     P = (-494.5, 69, -316.5)
@@ -544,6 +547,7 @@ def c_rest(s):
     for name, block in (('b_glory', 'raft:beach_morning_glory'), ('b_aloe', 'raft:aloe_vera'), ('b_hibiscus', 'raft:hibiscus'),
                         ('b_plumeria', 'raft:plumeria'), ('b_seaoats', 'raft:sea_oats'), ('b_bird', 'raft:bird_of_paradise')):
         flower(s, name, block, r=128)
+    s.part()
     # volcanic isle and ember crabs
     s.orb('b_volcano', 8, (-400, 108, -300), 75, 152, 40, start=330)
     s.add('height -402 -372')
@@ -578,7 +582,7 @@ def c_rest(s):
 def run_g():
     """Nachholen: Kisten-Bildschirme aus A und B (dort noch als Zuschauer, der keine Kisten oeffnen kann), Blumen der
     Dschungel- und Mangroveninseln in neu erzeugtem Gelaende (mit der neuen Blumen-Verteilung)."""
-    s = S2(deadline=200)
+    s = S2(deadline=95)
     s.go(172, 112, 10, 172, 104, -15, settle=300)
     s.loot('story/saltmere_elder', 80, 's_saltmere_elder')
     s.loot('story/saltmere_shrine', 80, 's_saltmere_shrine')
@@ -602,6 +606,13 @@ def run_g():
     under(s)
     s.orb('p_temple_air', 6, (v('cx'), v('y0', 11), v('cz')), 30, v('y0', 19), 55, start=160, settle=300)
     s.fx()
+    # aerials again, with the chunks around the whole orbit loaded first (render distance 12, below the clouds)
+    s.add('rd 12')
+    s.go(-1011, 150, 200, -1011, 100, 200, settle=600)
+    s.orb('p_solace_air', 6, (-1011, 100, 200), 85, 150, 30, start=110, settle=300)
+    s.go(120, 170, 60, 120, 100, 60, settle=600)
+    s.orb('b_archi', 6, (120, 100, 60), 110, 175, 25, start=200, settle=300)
+    s.add('rd 10')
     # penguins on a natural ice floe of the frost floes
     s.add('cmd execute in raft:raftdim run tp @p -96 105 96', 'settle 200', 'find minecraft:snow_block 48')
     s.go(v('fx', 5), v('fy', 3.2), v('fz', 5), v('fx'), v('fy', 1), v('fz'), settle=60)
@@ -609,6 +620,7 @@ def run_g():
     s.add('wait 40')
     s.clip('c_penguin', 5, look='raft:penguin', smooth=0.06)
     s.kill('raft:penguin')
+    s.part()
     # jungle and mangrove flowers in new terrain (far from everything filmed so far)
     s.add('cmd execute in raft:raftdim run tp @p 2400 160 -2400', 'tpbiome raft:jungle_isle', 'where', 'settle 300')
     for name, block in (('b_orchid', 'raft:tropical_orchid'), ('b_heliconia', 'raft:heliconia'), ('b_pineapple', 'raft:pineapple_bush')):
@@ -616,11 +628,21 @@ def run_g():
     s.add('tpbiome raft:mangrove_isle', 'where', 'settle 300')
     flower(s, 'b_spiderlily', 'raft:spider_lily', r=128)
     c_rest(s)
+    # the Ashen Forge from below the clouds; the wreck graveyard around one of its galleons
+    s.add('scout raft:ashen_forge')
+    s.orbit('p_forge_air', 6, 70, -22, 40, start=160, look_dy=-8)
+    s.add('scout raft:wreck_galleon -1264 372')
+    under(s)
+    s.orb('b_wrecks', 6, (v('cx'), v('cy'), v('cz')), 30, v('cy', 8), 50, start=120, settle=420)
+    s.fx()
     return s
 
 
 RUNS = {'a': run_a, 'b': run_b, 'c': run_c, 'd': run_d, 'e': run_e, 'f': run_f, 'g': run_g}
 
 if __name__ == '__main__':
-    n = RUNS[sys.argv[1]]().write(sys.argv[2])
-    print(sys.argv[1], n, 'lines')
+    if sys.argv[2].endswith('.txt'):
+        n = RUNS[sys.argv[1]]().write(sys.argv[2])
+        print(sys.argv[1], n, 'lines')
+    else:
+        print(sys.argv[1], RUNS[sys.argv[1]]().write_parts(sys.argv[2]), 'parts')

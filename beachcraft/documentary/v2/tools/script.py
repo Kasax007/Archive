@@ -328,7 +328,7 @@ DOC = [
     dict(id='S4', ch=None,
          text="The lighthouse stands on its island. In the keeper's cottage lies the logbook of *Tobias Fenn*, "
               "and a chart to the stilt village of Saltmere.",
-         shots=[('s_lighthouse_way', None), ('s_lighthouse_in', 'In the keeper'), ('s_lighthouse', 'and a chart')],
+         shots=[('s_lighthouse_way', None), ('s_lighthouse_in', 'cottage lies'), ('s_lighthouse', 'and a chart')],
          pause=2.0),
     dict(id='S5', ch=None,
          text="In *Saltmere*, the elder's hut holds Nana Kalea's letters, a diving helmet and the next chart. "

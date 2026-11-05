@@ -1,0 +1,1 @@
+{"t": 11.100, "event": "minecraft:block.beacon.ambient", "file": "minecraft:sounds/block/beacon/ambient.ogg", "volume": 0.108, "pitch": 1.861, "x": -1078.50, "y": 94.50, "z": 208.50, "attenuation": "LINEAR", "relative": false, "distance": 7, "source": "block", "cam_x": -1071.50, "cam_y": 90.62, "cam_z": 209.94}

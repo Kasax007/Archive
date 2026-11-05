@@ -25,12 +25,13 @@ def v(name, off=0.0):
 
 class S2(Script):
     def __init__(self, deadline=55.0, world='bcdoc2', rd=10, new=False):
-        self.L = ([f'world beachcraft', f'keep {world}'] if new else [f'open {world}']) + [
+        self.L = ([f'world beachcraft', f'keep {world}'] if new else [f'open {world}', 'respawn']) + [
             f'deadline {deadline}', 'size 1920 1080', 'gui 2', f'rd {rd}', 'hud off', 'fov 70', 'gamma 0.5',
             'cmd gamerule send_command_feedback false', 'cmd gamerule show_advancement_messages false',
             'cmd gamerule spawn_monsters false', 'cmd advancement grant @p everything', 'cmd recipe give @p *',
             'cmd time set 6000', 'cmd weather clear', 'cmd effect clear @p']
         self.spec()
+        self.H = len(self.L)            # header: repeated at the start of every part (see write_parts)
 
     def spec(self):
         self.cmd('gamemode spectator @p')
@@ -87,6 +88,23 @@ class S2(Script):
 
     def lines(self):
         return self.L + ['where']
+
+    def part(self):
+        """cut here: the script is written as several shorter runs (other tests can take the build lock between)"""
+        self.L.append('#PART')
+        return self
+
+    def write_parts(self, prefix):
+        """prefix1.txt, prefix2.txt ... : header + one section each"""
+        head, body, parts = self.L[:self.H], self.L[self.H:], [[]]
+        for l in body:
+            if l == '#PART':
+                parts.append([])
+            else:
+                parts[-1].append(l)
+        for k, p in enumerate(parts):
+            open(f'{prefix}{k + 1}.txt', 'w').write('\n'.join(head + p + ['where']) + '\n')
+        return len(parts)
 
 
 def _norm(s):

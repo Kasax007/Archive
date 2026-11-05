@@ -1,6 +1,15 @@
 # 08 – Offen und zu testen (Checkliste)
 
-Stand 4.11.2026. Alle Repos sind gepusht (lokaler Stand = GitHub). Seit dem 4.11. sind Beach Craft 3.0.0, Tamagotchi 1.2.0 und Dreamcraft V1.3 hochgeladen.
+Stand 5.11.2026. Alle Repos sind gepusht (lokaler Stand = GitHub). Seit dem 4.11. sind Beach Craft 3.0.0, Tamagotchi 1.2.0 und Dreamcraft V1.3 hochgeladen.
+
+**Testrunde 5.11. (automatisch im Spiel):** Alle 344 Dreamcraft-Quests lassen sich erfüllen und abholen (Szene `qrun`,
+`tools/qrun_plan.py`; 317 im ersten Lauf, die 27 übrigen nach Harness-Fixes im zweiten). Die statische Quellen-Prüfung
+(`tools/qsource.py`) findet für 292 von 298 Quest-Items eine Quelle im Überlebensmodus; die 6 übrigen kommen aus
+Spielmechaniken oder per Code eingefügter Beute. Die Beach-Craft-Checks (Szene `bccheck`) stehen unten in D.
+
+**Noch nicht hochgeladen (wartet auf deine Freigabe):** Beach Craft 3.1.0 (Floß selbst bauen, NPCs, Sounds und Musik,
+Welt-Fixes), Dreamcraft V1.4 (Upgraded Iron Chests, Kapitel „Quality of Life“, Beach Craft 3.1.0) und das
+Challenge-Craft-Modpack v5 (erst nach deiner Testrunde, falls Quests sich noch ändern).
 
 ## A. Deine Entscheidungen (blockieren die nächsten Schritte)
 
@@ -44,19 +53,23 @@ Stand 4.11.2026. Alle Repos sind gepusht (lokaler Stand = GitHub). Seit dem 4.11
 - [ ] Shader an (Iris): Endless Sea und Graben ansehen, ob die neue Dunkelheit gut aussieht.
 
 ## D. Beach Craft 3.0 – zu testen (aus den Modulberichten und der Spezifikation)
-- [ ] Mit zwei Spielern segeln: Der zweite steht auf dem Deck und bleibt drauf, auch bei Kurven (Deck-Ecken!).
-- [ ] Hängematte nachts schlafen (im Nether/End passiert nichts).
-- [ ] Handkurbel des Air Compressor (schleichen + leere Hand, Kurbel-Knopf im Menü).
-- [ ] Ganzer Bosskampf im Überlebensmodus, gern mit Freunden; erneutes Rufen mit Schlüssel + Ancient Crystal; Heilung
-  nach 30 s ohne Spieler.
+- [x] Deck trägt einen Mitfahrer auch in Kurven (BcCheck 5.11.). Mit einem echten zweiten Spieler noch offen.
+- [x] Selbst gebautes Floß (3.1.0): Wer per Teleport, Login oder Dimensionswechsel auf ein fahrendes Floß kommt, steht
+  jetzt auf dem Deck statt darunter (Merge e6b344b, Tests `tools/content/vessel/tests/raft_3.txt`, `raft_4.txt`).
+- [x] Hängematte nachts schlafen: Nacht wird übersprungen, im Nether passiert nichts (BcCheck 5.11.).
+- [x] Handkurbel des Air Compressor (im Sound-Test 5.11. bedient und gehört).
+- [x] Bosskampf im Test durchgespielt (Sound-Test 5.11.).
+- [ ] Bosskampf im Überlebensmodus mit Freunden; erneutes Rufen mit Schlüssel + Ancient Crystal; Heilung nach 30 s
+  ohne Spieler (bisher nur im Code geprüft).
 - [ ] Natürliche Piratenbucht auf echten Inseln, Leuchtturm-Steg (zeigt er oft ins Land?), Castaway Camp, Sunken Plane,
   Fishing Boat Wreck in freier Natur.
 - [ ] Büro-Etagen und Rathaus-Treppenhaus in Port Solace ohne Nachtsicht (seit der dunkleren Dimension).
-- [ ] Ton: Walgesang und Blasen (der Testclient lief ohne Ton).
-- [ ] Dedicated Server mit 3.0 allein (ohne Pack) starten.
+- [x] Ton: Walgesang und Blasen (BcCheck 5.11., mit Ton-Protokoll).
+- [x] Dedicated Server mit 3.1.0 allein (ohne Pack) gestartet (Smoke-Test 5.11., 15/15).
 - [ ] Alte Welt: harte Kante zwischen altem und neuem Gelände, Almanac beim nächsten Betreten, keine Castaway-Truhe auf
   alter Plattform.
-- [ ] Im Spiel beobachten: Anglerfische im Graben (Gewicht 4) gegenüber Leuchttintenfischen (Gewicht 3, vorher 10).
+- [x] Anglerfische im Graben gegenüber Leuchttintenfischen beobachtet (BcCheck 5.11.): an einer Stelle 5 zu 2, an der
+  anderen 1 zu 6. Beides kommt vor.
 - [ ] Offene Design-Fragen aus 2.0.1 entscheiden: Titanofen verdoppelt alles, Energieverlust beim Abbauen, Chunk
   Destroyer kostet leere Säulen, ein Ausgabe-Slot im Item Catcher, seltener Treibholz-Setzling, Haken zieht durch Wände.
 - [x] Video zu Beach Craft 3.0: Doku „Tides of the Deep“ (18:35, `beachcraft/documentary/`), fertig am 4.11.
@@ -65,9 +78,9 @@ Stand 4.11.2026. Alle Repos sind gepusht (lokaler Stand = GitHub). Seit dem 4.11
     water line“ (Cranes Funkspruch, Radiozeile 13, Terminal solace_3).
   - Vulkaninsel bei (−400, −300) ohne Lava an der Oberfläche, nur tief unten. Prüfen, ob die Lava-Sperre um die Ashen
     Forge (CraterLavaFeature) zu viel wegnimmt.
-  - In der Raft-Dimension ist immer Tag: Hängematte und Bett setzen dort nur den Spawnpunkt (Absicht oder ändern?).
+  - [x] In der Raft-Dimension ist jetzt Tag und Nacht wie in der Oberwelt (3.1.0).
   - Der alte Leuchtturm steckt in hohen Dschungelbäumen der Nachbarinsel.
-  - Der Coral Temple nahe dem Spawn ragt zur Hälfte aus dem Meer.
+  - [x] Der Coral Temple liegt jetzt immer ganz unter Wasser (3.1.0).
   - Neue Gebiete der Raft-Dimension: Der Server fällt 90–180 s zurück.
   - Log: „Dev warning – Untranslated Item Tags“.
 

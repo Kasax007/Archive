@@ -110,7 +110,7 @@ DOC = [
     dict(id='P3', ch=None,
          text="*Helix Research Station* rests on the sea floor: glass domes and tunnels, an airlock, labs with "
               "research terminals, aquariums, and a flooded wing.",
-         shots=[('p_helix_air', None), ('s_helix_terminal', 'labs with')], pause=0.8),
+         shots=[('p_helix_air', None), ('p_helix_in', 'labs with')], pause=0.8),
     dict(id='P4', ch=None,
          text="*Port Solace* is the drowned city. Asphalt streets with wrecked cars, a plaza with a statue, and "
               "skyscrapers, some so tall that their broken tops reach above the waves. In the middle stands the "

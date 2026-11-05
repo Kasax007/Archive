@@ -704,7 +704,24 @@ def run_x():
 def run_y():
     """Tauchen neu (in e3 zu dunkel): im hellen Flachwasser (64 -32) mit Nachtsicht, Kamera nah am Taucher; die
     Helmlampe im Graben (448 0) ueber dem Boden statt in der Wand."""
-    s = S2(deadline=60)
+    s = S2(deadline=75)
+    # retakes from g3 (there the journal from f2 was still in the hand and opened over the shots)
+    under(s)
+    s.add('height -295 -265')
+    s.go(-295, v('hy', 1.8), -262, -295, v('hy', 0.2), -265, settle=200)
+    s.r(f"setblock -295 {v('hy')} -265 raft:giant_clam[facing=south,open=true,pearl=true,waterlogged=true]")
+    s.cmd('gamemode creative @p')
+    s.add('wait 10', 'faceblock raft:giant_clam 8')
+    s.clip('b_clam_open', 4, at=[(40, 'faceblock raft:giant_clam 8'), (41, 'use')])
+    s.spec()
+    s.clear_kelp(-420, 48, -50, -330, 80, 40)
+    s.orb('p_helix_air', 5, (-380, 59, -10), 42, 72, 50, start=60)
+    s.add('openloot story/helix_lab 90 peek')
+    s.push('p_helix_in', 5, ('ox', 'oy', 'oz'), 5, 2.5, dy=0.0, ang=180, look_dy=0.6, settle=60)
+    s.cmd('gamemode creative @p')
+    s.add('hud on', 'faceblock raft:research_terminal 8', 'use', 'wait 8 render', 'shot s_helix_terminal', 'esc', 'hud off')
+    s.spec()
+    s.fx()
     s.add('height 64 -32')
     s.fx('night_vision', 'water_breathing')
     s.go(64, v('hy', 6), -32, 64, v('hy', 3), -26, settle=300)
@@ -879,7 +896,37 @@ def run_v():
     return s
 
 
-RUNS = {'a': run_a, 'b': run_b, 'c': run_c, 'd': run_d, 'e': run_e, 'f': run_f, 'g': run_g, 'w': run_w, 'x': run_x, 'y': run_y, 'z': run_z, 'n': run_n, 'r': run_r, 'v': run_v}
+def run_u():
+    """Der Weg hinein, dritter Versuch: an einem Overworld-Strand (tpbiome) wird das Portal neben dem Spieler gebaut
+    (wie in v1), angezuendet und durchschritten; Ankunft, Kiste, Journal, Almanach."""
+    s = S2(deadline=60)
+    O = 'minecraft:overworld'
+    s.add('tpbiome minecraft:beach minecraft:overworld', 'settle 300')
+    s.cmd('execute in minecraft:overworld run time set 6000', 'execute as @p at @p run tp @p ~ ~ ~ 0 5')
+    s.add('where')
+    s.add(f"cmd execute in {O} run tp @p {v('px', 6)} {v('py', 8)} {v('pz', -6)} 135 30", 'wait 5')
+    s.clip('w_beach', 5, orbit=f"{v('px')},{v('pz')},40", look=f"{v('px')},{v('py')},{v('pz')}")
+    s.add(f"cmd execute in {O} run tp @p {v('px')} {v('py')} {v('pz')} 0 5", 'wait 5')
+    s.actor('creative')
+    s.add('pcmd fill ~-3 ~ ~1 ~4 ~6 ~7 minecraft:air', 'pcmd fill ~-3 ~-1 ~1 ~4 ~-1 ~7 minecraft:sand',
+          'pcmd fill ~-1 ~ ~5 ~2 ~4 ~5 raft:driftwood_portal_frame', 'pcmd fill ~ ~1 ~5 ~1 ~3 ~5 minecraft:air')
+    s.hands('raft:energy_staff')
+    s.add('settle 60', f"freecam {v('px', 5)} {v('py', 3.0)} {v('pz', 1.5)} 60 12", 'wait 6 render', 'still w_frame 1.25', 'freecam off')
+    s.clip('w_light', 4, cam=f"{v('px', 5)},{v('py', 3.0)},{v('pz', 1.5)},60,12", look=f"{v('px', 0.5)},{v('py', 2.2)},{v('pz', 5)}",
+           at=[(10, 'faceblock raft:driftwood_portal_frame 8'), (12, 'use')])
+    s.cmd('gamemode survival @p', 'effect give @p minecraft:resistance infinite 4 true',
+          'execute as @p at @p run tp @p ~0.5 ~1 ~5.5 0 0')
+    s.add('third off', 'hud on')
+    s.clip('w_trip', 5)
+    s.add('wait 60', 'hud off', 'settle 400', 'where')
+    s.cmd('gamemode spectator @p')
+    s.orb('w_arrive', 6, (v('px'), v('py'), v('pz')), 14, v('py', 7), 60, start=150, settle=200)
+    s.orb('s_platform', 5, (v('px'), v('py'), v('pz')), 6, v('py', 3), 40, start=300, settle=20)
+    s.loot('story/castaway', 30, 's_chest', back=None)
+    return s
+
+
+RUNS = {'a': run_a, 'b': run_b, 'c': run_c, 'd': run_d, 'e': run_e, 'f': run_f, 'g': run_g, 'w': run_w, 'x': run_x, 'y': run_y, 'z': run_z, 'n': run_n, 'r': run_r, 'v': run_v, 'u': run_u}
 
 if __name__ == '__main__':
     if sys.argv[2].endswith('.txt'):

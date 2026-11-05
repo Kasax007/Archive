@@ -29,7 +29,7 @@ class S2(Script):
             f'deadline {deadline}', 'size 1920 1080', 'gui 2', f'rd {rd}', 'hud off', 'fov 70', 'gamma 0.5',
             'cmd gamerule send_command_feedback false', 'cmd gamerule show_advancement_messages false',
             'cmd gamerule spawn_monsters false', 'cmd advancement grant @p everything', 'cmd recipe give @p *',
-            'cmd time set 6000', 'cmd weather clear', 'cmd effect clear @p']
+            'cmd time set 6000', 'cmd weather clear', 'cmd effect clear @p', 'cmd clear @p', 'esc']
         self.spec()
         self.H = len(self.L)            # header: repeated at the start of every part (see write_parts)
 

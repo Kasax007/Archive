@@ -74,6 +74,8 @@ the person turns to them, the dialogue panel opens at the end (over-the-shoulder
 | n_tamo_gift.mp4 | Cooked cod in hand, Tamo in front | 2.5 |
 | n_voss_work.mp4 | Dr. Imara Voss reading her notes in the storeroom of the Ashen Forge (dark: night vision for the camera). Note: in this seed her template spot is inside volcanic rock; for filming she was moved two blocks onto the open floor and a 1×2 gap was cleared for the player | 4.5 |
 | n_teo_work.mp4 | Teo at work behind the counter of his tiki bar (beach shack on the palm isles) | 4.5 |
+| n_kai_work.mp4 | Kai, the SOS castaway, sitting at his camp fire by the tent (smoke drifts past at the end) | 4.5 |
 
-Still coming: n_kai_work, n_lund_work, n_okafor_work (one portrait each), then optional extras
+Still coming: n_lund_work and n_okafor_work with their screens, n_voss_work retake, n_fenn_place and n_nalu_work
+retakes, the screens of Teo and Kai, then optional extras
 (r_sea_chest, n_fenn_place / n_fenn_talk / n_nalu_place / n_nalu_work / n_voss_place retakes).

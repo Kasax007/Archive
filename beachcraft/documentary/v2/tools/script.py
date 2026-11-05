@@ -256,7 +256,7 @@ DOC = [
          text="Upgrades go right onto the raft, and every one of them shows. The sail makes it faster, the engine "
               "more than twice as fast, the cargo crate adds storage, lanterns light it up, and the anchor holds it "
               "in place.",
-         shots=[('f_raft_upgrades', None), ('f_raft_sail', 'the engine')], pause=0.8),
+         shots=[('f_raft_sail', None), ('f_raft_place', 'the engine')], pause=0.8),
     dict(id='I10', ch=None,
          text="The *palm boat* and the driftwood raft work like vanilla boats, with or without a chest, and in a "
               "boat, the paddle gives you a push.",
@@ -274,7 +274,7 @@ DOC = [
          shots=[('f_dive', None)], pause=0.8),
     dict(id='I14', ch=None,
          text="The *air compressor* refills tanks, with energy or with its hand crank.",
-         shots=[('f_compressor', None)], pause=0.8),
+         shots=[('f_deck', None)], pause=0.8),
     dict(id='I15', ch=None,
          text="The *harpoon gun* shoots harpoons, eight damage under water, and the *sea scooter* pulls you through "
               "the deep, for almost four minutes on one charge.",

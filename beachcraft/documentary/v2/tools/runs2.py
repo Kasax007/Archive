@@ -638,7 +638,116 @@ def run_g():
     return s
 
 
-RUNS = {'a': run_a, 'b': run_b, 'c': run_c, 'd': run_d, 'e': run_e, 'f': run_f, 'g': run_g}
+def run_w():
+    """Der Weg hinein (Nachholen, e1 fand am Strand keinen Treibholz-Stumpf): die Treibholz-Struktur per scout, Strand,
+    Stumpf, Portal bauen und anzuenden, die Reise."""
+    s = S2(deadline=80)
+    O = 'minecraft:overworld'
+    s.cmd('execute in minecraft:overworld run tp @p 0 140 0')
+    s.add('scout raft:driftwood')
+    s.add(f"cmd execute in {O} run tp @p {v('cx')} {v('y1', 8)} {v('cz')}", 'settle 300', 'find raft:driftwood_log 48')
+    s.cmd('execute in minecraft:overworld run time set 6000')
+    s.go(v('fx', 7), v('fy', 4), v('fz', 7), v('fx'), v('fy', 0.5), v('fz'), settle=200, dim=O)
+    s.clip('w_beach', 6, orbit=f"{v('fx')},{v('fz')},50", look=f"{v('fx')},{v('fy', 0.5)},{v('fz')}")
+    s.push('w_stump', 5, ('fx', 'fy', 'fz'), 4.5, 2.4, dy=-0.4, ang=200, look_dy=0.5, settle=30)
+    # the portal: a frame 4 wide, 5 high, built on cleared sand south of the player; lit with the energy staff
+    s.add(f"cmd execute in {O} run tp @p {v('fx', 6)} {v('fy', 1)} {v('fz', 6)} 0 5")
+    s.actor('creative')
+    s.add('pcmd fill ~-3 ~ ~1 ~4 ~6 ~7 minecraft:air', 'pcmd fill ~-3 ~-1 ~1 ~4 ~-1 ~7 minecraft:sand',
+          'pcmd fill ~-1 ~ ~5 ~2 ~4 ~5 raft:driftwood_portal_frame', 'pcmd fill ~ ~1 ~5 ~1 ~3 ~5 minecraft:air', 'where')
+    s.hands('raft:energy_staff')
+    s.add('settle 60')
+    s.go(v('px', 4.5), v('py', 2.8), v('pz', 2.0), v('px', 0.5), v('py', 2), v('pz', 5), settle=10, dim=O) if False else None
+    s.add(f"freecam {v('px', 5)} {v('py', 3.0)} {v('pz', 1.5)} 60 12", 'wait 6 render', 'shot w_frame', 'freecam off')
+    s.clip('w_light', 5, cam=f"{v('px', 5)},{v('py', 3.0)},{v('pz', 1.5)},60,12", look=f"{v('px', 0.5)},{v('py', 2.2)},{v('pz', 5)}",
+           at=[(10, 'faceblock raft:driftwood_portal_frame 8'), (12, 'use')])
+    # the trip (survival, first person with the HUD: the swirl)
+    s.cmd('gamemode survival @p', 'effect give @p minecraft:resistance infinite 4 true',
+          'execute as @p at @p run tp @p ~0.5 ~1 ~5.5 0 0')
+    s.add('third off', 'hud on')
+    s.clip('w_trip', 5)
+    s.add('wait 60', 'hud off', 'settle 400', 'where')
+    s.cmd('gamemode spectator @p')
+    s.orb('w_arrive', 6, (v('px'), v('py'), v('pz')), 14, v('py', 7), 60, start=150, settle=200)
+    s.orb('s_platform', 5, (v('px'), v('py'), v('pz')), 6, v('py', 3), 40, start=300, settle=20)
+    s.loot('story/castaway', 30, 's_chest', back=None)
+    s.cmd('execute as @p at @p run tp @p ~ ~ ~ ~ -70')
+    s.hands('raft:expedition_journal')
+    s.add('hud on', 'wait 5', 'use', 'wait 8 render', 'shot s_journal', 'esc')
+    s.hands('raft:seafarers_almanac')
+    s.add('wait 5', 'use', 'wait 8 render', 'shot f_almanac', 'esc', 'hud off')
+    s.hands()
+    return s
+
+
+def run_x():
+    """Deck-Standbilder neu (in e2 lag der Spieler nach der Haengematte noch im Bett): Boote, Grill, Beete, Maschinen."""
+    s = S2(deadline=40)
+    s.r('summon raft:palm_boat 147.5 99.6 136.5 {Rotation:[90f,0f]}', 'summon raft:palm_chest_boat 147.5 99.6 139.5 {Rotation:[90f,0f]}',
+        'summon raft:driftwood_raft 147.5 99.6 142.5 {Rotation:[90f,0f]}', 'summon raft:driftwood_chest_raft 147.5 99.6 145.5 {Rotation:[90f,0f]}')
+    s.go(153.5, 102, 139, 147.5, 99.8, 141, settle=300)
+    s.add('wait 20 render', 'still f_boats 1.25')
+    for e in ('palm_boat', 'palm_chest_boat', 'driftwood_raft', 'driftwood_chest_raft'):
+        s.cmd(f'kill @e[type=raft:{e}]')
+    s.cmd('gamemode creative @p', 'item replace entity @p hotbar.0 with minecraft:oak_planks 4',
+          'item replace entity @p hotbar.1 with minecraft:beef 1', 'item replace entity @p hotbar.2 with raft:shark_meat 1')
+    s.add('cmd execute in raft:raftdim run tp @p 137.5 100 143.5 180 40', 'wait 5', 'faceblock raft:simple_grill 4',
+          'slot 1', 'use', 'wait 3', 'slot 2', 'use', 'wait 3', 'slot 3', 'use', 'wait 10')
+    s.spec()
+    for name, p1, look in (('f_grill', (138.2, 101.5, 143.2), (137.5, 100.5, 141.5)), ('f_crops', (143.5, 101.8, 136.4), (143.5, 100.5, 140)),
+                           ('f_machines', (137.8, 102.0, 133.0), (137.8, 100.8, 136.5))):
+        s.go(*p1, *look, settle=20)
+        s.add(f'still {name} 1.25')
+    return s
+
+
+def run_y():
+    """Tauchen neu (in e3 zu dunkel): im hellen Flachwasser (64 -32) mit Nachtsicht, Kamera nah am Taucher; die
+    Helmlampe im Graben (448 0) ueber dem Boden statt in der Wand."""
+    s = S2(deadline=60)
+    s.add('height 64 -32')
+    s.fx('night_vision', 'water_breathing')
+    s.go(64, v('hy', 6), -32, 64, v('hy', 3), -26, settle=300)
+    s.add(f"cmd execute in raft:raftdim run tp @p 64.5 {v('hy', 3)} -30.5 90 10")
+    s.actor('survival')
+    s.gear('dive')
+    s.cmd('effect give @p minecraft:resistance infinite 4 true', 'effect give @p minecraft:night_vision infinite 0 true')
+    s.add('wait 40', 'hud on', 'third off', 'shot f_gauge', 'hud off', 'third on')
+    s.clip('f_dive', 5, cam=f"67.5,{v('hy', 5)},-27.5,135,25", look=f"64.5,{v('hy', 4)},-30.5")
+    s.cmd('item replace entity @p hotbar.0 with raft:harpoon_gun', 'item replace entity @p hotbar.1 with raft:harpoon 16')
+    s.add('slot 1', 'pcmd summon minecraft:cod ^ ^ ^6 {NoAI:1b}', 'wait 3')
+    s.clip('f_harpoon', 4, cam=f"66.5,{v('hy', 5.2)},-34,40,15", look=f"62,{v('hy', 4)},-30.5", at=[(8, 'use'), (60, 'use')])
+    s.cmd('item replace entity @p hotbar.0 with raft:sea_scooter')
+    s.add('slot 1', f"cmd execute in raft:raftdim run tp @p 64.5 {v('hy', 4)} -30.5 90 0", 'wait 5')
+    s.clip('f_scooter', 5, cam=f"68,{v('hy', 6)},-26,100,15", look='64.5,0,-30.5' if False else f"64.5,{v('hy', 4.5)},-30.5",
+           chase='5,1', smooth=0.1, at=[(3, 'press use'), (146, 'release use')])
+    # the helmet lamp in the dark trench: first dark, then the lamp
+    s.cmd('effect clear @p', 'effect give @p minecraft:resistance infinite 4 true', 'effect give @p minecraft:water_breathing infinite 0 true',
+          'item replace entity @p armor.head with raft:diving_helmet')
+    s.add('height 448 0')
+    s.add(f"cmd execute in raft:raftdim run tp @p 448.5 {v('hy', 5)} 0.5 0 20", 'third off', 'settle 300')
+    s.clip('f_lamp', 5, at=[(60, 'cmd item replace entity @p armor.head with raft:diving_helmet[raft:diving_lamp={}]')])
+    s.cmd('gamemode creative @p', 'clear @p')
+    s.gear('none')
+    # the four sigils into the Tidewarden altar of the Coral Temple (altar at -796 70 214, found in run C)
+    s.add('set fx -795.5', 'set fy 70', 'set fz 214.5')
+    s.fx('night_vision', 'water_breathing')
+    s.go(v('fx'), v('fy', 3), v('fz', 4), v('fx'), v('fy'), v('fz'), settle=300)
+    s.add(f"cmd execute in raft:raftdim run tp @p {v('fx')} {v('fy')} {v('fz', 2.5)} 180 20")
+    s.actor('creative')
+    s.cmd('item replace entity @p hotbar.0 with raft:coral_sigil', 'item replace entity @p hotbar.1 with raft:pearl_sigil',
+          'item replace entity @p hotbar.2 with raft:storm_sigil', 'item replace entity @p hotbar.3 with raft:ember_sigil')
+    at = []
+    for k in range(4):
+        f0 = 6 + k * 34
+        at += [(f0, f'slot {k + 1}'), (f0 + 2, 'faceblock raft:tidewarden_altar 8'), (f0 + 4, 'use')]
+    s.clip('s_altar', 5, cam=f"{v('fx', 3.2)},{v('fy', 2.4)},{v('fz', 3.2)},135,25", look=f"{v('fx')},{v('fy', 0.8)},{v('fz', 1)}", at=at)
+    s.add(f"freecam {v('fx', 2)} {v('fy', 2.2)} {v('fz', 2)} 135 30", 'wait 6 render', 'still s_altar_after 1.25', 'freecam off')
+    s.hands()
+    return s
+
+
+RUNS = {'a': run_a, 'b': run_b, 'c': run_c, 'd': run_d, 'e': run_e, 'f': run_f, 'g': run_g, 'w': run_w, 'x': run_x, 'y': run_y}
 
 if __name__ == '__main__':
     if sys.argv[2].endswith('.txt'):

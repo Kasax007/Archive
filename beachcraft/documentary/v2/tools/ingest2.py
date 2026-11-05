@@ -60,7 +60,7 @@ def main(rd, keep=False):
         with open(lst, 'w') as f:
             for s in stills:
                 f.write(f"file '{SHOTS}/{s}.jpg'\nduration 1\n")
-        run(['ffmpeg', '-y', '-f', 'concat', '-safe', '0', '-i', lst, '-vf', 'scale=trunc(iw/2)*2:trunc(ih/2)*2,fps=1',
+        run(['ffmpeg', '-y', '-f', 'concat', '-safe', '0', '-i', lst, '-vf', 'scale=1920:1080:force_original_aspect_ratio=decrease,pad=1920:1080:(ow-iw)/2:(oh-ih)/2,fps=1',
              '-c:v', 'libx264', '-crf', '16', '-pix_fmt', 'yuv420p', f'{FOOT}/stills_{tag}.mp4'])
         json.dump(stills, open(f'{FOOT}/stills_{tag}.json', 'w'), indent=1)
         print('stills', len(stills))

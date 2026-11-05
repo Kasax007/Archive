@@ -139,3 +139,4 @@ retakes, the screens of Teo and Kai, then optional extras
 | --- | --- | --- |
 | s_lev_strike.mp4 | Abyssal Sanctum, camera high above the pool: the Leviathan circling and surfacing below, the player (survival, Tidebreaker) on the stone ring | 5.0 |
 | s_lev_strike3.mp4 | Raised camera outside the ring: the Leviathan rises out of the pool and spits brine bolts at the player | 5.0 |
+| s_helix_terminal.mp4 | Inside Helix Research Station: a research terminal opened ("Meridian Expedition – Terminal", Helix Log 04 – Drill Order), GUI still | 2.5 |

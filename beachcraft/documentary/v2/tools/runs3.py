@@ -317,11 +317,12 @@ def run_rt_crab():
     s.cmd('effect give @p minecraft:resistance infinite 4 true')
     s.r('tp @p -259.5 {hy} -286.5 0 10')
     s.r('summon raft:crab -259.5 {hy} -278.5 {Variant:"blue",PersistenceRequired:1b}')
-    s.add('wait 30', 'pcmd kill @e[type=raft:seagull,distance=..160]', 'freecam -256.6 {hy+0.95} -276.6 125 15',
+    # the drops of the killed gulls and of the wheat that the sand replaced lie around: clear them, let the puffs fade
+    s.add('wait 10', 'pcmd kill @e[type=minecraft:item,distance=..60]', 'pcmd kill @e[type=minecraft:experience_orb,distance=..60]',
+          'wait 40', 'pcmd kill @e[type=minecraft:item,distance=..60]', 'freecam -256.6 {hy+0.95} -276.6 125 15',
           'wait 8 render', 'still c_crab_dig_check 1.0', 'freecam off')
     s.clip('c_crab_dig', 4, cam=f"-256.6,{v('hy', 0.95)},-276.6,125,15", look=f"-259.8,{v('hy', 0.3)},-279.5",
-           at=[(0, 'pcmd kill @e[type=raft:seagull,distance=..160]'),
-               (3, 'press sprint'), (4, 'press forward'), (40, 'release forward'), (41, 'release sprint')])
+           at=[(3, 'press sprint'), (4, 'press forward'), (40, 'release forward'), (41, 'release sprint')])
     s.add('pcmd kill @e[type=raft:crab,distance=..80]')
     s.spec()
     return s

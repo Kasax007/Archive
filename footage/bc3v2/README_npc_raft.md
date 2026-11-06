@@ -156,3 +156,34 @@ retakes, the screens of Teo and Kai, then optional extras
 | s_tidebreaker2.mp4 | First person under water: the Tidebreaker swung and charged under the surface | 5.0 |
 | p_helix_in.mp4 | Inside Helix Research Station (night vision, conduit power): slow pan through the lab, lectern and research terminal, glass tanks, coral floor (first ~1 s a wall edge at the left) | 5.0 |
 | c_penguin.mp4 | Frost floes, natural ice floe, camera at penguin height: an adult penguin on the floe edge the whole clip; the others (and the chick) slide into the water at the start | 5.0 |
+
+## Treasure, portal crafting, deep sea and diving (second batch, 6.11.)
+
+1920×1080, 30 fps, CRF 17, Complementary shaders, HUD off unless noted. Each clip has `.shot.json` and
+`.sounds.jsonl` (stills: empty sounds file, `still: true`).
+
+| File | What it shows | s |
+| --- | --- | --- |
+| w_ring.mp4 (being filmed, follows) | Overworld ocean shipwreck (576/64, lukewarm ocean, world `bcnpc2`): the player swims through the doorway of the hull room to the chest and opens it; the GUI shows `raft:ancient_broken_ring` in the middle slot | 3.0 |
+| w_smelt.mp4 | Blast furnace GUI with the ring and coal: the arrow fills and Ancient Energy appears in the output | 3.5 |
+| w_craft_frame.mp4 | Crafting table GUI: 4 driftwood logs in a plus around Ancient Energy → 4 Driftwood Portal Frames, taken into the inventory (tooltip at the end) | 3.5 |
+| w_craft_staff.mp4 | Crafting table GUI: Ancient Energy top, Ancient Crystal middle, stick bottom → Energy Staff, taken into the inventory (tooltip "Used to light the Raft Portal!") | 3.0 |
+| c_angler.mp4 | Abyssal Trench, close side camera, night vision and helmet lamp, gamma 1.0: the anglerfish hangs with its lure lit, opens its jaws and darts at the diver at ~1.6 s, bites (bite sound and hurt at ~1.7 s) and knocks the diver back; it comes back into frame at ~4.3 s | 5.67 |
+| p_cargo.mp4 | `raft:wreck_cargo_ship`, night vision and conduit power: slow side move high above the freighter, from the slope to the hull with rails and the spilled containers (the best part is from ~2 s) | 5.0 |
+| f_dive.mp4 | Third person from the side: diver in helmet, oxygen tank, wetsuit and flippers swimming fast; first ~2.5 s over the kelp forest edge (the model is dark there), from ~2.5 s over the coral reef in full colour | 5.0 |
+| f_gauge.mp4 | First person, HUD on (gui 2): the oxygen gauge over the air bubbles goes down from three cyan capsules to one orange | 5.0 |
+| f_gear.mp4 | Inventory GUI still (gui 3): the four diving pieces in the armour slots and on the player model; only Dolphin's Grace from the flippers in the effects list | 2.5 |
+
+Notes:
+- `w_ring`: none of the seven shipwrecks checked in this world had a treasure chest (several had no chest at all, the
+  one the harness found first is buried under a forest). This wreck has a real `shipwreck_supply` chest; its own loot
+  is in the chest and the ring was put into slot 13 with `item replace block`.
+- `w_smelt` / `w_craft_*`: filmed on a small smooth-sandstone set built on the jungle-isle beach (the first takes on
+  sand failed because the sand fell). The blast furnace was preset to 42 of 100 cooking ticks so the ring finishes
+  inside the clip.
+- `c_angler`: the earlier world was on peaceful, so the fish never attacked; now on normal. The fish was held with
+  NoAI for the first 40 frames so the lure is seen first. Take 2 (other side) was worse and is not in the Archive.
+- `p_cargo`: kelp in the box around the wreck was replaced with water so the hull can be seen. `p_cargo_top` (from
+  above the surface) was dropped: the wreck is too deep to be seen through the water.
+- `f_dive`: the diver's position is set every frame (7 blocks per second, swim keys held for the pose) and a free camera
+  moves alongside; a water corridor at swim height (x 57..65, y 94..98, z -46..16) was cleared so the diver does not hit the reef.

@@ -1,0 +1,9 @@
+structure raft:castaway_camp bbox 868 90 -3052 .. 906 119 -3009
+piece 0 raft:castaway_camp/boat_shelter NONE origin 880, 102, -3040 880 102 -3040 .. 894 107 -3021
+AUDIT p_castaway_camp_1 raft:castaway_camp at 887, 105, -3030 rot NONE pieces 1 (0 follow the terrain) checked 223 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 0 [] | loose 0 [] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {}

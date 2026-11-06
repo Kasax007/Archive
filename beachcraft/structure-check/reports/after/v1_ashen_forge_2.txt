@@ -1,0 +1,16 @@
+structure raft:ashen_forge bbox -4604 94 6924 .. -4504 153 6991
+piece 0 raft:ashen_forge/hall COUNTERCLOCKWISE_90 origin -4592, 107, 6976 -4592 107 6936 .. -4547 141 6976
+piece 1 raft:ashen_forge/vault COUNTERCLOCKWISE_90 origin -4546, 106, 6979 -4546 106 6953 .. -4516 127 6979
+AUDIT v1_ashen_forge_2 raft:ashen_forge at -4554, 124, 6958 rot COUNTERCLOCKWISE_90 pieces 2 (0 follow the terrain) checked 52421 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 883 [basalt -> magma_block 392, polished_blackstone_bricks -> cracked_polished_blackstone_bricks 267, raft:tidestone_bricks -> raft:cracked_tidestone_bricks 211, tuff -> granite 11, deepslate -> granite 2] | loose 0 [] | items 0 [] falling 0 | npc 1/1 ok
+NPC raft:dr_voss ok at -4567.5 112.0 6968.9 (3.6 from spot) free=true inWall=false floor=raft:tidestone_bricks water=false feet=air head=air count48=1 | spot -4568, 112, 6972 feet air head air floor polished_blackstone
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced polished_blackstone_bricks -> cracked_polished_blackstone_bricks (267): -4551,111,6967 -4555,110,6967 -4568,126,6967 -4573,126,6967 -4572,109,6967 -4570,111,6967 -4577,126,6967 -4588,112,6967 -4535,111,6966 -4552,126,6966 -4519,111,6967 -4517,111,6967
+  replaced raft:tidestone_bricks -> raft:cracked_tidestone_bricks (211): -4551,123,6967 -4550,116,6967 -4582,121,6967 -4582,117,6967 -4581,127,6967 -4525,111,6966 -4525,113,6966 -4531,111,6966 -4530,118,6966 -4551,125,6966 -4526,111,6967 -4530,118,6967
+  replaced basalt -> magma_block (392): -4546,107,6967 -4561,130,6967 -4574,130,6967 -4572,127,6967 -4520,124,6966 -4520,125,6966 -4579,109,6967 -4525,123,6966 -4536,124,6966 -4530,106,6966 -4549,129,6966 -4548,117,6966
+  replaced tuff -> granite (11): -4517,109,6960 -4516,106,6960 -4516,107,6960 -4516,111,6960 -4516,109,6961 -4517,110,6958 -4516,108,6958 -4517,107,6959 -4517,110,6959 -4518,108,6956 -4517,107,6957
+  replaced deepslate -> granite (2): -4518,109,6958 -4518,108,6957
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {basalt -> magma_block=392, deepslate -> granite=2, polished_blackstone_bricks -> cracked_polished_blackstone_bricks=267, raft:tidestone_bricks -> raft:cracked_tidestone_bricks=211, tuff -> granite=11}

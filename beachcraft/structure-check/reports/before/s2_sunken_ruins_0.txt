@@ -1,0 +1,15 @@
+structure raft:sunken_ruins bbox 1444 80 -2380 .. 1483 119 -2340
+piece 0 raft:sunken_ruins/head NONE origin 1456, 92, -2368 1456 92 -2368 .. 1471 107 -2352
+AUDIT s2_sunken_ruins_0 raft:sunken_ruins at 1464, 100, -2360 rot NONE pieces 1 checked 823 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 37 [kelp_plant 12, tall_seagrass 12, seagrass 10, kelp 3] | replaced 22 [raft:tidestone_bricks -> raft:cracked_tidestone_bricks 16, raft:tidestone_bricks -> raft:mossy_tidestone_bricks 6] | loose 0 [] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced raft:tidestone_bricks -> raft:cracked_tidestone_bricks (16): 1468,93,-2358 1469,99,-2365 1471,94,-2361 1466,94,-2353 1466,93,-2359 1466,96,-2360 1466,97,-2361 1466,102,-2362 1466,100,-2367 1460,94,-2359 1461,93,-2358 1462,98,-2364
+  replaced raft:tidestone_bricks -> raft:mossy_tidestone_bricks (6): 1468,101,-2362 1464,103,-2365 1465,94,-2363 1465,99,-2366 1460,93,-2359 1463,102,-2366
+  missing tall_seagrass (12): 1468,104,-2364 1468,105,-2364 1469,103,-2365 1469,104,-2365 1465,100,-2359 1465,101,-2359 1466,103,-2366 1466,104,-2366 1467,102,-2367 1467,103,-2367 1467,103,-2365 1467,104,-2365
+  missing kelp_plant (12): 1469,102,-2354 1469,103,-2354 1469,100,-2354 1469,101,-2354 1469,106,-2354 1469,104,-2354 1469,105,-2354 1465,100,-2355 1460,102,-2355 1460,103,-2355 1460,100,-2355 1460,101,-2355
+  missing kelp (3): 1469,107,-2354 1465,101,-2355 1460,104,-2355
+  missing seagrass (10): 1464,103,-2366 1465,103,-2366 1466,102,-2367 1466,100,-2360 1466,104,-2365 1467,102,-2361 1467,104,-2363 1462,100,-2365 1463,103,-2363 1463,104,-2362
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {kelp=3, kelp_plant=12, seagrass=10, tall_seagrass=12}
+all replaced: {raft:tidestone_bricks -> raft:cracked_tidestone_bricks=16, raft:tidestone_bricks -> raft:mossy_tidestone_bricks=6}

@@ -1,0 +1,35 @@
+structure raft:saltmere_village bbox 1053 72 -2953 .. 1135 123 -2871
+piece 0 raft:saltmere_village/plaza COUNTERCLOCKWISE_90 origin 1072, 72, -2912 1072 72 -2936 .. 1096 117 -2912
+piece 1 raft:saltmere_village/elder CLOCKWISE_90 origin 1071, 72, -2931 1053 72 -2931 .. 1071 122 -2917
+piece 2 raft:saltmere_village/shrine CLOCKWISE_180 origin 1090, 72, -2937 1078 72 -2953 .. 1090 123 -2937
+piece 3 raft:saltmere_village/docks COUNTERCLOCKWISE_90 origin 1097, 72, -2921 1097 72 -2935 .. 1117 109 -2921
+piece 4 raft:saltmere_village/hut_netmaker NONE origin 1079, 72, -2911 1079 72 -2911 .. 1089 117 -2900
+piece 5 raft:saltmere_village/walk_bridge COUNTERCLOCKWISE_90 origin 1097, 72, -2914 1097 72 -2916 .. 1109 105 -2914
+piece 6 raft:saltmere_village/walk_bridge CLOCKWISE_180 origin 1094, 72, -2937 1092 72 -2949 .. 1094 105 -2937
+piece 7 raft:saltmere_village/walk_side CLOCKWISE_90 origin 1071, 72, -2934 1059 72 -2934 .. 1071 104 -2932
+piece 8 raft:saltmere_village/walk_long NONE origin 1074, 72, -2911 1074 72 -2911 .. 1076 104 -2897
+piece 9 raft:saltmere_village/junction_t COUNTERCLOCKWISE_90 origin 1110, 72, -2911 1110 72 -2919 .. 1118 106 -2911
+piece 10 raft:saltmere_village/end_cap CLOCKWISE_180 origin 1094, 72, -2950 1092 72 -2951 .. 1094 104 -2950
+piece 11 raft:saltmere_village/hut_netmaker CLOCKWISE_180 origin 1070, 72, -2935 1060 72 -2946 .. 1070 117 -2935
+piece 12 raft:saltmere_village/end_cap CLOCKWISE_90 origin 1058, 72, -2934 1057 72 -2934 .. 1058 104 -2932
+piece 13 raft:saltmere_village/hut_house_c CLOCKWISE_90 origin 1073, 72, -2909 1061 72 -2909 .. 1073 117 -2899
+piece 14 raft:saltmere_village/junction_t NONE origin 1071, 72, -2896 1071 72 -2896 .. 1079 106 -2888
+piece 15 raft:saltmere_village/hut_fisher NONE origin 1110, 72, -2910 1110 72 -2910 .. 1118 114 -2897
+piece 16 raft:saltmere_village/walk_short COUNTERCLOCKWISE_90 origin 1119, 72, -2914 1119 72 -2916 .. 1123 102 -2914
+piece 17 raft:saltmere_village/hut_fisher COUNTERCLOCKWISE_90 origin 1080, 72, -2888 1080 72 -2896 .. 1093 114 -2888
+piece 18 raft:saltmere_village/walk_short NONE origin 1074, 72, -2887 1074 72 -2887 .. 1076 102 -2883
+piece 19 raft:saltmere_village/hut_house_a CLOCKWISE_90 origin 1070, 72, -2896 1059 72 -2896 .. 1070 116 -2888
+piece 20 raft:saltmere_village/hut_house_a COUNTERCLOCKWISE_90 origin 1124, 72, -2911 1124 72 -2919 .. 1135 116 -2911
+piece 21 raft:saltmere_village/hut_house_a NONE origin 1071, 72, -2882 1071 72 -2882 .. 1079 116 -2871
+AUDIT v2_saltmere_village_0 raft:saltmere_village at 1094, 98, -2912 rot COUNTERCLOCKWISE_90 pieces 22 (0 follow the terrain) checked 20539 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 166 [raft:palm_planks -> raft:weathered_planks 114, spruce_planks -> raft:weathered_planks 45, raft:coral_stone_bricks -> raft:mossy_coral_stone_bricks 7] | loose 0 [] | items 0 [] falling 0 | npc 2/2 ok
+NPC raft:nalu ok at 1064.5 103.0 -2918.8 (4.7 from spot) free=true inWall=false floor=raft:palm_planks water=false feet=air head=air count48=1 | spot 1065, 103, -2924 feet air head air floor raft:palm_planks
+NPC raft:old_tamo ok at 1113.5 102.0 -2925.5 (0.0 from spot) free=true inWall=false floor=spruce_planks water=false feet=air head=air count48=1 | spot 1113, 102, -2926 feet air head air floor spruce_planks
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced raft:palm_planks -> raft:weathered_planks (114): 1085,101,-2889 1074,101,-2921 1068,104,-2945 1068,110,-2945 1069,107,-2945 1070,101,-2905 1134,101,-2914 1134,105,-2914 1064,105,-2889 1065,113,-2945 1062,107,-2929 1063,101,-2889
+  replaced spruce_planks -> raft:weathered_planks (45): 1082,101,-2905 1083,101,-2921 1089,101,-2930 1084,101,-2890 1084,101,-2906 1076,101,-2914 1077,101,-2890 1077,101,-2922 1074,101,-2898 1061,101,-2946 1081,101,-2907 1076,101,-2907
+  replaced raft:coral_stone_bricks -> raft:mossy_coral_stone_bricks (7): 1088,101,-2946 1089,101,-2946 1089,101,-2953 1090,101,-2945 1090,101,-2941 1085,101,-2943 1078,101,-2952
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {raft:coral_stone_bricks -> raft:mossy_coral_stone_bricks=7, raft:palm_planks -> raft:weathered_planks=114, spruce_planks -> raft:weathered_planks=45}

@@ -1,0 +1,15 @@
+structure raft:old_lighthouse bbox 1852 111 1066 .. 1948 178 1132
+piece 0 raft:old_lighthouse/compound_a CLOCKWISE_180 origin 1936, 123, 1120 1895 123 1081 .. 1936 166 1120
+piece 1 raft:old_lighthouse/jetty CLOCKWISE_180 origin 1894, 123, 1088 1864 123 1078 .. 1894 127 1088 (follows the terrain: blocks not compared)
+AUDIT v1_old_lighthouse_1 raft:old_lighthouse at 1900, 145, 1099 rot CLOCKWISE_180 pieces 2 (1 follow the terrain) checked 6173 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 108 [stone_bricks -> cracked_stone_bricks 37, cobblestone -> mossy_cobblestone 29, stone_bricks -> mossy_stone_bricks 28, white_concrete -> calcite 14] | loose 0 [] | items 0 [] falling 0 | npc 1/1 ok
+NPC raft:keeper_fenn ok at 1926.4 125.0 1099.2 (2.4 from spot) free=true inWall=false floor=spruce_planks water=false feet=air head=air count48=1 | spot 1924, 125, 1100 feet air head air floor spruce_planks
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced stone_bricks -> cracked_stone_bricks (37): 1928,123,1102 1901,125,1109 1904,124,1109 1905,124,1105 1906,124,1105 1907,123,1101 1909,125,1109 1914,125,1109 1914,126,1109 1926,123,1099 1906,123,1104 1910,125,1108
+  replaced cobblestone -> mossy_cobblestone (29): 1931,125,1102 1904,123,1097 1909,123,1093 1910,123,1101 1911,123,1089 1914,123,1093 1914,123,1113 1916,123,1113 1920,125,1099 1931,125,1099 1900,123,1116 1909,123,1092
+  replaced white_concrete -> calcite (14): 1931,126,1098 1911,154,1109 1910,152,1109 1912,137,1109 1907,143,1104 1904,127,1112 1905,130,1112 1905,145,1104 1911,129,1112 1909,143,1104 1908,152,1104 1930,127,1096
+  replaced stone_bricks -> mossy_stone_bricks (28): 1902,125,1105 1906,123,1113 1907,124,1113 1911,126,1113 1925,123,1103 1931,123,1103 1903,124,1104 1903,126,1104 1903,123,1112 1904,124,1112 1906,123,1112 1907,124,1112
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {cobblestone -> mossy_cobblestone=29, stone_bricks -> cracked_stone_bricks=37, stone_bricks -> mossy_stone_bricks=28, white_concrete -> calcite=14}

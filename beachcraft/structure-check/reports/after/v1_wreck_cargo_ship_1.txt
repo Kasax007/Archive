@@ -1,0 +1,14 @@
+structure raft:wreck_cargo_ship bbox 2868 55 1996 .. 2954 107 2044
+piece 0 raft:wreck_cargo_ship/freighter_0 COUNTERCLOCKWISE_90 origin 2880, 67, 2032 2880 67 2008 .. 2942 95 2032
+AUDIT v1_wreck_cargo_ship_1 raft:wreck_cargo_ship at 2911, 81, 2020 rot COUNTERCLOCKWISE_90 pieces 1 (0 follow the terrain) checked 9383 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 31 [water -> tall_seagrass 12, sand -> sandstone 10, water -> seagrass 6, gravel -> stone 2, water -> raft:barnacles 1] | loose 0 [] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced sand -> sandstone (10): 2883,69,2021 2911,69,2025 2890,69,2012 2893,69,2012 2898,69,2012 2929,69,2012 2893,69,2027 2894,69,2011 2895,69,2027 2904,69,2027
+  replaced gravel -> stone (2): 2912,69,2017 2930,69,2010
+  replaced water -> seagrass (6): 2931,70,2017 2926,70,2020 2927,73,2024 2931,70,2016 2935,70,2016 2931,70,2018
+  replaced water -> tall_seagrass (12): 2930,70,2016 2930,71,2016 2932,70,2016 2932,71,2016 2931,71,2015 2931,70,2015 2932,71,2015 2932,70,2015 2929,72,2022 2929,73,2022 2932,70,2018 2932,71,2018
+  replaced water -> raft:barnacles (1): 2927,72,2022
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {gravel -> stone=2, sand -> sandstone=10, water -> raft:barnacles=1, water -> seagrass=6, water -> tall_seagrass=12}

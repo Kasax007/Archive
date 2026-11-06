@@ -1,0 +1,10 @@
+structure raft:beach_shack bbox 1166 107 -2800 .. 1212 139 -2756
+piece 0 raft:beach_shack/tiki_bar CLOCKWISE_180 origin 1200, 119, -2768 1178 119 -2788 .. 1200 127 -2768
+AUDIT s2_beach_shack_0 raft:beach_shack at 1189, 123, -2778 rot CLOCKWISE_180 pieces 1 checked 499 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 0 [] | loose 0 [] | items 0 [] falling 0 | npc 1/1 ok
+NPC raft:teo ok at 1189.9 121.0 -2784.4 (1.8 from spot) free=true inWall=false floor=raft:palm_planks water=false feet=air head=air count48=1 | spot 1191, 121, -2784 feet air head air floor raft:palm_planks
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {}

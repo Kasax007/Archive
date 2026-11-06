@@ -1,0 +1,46 @@
+structure raft:rusted_rig bbox 2576 20 1409 .. 2620 144 1456
+piece 0 raft:rusted_rig/rig_0 COUNTERCLOCKWISE_90 origin 2576, 20, 1456 2576 20 1409 .. 2620 144 1456
+AUDIT s1_rusted_rig_1 raft:rusted_rig at 2598, 82, 1433 rot COUNTERCLOCKWISE_90 pieces 1 checked 8491 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 16 [raft:riveted_hull (water) 9, raft:rusty_hull (water) 5, raft:barnacles (water) 2] | replaced 268 [raft:riveted_hull -> raft:rusty_hull 168, raft:rusted_plate -> raft:rusty_hull 31, raft:rusty_hull -> sand 10, raft:rusted_plate -> sand 7, raft:rusty_hull -> gravel 6, raft:rusty_hull -> red_terracotta 5] | loose 1 [anvil 1] | items 2 [string 2] falling 0 | npc 1/1 ok
+NPC raft:okafor ok at 2587.8 111.0 1422.5 (0.7 from spot) free=true inWall=false floor=raft:riveted_hull water=false feet=air head=air count48=1 | spot 2588, 111, 1422 feet air head air floor raft:rusted_plate
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced raft:riveted_hull -> raft:rusty_hull (168): 2584,110,1428 2587,27,1420 2587,31,1420 2586,92,1420 2586,78,1444 2586,65,1420 2586,112,1444 2586,114,1424 2587,53,1444 2586,107,1444 2586,20,1420 2586,21,1420
+  replaced raft:barnacles -> chest (1): 2585,45,1444
+  replaced raft:rusted_plate -> gravel (2): 2585,38,1444 2586,38,1445
+  missing raft:riveted_hull (9): 2587,41,1444 2587,42,1444 2587,43,1444 2587,44,1444 2587,45,1444 2586,41,1444 2586,43,1444 2588,44,1444 2588,45,1444
+  replaced raft:rusty_hull -> red_terracotta (5): 2587,46,1444 2586,46,1444 2588,46,1444 2586,45,1443 2588,45,1443
+  replaced raft:rusted_plate -> raft:rusty_hull (31): 2586,110,1444 2589,62,1444 2598,110,1428 2598,110,1444 2602,110,1428 2603,104,1424 2607,62,1420 2609,117,1420 2587,50,1441 2587,86,1441 2588,98,1441 2590,118,1421
+  replaced raft:rusty_hull -> gravel (6): 2587,37,1444 2588,37,1444 2586,39,1442 2586,37,1443 2588,38,1443 2588,39,1443
+  replaced raft:rusty_hull -> sand (10): 2587,38,1444 2586,38,1444 2588,38,1444 2587,39,1442 2586,37,1442 2586,38,1442 2588,37,1442 2588,39,1442 2586,39,1443 2588,37,1443
+  replaced raft:riveted_hull -> sand (4): 2587,39,1444 2586,37,1444 2587,37,1442 2586,38,1443
+  replaced raft:rusty_hull -> raft:barnacles (3): 2586,42,1444 2586,43,1442 2588,44,1442
+  missing raft:rusty_hull (5): 2586,44,1444 2586,45,1444 2588,41,1444 2588,42,1444 2588,43,1444
+  replaced raft:riveted_hull -> gravel (3): 2586,39,1444 2588,39,1444 2587,38,1442
+  missing raft:barnacles (2): 2589,41,1444 2587,44,1445
+  replaced raft:barnacles -> raft:weathered_planks (1): 2589,46,1444
+  replaced raft:barnacles -> sand (1): 2589,37,1444
+  replaced raft:rusted_plate -> sand (7): 2589,38,1444 2587,38,1445 2587,38,1441 2588,38,1445 2585,38,1442 2585,38,1443 2589,38,1443
+  replaced raft:rusty_hull -> tall_seagrass (1): 2586,40,1442
+  replaced raft:riveted_hull -> tall_seagrass (3): 2586,41,1442 2588,46,1443 2588,47,1443
+  replaced raft:rusted_plate -> kelp (1): 2589,38,1442
+  replaced raft:barnacles -> stripped_dark_oak_log (1): 2585,41,1443
+  replaced water -> sea_pickle (1): 2587,40,1443
+  replaced water -> stripped_dark_oak_log (1): 2587,41,1443
+  replaced water -> white_terracotta (1): 2587,42,1443
+  replaced water -> green_terracotta (2): 2587,43,1443 2587,44,1443
+  replaced water -> red_terracotta (1): 2587,45,1443
+  replaced water -> sandstone (1): 2587,37,1443
+  replaced water -> gravel (1): 2587,38,1443
+  replaced water -> sand (1): 2587,39,1443
+  replaced raft:rusty_hull -> stripped_dark_oak_log (1): 2586,41,1443
+  replaced raft:rusty_hull -> white_terracotta (2): 2586,42,1443 2588,42,1443
+  replaced raft:rusty_hull -> green_terracotta (2): 2586,43,1443 2588,43,1443
+  replaced raft:riveted_hull -> green_terracotta (1): 2586,44,1443
+  replaced raft:steel_beam -> green_terracotta (3): 2589,44,1443 2588,44,1443 2590,44,1443
+  replaced raft:steel_beam -> red_terracotta (1): 2589,45,1443
+  replaced raft:riveted_hull -> stripped_dark_oak_log (1): 2588,41,1443
+  loose anvil (1): 2576,117,1456
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {raft:barnacles (water)=2, raft:riveted_hull (water)=9, raft:rusty_hull (water)=5}
+all replaced: {raft:barnacles -> chest=1, raft:barnacles -> raft:weathered_planks=1, raft:barnacles -> sand=1, raft:barnacles -> stripped_dark_oak_log=1, raft:riveted_hull -> gravel=3, raft:riveted_hull -> green_terracotta=1, raft:riveted_hull -> raft:rusty_hull=168, raft:riveted_hull -> sand=4, raft:riveted_hull -> stripped_dark_oak_log=1, raft:riveted_hull -> tall_seagrass=3, raft:rusted_plate -> gravel=2, raft:rusted_plate -> kelp=1, raft:rusted_plate -> raft:rusty_hull=31, raft:rusted_plate -> sand=7, raft:rusty_hull -> gravel=6, raft:rusty_hull -> green_terracotta=2, raft:rusty_hull -> raft:barnacles=3, raft:rusty_hull -> red_terracotta=5, raft:rusty_hull -> sand=10, raft:rusty_hull -> stripped_dark_oak_log=1, raft:rusty_hull -> tall_seagrass=1, raft:rusty_hull -> white_terracotta=2, raft:steel_beam -> green_terracotta=3, raft:steel_beam -> red_terracotta=1, water -> gravel=1, water -> green_terracotta=2, water -> red_terracotta=1, water -> sand=1, water -> sandstone=1, water -> sea_pickle=1, water -> stripped_dark_oak_log=1, water -> white_terracotta=1}

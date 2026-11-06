@@ -1,0 +1,60 @@
+structure raft:old_lighthouse bbox -580 87 426 .. -484 159 492
+piece 0 raft:old_lighthouse/compound_b CLOCKWISE_180 origin -496, 104, 480 -537 104 441 .. -496 147 480
+piece 1 raft:old_lighthouse/jetty CLOCKWISE_180 origin -538, 99, 448 -568 99 438 .. -538 103 448
+AUDIT s1_old_lighthouse_0 raft:old_lighthouse at -532, 123, 459 rot CLOCKWISE_180 pieces 2 checked 6446 | solid 14 [oak_leaves 9, jungle_log 3, cocoa 1, oak_log 1] | fluid 0 [] | deco 11 [short_grass 4, vine 4, fern 2, raft:bird_of_paradise 1] | missing 15 [beetroots 3, spruce_log (water) 3, spruce_fence 2, spruce_log 2, spruce_planks 2] | replaced 157 [stone_bricks -> cracked_stone_bricks 40, stone -> andesite 23, short_grass -> oak_leaves 20, stone_bricks -> mossy_stone_bricks 16, farmland -> dirt 10, cobblestone -> mossy_cobblestone 9] | loose 1 [gravel 1] | items 0 [] falling 0 | npc 1/1 ok
+NPC raft:keeper_fenn ok at -506.6 106.0 462.1 (1.9 from spot) free=true inWall=false floor=oak_planks water=false feet=air head=air count48=1 | spot -508, 106, 460 feet air head air floor spruce_planks
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+  old_lighthouse/compound_b 8,0,36 : 3
+  old_lighthouse/compound_b 4,0,36 : 3
+  old_lighthouse/compound_b 16,0,28 : 2
+  old_lighthouse/compound_b 0,0,28 : 1
+  old_lighthouse/compound_b 12,0,28 : 1
+  old_lighthouse/compound_b 12,0,36 : 1
+  old_lighthouse/compound_b 20,0,20 : 1
+  old_lighthouse/compound_b 12,0,32 : 1
+  old_lighthouse/compound_b 4,0,28 : 1
+samples (world positions, first 12 per kind):
+  deco raft:bird_of_paradise (1): -518,105,444
+  replaced stone_bricks -> cracked_stone_bricks (40): -520,105,472 -522,105,468 -522,105,464 -523,105,464 -526,104,472 -528,106,464 -528,106,472 -527,104,468 -503,104,459 -505,104,463 -519,106,469 -525,105,469
+  replaced cobblestone -> mossy_cobblestone (9): -521,104,452 -527,104,456 -531,104,476 -519,104,449 -520,104,450 -523,104,450 -532,104,470 -519,104,459 -502,106,464
+  replaced stone_bricks -> mossy_stone_bricks (16): -524,107,472 -526,105,464 -524,107,473 -528,107,469 -528,105,473 -527,105,469 -501,106,458 -510,104,458 -523,104,470 -526,105,466 -507,104,461 -509,104,453
+  replaced white_concrete -> calcite (9): -528,109,464 -526,132,472 -501,111,459 -528,116,465 -526,134,465 -501,110,458 -522,118,471 -525,109,463 -530,111,467
+  replaced stone -> andesite (23): -532,105,464 -531,104,464 -534,104,464 -533,104,468 -536,104,468 -535,104,468 -532,104,465 -534,104,469 -533,105,465 -529,105,462 -532,105,462 -532,104,462
+  replaced andesite -> coal_ore (2): -531,106,468 -527,105,466
+  replaced diorite -> dirt (1): -536,104,472
+  replaced tuff -> dirt (4): -537,104,472 -498,105,453 -497,104,453 -537,104,471
+  missing spruce_planks (2): -539,100,444 -538,100,445
+  missing spruce_log (5): -539,99,444 -538,100,446 -538,100,442 -538,99,446 -538,99,442
+  replaced beetroots -> short_grass (1): -500,105,443
+  missing beetroots (3): -502,105,443 -505,105,446 -507,105,445
+  replaced farmland -> dirt (10): -501,104,443 -504,104,443 -506,104,447 -507,104,447 -507,104,443 -506,104,446 -507,104,446 -506,104,445 -506,104,444 -507,104,444
+  replaced short_grass -> oak_leaves (20): -501,105,443 -506,105,447 -508,105,447 -508,105,443 -507,105,447 -501,105,442 -503,105,442 -506,105,446 -506,105,442 -505,105,442 -508,105,446 -504,105,465
+  solid oak_leaves (9): -504,105,443 -503,105,443 -499,105,450 -504,105,442 -512,105,450 -500,105,449 -501,105,441 -506,105,441 -509,105,444
+  replaced raft:pineapple_crop -> short_grass (2): -506,105,443 -505,105,443
+  replaced raft:pineapple_crop -> oak_leaves (1): -507,105,443
+  deco vine (4): -516,105,457 -498,105,446 -515,105,458 -516,105,459
+  replaced tuff -> andesite (4): -532,105,465 -532,105,466 -533,104,466 -530,104,463
+  missing raft:weathered_planks (1): -539,100,445
+  replaced andesite -> dirt (2): -497,104,454 -497,104,452
+  replaced poppy -> oak_leaves (2): -500,105,442 -502,105,442
+  replaced beetroots -> jungle_log (1): -507,105,446
+  deco short_grass (4): -509,105,450 -502,105,449 -499,105,448 -504,105,444
+  replaced stone -> iron_ore (2): -514,104,466 -535,105,467
+  solid jungle_log (3): -516,105,458 -502,105,441 -508,105,445
+  replaced diorite -> andesite (2): -532,104,466 -534,104,467
+  missing spruce_fence (2): -538,101,446 -538,101,442
+  replaced lantern -> sandstone (1): -538,102,446
+  replaced stone -> dirt (1): -537,104,470
+  replaced raft:hibiscus -> oak_leaves (1): -501,105,449
+  deco fern (2): -508,105,449 -516,105,447
+  solid cocoa (1): -514,105,451
+  replaced tuff -> iron_ore (1): -535,104,467
+  missing stripped_spruce_wood (2): -538,100,443 -539,100,443
+  replaced raft:pineapple_crop -> fern (1): -505,105,444
+  solid oak_log (1): -510,105,452
+  replaced andesite -> gravel (1): -512,104,460
+  loose gravel (1): -505,99,463
+all solid intrusions: {cocoa=1, jungle_log=3, oak_leaves=9, oak_log=1}
+all deco intrusions: {fern=2, raft:bird_of_paradise=1, short_grass=4, vine=4}
+all missing: {beetroots=3, raft:weathered_planks=1, spruce_fence=2, spruce_log=2, spruce_log (water)=3, spruce_planks=2, stripped_spruce_wood=2}
+all replaced: {andesite -> coal_ore=2, andesite -> dirt=2, andesite -> gravel=1, beetroots -> jungle_log=1, beetroots -> short_grass=1, cobblestone -> mossy_cobblestone=9, diorite -> andesite=2, diorite -> dirt=1, farmland -> dirt=10, lantern -> sandstone=1, poppy -> oak_leaves=2, raft:hibiscus -> oak_leaves=1, raft:pineapple_crop -> fern=1, raft:pineapple_crop -> oak_leaves=1, raft:pineapple_crop -> short_grass=2, short_grass -> oak_leaves=20, stone -> andesite=23, stone -> dirt=1, stone -> iron_ore=2, stone_bricks -> cracked_stone_bricks=40, stone_bricks -> mossy_stone_bricks=16, tuff -> andesite=4, tuff -> dirt=4, tuff -> iron_ore=1, white_concrete -> calcite=9}

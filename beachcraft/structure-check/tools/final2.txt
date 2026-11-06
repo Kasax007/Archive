@@ -1,0 +1,63 @@
+rd 6
+clouds off
+world tides2
+hud off
+cmd gamemode spectator @p
+log f_port_solace_t2_0
+scout raft:port_solace 1490 -2870
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 100
+audit raft:port_solace 1490 -2870 f_port_solace_t2_0
+cmd execute in raft:raftdim run forceload remove all
+log f_port_solace_t2_1
+scout raft:port_solace -3500 -1000
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 100
+audit raft:port_solace -3500 -1000 f_port_solace_t2_1
+cmd execute in raft:raftdim run forceload remove all
+log f_port_solace_t2_2
+scout raft:port_solace 1500 -2500
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 100
+audit raft:port_solace 1500 -2500 f_port_solace_t2_2
+cmd execute in raft:raftdim run forceload remove all
+log f_beach_shack_t2_0
+scout raft:beach_shack 1500 -2500
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 100
+audit raft:beach_shack 1500 -2500 f_beach_shack_t2_0
+cmd tick freeze
+npcview raft:teo
+cmd execute in raft:raftdim run tp @p {camx} {camy} {camz} {camyaw} {campitch}
+settle 90
+pose {camx} {camy} {camz} {camyaw} {campitch}
+wait 3
+shotif camx f_beach_shack_t2_0_teo
+overview 1
+cmd execute in raft:raftdim run tp @p {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+settle 120
+pose {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+wait 3
+shot f_beach_shack_t2_0_over
+cmd tick unfreeze
+cmd execute in raft:raftdim run forceload remove all
+log f_beach_shack_t2_1
+scout raft:beach_shack -3500 -1000
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 100
+audit raft:beach_shack -3500 -1000 f_beach_shack_t2_1
+cmd tick freeze
+npcview raft:teo
+cmd execute in raft:raftdim run tp @p {camx} {camy} {camz} {camyaw} {campitch}
+settle 90
+pose {camx} {camy} {camz} {camyaw} {campitch}
+wait 3
+shotif camx f_beach_shack_t2_1_teo
+overview 1
+cmd execute in raft:raftdim run tp @p {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+settle 120
+pose {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+wait 3
+shot f_beach_shack_t2_1_over
+cmd tick unfreeze
+cmd execute in raft:raftdim run forceload remove all

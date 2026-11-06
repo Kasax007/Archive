@@ -1,0 +1,10 @@
+structure raft:abyssal_sanctum bbox 116 34 -12 .. 202 91 113
+piece 0 raft:abyssal_sanctum/sanctum NONE origin 128, 46, 0 128 46 0 .. 190 79 101
+AUDIT w_abyssal_sanctum_0 raft:abyssal_sanctum at 159, 63, 51 rot NONE pieces 1 (0 follow the terrain) checked 81438 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 2 [water -> tall_seagrass 2] | loose 0 [] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced water -> tall_seagrass (2): 154,47,95 154,48,95
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {water -> tall_seagrass=2}

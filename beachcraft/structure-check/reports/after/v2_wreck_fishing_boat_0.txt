@@ -1,0 +1,12 @@
+structure raft:wreck_fishing_boat bbox 1412 31 -2680 .. 1453 66 -2644
+piece 0 raft:wreck_fishing_boat/capsized COUNTERCLOCKWISE_90 origin 1424, 43, -2656 1424 43 -2668 .. 1441 54 -2656
+AUDIT v2_wreck_fishing_boat_0 raft:wreck_fishing_boat at 1433, 49, -2662 rot COUNTERCLOCKWISE_90 pieces 1 (0 follow the terrain) checked 966 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 4 [sand -> sandstone 2, spruce_slab -> raft:rebar_concrete 1, water -> tall_seagrass 1] | loose 0 [] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced sand -> sandstone (2): 1439,45,-2663 1428,45,-2658
+  replaced water -> tall_seagrass (1): 1433,47,-2662
+  replaced spruce_slab -> raft:rebar_concrete (1): 1434,44,-2661
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {sand -> sandstone=2, spruce_slab -> raft:rebar_concrete=1, water -> tall_seagrass=1}

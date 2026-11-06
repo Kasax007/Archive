@@ -1,0 +1,9 @@
+structure raft:castaway_camp bbox -780 103 -458 .. -740 131 -420
+piece 0 raft:castaway_camp/lean_to COUNTERCLOCKWISE_90 origin -768, 115, -432 -768 115 -446 .. -752 119 -432
+AUDIT v1_castaway_camp_0 raft:castaway_camp at -760, 117, -439 rot COUNTERCLOCKWISE_90 pieces 1 (0 follow the terrain) checked 147 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 0 [] | loose 0 [] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {}

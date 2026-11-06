@@ -1,0 +1,69 @@
+structure raft:old_lighthouse bbox 1852 111 1066 .. 1948 178 1132
+piece 0 raft:old_lighthouse/compound_a CLOCKWISE_180 origin 1936, 123, 1120 1895 123 1081 .. 1936 166 1120
+piece 1 raft:old_lighthouse/jetty CLOCKWISE_180 origin 1894, 123, 1088 1864 123 1078 .. 1894 127 1088
+AUDIT s1_old_lighthouse_1 raft:old_lighthouse at 1900, 145, 1099 rot CLOCKWISE_180 pieces 2 checked 6402 | solid 0 [] | fluid 0 [] | deco 2 [raft:beach_grass 1, raft:hibiscus 1] | missing 52 [raft:weathered_planks 15, raft:rope_railing 13, stripped_spruce_wood 5, lantern 3, spruce_fence 3] | replaced 219 [stone_bricks -> cracked_stone_bricks 37, cobblestone -> mossy_cobblestone 29, stone_bricks -> mossy_stone_bricks 28, stone -> gravel 21, andesite -> gravel 16, white_concrete -> calcite 14] | loose 4 [gravel 4] | items 0 [] falling 0 | npc 1/1 ok
+NPC raft:keeper_fenn ok at 1929.2 125.0 1101.7 (4.9 from spot) free=true inWall=false floor=oak_planks water=false feet=air head=air count48=1 | spot 1924, 125, 1100 feet air head air floor spruce_planks
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced stone_bricks -> cracked_stone_bricks (37): 1928,123,1102 1901,125,1109 1904,124,1109 1905,124,1105 1906,124,1105 1907,123,1101 1909,125,1109 1914,125,1109 1914,126,1109 1926,123,1099 1906,123,1104 1910,125,1108
+  replaced cobblestone -> mossy_cobblestone (29): 1931,125,1102 1904,123,1097 1909,123,1093 1910,123,1101 1911,123,1089 1914,123,1093 1914,123,1113 1916,123,1113 1920,125,1099 1931,125,1099 1900,123,1116 1909,123,1092
+  replaced white_concrete -> calcite (14): 1931,126,1098 1911,154,1109 1910,152,1109 1912,137,1109 1907,143,1104 1904,127,1112 1905,130,1112 1905,145,1104 1911,129,1112 1909,143,1104 1908,152,1104 1930,127,1096
+  replaced spruce_log -> raft:weathered_planks (2): 1870,123,1081 1873,123,1084
+  replaced spruce_fence -> lantern (2): 1870,126,1081 1876,126,1087
+  missing lantern (3): 1870,127,1081 1870,127,1087 1876,127,1087
+  missing raft:weathered_planks (15): 1870,124,1085 1872,124,1085 1873,124,1085 1874,124,1085 1872,124,1084 1873,124,1084 1874,124,1084 1871,124,1087 1871,124,1083 1872,124,1087 1873,124,1083 1871,124,1082
+  replaced raft:weathered_planks -> stripped_spruce_log (1): 1870,124,1081
+  replaced stripped_spruce_log -> spruce_fence (3): 1870,125,1081 1870,125,1084 1876,125,1087
+  missing raft:rope_railing (13): 1870,125,1085 1871,125,1081 1872,125,1081 1870,125,1083 1871,125,1087 1872,125,1087 1873,125,1087 1874,125,1087 1875,125,1087 1870,125,1086 1870,125,1082 1883,125,1082
+  missing spruce_planks (2): 1871,124,1085 1870,124,1086
+  replaced raft:weathered_planks -> raft:rope_railing (4): 1871,124,1081 1872,124,1081 1874,124,1087 1875,124,1087
+  missing stripped_spruce_wood (5): 1875,124,1085 1872,124,1083 1873,124,1087 1871,124,1086 1872,124,1086
+  replaced stone_bricks -> mossy_stone_bricks (28): 1902,125,1105 1906,123,1113 1907,124,1113 1911,126,1113 1925,123,1103 1931,123,1103 1903,124,1104 1903,126,1104 1903,123,1112 1904,124,1112 1906,123,1112 1907,124,1112
+  replaced andesite -> diorite (8): 1902,123,1097 1902,124,1096 1903,124,1096 1904,123,1096 1907,123,1096 1911,123,1096 1903,124,1095 1903,123,1095
+  replaced tuff -> diorite (3): 1903,123,1097 1908,123,1097 1906,123,1096
+  replaced stone -> diorite (9): 1904,124,1097 1906,123,1097 1912,123,1093 1902,123,1096 1903,123,1096 1908,123,1096 1910,123,1096 1910,123,1095 1910,123,1094
+  replaced tuff -> gravel (7): 1907,123,1117 1916,123,1112 1910,123,1119 1914,123,1111 1914,124,1110 1915,123,1110 1917,123,1114
+  replaced stone -> gravel (21): 1908,124,1117 1908,123,1117 1917,124,1113 1908,123,1116 1909,124,1116 1910,123,1120 1914,124,1112 1915,123,1112 1917,123,1112 1910,124,1119 1914,124,1111 1914,123,1115
+  replaced andesite -> gravel (16): 1909,123,1117 1914,124,1113 1915,123,1113 1916,124,1113 1916,125,1113 1916,123,1109 1914,123,1116 1915,124,1112 1915,124,1111 1915,124,1115 1915,123,1111 1907,123,1118
+  missing raft:buoy_red (2): 1864,123,1084 1867,123,1088
+  missing raft:buoy_green (1): 1867,123,1080
+  missing raft:life_ring (1): 1869,127,1084
+  replaced andesite -> coal_ore (3): 1933,123,1111 1934,123,1111 1897,123,1095
+  replaced spruce_log -> stripped_spruce_log (1): 1870,123,1084
+  missing spruce_fence (3): 1870,126,1084 1870,127,1084 1870,126,1087
+  replaced spruce_planks -> spruce_fence (1): 1870,124,1084
+  replaced raft:weathered_planks -> raft:ship_bell (1): 1871,124,1084
+  missing raft:ship_bell (1): 1871,125,1084
+  replaced diorite -> coal_ore (1): 1897,123,1096
+  replaced tuff -> coal_ore (1): 1898,123,1096
+  deco raft:hibiscus (1): 1912,124,1084
+  deco raft:beach_grass (1): 1928,124,1084
+  replaced spruce_log -> spruce_fence (1): 1870,123,1087
+  replaced raft:weathered_planks -> lantern (1): 1870,124,1087
+  replaced spruce_planks -> raft:rope_railing (1): 1870,124,1083
+  missing stripped_spruce_log (1): 1870,125,1087
+  missing raft:palm_stairs (2): 1871,123,1079 1871,123,1078
+  replaced raft:palm_slab -> grass_block (6): 1872,123,1079 1873,123,1079 1874,123,1079 1872,123,1078 1873,123,1078 1874,123,1078
+  replaced spruce_log -> raft:rope_railing (1): 1873,123,1087
+  replaced raft:palm_stairs -> grass_block (2): 1875,123,1079 1875,123,1078
+  replaced spruce_log -> spruce_planks (1): 1876,123,1087
+  replaced spruce_planks -> stripped_spruce_log (1): 1876,124,1087
+  replaced raft:weathered_planks -> grass_block (1): 1884,124,1083
+  replaced stone -> coal_ore (1): 1915,123,1099
+  replaced diorite -> gravel (1): 1915,123,1115
+  replaced stripped_spruce_wood -> raft:rope_railing (1): 1870,124,1082
+  replaced raft:weathered_planks -> cauldron (1): 1872,124,1082
+  missing cauldron (1): 1872,125,1082
+  replaced raft:weathered_planks -> barrel (1): 1874,124,1086
+  missing barrel (1): 1874,125,1086
+  missing raft:rope_coil (1): 1875,126,1086
+  replaced spruce_planks -> raft:wooden_crate (1): 1875,124,1086
+  replaced raft:wooden_crate -> raft:rope_coil (1): 1875,125,1086
+  replaced spruce_log -> dirt (2): 1882,123,1082 1885,123,1082
+  replaced spruce_fence -> spruce_log (2): 1882,125,1082 1885,125,1082
+  replaced raft:rope_railing -> short_grass (1): 1886,125,1082
+  loose gravel (4): 1903,119,1111 1902,120,1111 1902,120,1112 1903,120,1112
+all solid intrusions: {}
+all deco intrusions: {raft:beach_grass=1, raft:hibiscus=1}
+all missing: {barrel=1, cauldron=1, lantern=3, raft:buoy_green=1, raft:buoy_red=2, raft:life_ring=1, raft:palm_stairs=2, raft:rope_coil=1, raft:rope_railing=13, raft:ship_bell=1, raft:weathered_planks=15, spruce_fence=3, spruce_planks=2, stripped_spruce_log=1, stripped_spruce_wood=5}
+all replaced: {andesite -> coal_ore=3, andesite -> diorite=8, andesite -> gravel=16, cobblestone -> mossy_cobblestone=29, diorite -> coal_ore=1, diorite -> gravel=1, raft:palm_slab -> grass_block=6, raft:palm_stairs -> grass_block=2, raft:rope_railing -> short_grass=1, raft:weathered_planks -> barrel=1, raft:weathered_planks -> cauldron=1, raft:weathered_planks -> grass_block=1, raft:weathered_planks -> lantern=1, raft:weathered_planks -> raft:rope_railing=4, raft:weathered_planks -> raft:ship_bell=1, raft:weathered_planks -> stripped_spruce_log=1, raft:wooden_crate -> raft:rope_coil=1, spruce_fence -> lantern=2, spruce_fence -> spruce_log=2, spruce_log -> dirt=2, spruce_log -> raft:rope_railing=1, spruce_log -> raft:weathered_planks=2, spruce_log -> spruce_fence=1, spruce_log -> spruce_planks=1, spruce_log -> stripped_spruce_log=1, spruce_planks -> raft:rope_railing=1, spruce_planks -> raft:wooden_crate=1, spruce_planks -> spruce_fence=1, spruce_planks -> stripped_spruce_log=1, stone -> coal_ore=1, stone -> diorite=9, stone -> gravel=21, stone_bricks -> cracked_stone_bricks=37, stone_bricks -> mossy_stone_bricks=28, stripped_spruce_log -> spruce_fence=3, stripped_spruce_wood -> raft:rope_railing=1, tuff -> coal_ore=1, tuff -> diorite=3, tuff -> gravel=7, white_concrete -> calcite=14}

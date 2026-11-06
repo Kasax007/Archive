@@ -1,0 +1,13 @@
+structure raft:wreck_galleon bbox -2812 35 3556 .. -2757 92 3631
+piece 0 raft:wreck_galleon/galleon_1 NONE origin -2800, 47, 3568 -2800 47 3568 .. -2769 80 3619
+AUDIT v1_wreck_galleon_2 raft:wreck_galleon at -2784, 64, 3594 rot NONE pieces 1 (0 follow the terrain) checked 8178 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 56 [water -> tall_seagrass 35, water -> seagrass 9, sand -> sandstone 7, gravel -> stone 5] | loose 0 [] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced water -> tall_seagrass (35): -2776,61,3583 -2778,59,3587 -2777,60,3587 -2783,57,3587 -2781,60,3607 -2785,57,3583 -2785,56,3587 -2776,62,3574 -2776,61,3574 -2776,61,3582 -2780,59,3582 -2778,59,3590
+  replaced gravel -> stone (5): -2776,49,3603 -2787,49,3595 -2790,49,3590 -2771,49,3576 -2790,49,3604
+  replaced water -> seagrass (9): -2779,58,3587 -2782,58,3587 -2773,57,3590 -2780,59,3586 -2777,59,3594 -2781,57,3598 -2777,56,3585 -2781,58,3585 -2780,54,3588
+  replaced sand -> sandstone (7): -2771,49,3574 -2777,49,3569 -2792,48,3593 -2790,49,3593 -2789,49,3593 -2771,48,3572 -2782,49,3616
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {gravel -> stone=5, sand -> sandstone=7, water -> seagrass=9, water -> tall_seagrass=35}

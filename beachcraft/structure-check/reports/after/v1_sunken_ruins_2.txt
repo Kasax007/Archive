@@ -1,0 +1,11 @@
+structure raft:sunken_ruins bbox -2569 28 3364 .. -2532 64 3400
+piece 0 raft:sunken_ruins/shrine CLOCKWISE_90 origin -2544, 40, 3376 -2557 40 3376 .. -2544 52 3388
+AUDIT v1_sunken_ruins_2 raft:sunken_ruins at -2550, 46, 3382 rot CLOCKWISE_90 pieces 1 (0 follow the terrain) checked 458 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 22 [raft:tidestone_bricks -> raft:cracked_tidestone_bricks 13, raft:tidestone_bricks -> raft:mossy_tidestone_bricks 9] | loose 0 [] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced raft:tidestone_bricks -> raft:mossy_tidestone_bricks (9): -2548,40,3383 -2552,42,3385 -2551,42,3385 -2551,41,3376 -2551,49,3379 -2549,49,3384 -2555,41,3378 -2554,48,3381 -2553,40,3382
+  replaced raft:tidestone_bricks -> raft:cracked_tidestone_bricks (13): -2548,41,3378 -2552,42,3380 -2552,42,3384 -2552,40,3380 -2552,50,3383 -2550,42,3380 -2550,40,3377 -2550,41,3376 -2549,42,3382 -2549,40,3385 -2554,40,3381 -2553,42,3380
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {raft:tidestone_bricks -> raft:cracked_tidestone_bricks=13, raft:tidestone_bricks -> raft:mossy_tidestone_bricks=9}

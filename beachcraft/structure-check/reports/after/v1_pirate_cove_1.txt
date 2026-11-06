@@ -1,0 +1,15 @@
+structure raft:pirate_cove bbox 1728 78 672 .. 1783 135 728
+piece 0 raft:pirate_cove/cove_0 NONE origin 1728, 78, 672 1728 78 672 .. 1783 135 728
+AUDIT v1_pirate_cove_1 raft:pirate_cove at 1756, 107, 700 rot NONE pieces 1 (0 follow the terrain) checked 73152 | solid 0 [] | fluid 0 [] | deco 1 [cave_vines 1] | missing 0 [] | replaced 6 [water -> seagrass 2, cave_vines -> cave_vines_plant 1, grass_block -> dirt 1, water -> raft:sea_anemone_red 1, water -> raft:starfish_orange 1] | loose 0 [] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced water -> seagrass (2): 1759,91,722 1759,91,724
+  replaced water -> raft:starfish_orange (1): 1754,91,721
+  replaced cave_vines -> cave_vines_plant (1): 1757,104,720
+  deco cave_vines (1): 1757,103,720
+  replaced water -> raft:sea_anemone_red (1): 1757,91,724
+  replaced grass_block -> dirt (1): 1766,106,717
+all solid intrusions: {}
+all deco intrusions: {cave_vines=1}
+all missing: {}
+all replaced: {cave_vines -> cave_vines_plant=1, grass_block -> dirt=1, water -> raft:sea_anemone_red=1, water -> raft:starfish_orange=1, water -> seagrass=2}

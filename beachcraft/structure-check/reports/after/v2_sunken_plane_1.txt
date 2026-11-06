@@ -1,0 +1,12 @@
+structure raft:sunken_plane bbox -3956 24 -1698 .. -3892 62 -1636
+piece 0 raft:sunken_plane/airliner_0 CLOCKWISE_180 origin -3904, 36, -1648 -3944 36 -1686 .. -3904 50 -1648
+AUDIT v2_sunken_plane_1 raft:sunken_plane at -3924, 43, -1667 rot CLOCKWISE_180 pieces 1 (0 follow the terrain) checked 2463 | solid 0 [] | fluid 3 [water 3] | deco 0 [] | missing 0 [] | replaced 87 [sand -> sandstone 58, gravel -> stone 25, water -> tall_seagrass 4] | loose 0 [] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced sand -> sandstone (58): -3939,38,-1668 -3940,38,-1671 -3937,38,-1667 -3935,38,-1667 -3936,38,-1672 -3933,38,-1666 -3933,38,-1670 -3931,38,-1671 -3932,38,-1671 -3929,38,-1665 -3929,38,-1668 -3927,38,-1680
+  replaced gravel -> stone (25): -3933,38,-1665 -3930,38,-1667 -3927,38,-1670 -3925,38,-1667 -3925,38,-1664 -3926,38,-1677 -3923,38,-1660 -3924,38,-1670 -3924,38,-1685 -3924,38,-1664 -3919,38,-1681 -3919,38,-1684
+  replaced water -> tall_seagrass (4): -3923,44,-1669 -3923,43,-1669 -3924,44,-1665 -3924,45,-1665
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {gravel -> stone=25, sand -> sandstone=58, water -> tall_seagrass=4}

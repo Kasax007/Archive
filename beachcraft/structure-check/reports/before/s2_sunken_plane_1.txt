@@ -1,0 +1,12 @@
+structure raft:sunken_plane bbox -3442 71 -1100 .. -3380 109 -1036
+piece 0 raft:sunken_plane/airliner_0 CLOCKWISE_90 origin -3392, 83, -1088 -3430 83 -1088 .. -3392 97 -1048
+AUDIT s2_sunken_plane_1 raft:sunken_plane at -3411, 90, -1068 rot CLOCKWISE_90 pieces 1 checked 2463 | solid 0 [] | fluid 3 [water 3] | deco 0 [] | missing 0 [] | replaced 85 [sand -> sandstone 58, gravel -> stone 25, water -> seagrass 2] | loose 0 [] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced sand -> sandstone (58): -3429,85,-1070 -3429,85,-1067 -3428,85,-1070 -3428,85,-1068 -3427,85,-1071 -3427,85,-1067 -3426,85,-1069 -3425,85,-1068 -3424,85,-1065 -3422,85,-1073 -3422,85,-1074 -3422,85,-1066
+  replaced gravel -> stone (25): -3429,85,-1068 -3428,85,-1073 -3425,85,-1073 -3425,85,-1074 -3423,85,-1074 -3421,85,-1066 -3415,85,-1085 -3414,85,-1068 -3414,85,-1065 -3413,85,-1074 -3411,85,-1082 -3411,85,-1067
+  replaced water -> seagrass (2): -3407,91,-1068 -3398,90,-1083
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {gravel -> stone=25, sand -> sandstone=58, water -> seagrass=2}

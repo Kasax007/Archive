@@ -1,0 +1,9 @@
+structure raft:buoy_field bbox 2940 95 1872 .. 2960 99 1884
+piece 0 raft:buoy_field/channel CLOCKWISE_90 origin 2960, 95, 1872 2940 95 1872 .. 2960 99 1884
+AUDIT s1_buoy_field_1 raft:buoy_field at 2950, 97, 1878 rot CLOCKWISE_90 pieces 1 checked 37 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 0 [] | loose 0 [] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {}

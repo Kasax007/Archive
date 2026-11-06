@@ -1,0 +1,12 @@
+structure raft:wreck_cargo_ship bbox 852 34 -2964 .. 938 86 -2916
+piece 0 raft:wreck_cargo_ship/freighter_0 COUNTERCLOCKWISE_90 origin 864, 46, -2928 864 46 -2952 .. 926 74 -2928
+AUDIT v2_wreck_cargo_ship_0 raft:wreck_cargo_ship at 895, 60, -2940 rot COUNTERCLOCKWISE_90 pieces 1 (0 follow the terrain) checked 9383 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 17 [sand -> sandstone 9, water -> tall_seagrass 5, gravel -> stone 3] | loose 0 [] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced water -> tall_seagrass (5): 887,53,-2946 887,54,-2946 870,52,-2937 870,51,-2937 893,50,-2943
+  replaced sand -> sandstone (9): 926,46,-2943 888,48,-2933 877,48,-2933 879,48,-2933 913,48,-2948 882,48,-2948 877,48,-2948 895,48,-2935 867,48,-2939
+  replaced gravel -> stone (3): 896,48,-2943 926,46,-2942 914,48,-2950
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {gravel -> stone=3, sand -> sandstone=9, water -> tall_seagrass=5}

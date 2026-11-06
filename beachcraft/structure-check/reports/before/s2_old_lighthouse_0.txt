@@ -1,0 +1,48 @@
+structure raft:old_lighthouse bbox 340 99 -2620 .. 436 175 -2554
+piece 0 raft:old_lighthouse/compound_b NONE origin 352, 120, -2608 352 120 -2608 .. 393 163 -2569
+piece 1 raft:old_lighthouse/jetty NONE origin 394, 111, -2576 394 111 -2576 .. 424 115 -2566
+AUDIT s2_old_lighthouse_0 raft:old_lighthouse at 388, 137, -2587 rot NONE pieces 2 checked 6446 | solid 0 [] | fluid 0 [] | deco 4 [short_grass 2, raft:aloe_vera 1, raft:beach_grass 1] | missing 225 [raft:weathered_planks 58, raft:rope_railing 38, spruce_log 36, spruce_planks 23, spruce_fence 19] | replaced 90 [stone_bricks -> cracked_stone_bricks 26, stone_bricks -> mossy_stone_bricks 14, white_concrete -> calcite 14, cobblestone -> mossy_cobblestone 11, stone -> coal_ore 9, andesite -> coal_ore 7] | loose 3 [gravel 3] | items 0 [] falling 0 | npc 1/1 ok
+NPC raft:keeper_fenn ok at 365.4 122.0 -2589.1 (1.9 from spot) free=true inWall=false floor=oak_planks water=false feet=air head=air count48=1 | spot 364, 122, -2588 feet air head air floor spruce_planks
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced stone_bricks -> cracked_stone_bricks (26): 381,122,-2598 376,121,-2594 377,121,-2598 379,121,-2594 375,122,-2594 365,120,-2586 384,120,-2599 385,122,-2595 385,120,-2591 387,120,-2599 381,123,-2601 384,123,-2596
+  replaced stone_bricks -> mossy_stone_bricks (14): 378,121,-2598 364,120,-2582 357,120,-2590 362,120,-2589 386,121,-2600 377,121,-2600 387,121,-2593 380,122,-2591 378,120,-2599 372,120,-2595 357,120,-2591 357,120,-2587
+  replaced stone -> coal_ore (9): 373,120,-2590 374,121,-2590 390,120,-2592 387,121,-2600 388,120,-2601 387,120,-2601 376,120,-2591 388,120,-2590 389,120,-2590
+  replaced tuff -> coal_ore (1): 374,120,-2590
+  replaced andesite -> coal_ore (7): 375,120,-2590 388,120,-2591 388,121,-2599 389,120,-2591 389,120,-2592 388,121,-2601 374,120,-2591
+  replaced white_concrete -> calcite (14): 357,126,-2586 384,143,-2599 383,150,-2593 383,127,-2601 379,126,-2601 357,125,-2589 380,143,-2592 380,141,-2600 377,126,-2600 377,143,-2596 385,150,-2597 383,150,-2599
+  missing raft:palm_slab (6): 416,111,-2567 414,111,-2567 415,111,-2567 416,111,-2566 414,111,-2566 415,111,-2566
+  missing raft:weathered_planks (58): 416,112,-2575 417,112,-2575 417,112,-2571 418,112,-2575 413,112,-2575 414,112,-2575 415,112,-2571 408,112,-2571 409,112,-2571 411,112,-2571 404,112,-2571 406,112,-2571
+  missing stripped_spruce_wood (19): 416,112,-2571 415,112,-2575 410,112,-2571 407,112,-2571 396,112,-2571 394,112,-2571 395,112,-2571 409,112,-2572 410,112,-2572 406,112,-2572 396,112,-2572 413,112,-2573
+  missing raft:rope_railing (38): 416,113,-2575 417,113,-2575 418,113,-2571 413,113,-2575 414,113,-2575 415,113,-2575 416,113,-2569 417,113,-2569 418,113,-2573 413,113,-2569 414,113,-2569 415,113,-2569
+  missing raft:palm_stairs (4): 417,111,-2567 413,111,-2567 417,111,-2566 413,111,-2566
+  missing spruce_log (36): 418,111,-2575 412,111,-2575 415,111,-2575 418,111,-2572 412,111,-2572 415,111,-2572 410,111,-2572 404,111,-2572 407,111,-2572 401,111,-2572 398,111,-2572 395,111,-2572
+  missing spruce_planks (23): 418,112,-2571 412,112,-2575 412,112,-2571 413,112,-2571 414,112,-2571 405,112,-2571 400,112,-2571 398,112,-2571 418,112,-2572 405,112,-2572 397,112,-2572 398,112,-2572
+  missing stripped_spruce_log (5): 418,113,-2575 412,113,-2575 418,113,-2572 418,113,-2569 412,113,-2569
+  missing spruce_fence (19): 418,114,-2575 412,114,-2575 418,114,-2572 418,115,-2572 413,112,-2568 418,114,-2569 412,114,-2569 409,113,-2574 409,113,-2570 406,113,-2574 406,113,-2570 400,113,-2574
+  missing lantern (5): 418,115,-2575 412,115,-2575 418,115,-2569 412,115,-2569 394,114,-2574
+  replaced andesite -> iron_ore (2): 390,121,-2583 391,121,-2583
+  replaced cobblestone -> mossy_cobblestone (11): 378,120,-2589 375,120,-2577 371,120,-2601 388,120,-2604 383,120,-2584 376,120,-2608 363,122,-2592 356,121,-2600 378,120,-2579 379,121,-2603 373,120,-2591
+  missing raft:buoy_red (2): 424,111,-2572 421,111,-2576
+  deco raft:aloe_vera (1): 356,121,-2577
+  missing raft:buoy_green (1): 421,111,-2568
+  deco short_grass (2): 357,121,-2569 365,121,-2572
+  deco raft:beach_grass (1): 359,121,-2577
+  missing raft:ship_bell (1): 417,113,-2572
+  missing raft:life_ring (1): 419,115,-2572
+  replaced tuff -> iron_ore (1): 390,120,-2584
+  replaced spruce_log -> lantern (1): 412,111,-2569
+  missing spruce_slab (1): 405,112,-2573
+  missing cauldron (1): 416,113,-2570
+  missing raft:wooden_crate (1): 413,113,-2574
+  missing spruce_stairs (2): 413,113,-2570 414,113,-2570
+  missing raft:rope_coil (1): 413,114,-2574
+  missing barrel (1): 414,113,-2574
+  replaced spruce_log -> spruce_fence (2): 397,111,-2574 397,111,-2570
+  replaced gravel -> stone (1): 388,120,-2602
+  replaced moss_block -> sand (1): 389,122,-2602
+  loose gravel (3): 378,110,-2595 378,110,-2594 379,111,-2595
+all solid intrusions: {}
+all deco intrusions: {raft:aloe_vera=1, raft:beach_grass=1, short_grass=2}
+all missing: {barrel=1, cauldron=1, lantern=5, raft:buoy_green=1, raft:buoy_red=2, raft:life_ring=1, raft:palm_slab=6, raft:palm_stairs=4, raft:rope_coil=1, raft:rope_railing=38, raft:ship_bell=1, raft:weathered_planks=58, raft:wooden_crate=1, spruce_fence=19, spruce_log=36, spruce_planks=23, spruce_slab=1, spruce_stairs=2, stripped_spruce_log=5, stripped_spruce_wood=19}
+all replaced: {andesite -> coal_ore=7, andesite -> iron_ore=2, cobblestone -> mossy_cobblestone=11, gravel -> stone=1, moss_block -> sand=1, spruce_log -> lantern=1, spruce_log -> spruce_fence=2, stone -> coal_ore=9, stone_bricks -> cracked_stone_bricks=26, stone_bricks -> mossy_stone_bricks=14, tuff -> coal_ore=1, tuff -> iron_ore=1, white_concrete -> calcite=14}

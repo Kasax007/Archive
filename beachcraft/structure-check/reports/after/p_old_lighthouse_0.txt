@@ -1,0 +1,15 @@
+structure raft:old_lighthouse bbox -580 87 426 .. -484 159 492
+piece 0 raft:old_lighthouse/compound_b CLOCKWISE_180 origin -496, 104, 480 -537 104 441 .. -496 147 480
+piece 1 raft:old_lighthouse/jetty CLOCKWISE_180 origin -538, 99, 448 -568 99 438 .. -538 103 448 (follows the terrain: blocks not compared)
+AUDIT p_old_lighthouse_0 raft:old_lighthouse at -532, 123, 459 rot CLOCKWISE_180 pieces 2 (1 follow the terrain) checked 6217 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 74 [stone_bricks -> cracked_stone_bricks 40, stone_bricks -> mossy_stone_bricks 16, cobblestone -> mossy_cobblestone 9, white_concrete -> calcite 9] | loose 0 [] | items 0 [] falling 0 | npc 1/1 ok
+NPC raft:keeper_fenn ok at -509.1 106.0 461.4 (1.9 from spot) free=true inWall=false floor=spruce_planks water=false feet=air head=air count48=1 | spot -508, 106, 460 feet air head air floor spruce_planks
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced stone_bricks -> cracked_stone_bricks (40): -520,105,472 -522,105,468 -522,105,464 -523,105,464 -526,104,472 -528,106,464 -528,106,472 -527,104,468 -503,104,459 -505,104,463 -519,106,469 -525,105,469
+  replaced cobblestone -> mossy_cobblestone (9): -521,104,452 -527,104,456 -531,104,476 -519,104,449 -520,104,450 -523,104,450 -532,104,470 -519,104,459 -502,106,464
+  replaced stone_bricks -> mossy_stone_bricks (16): -524,107,472 -526,105,464 -524,107,473 -528,107,469 -528,105,473 -527,105,469 -501,106,458 -510,104,458 -523,104,470 -526,105,466 -507,104,461 -509,104,453
+  replaced white_concrete -> calcite (9): -528,109,464 -526,132,472 -501,111,459 -528,116,465 -526,134,465 -501,110,458 -522,118,471 -525,109,463 -530,111,467
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {cobblestone -> mossy_cobblestone=9, stone_bricks -> cracked_stone_bricks=40, stone_bricks -> mossy_stone_bricks=16, white_concrete -> calcite=9}

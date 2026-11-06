@@ -1,0 +1,14 @@
+structure raft:wreck_fishing_boat bbox -2605 33 3508 .. -2564 68 3544
+piece 0 raft:wreck_fishing_boat/capsized CLOCKWISE_90 origin -2576, 45, 3520 -2593 45 3520 .. -2576 56 3532
+AUDIT s1_wreck_fishing_boat_2 raft:wreck_fishing_boat at -2584, 51, 3526 rot CLOCKWISE_90 pieces 1 checked 966 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 2 [cobweb (water) 2] | replaced 6 [sand -> sandstone 2, water -> kelp_plant 2, water -> kelp 1, water -> tall_seagrass 1] | loose 0 [] | items 2 [string 2] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced sand -> sandstone (2): -2580,47,3522 -2591,47,3527
+  replaced water -> kelp_plant (2): -2580,51,3528 -2580,50,3528
+  replaced water -> kelp (1): -2580,52,3528
+  missing cobweb (2): -2584,48,3521 -2587,48,3532
+  replaced water -> tall_seagrass (1): -2585,49,3526
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {cobweb (water)=2}
+all replaced: {sand -> sandstone=2, water -> kelp=1, water -> kelp_plant=2, water -> tall_seagrass=1}

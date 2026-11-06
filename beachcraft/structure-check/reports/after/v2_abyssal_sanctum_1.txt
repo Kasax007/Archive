@@ -1,0 +1,9 @@
+structure raft:abyssal_sanctum bbox -4481 31 -1596 .. -4356 88 -1510
+piece 0 raft:abyssal_sanctum/sanctum CLOCKWISE_90 origin -4368, 43, -1584 -4469 43 -1584 .. -4368 76 -1522
+AUDIT v2_abyssal_sanctum_1 raft:abyssal_sanctum at -4418, 60, -1553 rot CLOCKWISE_90 pieces 1 (0 follow the terrain) checked 81438 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 0 [] | loose 0 [] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {}

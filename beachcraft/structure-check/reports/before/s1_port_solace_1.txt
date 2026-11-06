@@ -1,0 +1,94 @@
+structure raft:port_solace bbox 4023 32 -137 .. 4251 134 47
+piece 0 raft:port_solace/plaza CLOCKWISE_180 origin 4160, 44, 0 4114 44 -46 .. 4160 69 0
+piece 1 raft:port_solace/city_hall_base NONE origin 4119, 44, 1 4119 44 1 .. 4155 91 35
+piece 2 raft:port_solace/avenue_harbour CLOCKWISE_180 origin 4143, 44, -47 4131 44 -77 .. 4143 55 -47
+piece 3 raft:port_solace/avenue_power CLOCKWISE_90 origin 4113, 44, -29 4083 44 -29 .. 4113 59 -17
+piece 4 raft:port_solace/avenue_market COUNTERCLOCKWISE_90 origin 4161, 44, -17 4161 44 -29 .. 4191 59 -17
+piece 5 raft:port_solace/city_hall_top NONE origin 4127, 92, 9 4127 92 9 .. 4147 122 29
+piece 6 raft:port_solace/deco_tower_base CLOCKWISE_180 origin 4110, 44, -30 4086 44 -56 .. 4110 91 -30
+piece 7 raft:port_solace/apartment_brick NONE origin 4085, 44, -16 4085 44 -16 .. 4111 84 -2
+piece 8 raft:port_solace/crossroad COUNTERCLOCKWISE_90 origin 4070, 44, -17 4070 44 -29 .. 4082 55 -17
+piece 9 raft:port_solace/glass_tower_base COUNTERCLOCKWISE_90 origin 4144, 44, -53 4144 44 -71 .. 4164 91 -53
+piece 10 raft:port_solace/shop_row CLOCKWISE_90 origin 4130, 44, -76 4117 44 -76 .. 4130 73 -48
+piece 11 raft:port_solace/crossroad CLOCKWISE_90 origin 4143, 44, -90 4131 44 -90 .. 4143 55 -78
+piece 12 raft:port_solace/deco_tower_top CLOCKWISE_180 origin 4106, 92, -34 4090 92 -50 .. 4106 115 -34
+piece 13 raft:port_solace/glass_tower_top COUNTERCLOCKWISE_90 origin 4145, 92, -53 4145 92 -71 .. 4164 117 -53
+piece 14 raft:port_solace/fallen_tower NONE origin 4168, 44, -16 4168 44 -16 .. 4184 69 27
+piece 15 raft:port_solace/diner CLOCKWISE_180 origin 4185, 44, -30 4167 44 -42 .. 4185 64 -30
+piece 16 raft:port_solace/tee COUNTERCLOCKWISE_90 origin 4192, 44, -17 4192 44 -29 .. 4204 59 -17
+piece 17 raft:port_solace/street_b CLOCKWISE_180 origin 4082, 44, 8 4070 44 -16 .. 4082 60 8
+piece 18 raft:port_solace/street_b NONE origin 4070, 44, -54 4070 44 -54 .. 4082 60 -30
+piece 19 raft:port_solace/street_b COUNTERCLOCKWISE_90 origin 4045, 44, -17 4045 44 -29 .. 4069 60 -17
+piece 20 raft:port_solace/street_a COUNTERCLOCKWISE_90 origin 4106, 44, -78 4106 44 -90 .. 4130 62 -78
+piece 21 raft:port_solace/street_a COUNTERCLOCKWISE_90 origin 4144, 44, -78 4144 44 -90 .. 4168 62 -78
+piece 22 raft:port_solace/street_b CLOCKWISE_180 origin 4143, 44, -91 4131 44 -115 .. 4143 60 -91
+piece 23 raft:port_solace/diner NONE origin 4189, 44, -16 4189 44 -16 .. 4207 64 -4
+piece 24 raft:port_solace/street_b CLOCKWISE_90 origin 4229, 44, -29 4205 44 -29 .. 4229 60 -17
+piece 25 raft:port_solace/street_b CLOCKWISE_180 origin 4204, 44, -30 4192 44 -54 .. 4204 60 -30
+piece 26 raft:port_solace/park_lot CLOCKWISE_90 origin 4069, 44, -11 4057 44 -11 .. 4069 61 3
+piece 27 raft:port_solace/end_sinkhole NONE origin 4070, 44, 9 4070 44 9 .. 4082 62 18
+piece 28 raft:port_solace/apartment_teal CLOCKWISE_90 origin 4069, 44, -52 4054 44 -52 .. 4069 81 -32
+piece 29 raft:port_solace/end_sinkhole CLOCKWISE_180 origin 4082, 44, -55 4070 44 -64 .. 4082 62 -55
+piece 30 raft:port_solace/end_sinkhole CLOCKWISE_90 origin 4044, 44, -29 4035 44 -29 .. 4044 62 -17
+piece 31 raft:port_solace/diner CLOCKWISE_180 origin 4127, 44, -91 4109 44 -103 .. 4127 64 -91
+piece 32 raft:port_solace/end_barricade CLOCKWISE_90 origin 4105, 44, -90 4096 44 -90 .. 4105 55 -78
+piece 33 raft:port_solace/diner CLOCKWISE_180 origin 4165, 44, -91 4147 44 -103 .. 4165 64 -91
+piece 34 raft:port_solace/end_sinkhole COUNTERCLOCKWISE_90 origin 4169, 44, -78 4169 44 -90 .. 4178 62 -78
+piece 35 raft:port_solace/end_sinkhole CLOCKWISE_180 origin 4143, 44, -116 4131 44 -125 .. 4143 62 -116
+piece 36 raft:port_solace/fallen_tower CLOCKWISE_180 origin 4225, 44, -30 4209 44 -73 .. 4225 69 -30
+piece 37 raft:port_solace/diner NONE origin 4208, 44, -16 4208 44 -16 .. 4226 64 -4
+piece 38 raft:port_solace/end_barricade COUNTERCLOCKWISE_90 origin 4230, 44, -17 4230 44 -29 .. 4239 55 -17
+piece 39 raft:port_solace/end_sinkhole CLOCKWISE_180 origin 4204, 44, -55 4192 44 -64 .. 4204 62 -55
+AUDIT s1_port_solace_1 raft:port_solace at 4137, 83, -45 rot CLOCKWISE_180 pieces 40 checked 245902 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 4575 [water 4575] | replaced 7078 [stone -> andesite 1517, stone -> granite 1303, stone -> diorite 885, smooth_stone -> raft:mossy_concrete 479, light_gray_concrete -> raft:cracked_concrete 379, andesite -> granite 351] | loose 3 [gravel 3] | items 1 [string 1] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced light_gray_concrete -> raft:cracked_concrete (379): 4218,55,-50 4104,91,-49 4101,75,-49 4097,83,-49 4222,59,-49 4215,56,-49 4213,62,-49 4126,55,-50 4106,91,-50 4107,67,-50 4100,71,-50 4100,87,-50
+  replaced stone -> granite (1303): 4216,44,-50 4215,44,-50 4214,45,-50 4213,45,-50 4212,44,-50 4211,44,-50 4119,44,-49 4118,46,-49 4118,45,-49 4118,44,-49 4108,46,-49 4217,44,-49
+  replaced andesite -> granite (351): 4215,45,-50 4214,44,-50 4216,45,-49 4214,45,-49 4213,45,-49 4194,44,-49 4119,44,-50 4120,44,-51 4118,45,-51 4107,46,-51 4225,44,-49 4216,44,-51
+  replaced stone -> andesite (1517): 4212,45,-50 4209,44,-50 4209,44,-49 4213,45,-52 4212,45,-52 4211,44,-52 4210,45,-52 4210,44,-52 4209,45,-52 4213,45,-51 4211,45,-51 4210,45,-51
+  replaced andesite -> copper_ore (47): 4128,46,-49 4128,45,-49 4155,46,-60 4154,44,-62 4154,45,-64 4143,44,-34 4098,45,-34 4145,46,-35 4197,45,-40 4140,44,-41 4122,46,-44 4121,46,-44
+  replaced stone -> copper_ore (146): 4127,45,-49 4126,46,-49 4127,46,-50 4154,44,-53 4155,45,-60 4155,45,-61 4154,45,-61 4155,45,-62 4154,45,-62 4155,45,-63 4155,44,-63 4154,45,-63
+  replaced smooth_stone -> raft:mossy_concrete (479): 4127,55,-49 4125,47,-49 4119,51,-49 4219,58,-49 4218,63,-49 4099,59,-50 4096,87,-50 4096,55,-50 4119,47,-51 4102,67,-51 4102,87,-51 4096,67,-51
+  replaced water -> seagrass (184): 4120,52,-49 4120,53,-50 4120,48,-51 4197,46,-54 4196,46,-53 4221,53,-58 4154,97,-58 4200,46,-57 4216,53,-60 4153,93,-60 4140,51,-60 4121,48,-60
+  replaced andesite -> coal_ore (43): 4119,46,-49 4120,46,-50 4159,46,-39 4202,46,-40 4201,45,-40 4200,45,-40 4160,44,-40 4220,46,-43 4219,46,-46 4219,46,-45 4156,45,-12 4155,45,-12
+  replaced water -> tall_seagrass (295): 4118,52,-49 4118,51,-49 4123,57,-50 4123,56,-50 4201,47,-56 4201,48,-56 4201,47,-60 4201,46,-60 4148,99,-60 4148,98,-60 4215,53,-62 4215,52,-62
+  replaced gravel -> stone (92): 4109,44,-49 4107,44,-49 4109,44,-50 4108,44,-50 4106,44,-50 4098,44,-51 4120,44,-52 4108,44,-52 4123,44,-53 4101,44,-53 4125,44,-54 4100,44,-54
+  replaced stone -> diorite (885): 4108,45,-49 4108,44,-49 4109,44,-51 4108,44,-51 4107,45,-51 4109,44,-52 4106,44,-52 4109,45,-53 4108,45,-53 4108,44,-53 4107,46,-53 4108,46,-54
+  replaced stone -> coal_ore (142): 4119,46,-50 4122,46,-51 4121,46,-51 4120,46,-51 4119,46,-51 4210,46,-56 4209,46,-56 4213,46,-57 4212,46,-57 4211,46,-57 4210,46,-57 4204,45,-64
+  replaced andesite -> diorite (262): 4108,45,-52 4107,45,-52 4219,53,-54 4108,45,-54 4107,46,-54 4223,52,-57 4122,44,-59 4120,45,-59 4122,45,-60 4122,44,-60 4119,45,-60 4119,44,-60
+  replaced weathered_cut_copper -> oxidized_cut_copper (4): 4106,75,-52 4109,47,-36 4103,104,-39 4087,51,-52
+  missing water (4575): 4159,103,-53 4159,102,-53 4159,105,-53 4156,103,-53 4156,102,-53 4154,101,-53 4153,101,-53 4164,102,-54 4162,103,-54 4162,102,-54 4162,101,-54 4162,111,-54
+  replaced stone -> dirt (214): 4216,46,-54 4216,46,-53 4217,46,-56 4216,46,-56 4202,44,-56 4201,45,-56 4201,44,-56 4200,44,-56 4199,44,-56 4197,44,-56 4218,46,-55 4216,46,-55
+  replaced andesite -> dirt (70): 4215,46,-56 4215,46,-57 4142,45,-35 4139,45,-35 4138,46,-35 4137,46,-35 4141,45,-36 4139,46,-36 4138,46,-36 4200,46,-17 4137,45,-24 4137,44,-24
+  replaced stone -> clay (3): 4198,44,-56 4200,44,-58 4197,44,-57
+  replaced andesite -> iron_ore (9): 4153,44,-60 4172,45,-42 4171,44,-41 4186,44,-22 4185,44,-23 4130,45,-29 4072,46,-44 4072,46,-43 4148,44,-93
+  replaced andesite -> lapis_ore (1): 4224,44,-64
+  replaced stone -> lapis_ore (13): 4223,44,-64 4176,44,-14 4175,44,-14 4154,46,16 4154,46,17 4075,44,-20 4075,44,-19 4171,44,-88 4170,44,-88 4171,44,-89 4082,45,-35 4082,45,-34
+  replaced stone -> iron_ore (37): 4178,46,-34 4178,45,-34 4172,44,-40 4172,46,-42 4172,45,-41 4171,45,-41 4119,45,-27 4131,45,-29 4129,45,-29 4129,44,-29 4130,44,-30 4129,45,-30
+  replaced raft:asphalt -> gravel (27): 4129,46,-38 4142,46,-39 4200,46,-43 4179,46,-20 4159,46,-22 4112,46,-22 4110,46,-23 4173,46,-24 4102,46,-23 4203,46,-23 4223,46,-26 4218,46,-26
+  replaced stone -> gravel (281): 4096,46,-40 4140,45,-41 4139,45,-41 4138,45,-41 4140,44,-42 4140,45,-42 4137,45,-42 4096,46,-42 4140,45,-43 4139,45,-43 4138,45,-43 4096,46,-43
+  replaced andesite -> gravel (92): 4096,46,-41 4139,44,-42 4138,44,-42 4138,45,-42 4141,45,-43 4140,44,-43 4138,44,-43 4097,46,-43 4139,45,-44 4097,46,-45 4139,44,-46 4137,45,-47
+  replaced tuff -> coal_ore (2): 4223,50,-43 4222,47,-43
+  replaced water -> kelp (33): 4100,47,-21 4108,54,-23 4115,56,-26 4120,50,-29 4064,50,-25 4068,52,-24 4056,52,-23 4092,49,-20 4059,55,-18 4093,97,-48 4058,64,-48 4077,51,-47
+  replaced water -> kelp_plant (131): 4108,47,-23 4108,46,-23 4108,53,-23 4108,52,-23 4108,49,-23 4108,48,-23 4108,51,-23 4108,50,-23 4115,47,-26 4115,53,-26 4115,52,-26 4115,55,-26
+  replaced stone -> sandstone (2): 4108,44,-29 4107,44,-31
+  replaced andesite -> sand (2): 4109,44,-30 4109,44,-31
+  replaced tuff -> granite (6): 4171,48,-2 4170,48,-2 4174,47,-3 4171,47,-3 4170,47,-8 4170,47,-9
+  replaced water -> raft:barnacles (2): 4072,46,14 4060,51,-8
+  replaced tuff -> andesite (4): 4169,48,-1 4170,50,-3 4170,51,-5 4182,49,27
+  replaced tuff -> diorite (3): 4182,49,-3 4087,48,-56 4212,48,-73
+  replaced dirt -> sand (4): 4060,46,3 4061,46,3 4062,46,3 4062,46,2
+  replaced diorite -> andesite (1): 4142,50,5
+  replaced kelp -> kelp_plant (3): 4149,64,17 4059,54,-18 4211,65,-72
+  replaced water -> mossy_cobblestone (1): 4174,45,-82
+  replaced diorite -> coal_ore (1): 4131,48,33
+  replaced raft:glow_kelp -> raft:glow_kelp_plant (1): 4058,79,-39
+  replaced gravel -> granite (3): 4090,44,-35 4088,44,-35 4088,44,-33
+  replaced water -> horn_coral_wall_fan (1): 4070,51,-60
+  replaced water -> bubble_coral_wall_fan (1): 4070,48,-59
+  replaced water -> tube_coral_block (1): 4070,51,-59
+  loose gravel (3): 4095,34,-21 4095,35,-22 4044,53,-81
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {water=4575}
+all replaced: {andesite -> coal_ore=43, andesite -> copper_ore=47, andesite -> diorite=262, andesite -> dirt=70, andesite -> granite=351, andesite -> gravel=92, andesite -> iron_ore=9, andesite -> lapis_ore=1, andesite -> sand=2, diorite -> andesite=1, diorite -> coal_ore=1, dirt -> sand=4, gravel -> granite=3, gravel -> stone=92, kelp -> kelp_plant=3, light_gray_concrete -> raft:cracked_concrete=379, raft:asphalt -> gravel=27, raft:glow_kelp -> raft:glow_kelp_plant=1, smooth_stone -> raft:mossy_concrete=479, stone -> andesite=1517, stone -> clay=3, stone -> coal_ore=142, stone -> copper_ore=146, stone -> diorite=885, stone -> dirt=214, stone -> granite=1303, stone -> gravel=281, stone -> iron_ore=37, stone -> lapis_ore=13, stone -> sandstone=2, tuff -> andesite=4, tuff -> coal_ore=2, tuff -> diorite=3, tuff -> granite=6, water -> bubble_coral_wall_fan=1, water -> horn_coral_wall_fan=1, water -> kelp=33, water -> kelp_plant=131, water -> mossy_cobblestone=1, water -> raft:barnacles=2, water -> seagrass=184, water -> tall_seagrass=295, water -> tube_coral_block=1, weathered_cut_copper -> oxidized_cut_copper=4}

@@ -1,0 +1,9 @@
+structure raft:castaway_camp bbox -3770 93 -1423 .. -3732 122 -1380
+piece 0 raft:castaway_camp/boat_shelter CLOCKWISE_180 origin -3744, 105, -1392 -3758 105 -1411 .. -3744 110 -1392
+AUDIT s2_castaway_camp_1 raft:castaway_camp at -3751, 108, -1401 rot CLOCKWISE_180 pieces 1 checked 223 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 0 [] | loose 0 [] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {}

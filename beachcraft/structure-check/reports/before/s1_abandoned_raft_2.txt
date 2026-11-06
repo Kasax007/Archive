@@ -1,0 +1,9 @@
+structure raft:abandoned_raft bbox -2576 98 3456 .. -2564 101 3467
+piece 0 raft:abandoned_raft/wrecked NONE origin -2576, 98, 3456 -2576 98 3456 .. -2564 101 3467
+AUDIT s1_abandoned_raft_2 raft:abandoned_raft at -2570, 100, 3462 rot NONE pieces 1 checked 69 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 0 [] | loose 0 [] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {}

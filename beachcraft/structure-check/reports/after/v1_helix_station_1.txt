@@ -1,0 +1,9 @@
+structure raft:helix_station bbox 2788 40 1724 .. 2865 80 1804
+piece 0 raft:helix_station/station_0 COUNTERCLOCKWISE_90 origin 2800, 52, 1792 2800 52 1736 .. 2853 68 1792
+AUDIT v1_helix_station_1 raft:helix_station at 2827, 60, 1764 rot COUNTERCLOCKWISE_90 pieces 1 (0 follow the terrain) checked 12561 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 0 [] | loose 0 [] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {}

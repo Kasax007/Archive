@@ -1,0 +1,15 @@
+structure raft:old_lighthouse bbox -2972 87 -1396 .. -2906 160 -1300
+piece 0 raft:old_lighthouse/compound_a COUNTERCLOCKWISE_90 origin -2960, 105, -1312 -2960 105 -1353 .. -2921 148 -1312
+piece 1 raft:old_lighthouse/jetty COUNTERCLOCKWISE_90 origin -2928, 99, -1354 -2928 99 -1384 .. -2918 103 -1354 (follows the terrain: blocks not compared)
+AUDIT v2_old_lighthouse_1 raft:old_lighthouse at -2939, 124, -1348 rot COUNTERCLOCKWISE_90 pieces 2 (1 follow the terrain) checked 6173 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 110 [stone_bricks -> cracked_stone_bricks 38, stone_bricks -> mossy_stone_bricks 34, cobblestone -> mossy_cobblestone 31, white_concrete -> calcite 7] | loose 0 [] | items 0 [] falling 0 | npc 1/1 ok
+NPC raft:keeper_fenn ok at -2939.1 107.0 -1318.6 (4.9 from spot) free=true inWall=false floor=oak_planks water=false feet=air head=air count48=1 | spot -2940, 107, -1324 feet air head air floor spruce_planks
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced stone_bricks -> mossy_stone_bricks (34): -2944,107,-1322 -2943,108,-1342 -2942,105,-1326 -2941,105,-1318 -2939,105,-1322 -2935,105,-1326 -2951,107,-1339 -2950,107,-1339 -2948,108,-1339 -2947,108,-1343 -2947,105,-1339 -2946,107,-1347
+  replaced cobblestone -> mossy_cobblestone (31): -2944,107,-1326 -2941,106,-1334 -2939,105,-1350 -2938,105,-1342 -2933,105,-1314 -2933,105,-1338 -2931,105,-1334 -2928,105,-1338 -2956,105,-1347 -2952,105,-1335 -2945,107,-1347 -2930,105,-1337
+  replaced stone_bricks -> cracked_stone_bricks (38): -2943,105,-1326 -2942,106,-1342 -2940,105,-1318 -2936,105,-1326 -2936,105,-1322 -2951,105,-1343 -2948,106,-1335 -2947,105,-1343 -2947,105,-1335 -2946,106,-1347 -2939,106,-1317 -2939,105,-1325
+  replaced white_concrete -> calcite (7): -2944,128,-1342 -2945,136,-1339 -2943,112,-1341 -2941,110,-1317 -2950,118,-1337 -2945,118,-1345 -2946,134,-1338
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {cobblestone -> mossy_cobblestone=31, stone_bricks -> cracked_stone_bricks=38, stone_bricks -> mossy_stone_bricks=34, white_concrete -> calcite=7}

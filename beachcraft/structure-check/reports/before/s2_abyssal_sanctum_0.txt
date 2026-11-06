@@ -1,0 +1,13 @@
+structure raft:abyssal_sanctum bbox 884 27 -3114 .. 1009 84 -3028
+piece 0 raft:abyssal_sanctum/sanctum COUNTERCLOCKWISE_90 origin 896, 39, -3040 896 39 -3102 .. 997 72 -3040
+AUDIT s2_abyssal_sanctum_0 raft:abyssal_sanctum at 947, 56, -3071 rot COUNTERCLOCKWISE_90 pieces 1 checked 81438 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 22 [water -> bubble_column 18, raft:tidestone_bricks -> magma_block 2, raft:mossy_tidestone_bricks -> magma_block 1, raft:sanctum_tidestone -> magma_block 1] | loose 0 [] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced raft:tidestone_bricks -> magma_block (2): 989,39,-3067 989,39,-3066
+  replaced water -> bubble_column (18): 990,45,-3067 990,44,-3067 990,43,-3067 990,42,-3067 990,41,-3067 990,40,-3067 991,45,-3066 991,44,-3066 991,43,-3066 991,42,-3066 991,41,-3066 991,40,-3066
+  replaced raft:mossy_tidestone_bricks -> magma_block (1): 990,39,-3067
+  replaced raft:sanctum_tidestone -> magma_block (1): 965,39,-3057
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {raft:mossy_tidestone_bricks -> magma_block=1, raft:sanctum_tidestone -> magma_block=1, raft:tidestone_bricks -> magma_block=2, water -> bubble_column=18}

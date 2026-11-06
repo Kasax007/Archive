@@ -1,0 +1,13 @@
+structure raft:wreck_cargo_ship bbox -4122 43 -1532 .. -4036 95 -1484
+piece 0 raft:wreck_cargo_ship/freighter_0 CLOCKWISE_90 origin -4048, 55, -1520 -4110 55 -1520 .. -4048 83 -1496
+AUDIT s2_wreck_cargo_ship_1 raft:wreck_cargo_ship at -4079, 69, -1508 rot CLOCKWISE_90 pieces 1 checked 9383 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 19 [sand -> sandstone 10, water -> kelp 4, water -> kelp_plant 3, gravel -> stone 2] | loose 0 [] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced sand -> sandstone (10): -4066,57,-1500 -4061,57,-1500 -4058,57,-1500 -4072,57,-1515 -4063,57,-1515 -4061,57,-1515 -4062,57,-1499 -4079,57,-1513 -4051,57,-1509 -4097,57,-1500
+  replaced water -> kelp_plant (3): -4062,60,-1508 -4054,79,-1505 -4053,79,-1505
+  replaced water -> kelp (4): -4062,61,-1508 -4071,62,-1502 -4063,73,-1506 -4060,60,-1506
+  replaced gravel -> stone (2): -4098,57,-1498 -4080,57,-1505
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {gravel -> stone=2, sand -> sandstone=10, water -> kelp=4, water -> kelp_plant=3}

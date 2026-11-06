@@ -1,0 +1,16 @@
+structure raft:ashen_forge bbox 1985 114 -1436 .. 2052 173 -1336
+piece 0 raft:ashen_forge/hall NONE origin 2000, 127, -1424 2000 127 -1424 .. 2040 161 -1379
+piece 1 raft:ashen_forge/vault NONE origin 1997, 126, -1378 1997 126 -1378 .. 2023 147 -1348
+AUDIT v1_ashen_forge_1 raft:ashen_forge at 2019, 144, -1386 rot NONE pieces 2 (0 follow the terrain) checked 52421 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 858 [basalt -> magma_block 373, polished_blackstone_bricks -> cracked_polished_blackstone_bricks 258, raft:tidestone_bricks -> raft:cracked_tidestone_bricks 214, tuff -> diorite 10, deepslate -> diorite 3] | loose 0 [] | items 0 [] falling 0 | npc 1/1 ok
+NPC raft:dr_voss ok at 2004.5 132.0 -1397.9 (1.6 from spot) free=true inWall=false floor=polished_blackstone_bricks water=false feet=air head=air count48=1 | spot 2004, 132, -1400 feet air head air floor polished_blackstone
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced polished_blackstone_bricks -> cracked_polished_blackstone_bricks (258): 2034,127,-1424 2030,145,-1392 2014,127,-1360 2005,139,-1392 2007,139,-1392 2034,127,-1423 2034,140,-1391 2029,129,-1391 2026,127,-1423 2020,128,-1391 2021,133,-1391 2022,132,-1391
+  replaced basalt -> magma_block (373): 2034,137,-1392 2035,130,-1392 2023,127,-1360 2021,140,-1360 2021,137,-1360 2022,128,-1360 2014,147,-1392 2015,144,-1360 2010,148,-1392 2004,133,-1392 2005,136,-1392 2006,135,-1392
+  replaced raft:tidestone_bricks -> raft:cracked_tidestone_bricks (214): 2013,137,-1360 2013,136,-1360 2014,131,-1360 2008,142,-1392 2008,137,-1391 2008,138,-1359 2032,134,-1390 2032,131,-1390 2032,139,-1390 2032,138,-1390 2026,145,-1390 2008,136,-1390
+  replaced tuff -> diorite (10): 2040,128,-1421 2040,129,-1420 2039,127,-1420 2038,127,-1420 2037,127,-1420 2038,127,-1419 2038,129,-1419 2038,127,-1418 2039,130,-1418 2039,129,-1417
+  replaced deepslate -> diorite (3): 2038,127,-1421 2040,128,-1418 2038,129,-1418
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {basalt -> magma_block=373, deepslate -> diorite=3, polished_blackstone_bricks -> cracked_polished_blackstone_bricks=258, raft:tidestone_bricks -> raft:cracked_tidestone_bricks=214, tuff -> diorite=10}

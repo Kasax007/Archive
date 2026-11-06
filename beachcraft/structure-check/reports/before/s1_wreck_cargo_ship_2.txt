@@ -1,0 +1,13 @@
+structure raft:wreck_cargo_ship bbox -2460 23 3532 .. -2374 75 3580
+piece 0 raft:wreck_cargo_ship/freighter_0 COUNTERCLOCKWISE_90 origin -2448, 35, 3568 -2448 35 3544 .. -2386 63 3568
+AUDIT s1_wreck_cargo_ship_2 raft:wreck_cargo_ship at -2417, 49, 3556 rot COUNTERCLOCKWISE_90 pieces 1 checked 9383 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 60 [sand -> sandstone 32, water -> tall_seagrass 15, gravel -> stone 7, water -> kelp 6] | loose 0 [] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced water -> kelp (6): -2436,40,3554 -2433,53,3554 -2433,53,3556 -2436,38,3553 -2424,42,3550 -2425,42,3550
+  replaced sand -> sandstone (32): -2444,35,3550 -2446,35,3550 -2388,35,3553 -2387,35,3557 -2391,35,3557 -2390,35,3557 -2389,35,3557 -2417,37,3561 -2435,37,3563 -2434,37,3547 -2433,37,3563 -2446,36,3551
+  replaced gravel -> stone (7): -2389,35,3553 -2416,37,3553 -2387,35,3556 -2387,35,3555 -2388,35,3554 -2388,35,3558 -2398,37,3546
+  replaced water -> tall_seagrass (15): -2402,39,3556 -2402,38,3556 -2408,39,3560 -2436,54,3552 -2436,53,3552 -2408,39,3559 -2408,38,3559 -2409,39,3559 -2409,38,3559 -2432,50,3551 -2432,51,3551 -2423,42,3550
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {gravel -> stone=7, sand -> sandstone=32, water -> kelp=6, water -> tall_seagrass=15}

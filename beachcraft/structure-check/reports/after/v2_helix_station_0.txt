@@ -1,0 +1,11 @@
+structure raft:helix_station bbox 1124 73 -2692 .. 1201 113 -2612
+piece 0 raft:helix_station/station_0 COUNTERCLOCKWISE_90 origin 1136, 85, -2624 1136 85 -2680 .. 1189 101 -2624
+AUDIT v2_helix_station_0 raft:helix_station at 1163, 93, -2652 rot COUNTERCLOCKWISE_90 pieces 1 (0 follow the terrain) checked 12561 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 5 [water -> tall_seagrass 4, water -> raft:sea_urchin 1] | loose 0 [] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced water -> raft:sea_urchin (1): 1156,89,-2635
+  replaced water -> tall_seagrass (4): 1152,89,-2642 1152,90,-2642 1156,89,-2637 1156,90,-2637
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {water -> raft:sea_urchin=1, water -> tall_seagrass=4}

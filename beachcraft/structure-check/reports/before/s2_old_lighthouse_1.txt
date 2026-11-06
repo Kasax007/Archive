@@ -1,0 +1,34 @@
+structure raft:old_lighthouse bbox -2972 87 -1396 .. -2906 160 -1300
+piece 0 raft:old_lighthouse/compound_a COUNTERCLOCKWISE_90 origin -2960, 105, -1312 -2960 105 -1353 .. -2921 148 -1312
+piece 1 raft:old_lighthouse/jetty COUNTERCLOCKWISE_90 origin -2928, 99, -1354 -2928 99 -1384 .. -2918 103 -1354
+AUDIT s2_old_lighthouse_1 raft:old_lighthouse at -2939, 124, -1348 rot COUNTERCLOCKWISE_90 pieces 2 checked 6402 | solid 0 [] | fluid 0 [] | deco 5 [raft:plumeria 2, raft:bird_of_paradise 1, raft:hibiscus 1, raft:seashells 1] | missing 13 [spruce_log (water) 3, spruce_fence 2, spruce_log 2, spruce_planks 2, stripped_spruce_wood 2] | replaced 172 [stone_bricks -> cracked_stone_bricks 38, stone_bricks -> mossy_stone_bricks 34, cobblestone -> mossy_cobblestone 31, stone -> dirt 21, andesite -> dirt 19, white_concrete -> calcite 7] | loose 0 [] | items 0 [] falling 0 | npc 1/1 ok
+NPC raft:keeper_fenn ok at -2940.4 107.0 -1325.1 (1.9 from spot) free=true inWall=false floor=spruce_planks water=false feet=air head=air count48=1 | spot -2940, 107, -1324 feet air head air floor spruce_planks
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced stone_bricks -> mossy_stone_bricks (34): -2944,107,-1322 -2943,108,-1342 -2942,105,-1326 -2941,105,-1318 -2939,105,-1322 -2935,105,-1326 -2951,107,-1339 -2950,107,-1339 -2948,108,-1339 -2947,108,-1343 -2947,105,-1339 -2946,107,-1347
+  replaced cobblestone -> mossy_cobblestone (31): -2944,107,-1326 -2941,106,-1334 -2939,105,-1350 -2938,105,-1342 -2933,105,-1314 -2933,105,-1338 -2931,105,-1334 -2928,105,-1338 -2956,105,-1347 -2952,105,-1335 -2945,107,-1347 -2930,105,-1337
+  replaced tuff -> dirt (6): -2943,105,-1346 -2937,105,-1338 -2936,105,-1350 -2941,105,-1340 -2940,106,-1348 -2938,105,-1339
+  replaced stone -> dirt (21): -2943,106,-1346 -2942,106,-1346 -2941,105,-1346 -2941,106,-1346 -2939,105,-1346 -2939,106,-1350 -2939,106,-1338 -2939,105,-1338 -2953,106,-1331 -2942,105,-1349 -2941,105,-1345 -2940,106,-1349
+  replaced stone_bricks -> cracked_stone_bricks (38): -2943,105,-1326 -2942,106,-1342 -2940,105,-1318 -2936,105,-1326 -2936,105,-1322 -2951,105,-1343 -2948,106,-1335 -2947,105,-1343 -2947,105,-1335 -2946,106,-1347 -2939,106,-1317 -2939,105,-1325
+  replaced white_concrete -> calcite (7): -2944,128,-1342 -2945,136,-1339 -2943,112,-1341 -2941,110,-1317 -2950,118,-1337 -2945,118,-1345 -2946,134,-1338
+  replaced andesite -> dirt (19): -2940,105,-1346 -2940,105,-1338 -2943,106,-1341 -2941,106,-1349 -2941,106,-1341 -2939,105,-1337 -2953,106,-1332 -2953,107,-1332 -2944,106,-1340 -2943,105,-1348 -2941,106,-1348 -2944,106,-1347
+  replaced diorite -> gravel (6): -2936,110,-1318 -2936,110,-1326 -2942,110,-1317 -2940,111,-1317 -2936,110,-1319 -2936,109,-1327
+  replaced stone -> coal_ore (3): -2932,105,-1350 -2954,105,-1345 -2931,105,-1351
+  deco raft:plumeria (2): -2932,106,-1326 -2929,106,-1324
+  missing spruce_log (5): -2926,99,-1354 -2926,100,-1354 -2922,99,-1354 -2922,100,-1354 -2924,99,-1355
+  missing spruce_fence (2): -2926,101,-1354 -2922,101,-1354
+  missing lantern (1): -2926,102,-1354
+  missing spruce_planks (2): -2925,100,-1354 -2924,100,-1355
+  missing stripped_spruce_wood (2): -2923,100,-1354 -2923,100,-1355
+  replaced stone -> copper_ore (1): -2942,106,-1349
+  replaced diorite -> dirt (2): -2940,105,-1349 -2940,105,-1347
+  replaced andesite -> coal_ore (3): -2940,105,-1345 -2955,106,-1344 -2941,105,-1343
+  replaced stone -> iron_ore (1): -2933,105,-1336
+  deco raft:seashells (1): -2931,106,-1320
+  deco raft:bird_of_paradise (1): -2924,106,-1320
+  deco raft:hibiscus (1): -2929,106,-1323
+  missing raft:weathered_planks (1): -2925,100,-1355
+all solid intrusions: {}
+all deco intrusions: {raft:bird_of_paradise=1, raft:hibiscus=1, raft:plumeria=2, raft:seashells=1}
+all missing: {lantern=1, raft:weathered_planks=1, spruce_fence=2, spruce_log=2, spruce_log (water)=3, spruce_planks=2, stripped_spruce_wood=2}
+all replaced: {andesite -> coal_ore=3, andesite -> dirt=19, cobblestone -> mossy_cobblestone=31, diorite -> dirt=2, diorite -> gravel=6, stone -> coal_ore=3, stone -> copper_ore=1, stone -> dirt=21, stone -> iron_ore=1, stone_bricks -> cracked_stone_bricks=38, stone_bricks -> mossy_stone_bricks=34, tuff -> dirt=6, white_concrete -> calcite=7}

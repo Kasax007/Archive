@@ -1,0 +1,21 @@
+structure raft:sunken_plane bbox 1086 78 -3084 .. 1148 116 -3020
+piece 0 raft:sunken_plane/airliner_0 CLOCKWISE_90 origin 1136, 90, -3072 1098 90 -3072 .. 1136 104 -3032
+AUDIT s2_sunken_plane_0 raft:sunken_plane at 1117, 97, -3052 rot CLOCKWISE_90 pieces 1 checked 2463 | solid 0 [] | fluid 3 [water 3] | deco 0 [] | missing 40 [tall_seagrass 16, water 8, seagrass 6, kelp 5, kelp_plant 5] | replaced 82 [sand -> sandstone 52, gravel -> stone 22, water -> tall_seagrass 4, water -> fire_coral_block 2, water -> bubble_coral_fan 1, water -> horn_coral_fan 1] | loose 5 [gravel 5] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced sand -> sandstone (52): 1132,92,-3067 1132,92,-3061 1132,92,-3059 1133,92,-3066 1133,92,-3069 1133,92,-3064 1133,92,-3059 1134,92,-3059 1134,92,-3061 1129,92,-3057 1124,92,-3051 1125,92,-3057
+  replaced gravel -> stone (22): 1132,92,-3062 1132,92,-3060 1133,92,-3062 1128,92,-3068 1128,92,-3056 1129,92,-3063 1129,92,-3068 1124,92,-3053 1126,92,-3056 1117,92,-3066 1117,92,-3051 1117,92,-3046
+  missing kelp (5): 1130,102,-3062 1117,102,-3041 1114,102,-3063 1114,100,-3047 1099,102,-3051
+  missing water (8): 1124,100,-3055 1124,100,-3054 1124,100,-3053 1125,100,-3055 1125,100,-3054 1121,100,-3054 1122,100,-3054 1123,100,-3054
+  missing tall_seagrass (16): 1120,102,-3054 1120,101,-3054 1121,103,-3054 1121,102,-3054 1123,101,-3051 1123,100,-3051 1116,102,-3055 1116,101,-3055 1112,102,-3054 1112,101,-3054 1114,102,-3055 1114,101,-3055
+  missing seagrass (6): 1120,101,-3053 1121,100,-3051 1119,101,-3053 1113,100,-3053 1108,100,-3054 1103,100,-3053
+  missing kelp_plant (5): 1117,101,-3041 1117,100,-3041 1114,101,-3063 1099,101,-3051 1099,100,-3051
+  replaced water -> tall_seagrass (4): 1115,98,-3053 1115,97,-3053 1111,98,-3052 1111,97,-3052
+  replaced water -> bubble_coral_fan (1): 1102,95,-3054
+  replaced water -> horn_coral_fan (1): 1102,95,-3053
+  replaced water -> fire_coral_block (2): 1102,94,-3054 1102,94,-3053
+  loose gravel (5): 1134,93,-3070 1135,93,-3070 1134,93,-3069 1135,93,-3069 1135,93,-3068
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {kelp=5, kelp_plant=5, seagrass=6, tall_seagrass=16, water=8}
+all replaced: {gravel -> stone=22, sand -> sandstone=52, water -> bubble_coral_fan=1, water -> fire_coral_block=2, water -> horn_coral_fan=1, water -> tall_seagrass=4}

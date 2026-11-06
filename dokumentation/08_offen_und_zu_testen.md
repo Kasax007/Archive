@@ -64,8 +64,38 @@ Challenge-Craft-Modpack v5 (erst nach deiner Testrunde, falls Quests sich noch �
 - [x] Heilung nach 30 s ohne Spieler (bctest 5.11., `tools/content/boss/tests/boss_heal.txt`): mit einem Spieler im
   Überlebensmodus in der Arena bleibt der Leviathan bei 450 von 600, ohne Spieler ist er nach 35 s wieder voll.
 - [ ] Bosskampf im Überlebensmodus mit Freunden; erneutes Rufen mit Schlüssel + Ancient Crystal.
-- [ ] Natürliche Piratenbucht auf echten Inseln, Leuchtturm-Steg (zeigt er oft ins Land?), Castaway Camp, Sunken Plane,
-  Fishing Boat Wreck in freier Natur.
+- [x] Natürliche Piratenbucht, Castaway Camp, Sunken Plane und Fishing Boat Wreck in freier Natur: in der
+  Strukturprüfung 6.11. an je 5 Orten geprüft (siehe unten). Offen bleibt nur der Leuchtturm-Steg (zeigt er oft ins Land?).
+- [x] **Strukturprüfung 6.11.** (`bctest audit`, Klasse `src/gametest/.../StructAudit.java`, Skripte im Scratchpad
+  `audit/gen.py`): alle 19 Strukturen an je 5 Orten in 2 Welten (Seeds `bcaudit1`, `tides2`) Block für Block mit ihren
+  Vorlagen verglichen, dazu jede Person (Füße und Kopf frei, Boden darunter, nicht im Wasser, keine Doppelten) und
+  herumliegende Items. Gefunden und behoben (Branch `fix/structure-features`, nach 26.3 gemergt):
+  - **Ashen Forge:** Basaltsäulen füllten an allen 5 Orten die Räume (1.645–2.875 Blöcke je Forge). Voss stand zweimal
+    im Basalt, die Glutkrabben der Vorlage erstickten (daher die Items am Boden). Asche-Dünen fraßen die Wände, ein
+    Lavasee schnitt hinein. Ursache: Features laufen nach der Struktur im selben Schritt und auch aus Nachbar-Chunks.
+    Fix: Platzierungsfilter `raft:clear_of_structures` an allen Gelände-Features (Vanilla-Features als `raft:`-Kopien;
+    Features ohne Höhe wie Blasenquellen, Trümmer, Eisschollen mit `whole_column`).
+  - **Überlappung:** Ein Rusted Rig stand auf dem Abyssal Sanctum (Beine durch die Wände, 615 Wasser im Sanctum),
+    fremde Teile in Helix Station und Port Solace. Fix: `StructurePriority` mit Rängen (Story vor Orten mit Bewohner vor
+    dem Rest, Tags `raft:priority/story` und `raft:priority/people`), geprüft in `findValidGenerationPoint`, also auch
+    für `/locate` und die Karten.
+  - **Bewuchs und Erze:** Dschungel- und Mangrovenbäume im Leuchtturm und in Saltmere, Erzflecken in Fundamenten und
+    Böden, Seetang im Coral Temple, Blasenquellen im Sanctum. Fix: derselbe Filter.
+  - **Strandbar:** scharfes Sand-Rechteck mit Stufe am Hang (die Geländeanpassung `beard_thin` ebnet die Grundfläche).
+    Fix: Strandbar und Camp nur auf fast ebenem Boden (9 Punkte, höchstens 3 Blöcke Unterschied).
+  - **Port Solace:** In etwa 1 von 6 Städten reichte ein Teil in einen 9. Chunk vom Startchunk. Das Spiel verteilt
+    Teile aber nur bis 8 Chunks, der Teil wurde nie gebaut (Fuß eines umgestürzten Turms auf nacktem Kies). Fix:
+    `max_distance_from_center` 112 → 104 (Layout-Simulation: 0 von 60 Städten jenseits von 8 Chunks, gleich viele
+    Teile, Rathaus mit den Story-Truhen, Glas- und Deko-Turm weiter in jeder Stadt). Der Check meldet solche Teile jetzt.
+  - **Sunken Plane** ragte aus flachem Wasser (Pflanzen der Vorlage im Trockenen). Fix: Mindesttiefe 14 Blöcke.
+  - **Fischerboot:** Das Meer spülte die Spinnweben-Netze weg (bis 36 Schnüre). Jetzt `cargo_net` (wassergefüllt).
+  - **Rusted Rig:** Der Amboss am Kran fiel beim ersten Block-Update. Jetzt ein Heavy Core.
+  - **Kontrolle mit dem Fix** (dieselben Seeds und Orte, 95 Strukturen): 0 Fremdblöcke in Räumen, 0 Pflanzen in
+    Räumen, alle 36 geprüften Personen frei und auf dem Boden, keine Spinnweben- oder Krabben-Items mehr. Übrig sind
+    nur gewollte Effekte (Verwitterung, Magma in der Forge, Seegras auf Wasser der Vorlage, Gras unter Blöcken wird zu
+    Erde) und bei der Sunken Plane eine geflutete Lufttasche (3 Blöcke).
+  - **Bewusst so:** Kai wohnt nur im Zelt-Lager (1 von 3 Lagerarten, so im Almanach). Die Galeone kann unter Wasser 2
+    Schädel verlieren. Gleichrangige Nebenstrukturen dürfen sich weiter berühren (Ruinen und Frachter).
 - [ ] Büro-Etagen und Rathaus-Treppenhaus in Port Solace ohne Nachtsicht (seit der dunkleren Dimension).
 - [x] Ton: Walgesang und Blasen (BcCheck 5.11., mit Ton-Protokoll).
 - [x] Dedicated Server mit 3.1.0 allein (ohne Pack) gestartet (Smoke-Test 5.11., 15/15).
@@ -82,7 +112,8 @@ Challenge-Craft-Modpack v5 (erst nach deiner Testrunde, falls Quests sich noch �
   - Vulkaninsel bei (−400, −300) ohne Lava an der Oberfläche, nur tief unten. Prüfen, ob die Lava-Sperre um die Ashen
     Forge (CraterLavaFeature) zu viel wegnimmt.
   - [x] In der Raft-Dimension ist jetzt Tag und Nacht wie in der Oberwelt (3.1.0).
-  - Der alte Leuchtturm steckt in hohen Dschungelbäumen der Nachbarinsel.
+  - [x] Der alte Leuchtturm steckt in hohen Dschungelbäumen der Nachbarinsel: Bäume halten jetzt 6 Blöcke Abstand
+    zu Strukturen (Strukturprüfung 6.11.).
   - [x] Der Coral Temple liegt jetzt immer ganz unter Wasser (3.1.0).
   - Neue Gebiete der Raft-Dimension: Der Server fällt 90–180 s zurück.
   - Log: „Dev warning – Untranslated Item Tags“.

@@ -1,0 +1,9 @@
+structure raft:buoy_field bbox -2816 95 3152 .. -2804 99 3172
+piece 0 raft:buoy_field/channel NONE origin -2816, 95, 3152 -2816 95 3152 .. -2804 99 3172
+AUDIT v1_buoy_field_2 raft:buoy_field at -2810, 97, 3162 rot NONE pieces 1 (0 follow the terrain) checked 37 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 0 [] | loose 0 [] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {}

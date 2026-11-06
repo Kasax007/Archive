@@ -1,0 +1,10 @@
+structure raft:abyssal_sanctum bbox 2708 40 1956 .. 2794 97 2081
+piece 0 raft:abyssal_sanctum/sanctum NONE origin 2720, 52, 1968 2720 52 1968 .. 2782 85 2069
+AUDIT s1_abyssal_sanctum_1 raft:abyssal_sanctum at 2751, 69, 2019 rot NONE pieces 1 checked 81438 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 0 [] | loose 12 [gravel 12] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  loose gravel (12): 2782,55,2033 2781,55,2034 2782,55,2034 2781,55,2035 2782,55,2035 2780,55,2036 2781,55,2036 2782,55,2036 2780,55,2037 2781,55,2037 2782,55,2037 2781,55,2038
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {}

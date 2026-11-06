@@ -1,0 +1,14 @@
+structure raft:ashen_forge bbox 1585 163 -1788 .. 1652 222 -1688
+piece 0 raft:ashen_forge/hall NONE origin 1600, 176, -1776 1600 176 -1776 .. 1640 210 -1731
+piece 1 raft:ashen_forge/vault NONE origin 1597, 175, -1730 1597 175 -1730 .. 1623 196 -1700
+AUDIT v1_ashen_forge_0 raft:ashen_forge at 1619, 193, -1738 rot NONE pieces 2 (0 follow the terrain) checked 52421 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 884 [basalt -> magma_block 411, polished_blackstone_bricks -> cracked_polished_blackstone_bricks 254, raft:tidestone_bricks -> raft:cracked_tidestone_bricks 219] | loose 0 [] | items 0 [] falling 0 | npc 1/1 ok
+NPC raft:dr_voss ok at 1603.6 181.0 -1749.9 (1.9 from spot) free=true inWall=false floor=polished_blackstone_bricks water=false feet=air head=air count48=1 | spot 1604, 181, -1752 feet air head air floor polished_blackstone
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced basalt -> magma_block (411): 1637,188,-1738 1638,184,-1738 1631,179,-1738 1627,176,-1770 1620,185,-1706 1620,179,-1706 1617,196,-1738 1611,175,-1706 1604,189,-1706 1605,197,-1738 1606,175,-1706 1606,183,-1738
+  replaced raft:tidestone_bricks -> raft:cracked_tidestone_bricks (219): 1632,194,-1738 1608,186,-1738 1632,182,-1737 1624,196,-1769 1620,180,-1737 1608,189,-1737 1608,184,-1737 1608,180,-1737 1608,183,-1737 1608,195,-1737 1632,185,-1740 1632,192,-1740
+  replaced polished_blackstone_bricks -> cracked_polished_blackstone_bricks (254): 1634,189,-1738 1635,181,-1738 1634,195,-1738 1629,180,-1770 1627,177,-1770 1621,180,-1770 1620,197,-1738 1622,188,-1738 1623,177,-1770 1616,185,-1738 1616,182,-1738 1617,180,-1706
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {basalt -> magma_block=411, polished_blackstone_bricks -> cracked_polished_blackstone_bricks=254, raft:tidestone_bricks -> raft:cracked_tidestone_bricks=219}

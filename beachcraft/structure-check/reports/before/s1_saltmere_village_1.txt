@@ -1,0 +1,32 @@
+structure raft:saltmere_village bbox 1847 72 1520 .. 1910 123 1603
+piece 0 raft:saltmere_village/plaza CLOCKWISE_180 origin 1888, 72, 1584 1864 72 1560 .. 1888 117 1584
+piece 1 raft:saltmere_village/elder NONE origin 1869, 72, 1585 1869 72 1585 .. 1883 122 1603
+piece 2 raft:saltmere_village/shrine CLOCKWISE_90 origin 1863, 72, 1566 1847 72 1566 .. 1863 123 1578
+piece 3 raft:saltmere_village/docks CLOCKWISE_180 origin 1879, 72, 1559 1865 72 1539 .. 1879 109 1559
+piece 4 raft:saltmere_village/hut_house_b COUNTERCLOCKWISE_90 origin 1889, 72, 1576 1889 72 1568 .. 1901 116 1576
+piece 5 raft:saltmere_village/walk_bridge CLOCKWISE_180 origin 1886, 72, 1559 1884 72 1547 .. 1886 105 1559
+piece 6 raft:saltmere_village/walk_bridge CLOCKWISE_90 origin 1863, 72, 1562 1851 72 1562 .. 1863 105 1564
+piece 7 raft:saltmere_village/walk_bridge COUNTERCLOCKWISE_90 origin 1889, 72, 1582 1889 72 1580 .. 1901 105 1582
+piece 8 raft:saltmere_village/walk_side NONE origin 1866, 72, 1585 1866 72 1585 .. 1868 104 1597
+piece 9 raft:saltmere_village/junction_t CLOCKWISE_180 origin 1889, 72, 1546 1881 72 1538 .. 1889 106 1546
+piece 10 raft:saltmere_village/end_cap CLOCKWISE_90 origin 1850, 72, 1562 1849 72 1562 .. 1850 104 1564
+piece 11 raft:saltmere_village/junction_l COUNTERCLOCKWISE_90 origin 1902, 72, 1584 1902 72 1578 .. 1908 104 1584
+piece 12 raft:saltmere_village/hut_fisher CLOCKWISE_90 origin 1865, 72, 1587 1852 72 1587 .. 1865 114 1595
+piece 13 raft:saltmere_village/end_cap NONE origin 1866, 72, 1598 1866 72 1598 .. 1868 104 1599
+piece 14 raft:saltmere_village/walk_short CLOCKWISE_180 origin 1886, 72, 1537 1884 72 1533 .. 1886 102 1537
+piece 15 raft:saltmere_village/hut_house_b COUNTERCLOCKWISE_90 origin 1890, 72, 1546 1890 72 1538 .. 1902 116 1546
+piece 16 raft:saltmere_village/hut_house_a NONE origin 1901, 72, 1585 1901 72 1585 .. 1909 116 1596
+piece 17 raft:saltmere_village/end_cap COUNTERCLOCKWISE_90 origin 1909, 72, 1582 1909 72 1580 .. 1910 104 1582
+piece 18 raft:saltmere_village/hut_cookhouse CLOCKWISE_180 origin 1890, 72, 1532 1880 72 1520 .. 1890 117 1532
+AUDIT s1_saltmere_village_1 raft:saltmere_village at 1879, 98, 1562 rot CLOCKWISE_180 pieces 19 checked 16787 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 143 [raft:palm_planks -> raft:weathered_planks 95, spruce_planks -> raft:weathered_planks 36, raft:coral_stone_bricks -> raft:mossy_coral_stone_bricks 12] | loose 0 [] | items 0 [] falling 0 | npc 2/2 ok
+NPC raft:nalu ok at 1882.1 103.0 1592.5 (5.7 from spot) free=true inWall=false floor=raft:weathered_planks water=false feet=air head=air count48=1 | spot 1876, 103, 1591 feet air head air floor raft:palm_planks
+NPC raft:old_tamo ok at 1874.5 102.0 1543.5 (0.0 from spot) free=true inWall=false floor=spruce_planks water=false feet=air head=air count48=1 | spot 1874, 102, 1543 feet air head air floor spruce_planks
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced raft:palm_planks -> raft:weathered_planks (95): 1859,105,1589 1865,109,1565 1866,99,1541 1867,99,1549 1867,101,1573 1872,101,1565 1878,101,1565 1886,101,1541 1888,101,1541 1888,101,1565 1891,101,1541 1891,101,1573
+  replaced spruce_planks -> raft:weathered_planks (36): 1877,101,1581 1890,101,1541 1865,101,1564 1869,101,1580 1871,101,1564 1875,101,1588 1877,101,1556 1869,101,1583 1873,101,1583 1879,101,1543 1882,101,1527 1884,101,1535
+  replaced raft:coral_stone_bricks -> raft:mossy_coral_stone_bricks (12): 1848,102,1572 1848,108,1574 1850,101,1566 1859,101,1566 1859,101,1574 1847,101,1567 1848,104,1575 1852,101,1568 1855,101,1576 1856,101,1578 1848,107,1571 1848,105,1571
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {raft:coral_stone_bricks -> raft:mossy_coral_stone_bricks=12, raft:palm_planks -> raft:weathered_planks=95, spruce_planks -> raft:weathered_planks=36}

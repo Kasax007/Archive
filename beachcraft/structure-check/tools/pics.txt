@@ -1,0 +1,491 @@
+rd 6
+clouds off
+world bcaudit1
+hud off
+cmd gamemode spectator @p
+log p_old_lighthouse_0
+scout raft:old_lighthouse 0 0
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 100
+audit raft:old_lighthouse 0 0 p_old_lighthouse_0
+cmd tick freeze
+npcview raft:keeper_fenn
+cmd execute in raft:raftdim run tp @p {camx} {camy} {camz} {camyaw} {campitch}
+settle 90
+pose {camx} {camy} {camz} {camyaw} {campitch}
+wait 3
+shotif camx p_old_lighthouse_0_keeper_fenn
+overview 1
+cmd execute in raft:raftdim run tp @p {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+settle 90
+pose {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+wait 3
+shot p_old_lighthouse_0_over
+cmd tick unfreeze
+cmd execute in raft:raftdim run forceload remove all
+log p_old_lighthouse_1
+scout raft:old_lighthouse 3000 2000
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 100
+audit raft:old_lighthouse 3000 2000 p_old_lighthouse_1
+cmd tick freeze
+npcview raft:keeper_fenn
+cmd execute in raft:raftdim run tp @p {camx} {camy} {camz} {camyaw} {campitch}
+settle 90
+pose {camx} {camy} {camz} {camyaw} {campitch}
+wait 3
+shotif camx p_old_lighthouse_1_keeper_fenn
+overview 1
+cmd execute in raft:raftdim run tp @p {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+settle 90
+pose {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+wait 3
+shot p_old_lighthouse_1_over
+cmd tick unfreeze
+cmd execute in raft:raftdim run forceload remove all
+log p_saltmere_village_0
+scout raft:saltmere_village 0 0
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 100
+audit raft:saltmere_village 0 0 p_saltmere_village_0
+cmd tick freeze
+npcview raft:nalu
+cmd execute in raft:raftdim run tp @p {camx} {camy} {camz} {camyaw} {campitch}
+settle 90
+pose {camx} {camy} {camz} {camyaw} {campitch}
+wait 3
+shotif camx p_saltmere_village_0_nalu
+npcview raft:old_tamo
+cmd execute in raft:raftdim run tp @p {camx} {camy} {camz} {camyaw} {campitch}
+settle 90
+pose {camx} {camy} {camz} {camyaw} {campitch}
+wait 3
+shotif camx p_saltmere_village_0_old_tamo
+overview 1
+cmd execute in raft:raftdim run tp @p {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+settle 90
+pose {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+wait 3
+shot p_saltmere_village_0_over
+cmd tick unfreeze
+cmd execute in raft:raftdim run forceload remove all
+log p_saltmere_village_1
+scout raft:saltmere_village 3000 2000
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 100
+audit raft:saltmere_village 3000 2000 p_saltmere_village_1
+cmd tick freeze
+npcview raft:nalu
+cmd execute in raft:raftdim run tp @p {camx} {camy} {camz} {camyaw} {campitch}
+settle 90
+pose {camx} {camy} {camz} {camyaw} {campitch}
+wait 3
+shotif camx p_saltmere_village_1_nalu
+npcview raft:old_tamo
+cmd execute in raft:raftdim run tp @p {camx} {camy} {camz} {camyaw} {campitch}
+settle 90
+pose {camx} {camy} {camz} {camyaw} {campitch}
+wait 3
+shotif camx p_saltmere_village_1_old_tamo
+overview 1
+cmd execute in raft:raftdim run tp @p {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+settle 90
+pose {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+wait 3
+shot p_saltmere_village_1_over
+cmd tick unfreeze
+cmd execute in raft:raftdim run forceload remove all
+log p_ashen_forge_0
+scout raft:ashen_forge 0 0
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 100
+audit raft:ashen_forge 0 0 p_ashen_forge_0
+cmd tick freeze
+npcview raft:dr_voss
+cmd execute in raft:raftdim run tp @p {camx} {camy} {camz} {camyaw} {campitch}
+settle 90
+pose {camx} {camy} {camz} {camyaw} {campitch}
+wait 3
+shotif camx p_ashen_forge_0_dr_voss
+overview 1
+cmd execute in raft:raftdim run tp @p {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+settle 90
+pose {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+wait 3
+shot p_ashen_forge_0_over
+cmd tick unfreeze
+cmd execute in raft:raftdim run forceload remove all
+log p_ashen_forge_1
+scout raft:ashen_forge 3000 2000
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 100
+audit raft:ashen_forge 3000 2000 p_ashen_forge_1
+cmd tick freeze
+npcview raft:dr_voss
+cmd execute in raft:raftdim run tp @p {camx} {camy} {camz} {camyaw} {campitch}
+settle 90
+pose {camx} {camy} {camz} {camyaw} {campitch}
+wait 3
+shotif camx p_ashen_forge_1_dr_voss
+overview 1
+cmd execute in raft:raftdim run tp @p {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+settle 90
+pose {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+wait 3
+shot p_ashen_forge_1_over
+cmd tick unfreeze
+cmd execute in raft:raftdim run forceload remove all
+log p_beach_shack_0
+scout raft:beach_shack 0 0
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 100
+audit raft:beach_shack 0 0 p_beach_shack_0
+cmd tick freeze
+npcview raft:teo
+cmd execute in raft:raftdim run tp @p {camx} {camy} {camz} {camyaw} {campitch}
+settle 90
+pose {camx} {camy} {camz} {camyaw} {campitch}
+wait 3
+shotif camx p_beach_shack_0_teo
+overview 1
+cmd execute in raft:raftdim run tp @p {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+settle 90
+pose {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+wait 3
+shot p_beach_shack_0_over
+cmd tick unfreeze
+cmd execute in raft:raftdim run forceload remove all
+log p_beach_shack_1
+scout raft:beach_shack 3000 2000
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 100
+audit raft:beach_shack 3000 2000 p_beach_shack_1
+cmd tick freeze
+npcview raft:teo
+cmd execute in raft:raftdim run tp @p {camx} {camy} {camz} {camyaw} {campitch}
+settle 90
+pose {camx} {camy} {camz} {camyaw} {campitch}
+wait 3
+shotif camx p_beach_shack_1_teo
+overview 1
+cmd execute in raft:raftdim run tp @p {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+settle 90
+pose {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+wait 3
+shot p_beach_shack_1_over
+cmd tick unfreeze
+cmd execute in raft:raftdim run forceload remove all
+log p_castaway_camp_0
+scout raft:castaway_camp 3000 2000
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 100
+audit raft:castaway_camp 3000 2000 p_castaway_camp_0
+cmd tick freeze
+npcview raft:kai
+cmd execute in raft:raftdim run tp @p {camx} {camy} {camz} {camyaw} {campitch}
+settle 90
+pose {camx} {camy} {camz} {camyaw} {campitch}
+wait 3
+shotif camx p_castaway_camp_0_kai
+overview 1
+cmd execute in raft:raftdim run tp @p {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+settle 90
+pose {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+wait 3
+shot p_castaway_camp_0_over
+cmd tick unfreeze
+cmd execute in raft:raftdim run forceload remove all
+log p_castaway_camp_1
+scout raft:castaway_camp 1500 -2500
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 100
+audit raft:castaway_camp 1500 -2500 p_castaway_camp_1
+cmd tick freeze
+npcview raft:kai
+cmd execute in raft:raftdim run tp @p {camx} {camy} {camz} {camyaw} {campitch}
+settle 90
+pose {camx} {camy} {camz} {camyaw} {campitch}
+wait 3
+shotif camx p_castaway_camp_1_kai
+overview 1
+cmd execute in raft:raftdim run tp @p {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+settle 90
+pose {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+wait 3
+shot p_castaway_camp_1_over
+cmd tick unfreeze
+cmd execute in raft:raftdim run forceload remove all
+log p_castaway_camp_2
+scout raft:castaway_camp -4000 0
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 100
+audit raft:castaway_camp -4000 0 p_castaway_camp_2
+cmd tick freeze
+npcview raft:kai
+cmd execute in raft:raftdim run tp @p {camx} {camy} {camz} {camyaw} {campitch}
+settle 90
+pose {camx} {camy} {camz} {camyaw} {campitch}
+wait 3
+shotif camx p_castaway_camp_2_kai
+overview 1
+cmd execute in raft:raftdim run tp @p {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+settle 90
+pose {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+wait 3
+shot p_castaway_camp_2_over
+cmd tick unfreeze
+cmd execute in raft:raftdim run forceload remove all
+log p_iceberg_outpost_0
+scout raft:iceberg_outpost 0 0
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 100
+audit raft:iceberg_outpost 0 0 p_iceberg_outpost_0
+cmd tick freeze
+npcview raft:dr_lund
+cmd execute in raft:raftdim run tp @p {camx} {camy} {camz} {camyaw} {campitch}
+settle 90
+pose {camx} {camy} {camz} {camyaw} {campitch}
+wait 3
+shotif camx p_iceberg_outpost_0_dr_lund
+overview 1
+cmd execute in raft:raftdim run tp @p {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+settle 90
+pose {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+wait 3
+shot p_iceberg_outpost_0_over
+cmd tick unfreeze
+cmd execute in raft:raftdim run forceload remove all
+log p_iceberg_outpost_1
+scout raft:iceberg_outpost 3000 2000
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 100
+audit raft:iceberg_outpost 3000 2000 p_iceberg_outpost_1
+cmd tick freeze
+npcview raft:dr_lund
+cmd execute in raft:raftdim run tp @p {camx} {camy} {camz} {camyaw} {campitch}
+settle 90
+pose {camx} {camy} {camz} {camyaw} {campitch}
+wait 3
+shotif camx p_iceberg_outpost_1_dr_lund
+overview 1
+cmd execute in raft:raftdim run tp @p {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+settle 90
+pose {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+wait 3
+shot p_iceberg_outpost_1_over
+cmd tick unfreeze
+cmd execute in raft:raftdim run forceload remove all
+log p_rusted_rig_0
+scout raft:rusted_rig 0 0
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 100
+audit raft:rusted_rig 0 0 p_rusted_rig_0
+cmd tick freeze
+npcview raft:okafor
+cmd execute in raft:raftdim run tp @p {camx} {camy} {camz} {camyaw} {campitch}
+settle 90
+pose {camx} {camy} {camz} {camyaw} {campitch}
+wait 3
+shotif camx p_rusted_rig_0_okafor
+overview 1
+cmd execute in raft:raftdim run tp @p {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+settle 90
+pose {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+wait 3
+shot p_rusted_rig_0_over
+cmd tick unfreeze
+cmd execute in raft:raftdim run forceload remove all
+log p_rusted_rig_1
+scout raft:rusted_rig 3000 2000
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 100
+audit raft:rusted_rig 3000 2000 p_rusted_rig_1
+cmd tick freeze
+npcview raft:okafor
+cmd execute in raft:raftdim run tp @p {camx} {camy} {camz} {camyaw} {campitch}
+settle 90
+pose {camx} {camy} {camz} {camyaw} {campitch}
+wait 3
+shotif camx p_rusted_rig_1_okafor
+overview 1
+cmd execute in raft:raftdim run tp @p {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+settle 90
+pose {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+wait 3
+shot p_rusted_rig_1_over
+cmd tick unfreeze
+cmd execute in raft:raftdim run forceload remove all
+log p_port_solace_0
+scout raft:port_solace 0 0
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 100
+audit raft:port_solace 0 0 p_port_solace_0
+cmd tick freeze
+overview 1
+cmd execute in raft:raftdim run tp @p {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+settle 90
+pose {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+wait 3
+shot p_port_solace_0_over
+cmd tick unfreeze
+cmd execute in raft:raftdim run forceload remove all
+log p_pirate_cove_0
+scout raft:pirate_cove 0 0
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 100
+audit raft:pirate_cove 0 0 p_pirate_cove_0
+cmd tick freeze
+overview 1
+cmd execute in raft:raftdim run tp @p {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+settle 90
+pose {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+wait 3
+shot p_pirate_cove_0_over
+cmd tick unfreeze
+cmd execute in raft:raftdim run forceload remove all
+log p_abandoned_raft_0
+scout raft:abandoned_raft 0 0
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 100
+audit raft:abandoned_raft 0 0 p_abandoned_raft_0
+cmd tick freeze
+overview 1
+cmd execute in raft:raftdim run tp @p {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+settle 90
+pose {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+wait 3
+shot p_abandoned_raft_0_over
+cmd tick unfreeze
+cmd execute in raft:raftdim run forceload remove all
+log p_buoy_field_0
+scout raft:buoy_field 0 0
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 100
+audit raft:buoy_field 0 0 p_buoy_field_0
+cmd tick freeze
+overview 1
+cmd execute in raft:raftdim run tp @p {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+settle 90
+pose {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+wait 3
+shot p_buoy_field_0_over
+cmd tick unfreeze
+cmd execute in raft:raftdim run forceload remove all
+log p_wreck_galleon_0
+scout raft:wreck_galleon 0 0
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 100
+audit raft:wreck_galleon 0 0 p_wreck_galleon_0
+cmd tick freeze
+overview 1
+cmd execute in raft:raftdim run tp @p {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+settle 90
+pose {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+wait 3
+shot p_wreck_galleon_0_over
+cmd tick unfreeze
+cmd execute in raft:raftdim run forceload remove all
+log p_wreck_cargo_ship_0
+scout raft:wreck_cargo_ship 0 0
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 100
+audit raft:wreck_cargo_ship 0 0 p_wreck_cargo_ship_0
+cmd tick freeze
+overview 1
+cmd execute in raft:raftdim run tp @p {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+settle 90
+pose {ovx} {ovy} {ovz} {ovyaw} {ovpitch}
+wait 3
+shot p_wreck_cargo_ship_0_over
+cmd tick unfreeze
+cmd execute in raft:raftdim run forceload remove all
+log w_abyssal_sanctum_0
+scout raft:abyssal_sanctum 0 0
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 100
+audit raft:abyssal_sanctum 0 0 w_abyssal_sanctum_0
+cmd execute in raft:raftdim run forceload remove all
+log w_abyssal_sanctum_1
+scout raft:abyssal_sanctum 3000 2000
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 100
+audit raft:abyssal_sanctum 3000 2000 w_abyssal_sanctum_1
+cmd execute in raft:raftdim run forceload remove all
+log w_abyssal_sanctum_2
+scout raft:abyssal_sanctum -2500 3500
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 100
+audit raft:abyssal_sanctum -2500 3500 w_abyssal_sanctum_2
+cmd execute in raft:raftdim run forceload remove all
+log w_helix_station_0
+scout raft:helix_station 0 0
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 100
+audit raft:helix_station 0 0 w_helix_station_0
+cmd execute in raft:raftdim run forceload remove all
+log w_helix_station_1
+scout raft:helix_station 3000 2000
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 100
+audit raft:helix_station 3000 2000 w_helix_station_1
+cmd execute in raft:raftdim run forceload remove all
+log w_helix_station_2
+scout raft:helix_station -2500 3500
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 100
+audit raft:helix_station -2500 3500 w_helix_station_2
+cmd execute in raft:raftdim run forceload remove all
+log w_coral_temple_0
+scout raft:coral_temple 0 0
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 100
+audit raft:coral_temple 0 0 w_coral_temple_0
+cmd execute in raft:raftdim run forceload remove all
+log w_coral_temple_1
+scout raft:coral_temple 3000 2000
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 100
+audit raft:coral_temple 3000 2000 w_coral_temple_1
+cmd execute in raft:raftdim run forceload remove all
+log w_coral_temple_2
+scout raft:coral_temple -2500 3500
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 100
+audit raft:coral_temple -2500 3500 w_coral_temple_2
+cmd execute in raft:raftdim run forceload remove all
+log w_iceberg_outpost_0
+scout raft:iceberg_outpost 0 0
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 100
+audit raft:iceberg_outpost 0 0 w_iceberg_outpost_0
+cmd execute in raft:raftdim run forceload remove all
+log w_iceberg_outpost_1
+scout raft:iceberg_outpost 3000 2000
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 100
+audit raft:iceberg_outpost 3000 2000 w_iceberg_outpost_1
+cmd execute in raft:raftdim run forceload remove all
+log w_iceberg_outpost_2
+scout raft:iceberg_outpost -2500 3500
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 100
+audit raft:iceberg_outpost -2500 3500 w_iceberg_outpost_2
+cmd execute in raft:raftdim run forceload remove all
+log w_port_solace_0
+scout raft:port_solace 0 0
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 100
+audit raft:port_solace 0 0 w_port_solace_0
+cmd execute in raft:raftdim run forceload remove all
+log w_port_solace_1
+scout raft:port_solace 3000 2000
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 100
+audit raft:port_solace 3000 2000 w_port_solace_1
+cmd execute in raft:raftdim run forceload remove all
+log w_port_solace_2
+scout raft:port_solace -2500 3500
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 100
+audit raft:port_solace -2500 3500 w_port_solace_2
+cmd execute in raft:raftdim run forceload remove all

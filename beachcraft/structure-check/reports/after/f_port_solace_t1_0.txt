@@ -1,0 +1,58 @@
+structure raft:port_solace bbox 615 33 597 .. 799 135 825
+piece 0 raft:port_solace/plaza CLOCKWISE_90 origin 752, 45, 688 706 45 688 .. 752 70 734
+piece 1 raft:port_solace/city_hall_base COUNTERCLOCKWISE_90 origin 753, 45, 729 753 45 693 .. 787 92 729
+piece 2 raft:port_solace/avenue_power NONE origin 723, 45, 735 723 45 735 .. 735 60 765
+piece 3 raft:port_solace/avenue_market CLOCKWISE_180 origin 735, 45, 687 723 45 657 .. 735 60 687
+piece 4 raft:port_solace/avenue_harbour CLOCKWISE_90 origin 705, 45, 705 675 45 705 .. 705 56 717
+piece 5 raft:port_solace/city_hall_top COUNTERCLOCKWISE_90 origin 761, 93, 721 761 93 701 .. 781 123 721
+piece 6 raft:port_solace/deco_tower_base CLOCKWISE_90 origin 722, 45, 738 696 45 738 .. 722 92 762
+piece 7 raft:port_solace/shop_row COUNTERCLOCKWISE_90 origin 736, 45, 764 736 45 736 .. 749 74 764
+piece 8 raft:port_solace/crossroad NONE origin 723, 45, 766 723 45 766 .. 735 56 778
+piece 9 raft:port_solace/glass_tower_base CLOCKWISE_180 origin 699, 45, 704 681 45 684 .. 699 92 704
+piece 10 raft:port_solace/diner NONE origin 681, 45, 718 681 45 718 .. 699 65 730
+piece 11 raft:port_solace/crossroad CLOCKWISE_90 origin 674, 45, 705 662 45 705 .. 674 56 717
+piece 12 raft:port_solace/deco_tower_top CLOCKWISE_90 origin 718, 93, 742 702 93 742 .. 718 116 758
+piece 13 raft:port_solace/glass_tower_top CLOCKWISE_180 origin 699, 93, 703 681 93 684 .. 699 118 703
+piece 14 raft:port_solace/apartment_teal COUNTERCLOCKWISE_90 origin 736, 45, 682 736 45 662 .. 751 82 682
+piece 15 raft:port_solace/apartment_brick CLOCKWISE_90 origin 722, 45, 659 708 45 659 .. 722 85 685
+piece 16 raft:port_solace/crossroad COUNTERCLOCKWISE_90 origin 723, 45, 656 723 45 644 .. 735 56 656
+piece 17 raft:port_solace/street_b COUNTERCLOCKWISE_90 origin 736, 45, 778 736 45 766 .. 760 61 778
+piece 18 raft:port_solace/street_a CLOCKWISE_90 origin 722, 45, 766 698 45 766 .. 722 63 778
+piece 19 raft:port_solace/street_a CLOCKWISE_180 origin 735, 45, 803 723 45 779 .. 735 63 803
+piece 20 raft:port_solace/street_a CLOCKWISE_180 origin 674, 45, 742 662 45 718 .. 674 63 742
+piece 21 raft:port_solace/street_a CLOCKWISE_90 origin 661, 45, 705 637 45 705 .. 661 63 717
+piece 22 raft:port_solace/street_b CLOCKWISE_180 origin 674, 45, 704 662 45 680 .. 674 61 704
+piece 23 raft:port_solace/street_b CLOCKWISE_90 origin 760, 45, 644 736 45 644 .. 760 61 656
+piece 24 raft:port_solace/street_b CLOCKWISE_90 origin 722, 45, 644 698 45 644 .. 722 61 656
+piece 25 raft:port_solace/street_b CLOCKWISE_180 origin 735, 45, 643 723 45 619 .. 735 61 643
+piece 26 raft:port_solace/rubble_lot NONE origin 741, 45, 779 741 45 779 .. 755 65 791
+piece 27 raft:port_solace/end_barricade COUNTERCLOCKWISE_90 origin 761, 45, 778 761 45 766 .. 770 56 778
+piece 28 raft:port_solace/rubble_lot NONE origin 703, 45, 779 703 45 779 .. 717 65 791
+piece 29 raft:port_solace/end_sinkhole CLOCKWISE_90 origin 697, 45, 766 688 45 766 .. 697 63 778
+piece 30 raft:port_solace/end_barricade NONE origin 723, 45, 804 723 45 804 .. 735 56 813
+piece 31 raft:port_solace/apartment_teal CLOCKWISE_90 origin 661, 45, 720 646 45 720 .. 661 82 740
+piece 32 raft:port_solace/end_barricade NONE origin 662, 45, 743 662 45 743 .. 674 56 752
+piece 33 raft:port_solace/rubble_lot CLOCKWISE_180 origin 656, 45, 704 642 45 692 .. 656 65 704
+piece 34 raft:port_solace/end_barricade CLOCKWISE_90 origin 636, 45, 705 627 45 705 .. 636 56 717
+piece 35 raft:port_solace/end_barricade CLOCKWISE_180 origin 674, 45, 679 662 45 670 .. 674 56 679
+piece 36 raft:port_solace/apartment_teal CLOCKWISE_180 origin 758, 45, 643 738 45 628 .. 758 82 643
+piece 37 raft:port_solace/end_barricade COUNTERCLOCKWISE_90 origin 761, 45, 656 761 45 644 .. 770 56 656
+piece 38 raft:port_solace/apartment_teal CLOCKWISE_180 origin 720, 45, 643 700 45 628 .. 720 82 643
+piece 39 raft:port_solace/end_barricade CLOCKWISE_90 origin 697, 45, 644 688 45 644 .. 697 56 656
+piece 40 raft:port_solace/end_sinkhole CLOCKWISE_180 origin 735, 45, 618 723 45 609 .. 735 63 618
+AUDIT f_port_solace_t1_0 raft:port_solace at 707, 84, 711 rot CLOCKWISE_90 pieces 41 (0 follow the terrain, 0 beyond 8 chunks) checked 251369 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 5304 [water 5304] | replaced 1206 [smooth_stone -> raft:mossy_concrete 515, light_gray_concrete -> raft:cracked_concrete 364, water -> seagrass 155, water -> tall_seagrass 114, raft:asphalt -> gravel 42, stone -> granite 8] | loose 0 [] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced raft:asphalt -> gravel (42): 740,47,651 750,47,649 735,47,648 727,47,783 726,47,781 704,47,771 730,47,642 729,47,641 738,47,769 699,47,774 752,47,774 730,47,665
+  replaced water -> tall_seagrass (114): 692,50,650 692,51,650 713,51,650 713,52,650 741,49,781 741,50,781 746,49,780 746,50,780 760,48,771 760,47,771 722,48,770 722,49,770
+  replaced water -> seagrass (155): 722,48,650 737,48,650 706,48,649 765,53,777 710,49,783 713,50,783 747,49,783 717,49,782 741,50,782 711,49,781 747,49,781 713,51,652
+  replaced light_gray_concrete -> raft:cracked_concrete (364): 743,49,783 709,48,641 716,60,641 741,68,641 751,60,641 707,48,640 706,64,640 741,52,640 742,60,667 748,68,667 711,76,666 740,68,666
+  replaced smooth_stone -> raft:mossy_concrete (515): 714,48,782 745,48,781 707,60,641 708,56,641 710,72,641 713,48,641 741,72,641 743,60,641 748,64,641 753,56,641 702,72,640 740,60,640
+  replaced andesite -> granite (6): 691,45,655 693,45,655 690,46,656 691,46,656 692,45,656 693,45,656
+  replaced stone -> granite (8): 691,46,655 692,45,655 692,47,655 691,45,656 691,47,656 692,47,656 693,47,656 693,46,656
+  missing water (5304): 681,100,686 683,106,686 683,107,686 683,104,686 683,105,686 683,110,686 683,111,686 683,108,686 683,109,686 683,102,686 683,103,686 683,100,686
+  replaced kelp -> kelp_plant (2): 653,79,725 758,57,767
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {water=5304}
+all replaced: {andesite -> granite=6, kelp -> kelp_plant=2, light_gray_concrete -> raft:cracked_concrete=364, raft:asphalt -> gravel=42, smooth_stone -> raft:mossy_concrete=515, stone -> granite=8, water -> seagrass=155, water -> tall_seagrass=114}

@@ -1,0 +1,12 @@
+structure raft:rusted_rig bbox 2576 20 1409 .. 2620 144 1456
+piece 0 raft:rusted_rig/rig_0 COUNTERCLOCKWISE_90 origin 2576, 20, 1456 2576 20 1409 .. 2620 144 1456
+AUDIT p_rusted_rig_1 raft:rusted_rig at 2598, 82, 1433 rot COUNTERCLOCKWISE_90 pieces 1 (0 follow the terrain) checked 8491 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 204 [raft:riveted_hull -> raft:rusty_hull 173, raft:rusted_plate -> raft:rusty_hull 31] | loose 0 [] | items 0 [] falling 0 | npc 1/1 ok
+NPC raft:okafor ok at 2587.8 111.0 1421.8 (1.0 from spot) free=true inWall=false floor=raft:rusted_plate water=false feet=air head=air count48=1 | spot 2588, 111, 1422 feet air head air floor raft:rusted_plate
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced raft:riveted_hull -> raft:rusty_hull (173): 2584,110,1428 2587,27,1420 2587,31,1420 2586,92,1420 2586,78,1444 2586,65,1420 2586,112,1444 2586,114,1424 2587,53,1444 2587,41,1444 2586,107,1444 2586,20,1420
+  replaced raft:rusted_plate -> raft:rusty_hull (31): 2586,110,1444 2589,62,1444 2598,110,1428 2598,110,1444 2602,110,1428 2603,104,1424 2607,62,1420 2609,117,1420 2587,50,1441 2587,86,1441 2588,98,1441 2590,118,1421
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {raft:riveted_hull -> raft:rusty_hull=173, raft:rusted_plate -> raft:rusty_hull=31}

@@ -132,6 +132,11 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   - `/give` erzeugt zuerst ein Fake-Item: Despawn-Schutz im ENTITY_LOAD-Event muss Fake-Items (Alter 5999) auslassen.
   - Gametest-Rechner ist langsam (neues Gebiet 3–5 min bei rd 8, Oberwelt ähnlich): `rd 5`, Läufe bündeln.
   - Nutzungslimit: höchstens ein, wenn nötig zwei Subagenten (Wunsch des Nutzers, 4.11.); Arbeit vorher in WIP-Commits sichern.
+  - Strukturen: Features eines Schritts laufen nach den Strukturen desselben Schritts, Features der Nachbar-Chunks
+    auch noch später. Alles, was Blöcke setzt, braucht `raft:clear_of_structures` (ohne Höhe: `whole_column`).
+    Strukturen überlappen ohne Schutz: Rang-Tags `raft:priority/*` (StructurePriority). Vor dem Release jede Struktur
+    mit `bctest audit` prüfen (`scout`, `forceload add {x0:i} {z0:i} {x1:i} {z1:i}`, `audit`, `npcview`, `shotif`).
+  - Wasser spült Spinnweben, Teppiche, Fackeln und Schädel weg: Items treiben dann herum (Fischerboot-Netze).
   - Doku-Filmen mit bctest (`rec`/`still`, Welt `saves/bcdoc`): nach `fill`/`setblock` und nach weiten Teleports ein
     `settle`, sonst zeigen Bilder alte Chunk-Meshes; `faceblock`+`use` nur innerhalb eines `rec`; in der dritten Person
     das Ziel seitlich legen (sonst hinter dem Kopf); die Raft-Dimension hat feste Tageszeit (Hängematte setzt nur den
@@ -153,6 +158,17 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
 - **Beach Craft 3.1.0+26.3 (5.11.):** Floß selbst bauen (Werft: Blöcke laufen beim Segeln weiter), Sounds und Musik (Kevin MacLeod, Credits im Jar und in der Beschreibung), 8 NPCs, dazu Tag/Nacht, Coral Temple, keine harten Kanten, neue Pflanzen und Deko. Gemergt nach 26.3 (cf5ceb8), Smoke-Test 15/15, nicht hochgeladen. Jar $SP/release_bc31/ ist von cf5ceb8 und muss vor dem Upload neu gebaut werden. Deck-Fix (Spieler landet nach Teleport, Login oder Dimensionswechsel auf dem Deck, nicht darunter) am 5.11. gemergt: 26.3 = e6b344b (darin auch 212c89e, Blumen auf jeder Palmen-/Dschungelinsel).
 - **Testrunde 5.11.:** Quest-Prüflauf aller 344 Dreamcraft-Quests im Spiel bestanden (nach Harness-Fixes; Mutant-Zombie-Text ergänzt), Beach-Craft-Checks bestanden (Deck, Hängematte, Pets, Sounds, Dream Star, Strukturen). Offen: Boss-Heilung nach 30 s ohne Spieler nur im Code geprüft; echte Klicks im Quest-Buch, Server mit zwei Spielern. Ergebnisse stehen in `dokumentation/08_offen_und_zu_testen.md`.
 - **Doku v2 (5.11.):** Agent filmt im Querformat mit 60 fps und Shadern (Material `footage/bc3v2`, Werkzeuge `beachcraft/documentary/v2`). Eine zweite Cloud-Sitzung (session_01Fk46dZfoCwmH5t6YA3jjnj) filmt NPC- und Floß-Szenen (n_*, r_*) und pusht sie ins Archiv. Nutzer will nur die Fassung mit Untertiteln und Musik, fürs Handy als Artefakt-Seite (720p, Teile unter 14 MB).
+
+- **Doku v2 fertig (6.11.):** 21:27, 1080p60, in 13 Teilen im Archiv (`beachcraft/documentary/v2/`); Handy-Fassung
+  (720p30, 202 MB, 15 Teile à 14 MB) auf der Artefakt-Seite https://claude.ai/artifact/K6LP4TwjmvqFpjuDqEiEoP.
+- **Strukturprüfung 6.11.:** neues Werkzeug `bctest audit` (StructAudit: Block-für-Block-Vergleich mit den Vorlagen,
+  Personen, Items). 95 Strukturen in 2 Welten: Ashen Forge voll Basalt (Voss in der Wand), Rig auf dem Sanctum,
+  Bäume im Leuchtturm, Sand-Rechteck der Strandbar, u. a. Alles behoben im Branch `fix/structure-features`
+  (Filter `raft:clear_of_structures`, `StructurePriority`, Ebenheit für Strandbar/Camp, Mindesttiefe Flugzeug,
+  Netze, Heavy Core, Port Solace `max_distance_from_center` 104). Kontrolle: 0 Fremdblöcke, 36/36 Personen in
+  Ordnung. Gemergt: 26.3 = 88ce4aa (gepusht). Release-Jar neu gebaut ($SP/release_bc31/, 6.11. 02:12), Server-Smoke-Test
+  ok (0 Fehler, 256 Chunks Endless Sea). Bericht mit Bildern: Archiv `beachcraft/structure-check/`. Upload von 3.1.0
+  wartet auf das Go des Nutzers.
 
 ## Was der Nutzer will (hier gelernt)
 

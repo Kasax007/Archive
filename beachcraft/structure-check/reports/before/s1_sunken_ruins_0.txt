@@ -1,0 +1,32 @@
+structure raft:sunken_ruins bbox 20 36 36 .. 60 75 72
+piece 0 raft:sunken_ruins/stairs CLOCKWISE_90 origin 48, 48, 48 32 48 48 .. 48 63 60
+AUDIT s1_sunken_ruins_0 raft:sunken_ruins at 40, 56, 54 rot CLOCKWISE_90 pieces 1 checked 712 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 90 [raft:tidestone_bricks -> raft:cracked_tidestone_bricks 26, raft:tidestone_bricks -> raft:mossy_tidestone_bricks 16, raft:tidestone -> sand 9, raft:tidestone_bricks -> raft:shipping_container_red 8, raft:tidestone_bricks -> sand 4, raft:tidestone -> raft:shipping_container_red 3] | loose 0 [] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced raft:barnacles -> raft:riveted_hull (1): 32,49,53
+  replaced raft:cracked_tidestone_bricks -> raft:rusty_hull (2): 33,49,53 33,49,55
+  replaced raft:tidestone -> raft:rusty_hull (1): 33,48,53
+  replaced raft:tidestone -> gravel (2): 33,48,55 37,48,50
+  replaced raft:cracked_tidestone_bricks -> raft:riveted_hull (1): 34,49,53
+  replaced raft:tidestone_bricks -> raft:rusty_hull (1): 34,49,54
+  replaced raft:mossy_tidestone_bricks -> sand (2): 34,48,53 35,48,56
+  replaced raft:mossy_tidestone_bricks -> gravel (1): 34,48,54
+  replaced raft:barnacles -> gravel (1): 34,48,52
+  replaced raft:tidestone_bricks -> seagrass (3): 35,49,58 36,49,58 37,48,56
+  replaced raft:tidestone_bricks -> sand (4): 35,48,53 35,48,55 36,48,49 36,48,58
+  replaced raft:tidestone -> sand (9): 35,48,51 35,48,54 35,48,57 35,48,58 36,48,52 36,48,51 36,48,50 36,48,59 36,48,55
+  replaced raft:tidestone_bricks -> raft:barnacles (1): 36,49,59
+  replaced raft:tidestone_bricks -> gravel (2): 36,48,54 37,48,49
+  replaced raft:tidestone_bricks -> raft:cracked_tidestone_bricks (26): 37,50,50 38,50,55 39,50,58 39,49,52 39,49,54 40,51,50 40,50,50 40,50,57 40,49,49 42,51,56 42,48,55 42,52,57
+  replaced raft:tidestone_brick_stairs -> kelp_plant (1): 37,50,55
+  replaced raft:cracked_tidestone_bricks -> kelp_plant (1): 37,49,55
+  replaced raft:tidestone -> kelp_plant (1): 37,48,55
+  replaced raft:tidestone_bricks -> raft:mossy_tidestone_bricks (16): 38,49,53 40,51,55 41,51,55 41,50,53 41,50,52 41,49,57 41,54,50 41,53,55 42,49,54 44,51,58 44,56,56 45,51,53
+  replaced raft:tidestone_bricks -> raft:shipping_container_red (8): 38,49,56 38,49,57 38,49,58 38,48,56 39,49,58 39,49,60 39,49,57 39,49,56
+  replaced gravel -> raft:shipping_container_red (1): 38,49,60
+  replaced raft:mossy_tidestone_bricks -> raft:shipping_container_red (2): 38,48,58 38,48,60
+  replaced raft:tidestone -> raft:shipping_container_red (3): 39,48,58 39,48,60 39,48,56
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {gravel -> raft:shipping_container_red=1, raft:barnacles -> gravel=1, raft:barnacles -> raft:riveted_hull=1, raft:cracked_tidestone_bricks -> kelp_plant=1, raft:cracked_tidestone_bricks -> raft:riveted_hull=1, raft:cracked_tidestone_bricks -> raft:rusty_hull=2, raft:mossy_tidestone_bricks -> gravel=1, raft:mossy_tidestone_bricks -> raft:shipping_container_red=2, raft:mossy_tidestone_bricks -> sand=2, raft:tidestone -> gravel=2, raft:tidestone -> kelp_plant=1, raft:tidestone -> raft:rusty_hull=1, raft:tidestone -> raft:shipping_container_red=3, raft:tidestone -> sand=9, raft:tidestone_brick_stairs -> kelp_plant=1, raft:tidestone_bricks -> gravel=2, raft:tidestone_bricks -> raft:barnacles=1, raft:tidestone_bricks -> raft:cracked_tidestone_bricks=26, raft:tidestone_bricks -> raft:mossy_tidestone_bricks=16, raft:tidestone_bricks -> raft:rusty_hull=1, raft:tidestone_bricks -> raft:shipping_container_red=8, raft:tidestone_bricks -> sand=4, raft:tidestone_bricks -> seagrass=3}

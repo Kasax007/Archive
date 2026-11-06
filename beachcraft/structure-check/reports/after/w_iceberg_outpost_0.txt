@@ -1,0 +1,10 @@
+structure raft:iceberg_outpost bbox 160 81 -720 .. 192 115 -683
+piece 0 raft:iceberg_outpost/outpost_0 CLOCKWISE_90 origin 192, 81, -720 160 81 -720 .. 192 115 -683
+AUDIT w_iceberg_outpost_0 raft:iceberg_outpost at 176, 98, -701 rot CLOCKWISE_90 pieces 1 (0 follow the terrain) checked 10434 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 0 [] | loose 0 [] | items 0 [] falling 0 | npc 1/1 ok
+NPC raft:dr_lund ok at 173.6 102.0 -698.2 (0.9 from spot) free=true inWall=false floor=spruce_planks water=false feet=air head=air count48=1 | spot 174, 102, -699 feet raft:woven_rug head air floor spruce_planks
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {}

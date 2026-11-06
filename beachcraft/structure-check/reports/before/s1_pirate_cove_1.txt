@@ -1,0 +1,37 @@
+structure raft:pirate_cove bbox 1728 78 672 .. 1783 135 728
+piece 0 raft:pirate_cove/cove_0 NONE origin 1728, 78, 672 1728 78 672 .. 1783 135 728
+AUDIT s1_pirate_cove_1 raft:pirate_cove at 1756, 107, 700 rot NONE pieces 1 checked 73152 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 2589 [stone -> gravel 632, stone -> dirt 353, andesite -> gravel 308, stone -> andesite 302, stone -> coal_ore 294, andesite -> dirt 187] | loose 2 [gravel 2] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced stone -> coal_ore (294): 1731,94,699 1731,95,699 1732,94,699 1732,95,699 1741,99,699 1741,83,699 1740,99,699 1740,82,699 1742,99,699 1767,82,699 1767,83,699 1766,83,699
+  replaced stone -> iron_ore (35): 1737,108,699 1736,107,700 1769,94,691 1769,93,691 1768,94,691 1769,94,690 1769,93,690 1768,94,690 1734,82,694 1755,95,694 1735,82,693 1735,81,693
+  replaced andesite -> coal_ore (166): 1743,99,699 1766,82,699 1769,81,699 1770,82,699 1731,94,698 1731,95,698 1730,94,698 1732,95,698 1739,82,698 1745,99,698 1765,83,698 1766,83,698
+  replaced stone -> dirt (353): 1749,88,699 1748,88,699 1748,86,699 1751,88,699 1751,86,699 1750,88,699 1750,89,699 1750,86,699 1750,87,699 1753,87,699 1752,88,699 1771,82,699
+  replaced tuff -> dirt (56): 1749,89,699 1749,87,699 1751,89,699 1752,87,699 1772,82,699 1749,87,698 1771,82,698 1751,86,697 1753,88,697 1755,87,697 1753,86,696 1769,80,696
+  replaced andesite -> copper_ore (18): 1749,93,699 1750,93,699 1754,80,703 1754,81,703 1747,88,722 1748,88,722 1751,95,690 1750,95,689 1762,85,712 1751,84,686 1750,84,686 1752,83,686
+  replaced andesite -> dirt (187): 1749,86,699 1751,87,699 1771,81,699 1773,81,699 1772,80,699 1749,89,698 1749,86,698 1748,86,698 1751,87,698 1750,86,698 1750,85,698 1753,87,698
+  replaced grass_block -> dirt (5): 1757,127,699 1771,117,700 1762,106,720 1739,106,682 1767,104,717
+  replaced stone -> gravel (632): 1763,88,699 1763,87,699 1767,94,699 1767,95,699 1767,80,699 1768,94,699 1761,88,698 1761,89,698 1760,87,698 1763,88,698 1763,87,698 1762,88,698
+  replaced andesite -> gravel (308): 1767,81,699 1766,81,699 1768,95,699 1778,104,699 1778,105,699 1762,89,698 1762,87,698 1765,81,698 1765,87,698 1764,86,698 1764,87,698 1767,94,698
+  replaced tuff -> coal_ore (39): 1739,81,698 1738,81,697 1740,82,697 1771,91,697 1746,84,696 1771,92,696 1740,109,703 1733,79,689 1737,97,695 1747,84,695 1749,82,694 1748,83,694
+  replaced stone -> copper_ore (27): 1750,93,698 1753,82,703 1753,83,703 1753,80,703 1749,93,700 1750,94,690 1750,95,690 1747,88,721 1748,88,721 1751,95,689 1750,96,689 1750,84,687
+  replaced tuff -> gravel (84): 1765,88,698 1764,89,698 1769,94,698 1761,86,697 1767,88,697 1766,96,697 1766,89,697 1768,94,697 1778,103,697 1765,95,696 1766,96,696 1766,93,696
+  replaced tuff -> stone (2): 1777,104,698 1756,109,688
+  replaced stone -> andesite (302): 1733,98,703 1733,97,703 1732,97,703 1735,98,703 1735,96,703 1735,95,703 1734,96,703 1734,97,703 1736,96,703 1736,97,703 1773,90,703 1775,90,703
+  replaced tuff -> andesite (33): 1733,95,703 1733,96,702 1734,93,713 1736,96,713 1735,95,712 1771,89,712 1735,99,707 1773,92,707 1775,87,707 1736,96,706 1773,91,706 1774,92,706
+  replaced andesite -> iron_ore (12): 1735,107,700 1768,93,690 1755,96,694 1756,95,693 1761,95,715 1760,96,714 1768,103,682 1755,89,719 1756,89,718 1756,90,718 1738,102,710 1752,89,710
+  replaced tuff -> iron_ore (3): 1737,108,700 1767,103,682 1753,88,710
+  replaced water -> seagrass (2): 1759,91,722 1759,91,724
+  replaced tuff -> copper_ore (6): 1749,88,721 1751,96,689 1764,78,681 1752,82,704 1761,86,710 1751,85,677
+  replaced water -> raft:starfish_orange (1): 1754,91,721
+  replaced andesite -> stone (4): 1756,111,689 1758,111,689 1755,109,688 1758,109,688
+  replaced water -> raft:sea_anemone_red (1): 1757,91,724
+  replaced stone -> diorite (15): 1777,79,712 1776,78,712 1778,79,712 1777,78,711 1776,78,711 1778,78,711 1777,78,710 1779,79,710 1779,78,710 1778,79,710 1778,78,710 1777,78,709
+  replaced andesite -> diorite (2): 1778,79,711 1776,78,710
+  replaced stone -> sand (1): 1782,89,708
+  replaced andesite -> sand (1): 1782,88,708
+  loose gravel (2): 1775,103,695 1775,105,696
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {andesite -> coal_ore=166, andesite -> copper_ore=18, andesite -> diorite=2, andesite -> dirt=187, andesite -> gravel=308, andesite -> iron_ore=12, andesite -> sand=1, andesite -> stone=4, grass_block -> dirt=5, stone -> andesite=302, stone -> coal_ore=294, stone -> copper_ore=27, stone -> diorite=15, stone -> dirt=353, stone -> gravel=632, stone -> iron_ore=35, stone -> sand=1, tuff -> andesite=33, tuff -> coal_ore=39, tuff -> copper_ore=6, tuff -> dirt=56, tuff -> gravel=84, tuff -> iron_ore=3, tuff -> stone=2, water -> raft:sea_anemone_red=1, water -> raft:starfish_orange=1, water -> seagrass=2}

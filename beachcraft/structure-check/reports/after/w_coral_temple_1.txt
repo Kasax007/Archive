@@ -1,0 +1,14 @@
+structure raft:coral_temple bbox 2260 39 1140 .. 2324 85 1211
+piece 0 raft:coral_temple/temple_0 NONE origin 2272, 51, 1152 2272 51 1152 .. 2312 73 1199
+AUDIT w_coral_temple_1 raft:coral_temple at 2292, 62, 1176 rot NONE pieces 1 (0 follow the terrain) checked 19720 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 720 [raft:tidestone_bricks -> raft:cracked_tidestone_bricks 337, raft:tidestone_bricks -> raft:mossy_tidestone_bricks 290, raft:tidestone -> raft:mossy_tidestone_bricks 77, water -> tall_seagrass 13, water -> seagrass 3] | loose 0 [] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced raft:tidestone_bricks -> raft:cracked_tidestone_bricks (337): 2305,54,1156 2305,52,1156 2305,53,1172 2306,60,1180 2309,53,1156 2311,52,1180 2310,52,1164 2310,52,1172 2275,52,1163 2275,53,1171 2275,53,1163 2277,60,1179
+  replaced raft:tidestone_bricks -> raft:mossy_tidestone_bricks (290): 2307,52,1188 2307,52,1156 2306,52,1164 2309,58,1188 2309,60,1188 2309,52,1196 2308,60,1172 2308,52,1196 2308,53,1188 2273,52,1163 2274,54,1163 2276,58,1171
+  replaced raft:tidestone -> raft:mossy_tidestone_bricks (77): 2273,51,1179 2274,51,1163 2280,54,1187 2286,53,1171 2289,51,1163 2288,51,1195 2299,51,1187 2298,61,1195 2307,52,1157 2311,51,1181 2275,51,1162 2276,51,1154
+  replaced water -> tall_seagrass (13): 2277,56,1155 2277,55,1155 2289,56,1194 2289,55,1194 2279,61,1176 2293,56,1191 2293,55,1191 2296,56,1191 2296,55,1191 2279,61,1174 2280,61,1173 2275,56,1156
+  replaced water -> seagrass (3): 2276,61,1178 2295,55,1193 2292,55,1189
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {raft:tidestone -> raft:mossy_tidestone_bricks=77, raft:tidestone_bricks -> raft:cracked_tidestone_bricks=337, raft:tidestone_bricks -> raft:mossy_tidestone_bricks=290, water -> seagrass=3, water -> tall_seagrass=13}

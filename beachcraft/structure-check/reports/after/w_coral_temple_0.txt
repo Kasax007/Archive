@@ -1,0 +1,19 @@
+structure raft:coral_temple bbox -1548 40 -468 .. -1477 86 -404
+piece 0 raft:coral_temple/temple_0 COUNTERCLOCKWISE_90 origin -1536, 52, -416 -1536 52 -456 .. -1489 74 -416
+AUDIT w_coral_temple_0 raft:coral_temple at -1512, 63, -436 rot COUNTERCLOCKWISE_90 pieces 1 (0 follow the terrain) checked 19720 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 713 [raft:tidestone_bricks -> raft:mossy_tidestone_bricks 298, raft:tidestone_bricks -> raft:cracked_tidestone_bricks 284, raft:tidestone -> raft:mossy_tidestone_bricks 85, water -> tall_seagrass 29, water -> seagrass 8, water -> raft:starfish_purple 5] | loose 0 [] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced raft:tidestone_bricks -> raft:cracked_tidestone_bricks (284): -1534,58,-432 -1531,65,-440 -1531,55,-424 -1530,53,-432 -1530,54,-424 -1527,53,-456 -1524,54,-432 -1523,53,-416 -1521,54,-432 -1521,53,-456 -1518,53,-432 -1518,57,-440
+  replaced raft:tidestone_bricks -> raft:mossy_tidestone_bricks (298): -1533,53,-448 -1533,53,-416 -1531,64,-440 -1525,64,-432 -1518,54,-448 -1515,54,-424 -1515,55,-432 -1514,53,-440 -1512,54,-432 -1512,55,-432 -1509,55,-448 -1506,54,-448
+  replaced raft:tidestone -> raft:mossy_tidestone_bricks (85): -1532,55,-440 -1529,52,-440 -1528,55,-432 -1526,52,-424 -1522,55,-440 -1513,52,-440 -1508,52,-432 -1536,52,-439 -1529,55,-439 -1516,53,-455 -1511,52,-455 -1510,53,-455
+  replaced water -> seagrass (8): -1522,56,-424 -1511,62,-424 -1514,62,-423 -1509,62,-423 -1495,56,-422 -1497,56,-437 -1500,62,-449 -1497,62,-449
+  replaced water -> tall_seagrass (29): -1515,62,-424 -1507,62,-424 -1497,57,-440 -1497,56,-440 -1516,62,-423 -1508,57,-438 -1508,56,-438 -1492,56,-454 -1492,57,-454 -1529,56,-421 -1529,57,-421 -1508,57,-437
+  replaced water -> raft:starfish_orange (1): -1533,56,-423
+  replaced water -> raft:starfish_purple (5): -1513,62,-423 -1505,56,-447 -1512,62,-421 -1532,56,-419 -1508,56,-435
+  replaced water -> raft:sea_urchin (1): -1506,56,-454
+  replaced kelp -> kelp_plant (1): -1506,58,-420
+  replaced water -> kelp (1): -1506,59,-420
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {kelp -> kelp_plant=1, raft:tidestone -> raft:mossy_tidestone_bricks=85, raft:tidestone_bricks -> raft:cracked_tidestone_bricks=284, raft:tidestone_bricks -> raft:mossy_tidestone_bricks=298, water -> kelp=1, water -> raft:sea_urchin=1, water -> raft:starfish_orange=1, water -> raft:starfish_purple=5, water -> seagrass=8, water -> tall_seagrass=29}

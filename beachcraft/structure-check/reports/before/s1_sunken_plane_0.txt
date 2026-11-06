@@ -1,0 +1,17 @@
+structure raft:sunken_plane bbox 158 40 148 .. 220 78 212
+piece 0 raft:sunken_plane/airliner_0 CLOCKWISE_90 origin 208, 52, 160 170 52 160 .. 208 66 200
+AUDIT s1_sunken_plane_0 raft:sunken_plane at 189, 59, 180 rot CLOCKWISE_90 pieces 1 checked 2463 | solid 0 [] | fluid 3 [water 3] | deco 0 [] | missing 0 [] | replaced 96 [sand -> sandstone 55, gravel -> stone 24, water -> kelp_plant 11, water -> tall_seagrass 2, gravel -> diorite 1, water -> raft:sea_urchin 1] | loose 0 [] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced water -> kelp_plant (11): 192,61,180 192,60,180 193,61,180 193,60,180 198,60,180 187,59,179 187,61,179 187,60,179 189,59,179 189,61,179 189,60,179
+  replaced sand -> sandstone (55): 192,54,170 194,54,175 195,54,174 196,54,181 197,54,175 198,54,171 198,54,180 199,54,179 201,54,175 204,54,165 204,54,171 204,54,173
+  replaced gravel -> stone (24): 192,54,181 192,54,180 196,54,179 198,54,176 200,54,164 200,54,176 201,54,164 204,54,170 204,54,172 205,54,170 171,54,180 172,54,175
+  replaced gravel -> diorite (1): 201,54,169
+  replaced water -> seagrass (1): 202,56,164
+  replaced water -> tall_seagrass (2): 202,56,166 202,55,166
+  replaced water -> raft:sea_urchin (1): 176,58,180
+  replaced water -> raft:starfish_red (1): 178,60,179
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {gravel -> diorite=1, gravel -> stone=24, sand -> sandstone=55, water -> kelp_plant=11, water -> raft:sea_urchin=1, water -> raft:starfish_red=1, water -> seagrass=1, water -> tall_seagrass=2}

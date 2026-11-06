@@ -1,0 +1,57 @@
+structure raft:port_solace bbox 5655 32 -5259 .. 5839 134 -5051
+piece 0 raft:port_solace/plaza CLOCKWISE_90 origin 5792, 44, -5168 5746 44 -5168 .. 5792 69 -5122
+piece 1 raft:port_solace/city_hall_base COUNTERCLOCKWISE_90 origin 5793, 44, -5127 5793 44 -5163 .. 5827 91 -5127
+piece 2 raft:port_solace/avenue_market CLOCKWISE_180 origin 5775, 44, -5169 5763 44 -5199 .. 5775 59 -5169
+piece 3 raft:port_solace/avenue_power NONE origin 5763, 44, -5121 5763 44 -5121 .. 5775 59 -5091
+piece 4 raft:port_solace/avenue_harbour CLOCKWISE_90 origin 5745, 44, -5151 5715 44 -5151 .. 5745 55 -5139
+piece 5 raft:port_solace/city_hall_top COUNTERCLOCKWISE_90 origin 5801, 92, -5135 5801 92 -5155 .. 5821 122 -5135
+piece 6 raft:port_solace/deco_tower_base CLOCKWISE_90 origin 5762, 44, -5118 5736 44 -5118 .. 5762 91 -5094
+piece 7 raft:port_solace/dept_store COUNTERCLOCKWISE_90 origin 5776, 44, -5091 5776 44 -5121 .. 5799 78 -5091
+piece 8 raft:port_solace/tee COUNTERCLOCKWISE_90 origin 5763, 44, -5078 5763 44 -5090 .. 5775 59 -5078
+piece 9 raft:port_solace/glass_tower_base CLOCKWISE_180 origin 5739, 44, -5152 5721 44 -5172 .. 5739 91 -5152
+piece 10 raft:port_solace/shop_row NONE origin 5716, 44, -5138 5716 44 -5138 .. 5744 73 -5125
+piece 11 raft:port_solace/tee COUNTERCLOCKWISE_90 origin 5702, 44, -5139 5702 44 -5151 .. 5714 59 -5139
+piece 12 raft:port_solace/deco_tower_top CLOCKWISE_90 origin 5758, 92, -5114 5742 92 -5114 .. 5758 115 -5098
+piece 13 raft:port_solace/glass_tower_top CLOCKWISE_180 origin 5739, 92, -5153 5721 92 -5172 .. 5739 117 -5153
+piece 14 raft:port_solace/apartment_brick COUNTERCLOCKWISE_90 origin 5776, 44, -5171 5776 44 -5197 .. 5790 84 -5171
+piece 15 raft:port_solace/shop_row CLOCKWISE_90 origin 5762, 44, -5198 5749 44 -5198 .. 5762 73 -5170
+piece 16 raft:port_solace/tee NONE origin 5763, 44, -5212 5763 44 -5212 .. 5775 59 -5200
+piece 17 raft:port_solace/apartment_brick NONE origin 5756, 44, -5077 5756 44 -5077 .. 5782 84 -5063
+piece 18 raft:port_solace/street_b COUNTERCLOCKWISE_90 origin 5776, 44, -5078 5776 44 -5090 .. 5800 60 -5078
+piece 19 raft:port_solace/street_a CLOCKWISE_90 origin 5762, 44, -5090 5738 44 -5090 .. 5762 62 -5078
+piece 20 raft:port_solace/rubble_lot NONE origin 5701, 44, -5138 5701 44 -5138 .. 5715 64 -5126
+piece 21 raft:port_solace/street_b COUNTERCLOCKWISE_90 origin 5677, 44, -5139 5677 44 -5151 .. 5701 60 -5139
+piece 22 raft:port_solace/street_a NONE origin 5702, 44, -5176 5702 44 -5176 .. 5714 62 -5152
+piece 23 raft:port_solace/rubble_lot CLOCKWISE_90 origin 5762, 44, -5213 5750 44 -5213 .. 5762 64 -5199
+piece 24 raft:port_solace/street_b COUNTERCLOCKWISE_90 origin 5776, 44, -5200 5776 44 -5212 .. 5800 60 -5200
+piece 25 raft:port_solace/street_b NONE origin 5763, 44, -5237 5763 44 -5237 .. 5775 60 -5213
+piece 26 raft:port_solace/end_barricade COUNTERCLOCKWISE_90 origin 5801, 44, -5078 5801 44 -5090 .. 5810 55 -5078
+piece 27 raft:port_solace/end_sinkhole CLOCKWISE_90 origin 5737, 44, -5090 5728 44 -5090 .. 5737 62 -5078
+piece 28 raft:port_solace/park_lot NONE origin 5682, 44, -5138 5682 44 -5138 .. 5696 61 -5126
+piece 29 raft:port_solace/park_lot CLOCKWISE_180 origin 5696, 44, -5152 5682 44 -5164 .. 5696 61 -5152
+piece 30 raft:port_solace/end_barricade CLOCKWISE_90 origin 5676, 44, -5151 5667 44 -5151 .. 5676 55 -5139
+piece 31 raft:port_solace/end_barricade CLOCKWISE_180 origin 5714, 44, -5177 5702 44 -5186 .. 5714 55 -5177
+piece 32 raft:port_solace/park_lot CLOCKWISE_180 origin 5795, 44, -5213 5781 44 -5225 .. 5795 61 -5213
+piece 33 raft:port_solace/end_sinkhole COUNTERCLOCKWISE_90 origin 5801, 44, -5200 5801 44 -5212 .. 5810 62 -5200
+piece 34 raft:port_solace/diner CLOCKWISE_90 origin 5762, 44, -5234 5750 44 -5234 .. 5762 64 -5216
+piece 35 raft:port_solace/end_barricade CLOCKWISE_180 origin 5775, 44, -5238 5763 44 -5247 .. 5775 55 -5238
+AUDIT f_port_solace_t1_3 raft:port_solace at 5747, 83, -5155 rot CLOCKWISE_90 pieces 36 (0 follow the terrain, 0 beyond 8 chunks) checked 244255 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 4575 [water 4575] | replaced 1199 [smooth_stone -> raft:mossy_concrete 538, light_gray_concrete -> raft:cracked_concrete 349, water -> tall_seagrass 152, water -> seagrass 119, raft:asphalt -> gravel 29, water -> raft:starfish_purple 4] | loose 0 [] | items 2 [stick 2] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  missing water (4575): 5739,101,-5162 5738,103,-5162 5738,102,-5162 5738,101,-5162 5738,111,-5162 5738,110,-5162 5738,109,-5162 5738,108,-5162 5738,107,-5162 5738,106,-5162 5738,105,-5162 5738,104,-5162
+  replaced light_gray_concrete -> raft:cracked_concrete (349): 5738,63,-5162 5727,83,-5162 5736,71,-5161 5735,100,-5161 5735,51,-5161 5736,51,-5164 5735,91,-5164 5735,96,-5164 5722,96,-5164 5738,92,-5163 5734,63,-5163 5734,96,-5163
+  replaced smooth_stone -> raft:mossy_concrete (538): 5728,83,-5162 5729,63,-5162 5726,92,-5162 5738,63,-5161 5738,59,-5161 5731,91,-5161 5730,75,-5161 5728,63,-5161 5735,71,-5161 5735,91,-5161 5722,47,-5161 5722,67,-5161
+  replaced water -> raft:starfish_orange (1): 5725,97,-5161
+  replaced water -> seagrass (119): 5819,52,-5161 5824,50,-5162 5775,48,-5162 5772,48,-5155 5756,48,-5153 5775,48,-5153 5773,48,-5153 5750,47,-5155 5773,48,-5154 5818,57,-5160 5776,47,-5160 5822,52,-5157
+  replaced water -> raft:barnacles (2): 5723,62,-5164 5727,58,-5158
+  replaced water -> tall_seagrass (152): 5776,47,-5165 5776,48,-5165 5777,47,-5165 5777,48,-5165 5821,53,-5159 5821,52,-5159 5823,58,-5160 5823,57,-5160 5820,53,-5160 5820,52,-5160 5821,53,-5160 5821,52,-5160
+  replaced raft:asphalt -> gravel (29): 5776,46,-5165 5766,46,-5166 5705,46,-5182 5706,46,-5183 5706,46,-5175 5752,46,-5130 5757,46,-5129 5785,46,-5125 5774,46,-5126 5694,46,-5148 5749,46,-5150 5736,46,-5142
+  replaced water -> raft:starfish_purple (4): 5738,93,-5156 5686,48,-5127 5684,48,-5127 5800,46,-5208
+  replaced kelp -> kelp_plant (1): 5823,65,-5154
+  replaced water -> raft:starfish_red (1): 5722,97,-5169
+  replaced water -> raft:sea_urchin (2): 5695,48,-5131 5695,48,-5133
+  replaced lightning_rod -> exposed_lightning_rod (1): 5811,122,-5145
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {water=4575}
+all replaced: {kelp -> kelp_plant=1, light_gray_concrete -> raft:cracked_concrete=349, lightning_rod -> exposed_lightning_rod=1, raft:asphalt -> gravel=29, smooth_stone -> raft:mossy_concrete=538, water -> raft:barnacles=2, water -> raft:sea_urchin=2, water -> raft:starfish_orange=1, water -> raft:starfish_purple=4, water -> raft:starfish_red=1, water -> seagrass=119, water -> tall_seagrass=152}

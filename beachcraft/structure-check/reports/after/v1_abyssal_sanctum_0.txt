@@ -1,0 +1,13 @@
+structure raft:abyssal_sanctum bbox 116 34 -12 .. 202 91 113
+piece 0 raft:abyssal_sanctum/sanctum NONE origin 128, 46, 0 128 46 0 .. 190 79 101
+AUDIT v1_abyssal_sanctum_0 raft:abyssal_sanctum at 159, 63, 51 rot NONE pieces 1 (0 follow the terrain) checked 81438 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 10 [water -> bubble_column 6, water -> tall_seagrass 2, raft:mossy_tidestone_bricks -> smooth_basalt 1, raft:tidestone_bricks -> raft:bubble_vent 1] | loose 0 [] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced raft:mossy_tidestone_bricks -> smooth_basalt (1): 155,46,98
+  replaced raft:tidestone_bricks -> raft:bubble_vent (1): 156,46,98
+  replaced water -> bubble_column (6): 156,47,98 156,52,98 156,50,98 156,51,98 156,48,98 156,49,98
+  replaced water -> tall_seagrass (2): 154,47,95 154,48,95
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {raft:mossy_tidestone_bricks -> smooth_basalt=1, raft:tidestone_bricks -> raft:bubble_vent=1, water -> bubble_column=6, water -> tall_seagrass=2}

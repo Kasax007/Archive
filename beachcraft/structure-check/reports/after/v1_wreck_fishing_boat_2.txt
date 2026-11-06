@@ -1,0 +1,10 @@
+structure raft:wreck_fishing_boat bbox -2605 33 3508 .. -2564 68 3544
+piece 0 raft:wreck_fishing_boat/capsized CLOCKWISE_90 origin -2576, 45, 3520 -2593 45 3520 .. -2576 56 3532
+AUDIT v1_wreck_fishing_boat_2 raft:wreck_fishing_boat at -2584, 51, 3526 rot CLOCKWISE_90 pieces 1 (0 follow the terrain) checked 966 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 2 [sand -> sandstone 2] | loose 0 [] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced sand -> sandstone (2): -2580,47,3522 -2591,47,3527
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {sand -> sandstone=2}

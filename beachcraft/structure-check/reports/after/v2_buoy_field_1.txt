@@ -1,0 +1,10 @@
+structure raft:buoy_field bbox -3284 95 -1248 .. -3264 99 -1236
+piece 0 raft:buoy_field/channel CLOCKWISE_90 origin -3264, 95, -1248 -3284 95 -1248 .. -3264 99 -1236
+AUDIT v2_buoy_field_1 raft:buoy_field at -3274, 97, -1242 rot CLOCKWISE_90 pieces 1 (0 follow the terrain) checked 37 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 1 [raft:buoy_red -> raft:driftwood_log 1] | loose 0 [] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced raft:buoy_red -> raft:driftwood_log (1): -3264,99,-1248
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {raft:buoy_red -> raft:driftwood_log=1}

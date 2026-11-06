@@ -1,0 +1,42 @@
+structure raft:ashen_forge bbox 2897 100 -2876 .. 2964 159 -2776
+piece 0 raft:ashen_forge/hall NONE origin 2912, 113, -2864 2912 113 -2864 .. 2952 147 -2819
+piece 1 raft:ashen_forge/vault NONE origin 2909, 112, -2818 2909 112 -2818 .. 2935 133 -2788
+AUDIT s2_ashen_forge_0 raft:ashen_forge at 2931, 130, -2826 rot NONE pieces 2 checked 52421 | solid 2683 [basalt 2683] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 1994 [basalt -> magma_block 430, blackstone -> raft:volcanic_ash 411, basalt -> raft:volcanic_ash 375, polished_blackstone_bricks -> cracked_polished_blackstone_bricks 271, smooth_basalt -> raft:volcanic_ash 222, raft:tidestone_bricks -> raft:cracked_tidestone_bricks 204] | loose 0 [] | items 4 [crab_claw 3, ember_shell 1] falling 0 | npc 0/1 ok
+NPC raft:dr_voss PROBLEM at 2916.5 118.0 -2839.5 (0.0 from spot) free=false inWall=true floor=polished_blackstone water=false feet=basalt head=basalt count48=1 | spot 2916, 118, -2840 feet basalt head basalt floor polished_blackstone
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+  ashen_forge/hall 20,8,28 : 64
+  ashen_forge/hall 28,8,12 : 53
+  ashen_forge/hall 20,4,24 : 45
+  ashen_forge/hall 28,8,16 : 45
+  ashen_forge/hall 24,8,28 : 44
+  ashen_forge/hall 28,4,12 : 42
+  ashen_forge/hall 20,4,8 : 40
+  ashen_forge/hall 20,4,28 : 40
+  ashen_forge/hall 28,8,20 : 40
+  ashen_forge/hall 24,8,16 : 39
+  ashen_forge/hall 16,4,16 : 39
+  ashen_forge/vault 12,8,8 : 38
+  ashen_forge/hall 24,4,12 : 38
+  ashen_forge/hall 20,4,4 : 37
+  ashen_forge/hall 8,4,32 : 37
+samples (world positions, first 12 per kind):
+  solid basalt (2683): 2941,119,-2846 2941,118,-2846 2941,123,-2846 2941,122,-2846 2941,121,-2846 2941,120,-2846 2941,124,-2846 2942,119,-2846 2942,118,-2846 2942,123,-2846 2942,122,-2846 2942,121,-2846
+  replaced polished_blackstone_bricks -> cracked_polished_blackstone_bricks (271): 2941,116,-2846 2928,114,-2846 2918,131,-2846 2946,132,-2847 2931,132,-2845 2921,117,-2813 2917,119,-2845 2917,121,-2845 2945,118,-2848 2945,120,-2848 2936,114,-2848 2929,132,-2848
+  replaced basalt -> magma_block (430): 2935,140,-2846 2934,138,-2846 2932,140,-2846 2930,137,-2846 2924,130,-2814 2923,129,-2814 2918,123,-2846 2949,127,-2847 2951,117,-2847 2945,113,-2847 2945,122,-2847 2945,126,-2847
+  replaced blackstone -> raft:volcanic_ash (411): 2935,113,-2846 2924,113,-2814 2924,114,-2814 2925,113,-2814 2926,115,-2814 2922,114,-2814 2923,113,-2814 2936,114,-2845 2937,114,-2845 2937,113,-2845 2933,113,-2845 2928,114,-2813
+  replaced smooth_basalt -> raft:volcanic_ash (222): 2925,115,-2814 2926,113,-2814 2920,115,-2814 2921,115,-2814 2923,115,-2814 2935,114,-2845 2924,114,-2813 2925,113,-2813 2927,115,-2813 2921,113,-2813 2923,113,-2845 2923,113,-2813
+  replaced deepslate -> gravel (13): 2920,113,-2846 2952,117,-2845 2948,118,-2846 2949,119,-2846 2932,116,-2810 2933,117,-2810 2933,116,-2810 2931,116,-2810 2920,113,-2844 2932,116,-2808 2930,115,-2808 2913,116,-2797
+  replaced raft:tidestone_bricks -> raft:cracked_tidestone_bricks (204): 2920,118,-2846 2944,125,-2847 2932,117,-2845 2920,130,-2845 2920,133,-2845 2944,118,-2848 2944,130,-2848 2944,128,-2848 2944,118,-2845 2944,124,-2846 2920,122,-2842 2920,126,-2842
+  replaced basalt -> raft:volcanic_ash (375): 2921,114,-2814 2922,113,-2814 2922,115,-2814 2933,114,-2845 2934,114,-2845 2934,113,-2845 2924,113,-2813 2921,114,-2813 2919,115,-2813 2922,114,-2816 2924,114,-2815 2925,115,-2815
+  replaced tuff -> gravel (30): 2949,118,-2847 2950,117,-2847 2921,113,-2845 2949,117,-2845 2919,113,-2847 2949,116,-2846 2950,118,-2846 2933,114,-2809 2950,118,-2844 2950,117,-2844 2932,117,-2811 2932,116,-2811
+  replaced tuff -> coal_ore (10): 2933,127,-2807 2933,128,-2807 2946,113,-2831 2916,113,-2832 2929,120,-2790 2929,122,-2790 2927,121,-2790 2916,113,-2854 2930,121,-2791 2917,113,-2852
+  replaced raft:black_sand -> raft:volcanic_ash (8): 2927,113,-2862 2922,113,-2861 2925,113,-2864 2926,113,-2863 2927,113,-2863 2923,113,-2858 2927,113,-2860 2952,115,-2855
+  replaced deepslate -> deepslate_coal_ore (1): 2915,113,-2832
+  replaced tuff -> dirt (9): 2933,113,-2825 2936,113,-2822 2937,113,-2821 2950,126,-2824 2938,113,-2824 2939,113,-2823 2933,113,-2823 2940,113,-2820 2938,114,-2820
+  replaced tuff -> andesite (7): 2948,114,-2855 2948,113,-2856 2948,114,-2853 2949,114,-2851 2949,114,-2852 2949,113,-2849 2945,113,-2850
+  replaced deepslate -> andesite (2): 2949,113,-2851 2945,113,-2852
+  replaced deepslate -> dirt (1): 2939,113,-2820
+all solid intrusions: {basalt=2683}
+all deco intrusions: {}
+all missing: {}
+all replaced: {basalt -> magma_block=430, basalt -> raft:volcanic_ash=375, blackstone -> raft:volcanic_ash=411, deepslate -> andesite=2, deepslate -> deepslate_coal_ore=1, deepslate -> dirt=1, deepslate -> gravel=13, polished_blackstone_bricks -> cracked_polished_blackstone_bricks=271, raft:black_sand -> raft:volcanic_ash=8, raft:tidestone_bricks -> raft:cracked_tidestone_bricks=204, smooth_basalt -> raft:volcanic_ash=222, tuff -> andesite=7, tuff -> coal_ore=10, tuff -> dirt=9, tuff -> gravel=30}

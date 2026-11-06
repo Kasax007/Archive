@@ -1,0 +1,12 @@
+structure raft:abyssal_sanctum bbox -4481 31 -1596 .. -4356 88 -1510
+piece 0 raft:abyssal_sanctum/sanctum CLOCKWISE_90 origin -4368, 43, -1584 -4469 43 -1584 .. -4368 76 -1522
+AUDIT s2_abyssal_sanctum_1 raft:abyssal_sanctum at -4418, 60, -1553 rot CLOCKWISE_90 pieces 1 checked 81438 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 13 [water -> kelp_plant 12, water -> kelp 1] | loose 19 [gravel 19] | items 1 [string 1] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced water -> kelp_plant (12): -4467,49,-1548 -4467,48,-1548 -4467,47,-1548 -4467,46,-1548 -4467,45,-1548 -4467,44,-1548 -4462,48,-1558 -4462,49,-1558 -4462,46,-1558 -4462,47,-1558 -4462,44,-1558 -4462,45,-1558
+  replaced water -> kelp (1): -4464,44,-1548
+  loose gravel (19): -4369,42,-1572 -4370,42,-1571 -4369,42,-1571 -4370,42,-1570 -4369,42,-1570 -4371,42,-1569 -4370,42,-1569 -4369,42,-1569 -4371,42,-1568 -4370,42,-1568 -4369,42,-1568 -4371,42,-1567
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {water -> kelp=1, water -> kelp_plant=12}

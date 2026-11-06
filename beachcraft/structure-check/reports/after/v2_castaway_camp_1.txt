@@ -1,0 +1,10 @@
+structure raft:castaway_camp bbox -4349 113 100 .. -4308 141 138
+piece 0 raft:castaway_camp/tent CLOCKWISE_90 origin -4320, 125, 112 -4337 125 112 .. -4320 129 126
+AUDIT v2_castaway_camp_1 raft:castaway_camp at -4328, 127, 119 rot CLOCKWISE_90 pieces 1 (0 follow the terrain) checked 242 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 0 [] | loose 0 [] | items 0 [] falling 0 | npc 1/1 ok
+NPC raft:kai ok at -4328.5 126.0 115.5 (0.0 from spot) free=true inWall=false floor=sand water=false feet=air head=air count48=1 | spot -4329, 126, 115 feet air head air floor sand
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {}

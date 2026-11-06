@@ -1,0 +1,18 @@
+structure raft:wreck_cargo_ship bbox 2868 55 1996 .. 2954 107 2044
+piece 0 raft:wreck_cargo_ship/freighter_0 COUNTERCLOCKWISE_90 origin 2880, 67, 2032 2880 67 2008 .. 2942 95 2032
+AUDIT s1_wreck_cargo_ship_1 raft:wreck_cargo_ship at 2911, 81, 2020 rot COUNTERCLOCKWISE_90 pieces 1 checked 9383 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 59 [water -> kelp_plant 27, sand -> sandstone 10, water -> tall_seagrass 6, water -> kelp 5, water -> seagrass 5, gravel -> stone 2] | loose 0 [] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced sand -> sandstone (10): 2883,69,2021 2911,69,2025 2890,69,2012 2893,69,2012 2898,69,2012 2929,69,2012 2893,69,2027 2894,69,2011 2895,69,2027 2904,69,2027
+  replaced gravel -> stone (2): 2912,69,2017 2930,69,2010
+  replaced water -> kelp_plant (27): 2917,72,2021 2917,73,2021 2917,71,2021 2932,76,2017 2932,77,2017 2932,72,2017 2932,73,2017 2932,74,2017 2932,75,2017 2932,70,2017 2932,71,2017 2920,78,2024
+  replaced water -> seagrass (5): 2931,70,2017 2926,70,2020 2927,73,2024 2931,70,2016 2931,70,2018
+  replaced kelp -> kelp_plant (2): 2920,75,2012 2934,76,2024
+  replaced water -> kelp (5): 2925,73,2024 2930,73,2016 2932,73,2016 2894,85,2019 2895,85,2018
+  replaced water -> tall_seagrass (6): 2931,71,2015 2931,70,2015 2932,71,2015 2932,70,2015 2932,70,2018 2932,71,2018
+  replaced water -> raft:glow_kelp (1): 2904,74,2014
+  replaced water -> raft:barnacles (1): 2927,72,2022
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {gravel -> stone=2, kelp -> kelp_plant=2, sand -> sandstone=10, water -> kelp=5, water -> kelp_plant=27, water -> raft:barnacles=1, water -> raft:glow_kelp=1, water -> seagrass=5, water -> tall_seagrass=6}

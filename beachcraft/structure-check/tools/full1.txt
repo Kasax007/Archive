@@ -1,0 +1,344 @@
+rd 2
+world bcaudit1
+log s1_old_lighthouse_0
+scout raft:old_lighthouse 0 0
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:old_lighthouse 0 0 s1_old_lighthouse_0
+cmd execute in raft:raftdim run forceload remove all
+log s1_old_lighthouse_1
+scout raft:old_lighthouse 3000 2000
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:old_lighthouse 3000 2000 s1_old_lighthouse_1
+cmd execute in raft:raftdim run forceload remove all
+log s1_old_lighthouse_2
+scout raft:old_lighthouse -2500 3500
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:old_lighthouse -2500 3500 s1_old_lighthouse_2
+cmd execute in raft:raftdim run forceload remove all
+log s1_saltmere_village_0
+scout raft:saltmere_village 0 0
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:saltmere_village 0 0 s1_saltmere_village_0
+cmd execute in raft:raftdim run forceload remove all
+log s1_saltmere_village_1
+scout raft:saltmere_village 3000 2000
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:saltmere_village 3000 2000 s1_saltmere_village_1
+cmd execute in raft:raftdim run forceload remove all
+log s1_saltmere_village_2
+scout raft:saltmere_village -2500 3500
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:saltmere_village -2500 3500 s1_saltmere_village_2
+cmd execute in raft:raftdim run forceload remove all
+log s1_ashen_forge_0
+scout raft:ashen_forge 0 0
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:ashen_forge 0 0 s1_ashen_forge_0
+cmd execute in raft:raftdim run forceload remove all
+log s1_ashen_forge_1
+scout raft:ashen_forge 3000 2000
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:ashen_forge 3000 2000 s1_ashen_forge_1
+cmd execute in raft:raftdim run forceload remove all
+log s1_ashen_forge_2
+scout raft:ashen_forge -2500 3500
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:ashen_forge -2500 3500 s1_ashen_forge_2
+cmd execute in raft:raftdim run forceload remove all
+log s1_beach_shack_0
+scout raft:beach_shack 0 0
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:beach_shack 0 0 s1_beach_shack_0
+cmd execute in raft:raftdim run forceload remove all
+log s1_beach_shack_1
+scout raft:beach_shack 3000 2000
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:beach_shack 3000 2000 s1_beach_shack_1
+cmd execute in raft:raftdim run forceload remove all
+log s1_beach_shack_2
+scout raft:beach_shack -2500 3500
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:beach_shack -2500 3500 s1_beach_shack_2
+cmd execute in raft:raftdim run forceload remove all
+log s1_castaway_camp_0
+scout raft:castaway_camp 0 0
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:castaway_camp 0 0 s1_castaway_camp_0
+cmd execute in raft:raftdim run forceload remove all
+log s1_castaway_camp_1
+scout raft:castaway_camp 3000 2000
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:castaway_camp 3000 2000 s1_castaway_camp_1
+cmd execute in raft:raftdim run forceload remove all
+log s1_castaway_camp_2
+scout raft:castaway_camp -2500 3500
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:castaway_camp -2500 3500 s1_castaway_camp_2
+cmd execute in raft:raftdim run forceload remove all
+log s1_iceberg_outpost_0
+scout raft:iceberg_outpost 0 0
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:iceberg_outpost 0 0 s1_iceberg_outpost_0
+cmd execute in raft:raftdim run forceload remove all
+log s1_iceberg_outpost_1
+scout raft:iceberg_outpost 3000 2000
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:iceberg_outpost 3000 2000 s1_iceberg_outpost_1
+cmd execute in raft:raftdim run forceload remove all
+log s1_iceberg_outpost_2
+scout raft:iceberg_outpost -2500 3500
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:iceberg_outpost -2500 3500 s1_iceberg_outpost_2
+cmd execute in raft:raftdim run forceload remove all
+log s1_rusted_rig_0
+scout raft:rusted_rig 0 0
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:rusted_rig 0 0 s1_rusted_rig_0
+cmd execute in raft:raftdim run forceload remove all
+log s1_rusted_rig_1
+scout raft:rusted_rig 3000 2000
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:rusted_rig 3000 2000 s1_rusted_rig_1
+cmd execute in raft:raftdim run forceload remove all
+log s1_rusted_rig_2
+scout raft:rusted_rig -2500 3500
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:rusted_rig -2500 3500 s1_rusted_rig_2
+cmd execute in raft:raftdim run forceload remove all
+log s1_port_solace_0
+scout raft:port_solace 0 0
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:port_solace 0 0 s1_port_solace_0
+cmd execute in raft:raftdim run forceload remove all
+log s1_port_solace_1
+scout raft:port_solace 3000 2000
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:port_solace 3000 2000 s1_port_solace_1
+cmd execute in raft:raftdim run forceload remove all
+log s1_port_solace_2
+scout raft:port_solace -2500 3500
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:port_solace -2500 3500 s1_port_solace_2
+cmd execute in raft:raftdim run forceload remove all
+log s1_coral_temple_0
+scout raft:coral_temple 0 0
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:coral_temple 0 0 s1_coral_temple_0
+cmd execute in raft:raftdim run forceload remove all
+log s1_coral_temple_1
+scout raft:coral_temple 3000 2000
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:coral_temple 3000 2000 s1_coral_temple_1
+cmd execute in raft:raftdim run forceload remove all
+log s1_coral_temple_2
+scout raft:coral_temple -2500 3500
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:coral_temple -2500 3500 s1_coral_temple_2
+cmd execute in raft:raftdim run forceload remove all
+log s1_helix_station_0
+scout raft:helix_station 0 0
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:helix_station 0 0 s1_helix_station_0
+cmd execute in raft:raftdim run forceload remove all
+log s1_helix_station_1
+scout raft:helix_station 3000 2000
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:helix_station 3000 2000 s1_helix_station_1
+cmd execute in raft:raftdim run forceload remove all
+log s1_helix_station_2
+scout raft:helix_station -2500 3500
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:helix_station -2500 3500 s1_helix_station_2
+cmd execute in raft:raftdim run forceload remove all
+log s1_abyssal_sanctum_0
+scout raft:abyssal_sanctum 0 0
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:abyssal_sanctum 0 0 s1_abyssal_sanctum_0
+cmd execute in raft:raftdim run forceload remove all
+log s1_abyssal_sanctum_1
+scout raft:abyssal_sanctum 3000 2000
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:abyssal_sanctum 3000 2000 s1_abyssal_sanctum_1
+cmd execute in raft:raftdim run forceload remove all
+log s1_abyssal_sanctum_2
+scout raft:abyssal_sanctum -2500 3500
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:abyssal_sanctum -2500 3500 s1_abyssal_sanctum_2
+cmd execute in raft:raftdim run forceload remove all
+log s1_pirate_cove_0
+scout raft:pirate_cove 0 0
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:pirate_cove 0 0 s1_pirate_cove_0
+cmd execute in raft:raftdim run forceload remove all
+log s1_pirate_cove_1
+scout raft:pirate_cove 3000 2000
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:pirate_cove 3000 2000 s1_pirate_cove_1
+cmd execute in raft:raftdim run forceload remove all
+log s1_pirate_cove_2
+scout raft:pirate_cove -2500 3500
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:pirate_cove -2500 3500 s1_pirate_cove_2
+cmd execute in raft:raftdim run forceload remove all
+log s1_wreck_galleon_0
+scout raft:wreck_galleon 0 0
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:wreck_galleon 0 0 s1_wreck_galleon_0
+cmd execute in raft:raftdim run forceload remove all
+log s1_wreck_galleon_1
+scout raft:wreck_galleon 3000 2000
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:wreck_galleon 3000 2000 s1_wreck_galleon_1
+cmd execute in raft:raftdim run forceload remove all
+log s1_wreck_galleon_2
+scout raft:wreck_galleon -2500 3500
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:wreck_galleon -2500 3500 s1_wreck_galleon_2
+cmd execute in raft:raftdim run forceload remove all
+log s1_wreck_cargo_ship_0
+scout raft:wreck_cargo_ship 0 0
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:wreck_cargo_ship 0 0 s1_wreck_cargo_ship_0
+cmd execute in raft:raftdim run forceload remove all
+log s1_wreck_cargo_ship_1
+scout raft:wreck_cargo_ship 3000 2000
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:wreck_cargo_ship 3000 2000 s1_wreck_cargo_ship_1
+cmd execute in raft:raftdim run forceload remove all
+log s1_wreck_cargo_ship_2
+scout raft:wreck_cargo_ship -2500 3500
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:wreck_cargo_ship -2500 3500 s1_wreck_cargo_ship_2
+cmd execute in raft:raftdim run forceload remove all
+log s1_wreck_fishing_boat_0
+scout raft:wreck_fishing_boat 0 0
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:wreck_fishing_boat 0 0 s1_wreck_fishing_boat_0
+cmd execute in raft:raftdim run forceload remove all
+log s1_wreck_fishing_boat_1
+scout raft:wreck_fishing_boat 3000 2000
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:wreck_fishing_boat 3000 2000 s1_wreck_fishing_boat_1
+cmd execute in raft:raftdim run forceload remove all
+log s1_wreck_fishing_boat_2
+scout raft:wreck_fishing_boat -2500 3500
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:wreck_fishing_boat -2500 3500 s1_wreck_fishing_boat_2
+cmd execute in raft:raftdim run forceload remove all
+log s1_sunken_plane_0
+scout raft:sunken_plane 0 0
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:sunken_plane 0 0 s1_sunken_plane_0
+cmd execute in raft:raftdim run forceload remove all
+log s1_sunken_plane_1
+scout raft:sunken_plane 3000 2000
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:sunken_plane 3000 2000 s1_sunken_plane_1
+cmd execute in raft:raftdim run forceload remove all
+log s1_sunken_plane_2
+scout raft:sunken_plane -2500 3500
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:sunken_plane -2500 3500 s1_sunken_plane_2
+cmd execute in raft:raftdim run forceload remove all
+log s1_sunken_ruins_0
+scout raft:sunken_ruins 0 0
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:sunken_ruins 0 0 s1_sunken_ruins_0
+cmd execute in raft:raftdim run forceload remove all
+log s1_sunken_ruins_1
+scout raft:sunken_ruins 3000 2000
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:sunken_ruins 3000 2000 s1_sunken_ruins_1
+cmd execute in raft:raftdim run forceload remove all
+log s1_sunken_ruins_2
+scout raft:sunken_ruins -2500 3500
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:sunken_ruins -2500 3500 s1_sunken_ruins_2
+cmd execute in raft:raftdim run forceload remove all
+log s1_abandoned_raft_0
+scout raft:abandoned_raft 0 0
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:abandoned_raft 0 0 s1_abandoned_raft_0
+cmd execute in raft:raftdim run forceload remove all
+log s1_abandoned_raft_1
+scout raft:abandoned_raft 3000 2000
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:abandoned_raft 3000 2000 s1_abandoned_raft_1
+cmd execute in raft:raftdim run forceload remove all
+log s1_abandoned_raft_2
+scout raft:abandoned_raft -2500 3500
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:abandoned_raft -2500 3500 s1_abandoned_raft_2
+cmd execute in raft:raftdim run forceload remove all
+log s1_buoy_field_0
+scout raft:buoy_field 0 0
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:buoy_field 0 0 s1_buoy_field_0
+cmd execute in raft:raftdim run forceload remove all
+log s1_buoy_field_1
+scout raft:buoy_field 3000 2000
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:buoy_field 3000 2000 s1_buoy_field_1
+cmd execute in raft:raftdim run forceload remove all
+log s1_buoy_field_2
+scout raft:buoy_field -2500 3500
+cmd execute in raft:raftdim run forceload add {x0:i} {z0:i} {x1:i} {z1:i}
+swait 200
+audit raft:buoy_field -2500 3500 s1_buoy_field_2
+cmd execute in raft:raftdim run forceload remove all

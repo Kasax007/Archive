@@ -1,0 +1,9 @@
+structure raft:beach_shack bbox -204 112 902 .. -161 142 940
+piece 0 raft:beach_shack/surf_shack COUNTERCLOCKWISE_90 origin -192, 124, 928 -192 124 914 .. -173 130 928
+AUDIT v1_beach_shack_0 raft:beach_shack at -182, 127, 921 rot COUNTERCLOCKWISE_90 pieces 1 (0 follow the terrain) checked 326 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 0 [] | loose 0 [] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {}

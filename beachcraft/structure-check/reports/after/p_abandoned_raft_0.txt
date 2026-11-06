@@ -1,0 +1,9 @@
+structure raft:abandoned_raft bbox -8 98 0 .. 0 106 11
+piece 0 raft:abandoned_raft/homestead CLOCKWISE_90 origin 0, 98, 0 -8 98 0 .. 0 106 11
+AUDIT p_abandoned_raft_0 raft:abandoned_raft at -4, 102, 6 rot CLOCKWISE_90 pieces 1 (0 follow the terrain) checked 234 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 0 [] | loose 0 [] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {}

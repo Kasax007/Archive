@@ -1,0 +1,18 @@
+structure raft:coral_temple bbox -2940 45 -364 .. -2876 91 -293
+piece 0 raft:coral_temple/temple_0 NONE origin -2928, 57, -352 -2928 57 -352 .. -2888 79 -305
+AUDIT v2_coral_temple_1 raft:coral_temple at -2908, 68, -328 rot NONE pieces 1 (0 follow the terrain) checked 19720 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 2 [water 2] | replaced 741 [raft:tidestone_bricks -> raft:mossy_tidestone_bricks 325, raft:tidestone_bricks -> raft:cracked_tidestone_bricks 307, raft:tidestone -> raft:mossy_tidestone_bricks 87, water -> tall_seagrass 18, water -> raft:barnacles 1, water -> raft:sea_urchin 1] | loose 0 [] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced raft:tidestone_bricks -> raft:cracked_tidestone_bricks (307): -2927,59,-318 -2926,58,-334 -2925,59,-334 -2924,60,-342 -2922,59,-318 -2920,58,-326 -2920,58,-310 -2919,58,-318 -2919,60,-350 -2919,60,-326 -2918,59,-350 -2918,64,-350
+  replaced raft:tidestone -> raft:mossy_tidestone_bricks (87): -2926,57,-334 -2920,57,-342 -2919,60,-310 -2916,57,-326 -2911,60,-326 -2910,57,-342 -2902,57,-342 -2900,57,-326 -2900,69,-350 -2893,60,-326 -2893,57,-310 -2891,57,-334
+  replaced raft:tidestone_bricks -> raft:mossy_tidestone_bricks (325): -2926,60,-318 -2926,59,-318 -2926,59,-310 -2925,63,-318 -2925,59,-326 -2925,59,-318 -2924,59,-350 -2918,58,-342 -2914,58,-326 -2913,58,-342 -2913,58,-334 -2913,63,-350
+  replaced water -> tall_seagrass (18): -2924,67,-326 -2922,61,-342 -2922,62,-342 -2921,67,-326 -2917,61,-336 -2917,62,-336 -2899,61,-336 -2899,62,-336 -2923,61,-327 -2923,62,-327 -2922,62,-311 -2922,61,-311
+  replaced water -> raft:barnacles (1): -2890,63,-328
+  replaced water -> seagrass (1): -2918,61,-313
+  replaced water -> raft:sea_urchin (1): -2897,61,-321
+  missing water (2): -2896,65,-321 -2896,66,-321
+  replaced water -> raft:starfish_purple (1): -2902,61,-331
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {water=2}
+all replaced: {raft:tidestone -> raft:mossy_tidestone_bricks=87, raft:tidestone_bricks -> raft:cracked_tidestone_bricks=307, raft:tidestone_bricks -> raft:mossy_tidestone_bricks=325, water -> raft:barnacles=1, water -> raft:sea_urchin=1, water -> raft:starfish_purple=1, water -> seagrass=1, water -> tall_seagrass=18}

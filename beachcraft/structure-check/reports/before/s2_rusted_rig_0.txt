@@ -1,0 +1,13 @@
+structure raft:rusted_rig bbox 500 20 -2864 .. 544 144 -2817
+piece 0 raft:rusted_rig/rig_0 CLOCKWISE_90 origin 544, 20, -2864 500 20 -2864 .. 544 144 -2817
+AUDIT s2_rusted_rig_0 raft:rusted_rig at 522, 82, -2840 rot CLOCKWISE_90 pieces 1 checked 8491 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 197 [raft:riveted_hull -> raft:rusty_hull 146, raft:rusted_plate -> raft:rusty_hull 51] | loose 1 [anvil 1] | items 0 [] falling 0 | npc 1/1 ok
+NPC raft:okafor ok at 533.4 111.0 -2828.9 (1.1 from spot) free=true inWall=false floor=raft:rusted_plate water=false feet=air head=air count48=1 | spot 532, 111, -2830 feet air head air floor raft:rusted_plate
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced raft:riveted_hull -> raft:rusty_hull (146): 511,39,-2852 510,107,-2852 511,47,-2852 511,22,-2852 510,88,-2852 511,29,-2828 511,30,-2828 510,76,-2828 510,54,-2852 510,53,-2828 510,60,-2828 510,61,-2828
+  replaced raft:rusted_plate -> raft:rusty_hull (51): 532,110,-2833 532,50,-2849 533,86,-2853 532,26,-2853 532,26,-2849 534,98,-2853 535,26,-2829 534,74,-2849 530,119,-2825 530,110,-2845 531,114,-2829 531,110,-2829
+  loose anvil (1): 544,117,-2864
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {raft:riveted_hull -> raft:rusty_hull=146, raft:rusted_plate -> raft:rusty_hull=51}

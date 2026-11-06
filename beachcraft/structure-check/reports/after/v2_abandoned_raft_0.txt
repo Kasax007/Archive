@@ -1,0 +1,9 @@
+structure raft:abandoned_raft bbox 1216 98 -2796 .. 1227 101 -2784
+piece 0 raft:abandoned_raft/wrecked COUNTERCLOCKWISE_90 origin 1216, 98, -2784 1216 98 -2796 .. 1227 101 -2784
+AUDIT v2_abandoned_raft_0 raft:abandoned_raft at 1222, 100, -2790 rot COUNTERCLOCKWISE_90 pieces 1 (0 follow the terrain) checked 69 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 0 [] | loose 0 [] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {}

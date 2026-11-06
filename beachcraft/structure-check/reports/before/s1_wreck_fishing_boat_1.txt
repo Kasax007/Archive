@@ -1,0 +1,15 @@
+structure raft:wreck_fishing_boat bbox 2676 40 1744 .. 2722 75 1788
+piece 0 raft:wreck_fishing_boat/trawler COUNTERCLOCKWISE_90 origin 2688, 52, 1776 2688 52 1756 .. 2710 63 1776
+AUDIT s1_wreck_fishing_boat_1 raft:wreck_fishing_boat at 2699, 58, 1766 rot COUNTERCLOCKWISE_90 pieces 1 checked 1328 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 36 [cobweb (water) 36] | replaced 19 [sand -> sandstone 6, water -> tall_seagrass 6, water -> kelp_plant 4, water -> seagrass 2, water -> kelp 1] | loose 0 [] | items 36 [string 36] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced sand -> sandstone (6): 2690,54,1770 2698,54,1764 2700,54,1766 2702,54,1761 2702,54,1766 2708,54,1772
+  missing cobweb (36): 2695,55,1759 2695,55,1757 2695,55,1758 2695,55,1761 2695,55,1760 2697,55,1759 2697,55,1758 2697,55,1760 2696,55,1758 2696,55,1757 2696,55,1760 2696,55,1761
+  replaced water -> tall_seagrass (6): 2698,56,1768 2698,55,1768 2703,56,1768 2703,58,1769 2703,59,1769 2703,55,1768
+  replaced water -> seagrass (2): 2701,55,1771 2702,58,1769
+  replaced water -> kelp_plant (4): 2700,56,1768 2700,57,1768 2700,55,1768 2702,55,1771
+  replaced water -> kelp (1): 2702,56,1771
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {cobweb (water)=36}
+all replaced: {sand -> sandstone=6, water -> kelp=1, water -> kelp_plant=4, water -> seagrass=2, water -> tall_seagrass=6}

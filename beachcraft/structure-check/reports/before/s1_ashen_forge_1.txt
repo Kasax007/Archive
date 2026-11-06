@@ -1,0 +1,46 @@
+structure raft:ashen_forge bbox 1985 114 -1436 .. 2052 173 -1336
+piece 0 raft:ashen_forge/hall NONE origin 2000, 127, -1424 2000 127 -1424 .. 2040 161 -1379
+piece 1 raft:ashen_forge/vault NONE origin 1997, 126, -1378 1997 126 -1378 .. 2023 147 -1348
+AUDIT s1_ashen_forge_1 raft:ashen_forge at 2019, 144, -1386 rot NONE pieces 2 checked 52421 | solid 1645 [basalt 1634, raft:volcanic_ash 11] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 1375 [basalt -> magma_block 373, polished_blackstone_bricks -> cracked_polished_blackstone_bricks 258, raft:tidestone_bricks -> raft:cracked_tidestone_bricks 214, blackstone -> raft:volcanic_ash 131, basalt -> raft:volcanic_ash 112, smooth_basalt -> raft:volcanic_ash 66] | loose 1 [gravel 1] | items 3 [crab_claw 2, ember_shell 1] falling 0 | npc 1/1 ok
+NPC raft:dr_voss ok at 2003.5 133.0 -1401.1 (2.2 from spot) free=true inWall=false floor=air water=false feet=air head=air count48=1 | spot 2004, 132, -1400 feet basalt head basalt floor polished_blackstone
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+  ashen_forge/hall 20,8,12 : 57
+  ashen_forge/hall 20,12,12 : 48
+  ashen_forge/hall 28,8,16 : 48
+  ashen_forge/hall 20,4,12 : 46
+  ashen_forge/hall 28,4,12 : 42
+  ashen_forge/hall 28,8,12 : 42
+  ashen_forge/hall 28,8,20 : 40
+  ashen_forge/hall 16,8,12 : 36
+  ashen_forge/hall 28,4,20 : 34
+  ashen_forge/hall 16,4,24 : 33
+  ashen_forge/hall 28,4,16 : 33
+  ashen_forge/hall 16,4,12 : 30
+  ashen_forge/hall 8,4,28 : 30
+  ashen_forge/hall 16,12,12 : 29
+  ashen_forge/hall 24,4,12 : 29
+samples (world positions, first 12 per kind):
+  replaced polished_blackstone_bricks -> cracked_polished_blackstone_bricks (258): 2034,127,-1424 2030,145,-1392 2014,127,-1360 2005,139,-1392 2007,139,-1392 2034,127,-1423 2034,140,-1391 2029,129,-1391 2026,127,-1423 2020,128,-1391 2021,133,-1391 2022,132,-1391
+  replaced basalt -> magma_block (373): 2034,137,-1392 2035,130,-1392 2023,127,-1360 2021,140,-1360 2021,137,-1360 2022,128,-1360 2014,147,-1392 2015,144,-1360 2010,148,-1392 2004,133,-1392 2005,136,-1392 2006,135,-1392
+  solid basalt (1634): 2024,134,-1392 2024,133,-1392 2025,134,-1392 2020,138,-1392 2020,137,-1392 2022,134,-1392 2023,134,-1392 2023,133,-1392 2016,139,-1392 2016,138,-1392 2016,137,-1392 2017,138,-1392
+  replaced tuff -> coal_ore (20): 2017,146,-1360 2020,141,-1355 2018,142,-1355 2019,141,-1355 2027,148,-1383 2018,135,-1351 2019,135,-1349 2004,133,-1380 2002,134,-1380 2006,133,-1379 2003,134,-1379 2040,127,-1406
+  replaced tuff -> gravel (64): 2017,142,-1360 2019,141,-1360 2018,143,-1359 2020,141,-1358 2020,140,-1358 2017,142,-1358 2018,141,-1358 2020,140,-1357 2021,140,-1357 2019,139,-1357 2024,151,-1385 2022,151,-1385
+  replaced deepslate -> deepslate_coal_ore (4): 2019,145,-1360 2021,128,-1353 2000,128,-1396 2017,140,-1363
+  replaced raft:tidestone_bricks -> raft:cracked_tidestone_bricks (214): 2013,137,-1360 2013,136,-1360 2014,131,-1360 2008,142,-1392 2008,137,-1391 2008,138,-1359 2032,134,-1390 2032,131,-1390 2032,139,-1390 2032,138,-1390 2026,145,-1390 2008,136,-1390
+  replaced deepslate -> dirt (10): 2036,141,-1391 2037,140,-1390 2036,142,-1389 2036,141,-1389 2004,142,-1381 2004,141,-1381 2009,127,-1411 2036,131,-1410 2036,131,-1398 2037,129,-1397
+  replaced tuff -> dirt (22): 2037,142,-1391 2037,141,-1391 2038,142,-1388 2037,140,-1387 2038,131,-1419 2039,131,-1418 2039,130,-1418 2036,141,-1385 2038,140,-1384 2003,127,-1351 2003,127,-1350 2002,127,-1350
+  replaced tuff -> diorite (63): 2039,128,-1391 2040,129,-1390 2040,128,-1390 2040,127,-1390 2038,127,-1390 2035,127,-1390 2040,128,-1421 2037,129,-1389 2038,129,-1389 2039,129,-1389 2036,127,-1389 2034,127,-1389
+  replaced tuff -> stone (2): 2016,141,-1359 2019,139,-1358
+  replaced deepslate -> diorite (10): 2037,128,-1390 2037,130,-1389 2037,128,-1389 2038,127,-1421 2040,127,-1388 2040,128,-1387 2039,130,-1387 2040,128,-1418 2038,129,-1418 2032,127,-1383
+  replaced deepslate -> deepslate_iron_ore (2): 2014,142,-1358 2037,137,-1410
+  replaced tuff -> iron_ore (9): 2018,127,-1389 2031,149,-1386 2036,129,-1412 2037,132,-1407 2030,151,-1407 2014,126,-1375 2035,153,-1399 2021,143,-1366 2012,144,-1365
+  replaced blackstone -> raft:volcanic_ash (131): 2018,127,-1357 2018,128,-1357 2000,128,-1421 2016,128,-1356 2019,127,-1356 2017,128,-1356 2018,128,-1356 2017,127,-1356 2019,129,-1356 2019,128,-1356 2016,127,-1356 2015,127,-1356
+  replaced basalt -> raft:volcanic_ash (112): 2000,127,-1421 2021,129,-1356 2021,128,-1356 2021,127,-1356 2001,129,-1420 2001,128,-1420 2002,129,-1420 2020,127,-1355 2000,129,-1419 2001,127,-1419 2020,129,-1354 2020,128,-1354
+  replaced smooth_basalt -> raft:volcanic_ash (66): 2018,127,-1356 2020,129,-1355 2020,128,-1355 2022,127,-1355 2022,129,-1355 2022,128,-1355 2017,129,-1355 2017,128,-1355 2019,128,-1355 2002,129,-1419 2002,128,-1419 2019,128,-1354
+  replaced deepslate -> gravel (15): 2004,126,-1353 2018,129,-1352 2012,140,-1351 2018,129,-1350 2019,128,-1350 2012,139,-1350 2008,141,-1349 2027,127,-1380 2027,130,-1379 2028,150,-1406 2031,149,-1406 2031,150,-1405
+  solid raft:volcanic_ash (11): 2022,141,-1413 2021,141,-1412 2021,142,-1412 2023,141,-1412 2023,142,-1412 2024,141,-1411 2024,143,-1411 2024,142,-1411 2023,141,-1411 2023,143,-1411 2023,142,-1411
+  loose gravel (1): 2014,142,-1362
+all solid intrusions: {basalt=1634, raft:volcanic_ash=11}
+all deco intrusions: {}
+all missing: {}
+all replaced: {basalt -> magma_block=373, basalt -> raft:volcanic_ash=112, blackstone -> raft:volcanic_ash=131, deepslate -> deepslate_coal_ore=4, deepslate -> deepslate_iron_ore=2, deepslate -> diorite=10, deepslate -> dirt=10, deepslate -> gravel=15, polished_blackstone_bricks -> cracked_polished_blackstone_bricks=258, raft:tidestone_bricks -> raft:cracked_tidestone_bricks=214, smooth_basalt -> raft:volcanic_ash=66, tuff -> coal_ore=20, tuff -> diorite=63, tuff -> dirt=22, tuff -> gravel=64, tuff -> iron_ore=9, tuff -> stone=2}

@@ -1,0 +1,11 @@
+structure raft:helix_station bbox -3201 76 3588 .. -3124 116 3668
+piece 0 raft:helix_station/station_0 CLOCKWISE_90 origin -3136, 88, 3600 -3189 88 3600 .. -3136 104 3656
+AUDIT w_helix_station_2 raft:helix_station at -3162, 96, 3628 rot CLOCKWISE_90 pieces 1 (0 follow the terrain) checked 12561 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 2 [water -> raft:starfish_red 1, water -> seagrass 1] | loose 0 [] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced water -> seagrass (1): -3177,89,3641
+  replaced water -> raft:starfish_red (1): -3177,89,3640
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {water -> raft:starfish_red=1, water -> seagrass=1}

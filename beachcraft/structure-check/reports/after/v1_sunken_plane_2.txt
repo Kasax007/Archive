@@ -1,0 +1,9 @@
+structure raft:sunken_plane bbox -3042 40 3396 .. -2996 78 3442
+piece 0 raft:sunken_plane/seaplane_1 CLOCKWISE_90 origin -3008, 52, 3408 -3030 52 3408 .. -3008 66 3430
+AUDIT v1_sunken_plane_2 raft:sunken_plane at -3019, 59, 3419 rot CLOCKWISE_90 pieces 1 (0 follow the terrain) checked 806 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 0 [] | loose 0 [] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {}

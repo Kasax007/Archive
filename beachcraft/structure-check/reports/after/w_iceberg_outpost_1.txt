@@ -1,0 +1,11 @@
+structure raft:iceberg_outpost bbox 4416 81 624 .. 4453 115 656
+piece 0 raft:iceberg_outpost/outpost_0 NONE origin 4416, 81, 624 4416 81 624 .. 4453 115 656
+AUDIT w_iceberg_outpost_1 raft:iceberg_outpost at 4435, 98, 640 rot NONE pieces 1 (0 follow the terrain) checked 10434 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 1 [lightning_rod -> exposed_lightning_rod 1] | loose 0 [] | items 0 [] falling 0 | npc 1/1 ok
+NPC raft:dr_lund ok at 4437.2 102.1 643.3 (0.8 from spot) free=true inWall=false floor=spruce_planks water=false feet=air head=air count48=1 | spot 4437, 102, 642 feet raft:woven_rug head air floor spruce_planks
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced lightning_rod -> exposed_lightning_rod (1): 4443,105,644
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {lightning_rod -> exposed_lightning_rod=1}

@@ -1,0 +1,9 @@
+structure raft:sunken_plane bbox 564 28 -2908 .. 610 66 -2862
+piece 0 raft:sunken_plane/seaplane_1 NONE origin 576, 40, -2896 576 40 -2896 .. 598 54 -2874
+AUDIT v2_sunken_plane_0 raft:sunken_plane at 587, 47, -2885 rot NONE pieces 1 (0 follow the terrain) checked 806 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 0 [] | loose 0 [] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {}

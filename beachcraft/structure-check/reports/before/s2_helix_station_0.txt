@@ -1,0 +1,51 @@
+structure raft:helix_station bbox 1124 73 -2692 .. 1201 113 -2612
+piece 0 raft:helix_station/station_0 COUNTERCLOCKWISE_90 origin 1136, 85, -2624 1136 85 -2680 .. 1189 101 -2624
+AUDIT s2_helix_station_0 raft:helix_station at 1163, 93, -2652 rot COUNTERCLOCKWISE_90 pieces 1 checked 12561 | solid 53 [sandstone 19, sand 15, stone 7, red_terracotta 5, raft:rusty_hull 4] | fluid 51 [water 51] | deco 2 [raft:barnacles 1, raft:starfish_red 1] | missing 0 [] | replaced 47 [raft:riveted_hull -> sand 6, raft:green_sea_glass -> sand 5, raft:riveted_hull -> red_terracotta 4, raft:aqua_sea_glass -> raft:rusty_hull 3, raft:aqua_sea_glass -> red_terracotta 3, raft:riveted_hull -> blue_terracotta 3] | loose 2 [gravel 2] | items 1 [string 1] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+  helix_station/station_0 48,8,36 : 12
+  helix_station/station_0 48,4,36 : 10
+  helix_station/station_0 48,8,32 : 9
+  helix_station/station_0 48,4,32 : 6
+  helix_station/station_0 52,4,32 : 5
+  helix_station/station_0 52,4,36 : 5
+  helix_station/station_0 52,8,32 : 3
+  helix_station/station_0 52,8,36 : 2
+  helix_station/station_0 48,4,40 : 1
+samples (world positions, first 12 per kind):
+  replaced water -> kelp (1): 1151,89,-2642
+  replaced raft:riveted_hull -> sand (6): 1176,92,-2675 1176,93,-2675 1176,92,-2676 1176,93,-2674 1174,94,-2674 1175,94,-2674
+  solid raft:rusty_hull (4): 1172,94,-2675 1173,93,-2675 1171,94,-2675 1172,93,-2676
+  replaced raft:aqua_sea_glass -> red_terracotta (3): 1172,95,-2675 1173,93,-2677 1175,92,-2677
+  solid stone (7): 1172,92,-2675 1175,92,-2675 1176,92,-2674 1174,92,-2674 1175,92,-2674 1170,92,-2674 1170,92,-2677
+  solid red_terracotta (5): 1172,93,-2675 1174,93,-2675 1171,93,-2675 1173,93,-2676 1171,93,-2676
+  replaced raft:aqua_sea_glass -> raft:rusty_hull (3): 1173,94,-2675 1173,95,-2675 1174,93,-2677
+  solid sandstone (19): 1173,92,-2675 1174,92,-2675 1169,93,-2675 1170,92,-2675 1171,92,-2675 1174,92,-2676 1172,93,-2673 1173,92,-2673 1174,92,-2673 1175,92,-2673 1169,93,-2673 1170,92,-2673
+  replaced raft:blue_sea_glass -> red_terracotta (2): 1174,94,-2675 1174,92,-2677
+  replaced raft:riveted_hull -> red_terracotta (4): 1175,94,-2675 1175,93,-2675 1171,95,-2675 1171,94,-2676
+  solid sand (15): 1170,93,-2675 1172,92,-2676 1169,92,-2676 1169,93,-2676 1170,92,-2676 1170,93,-2676 1171,92,-2676 1173,93,-2673 1170,93,-2673 1171,93,-2673 1173,94,-2674 1173,93,-2674
+  replaced water -> raft:sea_urchin (1): 1156,89,-2635
+  replaced raft:aqua_sea_glass -> spruce_planks (2): 1172,94,-2676 1173,94,-2676
+  solid gravel (3): 1173,92,-2676 1172,94,-2674 1175,93,-2674
+  replaced raft:green_sea_glass -> spruce_planks (1): 1174,94,-2676
+  replaced raft:blue_sea_glass -> sand (2): 1174,93,-2676 1170,94,-2677
+  replaced raft:green_sea_glass -> sand (5): 1175,92,-2676 1175,93,-2676 1177,92,-2673 1177,92,-2674 1172,93,-2677
+  replaced raft:aqua_sea_glass -> sand (2): 1170,94,-2676 1170,93,-2677
+  replaced raft:green_sea_glass -> sandstone (1): 1176,93,-2673
+  replaced raft:blue_sea_glass -> raft:coral_stone_bricks (1): 1177,93,-2673
+  deco raft:barnacles (1): 1173,94,-2673
+  deco raft:starfish_red (1): 1175,93,-2673
+  replaced raft:riveted_hull -> tall_seagrass (1): 1171,95,-2673
+  replaced raft:riveted_hull -> sea_pickle (1): 1174,95,-2674
+  replaced raft:jelly_lamp -> sand (1): 1171,94,-2674
+  replaced raft:aqua_sea_glass -> gravel (2): 1172,94,-2677 1170,92,-2678
+  replaced raft:riveted_hull -> blue_terracotta (3): 1171,94,-2677 1171,93,-2677 1171,92,-2678
+  replaced raft:aqua_sea_glass -> blue_terracotta (1): 1172,92,-2678
+  replaced raft:green_sea_glass -> gravel (1): 1172,93,-2678
+  replaced raft:green_sea_glass -> raft:rusty_hull (1): 1173,92,-2678
+  replaced raft:barnacles -> blue_terracotta (1): 1174,92,-2678
+  replaced raft:rusty_hull -> blue_terracotta (1): 1171,93,-2678
+  loose gravel (2): 1189,87,-2674 1189,87,-2673
+all solid intrusions: {gravel=3, raft:rusty_hull=4, red_terracotta=5, sand=15, sandstone=19, stone=7}
+all deco intrusions: {raft:barnacles=1, raft:starfish_red=1}
+all missing: {}
+all replaced: {raft:aqua_sea_glass -> blue_terracotta=1, raft:aqua_sea_glass -> gravel=2, raft:aqua_sea_glass -> raft:rusty_hull=3, raft:aqua_sea_glass -> red_terracotta=3, raft:aqua_sea_glass -> sand=2, raft:aqua_sea_glass -> spruce_planks=2, raft:barnacles -> blue_terracotta=1, raft:blue_sea_glass -> raft:coral_stone_bricks=1, raft:blue_sea_glass -> red_terracotta=2, raft:blue_sea_glass -> sand=2, raft:green_sea_glass -> gravel=1, raft:green_sea_glass -> raft:rusty_hull=1, raft:green_sea_glass -> sand=5, raft:green_sea_glass -> sandstone=1, raft:green_sea_glass -> spruce_planks=1, raft:jelly_lamp -> sand=1, raft:riveted_hull -> blue_terracotta=3, raft:riveted_hull -> red_terracotta=4, raft:riveted_hull -> sand=6, raft:riveted_hull -> sea_pickle=1, raft:riveted_hull -> tall_seagrass=1, raft:rusty_hull -> blue_terracotta=1, water -> kelp=1, water -> raft:sea_urchin=1}

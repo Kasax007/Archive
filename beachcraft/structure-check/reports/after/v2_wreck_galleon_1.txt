@@ -1,0 +1,14 @@
+structure raft:wreck_galleon bbox -3967 24 -1628 .. -3892 81 -1573
+piece 0 raft:wreck_galleon/galleon_1 CLOCKWISE_90 origin -3904, 36, -1616 -3955 36 -1616 .. -3904 69 -1585
+AUDIT v2_wreck_galleon_1 raft:wreck_galleon at -3929, 53, -1600 rot CLOCKWISE_90 pieces 1 (0 follow the terrain) checked 8178 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 109 [water -> tall_seagrass 53, sand -> sandstone 28, water -> seagrass 14, gravel -> stone 13, water -> raft:barnacles 1] | loose 0 [] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced water -> seagrass (14): -3940,48,-1598 -3935,47,-1594 -3919,47,-1598 -3920,49,-1594 -3909,50,-1594 -3935,46,-1597 -3934,46,-1597 -3918,49,-1593 -3937,46,-1596 -3935,46,-1596 -3919,50,-1592 -3941,48,-1599
+  replaced gravel -> stone (13): -3940,38,-1606 -3932,36,-1598 -3926,38,-1606 -3910,37,-1606 -3908,37,-1606 -3933,36,-1597 -3930,36,-1601 -3939,38,-1592 -3933,36,-1596 -3929,36,-1600 -3931,38,-1603 -3930,36,-1599
+  replaced water -> tall_seagrass (53): -3937,45,-1598 -3936,47,-1594 -3933,46,-1598 -3933,44,-1594 -3933,43,-1594 -3931,49,-1590 -3929,46,-1598 -3930,44,-1594 -3930,43,-1594 -3927,48,-1594 -3913,54,-1594 -3908,55,-1594
+  replaced sand -> sandstone (28): -3933,36,-1598 -3931,36,-1598 -3929,36,-1598 -3929,38,-1606 -3930,36,-1598 -3926,36,-1610 -3909,37,-1606 -3931,36,-1597 -3931,36,-1601 -3932,36,-1597 -3929,38,-1605 -3930,36,-1597
+  replaced water -> raft:barnacles (1): -3920,39,-1595
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {gravel -> stone=13, sand -> sandstone=28, water -> raft:barnacles=1, water -> seagrass=14, water -> tall_seagrass=53}

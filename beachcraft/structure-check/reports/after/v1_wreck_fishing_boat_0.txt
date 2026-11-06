@@ -1,0 +1,13 @@
+structure raft:wreck_fishing_boat bbox -31 42 15 .. 12 73 60
+piece 0 raft:wreck_fishing_boat/sloop CLOCKWISE_180 origin 0, 54, 48 -19 54 27 .. 0 61 48
+AUDIT v1_wreck_fishing_boat_0 raft:wreck_fishing_boat at -9, 58, 38 rot CLOCKWISE_180 pieces 1 (0 follow the terrain) checked 642 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 15 [water -> tall_seagrass 12, sand -> sandstone 1, water -> raft:starfish_red 1, water -> seagrass 1] | loose 0 [] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced water -> tall_seagrass (12): -4,57,43 -4,58,43 -5,57,44 -5,57,40 -5,58,44 -5,58,40 -6,57,45 -6,57,44 -6,57,42 -6,58,45 -6,58,44 -6,58,42
+  replaced water -> raft:starfish_red (1): -5,57,42
+  replaced water -> seagrass (1): -5,57,41
+  replaced sand -> sandstone (1): -11,54,28
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {sand -> sandstone=1, water -> raft:starfish_red=1, water -> seagrass=1, water -> tall_seagrass=12}

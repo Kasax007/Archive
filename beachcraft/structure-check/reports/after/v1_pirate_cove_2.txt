@@ -1,0 +1,10 @@
+structure raft:pirate_cove bbox -2984 78 2368 .. -2928 135 2423
+piece 0 raft:pirate_cove/cove_0 CLOCKWISE_90 origin -2928, 78, 2368 -2984 78 2368 .. -2928 135 2423
+AUDIT v1_pirate_cove_2 raft:pirate_cove at -2956, 107, 2396 rot CLOCKWISE_90 pieces 1 (0 follow the terrain) checked 73152 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 6 [grass_block -> dirt 6] | loose 0 [] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced grass_block -> dirt (6): -2946,118,2382 -2971,103,2378 -2938,106,2379 -2973,104,2407 -2976,106,2402 -2947,122,2403
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {grass_block -> dirt=6}

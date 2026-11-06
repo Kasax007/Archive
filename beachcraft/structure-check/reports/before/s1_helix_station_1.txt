@@ -1,0 +1,22 @@
+structure raft:helix_station bbox 2788 40 1724 .. 2865 80 1804
+piece 0 raft:helix_station/station_0 COUNTERCLOCKWISE_90 origin 2800, 52, 1792 2800 52 1736 .. 2853 68 1792
+AUDIT s1_helix_station_1 raft:helix_station at 2827, 60, 1764 rot COUNTERCLOCKWISE_90 pieces 1 checked 12561 | solid 0 [] | fluid 0 [] | deco 0 [] | missing 0 [] | replaced 22 [raft:cracked_concrete -> raft:tidestone_pillar 4, raft:mossy_concrete -> raft:tidestone_pillar 4, raft:cracked_concrete -> raft:chiseled_tidestone 3, smooth_stone -> raft:tidestone_pillar 2, light_gray_concrete -> raft:chiseled_tidestone 1, light_gray_concrete -> raft:sea_anemone_red 1] | loose 0 [] | items 0 [] falling 0 | npc 0/0 ok
+worst cells (template, local x,y,z of a 4x4x4 cell: solid blocks in air of the template):
+samples (world positions, first 12 per kind):
+  replaced light_gray_concrete -> raft:sea_anemone_red (1): 2822,52,1756
+  replaced smooth_stone -> raft:glow_kelp_plant (1): 2821,55,1754
+  replaced raft:rebar_concrete -> raft:glow_kelp_plant (1): 2821,54,1754
+  replaced raft:cracked_concrete -> raft:glow_kelp_plant (1): 2821,53,1754
+  replaced raft:mossy_concrete -> raft:glow_kelp_plant (1): 2821,52,1754
+  replaced raft:giant_clam -> raft:mossy_tidestone_bricks (1): 2823,56,1754
+  replaced smooth_stone -> raft:tidestone_pillar (2): 2823,55,1754 2822,55,1754
+  replaced light_gray_concrete -> raft:chiseled_tidestone (1): 2823,54,1754
+  replaced raft:cracked_concrete -> raft:chiseled_tidestone (3): 2823,53,1754 2822,54,1754 2822,53,1754
+  replaced raft:rebar_concrete -> raft:tidestone_pillar (1): 2823,52,1754
+  replaced raft:mossy_concrete -> raft:tidestone_pillar (4): 2822,52,1754 2823,52,1755 2822,55,1755 2822,54,1755
+  replaced sea_lantern -> raft:tidestone_pillar (1): 2823,55,1755
+  replaced raft:cracked_concrete -> raft:tidestone_pillar (4): 2823,54,1755 2823,53,1755 2822,53,1755 2822,52,1755
+all solid intrusions: {}
+all deco intrusions: {}
+all missing: {}
+all replaced: {light_gray_concrete -> raft:chiseled_tidestone=1, light_gray_concrete -> raft:sea_anemone_red=1, raft:cracked_concrete -> raft:chiseled_tidestone=3, raft:cracked_concrete -> raft:glow_kelp_plant=1, raft:cracked_concrete -> raft:tidestone_pillar=4, raft:giant_clam -> raft:mossy_tidestone_bricks=1, raft:mossy_concrete -> raft:glow_kelp_plant=1, raft:mossy_concrete -> raft:tidestone_pillar=4, raft:rebar_concrete -> raft:glow_kelp_plant=1, raft:rebar_concrete -> raft:tidestone_pillar=1, sea_lantern -> raft:tidestone_pillar=1, smooth_stone -> raft:glow_kelp_plant=1, smooth_stone -> raft:tidestone_pillar=2}

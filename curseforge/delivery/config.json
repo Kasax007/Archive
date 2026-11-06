@@ -1,0 +1,95 @@
+{
+ "date": "Stand 6. November 2026",
+ "intro": "Alle vier Projektseiten im neuen Stil: wenig Text, viele Grafiken, alle Zahlen aus dem Code. Bei Beach Craft, Dreamcraft und Tamagotchi fügst du den YouTube-Link des Videos ins Feld ein, dann steht das Video in der kopierten Beschreibung. Ohne Link fehlt nur der Video-Block.",
+ "footer": "Alle Texte liegen auch als HTML-Dateien im Chat und in den Repos unter <code>docs/curseforge/description.html</code> (Branch <code>26.3</code>). Die alten Bilder bleiben in den Repos, bis die neuen Seiten online sind.",
+ "projects": [
+  {
+   "key": "bc",
+   "name": "Beach Craft",
+   "chip": [
+    "new",
+    "neu"
+   ],
+   "ids": "Mod · Projekt 1010922 · Version 3.1.0+26.3 (Datei 9474711, freigegeben)",
+   "about": [
+    "Viel weniger Text, dafür Bilder: Kopfbild, die Doku als Video, „Auf einen Blick“ in Zahlen, zwei Ablaufgrafiken (der Weg ins Endlose Meer, das eigene Floß) und Bildcollagen aus den Shader-Aufnahmen. 733 statt 8.256 Wörter, 25 Bilder."
+   ],
+   "html": "/home/user/Kasax_Raft_Mod/docs/curseforge/description.html",
+   "preview": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/desc_bc31_preview.png",
+   "url": "https://www.curseforge.com/minecraft/mc-mods/beach-craft",
+   "video": {
+    "label": "Doku „Tides of the Deep“ (21:27)",
+    "yt_title": "Beach Craft 3.1 - Tides of the Deep: a calm documentary of the whole mod (with shaders)",
+    "yt_desc": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/descpage/yt_desc.txt",
+    "hint": "Film speichern: die 1080p-Datei mit 60 fps aus dem Chat oder die kleinere 720p-Fassung über „Als MP4 speichern“ auf der Seite der Doku. Als Vorschaubild passt die Endkarte aus dem Chat."
+   }
+  },
+  {
+   "key": "dc",
+   "name": "Dreamcraft",
+   "chip": [
+    "new",
+    "neu gestaltet"
+   ],
+   "ids": "Modpack · Projekt 545167 · V1.4 (Datei 9475197, Server-Pack 9475219, freigegeben)",
+   "about": [
+    "Im Traum-Stil der BisectHosting-Banner (Nachthimmel, lila Wolken), die Banner selbst bleiben unverändert.",
+    "- 327 statt 988 sichtbare Wörter, 22 neue Grafiken: 251 Mods, 348 Quests, 157 neue Biome und 10 seltene Haustiere auf einen Blick, eine Karte aller 15 Kapitel, das Quest-Buch in vier Schritten, das Rezept des Dream Star, „Neu in V1.4“ und Shader-Collagen.",
+    "- Die Mod-Liste mit allen 251 Mods, die Hinweise zu Server, Update und Speicher und die Bilder der 1.20.1-Version stehen in Spoilern.",
+    "- Der 44-Sekunden-Trailer kommt als Video-Block dazu."
+   ],
+   "html": "/home/user/Modpack-Development/docs/curseforge/description.html",
+   "preview": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/desc_dc_preview.png",
+   "url": "https://www.curseforge.com/minecraft/modpacks/dreamcraft-new",
+   "video": {
+    "label": "Trailer (0:44, Hochformat)",
+    "yt_title": "This Minecraft modpack has over 250 mods... #minecraft #minecraftmods #modpack",
+    "yt_desc": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/descpage/yt_dc_desc.txt",
+    "hint": "Video speichern: den Trailer aus dem Chat (44 Sekunden, Hochformat, mit Untertiteln und Musik)."
+   }
+  },
+  {
+   "key": "tama",
+   "name": "Tamagotchi",
+   "chip": [
+    "new",
+    "neu gestaltet"
+   ],
+   "ids": "Mod · Projekt 1758309 · Version 1.2.0 (Datei 9431312)",
+   "about": [
+    "In Rosa mit dem grünen Pet-Bildschirm aus dem Spiel.",
+    "- 370 statt 1.658 Wörter, 19 neue Grafiken: alle zehn Haustiere mit Zuhause, Chance, Talent und Lieblingsleckerli, Bedürfnisse und Stimmungen, Spielzeug, Rucksack und Ei, die 25 Möbelstücke und „Neu in 1.2: Made for Modpacks“.",
+    "- Anforderungen, Mehrspieler, Modpacks und FAQ stehen im Spoiler.",
+    "- Neu sind die Zeilen „Made with love, sweat and tears / Fabric only“ und der Link zu deinen anderen Projekten, wie auf den anderen Seiten. Du kannst sie wieder löschen.",
+    "- Das 2-Minuten-Showcase kommt als Video-Block dazu."
+   ],
+   "html": "/home/user/tamagotchi/docs/curseforge/description.html",
+   "preview": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/desc_tama_preview.png",
+   "url": "https://www.curseforge.com/minecraft/mc-mods/tamagotchi",
+   "video": {
+    "label": "Showcase (2:03, Hochformat)",
+    "yt_title": "Minecraft, but you can tame and raise your own pets (Tamagotchi mod showcase)",
+    "yt_desc": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/descpage/yt_tama_desc.txt",
+    "hint": "Video speichern: das Showcase aus dem Chat (2:03, Hochformat, mit Untertiteln und Musik)."
+   }
+  },
+  {
+   "key": "qi",
+   "name": "Quest Icons",
+   "chip": [
+    "new",
+    "neu gestaltet"
+   ],
+   "ids": "Mod · Projekt 690531 · Version 1.1.0+26.3 (Datei 9429010)",
+   "about": [
+    "In den Farben des Quest-Buchs: dunkles Lila, Gold und Pixelschrift.",
+    "- 359 statt 1.552 Wörter, 17 neue Grafiken: die 32 Icons, das Quest-Buch mit Erklärungen, 11 Aufgaben und 8 Belohnungen, Loot-Kisten, Teams, der Dream Star mit Rezept und ein Abschnitt für Pack-Ersteller.",
+    "- Befehle, Team-Regeln und die Quest-Dateien stehen im Spoiler. Ein Video gibt es hier nicht."
+   ],
+   "html": "/home/user/Kasax_Quests_Items_Mod-1.19.2/docs/curseforge/description.html",
+   "preview": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/desc_qi_preview.png",
+   "url": "https://www.curseforge.com/minecraft/mc-mods/quest-icons",
+   "video": null
+  }
+ ]
+}

@@ -95,15 +95,17 @@ Review): `sh ./gradlew runPack -Pxmx=5G -Pscene=film -Pshots=… -Prd=12 -Pout=$
 ## 4. Die CurseForge-Beschreibungen (finale Fassungen)
 
 Für Projektbeschreibungen gibt es **keine API** – du fügst sie selbst ein. Alle sind als HTML für die
-**Quellcode-Ansicht** des CurseForge-Editors geschrieben, im Stil deiner Seiten (Header-Bild, Abschnitts-Streifen,
-Screenshots, Badges, BisectHosting-Banner mit Code KASAX007, viele Spoiler).
+**Quellcode-Ansicht** des CurseForge-Editors geschrieben. Seit dem 6.11. sind alle vier Seiten **kurz und grafisch**
+(Wunsch des Nutzers: „genauso super gestalten wie bei Beach Craft“): Kopfbild, Zahlen auf einen Blick (jede Zahl aus dem
+Code gezählt, die Generatoren rechnen sie neu), Ablaufgrafiken, Collagen, wenig Text, Details in einem Spoiler,
+BisectHosting-Banner mit Code KASAX007. Jede Seite hat eine eigene Optik und einen eigenen Bild-Generator.
 
 | Projekt | Datei (Repo, Branch) | Bilder und Banner | Spoiler | Wann einfügen |
 | --- | --- | --- | --- | --- |
-| **Dreamcraft** (545167) | `Modpack-Development/docs/curseforge/description.html` (`26.3`) | BisectHosting-Grafiken `bh_header`, `bh_promo`, `bh_1`…`bh_6` (von bisecthosting.com), 10 eigene Screenshots (Quest-Buch, Burg, Dorf, Magie, Küche, Technik, Floß, Nether, End, Menü), die alten 1.20.1-Bilder (imgur) | 8 | **jetzt** (beschreibt V1.4: 348 Quests in 15 Kapiteln, „New in V1.4“; V1.4 ist veröffentlicht) |
-| **Quest Icons** (690531) | `Kasax_Quests_Items_Mod-1.19.2/docs/curseforge/description.html` (`26.3`) | dein Original-Stil: Logo-Bild, Überschrift „Made with love, sweat and tears“, Bisect-Banner und Abschnittsbilder (imgur), dazu `img/book.png`, `quest.png`, `icons.png` | 10 | **jetzt** (beschreibt 1.1.0 mit Dream Star, das ist veröffentlicht) |
+| **Dreamcraft** (545167) | `Modpack-Development/docs/curseforge/description.html` (`26.3`, Commit `21bf9e6`) | **Traum-Stil** passend zu den BisectHosting-Grafiken (`bh_header`, `bh_promo`, `bh_1`…`bh_6` unverändert): 22 neue Bilder `*_v14` (Kopf, Trailer-Karte, Zahlen: 251 Mods, 348 Quests, 157 neue Biome, 10 Haustiere; Story-Karte der 15 Kapitel, Quest-Buch in 4 Schritten, Dream-Star-Rezept, Neu in V1.4, Shader-Collagen), erzeugt mit `make_images_v14.py`; 327 statt 988 sichtbare Wörter | Mod-Liste, Server/Update, 1.20.1-Bilder, Mods zum Zurückholen | **jetzt**. Video-Block: Trailer (siehe unten) |
+| **Quest Icons** (690531) | `Kasax_Quests_Items_Mod-1.19.2/docs/curseforge/description.html` (`26.3`, Commit `c0087b6`) | **Farben des Quest-Buchs** (dunkles Lila, Gold, Pixelschrift): 17 neue Bilder `*_v2` (32 Icons, Quest-Buch mit Erklärungen, 11 Aufgaben und 8 Belohnungen, Loot-Kisten, Teams, Dream Star, für Pack-Ersteller), erzeugt mit `make_images_v2.py`; 359 statt 1.552 Wörter; Bisect-Banner (imgur) bleibt | 1 (Befehle, Teams, Dateien) | **jetzt**. Kein Video |
 | **Beach Craft** (1010922) | `Kasax_Raft_Mod/docs/curseforge/description.html` (`26.3`, Commit `2fa8947`) | **neu für 3.1, kurz und grafisch** (733 statt 8.256 Wörter, 25 Bilder): `img/header_31.png`, Bisect-Banner `img/bisect.png`, Video-Karte `video.jpg`, Zahlen `glance.png`, Ablaufgrafiken `flow_start.png` (Weg ins Endlose Meer) und `flow_raft.png` (eigenes Floß), Shader-Collagen `world_31`, `places_31`, `people_31`, `creatures_31`, `raft_31`, `diving_31`, `story_31` (`.jpg`), Blockpaletten, Streifen; erzeugt mit `make_images31.py` | 1 (Details und Musik-Credits) | **jetzt** (3.1.0 ist veröffentlicht). Video-Block: siehe unten |
-| **Tamagotchi** (1758309) | `tamagotchi/docs/curseforge/description.html` (`26.3`) | Badges, Header, Bisect-Banner, Streifen | 14 | beschreibt 1.2.0 (Commit `7192a3d`), seit dem 4.11. unverändert |
+| **Tamagotchi** (1758309) | `tamagotchi/docs/curseforge/description.html` (`26.3`, Commit `9a3e063`) | **Rosa mit dem grünen Pet-Bildschirm**: 19 neue Bilder `*_v2` (alle 10 Haustiere mit Zuhause, Chance, Talent, Leckerli; Bedürfnisse und Stimmungen, Spielzeug, Rucksack/Ei, 25 Möbel, Neu in 1.2), erzeugt mit `make_images_v2.py`; 370 statt 1.658 Wörter; Bisect-Banner `bisect.png` bleibt; neu: „Made with love …“ und Link zu den anderen Projekten | 1 (Anforderungen, Mehrspieler, FAQ) | **jetzt**. Video-Block: Showcase (siehe unten) |
 | **Challenge Craft** (1508454) | `docs/curseforge/mod-description.md`, `modpack-description.md` im Mod-Repo | – | – | in dieser Runde nicht geändert |
 
 **So fügst du eine Beschreibung ein:**
@@ -114,17 +116,22 @@ Screenshots, Badges, BisectHosting-Banner mit Code KASAX007, viele Spoiler).
    aufklappbare Boxen zeigt.
 
 **Übergabeseite (6.11.):** private Artifact-Seite „CurseForge Beschreibungen“
-(https://claude.ai/artifact/8ueVVjUpMDcYKjFBUNtdKL) mit allen vier Texten, je einem Kopier-Knopf und einer Vorschau
-der neuen Beach-Craft-Seite. Erzeugt mit `curseforge/delivery/build.py` (Aufruf im Kopf der Datei), geprüft mit
-`curseforge/delivery/test.js` in Chromium (Kopieren mit und ohne YouTube-Link, beide Farbschemata, Handybreite).
+(https://claude.ai/artifact/8ueVVjUpMDcYKjFBUNtdKL) mit allen vier Texten, je einem Kopier-Knopf, einer Vorschau
+jeder Seite und einem YouTube-Feld für Beach Craft, Dreamcraft und Tamagotchi (dazu Titel und Beschreibung des Videos
+zum Kopieren). Erzeugt mit `curseforge/delivery/build.py config.json <ordner>` (Konfiguration
+`curseforge/delivery/config.json`), geprüft mit `curseforge/delivery/test.js` in Chromium (Kopieren mit und ohne
+YouTube-Link für jedes Projekt, gespeicherte Links, beide Farbschemata, Handybreite).
 
-**Video in der Beach-Craft-Beschreibung:** CurseForge kann kein Video selbst hosten, die Doku muss auf YouTube liegen.
+**Videos in den Beschreibungen** (Beach Craft: Doku 21:27; Dreamcraft: Trailer 0:44, Hochformat; Tamagotchi:
+Showcase 2:03, Hochformat): CurseForge kann kein Video selbst hosten, das Video muss auf YouTube liegen.
 Der Block zwischen `<!-- VIDEO START -->` und `<!-- VIDEO END -->` enthält zweimal den Platzhalter `VIDEO_ID`: einmal im
-eingebetteten Player (`youtube.com/embed/…`) und einmal im Link um das Vorschaubild `video.jpg`. Falls CurseForge den
+eingebetteten Player (`youtube.com/embed/…`, bei Hochformat 405×720) und einmal im Link um das Vorschaubild. Falls CurseForge den
 Player entfernt, bleibt das Bild mit Link. Auf der Übergabeseite fügst du den YouTube-Link in das Feld ein; „HTML
 kopieren“ setzt die ID dann an beiden Stellen ein. Ohne Link lässt die Seite den ganzen Block weg. Das Video muss
-öffentlich oder nicht gelistet sein, sonst lässt es sich nicht einbetten. Die alten 3.0-Bilder (`world.jpg`, `places.jpg`
-…) bleiben im Repo, bis die neue Seite online ist.
+öffentlich oder nicht gelistet sein, sonst lässt es sich nicht einbetten. Die alten Bilder (Beach Craft `world.jpg`,
+`places.jpg` …, Dreamcraft `castle.png` …, Tamagotchi/Quest Icons ohne `_v2`) bleiben in den Repos, bis die neuen
+Seiten online sind. Der Dreamcraft-Trailer sagt seit Version 3 (6.11.) „over three hundred quests“ statt „one hundred
+and sixty“ (V1.4 hat 348).
 
 **Wichtig zu den Bildern:** Die eigenen Bilder werden direkt von GitHub geladen
 (`https://raw.githubusercontent.com/Kasax007/<Repo>/26.3/docs/curseforge/img/…`). Der Branch `26.3` und die Bilder

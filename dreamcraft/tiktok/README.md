@@ -2,6 +2,11 @@
 
 Schneller Short (ca. 44 s, 1080×1920, 30 fps, Englisch) für das Modpack Dreamcraft auf Minecraft 26.3.
 Version 2 (2. November): mit Shadern (Iris + Complementary Reimagined r5.9.3) und Sichtweite 12 neu gefilmt.
+Version 3 (6. November): Der Sprecher sagt „over three hundred quests“ statt „one hundred and sixty“ (Dreamcraft V1.4
+hat 348 Quests). Die Endkarte nimmt ihre vier Kacheln jetzt aus den Shader-Clips (`footage/dc`, Spieler in jeder
+Kachel), und sie bleibt 0,7 s länger stehen, damit der Trailer 44 s lang bleibt (0:44 auf der CurseForge-Seite).
+Neu bauen ohne Film-Lauf: Bilder aus `footage/dc/<shot>.mp4` nach `$SP/film/<shot>/f%05d.jpg`, Endkarte mit
+`DC_ASSETS=<Modpack-Development>/pack/overrides/config/fancymenu/assets/dreamcraft DC_STILLS=<Ordner mit castle/village/magic/mutant.png>`.
 Der Film-Harness wartet vor jedem Shot, bis alle Chunks im Umkreis geladen und gezeichnet sind, deshalb lädt im Bild
 nichts nach. Nur der End-Shot stammt aus Version 1, weil das End mit Shadern auf der Software-GPU hängen blieb.
 

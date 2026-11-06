@@ -1,9 +1,14 @@
-// Checks the delivery page: copy logic (YouTube id in and out), the other copies, both themes, phone width.
+// Checks the delivery page: for every project the copy button (with and without a YouTube id where the project has
+// a video), the YouTube texts, the saved links after a reload, both themes and the phone width.
+//   SP=<scratchpad> node test.js <config.json> <site dir>
 const { chromium } = require('playwright');
 const fs = require('fs');
 const SP = process.env.SP;
-const SITE = SP + '/descpage/site';
+const cfg = JSON.parse(fs.readFileSync(process.argv[2], 'utf8'));
+const SITE = process.argv[3];
 const ORIGIN = 'https://desc.test';
+let failed = 0;
+const check = (ok, msg) => { console.log((ok ? 'ok   ' : 'FAIL ') + msg); if (!ok) failed++; };
 
 (async () => {
   const body = fs.readFileSync(SITE + '/curseforge-beschreibungen.html', 'utf8');
@@ -25,43 +30,51 @@ const ORIGIN = 'https://desc.test';
     await page.goto(ORIGIN + '/_test.html');
     await page.waitForTimeout(800);
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
+    check(overflow === 0, `${scheme}: no sideways scrolling (${overflow})`);
     await page.screenshot({ path: SP + `/descpage/review/page_${scheme}.png`, fullPage: true });
     if (scheme === 'light') {
       const read = () => page.evaluate(() => navigator.clipboard.readText());
-      const exp = fs.readFileSync(SP + '/descriptions2/beachcraft_3.1_description.html', 'utf8');
-      await page.click('button[data-copy="bc"]');
-      let t = await read();
-      console.log('no link: VIDEO_ID', t.includes('VIDEO_ID'), 'iframe', t.includes('<iframe'), 'markers', t.includes('VIDEO START'), 'len', t.length, 'orig', exp.length);
-      await page.fill('#yt', 'https://www.youtube.com/watch?v=dQw4w9WgXcQ&t=12s');
-      console.log('state:', await page.textContent('#yt-state'));
-      await page.click('button[data-copy="bc"]');
-      t = await read();
-      console.log('with link: VIDEO_ID', t.includes('VIDEO_ID'), 'id count', t.split('dQw4w9WgXcQ').length - 1,
-        'equals replace', t === exp.split('VIDEO_ID').join('dQw4w9WgXcQ'));
-      await page.fill('#yt', 'hello');
-      console.log('bad link state:', await page.textContent('#yt-state'));
-      await page.fill('#yt', 'https://youtu.be/AbCdEfGhI_-');
-      console.log('short link state:', await page.textContent('#yt-state'));
-      for (const [k, f] of [['dc', 'dreamcraft_V1.4'], ['qi', 'questicons_1.1'], ['tama', 'tamagotchi_1.2']]) {
+      for (const p of cfg.projects) {
+        const k = p.key, exp = fs.readFileSync(p.html, 'utf8');
         await page.click(`button[data-copy="${k}"]`);
-        t = await read();
-        console.log(k, 'equal file', t === fs.readFileSync(SP + `/descriptions2/${f}_description.html`, 'utf8'));
+        let t = await read();
+        if (p.video) {
+          check(!t.includes('VIDEO_ID') && !t.includes('<iframe') && !t.includes('VIDEO START'), `${k}: without a link the video block is cut out`);
+          check(t.length < exp.length && t.length > exp.length * 0.5, `${k}: the rest of the page is there (${t.length} of ${exp.length})`);
+          const id = ('AbCdEfGhI' + k + 'xx').slice(0, 11).replace(/[^A-Za-z0-9_-]/g, 'x');
+          await page.fill(`#yt-${k}`, `https://youtu.be/${id}`);
+          await page.click(`button[data-copy="${k}"]`);
+          t = await read();
+          const n = exp.split('VIDEO_ID').length - 1;
+          check(t === exp.split('VIDEO_ID').join(id) && t.split(id).length - 1 === n, `${k}: with a link the id is in all ${n} places`);
+          const details = page.locator(`#${k} details:not(.preview) summary`);
+          await details.click();
+          await page.click(`button[data-copy="${k}_ytTitle"]`);
+          check((await read()) === p.video.yt_title, `${k}: YouTube title copies`);
+          await page.click(`button[data-copy="${k}_ytDesc"]`);
+          check((await read()).trim() === fs.readFileSync(p.video.yt_desc, 'utf8').trim(), `${k}: YouTube description copies`);
+        } else {
+          check(t === exp, `${k}: copy equals the file`);
+        }
+        const img = await page.$(`#${k} details.preview img`);
+        check(!p.preview || !!img, `${k}: preview picture present`);
       }
-      await page.click('details:not(.preview) summary');
-      await page.click('button[data-copy="ytTitle"]');
-      console.log('ytTitle', JSON.stringify(await read()));
-      await page.click('button[data-copy="ytDesc"]');
-      t = await read();
-      console.log('ytDesc len', t.length, 'chapters', t.includes('18:13 The Story'));
       await page.reload();
       await page.waitForTimeout(300);
-      console.log('restored:', await page.inputValue('#yt'));
-      await page.click('details.preview summary');
+      for (const p of cfg.projects.filter(p => p.video)) {
+        check((await page.inputValue(`#yt-${p.key}`)).startsWith('https://youtu.be/'), `${p.key}: saved link restored after reload`);
+      }
+      await page.fill('#yt-bc', 'not a link');
+      check((await page.textContent('#yt-state-bc')).includes('nicht nach einem YouTube-Link'), 'bc: a bad link is reported');
+      await page.click('#dc details.preview summary');
       await page.waitForTimeout(500);
-      await page.screenshot({ path: SP + '/descpage/review/page_preview_open.png' });
+      await page.locator('#dc').screenshot({ path: SP + '/descpage/review/page_card_dc.png' });
     }
-    console.log(scheme, 'overflow', overflow, 'errors', JSON.stringify(errs));
+    check(errs.length === 0, `${scheme}: no script errors ${JSON.stringify(errs)}`);
     await ctx.close();
   }
   await browser.close();
+  fs.unlinkSync(SITE + '/_test.html');
+  console.log(failed ? `${failed} FAILED` : 'all checks passed');
+  process.exit(failed ? 1 : 0);
 })();

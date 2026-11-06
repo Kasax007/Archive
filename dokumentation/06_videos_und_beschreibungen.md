@@ -55,9 +55,19 @@ Meer). Grundlage war eine Code-Analyse aller Bereiche, jeweils von einem zweiten
 Hinweis: Die README des Reviews erwähnt eine Teilung über 90 MB in `_part1`/`_part2`; die Dateien sind aber kleiner und
 liegen ungeteilt vor.
 
-### Noch kein Video für Beach Craft 3.0, Quest Icons 1.1.0 oder Tamagotchi 1.2.0
-Für die neuen Versionen dieser Runde wurde kein Video gemacht. Für die CurseForge-Seite von Beach Craft 3.0 gibt es
-Collagen aus Screenshots (`docs/curseforge/img/*.jpg`, `make_images3.py` im Raft-Repo).
+### Beach-Craft-Doku „Tides of the Deep“ (`beachcraft/documentary/`)
+Ruhige, lange Doku über den ganzen Mod (Englisch, eingebrannte Untertitel, Musik; nur diese eine Fassung).
+- **v1** zu Beach Craft 3.0 (4.11.): 18:35, Querformat, in 4 Teilen. Rohmaterial `footage/bc3`.
+- **v2** zu Beach Craft 3.1 (6.11., aktuell): **21:27, 1920×1080, 60 fps, mit Shadern**, in 13 Teilen unter
+  `beachcraft/documentary/v2/` (Zusammenfügen in der `README.md` dort). Rohmaterial `footage/bc3v2`. Neuer Schnitt nach
+  deiner Rückmeldung (Anglerfisch, zerbrochener Frachter, Krabben graben sich ein, Möwenschwarm, Taucherausrüstung,
+  neue Klänge für Manta, Motor und Leviathan).
+- **Handy:** private Artifact-Seite „Tides of the Deep“ (720p, 30 fps, Knopf „Als MP4 speichern“).
+- **YouTube:** `beachcraft/documentary/v2/youtube.md` mit Titel, Beschreibung mit Kapiteln, Musik-Credits, Tags und
+  Vorschaubild (`stills/endcard.png`). Für den Chat gibt es eine HEVC-Fassung in 1080p60 unter 500 MiB (die
+  H.264-Datei mit 610 MiB ist größer als das Limit für Dateien im Chat).
+
+Für Quest Icons 1.1.0 und Tamagotchi 1.2.0 gibt es kein neues Video.
 
 ## 2. Footage (`footage/<gruppe>/`)
 Rohmaterial als eine MP4 pro Shot (CRF 15–18). Zurück zu Einzelbildern: `ffmpeg -i footage/x/y.mp4 -q:v 2 f%05d.jpg`.
@@ -90,10 +100,10 @@ Screenshots, Badges, BisectHosting-Banner mit Code KASAX007, viele Spoiler).
 
 | Projekt | Datei (Repo, Branch) | Bilder und Banner | Spoiler | Wann einfügen |
 | --- | --- | --- | --- | --- |
-| **Dreamcraft** (545167) | `Modpack-Development/docs/curseforge/description.html` (`26.3`) | BisectHosting-Grafiken `bh_header`, `bh_promo`, `bh_1`…`bh_6` (von bisecthosting.com), 10 eigene Screenshots (Quest-Buch, Burg, Dorf, Magie, Küche, Technik, Floß, Nether, End, Menü), die alten 1.20.1-Bilder (imgur) | 8 | **schon auf V1.3 aktualisiert** („328 quests“, „New in V1.3“) – erst mit dem V1.3-Upload einfügen |
+| **Dreamcraft** (545167) | `Modpack-Development/docs/curseforge/description.html` (`26.3`) | BisectHosting-Grafiken `bh_header`, `bh_promo`, `bh_1`…`bh_6` (von bisecthosting.com), 10 eigene Screenshots (Quest-Buch, Burg, Dorf, Magie, Küche, Technik, Floß, Nether, End, Menü), die alten 1.20.1-Bilder (imgur) | 8 | **jetzt** (beschreibt V1.4: 348 Quests in 15 Kapiteln, „New in V1.4“; V1.4 ist veröffentlicht) |
 | **Quest Icons** (690531) | `Kasax_Quests_Items_Mod-1.19.2/docs/curseforge/description.html` (`26.3`) | dein Original-Stil: Logo-Bild, Überschrift „Made with love, sweat and tears“, Bisect-Banner und Abschnittsbilder (imgur), dazu `img/book.png`, `quest.png`, `icons.png` | 10 | **jetzt** (beschreibt 1.1.0 mit Dream Star, das ist veröffentlicht) |
-| **Beach Craft** (1010922) | `Kasax_Raft_Mod/docs/curseforge/description.html` (`26.3`), Kopie in `$SP/release_bc3/` | `img/header_3.png`, eigenes Bisect-Banner `img/bisect.png`, Streifen `strip_*.png`, Collagen `world.jpg`, `story.jpg`, `places.jpg`, `creatures.jpg`, `sailing.jpg`, `diving.jpg`, `build.jpg`, `almanac.jpg`, `boss.jpg`, Blockbilder | 23 (Boss nur im Spoiler) | **nach dem Upload von 3.0.0** (beschreibt 3.0) |
-| **Tamagotchi** (1758309) | `tamagotchi/docs/curseforge/description.html` (`26.3`) | Badges, Header, Bisect-Banner, Streifen | 14 | unverändert seit 1.1.0; für 1.2.0 nicht angepasst |
+| **Beach Craft** (1010922) | `Kasax_Raft_Mod/docs/curseforge/description.html` (`26.3`, Commit `2fa8947`) | **neu für 3.1, kurz und grafisch** (733 statt 8.256 Wörter, 25 Bilder): `img/header_31.png`, Bisect-Banner `img/bisect.png`, Video-Karte `video.jpg`, Zahlen `glance.png`, Ablaufgrafiken `flow_start.png` (Weg ins Endlose Meer) und `flow_raft.png` (eigenes Floß), Shader-Collagen `world_31`, `places_31`, `people_31`, `creatures_31`, `raft_31`, `diving_31`, `story_31` (`.jpg`), Blockpaletten, Streifen; erzeugt mit `make_images31.py` | 1 (Details und Musik-Credits) | **jetzt** (3.1.0 ist veröffentlicht). Video-Block: siehe unten |
+| **Tamagotchi** (1758309) | `tamagotchi/docs/curseforge/description.html` (`26.3`) | Badges, Header, Bisect-Banner, Streifen | 14 | beschreibt 1.2.0 (Commit `7192a3d`), seit dem 4.11. unverändert |
 | **Challenge Craft** (1508454) | `docs/curseforge/mod-description.md`, `modpack-description.md` im Mod-Repo | – | – | in dieser Runde nicht geändert |
 
 **So fügst du eine Beschreibung ein:**
@@ -103,13 +113,26 @@ Screenshots, Badges, BisectHosting-Banner mit Code KASAX007, viele Spoiler).
 4. Kurz prüfen: Bilder laden, Spoiler klappen auf. Spoiler sind `<div class="spoiler">`-Blöcke, die CurseForge als
    aufklappbare Boxen zeigt.
 
+**Übergabeseite (6.11.):** private Artifact-Seite „CurseForge Beschreibungen“
+(https://claude.ai/artifact/8ueVVjUpMDcYKjFBUNtdKL) mit allen vier Texten, je einem Kopier-Knopf und einer Vorschau
+der neuen Beach-Craft-Seite. Erzeugt mit `curseforge/delivery/build.py` (Aufruf im Kopf der Datei), geprüft mit
+`curseforge/delivery/test.js` in Chromium (Kopieren mit und ohne YouTube-Link, beide Farbschemata, Handybreite).
+
+**Video in der Beach-Craft-Beschreibung:** CurseForge kann kein Video selbst hosten, die Doku muss auf YouTube liegen.
+Der Block zwischen `<!-- VIDEO START -->` und `<!-- VIDEO END -->` enthält zweimal den Platzhalter `VIDEO_ID`: einmal im
+eingebetteten Player (`youtube.com/embed/…`) und einmal im Link um das Vorschaubild `video.jpg`. Falls CurseForge den
+Player entfernt, bleibt das Bild mit Link. Auf der Übergabeseite fügst du den YouTube-Link in das Feld ein; „HTML
+kopieren“ setzt die ID dann an beiden Stellen ein. Ohne Link lässt die Seite den ganzen Block weg. Das Video muss
+öffentlich oder nicht gelistet sein, sonst lässt es sich nicht einbetten. Die alten 3.0-Bilder (`world.jpg`, `places.jpg`
+…) bleiben im Repo, bis die neue Seite online ist.
+
 **Wichtig zu den Bildern:** Die eigenen Bilder werden direkt von GitHub geladen
 (`https://raw.githubusercontent.com/Kasax007/<Repo>/26.3/docs/curseforge/img/…`). Der Branch `26.3` und die Bilder
 müssen deshalb bestehen bleiben – Branch nicht umbenennen oder Bilder löschen, sonst sind sie auf der Seite weg.
 
 **Changelogs für die Datei-Uploads:** `docs/curseforge/changelog-<version>.md` im jeweiligen Repo
-(Dreamcraft `changelog-26.3-V1.3.md`, Quest Icons `changelog-1.1.0+26.3.md`, Beach Craft `changelog-3.0.0+26.3.md`,
+(Dreamcraft `changelog-26.3-V1.4.md`, Quest Icons `changelog-1.1.0+26.3.md`, Beach Craft `changelog-3.1.0+26.3.md`,
 Tamagotchi: Abschnitt `## 1.2.0` in `CHANGELOG.md`, Challenge Craft `changelog-1.1.4.md`).
 
 **Auch prüfen:** Die Kurzbeschreibung (Summary) des Dreamcraft-Projekts lautete beim Abruf am 2.11.
-„… Featuring 800+ quests …“ (aus der Forge-Zeit). Die 26.3-Version hat 328 Quests (V1.3) bzw. 164 (V1.2.1).
+„… Featuring 800+ quests …“ (aus der Forge-Zeit). Die 26.3-Version hat 348 Quests (V1.4).

@@ -168,9 +168,19 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   Netze, Heavy Core, Port Solace `max_distance_from_center` 104). Kontrolle: 0 Fremdblöcke, 36/36 Personen in
   Ordnung. Gemergt: 26.3 = 88ce4aa (gepusht). Release-Jar neu gebaut ($SP/release_bc31/, 6.11. 02:12), Server-Smoke-Test
   ok (0 Fehler, 256 Chunks Endless Sea). Bericht mit Bildern: Archiv `beachcraft/structure-check/`. 3.1.0 hochgeladen am 6.11.
-  (Datei 9474711, mit Kai in allen drei Lagerarten), Dreamcraft V1.4 danach (9475197, Server-Pack 9475219).
+  (Datei 9474711, mit Kai in allen drei Lagerarten), Dreamcraft V1.4 danach (9475197, Server-Pack 9475219). Alle drei
+  Dateien am 6.11. nachmittags freigegeben (Download-Link antwortet mit 307).
+- **Beschreibungen 6.11. (nachmittags):** Wunsch: die Doku in die Beach-Craft-Beschreibung, Text deutlich kürzer, mehr
+  Grafiken. Neue Seite für 3.1 (26.3 = 2fa8947): 733 statt 8.256 Wörter, 25 Bilder aus `make_images31.py` (header_31,
+  video.jpg, glance.png mit Zahlen aus dem Code, flow_start/flow_raft, Shader-Collagen `*_31.jpg`). Der Video-Block steht
+  zwischen `<!-- VIDEO START -->` und `<!-- VIDEO END -->` mit dem Platzhalter `VIDEO_ID` (Player und Bild mit Link).
+  Übergabeseite https://claude.ai/artifact/8ueVVjUpMDcYKjFBUNtdKL (`curseforge/delivery/build.py`): Kopier-Knöpfe für
+  alle vier Beschreibungen; das Feld für den YouTube-Link setzt die ID ein, ohne Link fällt der Block weg; dazu Titel und
+  Beschreibung für YouTube. Upload-Kit `beachcraft/documentary/v2/youtube.md`. Dateien im Chat höchstens 500 MiB: die
+  1080p60-Doku (610 MiB) deshalb als HEVC neu kodiert (2 Pässe, 2850 kbit/s). Die alten 3.0-Bilder in `img/` erst
+  löschen, wenn die neue Seite online ist. Offen beim Nutzer: Doku auf YouTube laden, Beschreibungen einfügen.
 - **Film-Feedback 6.11. (vormittags):** Nutzer vermisste Anglerfisch, Containerschiff und das Crafting am Anfang
-  (Ring/Energie aus Schiffswracks). Er wollte neue Sounds für Mantarochen, Motor und Boss, sichtbares Eingraben der
+  (Ring/Energie aus Schiffswracks). Gewünscht waren neue Sounds für Mantarochen, Motor und Boss, sichtbares Eingraben der
   Krabbe, natürlichere Möwenschwärme und Aale sowie einen besseren Tauch-Clip. Mod (26.3 = 6097aca, gepusht):
   - Motor: Dauerschleife `block.raft_motor.run`, die mit der Geschwindigkeit lauter und höher wird, dazu
     `block.raft_motor.start`.

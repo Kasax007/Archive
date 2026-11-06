@@ -184,6 +184,15 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   r_motor, w_beach (Treibholz-Stumpf). Zweite Sitzung filmte Ring, Schmelzen, Crafting, Anglerfisch, Containerschiff
   und Tauchen. Film-Agent: doc.py-Fix (Vanilla-Dateien von raft-Events waren stumm), Motorschleife statt Basedrum,
   Flop-Ausdünnung. Release-Jar neu (6097aca), Server-Smoke ok.
+- **Film-Werkzeug 6.11. abends (wichtig für jede künftige Aufnahme):**
+  - `bctest rec` lief bis 26.3 c8da36f dreimal zu schnell. Ein Screenshot ließ das Spiel 2 Ticks laufen, während das
+    Bild von der GPU kam. Seitdem hält `holdWorld` (TickRateManager + LocalPlayer) die Welt dabei an: ein Clip-Sekunde
+    ist eine Spiel-Sekunde, und shot.json bekommt `"realtime": true`. doc.py liest den Faktor pro Clip (alt = 3).
+  - Ein `cmd kill @e[...,distance=..]` des Servers läuft im Overworld-Spawn und erreichte die Floß-Dimension nie.
+    Herbeigerufene Tiere häuften sich deshalb in bcdoc2 an. Immer `pcmd kill` (um den Spieler) nutzen;
+    film2._kill tut das jetzt.
+  - In Echtzeit neu gedreht: c_manta(2), c_moray, c_angler, c_crab_dig, c_gull_peck, c_gulls3/4.
+  - Alle älteren Clips der Doku laufen noch dreifach schnell. Echtzeit-Neudreh nur auf Wunsch (großer Aufwand).
 
 ## Was der Nutzer will (hier gelernt)
 

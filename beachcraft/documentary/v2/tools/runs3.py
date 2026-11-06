@@ -304,6 +304,29 @@ def run_rt_isle():
     return s
 
 
+def run_rt_crab():
+    """The crab digging in, real time, third try: the wheat field of the gull scenes is turned back into sand, and the
+    leftover gulls and crabs are killed around the player (pcmd: the earlier kills never reached the raft dimension)."""
+    s = S2(deadline=60)
+    s.fx()
+    s.add('height -259 -281')
+    s.go(-259, v('hy', 2.0), -284, -259, v('hy', 0.3), -278, settle=420)
+    s.add('pcmd kill @e[type=raft:crab,distance=..80]', 'pcmd kill @e[type=raft:seagull,distance=..160]')
+    s.r('fill -262 {hy-1:i} -289 -257 {hy-1:i} -276 minecraft:sand', 'fill -262 {hy:i} -289 -257 {hy+3:i} -276 minecraft:air')
+    s.actor('survival')
+    s.cmd('effect give @p minecraft:resistance infinite 4 true')
+    s.r('tp @p -259.5 {hy} -286.5 0 10')
+    s.r('summon raft:crab -259.5 {hy} -278.5 {Variant:"blue",PersistenceRequired:1b}')
+    s.add('wait 30', 'pcmd kill @e[type=raft:seagull,distance=..160]', 'freecam -256.6 {hy+0.95} -276.6 125 15',
+          'wait 8 render', 'still c_crab_dig_check 1.0', 'freecam off')
+    s.clip('c_crab_dig', 4, cam=f"-256.6,{v('hy', 0.95)},-276.6,125,15", look=f"-259.8,{v('hy', 0.3)},-279.5",
+           at=[(0, 'pcmd kill @e[type=raft:seagull,distance=..160]'),
+               (3, 'press sprint'), (4, 'press forward'), (40, 'release forward'), (41, 'release sprint')])
+    s.add('pcmd kill @e[type=raft:crab,distance=..80]')
+    s.spec()
+    return s
+
+
 if __name__ == '__main__':
     prefix = sys.argv[1]
     for k, run in enumerate((run_reef, run_isle)):

@@ -153,7 +153,9 @@ def _summon(self, typ, n, spread=4.0, dy=0.0, nbt='', ahead=6.0):
 
 
 def _kill(self, typ, r=80):
-    self.cmd(f'kill @e[type={typ},distance=..{r}]')
+    # around the player: a server "kill ...distance" is measured from the world spawn in the overworld and never reached
+    # the creatures summoned in the raft dimension (they piled up in bcdoc2 until 6.11.)
+    self.L.append(f'pcmd kill @e[type={typ},distance=..{r}]')
     return self
 
 

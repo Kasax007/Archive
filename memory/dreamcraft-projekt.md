@@ -179,6 +179,11 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   Beschreibung für YouTube. Upload-Kit `beachcraft/documentary/v2/youtube.md`. Dateien im Chat: Limit erst 500, dann 400 MiB;
   die 1080p60-Doku (610 MiB) deshalb als HEVC neu kodiert (2 Pässe, 2250 kbit/s, 374 MiB, geliefert). Die alten 3.0-Bilder in `img/` erst
   löschen, wenn die neue Seite online ist. Offen beim Nutzer: Doku auf YouTube laden, Beschreibungen einfügen.
+- **V1.4.1 Menü-Fix (6.11. nachts):** Der Nutzer sah im Trailer, dass Singleplayer, Multiplayer, Options und Quit Game
+  hinter dem lila Balken lagen (Vanilla-Knöpfe unter dem eigenen Bild-Element). Fix: `render_custom_elements_behind_vanilla
+  = true` in allen 8 Titel-Layouts (Modpack-Development 20856ba), im Produktiv-Client geprüft. **mkpack.py baut aus
+  `$SP/pack/overrides`, nicht aus dem Repo** – Änderungen dorthin kopieren. Upload V1.4.1 per `$SP/upload141.sh`, geplant
+  für 7.11. 7:30 Uhr deutscher Zeit (send_later trig_01HKHhXEiyAG9k6DufCX7mNE). Trailer-Menü-Shot und Seitenbild erneuert.
 - **Alle vier Seiten grafisch (6.11. abends):** Wunsch: Dreamcraft, Tamagotchi und Quest Icons „genauso super gestalten
   wie bei Beach Craft“. Zwei Agenten bauten sie, jede Seite mit eigener Optik und eigenem Bild-Generator, jede Zahl aus
   dem Code: Dreamcraft 21bf9e6 (`make_images_v14.py`, Traum-Stil der BisectHosting-Banner, 251 Mods, 348 Quests, 157

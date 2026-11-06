@@ -253,11 +253,11 @@ DOC = [
     dict(id='I11', ch=None,
          text="For the deep there is *diving gear*. The diving helmet lets you see far under water, and with an "
               "oxygen tank you breathe from the tank. A gauge shows how much air is left.",
-         shots=[('f_gear', None), ('f_dive', 'The diving helmet'), ('f_gauge', 'A gauge')], pause=0.8),
+         shots=[('f_gear', None), ('f_dive', 'The diving helmet'), ('f_gauge', 'with an oxygen')], pause=0.8),
     dict(id='I13', ch=None,
          text="The *wetsuit* lets you mine faster under water and keeps jellyfish away, flippers make you swim much "
               "faster, and the full set gives you dolphin's grace.",
-         shots=[('f_dive', None), ('f_gear', 'and the full set')], pause=0.8),   # f_gear shows Dolphin's Grace
+         shots=[('c_jelly', None), ('f_dive', 'flippers make'), ('f_gear', 'and the full set')], pause=0.8),  # f_gear: Dolphin's Grace
     dict(id='I12', ch=None,
          text="Crafted with an angler lure, the helmet gets a *lamp*, and the dark trench becomes visible.",
          shots=[('f_lamp', None)], pause=0.8),

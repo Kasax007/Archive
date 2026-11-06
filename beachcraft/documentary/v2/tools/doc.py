@@ -57,7 +57,8 @@ GUI = {}                          # name -> (zoom, focus) for menu screenshots (
 CAPS_TOP = set()                  # shots with something to read where the subtitles are (the HUD air gauge)
 DEFAULT_STILL = [((1.0, 1.07), ((0.5, 0.5), (0.5, 0.48))), ((1.07, 1.0), ((0.5, 0.52), (0.5, 0.5))),
                  ((1.0, 1.06), ((0.42, 0.5), (0.58, 0.5))), ((1.02, 1.08), ((0.58, 0.5), (0.45, 0.5)))]
-MIN_SPEED = 0.6
+MIN_SPEED = 0.6                   # older clips run at 3x game speed: 0.6x is still 1.8x the game
+MIN_SPEED_RT = 0.8                # clips filmed in real time: hardly any slow motion
 
 
 def opts_file():
@@ -101,9 +102,20 @@ def find_source(name):
     return None
 
 
-def clip_fps(src):
+@functools.lru_cache(maxsize=None)
+def clip_meta(src):
     j = src + '/shot.json' if os.path.isdir(src) else src[:-4] + '.shot.json'
-    return float(json.load(open(j))['fps']) if os.path.exists(j) else 30.0
+    return json.load(open(j)) if os.path.exists(j) else {}
+
+
+def clip_fps(src):
+    return float(clip_meta(src).get('fps', 30.0))
+
+
+def game_per_clip(src):
+    """game seconds per clip second: 1 for clips filmed in real time (shot.json "realtime": true, harness of 26.3
+    c8da36f), GAME_PER_CLIP (3) for all older clips"""
+    return 1.0 if clip_meta(src).get('realtime') else GAME_PER_CLIP
 
 
 @functools.lru_cache(maxsize=None)
@@ -440,7 +452,8 @@ class Shot:
             if 'speed' in self.opts:
                 self.speed = float(self.opts['speed'])
             else:
-                self.speed = 1.0 if avail >= L else max(MIN_SPEED, avail / L)
+                ms = MIN_SPEED_RT if clip_meta(self.src[1]).get('realtime') else MIN_SPEED
+                self.speed = 1.0 if avail >= L else max(ms, avail / L)
             if avail > L * self.speed and 'start' not in self.opts and self.name != 'endcard':
                 start = min(S - L * self.speed, float(self.opts.get('center', 0.0)) * (S - L * self.speed))
             self.start = start
@@ -669,14 +682,14 @@ SKIP_SOURCES = {'music', 'ambient', 'weather', 'record'}
 # 30 frames (one second of clip) show 3 s of game time (74 clips: last logged sound at 2.96 x the clip length, bites
 # and harpoon shots on the frames where they happen). Before 6.11. the logs were read as clip time: every sound came
 # 3x too late and most fell after the end of their shot.
-GAME_PER_CLIP = float(os.environ.get('DOC_GAME_PER_CLIP', '3.0'))
+GAME_PER_CLIP = float(os.environ.get('DOC_GAME_PER_CLIP', '3.0'))       # older clips; real-time clips: 1 (game_per_clip)
 _index, _scache = None, {}
 
 # Per clip, after the feedback of 6.11. (clip = file name of the clip): THIN keeps an event only this many seconds of
 # clip time after the last one kept that can be heard (one tideling clip logs 67 flops in a few seconds); SOUND_GAIN
 # changes an event in clips whose name starts with the prefix by so many dB, None leaves it out of the mix.
 THIN = {'raft:entity.tideling.flop': 0.7, 'raft:entity.tideling.bite': 0.3,
-        # clips run 3x faster than the game, so a flock or a swimmer logs three times as many sounds per second
+        # (clip seconds) older clips run 3x faster than the game: a flock logs three times as many sounds per second
         'raft:entity.seagull.flap': 0.12, 'raft:entity.seagull.peck': 0.1, 'raft:entity.seagull.ambient': 0.25,
         'minecraft:entity.parrot.step': 0.15, 'minecraft:entity.player.swim': 0.2, 'minecraft:entity.dolphin.swim': 0.2}
 SOUND_GAIN = [('s_lev', 'minecraft:entity.hostile.swim', -8.0),        # the Leviathan's generic swim splashes
@@ -742,12 +755,13 @@ def clip_sounds(src):
         return []
     clip = os.path.basename(src.rstrip('/'))
     clip = clip if os.path.isdir(src) else clip[:-4]
+    k = game_per_clip(src)
     out, last = [], {}
     for e in (json.loads(l) for l in open(f) if l.strip()):
         if e['source'] in SKIP_SOURCES:
             continue
         e['tg'] = e['t']                                   # game time of the log
-        e['t'] = e['t'] / GAME_PER_CLIP                    # clip time
+        e['t'] = e['t'] / k                                # clip time
         ev = e.get('event')
         db, drop = 0.0, False
         for pre, name, d in SOUND_GAIN:
@@ -775,7 +789,7 @@ def is_motor(e):
     return e['event'] == MOTOR_RUN or (e['event'] == MOTOR_TICK and e['source'] == 'neutral')
 
 
-def motor_spans(events):
+def motor_spans(events, k=GAME_PER_CLIP):
     """The raft motor of a clip as loop spans in clip time: dict(a, b, pts=[(t, distance factor)], fast, start).
     New clips: from the first 'run' event on; a span ends only when no 'run' comes for MOTOR['gap'] s (the client
     renews the loop about every 5 s), b is then the last + gap. Without a 'start' just before it the motor was already
@@ -783,7 +797,6 @@ def motor_spans(events):
     sound if the ticks begin later than one tick into the recording (the motor started in the shot). The MOTOR times
     are game seconds (as the log counts them)."""
     att = EVENT_ATT.get(MOTOR_RUN, 32.0)
-    k = GAME_PER_CLIP
     starts = [e['tg'] for e in events if e['event'] == MOTOR_START]
     spans = []
     for kind in ('run', 'tick'):
@@ -885,7 +898,7 @@ def game_track(shots, total):
         v0 = s.t0 - D / 2                                       # output time of local time 0
         vis0, vis1 = max(0.0, s.t0 - D / 2), s.t1 + D / 2
         events = clip_sounds(s.src[1])
-        for sp in motor_spans(events):
+        for sp in motor_spans(events, game_per_clip(s.src[1])):
             motor_loop(mix, s, sp, v0, vis0, vis1, log)
         for e in events:
             if is_motor(e) or ('end' in s.opts and e['t'] > s.clip_len):    # 'end': nothing after the part shown

@@ -80,7 +80,9 @@ Ton (Stand 6.11., nach der Rückmeldung zum Schnitt):
   Harpunenschüsse liegen genau auf den Bildern, auf denen sie passieren). `doc.py` teilt die Protokollzeit deshalb durch
   `GAME_PER_CLIP = 3` (vorher kam jeder Ton dreimal zu spät, die meisten fielen hinter das Ende ihres Shots). Weil drei
   Spielsekunden in eine Clip-Sekunde fallen, dünnt `THIN` dichte Wiederholungen aus (Möwenflügel, Schritte, Schwimmen);
-  die Spielgeräusche sind dafür leiser gemischt (`game_gain` 1,9 statt 2,6).
+  die Spielgeräusche sind dafür leiser gemischt (`game_gain` 1,9 statt 2,6). Seit dem Harness von 26.3 c8da36f
+  filmt `rec` in Echtzeit (`"realtime": true` in der `shot.json`): Für diese Clips rechnet `doc.py` mit dem Faktor 1
+  und verlangsamt höchstens auf 0,8 (`MIN_SPEED_RT`), ältere Clips weiter mit 3 und bis 0,6.
 - Optionen je Shot in `shots.json`: `end` (Clip nur bis hier, auch der Ton), `hold` ([[a, b]]: statt der Bilder von a bis b
   das Bild bei a, z. B. ein Kamerastoß beim Treffer). Wo `minterpolate` schlimme Geisterbilder macht (Moräne), liegt die
   60-fps-Fassung in `$SP/doc4/minterp_off/` und der Schnitt nimmt die 30-fps-Aufnahme aus `footage/bc3v2`.

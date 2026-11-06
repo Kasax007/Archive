@@ -556,31 +556,6 @@
    "start": 0.0,
    "speed": 0.62
   },
-  "c_angler": {
-   "start": 0.0,
-   "speed": 0.3,
-   "end": 2.6
-  },
-  "c_moray": {
-   "start": 0.6,
-   "hold": [
-    [
-     1.12,
-     1.26
-    ]
-   ]
-  },
-  "c_crab_dig": {
-   "end": 3.2
-  },
-  "c_gull_peck": {
-   "hold": [
-    [
-     1.99,
-     2.16
-    ]
-   ]
-  },
   "w_beach": {
    "speed": 0.53
   },

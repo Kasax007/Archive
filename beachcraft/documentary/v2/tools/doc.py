@@ -47,7 +47,7 @@ DB = 1.0                          # fade through black at a chapter start (s)
 
 CFG = dict(file='beachcraft3_documentary_v2', lead_in=1.2, gap=0.55, gap_ch=1.4, tail=3.0, slow=1.0,
            cap_size=50, cap_y=978, maxc=62, maxw=12, crf=24, preset='medium',
-           fade_in=2.5, fade_out=4.0, title_len=4.0, game_gain=1.9, duck=0.45, music_under=0.075, music_gaps=0.2)
+           fade_in=2.5, fade_out=4.0, title_len=4.0, game_gain=1.9, duck=0.5, music_under=0.075, music_gaps=0.2)
 
 # per shot: still -> zoom (from, to), focus ((x0, y0), (x1, y1)) as 0..1 of the frame; gui -> fixed zoom on a menu
 # clip -> speed (playback speed, 1 = real time), start (s into the clip), zoom, end (use the clip only up to here),
@@ -686,6 +686,9 @@ SOUND_GAIN = [('s_lev', 'minecraft:entity.hostile.swim', -8.0),        # the Lev
 # The raft motor: now a loop ('run', 2 s; in a film log the client renews it about every 5 s, each at volume 0.001)
 # and a 'start' when it starts; before 6.11. a bass drum every 4-6 ticks (old clips). Both become the loop, once per
 # shot: gain x distance factor, pitch by the raft's speed (not by the playback speed), faded at both ends.
+# under the voice the game sounds go down by CFG['duck'], in these shots by more: with the Leviathan's sounds in
+# sync (6.11.) Whisper missed a dozen words of the fight
+DUCK_MORE = (('s_lev', 's_wake'), 0.75)
 MOTOR_RUN, MOTOR_START = 'raft:block.raft_motor.run', 'raft:block.raft_motor.start'
 MOTOR_TICK = 'minecraft:block.note_block.basedrum'
 MOTOR = dict(gain=0.7, pitch=1.05, fast_pitch=1.15, fast_bps=8.0, gap=6.0, renew=5.5, tick_gap=1.5, tail=0.5,
@@ -1059,7 +1062,11 @@ def build(name='doc', plan_only=False, audio_only=False, do_verify=True, limit=N
     g = np.tanh(g * cfg['game_gain'] / 0.8) * 0.8
     g = np.pad(g, (0, max(0, n - len(g))))[:n]
     env = movavg((np.abs(v) > 0.02).astype(np.float32), int(0.3 * SR))
-    g = g * (1.0 - cfg['duck'] * np.clip(env * 3, 0, 1))
+    duck = np.full(n, cfg['duck'], np.float32)
+    for s in shots:                                       # the boss fight: its sounds keep out of the narration
+        if s.name.startswith(DUCK_MORE[0]):
+            duck[max(0, int((s.t0 - D / 2) * SR)):int((s.t1 + D / 2) * SR)] = DUCK_MORE[1]
+    g = g * (1.0 - duck * np.clip(env * 3, 0, 1))
     json.dump(glog, open(f'{OUT}/game_sounds.json', 'w'), indent=1)
     print(f'  game sounds: {len(glog)} placed')
     write_wav(f'{OUT}/voice.wav', v)

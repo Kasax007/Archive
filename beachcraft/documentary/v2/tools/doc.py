@@ -53,6 +53,7 @@ CFG = dict(file='beachcraft3_documentary_v2', lead_in=1.2, gap=0.55, gap_ch=1.4,
 # clip -> speed (playback speed, 1 = real time), start (s into the clip), zoom
 SHOT_OPTS = {}
 GUI = {}                          # name -> (zoom, focus) for menu screenshots (GUI scale 3 is small in portrait)
+CAPS_TOP = set()                  # shots with something to read where the subtitles are (the HUD air gauge)
 DEFAULT_STILL = [((1.0, 1.07), ((0.5, 0.5), (0.5, 0.48))), ((1.07, 1.0), ((0.5, 0.52), (0.5, 0.5))),
                  ((1.0, 1.06), ((0.42, 0.5), (0.58, 0.5))), ((1.02, 1.08), ((0.58, 0.5), (0.45, 0.5)))]
 MIN_SPEED = 0.6
@@ -64,6 +65,7 @@ def opts_file():
         d = json.load(open(p))
         SHOT_OPTS.update(d.get('opts', {}))
         GUI.update({k: tuple(v) for k, v in d.get('gui', {}).items()})
+        CAPS_TOP.update(d.get('caps_top', []))
 
 
 opts_file()
@@ -619,65 +621,230 @@ def render_parallel(shots, caps, prefix, total, workers=4):
 MC_INDEX = '/root/.gradle/caches/fabric-loom/assets/indexes/26.3-34.json'
 MC_OBJECTS = '/root/.gradle/caches/fabric-loom/assets/objects'
 import glob as _glob
-MOD_ASSET_DIRS = ['/home/user/Kasax_Raft_Mod/src/main/resources/assets'] + \
-    sorted(_glob.glob('/home/user/Kasax_Raft_Mod/src/main/modules/*/assets'))
+MOD = os.environ.get('DOC_MOD') or '/home/user/Kasax_Raft_Mod'     # DOC_MOD: a worktree with sounds not merged yet
+MOD_ASSET_DIRS = [MOD + '/src/main/resources/assets'] + sorted(_glob.glob(MOD + '/src/main/modules/*/assets'))
 
 
-def _event_files():
+def _sound_defs():
     """raft sound events -> files as defined by the mod now (3.1 gave many creatures new sounds): older clips logged
-    the files of 3.0, so the mix plays what the game plays today"""
-    ev = {}
+    the files of 3.0, so the mix plays what the game plays today. A name keeps its namespace: many raft events play
+    vanilla files ('minecraft:entity/fish/flop1' is minecraft:sounds/entity/fish/flop1.ogg); until 6.11. they were all
+    looked up under raft: and stayed silent (gull flaps and pecks, tideling flops, penguins, otters, ...).
+    Also -> the attenuation distance of each event (sounds.json, default 16)."""
+    files, att = {}, {}
     for base in MOD_ASSET_DIRS:
         f = f'{base}/raft/sounds.json'
         if os.path.exists(f):
             for k, d in json.load(open(f)).items():
-                names = [s if isinstance(s, str) else s.get('name') for s in d.get('sounds', [])]
-                names = [n for n in names if n and not (isinstance(n, dict))]
-                if names:
-                    ev['raft:' + k] = ['raft:sounds/' + n.split(':', 1)[-1] + '.ogg' for n in names]
-    return ev
+                fl, at = [], None
+                for s in d.get('sounds', []):
+                    if isinstance(s, dict) and s.get('type') == 'event':
+                        continue                                  # a reference to another event, not a file
+                    n = s if isinstance(s, str) else s.get('name')
+                    if not n:
+                        continue
+                    ns, p = n.split(':', 1) if ':' in n else ('minecraft', n)
+                    fl.append(f'{ns}:sounds/{p}.ogg')
+                    if at is None and isinstance(s, dict):
+                        at = s.get('attenuation_distance')
+                if fl:
+                    files['raft:' + k] = fl
+                    att['raft:' + k] = float(at or 16)
+    return files, att
 
 
-EVENT_FILES = _event_files()
+EVENT_FILES, EVENT_ATT = _sound_defs()
 SKIP_SOURCES = {'music', 'ambient', 'weather', 'record'}
 _index, _scache = None, {}
 
+# Per clip, after the feedback of 6.11. (clip = file name of the clip): THIN keeps an event only this many seconds of
+# clip time after the last one kept that can be heard (one tideling clip logs 67 flops in a few seconds); SOUND_GAIN
+# changes an event in clips whose name starts with the prefix by so many dB, None leaves it out of the mix.
+THIN = {'raft:entity.tideling.flop': 0.7}
+SOUND_GAIN = [('s_lev', 'minecraft:entity.hostile.swim', -8.0),        # the Leviathan's generic swim splashes
+              ('c_manta', 'minecraft:entity.guardian.hurt', None),      # old take: two mantas stuck in the reef
+              ('c_manta', 'minecraft:entity.guardian.death', None)]
+# The raft motor: now a loop ('run', 2 s; in a film log the client renews it about every 5 s, each at volume 0.001)
+# and a 'start' when it starts; before 6.11. a bass drum every 4-6 ticks (old clips). Both become the loop, once per
+# shot: gain x distance factor, pitch by the raft's speed (not by the playback speed), faded at both ends.
+MOTOR_RUN, MOTOR_START = 'raft:block.raft_motor.run', 'raft:block.raft_motor.start'
+MOTOR_TICK = 'minecraft:block.note_block.basedrum'
+MOTOR = dict(gain=0.7, pitch=1.05, fast_pitch=1.15, fast_bps=8.0, gap=6.0, renew=5.5, tick_gap=1.5, tail=0.5,
+             fade=0.25, start_gain=0.8, started_after=0.35)
 
-def sound_file(file_id):
+
+def sound_path(file_id):
     global _index
-    if file_id in _scache:
-        return _scache[file_id]
     ns, path = file_id.split(':', 1)
-    src = None
     if ns == 'minecraft':
         if _index is None:
             _index = json.load(open(MC_INDEX))['objects']
         ent = _index.get('minecraft/' + path)
-        if ent:
-            src = f'{MC_OBJECTS}/{ent["hash"][:2]}/{ent["hash"]}'
-    else:
-        for base in MOD_ASSET_DIRS:
-            if os.path.exists(f'{base}/{ns}/{path}'):
-                src = f'{base}/{ns}/{path}'
-                break
-    a = _load(src) if src else None
-    _scache[file_id] = a
-    return a
+        return f'{MC_OBJECTS}/{ent["hash"][:2]}/{ent["hash"]}' if ent else None
+    for base in MOD_ASSET_DIRS:
+        if os.path.exists(f'{base}/{ns}/{path}'):
+            return f'{base}/{ns}/{path}'
+    return None
+
+
+def sound_file(file_id):
+    if file_id not in _scache:
+        src = sound_path(file_id)
+        _scache[file_id] = _load(src) if src else None
+    return _scache[file_id]
+
+
+@functools.lru_cache(maxsize=4)
+def loop_file(file_id, seconds=40):
+    """A seamless loop decoded as one long stream (resampled across the joins: no click every 2 s)."""
+    src = sound_path(file_id)
+    if not src:
+        return None
+    raw = subprocess.run(['ffmpeg', '-v', 'error', '-stream_loop', '-1', '-i', src, '-t', str(seconds), '-f', 'f32le',
+                          '-ac', '1', '-ar', str(SR), '-'], check=True, capture_output=True).stdout
+    return np.frombuffer(raw, dtype=np.float32).copy()
+
+
+def event_gain(e):
+    """volume x linear attenuation from the camera, as the game hears it"""
+    g = min(1.0, max(0.0, e['volume'])) * e.get('gain', 1.0)
+    if e['attenuation'] == 'LINEAR' and not e['relative']:
+        dd = math.dist((e['x'], e['y'], e['z']), (e['cam_x'], e['cam_y'], e['cam_z']))
+        g *= max(0.0, 1.0 - dd / max(1.0, e['distance']))
+    return g
 
 
 def clip_sounds(src):
     f = src + '/sounds.jsonl' if os.path.isdir(src) else src[:-4] + '.sounds.jsonl'
     if not os.path.exists(f):
         return []
-    out = []
+    clip = os.path.basename(src.rstrip('/'))
+    clip = clip if os.path.isdir(src) else clip[:-4]
+    out, last = [], {}
     for e in (json.loads(l) for l in open(f) if l.strip()):
         if e['source'] in SKIP_SOURCES:
             continue
-        files = EVENT_FILES.get(e.get('event'))
+        ev = e.get('event')
+        db, drop = 0.0, False
+        for pre, name, d in SOUND_GAIN:
+            if ev == name and clip.startswith(pre):
+                if d is None:
+                    drop = True
+                else:
+                    db += d
+        if drop:
+            continue
+        if db:
+            e['gain'] = 10 ** (db / 20)
+        if ev in THIN and event_gain(e) >= 0.01:
+            if ev in last and e['t'] - last[ev] < THIN[ev]:
+                continue
+            last[ev] = e['t']
+        files = EVENT_FILES.get(ev)
         if files and e.get('file') not in files:
             e['file'] = files[int(e['t'] * 1000) % len(files)]
         out.append(e)
     return out
+
+
+def is_motor(e):
+    return e['event'] == MOTOR_RUN or (e['event'] == MOTOR_TICK and e['source'] == 'neutral')
+
+
+def motor_spans(events):
+    """The raft motor of a clip as loop spans in clip time: dict(a, b, pts=[(t, distance factor)], fast, start).
+    New clips: from the first 'run' event on; a span ends only when no 'run' comes for MOTOR['gap'] s (the client
+    renews the loop about every 5 s), b is then the last + gap. Without a 'start' just before it the motor was already
+    running: the span starts with the clip. Old clips: the bass drum ticks, from the first to the last + tail; a start
+    sound if the ticks begin later than one tick into the recording (the motor started in the shot)."""
+    att = EVENT_ATT.get(MOTOR_RUN, 32.0)
+    starts = [e['t'] for e in events if e['event'] == MOTOR_START]
+    spans = []
+    for kind in ('run', 'tick'):
+        ev = [e for e in events if is_motor(e) and (e['event'] == MOTOR_RUN) == (kind == 'run')]
+        gap = MOTOR['gap'] if kind == 'run' else MOTOR['tick_gap']
+        groups = []
+        for e in ev:
+            if groups and e['t'] - groups[-1][-1]['t'] <= gap:
+                groups[-1].append(e)
+            else:
+                groups.append([e])
+        for g in groups:
+            pts = [(e['t'], max(0.0, 1.0 - math.dist((e['x'], e['y'], e['z']), (e['cam_x'], e['cam_y'], e['cam_z'])) / att))
+                   for e in g]
+            way = sum(math.dist((p['x'], p['z']), (q['x'], q['z'])) for p, q in zip(g, g[1:]))
+            fast = len(g) > 1 and way / max(1e-3, g[-1]['t'] - g[0]['t']) > MOTOR['fast_bps']
+            a = g[0]['t']
+            if kind == 'run':
+                if a <= MOTOR['renew'] and not any(abs(t - a) <= 0.5 for t in starts):
+                    a = 0.0
+                spans.append(dict(a=a, b=g[-1]['t'] + MOTOR['gap'], pts=pts, fast=fast, start=None))
+            else:
+                st = g[0] if g[0]['t'] > MOTOR['started_after'] else None
+                spans.append(dict(a=a, b=g[-1]['t'] + MOTOR['tail'], pts=pts, fast=fast, start=st))
+    return spans
+
+
+def place(mix, a, tout, vis0, vis1):
+    """add sound a at output time tout, only inside the visible part [vis0, vis1] of the shot (faded out at its end)"""
+    n = len(mix)
+    if tout < vis0:
+        skip = int((vis0 - tout) * SR)
+        if skip >= len(a):
+            return False
+        a = a[skip:]
+        tout = vis0
+    i0 = int(tout * SR)
+    i1 = min(i0 + len(a), int(vis1 * SR), n)
+    if i1 <= i0:
+        return False
+    seg = a[:i1 - i0].copy()
+    if i0 + len(a) > int(vis1 * SR):
+        fl = min(len(seg), int(0.25 * SR))
+        seg[-fl:] *= np.linspace(1, 0, fl)
+    mix[i0:i1] += seg
+    return True
+
+
+def motor_loop(mix, s, sp, v0, vis0, vis1, log):
+    """lay the motor loop of span sp over shot s (clip time -> output time as for the other sounds)"""
+    files = EVENT_FILES.get(MOTOR_RUN)
+    base = loop_file(files[0]) if files else None
+    if base is None:
+        print(f'  WARNING: no motor loop ({MOTOR_RUN} not in the mod\'s sounds, DOC_MOD?): {s.name} without motor')
+        return
+    c0 = s.start + (vis0 - v0) * s.speed                       # visible part in clip time
+    c1 = s.start + (vis1 - v0) * s.speed
+    a, b = max(sp['a'], c0), min(sp['b'], c1)
+    o0, o1 = v0 + (a - s.start) / s.speed, v0 + (b - s.start) / s.speed
+    m = int((o1 - o0) * SR)
+    if m < int(0.1 * SR):
+        return
+    pitch = MOTOR['fast_pitch'] if sp['fast'] else MOTOR['pitch']   # not x playback speed: no jumps at the cuts
+    pos = np.arange(m) * pitch
+    if pos[-1] + 2 > len(base):
+        base = np.tile(base, int(pos[-1] // len(base)) + 2)
+    snd = np.interp(pos, np.arange(len(base)), base).astype(np.float32)
+    tclip = a + np.arange(m) / SR * s.speed
+    env = MOTOR['gain'] * np.interp(tclip, [p[0] for p in sp['pts']], [p[1] for p in sp['pts']])
+    fl = min(m // 2, int(MOTOR['fade'] * SR))
+    env[:fl] *= np.linspace(0, 1, fl)
+    env[m - fl:] *= np.linspace(1, 0, fl)
+    i0 = int(o0 * SR)
+    i1 = min(i0 + m, len(mix))
+    mix[i0:i1] += (snd * env)[:i1 - i0]
+    log.append(dict(t=round(o0, 2), shot=s.name, event=MOTOR_RUN + ' (loop)', gain=round(float(env.max()), 3),
+                    until=round(o1, 2), pitch=round(pitch, 3)))
+    st = sp['start']
+    sf = EVENT_FILES.get(MOTOR_START)
+    if st is not None and sf and c0 <= st['t'] < c1:
+        snd = sound_file(sf[0])
+        d = math.dist((st['x'], st['y'], st['z']), (st['cam_x'], st['cam_y'], st['cam_z']))
+        g = MOTOR['start_gain'] * max(0.0, 1.0 - d / EVENT_ATT.get(MOTOR_START, 16.0))
+        if snd is not None and g >= 0.01:
+            tout = v0 + (st['t'] - s.start) / s.speed
+            if place(mix, snd * g, tout, vis0, vis1):
+                log.append(dict(t=round(tout, 2), shot=s.name, event=MOTOR_START + ' (for the old ticks)', gain=round(g, 3)))
 
 
 def game_track(shots, total):
@@ -689,7 +856,12 @@ def game_track(shots, total):
             continue
         v0 = s.t0 - D / 2                                       # output time of local time 0
         vis0, vis1 = max(0.0, s.t0 - D / 2), s.t1 + D / 2
-        for e in clip_sounds(s.src[1]):
+        events = clip_sounds(s.src[1])
+        for sp in motor_spans(events):
+            motor_loop(mix, s, sp, v0, vis0, vis1, log)
+        for e in events:
+            if is_motor(e):
+                continue
             tout = v0 + (e['t'] - s.start) / s.speed
             if tout >= vis1 - 0.05:
                 continue
@@ -700,29 +872,11 @@ def game_track(shots, total):
             if abs(pitch - 1) > 1e-3:
                 m = int(len(a) / pitch)
                 a = np.interp(np.arange(m) * pitch, np.arange(len(a)), a).astype(np.float32)
-            g = min(1.0, max(0.0, e['volume']))
-            if e['attenuation'] == 'LINEAR' and not e['relative']:
-                dd = math.dist((e['x'], e['y'], e['z']), (e['cam_x'], e['cam_y'], e['cam_z']))
-                g *= max(0.0, 1.0 - dd / max(1.0, e['distance']))
+            g = event_gain(e)
             if g < 0.01:
                 continue
-            a = a * g
-            if tout < vis0:
-                skip = int((vis0 - tout) * SR)
-                if skip >= len(a):
-                    continue
-                a = a[skip:]
-                tout = vis0
-            i0 = int(tout * SR)
-            i1 = min(i0 + len(a), int(vis1 * SR), n)
-            if i1 <= i0:
-                continue
-            seg = a[:i1 - i0].copy()
-            if i0 + len(a) > int(vis1 * SR):
-                fl = min(len(seg), int(0.25 * SR))
-                seg[-fl:] *= np.linspace(1, 0, fl)
-            mix[i0:i1] += seg
-            log.append(dict(t=round(tout, 2), shot=s.name, event=e['event'], gain=round(float(g), 3)))
+            if place(mix, a * g, tout, vis0, vis1):
+                log.append(dict(t=round(tout, 2), shot=s.name, event=e['event'], gain=round(float(g), 3)))
     return mix[:int(total * SR)], log
 
 
@@ -833,8 +987,8 @@ def contact_sheet(video, out_png, every=6.0, cols=12, thumb=150):
 
 def museum_top(caps, shots):
     """Over the exhibition stills the subtitles go to the top: the bottom row of items and names sits where they
-    normally are."""
-    spans = [(s.t0, s.t1) for s in shots if s.name in LABELS]
+    normally are. The same over the shots in shots.json "caps_top" (the air gauge of the HUD sits above the hotbar)."""
+    spans = [(s.t0, s.t1) for s in shots if s.name in LABELS or s.name in CAPS_TOP]
     for c in caps:
         mid = (c.t0 + c.t1) / 2
         if any(a <= mid < b for a, b in spans):

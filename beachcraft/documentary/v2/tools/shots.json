@@ -545,5 +545,8 @@
    "start": 0.0,
    "speed": 0.62
   }
- }
+ },
+ "caps_top": [
+  "f_gauge"
+ ]
 }

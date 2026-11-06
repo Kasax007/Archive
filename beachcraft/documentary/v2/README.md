@@ -53,3 +53,17 @@ DOC_WORKERS=3 DOC_PARTS=12 $SP/tts/bin/python tools/doc.py --deliver
 ```
 
 Höchstens 3 Render-Prozesse (je ~2 GB; mit 4 griff der OOM-Killer). Ein Teil von ~98 s brauchte ~14,5 min.
+
+Ton (Stand 6.11., nach der Rückmeldung zum Schnitt):
+
+- Spielgeräusche kommen aus dem Mod (`DOC_MOD=<Mod-Ordner>`, Standard `/home/user/Kasax_Raft_Mod`; für Klänge, die
+  noch nicht in 26.3 sind, z. B. `DOC_MOD=/home/user/wt/raft-building`). Raft-Events, deren `sounds.json` eine
+  Vanilla-Datei abspielt (Möwen, Pinguine, Otter, Tidelinge, …), waren bis 6.11. stumm; jetzt behalten die Namen
+  ihren Namensraum.
+- Regeln je Clip in `doc.py`: `THIN` (Tideling-Flops höchstens alle 0,7 s), `SOUND_GAIN` (Schwimmgeräusche in `s_lev*`
+  −8 dB; `None` nimmt ein Event aus der Mischung).
+- Motor: `raft:block.raft_motor.run` wird als Schleife gelegt (einmal je Shot, 0,7 × Entfernungsfaktor über 32 Blöcke,
+  Tonhöhe 1,05, über 8 Blöcke/s 1,15). Alte Clips mit dem Bassdrum-Ticken bekommen dieselbe Schleife statt der Ticks.
+- `shots.json` → `caps_top`: über diesen Shots stehen die Untertitel oben (die Luftanzeige des HUD sitzt sonst darunter).
+- Standbilder gehen vor Clips: kommt ein Shot als Clip neu (z. B. `f_gauge`), vorher `$SP/doc4/shots/<name>.jpg` löschen
+  (`ingest_ext.py` lässt ein vorhandenes Standbild außerdem stehen).

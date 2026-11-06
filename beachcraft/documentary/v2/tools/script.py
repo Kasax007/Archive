@@ -19,13 +19,13 @@ DOC = [
     dict(id='W1', ch='THE WAY *IN*',
          text="The journey starts in the overworld. On sandy beaches stand short, dark stumps of *driftwood*.",
          shots=[('w_beach', None)], pause=0.8),
-    dict(id='W2', ch=None,
+    dict(id='W2', ch=None,       # feedback 6.11.: the crafting was named but not shown (w_stump is dark water)
          text="Four driftwood logs around one ancient energy make four portal frames. The energy comes from "
               "ancient broken rings, which hide in shipwreck treasure and ocean ruins.",
-         shots=[('w_stump', None), ('w_frame', 'The energy comes')], pause=0.8),
+         shots=[('w_craft_frame', None), ('w_smelt', 'The energy comes'), ('w_ring', 'hide in')], pause=0.8),
     dict(id='W3', ch=None,
          text="The frame is built like a nether portal, and the *energy staff* lights it.",
-         shots=[('w_light', None)], pause=1.2),
+         shots=[('w_frame', None), ('w_craft_staff', 'and the energy'), ('w_light', 'lights it')], pause=1.2),
     dict(id='W4', ch=None,
          text="Step through, and you arrive on a driftwood platform high above the waves, with a portal back home.",
          shots=[('w_trip', None), ('w_arrive', 'and you arrive')], pause=1.4),
@@ -135,7 +135,7 @@ DOC = [
          shots=[('p_galleon', None), ('p_galleon_chest', 'Its chests')], pause=0.8),
     dict(id='P9', ch=None,
          text="A rusty *cargo ship* broke in two, and spilled its shipping containers across the floor.",
-         shots=[('p_cargo', None)], pause=0.8),
+         shots=[('p_cargo', None), ('p_cargo_top?', 'spilled its')], pause=0.8),
     dict(id='P10', ch=None,
          text="Small *fishing boats* sank with their nets and crates.",
          shots=[('p_fishing', None)], pause=0.8),
@@ -172,7 +172,7 @@ DOC = [
     # ------------------------------------------------------------------ creatures
     dict(id='C0', ch='THE *CREATURES*', music='jellyfish',
          text="The sea is full of life. Most creatures are peaceful. A few of them bite back.",
-         shots=[('c_manta', None)], pause=0.8),
+         shots=[('c_manta2|c_manta', None)], pause=0.8),                 # the second manta take, if filmed (C4: c_manta)
     dict(id='C1', ch=None,
          text="*Bruce* the shark hunts anyone who swims. On your raft you are safe, but your raft is not: he circles "
               "it and bites the edge foundations, until one breaks. Reinforced foundations are never bitten.",
@@ -197,7 +197,7 @@ DOC = [
     dict(id='C7', ch=None,
          text="*Moray eels* hide in holes in the reefs and ruins, with only their head showing, and lunge at anyone "
               "who swims too close.",
-         shots=[('c_moray', None), ('p_ruins', 'and lunge')], pause=0.8),
+         shots=[('p_ruins', None), ('c_moray', 'with only their')], pause=0.8),  # new take: head out, then the lunge
     dict(id='C8', ch=None,
          text="On the beaches, *crabs* scuttle sideways. Sprint towards one, and it digs itself into the sand.",
          shots=[('c_crab', None), ('c_crab_dig', 'Sprint towards')], pause=0.8),
@@ -253,7 +253,7 @@ DOC = [
     dict(id='I11', ch=None,
          text="For the deep there is *diving gear*. The diving helmet lets you see far under water, and with an "
               "oxygen tank you breathe from the tank. A gauge shows how much air is left.",
-         shots=[('f_dive', None), ('f_gauge', 'A gauge')], pause=0.8),
+         shots=[('f_gear', None), ('f_dive', 'The diving helmet'), ('f_gauge', 'A gauge')], pause=0.8),
     dict(id='I13', ch=None,
          text="The *wetsuit* lets you mine faster under water and keeps jellyfish away, flippers make you swim much "
               "faster, and the full set gives you dolphin's grace.",
@@ -319,7 +319,8 @@ DOC = [
     dict(id='R0', ch='YOUR OWN *RAFT*', music='voyage',
          text="Since version three point one, you can also build your own raft, block by block: foundations on the "
               "water, a *helm*, and sails, oars or a motor to move it.",
-         shots=[('r_found_place', None), ('r_found_grow', 'block by block'), ('r_build_motor', 'a helm'), ('r_build_sail', 'and sails')], pause=0.8),
+         shots=[('r_found_place', None), ('r_found_grow', 'block by block'), ('r_build_motor', 'a helm'), ('r_build_sail', 'and sails'),
+                ('r_motor?', 'or a motor')], pause=0.8),                  # r_motor: the running motor (new sound), if filmed
     dict(id='R1', ch=None,
          text="Use the helm, and the raft *sets sail*. Everything on it sails along.",
          shots=[('r_setsail', None), ('r_sail_start', 'sets sail'), ('r_sail_orbit', 'Everything')], pause=0.8),

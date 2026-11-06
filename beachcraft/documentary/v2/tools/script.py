@@ -172,7 +172,7 @@ DOC = [
     # ------------------------------------------------------------------ creatures
     dict(id='C0', ch='THE *CREATURES*', music='jellyfish',
          text="The sea is full of life. Most creatures are peaceful. A few of them bite back.",
-         shots=[('c_manta', None)], pause=0.8),                          # retake 6.11. (chase)
+         shots=[('c_gulls4', None), ('c_manta2', 'Most creatures')], pause=0.8),   # real-time retakes
     dict(id='C1', ch=None,
          text="*Bruce* the shark hunts anyone who swims. On your raft you are safe, but your raft is not: he circles "
               "it and bites the edge foundations, until one breaks. Reinforced foundations are never bitten.",
@@ -186,28 +186,28 @@ DOC = [
          shots=[('c_whale', None)], pause=1.0),
     dict(id='C4', ch=None,
          text="*Manta rays* glide through the warm shallows in slow, wide loops.",
-         shots=[('c_manta2', None)], pause=0.8),                         # fixed camera over the reef
+         shots=[('c_manta', None)], pause=0.8),                          # chase over the reef (real time)
     dict(id='C5', ch=None,
          text="*Jellyfish* drift and pulse. Moon jellies are white, crimson jellies red, and glow jellies light up "
               "the dark lagoons. Their touch stings, unless you wear a wetsuit.",
          shots=[('c_jelly', None), ('b_lagoon', 'and glow jellies')], pause=0.8),
     dict(id='C6', ch=None,
          text="In the darkness of the trench, the *anglerfish* waits with its glowing lure, then darts forward to bite.",
-         shots=[('c_angler', None)], pause=0.8),
+         shots=[('b_trench', None), ('c_angler', 'glowing lure')], pause=0.8),     # dart at 1.7 s -> on "darts"
     dict(id='C7', ch=None,
          text="*Moray eels* hide in holes in the reefs and ruins, with only their head showing, and lunge at anyone "
               "who swims too close.",
-         shots=[('p_ruins', None), ('c_moray', 'with only their')], pause=0.8),  # new take: head out, then the lunge
+         shots=[('p_ruins', None), ('c_moray', 'head showing')], pause=0.8),     # real time: lunge at 1.1 s
     dict(id='C8', ch=None,
          text="On the beaches, *crabs* scuttle sideways. Sprint towards one, and it digs itself into the sand.",
-         shots=[('c_crab', None), ('c_crab_dig', 'one, and')], pause=0.8),      # the dig lands on "and it digs"
+         shots=[('c_crab', None), ('c_crab_dig', 'and it digs')], pause=0.8),   # real time: dig at 0.7 s
     dict(id='C9', ch=None,
          text="*Ember crabs* live on the volcanic isles. Up close they attack, and set you on fire.",
          shots=[('c_ember', None)], pause=0.8),
     dict(id='C10', ch=None,
          text="*Seagulls* fly in flocks over islands and rafts. They peck at crops and snatch food from the ground, "
               "unless a scarecrow stands nearby.",
-         shots=[('c_gulls3', None), ('c_gull_peck', 'They peck')], pause=0.8),  # c_gulls3: the flock over open sea
+         shots=[('c_gulls3', None), ('c_gull_peck', 'They peck'), ('f_crops', 'unless a scarecrow')], pause=0.8),
     dict(id='C11', ch=None,
          text="*Penguins* waddle over the frost floes, slide on their bellies and dive for fish.",
          shots=[('c_penguin', None)], pause=0.8),

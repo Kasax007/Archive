@@ -625,6 +625,12 @@
   "p_cargo": {
    "start": 1.5,
    "speed": 0.42
+  },
+  "c_manta": {
+   "speed": 0.71
+  },
+  "c_moray": {
+   "speed": 0.77
   }
  },
  "caps_top": [

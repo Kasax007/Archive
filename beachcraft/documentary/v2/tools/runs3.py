@@ -202,6 +202,108 @@ def run_peck():
     return s
 
 
+# ---------------------------------------------------------------------------------------------------------------------
+# Real-time retakes (6.11. evening): since the bctest fix c8da36f a clip shows one second of game time per second
+# (before, every frame cost two game ticks and the creatures moved three times too fast). The sets from the takes
+# above are still in bcdoc2 (ruin wall at 64 -32, sand patch and wheat field on the palm isle).
+
+def run_rt_reef():
+    """Mantas, the moray at its ruin wall, the anglerfish in the trench, in real time."""
+    s = S2(deadline=120)
+    s.cmd('difficulty normal')
+    s.fx('night_vision')
+    s.add('height 64 -32')
+    s.go(56, v('hy', 6), -40, 70, v('hy', 3), -26, settle=300)
+    s.r('kill @e[type=raft:manta_ray,distance=..60]')
+    s.summon('raft:manta_ray', 3, spread=4, ahead=8, dy=1)
+    s.add('wait 60')
+    s.clip('c_manta', 5, look='raft:manta_ray', chase='6,2', smooth=0.05)
+    s.go(58, v('hy', 7), -46, 70, v('hy', 2), -26, settle=40)
+    s.clip('c_manta2', 5, look='raft:manta_ray', smooth=0.05)
+    s.kill('raft:manta_ray')
+    # the moray: the diver starts 5 blocks closer than in the first take (in real time the lunge must come within 5 s)
+    s.add('height 64 -34')
+    s.r('kill @e[type=raft:moray_eel,distance=..40]', 'kill @e[type=minecraft:item,distance=..40]')
+    s.r('setblock 64 {hy+1:i} -32 minecraft:water')
+    s.r('summon raft:moray_eel 64.5 {hy+1} -34.5 {PersistenceRequired:1b}')
+    s.go(70, v('hy', 3.0), -36, 64.5, v('hy', 1.4), -33.5, settle=120)
+    s.add('wait 140')
+    s.actor('survival')
+    s.cmd('effect give @p minecraft:resistance infinite 4 true', 'effect give @p minecraft:water_breathing infinite 0 true',
+          'item replace entity @p armor.head with raft:diving_helmet',
+          'item replace entity @p armor.chest with raft:oxygen_tank[raft:stored_air=1030]',
+          'item replace entity @p armor.legs with raft:wetsuit', 'item replace entity @p armor.feet with raft:flippers')
+    s.r('tp @p 64.5 {hy+1} -39.5 0 5')
+    s.add('wait 10', 'freecam 69.5 {hy+2.6} -36.5 59 12', 'wait 8 render', 'freecam off')
+    s.clip('c_moray', 5, cam=f"69.5,{v('hy', 2.6)},-36.5,59,12", look=f"64.5,{v('hy', 1.4)},-33.5",
+           at=[(1, 'cmd execute in raft:raftdim run tp @p 64.5 {hy+1} -39.5 0 5'), (2, 'press forward'), (60, 'release forward')])
+    s.cmd('effect clear @p', 'clear @p')
+    s.spec()
+    s.kill('raft:moray_eel')
+    # the anglerfish in the abyssal trench: the lure first (the fish held still for 40 frames), then it darts and bites
+    s.fx()
+    s.add('height 448 0')
+    s.go(448, v('hy', 4), 6, 448, v('hy', 2), -4, settle=500)
+    s.cmd('effect give @p minecraft:night_vision infinite 0 true', 'effect give @p minecraft:water_breathing infinite 0 true')
+    s.actor('survival')
+    s.cmd('effect give @p minecraft:resistance infinite 4 true',
+          'item replace entity @p armor.head with raft:diving_helmet[raft:diving_lamp={}]')
+    s.r('kill @e[type=raft:anglerfish,distance=..40]')
+    s.r('tp @p 448.5 {hy} 0.5 180 0')
+    s.add('wait 10', 'where')
+    s.r('summon raft:anglerfish {px} {py+1} {pz-4.2} {PersistenceRequired:1b,Rotation:[0f,0f],NoAI:1b}')
+    s.add('wait 10', 'freecam {px+3.2} {py+1.9} {pz-1.8} 120 15', 'wait 8 render', 'shot c_angler_check', 'freecam off')
+    s.clip('c_angler', 5, cam="{px+3.2},{py+1.9},{pz-1.8},120,15", look='raft:anglerfish', smooth=0.15,
+           at=[(0, 'cmd execute in raft:raftdim run tp @p {px} {py} {pz} 180 0'),
+               (40, 'cmd execute in raft:raftdim run data merge entity @e[type=raft:anglerfish,limit=1,sort=nearest] {NoAI:0b}')])
+    s.r('kill @e[type=raft:anglerfish,distance=..40]')
+    s.cmd('effect clear @p', 'clear @p')
+    s.spec()
+    return s
+
+
+def run_rt_isle():
+    """The crab digging in, the flock over open sea and the gulls at the wheat field, in real time."""
+    s = S2(deadline=120)
+    s.fx()
+    s.add('height -259 -281')
+    s.go(-259, v('hy', 2.0), -284, -259, v('hy', 0.3), -278, settle=420)
+    s.r('kill @e[type=raft:crab,distance=..40]', 'kill @e[type=raft:seagull,distance=..60]')
+    s.actor('survival')
+    s.cmd('effect give @p minecraft:resistance infinite 4 true')
+    s.r('tp @p -259.5 {hy} -286.5 0 10')
+    s.r('summon raft:crab -259.5 {hy} -278.5 {Variant:"blue",PersistenceRequired:1b}')
+    s.add('wait 30', 'freecam -256.6 {hy+0.95} -276.6 125 15', 'wait 8 render', 'freecam off')
+    s.clip('c_crab_dig', 4, cam=f"-256.6,{v('hy', 0.95)},-276.6,125,15", look=f"-259.8,{v('hy', 0.3)},-279.5",
+           at=[(0, 'cmd execute in raft:raftdim run kill @e[type=raft:seagull,distance=..60]'),
+               (3, 'press sprint'), (4, 'press forward'), (40, 'release forward'), (41, 'release sprint')])
+    s.kill('raft:crab')
+    s.spec()
+    # gulls at the wheat field (the field from the earlier take, replanted)
+    s.go(-256.5, v('hy', 3.2), -283.5, -259.5, v('hy', 0.3), -280.5, settle=60)
+    s.r('kill @e[type=raft:crab,distance=..60]', 'kill @e[type=raft:seagull,distance=..80]')
+    s.r('fill -261 {hy-1:i} -282 -258 {hy-1:i} -279 minecraft:farmland[moisture=7]',
+        'fill -261 {hy:i} -282 -258 {hy:i} -279 minecraft:wheat[age=7]',
+        'fill -261 {hy+1:i} -282 -258 {hy+4:i} -279 minecraft:air')
+    s.r(*[f'summon raft:seagull {x} {{hy+6}} {z}' for x, z in
+          ((-262, -284), (-258, -285), (-264, -280), (-256, -279), (-260, -276), (-263, -277))])
+    s.add('wait 270')
+    s.r('kill @e[type=raft:crab,distance=..60]')
+    s.clip('c_gull_peck', 5, look=f"-259.5,{v('hy', 0.3)},-280.5",
+           at=[(0, 'cmd execute in raft:raftdim run kill @e[type=raft:crab,distance=..60]')])
+    s.r('kill @e[type=raft:seagull,distance=..80]')
+    # the flock over open sea near spawn, the camera flying along
+    s.go(0, 110, -24, 0, 116, 4, settle=240)
+    s.r('kill @e[type=raft:seagull,distance=..100]')
+    s.r(*[f'summon raft:seagull {x} {y} {z}' for x, y, z in
+          ((0, 117, 6), (2, 118, 8), (-2, 117, 9), (3, 116, 5), (-3, 118, 5), (1, 119, 11), (-1, 116, 3))])
+    s.add('wait 100')
+    s.clip('c_gulls3', 5, look='raft:seagull', chase='9,2.5', smooth=0.1)
+    s.clip('c_gulls4', 5, look='raft:seagull', smooth=0.05)
+    s.r('kill @e[type=raft:seagull,distance=..120]')
+    return s
+
+
 if __name__ == '__main__':
     prefix = sys.argv[1]
     for k, run in enumerate((run_reef, run_isle)):

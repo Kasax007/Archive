@@ -14,7 +14,7 @@ SHORT = [
          text="This is *Dreamcraft*, over *two hundred and fifty* mods, and it already runs on the *newest* Minecraft!",
          shots=[('castle', None), ('mutant', 'over two hundred'), ('nether', 'and it already runs')]),
     dict(id='A2', capy=330,
-         text="It starts with a brand new *menu*, and a *story* with over one hundred and sixty quests guides you through every mod.",
+         text="It starts with a brand new *menu*, and a *story* with over three hundred quests guides you through every mod.",
          shots=[('menu_land', None), ('questbook', 'and a story'), ('kitchen', 'guides you')]),
     dict(id='A3',
          text="You explore giant *castles*, cozy *villages* and whole new worlds.",
@@ -46,7 +46,7 @@ HEARD = {'dreamcraft': ['dreamcraft', 'dreamcrafts', 'dreamcraftt'],
          'nether': ['nether', 'neither'],
          'mutant': ['mutant', 'mutants']}
 # Zahlen, die Whisper als Ziffern schreibt
-NUMS = {'250': 'two hundred and fifty', '160': 'one hundred and sixty', '26.3': 'twenty six point three'}
+NUMS = {'250': 'two hundred and fifty', '300': 'three hundred', '160': 'one hundred and sixty', '26.3': 'twenty six point three'}
 
 POST = dict(
     short=dict(

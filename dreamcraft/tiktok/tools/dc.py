@@ -28,7 +28,7 @@ PH_FILM = VID + '/film_ph'
 LEAD = 0.07                      # a cut lands this much before the word it belongs to
 
 CFG = dict(
-    short=dict(file='dreamcraft_tiktok', dir='', slow=1.06, lead_in=0.08, gap=0.22, gap_ch=0.22, tail=1.3,
+    short=dict(file='dreamcraft_tiktok', dir='', slow=1.06, lead_in=0.08, gap=0.22, gap_ch=0.22, tail=2.0,
                cap_size=84, cap_y=1400, maxc=30, maxw=6, maxclip=2.4, crf=20, preset='slow', whoosh=0.08,
                fade_in=0.3, fade_out=2.0, hook_end=2.4, music_under=0.14),
 )

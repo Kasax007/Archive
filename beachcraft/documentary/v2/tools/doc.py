@@ -47,10 +47,11 @@ DB = 1.0                          # fade through black at a chapter start (s)
 
 CFG = dict(file='beachcraft3_documentary_v2', lead_in=1.2, gap=0.55, gap_ch=1.4, tail=3.0, slow=1.0,
            cap_size=50, cap_y=978, maxc=62, maxw=12, crf=24, preset='medium',
-           fade_in=2.5, fade_out=4.0, title_len=4.0, game_gain=2.6, duck=0.45, music_under=0.075, music_gaps=0.2)
+           fade_in=2.5, fade_out=4.0, title_len=4.0, game_gain=1.9, duck=0.45, music_under=0.075, music_gaps=0.2)
 
 # per shot: still -> zoom (from, to), focus ((x0, y0), (x1, y1)) as 0..1 of the frame; gui -> fixed zoom on a menu
-# clip -> speed (playback speed, 1 = real time), start (s into the clip), zoom
+# clip -> speed (playback speed, 1 = real time), start (s into the clip), zoom, end (use the clip only up to here),
+#         hold ([[a, b], ...]: show the frame at a instead of the frames from a to b, e.g. a camera jolt)
 SHOT_OPTS = {}
 GUI = {}                          # name -> (zoom, focus) for menu screenshots (GUI scale 3 is small in portrait)
 CAPS_TOP = set()                  # shots with something to read where the subtitles are (the HUD air gauge)
@@ -431,6 +432,8 @@ class Shot:
         else:
             n = clip_frames(self.src[1])
             S = n / self.src[2]
+            if 'end' in self.opts:                              # use the clip only up to here (s)
+                S = min(S, float(self.opts['end']))
             self.clip_len = S
             start = float(self.opts.get('start', 0.0))
             avail = max(0.05, S - start)
@@ -519,7 +522,14 @@ class Renderer:
         if s.kind == 'still':
             return kenburns(s.src[1], f, s.zoom, s.focus)
         r = self.reader(s)
-        arr = r.at(s.start + tl * s.speed)
+        ct = s.start + tl * s.speed
+        if 'end' in s.opts:
+            ct = min(ct, s.clip_len)
+        for a, b in s.opts.get('hold', []):                       # bad frames (camera jolt, a gull on the lens)
+            if a <= ct < b:
+                ct = a
+                break
+        arr = r.at(ct)
         z = s.zoom[0] + (s.zoom[1] - s.zoom[0]) * f
         return zoomed(arr, z, s.focus)
 
@@ -655,15 +665,24 @@ def _sound_defs():
 
 EVENT_FILES, EVENT_ATT = _sound_defs()
 SKIP_SOURCES = {'music', 'ambient', 'weather', 'record'}
+# The sound logs count game seconds, the clips run faster: the harness's screenshot lets two ticks pass per frame, so
+# 30 frames (one second of clip) show 3 s of game time (74 clips: last logged sound at 2.96 x the clip length, bites
+# and harpoon shots on the frames where they happen). Before 6.11. the logs were read as clip time: every sound came
+# 3x too late and most fell after the end of their shot.
+GAME_PER_CLIP = float(os.environ.get('DOC_GAME_PER_CLIP', '3.0'))
 _index, _scache = None, {}
 
 # Per clip, after the feedback of 6.11. (clip = file name of the clip): THIN keeps an event only this many seconds of
 # clip time after the last one kept that can be heard (one tideling clip logs 67 flops in a few seconds); SOUND_GAIN
 # changes an event in clips whose name starts with the prefix by so many dB, None leaves it out of the mix.
-THIN = {'raft:entity.tideling.flop': 0.7}
+THIN = {'raft:entity.tideling.flop': 0.7, 'raft:entity.tideling.bite': 0.3,
+        # clips run 3x faster than the game, so a flock or a swimmer logs three times as many sounds per second
+        'raft:entity.seagull.flap': 0.12, 'raft:entity.seagull.peck': 0.1, 'raft:entity.seagull.ambient': 0.25,
+        'minecraft:entity.parrot.step': 0.15, 'minecraft:entity.player.swim': 0.2, 'minecraft:entity.dolphin.swim': 0.2}
 SOUND_GAIN = [('s_lev', 'minecraft:entity.hostile.swim', -8.0),        # the Leviathan's generic swim splashes
               ('c_manta', 'minecraft:entity.guardian.hurt', None),      # old take: two mantas stuck in the reef
-              ('c_manta', 'minecraft:entity.guardian.death', None)]
+              ('c_manta', 'minecraft:entity.guardian.death', None),
+              ('c_crab_dig', 'raft:entity.crab.hurt', None)]             # retake 6.11.: the crabs are run into
 # The raft motor: now a loop ('run', 2 s; in a film log the client renews it about every 5 s, each at volume 0.001)
 # and a 'start' when it starts; before 6.11. a bass drum every 4-6 ticks (old clips). Both become the loop, once per
 # shot: gain x distance factor, pitch by the raft's speed (not by the playback speed), faded at both ends.
@@ -724,6 +743,8 @@ def clip_sounds(src):
     for e in (json.loads(l) for l in open(f) if l.strip()):
         if e['source'] in SKIP_SOURCES:
             continue
+        e['tg'] = e['t']                                   # game time of the log
+        e['t'] = e['t'] / GAME_PER_CLIP                    # clip time
         ev = e.get('event')
         db, drop = 0.0, False
         for pre, name, d in SOUND_GAIN:
@@ -756,16 +777,18 @@ def motor_spans(events):
     New clips: from the first 'run' event on; a span ends only when no 'run' comes for MOTOR['gap'] s (the client
     renews the loop about every 5 s), b is then the last + gap. Without a 'start' just before it the motor was already
     running: the span starts with the clip. Old clips: the bass drum ticks, from the first to the last + tail; a start
-    sound if the ticks begin later than one tick into the recording (the motor started in the shot)."""
+    sound if the ticks begin later than one tick into the recording (the motor started in the shot). The MOTOR times
+    are game seconds (as the log counts them)."""
     att = EVENT_ATT.get(MOTOR_RUN, 32.0)
-    starts = [e['t'] for e in events if e['event'] == MOTOR_START]
+    k = GAME_PER_CLIP
+    starts = [e['tg'] for e in events if e['event'] == MOTOR_START]
     spans = []
     for kind in ('run', 'tick'):
         ev = [e for e in events if is_motor(e) and (e['event'] == MOTOR_RUN) == (kind == 'run')]
         gap = MOTOR['gap'] if kind == 'run' else MOTOR['tick_gap']
         groups = []
         for e in ev:
-            if groups and e['t'] - groups[-1][-1]['t'] <= gap:
+            if groups and e['tg'] - groups[-1][-1]['tg'] <= gap:
                 groups[-1].append(e)
             else:
                 groups.append([e])
@@ -773,15 +796,15 @@ def motor_spans(events):
             pts = [(e['t'], max(0.0, 1.0 - math.dist((e['x'], e['y'], e['z']), (e['cam_x'], e['cam_y'], e['cam_z'])) / att))
                    for e in g]
             way = sum(math.dist((p['x'], p['z']), (q['x'], q['z'])) for p, q in zip(g, g[1:]))
-            fast = len(g) > 1 and way / max(1e-3, g[-1]['t'] - g[0]['t']) > MOTOR['fast_bps']
-            a = g[0]['t']
+            fast = len(g) > 1 and way / max(1e-3, g[-1]['tg'] - g[0]['tg']) > MOTOR['fast_bps']
+            a = g[0]['tg']
             if kind == 'run':
                 if a <= MOTOR['renew'] and not any(abs(t - a) <= 0.5 for t in starts):
                     a = 0.0
-                spans.append(dict(a=a, b=g[-1]['t'] + MOTOR['gap'], pts=pts, fast=fast, start=None))
+                spans.append(dict(a=a / k, b=(g[-1]['tg'] + MOTOR['gap']) / k, pts=pts, fast=fast, start=None))
             else:
-                st = g[0] if g[0]['t'] > MOTOR['started_after'] else None
-                spans.append(dict(a=a, b=g[-1]['t'] + MOTOR['tail'], pts=pts, fast=fast, start=st))
+                st = g[0] if g[0]['tg'] > MOTOR['started_after'] else None
+                spans.append(dict(a=a / k, b=(g[-1]['tg'] + MOTOR['tail']) / k, pts=pts, fast=fast, start=st))
     return spans
 
 
@@ -815,6 +838,8 @@ def motor_loop(mix, s, sp, v0, vis0, vis1, log):
         return
     c0 = s.start + (vis0 - v0) * s.speed                       # visible part in clip time
     c1 = s.start + (vis1 - v0) * s.speed
+    if 'end' in s.opts:
+        c1 = min(c1, s.clip_len)
     a, b = max(sp['a'], c0), min(sp['b'], c1)
     o0, o1 = v0 + (a - s.start) / s.speed, v0 + (b - s.start) / s.speed
     m = int((o1 - o0) * SR)
@@ -860,7 +885,9 @@ def game_track(shots, total):
         for sp in motor_spans(events):
             motor_loop(mix, s, sp, v0, vis0, vis1, log)
         for e in events:
-            if is_motor(e):
+            if is_motor(e) or ('end' in s.opts and e['t'] > s.clip_len):    # 'end': nothing after the part shown
+                continue
+            if 'start' in s.opts and e['t'] < s.start:          # nor from before it (a bite cut away by 'start')
                 continue
             tout = v0 + (e['t'] - s.start) / s.speed
             if tout >= vis1 - 0.05:

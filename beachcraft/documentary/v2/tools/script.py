@@ -135,7 +135,7 @@ DOC = [
          shots=[('p_galleon', None), ('p_galleon_chest', 'Its chests')], pause=0.8),
     dict(id='P9', ch=None,
          text="A rusty *cargo ship* broke in two, and spilled its shipping containers across the floor.",
-         shots=[('p_cargo', None), ('p_cargo_top?', 'spilled its')], pause=0.8),
+         shots=[('p_cargo', None)], pause=0.8),
     dict(id='P10', ch=None,
          text="Small *fishing boats* sank with their nets and crates.",
          shots=[('p_fishing', None)], pause=0.8),
@@ -172,7 +172,7 @@ DOC = [
     # ------------------------------------------------------------------ creatures
     dict(id='C0', ch='THE *CREATURES*', music='jellyfish',
          text="The sea is full of life. Most creatures are peaceful. A few of them bite back.",
-         shots=[('c_manta2|c_manta', None)], pause=0.8),                 # the second manta take, if filmed (C4: c_manta)
+         shots=[('c_manta', None)], pause=0.8),                          # retake 6.11. (chase)
     dict(id='C1', ch=None,
          text="*Bruce* the shark hunts anyone who swims. On your raft you are safe, but your raft is not: he circles "
               "it and bites the edge foundations, until one breaks. Reinforced foundations are never bitten.",
@@ -186,7 +186,7 @@ DOC = [
          shots=[('c_whale', None)], pause=1.0),
     dict(id='C4', ch=None,
          text="*Manta rays* glide through the warm shallows in slow, wide loops.",
-         shots=[('c_manta', None)], pause=0.8),
+         shots=[('c_manta2', None)], pause=0.8),                         # fixed camera over the reef
     dict(id='C5', ch=None,
          text="*Jellyfish* drift and pulse. Moon jellies are white, crimson jellies red, and glow jellies light up "
               "the dark lagoons. Their touch stings, unless you wear a wetsuit.",
@@ -200,14 +200,14 @@ DOC = [
          shots=[('p_ruins', None), ('c_moray', 'with only their')], pause=0.8),  # new take: head out, then the lunge
     dict(id='C8', ch=None,
          text="On the beaches, *crabs* scuttle sideways. Sprint towards one, and it digs itself into the sand.",
-         shots=[('c_crab', None), ('c_crab_dig', 'Sprint towards')], pause=0.8),
+         shots=[('c_crab', None), ('c_crab_dig', 'one, and')], pause=0.8),      # the dig lands on "and it digs"
     dict(id='C9', ch=None,
          text="*Ember crabs* live on the volcanic isles. Up close they attack, and set you on fire.",
          shots=[('c_ember', None)], pause=0.8),
     dict(id='C10', ch=None,
          text="*Seagulls* fly in flocks over islands and rafts. They peck at crops and snatch food from the ground, "
               "unless a scarecrow stands nearby.",
-         shots=[('c_gulls', None), ('c_gull_peck', 'They peck')], pause=0.8),
+         shots=[('c_gulls3', None), ('c_gull_peck', 'They peck')], pause=0.8),  # c_gulls3: the flock over open sea
     dict(id='C11', ch=None,
          text="*Penguins* waddle over the frost floes, slide on their bellies and dive for fish.",
          shots=[('c_penguin', None)], pause=0.8),
@@ -257,7 +257,7 @@ DOC = [
     dict(id='I13', ch=None,
          text="The *wetsuit* lets you mine faster under water and keeps jellyfish away, flippers make you swim much "
               "faster, and the full set gives you dolphin's grace.",
-         shots=[('f_dive', None), ('f_gauge', 'and the full set')], pause=0.8),
+         shots=[('f_dive', None), ('f_gear', 'and the full set')], pause=0.8),   # f_gear shows Dolphin's Grace
     dict(id='I12', ch=None,
          text="Crafted with an angler lure, the helmet gets a *lamp*, and the dark trench becomes visible.",
          shots=[('f_lamp', None)], pause=0.8),
@@ -320,7 +320,7 @@ DOC = [
          text="Since version three point one, you can also build your own raft, block by block: foundations on the "
               "water, a *helm*, and sails, oars or a motor to move it.",
          shots=[('r_found_place', None), ('r_found_grow', 'block by block'), ('r_build_motor', 'a helm'), ('r_build_sail', 'and sails'),
-                ('r_motor?', 'or a motor')], pause=0.8),                  # r_motor: the running motor (new sound), if filmed
+                ('r_motor', 'or a motor')], pause=0.8),                   # r_motor: the motor starts (new sound)
     dict(id='R1', ch=None,
          text="Use the helm, and the raft *sets sail*. Everything on it sails along.",
          shots=[('r_setsail', None), ('r_sail_start', 'sets sail'), ('r_sail_orbit', 'Everything')], pause=0.8),

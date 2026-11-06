@@ -164,7 +164,7 @@ retakes, the screens of Teo and Kai, then optional extras
 
 | File | What it shows | s |
 | --- | --- | --- |
-| w_ring.mp4 (being filmed, follows) | Overworld ocean shipwreck (576/64, lukewarm ocean, world `bcnpc2`): the player swims through the doorway of the hull room to the chest and opens it; the GUI shows `raft:ancient_broken_ring` in the middle slot | 3.0 |
+| w_ring.mp4 | Overworld ocean shipwreck (576/64, lukewarm ocean, world `bcnpc2`): the player swims under the low doorway beam into the hull room to the chest (first ~0.4 s the beam covers the top half) and opens it at ~1.7 s; the GUI shows `raft:ancient_broken_ring` in the middle slot | 2.8 |
 | w_smelt.mp4 | Blast furnace GUI with the ring and coal: the arrow fills and Ancient Energy appears in the output | 3.5 |
 | w_craft_frame.mp4 | Crafting table GUI: 4 driftwood logs in a plus around Ancient Energy → 4 Driftwood Portal Frames, taken into the inventory (tooltip at the end) | 3.5 |
 | w_craft_staff.mp4 | Crafting table GUI: Ancient Energy top, Ancient Crystal middle, stick bottom → Energy Staff, taken into the inventory (tooltip "Used to light the Raft Portal!") | 3.0 |
@@ -177,7 +177,8 @@ retakes, the screens of Teo and Kai, then optional extras
 Notes:
 - `w_ring`: none of the seven shipwrecks checked in this world had a treasure chest (several had no chest at all, the
   one the harness found first is buried under a forest). This wreck has a real `shipwreck_supply` chest; its own loot
-  is in the chest and the ring was put into slot 13 with `item replace block`.
+  is in the chest and the ring was put into slot 13 with `item replace block`. The first 6 frames (camera inside the
+  hull wall) were cut; the sound times were shifted by 0.2 s to match.
 - `w_smelt` / `w_craft_*`: filmed on a small smooth-sandstone set built on the jungle-isle beach (the first takes on
   sand failed because the sand fell). The blast furnace was preset to 42 of 100 cooking ticks so the ring finishes
   inside the clip.

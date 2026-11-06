@@ -169,6 +169,21 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   Ordnung. Gemergt: 26.3 = 88ce4aa (gepusht). Release-Jar neu gebaut ($SP/release_bc31/, 6.11. 02:12), Server-Smoke-Test
   ok (0 Fehler, 256 Chunks Endless Sea). Bericht mit Bildern: Archiv `beachcraft/structure-check/`. Upload von 3.1.0
   wartet auf das Go des Nutzers.
+- **Film-Feedback 6.11. (vormittags):** Nutzer vermisste Anglerfisch, Containerschiff und das Crafting am Anfang
+  (Ring/Energie aus Schiffswracks). Er wollte neue Sounds für Mantarochen, Motor und Boss, sichtbares Eingraben der
+  Krabbe, natürlichere Möwenschwärme und Aale sowie einen besseren Tauch-Clip. Mod (26.3 = 6097aca, gepusht):
+  - Motor: Dauerschleife `block.raft_motor.run`, die mit der Geschwindigkeit lauter und höher wird, dazu
+    `block.raft_motor.start`.
+  - Manta: eigene Rufe.
+  - Boss-Sounds mit mehr Präsenz (Mitten und Rauheit).
+  - Möwen fliegen in einer V-Formation nach Rang, die sich weich dreht, in langen Bögen.
+  - Muränen liegen waagerecht im Loch; Krabben graben sich 0,85 s lang mit Sand ein.
+  - Neues bctest-Kommando `track` (Positionsdaten für Bewegungsmessung).
+  Neuaufnahmen mit `v2/tools/runs3.py`: c_manta(2), c_moray (Ruinenwand mit Loch, Taucher), c_crab_dig,
+  c_gulls(2-4, am besten c_gulls3 über offenem Meer), c_gull_peck, f_crops (Beete + Vogelscheuche auf eigenem Floß),
+  r_motor, w_beach (Treibholz-Stumpf). Zweite Sitzung filmte Ring, Schmelzen, Crafting, Anglerfisch, Containerschiff
+  und Tauchen. Film-Agent: doc.py-Fix (Vanilla-Dateien von raft-Events waren stumm), Motorschleife statt Basedrum,
+  Flop-Ausdünnung. Release-Jar neu (6097aca), Server-Smoke ok.
 
 ## Was der Nutzer will (hier gelernt)
 

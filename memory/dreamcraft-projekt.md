@@ -217,5 +217,10 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
 
 - Ohne Rückfragen durcharbeiten; höchstens ein, wenn nötig zwei Subagenten (Wunsch vom 4.11.2026).
 - Der CurseForge-Token liegt nur in `$SP/.cf_token`. Nie committen und nie ausgeben.
+- **Große Videos nie über den Chat schicken:** Der Nutzer ist meist am Handy, und die Claude-App lädt große Dateien
+  aus dem Chat nicht („offline“, 4.11. und 6.11.). Stattdessen eine Artifact-Seite mit „Video laden“ und „Als MP4
+  speichern“ (downloads): bis 256 MB als Dateien der Seite, darüber als Assets (Quota 1 GiB je Artefakt, je Stück
+  höchstens 20 MiB; ein Stück darf nicht mit `<` beginnen, sonst gilt es als Markup). Beispiel: Doku 1080p60,
+  https://claude.ai/artifact/L3gp3aBtLzw4Rt7jdN8Z8L (20 Stücke, Quelltext in `beachcraft/documentary/v2/share/`).
 - Beschreibungen im Stil der Tamagotchi-Seite: Header-Bild, Abschnitts-Streifen, Screenshots und Badges.
 - Beschreibungen mit BisectHosting-Banner (Code KASAX007) und vielen Spoilern; Pack immer so testen, wie Spieler es installieren.

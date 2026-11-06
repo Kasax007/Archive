@@ -1,0 +1,194 @@
+<title>Tides of the Deep</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap">
+<style>
+/* Layout: one column built around a 16:9 landscape video, like a ship's logbook page; chapters below as a tide table. */
+:root {
+  --bg: #eef3f2;          /* sea-foam paper */
+  --panel: #ffffff;
+  --fg: #12302f;          /* deep kelp ink */
+  --muted: #4f6b69;
+  --accent: #0b7a75;      /* sea glass */
+  --accent-fg: #ffffff;
+  --sand: #c9a45c;        /* driftwood brass, used once */
+  --line: #cbdcda;
+  --font-display: "Barlow Condensed", "Arial Narrow", "Roboto Condensed", sans-serif;
+  --font-body: "Barlow", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #071a1d; --panel: #0d262a; --fg: #dcecea; --muted: #8fb0ad; --accent: #3cc2b7; --accent-fg: #04201f;
+    --sand: #d9b56a; --line: #1d3d41; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #071a1d; --panel: #0d262a; --fg: #dcecea; --muted: #8fb0ad; --accent: #3cc2b7; --accent-fg: #04201f;
+  --sand: #d9b56a; --line: #1d3d41; color-scheme: dark;
+}
+body {
+  background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 16px; line-height: 1.5;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 20px 32px;
+}
+.wrap { max-width: 960px; margin: 0 auto; display: grid; gap: 18px; }
+.eyebrow { font-family: var(--font-display); font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); font-size: .85rem; }
+h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(2.2rem, 9vw, 3.2rem); line-height: 1; margin: 2px 0 6px; text-wrap: balance; text-transform: uppercase; letter-spacing: .02em; }
+.meta { color: var(--muted); font-size: .95rem; font-variant-numeric: tabular-nums; }
+.stage { position: relative; background: var(--panel); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+video, .poster { display: block; width: 100%; max-width: 100%; aspect-ratio: 16 / 9; background: #000; object-fit: cover; }
+.controls { display: grid; gap: 10px; padding: 14px; }
+button { font: 600 1rem var(--font-body); border-radius: 10px; padding: 12px 16px; border: 1px solid var(--accent); cursor: pointer; min-height: 48px; }
+button.primary { background: var(--accent); color: var(--accent-fg); }
+button.secondary { background: transparent; color: var(--accent); }
+button:disabled { opacity: .55; cursor: default; }
+button:focus-visible, .chapters button:focus-visible { outline: 3px solid var(--sand); outline-offset: 2px; }
+.bar { height: 8px; border-radius: 99px; background: var(--line); overflow: hidden; }
+.bar > i { display: block; height: 100%; width: 0; background: var(--accent); transition: width .2s; }
+.status { color: var(--muted); font-size: .92rem; min-height: 1.4em; font-variant-numeric: tabular-nums; }
+.status.err { color: var(--fg); }
+h2 { font-family: var(--font-display); font-weight: 600; text-transform: uppercase; letter-spacing: .08em; font-size: 1rem; color: var(--muted); margin: 6px 0 0; }
+.chapters { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.chapters li { border-bottom: 1px solid var(--line); }
+.chapters button { all: unset; box-sizing: border-box; display: grid; grid-template-columns: 4.2rem 1fr; gap: 10px; width: 100%; padding: 11px 2px; cursor: pointer; }
+.chapters button[aria-disabled="true"] { cursor: default; }
+.chapters .t { font-family: var(--font-display); font-weight: 600; color: var(--sand); font-variant-numeric: tabular-nums; letter-spacing: .04em; }
+.chapters .c { min-width: 0; }
+.chapters .c b { font-weight: 600; display: block; }
+.chapters .c span { color: var(--muted); font-size: .9rem; }
+.note { color: var(--muted); font-size: .88rem; }
+@media (prefers-reduced-motion: reduce) { .bar > i { transition: none; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Beach Craft 3.1 · Doku</div>
+    <h1>Tides of the Deep</h1>
+    <div class="meta">21:27 · Englisch, mit Untertiteln und Musik · Querformat · Handy-Fassung 720p, 202 MB</div>
+  </header>
+
+  <section class="stage" aria-label="Video">
+    <img class="poster" id="poster" src="poster.jpg" alt="Endkarte: Beach Craft 3.1, Tides of the Deep">
+    <video id="video" controls playsinline preload="none" hidden></video>
+    <div class="controls">
+      <button class="primary" id="load" type="button">Video laden (202 MB)</button>
+      <div class="bar" id="bar" hidden><i id="fill"></i></div>
+      <button class="secondary" id="save" type="button" hidden>Als MP4 speichern</button>
+      <div class="status" id="status" role="status" aria-live="polite">Das Video wird erst geladen, wenn du tippst. Am besten im WLAN.</div>
+    </div>
+  </section>
+
+  <section aria-labelledby="ch">
+    <h2 id="ch">Kapitel</h2>
+    <ul class="chapters" id="chapters"></ul>
+  </section>
+
+  <p class="note">Die Handy-Fassung läuft mit 30 fps, damit sie unter 200 MB scharf bleibt. Die volle Fassung in 1080p mit 60 fps liegt in deinem Archiv-Repo unter beachcraft/documentary/v2 (13 Teile).</p>
+</div>
+
+<script>
+(function () {
+  var PARTS = 15, TOTAL = 202099901;
+  var FILE = "beachcraft31_documentary_v2.mp4";
+  var CHAPTERS = [
+    [0, "The Endless Sea", "Morgen über dem Meer, Port Solace aus der Luft und der dunkle Graben"],
+    [38, "The Way In", "Treibholz, Portal entzünden, die Reise, die Ankunftsplattform"],
+    [78, "The World", "Alle Biome über und unter Wasser, Tag und Nacht, die neuen Inselblumen"],
+    [264, "The Places", "Alle Story-Orte und Nebenstrukturen mit echtem Kisteninhalt"],
+    [479, "The Creatures", "Haie, Mantas, Quallen, Anglerfische, Krabben, Otter, Pinguine und mehr"],
+    [622, "Blocks and Items", "Blöcke und Items, Expeditionsfloß, Tauchen, Kanone, Maschinen"],
+    [893, "Your Own Raft", "Floß aus Blöcken bauen, Segel setzen, Ofen, Feld und Lampe auf See, Anker werfen"],
+    [936, "People of the Sea", "Die acht Bewohner der Endless Sea, Gespräche, Geschenke und Handel"],
+    [1093, "The Story", "Sigille, Schlüssel, Tide Seal und der Kampf gegen den Leviathan"]
+  ];
+  var $ = function (id) { return document.getElementById(id); };
+  var video = $("video"), poster = $("poster"), loadBtn = $("load"), saveBtn = $("save");
+  var bar = $("bar"), fill = $("fill"), status = $("status"), list = $("chapters");
+  var blob = null, url = null;
+
+  function mmss(s) { var m = Math.floor(s / 60), r = s % 60; return (m < 10 ? "0" : "") + m + ":" + (r < 10 ? "0" : "") + r; }
+  function say(text, isError) { status.textContent = text; status.className = "status" + (isError ? " err" : ""); }
+
+  CHAPTERS.forEach(function (c) {
+    var li = document.createElement("li"), b = document.createElement("button");
+    b.type = "button"; b.setAttribute("aria-disabled", "true");
+    var t = document.createElement("span"); t.className = "t"; t.textContent = mmss(c[0]);
+    var d = document.createElement("span"); d.className = "c";
+    var bt = document.createElement("b"); bt.textContent = c[1];
+    var sp = document.createElement("span"); sp.textContent = c[2];
+    d.appendChild(bt); d.appendChild(sp); b.appendChild(t); b.appendChild(d);
+    b.addEventListener("click", function () {
+      if (!url) { say("Lade zuerst das Video, dann springt ein Tipp auf das Kapitel."); return; }
+      video.currentTime = c[0]; video.play().catch(function () {});
+      video.scrollIntoView({ block: "start", behavior: "smooth" });
+    });
+    li.appendChild(b); list.appendChild(li);
+  });
+
+  async function load() {
+    loadBtn.disabled = true; bar.hidden = false;
+    var parts = [], got = 0;
+    try {
+      for (var i = 0; i < PARTS; i++) {
+        var name = "v2/part" + (i < 10 ? "0" : "") + i + ".mp4";
+        var res = await fetch(name);
+        if (!res.ok) throw new Error("Teil " + (i + 1) + " antwortet mit " + res.status);
+        var reader = res.body && res.body.getReader ? res.body.getReader() : null;
+        if (reader) {
+          var chunks = [];
+          for (;;) {
+            var r = await reader.read();
+            if (r.done) break;
+            chunks.push(r.value); got += r.value.byteLength;
+            fill.style.width = Math.min(100, got / TOTAL * 100).toFixed(1) + "%";
+            say("Lädt … " + (got / 1e6).toFixed(0) + " von " + (TOTAL / 1e6).toFixed(0) + " MB");
+          }
+          parts.push(new Blob(chunks));
+        } else {
+          var b = await res.blob(); got += b.size; parts.push(b);
+          fill.style.width = Math.min(100, got / TOTAL * 100).toFixed(1) + "%";
+          say("Lädt … " + (got / 1e6).toFixed(0) + " von " + (TOTAL / 1e6).toFixed(0) + " MB");
+        }
+      }
+    } catch (e) {
+      say("Laden fehlgeschlagen: " + e.message + ". Tippe nochmal auf „Video laden“.", true);
+      loadBtn.disabled = false; loadBtn.textContent = "Nochmal laden";
+      return;
+    }
+    blob = new Blob(parts, { type: "video/mp4" });
+    url = URL.createObjectURL(blob);
+    video.src = url; video.hidden = false; poster.hidden = true; loadBtn.hidden = true; bar.hidden = true;
+    list.querySelectorAll("button").forEach(function (b) { b.setAttribute("aria-disabled", "false"); });
+    say("Geladen. Tippe auf Play oder auf ein Kapitel.");
+    offerSave();
+  }
+
+  video.addEventListener("error", function () {
+    say("Abspielen geht in dieser Ansicht nicht. Speichere das Video und schau es in deiner Galerie an.", true);
+  });
+
+  async function offerSave() {
+    var dl = null;
+    try { dl = window.claude && window.claude.use ? await window.claude.use("downloads") : null; } catch (e) { dl = null; }
+    if (!dl) return;
+    saveBtn.hidden = false;
+    saveBtn.onclick = async function () {
+      saveBtn.disabled = true;
+      try {
+        await dl.save({ filename: FILE, data: blob });
+        say("Gespeichert.");
+      } catch (e) {
+        var code = e && e.code;
+        if (code === "declined") say("Speichern abgebrochen.");
+        else if (code === "too_large") say("Für diese App ist die Datei zu groß. Öffne die Seite im Browser und speichere dort.", true);
+        else if (code === "rate_limited") say("Ein Speichern-Dialog ist schon offen. Versuch es gleich nochmal.");
+        else { say("Speichern geht in dieser Ansicht nicht.", true); saveBtn.hidden = true; }
+      }
+      saveBtn.disabled = false;
+    };
+  }
+
+  loadBtn.addEventListener("click", load);
+})();
+</script>

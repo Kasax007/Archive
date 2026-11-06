@@ -62,7 +62,9 @@ Ruhige, lange Doku über den ganzen Mod (Englisch, eingebrannte Untertitel, Musi
   `beachcraft/documentary/v2/` (Zusammenfügen in der `README.md` dort). Rohmaterial `footage/bc3v2`. Neuer Schnitt nach
   deiner Rückmeldung (Anglerfisch, zerbrochener Frachter, Krabben graben sich ein, Möwenschwarm, Taucherausrüstung,
   neue Klänge für Manta, Motor und Leviathan).
-- **Handy:** private Artifact-Seite „Tides of the Deep“ (720p, 30 fps, Knopf „Als MP4 speichern“).
+- **Handy:** private Artifact-Seite „Tides of the Deep“ (720p, 30 fps, Knopf „Als MP4 speichern“) und für YouTube
+  die Seite „Tides of the Deep 1080p“ (https://claude.ai/artifact/L3gp3aBtLzw4Rt7jdN8Z8L): 1080p mit 60 fps als HEVC,
+  374 MiB, in 20 Asset-Stücken, die die Seite im Gerät zusammensetzt (Quelltext und Stück-IDs in `v2/share/`).
 - **YouTube:** `beachcraft/documentary/v2/youtube.md` mit Titel, Beschreibung mit Kapiteln, Musik-Credits, Tags und
   Vorschaubild (`stills/endcard.png`). Für den Chat gibt es eine HEVC-Fassung in 1080p60 mit 374 MiB (x265 fast,
   zwei Pässe, 2250 kbit/s; die H.264-Datei mit 610 MiB ist größer als das Limit für Dateien im Chat, das zuletzt bei

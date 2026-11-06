@@ -1,0 +1,182 @@
+<title>Tides of the Deep 1080p</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap">
+<style>
+/* Same sea palette as the phone page of the documentary; one job here: get the 1080p file onto the phone. */
+:root {
+  --bg: #eef3f2; --panel: #ffffff; --fg: #12302f; --muted: #4f6b69; --accent: #0b7a75; --accent-fg: #ffffff;
+  --sand: #c9a45c; --line: #cbdcda;
+  --font-display: "Barlow Condensed", "Arial Narrow", "Roboto Condensed", sans-serif;
+  --font-body: "Barlow", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #071a1d; --panel: #0d262a; --fg: #dcecea; --muted: #8fb0ad; --accent: #3cc2b7; --accent-fg: #04201f;
+    --sand: #d9b56a; --line: #1d3d41; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #071a1d; --panel: #0d262a; --fg: #dcecea; --muted: #8fb0ad; --accent: #3cc2b7; --accent-fg: #04201f;
+  --sand: #d9b56a; --line: #1d3d41; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 16px; line-height: 1.5;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 20px 32px;
+}
+.wrap { max-width: 760px; margin: 0 auto; display: grid; gap: 18px; }
+.eyebrow { font-family: var(--font-display); font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); font-size: .85rem; }
+h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(2.2rem, 9vw, 3.2rem); line-height: 1; margin: 2px 0 6px; text-wrap: balance; text-transform: uppercase; letter-spacing: .02em; }
+.meta { color: var(--muted); font-size: .95rem; font-variant-numeric: tabular-nums; }
+.stage { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+video, .poster { display: block; width: 100%; max-width: 100%; aspect-ratio: 16 / 9; background: #000; object-fit: cover; }
+.controls { display: grid; gap: 10px; padding: 14px; }
+button { font: 600 1rem var(--font-body); border-radius: 10px; padding: 12px 16px; border: 1px solid var(--accent); cursor: pointer; min-height: 48px; }
+button.primary { background: var(--accent); color: var(--accent-fg); }
+button.secondary { background: transparent; color: var(--accent); }
+button:disabled { opacity: .55; cursor: default; }
+button:focus-visible, a:focus-visible { outline: 3px solid var(--sand); outline-offset: 2px; }
+.bar { height: 8px; border-radius: 99px; background: var(--line); overflow: hidden; }
+.bar > i { display: block; height: 100%; width: 0; background: var(--accent); transition: width .2s; }
+.status { color: var(--muted); font-size: .92rem; min-height: 1.4em; font-variant-numeric: tabular-nums; }
+.status.err { color: var(--fg); font-weight: 600; }
+h2 { font-family: var(--font-display); font-weight: 600; text-transform: uppercase; letter-spacing: .08em; font-size: 1rem; color: var(--muted); margin: 0; }
+ol.steps { margin: 0; padding-left: 1.3em; display: grid; gap: 8px; }
+ol.steps li { max-width: 62ch; }
+ol.steps b { font-weight: 600; }
+a { color: var(--accent); }
+.note { color: var(--muted); font-size: .88rem; max-width: 62ch; }
+@media (prefers-reduced-motion: reduce) { .bar > i { transition: none; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Beach Craft 3.1 · Doku für YouTube</div>
+    <h1>Tides of the Deep</h1>
+    <div class="meta">21:27 · 1080p mit 60 fps · HEVC · 374 MiB · Englisch, mit Untertiteln und Musik</div>
+  </header>
+
+  <section class="stage" aria-label="Video">
+    <img class="poster" id="poster" src="poster.jpg" alt="Endkarte: Beach Craft 3.1, Tides of the Deep">
+    <video id="video" controls playsinline preload="none" hidden></video>
+    <div class="controls">
+      <button class="primary" id="load" type="button">Video laden (374 MiB)</button>
+      <div class="bar" id="bar" hidden><i id="fill"></i></div>
+      <button class="primary" id="save" type="button" hidden>Als MP4 speichern</button>
+      <div class="status" id="status" role="status" aria-live="polite">Am besten im WLAN laden. Danach öffnet „Als MP4 speichern“ das Teilen-Menü.</div>
+    </div>
+  </section>
+
+  <section aria-labelledby="how">
+    <h2 id="how">So kommt die Doku zu YouTube</h2>
+    <ol class="steps">
+      <li><b>Video laden</b> und warten, bis der Balken voll ist.</li>
+      <li><b>Als MP4 speichern</b> und im Teilen-Menü „Video sichern“ wählen. Dann liegt die Doku in deinen Fotos.</li>
+      <li>In der YouTube-App hochladen. Titel und Beschreibung mit Kapiteln und Musik-Credits kopierst du auf der Seite <a href="https://claude.ai/artifact/8ueVVjUpMDcYKjFBUNtdKL" target="_blank" rel="noopener">CurseForge Beschreibungen</a>, bei Beach Craft unter „So kommt das Video auf YouTube“.</li>
+      <li>Den YouTube-Link dort ins Feld von Beach Craft einfügen und „HTML kopieren“.</li>
+    </ol>
+  </section>
+
+  <p class="note">Die Datei kommt in 20 Stücken und wird erst hier im Gerät zusammengesetzt, weil die Claude-App große Dateien im Chat nicht lädt. Sie ist Byte für Byte die Datei aus dem Chat.</p>
+</div>
+
+<script>
+(function () {
+  // Asset ids of the 20 pieces, in order (filled in at publish time).
+  var CHUNKS = ["299241c69bb8f30d8aa3bdf63c7406e5", "58c6cf07e61fc071782d4e7092b545e8", "617fd74b09cbb8806a5d06bf9c9f08b8", "256b7f909a4e2b550c98fa62e78913ab", "652e9ea4fae08d8d52474e264492fc0f", "3160fbb55336c77a8a2181e37e7ac05f", "be3a46b211e728ec8f3f052793f712a3", "9c01c6f027b6d51aa3b839389f12b1a1", "4f0b0517b2bbe48fab832d8bc08bf7b3", "28c4a1d8640962ebc0ccb3c95eff42d9", "7b24014eb8c6f6036063fc39d469512b", "e20576968038f6543a6fb409ed0e2189", "281b30ec9dbb243469b57c1eb2cc5f3d", "579e1146de455cc7a8fe43b4875c093c", "714fb9d76e89622d02fcb8cd272d27cb", "cb6f87c0543b72b78aceb720913fb6ab", "03aaea2306512272e2416d95ad31b195", "ebf4c6437f51795e96a2f81ddf90f323", "a0c5de9b8a45956b31ede3c819111742", "536c476cd0e15e1eba97b79bc7a18295"];
+  var TOTAL = 392088491;
+  var FILE = "Beach Craft 3.1 - Tides of the Deep (1080p60).mp4";
+  var $ = function (id) { return document.getElementById(id); };
+  var video = $("video"), poster = $("poster"), loadBtn = $("load"), saveBtn = $("save");
+  var bar = $("bar"), fill = $("fill"), status = $("status");
+  var blob = null, url = null;
+
+  function say(text, isError) { status.textContent = text; status.className = "status" + (isError ? " err" : ""); }
+  function mb(n) { return (n / 1048576).toFixed(0); }
+  function show(got) {
+    fill.style.width = Math.min(100, got / TOTAL * 100).toFixed(1) + "%";
+    say("Lädt … " + mb(got) + " von " + mb(TOTAL) + " MiB");
+  }
+
+  async function fetchPiece(i, base) {
+    for (var attempt = 0; attempt < 3; attempt++) {
+      try {
+        var res = await fetch("/_blob/" + CHUNKS[i]);
+        if (!res.ok) throw new Error("Stück " + (i + 1) + " antwortet mit " + res.status);
+        var got = 0, parts = [];
+        if (res.body && res.body.getReader) {
+          var reader = res.body.getReader();
+          for (;;) {
+            var r = await reader.read();
+            if (r.done) break;
+            parts.push(r.value); got += r.value.byteLength; show(base + got);
+          }
+        } else {
+          var b = await res.blob(); parts.push(b); got = b.size; show(base + got);
+        }
+        return new Blob(parts);
+      } catch (e) {
+        if (attempt === 2) throw e;
+        say("Stück " + (i + 1) + " noch einmal …");
+      }
+    }
+  }
+
+  async function load() {
+    if (!CHUNKS.length) { say("Die Stücke sind noch nicht hochgeladen.", true); return; }
+    loadBtn.disabled = true; bar.hidden = false;
+    var pieces = [], base = 0;
+    try {
+      for (var i = 0; i < CHUNKS.length; i++) {
+        var p = await fetchPiece(i, base);
+        pieces.push(p); base += p.size;
+      }
+    } catch (e) {
+      say("Laden fehlgeschlagen: " + e.message + ". Tippe auf „Nochmal laden“.", true);
+      loadBtn.disabled = false; loadBtn.textContent = "Nochmal laden";
+      return;
+    }
+    blob = new Blob(pieces, { type: "video/mp4" });
+    if (blob.size !== TOTAL) {
+      say("Die Datei ist unvollständig (" + blob.size + " statt " + TOTAL + " Bytes). Tippe auf „Nochmal laden“.", true);
+      loadBtn.disabled = false; loadBtn.textContent = "Nochmal laden"; blob = null;
+      return;
+    }
+    loadBtn.hidden = true; bar.hidden = true;
+    say("Geladen. Tippe auf „Als MP4 speichern“.");
+    offerSave();
+    url = URL.createObjectURL(blob);
+    video.src = url; video.hidden = false; poster.hidden = true;
+  }
+
+  video.addEventListener("error", function () {
+    video.hidden = true; poster.hidden = false;
+  });
+
+  async function offerSave() {
+    var dl = null;
+    try { dl = window.claude && window.claude.use ? await window.claude.use("downloads") : null; } catch (e) { dl = null; }
+    if (!dl) { say("Speichern geht in dieser Ansicht nicht. Öffne die Seite in der Claude-App oder auf claude.ai.", true); return; }
+    saveBtn.hidden = false;
+    saveBtn.onclick = async function () {
+      saveBtn.disabled = true;
+      try {
+        await dl.save({ filename: FILE, data: blob });
+        say("Gespeichert. Jetzt in der YouTube-App hochladen.");
+      } catch (e) {
+        var code = e && e.code;
+        if (code === "declined") say("Speichern abgebrochen. Du kannst es nochmal versuchen.");
+        else if (code === "too_large") say("Für diese App ist die Datei zu groß. Öffne die Seite auf claude.ai im Browser und speichere dort.", true);
+        else if (code === "rate_limited") say("Ein Speichern-Dialog ist schon offen. Versuch es gleich nochmal.");
+        else { say("Speichern geht in dieser Ansicht nicht (" + (code || "unbekannt") + ").", true); }
+      }
+      saveBtn.disabled = false;
+    };
+  }
+
+  loadBtn.addEventListener("click", load);
+})();
+</script>

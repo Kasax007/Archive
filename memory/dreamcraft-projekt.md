@@ -176,8 +176,8 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   zwischen `<!-- VIDEO START -->` und `<!-- VIDEO END -->` mit dem Platzhalter `VIDEO_ID` (Player und Bild mit Link).
   Übergabeseite https://claude.ai/artifact/8ueVVjUpMDcYKjFBUNtdKL (`curseforge/delivery/build.py`): Kopier-Knöpfe für
   alle vier Beschreibungen; das Feld für den YouTube-Link setzt die ID ein, ohne Link fällt der Block weg; dazu Titel und
-  Beschreibung für YouTube. Upload-Kit `beachcraft/documentary/v2/youtube.md`. Dateien im Chat höchstens 500 MiB: die
-  1080p60-Doku (610 MiB) deshalb als HEVC neu kodiert (2 Pässe, 2850 kbit/s). Die alten 3.0-Bilder in `img/` erst
+  Beschreibung für YouTube. Upload-Kit `beachcraft/documentary/v2/youtube.md`. Dateien im Chat: Limit erst 500, dann 400 MiB;
+  die 1080p60-Doku (610 MiB) deshalb als HEVC neu kodiert (2 Pässe, 2250 kbit/s, 374 MiB, geliefert). Die alten 3.0-Bilder in `img/` erst
   löschen, wenn die neue Seite online ist. Offen beim Nutzer: Doku auf YouTube laden, Beschreibungen einfügen.
 - **Alle vier Seiten grafisch (6.11. abends):** Wunsch: Dreamcraft, Tamagotchi und Quest Icons „genauso super gestalten
   wie bei Beach Craft“. Zwei Agenten bauten sie, jede Seite mit eigener Optik und eigenem Bild-Generator, jede Zahl aus

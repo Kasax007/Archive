@@ -64,8 +64,9 @@ Ruhige, lange Doku über den ganzen Mod (Englisch, eingebrannte Untertitel, Musi
   neue Klänge für Manta, Motor und Leviathan).
 - **Handy:** private Artifact-Seite „Tides of the Deep“ (720p, 30 fps, Knopf „Als MP4 speichern“).
 - **YouTube:** `beachcraft/documentary/v2/youtube.md` mit Titel, Beschreibung mit Kapiteln, Musik-Credits, Tags und
-  Vorschaubild (`stills/endcard.png`). Für den Chat gibt es eine HEVC-Fassung in 1080p60 unter 500 MiB (die
-  H.264-Datei mit 610 MiB ist größer als das Limit für Dateien im Chat).
+  Vorschaubild (`stills/endcard.png`). Für den Chat gibt es eine HEVC-Fassung in 1080p60 mit 374 MiB (x265 fast,
+  zwei Pässe, 2250 kbit/s; die H.264-Datei mit 610 MiB ist größer als das Limit für Dateien im Chat, das zuletzt bei
+  400 MiB lag).
 
 Für Quest Icons 1.1.0 und Tamagotchi 1.2.0 gibt es kein neues Video.
 

@@ -16,7 +16,7 @@ Menü. Die Quelle liegt im Repo `Kasax007/Modpack-Development`, Branch **`26.3`*
 | Menü | FancyMenu mit 8 zufälligen Hintergründen, Drippy-Ladebildschirm mit lila Balken |
 | Shader | Iris mit BSL und Complementary Reimagined, standardmäßig **aus** |
 | Server | Server-Pack mit Startskripten für Linux, macOS und Windows |
-| Aktuell veröffentlicht | **V1.3** (Datei 9431378, Server-Pack 9431379, hochgeladen am 4.11.2026) |
+| Aktuell veröffentlicht | **V1.4** (Datei 9475197, Server-Pack 9475219, hochgeladen am 6.11.2026) |
 | Davor | V1.2.1 (Datei 9415062, Server-Pack 9415063) |
 
 ### Was im Repo liegt
@@ -513,6 +513,7 @@ Fehler (Oberwelt 1521 Chunks in 1:43, Raft-Dimension 729 Chunks, früher auch Ne
 | **V1.2** | 9409459 | 9409463 | nach dem Test der echten Installation: Menü passt in jedes Fenster, Mods- und Rent-a-Server-Knopf gehen, lila Ladebalken, Start in der Ego-Sicht, Quest Icons 1.0.1 (kein zweites Quest-Buch), Quests nennen JEI statt REI; **Just Enough Resources entfernt** |
 | **V1.2.1** | 9415062 | 9415063 | Hotfix: Quest Icons 1.0.2 – das Quest-Buch reagiert wieder auf Klicks (26.3-Maustasten) |
 | **V1.3** | 9431378 | 9431379 | Beach Craft 3.0.0 (9431301), Tamagotchi 1.2.0 (9431312), Quest Icons 1.1.0 (9429010) mit Dream Star, Quests 164 → 328 (hochgeladen am 4.11.2026) |
+| **V1.4** | 9475197 | 9475219 | Beach Craft 3.1.0 (9474711: eigenes Floß, Menschen der See, Sounds und Musik, Kai in allen Lagern), Upgraded Iron Chests 1.5.1 neu, Kapitel „Quality of Life“, Quests 328 → 348 in 15 Kapiteln (hochgeladen am 6.11.2026) |
 
 ### Was V1.3 bringt (Changelog `changelog-26.3-V1.3.md`)
 - **Beach Craft 3.0 „Tides of the Deep“** – Inselwelt, Story, Boss, Expedition Raft, Tauchen ([03](03_beach_craft.md)).
@@ -532,6 +533,15 @@ Fehler (Oberwelt 1521 Chunks in 1:43, Raft-Dimension 729 Chunks, früher auch Ne
 - **Bestehende Welten:** Schon erkundete Teile der Endless Sea behalten ihre alte Form – weiter hinausfahren. Alte
   Ankunftsplattformen haben keine Castaway-Truhe: Expedition Journal herstellen (Buch, Kompass, Papier) und auf See
   schleichend benutzen.
+
+### So wurde V1.4 gebaut (6.11.2026)
+1. Beach Craft 3.1.0 hochgeladen (Datei 9474711), nach rund 15 Minuten freigegeben (Download-Link 307).
+2. `python3 tools/mkpack.py V1.4 9429010 9474711` → Client-Pack (253 CurseForge-Mods), Server-Pack (211 Mods, 426 MB).
+3. Wie ein Launcher installiert (alle 253 Mods von CurseForge, 0 Fehler), Client bis in eine neue Welt, Quest-Buch
+   („0/217“ Pflicht-Quests), Mods geladen: raft 3.1.0+26.3, questsicons 1.1.0, tamagotchi 1.2.0, upgraded-iron-chests
+   1.5.1. Server-Pack aus der Zip: 364 Mods, „Done“ nach 12 s, „15 chapters, 348 quests“, Floß-Strukturen per
+   `/locate` gefunden. Im Log nur Umgebungs- und Erststart-Meldungen.
+4. Client (9475197) und Server-Pack (9475219, `parentFileID`) hochgeladen.
 
 ### So wurde V1.3 gebaut (4.11.2026, Reihenfolge ist wichtig)
 1. Beach Craft 3.0.0 hochgeladen (Datei 9431301) und die CurseForge-Prüfung abgewartet: Eine neue Datei ist erst nach

@@ -94,7 +94,8 @@ Challenge-Craft-Modpack v5 (erst nach deiner Testrunde, falls Quests sich noch �
     Räumen, alle 36 geprüften Personen frei und auf dem Boden, keine Spinnweben- oder Krabben-Items mehr. Übrig sind
     nur gewollte Effekte (Verwitterung, Magma in der Forge, Seegras auf Wasser der Vorlage, Gras unter Blöcken wird zu
     Erde) und bei der Sunken Plane eine geflutete Lufttasche (3 Blöcke).
-  - **Bewusst so:** Kai wohnt nur im Zelt-Lager (1 von 3 Lagerarten, so im Almanach). Die Galeone kann unter Wasser 2
+  - **Geändert 6.11.:** Kai wohnt jetzt in allen drei Lagerarten (Zelt, Unterstand, Boots-Unterschlupf).
+  - **Bewusst so:** Die Galeone kann unter Wasser 2
     Schädel verlieren. Gleichrangige Nebenstrukturen dürfen sich weiter berühren (Ruinen und Frachter).
 - [ ] Büro-Etagen und Rathaus-Treppenhaus in Port Solace ohne Nachtsicht (seit der dunkleren Dimension).
 - [x] Ton: Walgesang und Blasen (BcCheck 5.11., mit Ton-Protokoll).

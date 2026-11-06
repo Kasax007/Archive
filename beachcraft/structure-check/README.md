@@ -82,7 +82,7 @@ Kupfer oxidiert, und bei der Sunken Plane eine geflutete Lufttasche (3 Blöcke).
 
 ## Bewusst so gelassen
 
-- Kai wohnt nur im Zelt-Lager (eine von drei Lagerarten), so steht es auch im Almanach.
+- (Seit 6.11. geändert: Kai wohnt jetzt in allen drei Lagerarten.)
 - Die Galeone kann unter Wasser zwei Schädel verlieren (Items).
 - Gleichrangige Nebenstrukturen dürfen sich weiter berühren (z. B. Ruinen und Frachter).
 - Ältere Welten: Strukturen in schon erzeugten Chunks bleiben, wie sie sind.

@@ -179,6 +179,15 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   Beschreibung für YouTube. Upload-Kit `beachcraft/documentary/v2/youtube.md`. Dateien im Chat höchstens 500 MiB: die
   1080p60-Doku (610 MiB) deshalb als HEVC neu kodiert (2 Pässe, 2850 kbit/s). Die alten 3.0-Bilder in `img/` erst
   löschen, wenn die neue Seite online ist. Offen beim Nutzer: Doku auf YouTube laden, Beschreibungen einfügen.
+- **Alle vier Seiten grafisch (6.11. abends):** Wunsch: Dreamcraft, Tamagotchi und Quest Icons „genauso super gestalten
+  wie bei Beach Craft“. Zwei Agenten bauten sie, jede Seite mit eigener Optik und eigenem Bild-Generator, jede Zahl aus
+  dem Code: Dreamcraft 21bf9e6 (`make_images_v14.py`, Traum-Stil der BisectHosting-Banner, 251 Mods, 348 Quests, 157
+  neue Biome, Mod-Liste im Spoiler), Tamagotchi 9a3e063 und Quest Icons c0087b6 (je `make_images_v2.py`). Video-Blöcke:
+  Dreamcraft-Trailer (0:44) und Tamagotchi-Showcase (2:03), beide Hochformat, iframe 405×720. Übergabeseite (gleicher
+  Link) mit allen vier Vorschauen und einem YouTube-Feld je Video; Werkzeuge in `Archive/curseforge/delivery/`.
+  Dreamcraft-Trailer v3: sagt „over three hundred quests“ (vorher 160), Endkarte aus den Shader-Clips, 44,2 s.
+  x265 mit zwei Pässen: beide Pässe brauchen `-fps_mode passthrough`, sonst zählt der zweite mehr Bilder und der
+  Encoder hängt am Ende (Datei ohne moov, unbrauchbar).
 - **Film-Feedback 6.11. (vormittags):** Nutzer vermisste Anglerfisch, Containerschiff und das Crafting am Anfang
   (Ring/Energie aus Schiffswracks). Gewünscht waren neue Sounds für Mantarochen, Motor und Boss, sichtbares Eingraben der
   Krabbe, natürlichere Möwenschwärme und Aale sowie einen besseren Tauch-Clip. Mod (26.3 = 6097aca, gepusht):

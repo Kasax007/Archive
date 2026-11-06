@@ -22,6 +22,14 @@ Spieler sie findet) · Your Own Raft (3.1) · People of the Sea (3.1, eine Perso
 
 Zusammenfügen: `printf "file '%s'\n" beachcraft3_documentary_v2_part*.mp4 > l.txt && ffmpeg -f concat -safe 0 -i l.txt -c copy beachcraft3_documentary_v2.mp4`
 
+**Neuer Schnitt 6.11. (Rückmeldung des Nutzers):** Treibholz-Stumpf (W1), Portalrahmen und Energiestab werden
+gecraftet, Ring aus der Schiffswrack-Truhe und im Hochofen (W2/W3), der zerbrochene Frachter (P9), Mantas mit neuer
+Stimme (B3, C0, C4), Anglerfisch beleuchtet mit Biss (C6), Muräne im Loch mit Zustoßen (C7), Krabben graben sich ein
+(C8), Möwenschwarm über dem Meer und Möwen im Weizen (C10), Feld mit Vogelscheuche (I21), Taucherausrüstung neu
+(I11/I13/I15: Inventar, Taucher über dem Riff, Luftanzeige groß mit Untertiteln oben), Motor startet (R0). Ton: alle
+Spielgeräusche jetzt zeitrichtig (siehe Zeitbasis unten), neuer Motor als Schleife, Kampf mit dem Leviathan neu
+gemischt. Whisper auf der Mischung: 99,5 %.
+
 Rohmaterial: `footage/bc3v2/` (eine MP4 je Clip, 30 Spiel-fps, CRF 16–18, dazu `.sounds.jsonl`/`.shot.json`;
 Standbilder als `stills_<lauf>.mp4`). Die NPC- und Floßbau-Clips (`n_*`, `r_*`) stammen aus einer zweiten Sitzung
 (`footage/bc3v2/README_npc_raft.md`).

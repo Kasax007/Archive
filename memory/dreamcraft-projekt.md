@@ -179,6 +179,13 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   Beschreibung für YouTube. Upload-Kit `beachcraft/documentary/v2/youtube.md`. Dateien im Chat: Limit erst 500, dann 400 MiB;
   die 1080p60-Doku (610 MiB) deshalb als HEVC neu kodiert (2 Pässe, 2250 kbit/s, 374 MiB, geliefert). Die alten 3.0-Bilder in `img/` erst
   löschen, wenn die neue Seite online ist. Offen beim Nutzer: Doku auf YouTube laden, Beschreibungen einfügen.
+- **Outreach (7.11.):** Entscheidungen des Nutzers: Bisect-Banner bleiben oben, Name „Tamagotchi“ bleibt, Modrinth
+  später, Quest Icons 26.2 + FTB-Quests-Import (Agent), Outreach ja. `Archive/outreach/` (discover.py, score.py,
+  targets.csv, suppression.csv, drafts/, seed_page.py, page/). Freigabeseite mit Datenbank (nur Owner/Editor):
+  https://claude.ai/artifact/61GSVUCx8Z4BjonZtYFfpE (25 Entwürfe: 19 bereit, 6 warten auf Modrinth/26.2).
+  Werktags-Routine trig_01CCt95NzvUNE8aKqaNFs2oi (7:37 Uhr deutscher Zeit, in diese Sitzung): Status übernehmen,
+  Mo/Do suchen, bis 5 neue Entwürfe, freitags KPIs. Nie selbst senden. E-Mails brauchen die Postanschrift des
+  Nutzers (auf der Seite eintragen). Den Dreamcraft-Short gibt es schon auf YouTube (G-whF3xKTQ4, alte Fassung).
 - **Wachstumsplan (7.11.):** Recherche zu CurseForge-Ranking, Optimierung, neuen Projekten und Outreach:
   `research/curseforge-wachstum-2026-11.md` (+ CSV), Seite https://claude.ai/artifact/PrjZuwcwu8HErjGgS6doef
   (`research/tools/build_growth.py`). Kern: Popularity ≈ Downloads der letzten 60–90 Tage; Suche nur Name +

@@ -1,0 +1,4 @@
+# API caches and the regenerated candidate snapshot (discover.py rebuilds both)
+cache/
+data/candidates.json
+*.tmp

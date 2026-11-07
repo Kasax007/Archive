@@ -1,0 +1,299 @@
+<title>Outreach Freigabe</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+:root {
+  --bg: #f4f1ec; --card: #fffdf9; --fg: #221c17; --muted: #6d6158; --line: #e3d9cf; --field: #ffffff;
+  --accent: #e8572a; --accent-fg: #ffffff; --accent-soft: #fde5da;
+  --ok: #2f7d45; --ok-soft: #dcefe1; --wait: #8a5a00; --wait-soft: #f8ead0; --bad: #a3372b; --bad-soft: #f8dfdb;
+  --info: #2d5fa8; --info-soft: #e1eaf8;
+  --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #14100d; --card: #1f1915; --fg: #f1e9e2; --muted: #ae9f94; --line: #372d26; --field: #18130f;
+    --accent: #ff7a4d; --accent-fg: #1b110c; --accent-soft: #42251a;
+    --ok: #86d39c; --ok-soft: #1b3022; --wait: #f0c06a; --wait-soft: #3a2c13; --bad: #f2a196; --bad-soft: #3d1f1a;
+    --info: #8db6f2; --info-soft: #1c2a40; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #14100d; --card: #1f1915; --fg: #f1e9e2; --muted: #ae9f94; --line: #372d26; --field: #18130f;
+  --accent: #ff7a4d; --accent-fg: #1b110c; --accent-soft: #42251a;
+  --ok: #86d39c; --ok-soft: #1b3022; --wait: #f0c06a; --wait-soft: #3a2c13; --bad: #f2a196; --bad-soft: #3d1f1a;
+  --info: #8db6f2; --info-soft: #1c2a40; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font: 15px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.wrap { max-width: 760px; margin: 0 auto; padding-block: 24px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 16px; }
+header { display: grid; gap: 8px; }
+.kicker { font: 600 12px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+h1 { font: 700 clamp(28px, 7vw, 40px)/1.05 var(--display); margin: 0; letter-spacing: -.01em; }
+header p { margin: 0; color: var(--muted); max-width: 64ch; }
+.rules { display: flex; flex-wrap: wrap; gap: 6px; margin: 2px 0 0; padding: 0; list-style: none; }
+.rules li { font-size: 12.5px; background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 4px 10px; }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(96px, 1fr)); gap: 8px; }
+.kpi { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; }
+.kpi b { display: block; font: 700 24px/1.1 var(--display); }
+.kpi span { font-size: 12.5px; color: var(--muted); }
+.kpi.due b { color: var(--accent); }
+details.sender { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 10px 14px; }
+details.sender summary { cursor: pointer; font-weight: 600; }
+.senderform { display: grid; gap: 8px; margin-top: 10px; }
+.senderform label { display: grid; gap: 4px; font-size: 13px; color: var(--muted); }
+input, textarea { width: 100%; font: inherit; color: var(--fg); background: var(--field); border: 1px solid var(--line); border-radius: 9px; padding: 9px 11px; min-width: 0; }
+textarea { min-height: 170px; resize: vertical; font-size: 14px; line-height: 1.5; }
+nav.tabs { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); padding-block: 8px;
+  display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; }
+nav.tabs::-webkit-scrollbar { display: none; }
+nav.tabs button { flex: none; border-radius: 999px; }
+nav.tabs button[aria-pressed="true"] { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+button, .btn { font: 600 14px/1 system-ui, sans-serif; border-radius: 10px; padding: 10px 13px; cursor: pointer; min-height: 40px;
+  border: 1px solid var(--line); background: var(--field); color: var(--fg); text-decoration: none; display: inline-flex; gap: 6px; align-items: center; }
+button.primary { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); }
+button.okb { background: var(--ok-soft); color: var(--ok); border-color: transparent; }
+button.badb { background: var(--bad-soft); color: var(--bad); border-color: transparent; }
+button:disabled { opacity: .55; cursor: default; }
+button:focus-visible, .btn:focus-visible, input:focus-visible, textarea:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+#list { display: grid; gap: 14px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 16px; display: grid; gap: 10px; min-width: 0; }
+.top { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.top h2 { font: 700 21px/1.15 var(--display); margin: 0; }
+.chip { font: 600 11px/1 var(--mono); letter-spacing: .05em; text-transform: uppercase; padding: 5px 7px; border-radius: 6px; background: var(--info-soft); color: var(--info); }
+.chip.creator { background: var(--accent-soft); color: var(--accent); }
+.score { font: 600 12px var(--mono); color: var(--muted); margin-left: auto; }
+.sub { font-size: 13px; color: var(--muted); }
+.card p { margin: 0; overflow-wrap: anywhere; }
+.note { font-size: 13.5px; }
+.note b { font-weight: 600; }
+.hold { background: var(--wait-soft); color: var(--wait); border-radius: 9px; padding: 8px 10px; font-size: 13.5px; }
+.state { border-radius: 9px; padding: 8px 10px; font-size: 13.5px; background: var(--ok-soft); color: var(--ok); }
+.state.due { background: var(--accent-soft); color: var(--accent); }
+.state.end { background: var(--line); color: var(--fg); }
+details.facts summary { cursor: pointer; font-size: 13.5px; font-weight: 600; }
+details.facts ul { margin: 8px 0 0; padding-left: 20px; font-size: 13.5px; display: grid; gap: 4px; }
+.msg { display: grid; gap: 8px; border-top: 1px solid var(--line); padding-top: 10px; }
+.msg .label { font-size: 13px; font-weight: 600; color: var(--muted); }
+.footer { font-size: 12.5px; color: var(--muted); background: var(--bg); border-radius: 8px; padding: 8px 10px; white-space: pre-wrap; }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.warn { font-size: 13px; color: var(--bad); }
+.empty, #loadnote { color: var(--muted); font-size: 14px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="kicker">Quest Icons · Beach Craft · Tamagotchi · Dreamcraft</div>
+    <h1>Outreach Freigabe</h1>
+    <p>Jeden Werktag legt eine Aufgabe neue Entwürfe hierher. Du liest sie, passt sie an, kopierst sie und sendest selbst über den angegebenen Weg. Danach hier abhaken; die Aufgabe merkt sich das und erinnert an die eine Nachfrage nach 7 Tagen.</p>
+    <ul class="rules" aria-label="Regeln">
+      <li>nur über eingeladene Wege</li>
+      <li>höchstens eine Nachfrage</li>
+      <li>„stop“ heißt nie wieder</li>
+      <li>kein Geld für Aufnahme</li>
+    </ul>
+  </header>
+
+  <div class="kpis" id="kpis" aria-live="polite"></div>
+
+  <details class="sender" id="senderbox">
+    <summary>Absender für E-Mails <span class="sub" id="senderstate"></span></summary>
+    <div class="senderform">
+      <label>Postanschrift (Pflicht in Werbe-Mails, auch ein Postfach)<input id="postal" autocomplete="off"></label>
+      <label>Link zu deiner Datenschutzerklärung (optional)<input id="privacy" inputmode="url" autocomplete="off"></label>
+      <div class="actions"><button type="button" id="savesender">Speichern</button><span class="sub" id="sendermsg"></span></div>
+    </div>
+  </details>
+
+  <nav class="tabs" aria-label="Ansicht">
+    <button type="button" data-tab="ready" aria-pressed="true">Bereit</button>
+    <button type="button" data-tab="hold" aria-pressed="false">Warten</button>
+    <button type="button" data-tab="sent" aria-pressed="false">Gesendet</button>
+    <button type="button" data-tab="done" aria-pressed="false">Erledigt</button>
+  </nav>
+
+  <p id="loadnote">Lade die Entwürfe …</p>
+  <div id="list"></div>
+</div>
+
+<script>
+(function () {
+  var TABS = { ready: ['draft'], hold: ['hold'], sent: ['sent', 'followup_sent'], done: ['yes', 'no', 'stop', 'skip'] };
+  var END = { yes: 'Zusage', no: 'Absage', stop: 'Stop: nie wieder anschreiben', skip: 'Nicht gesendet' };
+  var state = { rows: {}, sender: {}, tab: 'ready', db: null, busy: {}, edits: {} };
+  var $ = function (id) { return document.getElementById(id); };
+
+  function today() { var d = new Date(); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); }
+  function plusDays(iso, n) { var d = new Date(iso + 'T12:00:00'); d.setDate(d.getDate() + n); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); }
+  function de(iso) { if (!iso) return ''; var p = iso.split('-'); return p[2] + '.' + p[1] + '.' + p[0]; }
+  function isDue(r) { return r.status === 'sent' && r.follow_up_on && r.follow_up_on <= today(); }
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  function fill(text) {
+    var s = state.sender || {};
+    return text.replace(/\{postal_address\}/g, s.postal_address || '{postal_address}').replace(/\{privacy_link\}/g, s.privacy_link || '{privacy_link}');
+  }
+  function flash(btn, msg) {
+    var old = btn.dataset.label || btn.textContent; btn.dataset.label = old; btn.textContent = msg;
+    clearTimeout(btn._t); btn._t = setTimeout(function () { btn.textContent = old; }, 2000);
+  }
+  function copy(btn, text, fallbackEl) {
+    function fb() {
+      if (fallbackEl) { fallbackEl.focus(); fallbackEl.select && fallbackEl.select(); }
+      flash(btn, 'Markiert: jetzt kopieren');
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(function () { flash(btn, 'Kopiert ✓'); }, fb);
+    else fb();
+  }
+
+  function kpis() {
+    var rows = Object.values(state.rows), c = function (f) { return rows.filter(f).length; };
+    var items = [
+      ['Bereit', c(function (r) { return r.status === 'draft'; }), ''],
+      ['Warten', c(function (r) { return r.status === 'hold'; }), ''],
+      ['Gesendet', c(function (r) { return r.status === 'sent' || r.status === 'followup_sent'; }), ''],
+      ['Nachfrage fällig', c(isDue), 'due'],
+      ['Zusagen', c(function (r) { return r.status === 'yes'; }), '']
+    ];
+    var box = $('kpis'); box.textContent = '';
+    items.forEach(function (it) { var k = el('div', 'kpi ' + it[2]); k.appendChild(el('b', null, String(it[1]))); k.appendChild(el('span', null, it[0])); box.appendChild(k); });
+  }
+
+  async function write(id, patch, btn) {
+    if (!state.db || state.busy[id]) return;
+    state.busy[id] = true; if (btn) btn.disabled = true;
+    patch.updated_by = 'user'; patch.updated_at = new Date().toISOString();
+    try { await state.db.doc('targets/' + id).update(patch); }
+    catch (e) { $('loadnote').hidden = false; $('loadnote').textContent = 'Speichern ging nicht (' + (e && e.code || 'Fehler') + '). Versuch es gleich nochmal.'; }
+    state.busy[id] = false; if (btn) btn.disabled = false;
+  }
+
+  function card(id, r) {
+    var c = el('article', 'card');
+    var top = el('div', 'top');
+    top.appendChild(el('h2', null, r.name));
+    top.appendChild(el('span', 'chip' + (r.type === 'creator' ? ' creator' : ''), r.type === 'creator' ? 'Creator' : 'Pack'));
+    top.appendChild(el('span', 'score', 'Score ' + r.score));
+    c.appendChild(top);
+    c.appendChild(el('div', 'sub', r.platform + (r.fit ? ' · passt: ' + r.fit : '')));
+    if (r.status === 'hold' && r.status_note) c.appendChild(el('p', 'hold', r.status_note));
+    var p1 = el('p', 'note'); p1.appendChild(el('b', null, 'Weg: ')); p1.appendChild(document.createTextNode(r.route || '')); c.appendChild(p1);
+    var p2 = el('p', 'note'); p2.appendChild(el('b', null, 'Warum eingeladen: ')); p2.appendChild(document.createTextNode(r.why || '')); c.appendChild(p2);
+    if (r.before) { var p3 = el('p', 'note'); p3.appendChild(el('b', null, 'Vor dem Senden: ')); p3.appendChild(document.createTextNode(r.before)); c.appendChild(p3); }
+    if (r.facts && r.facts.length) {
+      var d = el('details', 'facts'); d.appendChild(el('summary', null, 'Belege (' + r.facts.length + ')'));
+      var ul = el('ul'); r.facts.forEach(function (f) { ul.appendChild(el('li', null, f)); }); d.appendChild(ul); c.appendChild(d);
+    }
+
+    // the message
+    var m = el('div', 'msg');
+    m.appendChild(el('div', 'label', 'Text · ' + (r.channel || '')));
+    var subj = null;
+    var ed = state.edits[id] || {};
+    if (r.subject) { subj = el('input'); subj.value = ed.subject != null ? ed.subject : r.subject; subj.setAttribute('aria-label', 'Betreff'); m.appendChild(subj); }
+    var ta = el('textarea'); ta.value = ed.message != null ? ed.message : (r.message || ''); ta.setAttribute('aria-label', 'Nachricht'); m.appendChild(ta);
+    if (r.footer) m.appendChild(el('div', 'footer', fill(r.footer)));
+    var warn = el('div', 'warn'); m.appendChild(warn);
+    var acts = el('div', 'actions');
+    var bCopy = el('button', 'primary', 'Text kopieren'); bCopy.type = 'button';
+    bCopy.onclick = function () {
+      var t = fill(ta.value + (r.footer ? '\n\n' + r.footer : ''));
+      warn.textContent = /\{postal_address\}/.test(t) ? 'Die Postanschrift fehlt noch: oben unter „Absender für E-Mails“ eintragen.' : '';
+      copy(bCopy, t, ta);
+    };
+    acts.appendChild(bCopy);
+    if (subj) { var bSub = el('button', null, 'Betreff kopieren'); bSub.type = 'button'; bSub.onclick = function () { copy(bSub, subj.value, subj); }; acts.appendChild(bSub); }
+    if (r.url) { var a = el('a', 'btn', 'Öffnen ↗'); a.href = r.url; a.target = '_blank'; a.rel = 'noopener'; acts.appendChild(a); }
+    var bSave = el('button', null, 'Änderung speichern'); bSave.type = 'button'; bSave.hidden = true;
+    var mark = function () {
+      var same = (ta.value === (r.message || '')) && (!subj || subj.value === r.subject);
+      bSave.hidden = same;
+      if (same) delete state.edits[id]; else state.edits[id] = { message: ta.value, subject: subj ? subj.value : undefined };
+    };
+    mark();
+    ta.addEventListener('input', mark); if (subj) subj.addEventListener('input', mark);
+    bSave.onclick = async function () { var p = { message: ta.value, edited: true }; if (subj) p.subject = subj.value; await write(id, p, bSave); delete state.edits[id]; };
+    acts.appendChild(bSave);
+    m.appendChild(acts);
+    c.appendChild(m);
+
+    // status
+    var s = el('div', 'actions');
+    function btn(label, cls, patch) { var b = el('button', cls, label); b.type = 'button'; b.onclick = function () { write(id, typeof patch === 'function' ? patch() : patch, b); }; s.appendChild(b); }
+    if (r.status === 'draft') {
+      btn('Gesendet ✓', 'okb', function () { var t = today(); return { status: 'sent', sent_on: t, follow_up_on: plusDays(t, 7) }; });
+      btn('Später', null, { status: 'hold', status_note: 'Von dir zurückgestellt.' });
+      btn('Nicht senden', 'badb', { status: 'skip' });
+    } else if (r.status === 'hold') {
+      btn('Jetzt freigeben', null, { status: 'draft' });
+      btn('Nicht senden', 'badb', { status: 'skip' });
+    } else if (r.status === 'sent' || r.status === 'followup_sent') {
+      var info = el('p', 'state' + (isDue(r) ? ' due' : ''), 'Gesendet am ' + de(r.sent_on) + (r.status === 'sent' ? ' · Nachfrage ab ' + de(r.follow_up_on) : ' · Nachfrage gesendet am ' + de(r.followup_on || '')));
+      c.appendChild(info);
+      if (isDue(r) && r.followup) {
+        var fu = el('div', 'footer', r.followup); c.appendChild(fu);
+        var bFu = el('button', null, 'Nachfrage kopieren'); bFu.type = 'button'; bFu.onclick = function () { copy(bFu, r.followup, null); }; s.appendChild(bFu);
+        btn('Nachfrage gesendet', 'okb', function () { return { status: 'followup_sent', followup_on: today() }; });
+      }
+      btn('Antwort: Ja', 'okb', { status: 'yes' });
+      btn('Antwort: Nein', null, { status: 'no' });
+      btn('Stop', 'badb', { status: 'stop' });
+    } else {
+      c.appendChild(el('p', 'state end', END[r.status] || r.status));
+      if (r.status !== 'stop') btn('Zurück zu „Bereit“', null, { status: 'draft' });
+    }
+    c.appendChild(s);
+    return c;
+  }
+
+  function render() {
+    kpis();
+    var list = $('list'); list.textContent = '';
+    var ids = Object.keys(state.rows).filter(function (id) { return TABS[state.tab].indexOf(state.rows[id].status) >= 0; });
+    ids.sort(function (a, b) { var A = state.rows[a], B = state.rows[b]; return (isDue(B) - isDue(A)) || (B.score - A.score) || A.name.localeCompare(B.name); });
+    if (!ids.length) list.appendChild(el('p', 'empty', { ready: 'Gerade nichts zu senden. Neue Entwürfe kommen werktags.', hold: 'Nichts wartet.', sent: 'Noch nichts gesendet.', done: 'Noch nichts erledigt.' }[state.tab]));
+    ids.forEach(function (id) { list.appendChild(card(id, state.rows[id])); });
+  }
+
+  document.querySelectorAll('nav.tabs button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      state.tab = b.dataset.tab;
+      document.querySelectorAll('nav.tabs button').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+      render();
+    });
+  });
+
+  function senderUI() {
+    var s = state.sender || {};
+    if (document.activeElement !== $('postal')) $('postal').value = s.postal_address || '';
+    if (document.activeElement !== $('privacy')) $('privacy').value = s.privacy_link || '';
+    $('senderstate').textContent = s.postal_address ? '· eingetragen' : '· fehlt noch';
+  }
+  $('savesender').addEventListener('click', async function () {
+    if (!state.db) return;
+    var b = $('savesender'); b.disabled = true;
+    try { await state.db.doc('settings/sender').set({ postal_address: $('postal').value.trim(), privacy_link: $('privacy').value.trim() }); $('sendermsg').textContent = 'Gespeichert.'; }
+    catch (e) { $('sendermsg').textContent = 'Speichern ging nicht (' + (e && e.code || 'Fehler') + ').'; }
+    b.disabled = false;
+  });
+
+  (async function start() {
+    var db = null;
+    try { db = window.claude && window.claude.use ? await window.claude.use('db') : null; } catch (e) { db = null; }
+    if (!db) { $('loadnote').textContent = 'Die Entwürfe lassen sich in dieser Ansicht nicht laden. Öffne die Seite auf claude.ai oder in der Claude-App.'; return; }
+    state.db = db;
+    var timer = setTimeout(function () { $('loadnote').textContent = 'Die Daten sind noch nicht erreichbar. Einen Moment …'; }, 10000);
+    db.collection('targets').onSnapshot(function (snap) {
+      var rows = {}; snap.docs.forEach(function (d) { if (d.exists) rows[d.id] = d.data(); });
+      state.rows = rows;
+      if (!snap.metadata.fromCache) { clearTimeout(timer); $('loadnote').hidden = true; }
+      render();
+    }, function (e) { clearTimeout(timer); $('loadnote').hidden = false; $('loadnote').textContent = 'Die Entwürfe lassen sich gerade nicht laden (' + (e && e.code || 'Fehler') + ').'; });
+    db.doc('settings/sender').onSnapshot(function (d) { state.sender = d.exists ? d.data() : {}; senderUI(); render(); }, function () {});
+  })();
+})();
+</script>

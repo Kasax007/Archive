@@ -1,0 +1,80 @@
+{
+  "user_agent": "Kasax007-outreach/1.0 (github.com/Kasax007)",
+  "own_authors": ["Kasax007"],
+  "projects": {
+    "QI": {"name": "Quest Icons", "cf_id": 690531, "slug": "quest-icons",
+           "url": "https://www.curseforge.com/minecraft/mc-mods/quest-icons",
+           "versions": ["26.3"], "upcoming_versions": ["26.2"], "modrinth_id": null},
+    "BC": {"name": "Beach Craft", "cf_id": 1010922, "slug": "beach-craft",
+           "url": "https://www.curseforge.com/minecraft/mc-mods/beach-craft",
+           "versions": ["26.3"], "upcoming_versions": [], "modrinth_id": null},
+    "TG": {"name": "Tamagotchi", "cf_id": 1758309, "slug": "tamagotchi",
+           "url": "https://www.curseforge.com/minecraft/mc-mods/tamagotchi",
+           "versions": ["26.3"], "upcoming_versions": [], "modrinth_id": null},
+    "DC": {"name": "Dreamcraft", "cf_id": 545167, "slug": "dreamcraft-new",
+           "url": "https://www.curseforge.com/minecraft/modpacks/dreamcraft-new",
+           "versions": ["26.3"], "upcoming_versions": [], "modrinth_id": null}
+  },
+  "mc_versions": ["26.2", "26.3"],
+  "loader": "fabric",
+
+  "quest_book_mods": ["ftb-quests", "ftb-quests-fabric", "ftb-quests-forge", "ftbquests", "heracles", "odyssey",
+    "odyssey-quests", "justquests", "theseus-quests", "quest-icons", "darkquesting", "boundless-quests",
+    "notquests", "antos", "mythicquests", "ion-quests", "simply-quests", "questry", "ids-questwright",
+    "neroquests", "sp-quests", "questmania", "player-quest-board", "better-questing", "betterquesting",
+    "vanilla-progression-wilderness-bound-edition", "vanilla-progression-chaos-cubed-edition",
+    "medieval-immersed-quests-data", "progression-mod"],
+  "side_quest_mods": ["daily-quests", "r3ct-daily-quests-rewards", "village-quest", "village-quests",
+    "village-bounties", "bountiful", "update-advancement-quests", "playernoticeboard", "pumpkillagers-quest",
+    "villagers-remember-quests-trust-fair-trades", "quest-api", "immersive-level-up-xp-advancement-quest-effects"],
+  "quest_tokens": ["quest", "quests", "questing", "questbook", "questline", "questlines"],
+  "guide_mods": ["patchouli", "lavender", "guideme", "modonomicon", "akashic-tome", "emberwild-journey-book"],
+  "raft_tokens": ["raft", "rafts"],
+  "ocean_tokens": ["ocean", "oceans", "oceanic", "sea", "seas", "aquatic", "underwater", "diving", "marine",
+    "reef", "reefs", "coral", "submerged", "abyss", "abyssal", "shipwreck", "shipwrecks", "pirate", "pirates"],
+  "pet_tokens": ["pet", "pets", "tame", "tameable", "taming", "companion", "companions", "familiar", "familiars"],
+  "pet_exclude": ["pet-your-animals", "petting"],
+
+  "themes": {
+    "worldgen": ["biome", "biomes", "terralith", "tectonic", "terrain", "worldgen", "regions", "overworld", "caves", "cave", "nature"],
+    "structures": ["dungeon", "dungeons", "structure", "structures", "village", "villages", "towns", "tower", "towers",
+      "castle", "castles", "ruins", "yungs", "arise", "taverns", "temple", "temples", "fortress", "explorify", "repurposed", "ct-overhaul"],
+    "magic": ["magic", "magical", "spell", "spells", "wizard", "wizards", "arcane", "mana", "rune", "runes", "sorcery", "witchery", "ars"],
+    "tech": ["create", "tech", "technology", "industrial", "industry", "machine", "machines", "mechanical", "factory", "automation", "reborn"],
+    "rpg_combat": ["rpg", "combat", "weapon", "weapons", "sword", "swords", "armor", "armour", "boss", "bosses", "leveling", "skill", "skills", "classes", "loot"],
+    "mobs": ["mob", "mobs", "creature", "creatures", "animal", "animals", "fauna", "naturalist", "alexs", "mowzies", "critters", "beasts", "dragon", "dragons", "foes"],
+    "farming_food": ["farm", "farming", "farmers", "crop", "crops", "cook", "cooking", "food", "foods", "delight", "kitchen", "brewing", "bakery"],
+    "building": ["furniture", "decor", "decoration", "deco", "building", "chisel", "macaw", "macaws", "handcrafted", "supplementaries"],
+    "dimensions": ["dimension", "dimensions", "aether", "twilight", "deeper", "darker", "betterend", "betternether", "nether", "end"]
+  },
+
+  "cf_content_categories": ["Adventure and RPG", "Quests", "Tech", "Magic", "Exploration", "Skyblock", "Hardcore",
+    "Combat / PvP", "Map Based", "Mini Game", "Sci-Fi", "Extra Large", "Expert", "Horror"],
+  "mr_content_categories": ["adventure", "challenging", "combat", "kitchen-sink", "magic", "quests", "technology"],
+  "perf_keywords": ["fps", "optimi", "performance", "potato", "low end", "low-end", "lag", "boost", "booster",
+    "sodium", "lightweight", "shader", "shaders", "xray", "x-ray", "pvp", "client", "hud", "keystrokes", "vulkan", "voxy", "distant horizons"],
+  "bc_theme_categories": ["Adventure and RPG", "Exploration", "Quests", "Extra Large", "Hardcore", "adventure", "kitchen-sink", "quests", "challenging"],
+  "tg_theme_categories": ["Adventure and RPG", "Exploration", "Quests", "Extra Large", "Vanilla+", "adventure", "kitchen-sink", "quests"],
+
+  "score": {
+    "content": 25, "content_mixed": 10,
+    "fresh_days": 30, "fresh": 20,
+    "dl_min": 500, "dl_max": 100000, "downloads": 15,
+    "gap_qi": 20, "gap_theme": 15, "gap_other": 10, "gap_unknown": 5,
+    "route_invited": 15, "route_feedback": 12, "route_issues": 8, "route_discord": 5,
+    "language": 5, "languages": ["en", "de"],
+    "qualified": 60,
+    "creator_audience_min": 1000, "creator_audience_max": 100000
+  },
+
+  "limits": {
+    "enrich_max_age_days": 120,
+    "enrich_min_downloads": 300,
+    "cf_refresh_days": 6,
+    "discord_refresh_days": 14,
+    "github_repos_per_run": 25,
+    "zip_max_bytes": 4000000,
+    "delete_after_days": 183,
+    "follow_up_days": 7
+  }
+}

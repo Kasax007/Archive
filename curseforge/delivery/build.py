@@ -91,12 +91,43 @@ for p in cfg['projects']:
       </ol>
     </details>'''
 
+    meta = ''
+    m = p.get('meta')
+    if m:
+        import html as _h
+        def copybtn(label, text):
+            return f'<button type="button" data-copytext="{_h.escape(text, quote=True)}">{label}</button>'
+        rows = []
+        rows.append(f'''
+      <div class="mrow">
+        <div class="mlabel">Kurzbeschreibung (Summary) <span class="size">{len(m['summary_new'])} Zeichen</span></div>
+        <p class="mnew">{_h.escape(m['summary_new'])}</p>
+        <div class="actions">{copybtn('Kurzbeschreibung kopieren', m['summary_new'])}</div>
+        <p class="mold">Bisher: „{_h.escape(m['summary_old'])}“</p>
+      </div>''')
+        if m.get('name_new'):
+            rows.append(f'''
+      <div class="mrow">
+        <div class="mlabel">Name mit Untertitel <span class="muted">(optional, hilft der Suche)</span></div>
+        <p class="mnew small">{_h.escape(m['name_new'])}</p>
+        <div class="actions">{copybtn('Namen kopieren', m['name_new'])}</div>
+        <p class="mold">Bisher: „{_h.escape(m['name_old'])}“</p>
+      </div>''')
+        if m.get('cats_new'):
+            rows.append(f'''
+      <div class="mrow">
+        <div class="mlabel">Kategorien</div>
+        <p class="cats"><b>Neu:</b> {', '.join(_h.escape(c) for c in m['cats_new'])}</p>
+        <p class="mold">Bisher: {', '.join(_h.escape(c) for c in m['cats_old'])}</p>
+      </div>''')
+        meta = '\n    <div class="meta">' + ''.join(rows) + '\n    </div>'
+
     chip_cls, chip_label = p['chip']
     cards.append(f'''
   <article class="card{' lead' if chip_cls != 'same' else ''}" id="{k}">
     <div class="top"><h2>{p['name']}</h2><span class="chip {chip_cls}">{chip_label}</span></div>
     <div class="ids">{p['ids']}</div>
-{chr(10).join(about)}{preview}{yt}
+{chr(10).join(about)}{meta}{preview}{yt}
     <div class="actions">
       <button class="primary" data-copy="{k}">HTML kopieren</button>
       <a class="btn" href="{p['url']}" target="_blank" rel="noopener">Projektseite ↗</a>
@@ -168,6 +199,14 @@ button, .btn { font: 600 14px/1 system-ui, sans-serif; border-radius: 10px; padd
 button.primary { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); }
 button:focus-visible, .btn:focus-visible, input:focus-visible, summary:focus-visible, nav.jump a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .size { font: 12px var(--mono); color: var(--muted); }
+.meta { display: grid; gap: 10px; background: var(--accent-soft); border-radius: 12px; padding: 12px; }
+.mrow { display: grid; gap: 6px; }
+.mrow + .mrow { border-top: 1px solid color-mix(in srgb, var(--accent) 25%, transparent); padding-top: 10px; }
+.mlabel { font-weight: 600; font-size: 14px; display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; }
+.mnew { font-size: 16px; line-height: 1.45; background: var(--field); border-radius: 9px; padding: 10px 12px; margin: 0; }
+.mnew.small { font-size: 15px; }
+.mold { font-size: 13px; color: var(--muted); margin: 0; }
+.cats { margin: 0; font-size: 14px; }
 .yt { display: grid; gap: 6px; background: var(--sea-soft); border-radius: 12px; padding: 12px; }
 .yt label { font-weight: 600; font-size: 14px; }
 .yt input { width: 100%; font: 14px var(--mono); padding: 10px 12px; border-radius: 9px; border: 1px solid var(--line); background: var(--field); color: var(--fg); min-width: 0; }
@@ -257,6 +296,20 @@ footer { font-size: 13px; color: var(--muted); display: grid; gap: 6px; }
     try { ok = document.execCommand('copy'); } catch (e) {}
     flash(btn, ok ? 'Kopiert ✓' : 'Markiert: jetzt kopieren');
   }
+  document.querySelectorAll('button[data-copytext]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var t = btn.getAttribute('data-copytext');
+      function fb() {
+        var p = btn.closest('.mrow').querySelector('.mnew');
+        var r = document.createRange(); r.selectNodeContents(p);
+        var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+        flash(btn, 'Markiert: jetzt kopieren');
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(t).then(function () { flash(btn, 'Kopiert ✓'); }, fb);
+      } else { fb(); }
+    });
+  });
   document.querySelectorAll('button[data-copy]').forEach(function (btn) {
     btn.addEventListener('click', function () {
       var key = btn.dataset.copy, t = text(key);

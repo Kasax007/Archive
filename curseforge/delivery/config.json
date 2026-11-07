@@ -1,6 +1,6 @@
 {
- "date": "Stand 6. November 2026",
- "intro": "Alle vier Projektseiten im neuen Stil: wenig Text, viele Grafiken, alle Zahlen aus dem Code. Bei Beach Craft, Dreamcraft und Tamagotchi fügst du den YouTube-Link des Videos ins Feld ein, dann steht das Video in der kopierten Beschreibung. Ohne Link fehlt nur der Video-Block.",
+ "date": "Stand 7. November 2026",
+ "intro": "Alle vier Projektseiten im neuen Stil, dazu bei jedem Projekt die neue <b>Kurzbeschreibung</b> (Summary) zum Kopieren. Die CurseForge-Suche liest nur Name und Kurzbeschreibung, nicht die Beschreibung. Ändern kannst du beides in der <a href=\"https://authors.curseforge.com/\" target=\"_blank\" rel=\"noopener\">Author Console</a>: Projekt öffnen, dann die Projekt-Details (Name, Summary, Kategorien) bearbeiten und speichern. Bei Projekten mit Video fügst du den YouTube-Link ins Feld ein; ohne Link fehlt nur der Video-Block.",
  "footer": "Alle Texte liegen auch als HTML-Dateien im Chat und in den Repos unter <code>docs/curseforge/description.html</code> (Branch <code>26.3</code>). Die alten Bilder bleiben in den Repos, bis die neuen Seiten online sind.",
  "projects": [
   {
@@ -22,6 +22,26 @@
     "yt_title": "Beach Craft 3.1 - Tides of the Deep: a calm documentary of the whole mod (with shaders)",
     "yt_desc": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/descpage/yt_desc.txt",
     "hint": "Film speichern: auf der Seite <a href=\"https://claude.ai/artifact/L3gp3aBtLzw4Rt7jdN8Z8L\" target=\"_blank\" rel=\"noopener\">Tides of the Deep 1080p</a> erst „Video laden“, dann „Als MP4 speichern“ (1080p mit 60 fps, 374 MiB, am besten im WLAN). Die Claude-App lädt so große Dateien nicht aus dem Chat. Als Vorschaubild passt die Endkarte aus dem Chat."
+   },
+   "meta": {
+    "summary_new": "Raft survival on an endless ocean: build your own raft, sail to islands, reefs and wrecks, meet the people of the sea, dive deep and face the Leviathan.",
+    "summary_old": "New Dimension, Technology, Exploration, Two New Wood Types, Quarries, Resource Automation! Play this now!",
+    "name_new": "Beach Craft – Raft Survival",
+    "name_old": "Beach Craft",
+    "cats_new": [
+     "Dimensions (Hauptkategorie)",
+     "Adventure and RPG",
+     "Mobs",
+     "Structures",
+     "Technology"
+    ],
+    "cats_old": [
+     "Ores and Resources",
+     "Dimensions",
+     "Farming",
+     "World Gen",
+     "Technology"
+    ]
    }
   },
   {
@@ -31,7 +51,7 @@
     "new",
     "neu gestaltet"
    ],
-   "ids": "Modpack · Projekt 545167 · V1.4 (Datei 9475197, Server-Pack 9475219, freigegeben)",
+   "ids": "Modpack · Projekt 545167 · V1.4.1 (Datei 9487507, Server-Pack 9487509, freigegeben)",
    "about": [
     "Im Traum-Stil der BisectHosting-Banner (Nachthimmel, lila Wolken), die Banner selbst bleiben unverändert.",
     "- 327 statt 988 sichtbare Wörter, 22 neue Grafiken: 251 Mods, 348 Quests, 157 neue Biome und 10 seltene Haustiere auf einen Blick, eine Karte aller 15 Kapitel, das Quest-Buch in vier Schritten, das Rezept des Dream Star, „Neu in V1.4“ und Shader-Collagen.",
@@ -46,6 +66,26 @@
     "yt_title": "This Minecraft modpack has over 250 mods... #minecraft #minecraftmods #modpack",
     "yt_desc": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/descpage/yt_dc_desc.txt",
     "hint": "Video speichern: den Trailer aus dem Chat (44 Sekunden, Hochformat, mit Untertiteln und Musik)."
+   },
+   "meta": {
+    "summary_new": "251 mods and a 348-quest story on Minecraft 26.3 Fabric: magic, tech, new biomes, a raft ocean and rare pets, with a server pack.",
+    "summary_old": "Craft your own destiny with the all-in-one Minecraft modpack! Featuring 800+ quests and mods from every category - building, adventure, magic, and tech - it's the ultimate gaming experience. Start playing now!",
+    "name_new": "Dreamcraft – Quests & Adventure",
+    "name_old": "Dreamcraft [FABRIC]",
+    "cats_new": [
+     "Quests (Hauptkategorie)",
+     "Extra Large",
+     "Tech",
+     "Magic",
+     "Exploration"
+    ],
+    "cats_old": [
+     "Exploration",
+     "Vanilla+",
+     "Quests",
+     "Tech",
+     "Magic"
+    ]
    }
   },
   {
@@ -71,6 +111,23 @@
     "yt_title": "Minecraft, but you can tame and raise your own pets (Tamagotchi mod showcase)",
     "yt_desc": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/descpage/yt_tama_desc.txt",
     "hint": "Video speichern: das Showcase aus dem Chat (2:03, Hochformat, mit Untertiteln und Musik)."
+   },
+   "meta": {
+    "summary_new": "Ten rare pets to find, tame and care for – needs, moods, talents, toys and 25 pieces of furniture make them real companions.",
+    "summary_old": "Find and Tame your own Tamagotchi!",
+    "name_new": "Tamagotchi – Rare Pets",
+    "name_old": "Tamagotchi",
+    "cats_new": [
+     "Mobs (Hauptkategorie)",
+     "Adventure and RPG",
+     "Cosmetic"
+    ],
+    "cats_old": [
+     "Miscellaneous",
+     "Cosmetic",
+     "Mobs",
+     "Adventure and RPG"
+    ]
    }
   },
   {
@@ -89,7 +146,25 @@
    "html": "/home/user/Kasax_Quests_Items_Mod-1.19.2/docs/curseforge/description.html",
    "preview": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/desc_qi_preview.png",
    "url": "https://www.curseforge.com/minecraft/mc-mods/quest-icons",
-   "video": null
+   "video": null,
+   "meta": {
+    "summary_new": "A full quest book in the style of FTB Quests – chapters, quest map, tasks, rewards, loot crates, teams and an in-game editor – plus 32 quest icons.",
+    "summary_old": "Quest Items for you to use in your pack!",
+    "name_new": "Quest Icons – Quest Book & Icons",
+    "name_old": "Quest Icons",
+    "cats_new": [
+     "Utility & QoL (Hauptkategorie)",
+     "Adventure and RPG",
+     "Server Utility",
+     "Map and Information",
+     "Cosmetic"
+    ],
+    "cats_old": [
+     "Cosmetic",
+     "Miscellaneous",
+     "Utility & QoL"
+    ]
+   }
   }
  ]
 }

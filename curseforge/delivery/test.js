@@ -35,7 +35,8 @@ const check = (ok, msg) => { console.log((ok ? 'ok   ' : 'FAIL ') + msg); if (!o
     if (scheme === 'light') {
       const read = () => page.evaluate(() => navigator.clipboard.readText());
       for (const p of cfg.projects) {
-        const k = p.key, exp = fs.readFileSync(p.html, 'utf8');
+        const k = p.key, exp = fs.readFileSync(p.html, 'utf8').replace(/<p[^>]*>\s*<iframe[^>]*>\s*<\/iframe>\s*<\/p>\s*/g, '');
+        if (p.video) await page.fill(`#yt-${k}`, '');
         await page.click(`button[data-copy="${k}"]`);
         let t = await read();
         if (p.video) {

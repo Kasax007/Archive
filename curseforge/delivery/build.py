@@ -11,6 +11,7 @@ config.json: {"date": "...", "intro": "...", "projects": [{"key", "name", "chip"
 Preview pictures are written next to the page as <key>-preview.jpg.
 """
 import json
+import re
 import os
 import sys
 
@@ -34,6 +35,8 @@ cards = []
 for p in cfg['projects']:
     k = p['key']
     html = read(p['html'])
+    # The user's live pages show the video once, as the linked thumbnail (7.11.2026): drop the player iframe.
+    html = re.sub(r'<p[^>]*>\s*<iframe[^>]*>\s*</iframe>\s*</p>\s*', '', html)
     data[k] = html
     video = p.get('video')
     if video:
@@ -70,7 +73,7 @@ for p in cfg['projects']:
         yt = f'''
     <div class="yt">
       <label for="yt-{k}">YouTube-Link: {video['label']}</label>
-      <input id="yt-{k}" data-yt="{k}" inputmode="url" autocomplete="off" spellcheck="false" placeholder="https://youtu.be/…">
+      <input id="yt-{k}" data-yt="{k}" inputmode="url" autocomplete="off" spellcheck="false" placeholder="https://youtu.be/…"{(' value="https://youtu.be/' + video['default_id'] + '"') if video.get('default_id') else ''}>
       <p class="state warn" id="yt-state-{k}"></p>
     </div>'''
         yt_help = f'''

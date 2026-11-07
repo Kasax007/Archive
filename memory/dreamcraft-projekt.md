@@ -180,6 +180,23 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   Beschreibung für YouTube. Upload-Kit `beachcraft/documentary/v2/youtube.md`. Dateien im Chat: Limit erst 500, dann 400 MiB;
   die 1080p60-Doku (610 MiB) deshalb als HEVC neu kodiert (2 Pässe, 2250 kbit/s, 374 MiB, geliefert). Die alten 3.0-Bilder in `img/` erst
   löschen, wenn die neue Seite online ist. Offen beim Nutzer: Doku auf YouTube laden, Beschreibungen einfügen.
+- **Großer Auftrag 7.11. abends (3 Agenten, Opus, high):** Nutzer: QI hochladen (erledigt: 26.3 = Datei 9499549,
+  26.2 = 9499550), dann 1.21.1-Backports von Beach Craft, Tamagotchi und Quest Icons, designte Beschreibungen für
+  Challenge Craft Mod + Modpack, Quest Icons für jede sinnvolle MC-Version, Outreach-Tool mit Gmail. Vorher QI 1.3.0
+  mit sehr vielen Icons (ABC, Zahlen, Kommentar-Wünsche) und einem einfachen Ingame-Editor ohne SNBT („Not everyone
+  can easily write SNBT“). Laufend: Agent A QI 1.3.0 (Icons + Picker + Editor, 26.3/26.2), Agent B Beach Craft
+  `port/1.21.1`, Agent C Tamagotchi `port/1.21.1`. Danach: Challenge-Craft-Beschreibungen, QI-Backports (Versionen
+  nach Modpack-Daten). Uploads erst nach Prüfung; öffentliche Uploads brauchen die Freigabe im Chat.
+- **Outreach v2 (7.11.):** Seite 61GSVUCx8Z4BjonZtYFfpE Version 2: Freigeben → Senden über den Gmail-Connector des
+  Nutzers (mcp Gmail send_message/create_draft; Argumente to[], subject, body, includeSignature, replyThreadId),
+  „Alle senden“, Kopieren & Öffnen für Kommentare/Discord. E-Mail-Adressen nur in der privaten Datenbank (bei
+  stop/no gelöscht). Challenge Craft (Mod 1508454, Modpack 1653698) wird jetzt bei Creatorn beworben (Vorlage E);
+  Routine trig_01CCt95NzvUNE8aKqaNFs2oi entsprechend angepasst.
+- **Dreamcraft V1.4.3 (in Arbeit, 7.11.):** Nutzer: WorldEdit-Wand Holzhacke statt Holzaxt; Inventar zu voll (lila
+  Pfeile = IPN-Nachfüll-Symbole, NONE-Leiste = IPN-Profile), keine Wisch-Animation (Smooth Swapping), kein
+  Slot-Highlight. Configs: `config/inventoryprofilesnext/inventoryprofiles.json` (Abschnitte ModSettings,
+  GuiSettings, AutoRefillSettings), `config/smoothswapping.json` (toggle_mod false), `config/worldedit/
+  worldedit.properties` (wand-item=minecraft\:wooden_hoe).
 - **V1.4.2 Bisect-Config (7.11. abends):** Nutzer: „Bei meinem Modpack fehlt die bisectmod config … damit ich meine
   Provision erhalte!! Quick fix!! Nur ‚bug fixes‘ in den Changelog.“ Die Mod bhmenu war im Pack, die Config nie.
   Jetzt `pack/overrides/config/bhmenu/bhmenu.properties` mit partner_id 4395 und pack_id 19732 (aus Dreamcraft

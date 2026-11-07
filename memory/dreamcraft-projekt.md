@@ -266,6 +266,10 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
 
 - Ohne Rückfragen durcharbeiten; höchstens ein, wenn nötig zwei Subagenten (Wunsch vom 4.11.2026).
 - Der CurseForge-Token liegt nur in `$SP/.cf_token`. Nie committen und nie ausgeben.
+- **Outreach-Ton (7.11.):** Nachrichten herzlich, freundlich, motivierend; Freude auf Antwort/Spielen zeigen; immer
+  Hilfe anbieten. Nie „No pressure – I won't follow up more than once“, „One message only“, „This is a one-off
+  message. Reply stop …“ (klingt nach KI/Mailverteiler). E-Mail-Adressen immer selbst eintragen (öffentliche
+  Kanalbeschreibung, Website); nur in der privaten Datenbank der Seite, nie in Git.
 - **CurseForge-Uploads nur mit Freigabe im Chat:** Seit 7.11. stoppt die Auto-Mode-Prüfung Uploads als öffentliche
   Veröffentlichung, auch wenn alles vorbereitet ist. Vorher fragen (Datei, Version, Spielversionen nennen), alles
   andere (Beschreibung, Doku, Seite) schon fertig machen.

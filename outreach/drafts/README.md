@@ -15,6 +15,27 @@ Jede Datei enthält:
 Vor dem Senden prüft der Nutzer: Kontaktweg noch da, Server-Regeln erlauben Vorschläge, Beobachtung noch wahr
 (Packs ändern ihre Mod-Liste), Fußzeile vollständig (`{postal_address}`, `{privacy_link}`) bei E-Mails.
 
+**Stand 7.11.2026 abends:** Alle 25 Texte wurden in der Datenbank der Seite im herzlichen Ton neu geschrieben
+(`$SP/outreachpage/warm/texts.py`, Kopie in `page/warm_texts.py`). Die `.md`-Dateien hier zeigen noch die erste
+Fassung; maßgeblich ist die Datenbank.
+
+## Ton (Wunsch des Nutzers, 7.11.2026, gilt für jeden Entwurf)
+
+- **Herzlich, freundlich, motivierend.** Wie ein Creator, der sich ehrlich über das Pack oder den Kanal freut und sich
+  freuen würde, eine Antwort zu bekommen oder seinen Mod im Pack/Video zu sehen. Konkretes Lob mit echtem Bezug
+  (Video, Mod-Liste, Idee des Packs) zuerst.
+- **Immer Hilfe anbieten:** z. B. eine kostenlose Start-Questkette schreiben, Configs/Datapack/Tags einrichten, einen
+  Server aufsetzen, eine eigene Challenge bauen, Early Access oder Footage schicken.
+- **Verboten** (klingt nach KI oder Mailverteiler): „No pressure – I won't follow up more than once“, „One message only“,
+  „This is a one-off message“, „Reply stop and you won't hear from me again“, „No payment involved, no obligations“,
+  „Why you got this …“-Fußzeilen.
+- **E-Mails:** Adresse immer direkt ins Feld `email` der Datenbank eintragen (nie in Dateien/Git). Gesucht wird in
+  öffentlichen Angaben des Kanals: Kanalbeschreibung (YouTube-Seite `…/about` im Quelltext), Website, Linktree,
+  Impressum. Steckt die Adresse nur hinter YouTubes „E-Mail-Adresse anzeigen“ (Captcha), Ziel auf `hold` mit Hinweis;
+  lieber Creator mit öffentlicher Adresse wählen. Unterschrift: „Warm wishes, Kasax“, darunter nur die Zeile
+  `{postal_address}, {privacy_link}` (Fußzeile; die Seite lässt einen leeren Datenschutz-Link weg).
+- Englisch, kurz (80–160 Wörter), Links als eigene Zeilen, keine Markdown-Formatierung in E-Mails.
+
 ## Vorlagen (Stand 7.11.2026)
 
 Fakten für alle Texte: Quest Icons 1.1.0 für 26.3 Fabric, Build für 26.2 und ein Importer für FTB-Quests-Kapitel sind
@@ -27,69 +48,43 @@ Challenge-Codes zum Teilen, Lifetime XP mit Level 1–20, alles koop-fähig, Loc
 fertiges Menü. Dreamcraft-Short:
 `https://www.youtube.com/watch?v=G-whF3xKTQ4`.
 
-**A: Pack-Autor, Quest Icons** (Vorschlagskanal, Issue-Vorlage oder eingeladene E-Mail)
+**A: Pack-Autor, Quest Icons** (Kommentar, Vorschlagskanal, Issue)
 
-> Subject: Quest book for {pack_name} on 26.3?
+> Hi {name}! {konkretes Lob zum Pack}. {Beobachtung: was ein Questbuch hier leisten könnte}. I make Quest Icons, an
+> FTB-Quests-style quest book for 26.2/26.3 Fabric (chapters, rewards, loot crates, teams, in-game editor, and it can
+> import FTB Quests books). If you'd like to give it a try, I'm happy to help: I'd love to write you a free starter
+> chapter ({idee}) – just tell me what you need. It would honestly make my day to see it in {pack}!
 >
-> Hi {name}, I'm Kasax, I make the Dreamcraft modpack and the Quest Icons mod. I noticed {pack_name} is on
-> {mc_version} Fabric and {specific_observation}. FTB Quests stops at 26.1.2, so I built Quest Icons: an
-> FTB-Quests-style quest book with chapters, rewards, loot crates, teams and an in-game editor (a 26.2 build and an
-> importer for FTB Quests chapters are coming). If you like, I'll write a free starter chapter for {pack_name}
-> ({idea}) so you can try it without work.
+> Thanks for building {pack} – have a great day! Kasax (Discord: discord.gg/zuZVtVvJaY)
+
+**B: Pack-Autor, Beach Craft oder Tamagotchi** – wie A, mit konkretem Bezug (Ozean-/Pet-Mods im Pack) und
+Hilfsangebot (Configs, Datapack für Diäten/Tags, Strukturen wählen).
+
+**C: Creator, Dreamcraft-Serie** (E-Mail an die öffentliche Geschäftsadresse)
+
+> Subject: {freundlicher, konkreter Betreff}
 >
-> https://www.curseforge.com/minecraft/mc-mods/quest-icons
-> No reply needed if it's not for you, and I won't follow up more than once. – Kasax (Discord: discord.gg/zuZVtVvJaY)
+> Hi {name}, I just watched {video} and {was gefallen hat} – {warum es passt}! I make Dreamcraft, a free 26.3 Fabric
+> modpack with 251 mods and a quest story in 15 chapters (348 quests), a raft ocean with a boss and ten rare pets to
+> tame. It would honestly make my day to see you play it. If you'd like to give it a try, I'm happy to help with
+> anything – a server setup, early access to the next update, or footage from our trailer and documentary.
+> {Links}. Thank you for your videos – I'd love to hear what you think! Warm wishes, Kasax
 
-**B: Pack-Autor, Beach Craft oder Tamagotchi**
+**D: Nachfrage (frühestens nach 7 Tagen, einmal)**
 
-> Subject: An ocean dimension for {pack_name}?
+> Hi {name}! I hope you're doing well. I just wanted to make sure my message about {X} didn't get lost – I'd really
+> love to hear what you think, and I'm happy to help with anything if you want to try it. Warm wishes, Kasax
+
+**E: Creator, Challenge Craft** (Challenge-, Lockout-/Bingo-, „Minecraft but…“- oder Koop-Kanäle; das Casino nicht
+als Aufhänger, junge Zuschauer; Bob immer „early stage of development“)
+
+> Subject: 51 stackable challenges for your next challenge video
 >
-> Hi {name}, {pack_name} looks great, especially {specific_detail}. I make Beach Craft, a Raft-style ocean dimension
-> for 26.3 Fabric: build your own raft, islands, 8 NPCs, diving and a boss, plus a ready quest chapter. It runs in my
-> 251-mod pack Dreamcraft and on dedicated servers. If it fits your pack, I'm happy to help with configs or a quest
-> chapter. {tamagotchi_line_optional}
->
-> https://www.curseforge.com/minecraft/mc-mods/beach-craft · One message only, no follow-up spam. – Kasax
-
-Tamagotchi-Zeile: „I also make Tamagotchi: ten rare tameable pets, built for modpacks since 1.2 with tags for
-modded food and ores (https://www.curseforge.com/minecraft/mc-mods/tamagotchi).“
-
-**C: Creator, Dreamcraft-Serie** (nur an die Geschäftsadresse des Kanals)
-
-> Subject: Series idea for {channel_name}: 348-quest modpack on 26.3
->
-> Hi {name}, I liked {specific_video} – {specific_detail}. I make Dreamcraft, a free 26.3 Fabric modpack with 251
-> mods and a quest story in 15 chapters, a raft ocean with a boss, and ten rare pets to tame. That structure works well
-> as an episode series. If you're interested, I can send early access to the next update, B-roll from our trailer and
-> documentary, and help setting up a server. No payment involved, no obligations.
->
-> Pack: https://www.curseforge.com/minecraft/modpacks/dreamcraft-new · Short: https://www.youtube.com/watch?v=G-whF3xKTQ4
-> This is a one-off message. Reply "stop" and you won't hear from me again. Sender: Kasax, {postal_address}
-
-**E: Creator, Challenge Craft** (Challenge-, Lockout-/Bingo-, „Minecraft but…“- oder Koop-Kanäle; nur über den
-Weg, den der Kanal selbst für Anfragen nennt; das Casino nicht als Aufhänger nehmen, junge Zuschauer)
-
-> Subject: 51 stackable challenges for {channel_name}'s next challenge video
->
-> Hi {name}, I liked {specific_video} – {specific_detail}. I make Challenge Craft, a free 26.3 Fabric mod that turns any
-> world into a challenge run: 51 challenges you can stack (Lockout Bingo, Force Item Battle, All Biomes, Chunk Hunt,
-> ...), a Daily Challenge with the same seed for everyone, and short codes to share an exact setup with your viewers.
+> Hi {name}, I loved {video} – {konkreter Moment}! I make Challenge Craft, a free 26.3 Fabric mod that turns any world
+> into a challenge run: 51 challenges you can stack (Lockout Bingo, Force Item Battle, All Biomes, Chunk Hunt …), a
+> Daily Challenge with the same seed for everyone, and short codes to share an exact setup with your viewers.
 > Everything works in co-op, and there's an early-stage AI rival, Bob, to play Lockout against. The Challenge Craft
-> modpack adds shaders and proximity voice chat, ready to stream. If you like, I'll set up a challenge code for your
-> format or build a challenge your community suggests.
->
-> Mod: https://www.curseforge.com/minecraft/mc-mods/challenge · Modpack: https://www.curseforge.com/minecraft/modpacks/challenge-craft
-> This is a one-off message. Reply "stop" and you won't hear from me again. Sender: Kasax, {postal_address}
-
-**D: Eine einzige Nachfrage nach 7 Tagen**
-
-> Hi {name}, quick follow-up on my note about {project} for {pack_or_channel}. If now isn't a good time, no worries –
-> I won't write again. – Kasax
-
-**Fußzeile für jede E-Mail** (DSGVO Art. 14 und 21, § 7 UWG, CAN-SPAM)
-
-> Why you got this: I found {pack_or_channel} on {platform}, where you list this address for {purpose}. I only keep
-> your name, this address and notes for this one request. Reply "stop" and I'll delete them and never write again.
-> – Kasax, {postal_address}, {privacy_link}
-
-In Discord-Vorschlagskanälen und GitHub-Issues keine Fußzeile, aber offen sagen, dass der Autor der Mod schreibt.
+> modpack adds shaders and proximity voice chat, ready to stream. I'd love to build a custom challenge for your format
+> or set up a code for your community – just tell me! Mod: https://www.curseforge.com/minecraft/mc-mods/challenge ·
+> Modpack: https://www.curseforge.com/minecraft/modpacks/challenge-craft. I'd be so happy to hear what you think!
+> Warm wishes, Kasax

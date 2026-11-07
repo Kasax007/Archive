@@ -40,7 +40,7 @@ Fassung; maßgeblich ist die Datenbank.
 
 Fakten für alle Texte: Quest Icons 1.1.0 für 26.3 Fabric, Build für 26.2 und ein Importer für FTB-Quests-Kapitel sind
 in Arbeit (nur als „coming“ nennen). FTB Quests gibt es für 26.2/26.3 nicht (letzte Version 26.1.2). Beach Craft 3.1.0
-für 26.3 Fabric. Tamagotchi 1.2.0 für 26.3 Fabric. Dreamcraft V1.4.1: 251 Mods, 348 Quests in 15 Kapiteln,
+für 26.3 Fabric. Tamacraft (früher Tamagotchi) 1.2.0/1.3.0 für 26.3 Fabric. Dreamcraft V1.4.1: 251 Mods, 348 Quests in 15 Kapiteln,
 Server-Pack. Discord des Nutzers: Kasax Lounge, `discord.gg/zuZVtVvJaY`. Challenge Craft (Mod, seit 7.11. im Outreach für Creator):
 1.1.3 für 26.3 Fabric, 51 Challenges, stapelbar mit Schwierigkeit, Daily Challenge (gleicher Seed für alle),
 Challenge-Codes zum Teilen, Lifetime XP mit Level 1–20, alles koop-fähig, Lockout gegen den KI-Gegner Bob (immer

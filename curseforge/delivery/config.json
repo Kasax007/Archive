@@ -90,23 +90,23 @@
   },
   {
    "key": "tama",
-   "name": "Tamagotchi",
+   "name": "Tamacraft",
    "chip": [
-    "upd",
-    "wird zu Tamacraft"
+    "new",
+    "neu: Tamacraft 1.3"
    ],
-   "ids": "Mod · Projekt 1758309 · Version 1.2.0 (Datei 9431312)",
+   "ids": "Mod · Projekt 1758309 · Tamacraft 1.3.0 für 26.3 und 1.3.0+1.21.1 (gebaut und getestet, Upload wartet auf deine Freigabe)",
    "about": [
-    "Umbenennung läuft: Tamagotchi heißt jetzt Tamacraft. Name und Kurzbeschreibung unten gelten ab sofort; die neue Beschreibung mit allen Bildern folgt mit Tamacraft 1.3.0.",
-    "In Rosa mit dem grünen Pet-Bildschirm aus dem Spiel.",
-    "- 370 statt 1.658 Wörter, 19 neue Grafiken: alle zehn Haustiere mit Zuhause, Chance, Talent und Lieblingsleckerli, Bedürfnisse und Stimmungen, Spielzeug, Rucksack und Ei, die 25 Möbelstücke und „Neu in 1.2: Made for Modpacks“."
+    "Neuer Name, gleiche Pets: Aus Tamagotchi wird Tamacraft. Alles, was so hieß, ist umbenannt (Tamacon bleibt); alte Welten behalten Pets, Möbel und Items.",
+    "- Neues Kopfbild „Tamacraft 1.3“, Video-Bild „The Tamacraft showcase“, Übersicht, Bisect-Banner „Play Tamacraft with your friends!“; die Marke steht nur noch im Satz „not affiliated with or endorsed by Bandai“.",
+    "- Erst einfügen, wenn Tamacraft 1.3.0 auf CurseForge freigegeben ist. Projektname und Kurzbeschreibung kannst du schon jetzt ändern."
    ],
-   "html": "/home/user/tamagotchi/docs/curseforge/description.html",
-   "preview": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/desc_tama_preview.png",
+   "html": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/tc13desc/description.html",
+   "preview": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/tc13desc/preview.png",
    "url": "https://www.curseforge.com/minecraft/mc-mods/tamagotchi",
    "video": {
     "label": "Showcase (2:03, Hochformat)",
-    "yt_title": "Minecraft, but you can tame and raise your own pets (Tamagotchi mod showcase)",
+    "yt_title": "Minecraft, but you can tame and raise your own pets (Tamacraft mod showcase)",
     "yt_desc": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/descpage/yt_tama_desc.txt",
     "hint": "Video speichern: das Showcase aus dem Chat (2:03, Hochformat, mit Untertiteln und Musik)."
    },

@@ -270,6 +270,10 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   Hilfe anbieten. Nie „No pressure – I won't follow up more than once“, „One message only“, „This is a one-off
   message. Reply stop …“ (klingt nach KI/Mailverteiler). E-Mail-Adressen immer selbst eintragen (öffentliche
   Kanalbeschreibung, Website); nur in der privaten Datenbank der Seite, nie in Git.
+- **Tamacraft (7.11.):** Tamagotchi heißt jetzt Tamacraft (Mod-ID `tamacraft`, Herz `tamacraft:tamacraft_heart`,
+  Tamacon bleibt). Alte Welten und alte IDs in Packs laufen über `LegacyIdMixin`. 1.3.0 (26.3) und 1.3.0+1.21.1 fertig
+  und getestet, Upload offen (Jars `$SP/release_tamacraft_130/`, `$SP/release_tama_1211/`). CurseForge-Projekt 1758309:
+  Name „Tamacraft – Rare Pets“ und Kurzbeschreibung ändert der Nutzer; Slug bleibt evtl. `tamagotchi`.
 - **Freigabe vom 7.11. (spät):** „Wenn Beach Craft, Tamacraft und der Rest fertig ist, machen wir das Modpack und du
   darfst hochladen.“ Gilt für Beach Craft 3.2/3.3, Tamacraft 1.3.0, die Quest-Icons-Ports und das nächste
   Dreamcraft-Update – erst wenn alles fertig und getestet ist.

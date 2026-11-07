@@ -1,4 +1,33 @@
-# 04 – Tamagotchi: der Haustier-Mod im Pack und der Bug-Check für 1.2.0
+# 04 – Tamacraft (früher Tamagotchi): der Haustier-Mod im Pack
+
+> **Umbenannt am 7.11.2026:** Der Nutzer wollte den Namen aus Markengründen loswerden („Mir ist es zu heikel
+> copyright technisch“). Neuer Name **Tamacraft** (Wahl des Nutzers; nah am Original, ohne das „-gotchi“). Umbenannt
+> wurde nur, was „Tamagotchi“ hieß: Mod-ID und Namespace `tamagotchi` → `tamacraft`, Paket `net.kasax.tamacraft`,
+> Jar `tamacraft-<version>.jar`, Texte, und das Item `tamagotchi:tamagotchi_heart` → `tamacraft:tamacraft_heart`
+> („Tamacraft Heart“). Tamacon, Tama Pager, Pet- und Möbelnamen bleiben. Die Marke steht nur noch im Satz
+> „Inspired by the classic Tamagotchi virtual pets of the 90s; not affiliated with or endorsed by Bandai“ in den
+> Mod-Infos und als „not affiliated with or endorsed by Bandai“ auf der Seite. Der Trailer bleibt vorerst.
+>
+> **Alte Welten:** 26.3 und Fabric API kennen keine Registry-Aliase. `mixin/LegacyIdMixin` setzt an den drei
+> Stellen an, an denen jede ID gebaut wird (`createUntrusted`, `tryBuild`, `tryBySeparator`), und macht aus jedem
+> `tamagotchi:x` ein `tamacraft:x` (Pfade mit dem Wort ebenso). Das deckt NBT, Codecs, JSON, Befehle und Netzwerk ab,
+> also auch Datenpakete, Quests und Rezepte eines Modpacks mit alten IDs. Bewiesen mit einer echten 1.2.0-Welt
+> (Server + Client): Pets mit Werten, wildes Pet, Ei mit Inhalt, alle 22 Möbelblöcke, Kisten, Inventar,
+> Advancements – nach dem Öffnen mit 1.3.0 alles da. Einmalige Warnung „Missing data pack tamagotchi“ (harmlos).
+>
+> **Stand:** Tamacraft 1.3.0 (26.3, Branch `26.3` 6ece433, Jar sha1 328cedd5…) und 1.3.0+1.21.1 (Branch
+> `port/1.21.1` 184ab9d, sha1 7fdfd412…), beide getestet (Client-Spieltest 58/58, Produktiv-Rauchtest), Upload
+> offen. Das GitHub-Repo heißt weiter `Kasax007/Tamagotchi` (Bilder der Seite laden von dort). Volle ID-Liste:
+> `$SP/tama1211/id_mapping.txt` (alle Pfade bleiben, nur `tamagotchi_heart` → `tamacraft_heart`, Creative-Tab
+> `tamacraft:tamacraft`).
+>
+> **1.21.1-Port:** Loom 1.17.21 mit Mojang-Mappings, Loader 0.20.1, Fabric API 0.116.17+1.21.1, Java 21;
+> `tools/data/mc1211.py` übersetzt die 26.x-Daten (Rezepte, Loot, Advancements, Item-Modelle mit Overrides);
+> eigener kleiner Client-Testharness mit echten GLFW-Eingaben; JEI 19.25.1 getestet. Ohne Fabric-Renderer-Support
+> (z. B. Sodium) leuchten Lampen/Inkubator nur mit Blocklicht.
+
+Der Rest dieses Kapitels beschreibt den Mod unter seinem alten Namen (Stand 1.2.0).
+
 
 **Tamagotchi** ist dein Fabric-Mod für Minecraft 26.3 (Repo `Kasax007/tamagotchi`, Mod-ID `tamagotchi`,
 CurseForge-Projekt **1758309**). Zehn seltene Haustiere verstecken sich in den Strukturen der Welt. Man findet eines,

@@ -516,6 +516,7 @@ Fehler (Oberwelt 1521 Chunks in 1:43, Raft-Dimension 729 Chunks, früher auch Ne
 | **V1.4** | 9475197 | 9475219 | Beach Craft 3.1.0 (9474711: eigenes Floß, Menschen der See, Sounds und Musik, Kai in allen Lagern), Upgraded Iron Chests 1.5.1 neu, Kapitel „Quality of Life“, Quests 328 → 348 in 15 Kapiteln (hochgeladen am 6.11.2026) |
 | **V1.4.1** | 9487507 | 9487509 | Menü-Fix: Singleplayer, Multiplayer, Options und Quit Game lagen hinter dem lila Seitenbalken (gemeldet vom Nutzer am 6.11. anhand des Trailers); sonst identisch mit V1.4 |
 | **V1.4.2** | 9499392 | 9499399 | BisectHosting-Menü-Config (`config/bhmenu/bhmenu.properties`) mit Partner-ID wieder im Pack (gemeldet vom Nutzer am 7.11.); öffentlicher Changelog nur „Bug fixes“; sonst identisch mit V1.4.1 |
+| **V1.4.3** | 9500352 | 9500367 | Aufgeräumtes Inventar (Inventory Profiles Next ohne Nachfüll-Pfeile, Profil-Leiste, Slot-Highlight, Ecken-Knöpfe, Crafting-Häkchen; nur noch ein Sortierknopf), Smooth Swapping aus, WorldEdit-Wand = Holzhacke (Wunsch des Nutzers am 7.11.) |
 
 ### Was V1.3 bringt (Changelog `changelog-26.3-V1.3.md`)
 - **Beach Craft 3.0 „Tides of the Deep“** – Inselwelt, Story, Boss, Expedition Raft, Tauchen ([03](03_beach_craft.md)).
@@ -535,6 +536,33 @@ Fehler (Oberwelt 1521 Chunks in 1:43, Raft-Dimension 729 Chunks, früher auch Ne
 - **Bestehende Welten:** Schon erkundete Teile der Endless Sea behalten ihre alte Form – weiter hinausfahren. Alte
   Ankunftsplattformen haben keine Castaway-Truhe: Expedition Journal herstellen (Buch, Kompass, Papier) und auf See
   schleichend benutzen.
+
+### V1.4.3: aufgeräumtes Inventar, WorldEdit-Wand (7.11.2026 abends)
+- **Wunsch des Nutzers:** WorldEdit-Wand nicht mehr die Holzaxt (wählte beim Holzhacken Blöcke aus), sondern die
+  Holzhacke; das Inventar sei zu voll mit Symbolen; keine Wisch-Animationen und kein Slot-Highlight; die lila Pfeile
+  störten.
+- **Ursachen:** lila Pfeile = Nachfüll-Symbole von Inventory Profiles Next (IPN) auf Hotbar- und Rüstungs-Slots;
+  die Leiste „NONE“ = IPN-Profilumschalter; Highlight = IPN „Highlight same as focused item“ und „Highlight clicking
+  slot“; Wisch-Animation = Smooth Swapping. Die Knopfleiste unter dem Inventar (Z, ◆, Lupe, ↑, ↥) gehört zu
+  Upgraded Iron Chests (Kisten-Suche, Quick Stack, alles einlagern) und bleibt, weil sie Funktionen hat.
+- **Configs** (neu in `pack/overrides/config/`, Commit 37e6e0f):
+  - `inventoryprofilesnext/inventoryprofiles.json`: ModSettings `highlight_foused_items`, `highlight_clicking_slot`,
+    `enable_profiles` = false; GuiSettings `enable_profiles_ui`, `enable_inventory_settings_button`,
+    `enable_inventory_editor_button`, `show_continuous_crafting_checkbox`, `show_fast_rename_checkbox`,
+    `show_sort_in_columns_button`, `show_sort_in_rows_button`, `show_move_all_button` = false;
+    AutoRefillSettings `auto_refill_enable_indicator_icons`, `auto_refill_enable_horbar_indicator_icons` = false.
+    Die Schlüssel stammen aus den Klassen `org/anti_ad/mc/ipnext/config/*Settings` im Jar (Kotlin-Delegates).
+  - `smoothswapping.json`: `toggle_mod` = false.
+  - `worldedit/worldedit.properties`: `wand-item=minecraft\:wooden_hoe` (auch im Server-Pack, die Wand stellt der
+    Server ein).
+- **Test:** dctest-Szene `smoke` mit den neuen Configs (Screenshot `dc_08_inventory`): keine Pfeile, keine
+  NONE-Leiste, kein Häkchen, nur ein Sortierknopf, eine Ecken-Schaltfläche (Quest-Buch). Wichtig für den Testclient:
+  `SDL_VIDEO_FORCE_EGL=1` setzen, sonst findet SDL unter Xvfb kein GLX-Visual und der Client hängt; `gradlew` mit
+  `sh ./gradlew` starten (das Ausführungsrecht fehlt). **`rsync` gibt es im Container nicht:** Overrides mit
+  `cp -a pack/overrides/. $SP/pack/overrides/` kopieren (der erste Bau hatte die Configs deshalb nicht; der
+  Zip-Vergleich zeigte es).
+- **Upload** am 7.11. (Freigabe des Nutzers „Ja, V1.4.3 hochladen wenn der Test passt“): Client 9500352, Server-Pack
+  9500367 (`parentFileID` 9500352). Den Server-Pack auf CurseForge von Hand als Server Pack markieren.
 
 ### V1.4.2: die Bisect-Config (7.11.2026 abends)
 - **Problem:** Der Nutzer meldete, dass die Config der BisectHosting-Mod fehlt, über die er seine Provision bekommt.

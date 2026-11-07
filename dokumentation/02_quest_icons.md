@@ -14,7 +14,7 @@ keine. Seit 1.2.0 holt `/quests import ftbquests` ein FTB-Quests-Buch herüber (
 | Eckdaten | |
 | --- | --- |
 | Minecraft / Loader | 26.3 (Loader 0.19.5 oder neuer, Branch `26.3`), seit 1.2.0 auch 26.2 (Loader 0.18.4 oder neuer, Branch `26.2`); Fabric, Java 25, braucht Fabric API |
-| Aktuelle Version | **1.3.0** für 26.3 (Datei 9501059) und 26.2 (Datei 9501060), hochgeladen am 7.11.2026; davor 1.2.0 (9499549 / 9499550) |
+| Aktuelle Version | **1.3.0** für 26.3 (Datei 9501059) und 26.2 (Datei 9501060), freigegeben am 7.11.2026 um 23:24 Uhr deutscher Zeit; davor 1.2.0 (9499549 / 9499550) |
 | Mod-ID / Paket | `questsicons` / `net.kasax.questsicons` |
 | Port | von 1.21.1 (Yarn-Namen) auf 26.3 (offizielle Mojang-Namen) |
 | Server | muss auf dem Server **und** auf jedem Client installiert sein |
@@ -454,4 +454,4 @@ wurde … direkt ingame einfügen“ und „Not everyone can easily write SNBT�
   dann neu geladen), Server-Selbsttest, Produktiv-Server 26.3 und 26.2. Nicht getestet: Produktiv-Client, zweiter
   Client gleichzeitig.
 - **Beschreibung:** `description.html` mit `*_v4`-Bildern (`make_images_v4.py`), auf der Übergabeseite zum Kopieren.
-  Erst nach der Freigabe einfügen.
+  Seit 7.11. 23:24 Uhr freigegeben: jetzt einfügen.

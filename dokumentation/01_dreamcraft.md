@@ -549,8 +549,8 @@ Fehler (Oberwelt 1521 Chunks in 1:43, Raft-Dimension 729 Chunks, früher auch Ne
 - **Bau und Upload:** `python3 tools/mkpack.py V1.4.2 9429010 9474711` (vorher die Config nach `$SP/pack/overrides`
   kopiert). Gegenüber V1.4.1 sind nur `manifest.json` und die neue Config anders; der Server-Pack enthält sie auch.
   Upload am 7.11. um 21:33 Uhr deutscher Zeit per `$SP/upload142.sh`, Changelog nur „Bug fixes“ (Wunsch des
-  Nutzers): Client 9499392, Server-Pack 9499399 (`parentFileID` 9499392). Den Server-Pack auf CurseForge von Hand
-  als Server Pack markieren.
+  Nutzers): Client 9499392, Server-Pack 9499399 (`parentFileID` 9499392), beide um 22:11 Uhr deutscher Zeit
+  freigegeben (Download-Link 307). Den Server-Pack auf CurseForge von Hand als Server Pack markieren.
 
 ### V1.4.1: der Menü-Fix (6.11.2026 abends)
 - **Ursache:** Der lila Seitenbalken ist ein eigenes Bild-Element (`sidebar.png`). FancyMenu zeichnet eigene Elemente

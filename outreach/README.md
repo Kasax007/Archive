@@ -4,8 +4,11 @@ Halbautomatische Pipeline nach `research/curseforge-wachstum-2026-11.md`, Teil 3
 und entwerfen nur**. Sie senden, posten, kommentieren und schreiben niemandem, auch keine DMs. Jede Nachricht
 liest, ändert und verschickt der Nutzer selbst.
 
-Beworben werden Quest Icons (690531), Beach Craft (1010922), Tamagotchi (1758309) bei Pack-Autoren und Dreamcraft
-(545167) bei Creatorn.
+Beworben werden Quest Icons (690531), Beach Craft (1010922), Tamagotchi (1758309) bei Pack-Autoren, Dreamcraft
+(545167) bei Creatorn und seit 7.11.2026 Challenge Craft (Mod 1508454, Modpack 1653698) bei Creatorn mit
+Challenge-, Lockout-/Bingo- oder Koop-Videos (Vorlage E, Suchbegriffe `challenge_creator_terms` in `config.json`).
+Gesendet wird auf der Seite selbst: E-Mails mit einem Klick über den Gmail-Connector des Nutzers, Kommentare und
+Discord mit „Kopieren & öffnen“. E-Mail-Adressen stehen nur in der privaten Datenbank der Seite, nie in Dateien.
 
 **Erste Runde (7.11.2026):** 1.821 Fabric-Packs für 26.2/26.3 auf Modrinth und 502 CurseForge-Slugs durchsucht, 917 Packs näher angesehen. 15 Pack-Entwürfe (9 jetzt möglich, davon 3 nur über einen Discord-Vorschlagskanal; 6 auf `hold`) und 10 Creator-Entwürfe in `drafts/`. Von Hand verworfene Ziele stehen mit Grund in `targets.csv` (`skip`, Spalte `notes`). Wichtigster Engpass: Unsere Mods fehlen auf Modrinth, deshalb sind fast alle Modrinth-Packs auf `hold`.
 

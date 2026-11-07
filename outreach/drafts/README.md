@@ -20,7 +20,11 @@ Vor dem Senden prüft der Nutzer: Kontaktweg noch da, Server-Regeln erlauben Vor
 Fakten für alle Texte: Quest Icons 1.1.0 für 26.3 Fabric, Build für 26.2 und ein Importer für FTB-Quests-Kapitel sind
 in Arbeit (nur als „coming“ nennen). FTB Quests gibt es für 26.2/26.3 nicht (letzte Version 26.1.2). Beach Craft 3.1.0
 für 26.3 Fabric. Tamagotchi 1.2.0 für 26.3 Fabric. Dreamcraft V1.4.1: 251 Mods, 348 Quests in 15 Kapiteln,
-Server-Pack. Discord des Nutzers: Kasax Lounge, `discord.gg/zuZVtVvJaY`. Dreamcraft-Short:
+Server-Pack. Discord des Nutzers: Kasax Lounge, `discord.gg/zuZVtVvJaY`. Challenge Craft (Mod, seit 7.11. im Outreach für Creator):
+1.1.3 für 26.3 Fabric, 51 Challenges, stapelbar mit Schwierigkeit, Daily Challenge (gleicher Seed für alle),
+Challenge-Codes zum Teilen, Lifetime XP mit Level 1–20, alles koop-fähig, Lockout gegen den KI-Gegner Bob (immer
+„early stage of development“ nennen). Challenge-Craft-Modpack: der Mod plus Shader, Proximity-Voice-Chat und
+fertiges Menü. Dreamcraft-Short:
 `https://www.youtube.com/watch?v=G-whF3xKTQ4`.
 
 **A: Pack-Autor, Quest Icons** (Vorschlagskanal, Issue-Vorlage oder eingeladene E-Mail)
@@ -60,6 +64,21 @@ modded food and ores (https://www.curseforge.com/minecraft/mc-mods/tamagotchi).�
 > documentary, and help setting up a server. No payment involved, no obligations.
 >
 > Pack: https://www.curseforge.com/minecraft/modpacks/dreamcraft-new · Short: https://www.youtube.com/watch?v=G-whF3xKTQ4
+> This is a one-off message. Reply "stop" and you won't hear from me again. Sender: Kasax, {postal_address}
+
+**E: Creator, Challenge Craft** (Challenge-, Lockout-/Bingo-, „Minecraft but…“- oder Koop-Kanäle; nur über den
+Weg, den der Kanal selbst für Anfragen nennt; das Casino nicht als Aufhänger nehmen, junge Zuschauer)
+
+> Subject: 51 stackable challenges for {channel_name}'s next challenge video
+>
+> Hi {name}, I liked {specific_video} – {specific_detail}. I make Challenge Craft, a free 26.3 Fabric mod that turns any
+> world into a challenge run: 51 challenges you can stack (Lockout Bingo, Force Item Battle, All Biomes, Chunk Hunt,
+> ...), a Daily Challenge with the same seed for everyone, and short codes to share an exact setup with your viewers.
+> Everything works in co-op, and there's an early-stage AI rival, Bob, to play Lockout against. The Challenge Craft
+> modpack adds shaders and proximity voice chat, ready to stream. If you like, I'll set up a challenge code for your
+> format or build a challenge your community suggests.
+>
+> Mod: https://www.curseforge.com/minecraft/mc-mods/challenge · Modpack: https://www.curseforge.com/minecraft/modpacks/challenge-craft
 > This is a one-off message. Reply "stop" and you won't hear from me again. Sender: Kasax, {postal_address}
 
 **D: Eine einzige Nachfrage nach 7 Tagen**

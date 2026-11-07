@@ -36,37 +36,52 @@ header { display: grid; gap: 8px; }
 .kicker { font: 600 12px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
 h1 { font: 700 clamp(28px, 7vw, 40px)/1.05 var(--display); margin: 0; letter-spacing: -.01em; }
 header p { margin: 0; color: var(--muted); max-width: 64ch; }
-.rules { display: flex; flex-wrap: wrap; gap: 6px; margin: 2px 0 0; padding: 0; list-style: none; }
-.rules li { font-size: 12.5px; background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 4px 10px; }
+.steps { display: flex; flex-wrap: wrap; gap: 6px; margin: 2px 0 0; padding: 0; list-style: none; counter-reset: s; }
+.steps li { font-size: 12.5px; background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 4px 10px; counter-increment: s; }
+.steps li::before { content: counter(s) ". "; font-weight: 700; color: var(--accent); }
 .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(96px, 1fr)); gap: 8px; }
 .kpi { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; }
 .kpi b { display: block; font: 700 24px/1.1 var(--display); }
 .kpi span { font-size: 12.5px; color: var(--muted); }
 .kpi.due b { color: var(--accent); }
+.panel { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; display: grid; gap: 8px; }
+.panel h3 { margin: 0; font: 700 16px/1.2 var(--display); display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.panel p { margin: 0; font-size: 13.5px; color: var(--muted); }
+.pill { font: 600 11px/1 var(--mono); letter-spacing: .05em; text-transform: uppercase; padding: 5px 7px; border-radius: 6px; background: var(--line); color: var(--fg); }
+.pill.ok { background: var(--ok-soft); color: var(--ok); }
+.pill.wait { background: var(--wait-soft); color: var(--wait); }
+.pill.bad { background: var(--bad-soft); color: var(--bad); }
+.check { display: flex; gap: 8px; align-items: center; font-size: 13.5px; color: var(--muted); }
+.check input { width: auto; min-height: 0; }
 details.sender { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 10px 14px; }
 details.sender summary { cursor: pointer; font-weight: 600; }
 .senderform { display: grid; gap: 8px; margin-top: 10px; }
-.senderform label { display: grid; gap: 4px; font-size: 13px; color: var(--muted); }
+label.f { display: grid; gap: 4px; font-size: 13px; color: var(--muted); }
 input, textarea { width: 100%; font: inherit; color: var(--fg); background: var(--field); border: 1px solid var(--line); border-radius: 9px; padding: 9px 11px; min-width: 0; }
+input.badfield { border-color: var(--bad); }
 textarea { min-height: 170px; resize: vertical; font-size: 14px; line-height: 1.5; }
 nav.tabs { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); padding-block: 8px;
   display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; }
 nav.tabs::-webkit-scrollbar { display: none; }
 nav.tabs button { flex: none; border-radius: 999px; }
 nav.tabs button[aria-pressed="true"] { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+nav.tabs .n { font: 600 11px/1 var(--mono); opacity: .7; }
 button, .btn { font: 600 14px/1 system-ui, sans-serif; border-radius: 10px; padding: 10px 13px; cursor: pointer; min-height: 40px;
   border: 1px solid var(--line); background: var(--field); color: var(--fg); text-decoration: none; display: inline-flex; gap: 6px; align-items: center; }
-button.primary { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); }
+button.primary, .btn.primary { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); }
 button.okb { background: var(--ok-soft); color: var(--ok); border-color: transparent; }
 button.badb { background: var(--bad-soft); color: var(--bad); border-color: transparent; }
+button.small, .btn.small { min-height: 34px; padding: 7px 10px; font-size: 13px; }
 button:disabled { opacity: .55; cursor: default; }
 button:focus-visible, .btn:focus-visible, input:focus-visible, textarea:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+#bulk { display: grid; gap: 8px; }
 #list { display: grid; gap: 14px; }
 .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 16px; display: grid; gap: 10px; min-width: 0; }
 .top { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
 .top h2 { font: 700 21px/1.15 var(--display); margin: 0; }
 .chip { font: 600 11px/1 var(--mono); letter-spacing: .05em; text-transform: uppercase; padding: 5px 7px; border-radius: 6px; background: var(--info-soft); color: var(--info); }
 .chip.creator { background: var(--accent-soft); color: var(--accent); }
+.chip.way { background: var(--line); color: var(--fg); }
 .score { font: 600 12px var(--mono); color: var(--muted); margin-left: auto; }
 .sub { font-size: 13px; color: var(--muted); }
 .card p { margin: 0; overflow-wrap: anywhere; }
@@ -80,8 +95,13 @@ details.facts summary { cursor: pointer; font-size: 13.5px; font-weight: 600; }
 details.facts ul { margin: 8px 0 0; padding-left: 20px; font-size: 13.5px; display: grid; gap: 4px; }
 .msg { display: grid; gap: 8px; border-top: 1px solid var(--line); padding-top: 10px; }
 .msg .label { font-size: 13px; font-weight: 600; color: var(--muted); }
-.footer { font-size: 12.5px; color: var(--muted); background: var(--bg); border-radius: 8px; padding: 8px 10px; white-space: pre-wrap; }
+.footer { font-size: 12.5px; color: var(--muted); background: var(--bg); border-radius: 8px; padding: 8px 10px; white-space: pre-wrap; overflow-wrap: anywhere; }
 .actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.confirm { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; background: var(--accent-soft); border-radius: 10px; padding: 8px 10px; font-size: 13.5px; }
+.result { font-size: 13.5px; border-radius: 9px; padding: 8px 10px; }
+.result.ok { background: var(--ok-soft); color: var(--ok); }
+.result.bad { background: var(--bad-soft); color: var(--bad); }
+.result.wait { background: var(--wait-soft); color: var(--wait); }
 .warn { font-size: 13px; color: var(--bad); }
 .empty, #loadnote { color: var(--muted); font-size: 14px; }
 </style>
@@ -89,183 +109,488 @@ details.facts ul { margin: 8px 0 0; padding-left: 20px; font-size: 13.5px; displ
 <div class="wrap">
   <header>
     <div class="kicker">Quest Icons · Beach Craft · Tamagotchi · Dreamcraft</div>
-    <h1>Outreach Freigabe</h1>
-    <p>Jeden Werktag legt eine Aufgabe neue Entwürfe hierher. Du liest sie, passt sie an, kopierst sie und sendest selbst über den angegebenen Weg. Danach hier abhaken; die Aufgabe merkt sich das und erinnert an die eine Nachfrage nach 7 Tagen.</p>
-    <ul class="rules" aria-label="Regeln">
-      <li>nur über eingeladene Wege</li>
-      <li>höchstens eine Nachfrage</li>
-      <li>„stop“ heißt nie wieder</li>
-      <li>kein Geld für Aufnahme</li>
-    </ul>
+    <h1>Outreach</h1>
+    <p>Werktags legt eine Aufgabe neue Entwürfe hierher. Du bearbeitest sie, gibst sie frei und sendest mit einem Klick: E-Mails gehen direkt aus deinem Gmail-Konto, für Kommentare und Discord kopiert ein Klick den Text und öffnet die Seite. Nach 7 Tagen erinnert die Seite an die eine Nachfrage.</p>
+    <ol class="steps" aria-label="Ablauf">
+      <li>lesen und anpassen</li>
+      <li>freigeben</li>
+      <li>senden</li>
+      <li>Antwort eintragen</li>
+    </ol>
   </header>
 
   <div class="kpis" id="kpis" aria-live="polite"></div>
 
+  <section class="panel" id="gmailpanel" aria-label="Gmail">
+    <h3>Gmail <span class="pill" id="gmailpill">prüfe …</span></h3>
+    <p id="gmailtext">Prüfe, ob Gmail für diese Seite verbunden ist …</p>
+    <div class="actions" id="gmailacts"></div>
+    <label class="check"><input type="checkbox" id="sig"> Meine Gmail-Signatur anhängen</label>
+  </section>
+
   <details class="sender" id="senderbox">
     <summary>Absender für E-Mails <span class="sub" id="senderstate"></span></summary>
     <div class="senderform">
-      <label>Postanschrift (Pflicht in Werbe-Mails, auch ein Postfach)<input id="postal" autocomplete="off"></label>
-      <label>Link zu deiner Datenschutzerklärung (optional)<input id="privacy" inputmode="url" autocomplete="off"></label>
+      <label class="f">Postanschrift (Pflicht in Werbe-Mails, auch ein Postfach)<input id="postal" autocomplete="off"></label>
+      <label class="f">Link zu deiner Datenschutzerklärung (optional)<input id="privacy" inputmode="url" autocomplete="off"></label>
       <div class="actions"><button type="button" id="savesender">Speichern</button><span class="sub" id="sendermsg"></span></div>
     </div>
   </details>
 
-  <nav class="tabs" aria-label="Ansicht">
-    <button type="button" data-tab="ready" aria-pressed="true">Bereit</button>
-    <button type="button" data-tab="hold" aria-pressed="false">Warten</button>
-    <button type="button" data-tab="sent" aria-pressed="false">Gesendet</button>
-    <button type="button" data-tab="done" aria-pressed="false">Erledigt</button>
-  </nav>
+  <nav class="tabs" aria-label="Ansicht" id="tabs"></nav>
 
+  <div id="bulk"></div>
   <p id="loadnote">Lade die Entwürfe …</p>
   <div id="list"></div>
 </div>
 
 <script>
 (function () {
-  var TABS = { ready: ['draft'], hold: ['hold'], sent: ['sent', 'followup_sent'], done: ['yes', 'no', 'stop', 'skip'] };
+  var TABS = [
+    ['ready', 'Bereit', ['draft']],
+    ['approved', 'Freigegeben', ['approved']],
+    ['hold', 'Warten', ['hold']],
+    ['sent', 'Gesendet', ['sent', 'followup_sent']],
+    ['done', 'Erledigt', ['yes', 'no', 'stop', 'skip']]
+  ];
   var END = { yes: 'Zusage', no: 'Absage', stop: 'Stop: nie wieder anschreiben', skip: 'Nicht gesendet' };
-  var state = { rows: {}, sender: {}, tab: 'ready', db: null, busy: {}, edits: {} };
+  var EMPTY = { ready: 'Gerade nichts zu prüfen. Neue Entwürfe kommen werktags.', approved: 'Nichts freigegeben. Gib in „Bereit“ Entwürfe frei.',
+    hold: 'Nichts wartet.', sent: 'Noch nichts gesendet.', done: 'Noch nichts erledigt.' };
+  var state = { rows: {}, sender: {}, tab: 'ready', db: null, busy: {}, edits: {}, notes: {}, confirm: null,
+    mcp: null, perms: null, gmail: 'loading', signature: false, bulk: null };
   var $ = function (id) { return document.getElementById(id); };
+  var EMAIL_RE = /^[^\s@<>(),;:"\[\]]+@[^\s@<>(),;:"\[\]]+\.[A-Za-z]{2,}$/;
+
+  try { state.signature = localStorage.getItem('outreach-signature') === '1'; } catch (e) {}
+  $('sig').checked = state.signature;
+  $('sig').addEventListener('change', function () { state.signature = $('sig').checked; try { localStorage.setItem('outreach-signature', state.signature ? '1' : '0'); } catch (e) {} });
 
   function today() { var d = new Date(); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); }
   function plusDays(iso, n) { var d = new Date(iso + 'T12:00:00'); d.setDate(d.getDate() + n); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); }
   function de(iso) { if (!iso) return ''; var p = iso.split('-'); return p[2] + '.' + p[1] + '.' + p[0]; }
   function isDue(r) { return r.status === 'sent' && r.follow_up_on && r.follow_up_on <= today(); }
+  function isEmail(r) { return /^e-?mail/i.test(r.channel || ''); }
   function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
   function fill(text) {
     var s = state.sender || {};
-    return text.replace(/\{postal_address\}/g, s.postal_address || '{postal_address}').replace(/\{privacy_link\}/g, s.privacy_link || '{privacy_link}');
+    var t = String(text || '').replace(/\{postal_address\}/g, s.postal_address || '{postal_address}');
+    // no privacy link: drop the placeholder with the comma before it instead of sending "{privacy_link}"
+    return s.privacy_link ? t.replace(/\{privacy_link\}/g, s.privacy_link) : t.replace(/,?[ \t]*\{privacy_link\}/g, '');
   }
   function flash(btn, msg) {
     var old = btn.dataset.label || btn.textContent; btn.dataset.label = old; btn.textContent = msg;
     clearTimeout(btn._t); btn._t = setTimeout(function () { btn.textContent = old; }, 2000);
   }
-  function copy(btn, text, fallbackEl) {
-    function fb() {
-      if (fallbackEl) { fallbackEl.focus(); fallbackEl.select && fallbackEl.select(); }
-      flash(btn, 'Markiert: jetzt kopieren');
-    }
-    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(function () { flash(btn, 'Kopiert ✓'); }, fb);
+  function copyText(text, btn, fallbackEl) {
+    function fb() { if (fallbackEl) { fallbackEl.focus(); if (fallbackEl.select) fallbackEl.select(); } if (btn) flash(btn, 'Markiert: jetzt kopieren'); }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(function () { if (btn) flash(btn, 'Kopiert ✓'); }, fb);
     else fb();
   }
+  function enc(s) { return encodeURIComponent(s); }
 
-  function kpis() {
+  // ------------------------------------------------------------------ current text of a row (with unsaved edits)
+  function cur(id) {
+    var r = state.rows[id] || {}, e = state.edits[id] || {};
+    return {
+      email: (e.email != null ? e.email : (r.email || '')).trim(),
+      subject: e.subject != null ? e.subject : (r.subject || ''),
+      message: e.message != null ? e.message : (r.message || '')
+    };
+  }
+  function fullBody(r, message) { return fill(message + (r.footer ? '\n\n' + r.footer : '')); }
+
+  // ------------------------------------------------------------------ where a non-e-mail message goes
+  function targets(r) {
+    var ch = (r.channel || '').toLowerCase(), text = (r.route || '') + ' ' + (r.url || '') + ' ' + (r.facts || []).join(' ');
+    var out = [];
+    var discord = (text.match(/discord\.gg\/[A-Za-z0-9-]+/) || [])[0];
+    var github = (text.match(/https?:\/\/github\.com\/[\w.-]+\/[\w.-]+/) || [])[0];
+    if (/^github/.test(ch) && github) {
+      var title = ((r.channel || '').match(/„([^“]+)“/) || [])[1] || 'Suggestion';
+      out.push({ label: 'Issue mit Text öffnen ↗', url: github.replace(/\.git$/, '') + '/issues/new?title=' + enc(title) + '&body=' + enc(fullBody(r, cur(r._id).message)), prefilled: true });
+    }
+    if (/curseforge/.test(ch) && r.url && /curseforge\.com/.test(r.url)) out.push({ label: 'Kopieren & Kommentare öffnen ↗', url: r.url.replace(/\/$/, '') + '/comments' });
+    if (/discord/.test(ch) && discord) out.push({ label: 'Kopieren & Discord öffnen ↗', url: 'https://' + discord });
+    if (!out.length && discord) out.push({ label: 'Kopieren & Discord öffnen ↗', url: 'https://' + discord });
+    if (!out.length && r.url) out.push({ label: 'Kopieren & Seite öffnen ↗', url: r.url });
+    return out;
+  }
+
+  // ------------------------------------------------------------------ Gmail
+  var GMAIL = 'Gmail';
+  function gmailUI() {
+    var pill = $('gmailpill'), text = $('gmailtext'), acts = $('gmailacts'); acts.textContent = '';
+    var g = state.gmail;
+    var map = {
+      loading: ['prüfe …', '', 'Prüfe, ob Gmail für diese Seite verbunden ist …'],
+      none: ['nicht hier', 'wait', 'Senden mit einem Klick geht nur auf claude.ai oder in der Claude-App. Hier kannst du E-Mails mit „In Gmail öffnen“ senden.'],
+      missing: ['nicht verbunden', 'bad', 'Gmail ist nicht verbunden. Auf claude.ai unter Einstellungen → Connectors Gmail verbinden, dann diese Seite neu laden.'],
+      reauth: ['neu verbinden', 'bad', 'Gmail muss neu verbunden werden: claude.ai → Einstellungen → Connectors → Gmail.'],
+      ask: ['erlauben', 'wait', 'Gmail ist verbunden. Erlaube dieser Seite einmal, E-Mails in deinem Namen zu senden. Sie sendet nur, wenn du auf „Senden“ tippst.'],
+      denied: ['abgelehnt', 'bad', 'Du hast Gmail für diese Seite abgelehnt. Über die Berechtigungen kannst du es wieder einschalten.'],
+      ready: ['bereit', 'ok', 'Verbunden. „Senden“ schickt die E-Mail sofort aus deinem Gmail-Konto; danach liegt sie in Gmail unter „Gesendet“.']
+    }[g] || ['?', '', ''];
+    pill.textContent = map[0]; pill.className = 'pill ' + map[1]; text.textContent = map[2];
+    if (g === 'ask') {
+      var b = el('button', 'primary', 'Gmail für diese Seite erlauben'); b.type = 'button';
+      b.onclick = async function () {
+        b.disabled = true;
+        var res = {};
+        try { res = state.perms ? await state.perms.request(['mcp:' + GMAIL]) : {}; } catch (e) { res = {}; }
+        var st = res['mcp:' + GMAIL];
+        if (st === 'granted') state.gmail = 'ready'; else if (st === 'denied') state.gmail = 'denied'; else state.gmail = 'ask';
+        gmailUI(); render();
+      };
+      acts.appendChild(b);
+    }
+    if (g === 'denied' && state.perms) {
+      var m = el('button', null, 'Berechtigungen öffnen'); m.type = 'button';
+      m.onclick = async function () { try { await state.perms.manage(); } catch (e) { $('gmailtext').textContent = 'Öffne oben im Menü dieser Seite die Berechtigungen.'; } checkGmail(); };
+      acts.appendChild(m);
+    }
+  }
+  async function checkGmail() {
+    if (!state.mcp) { state.gmail = 'none'; gmailUI(); render(); return; }
+    var list = null;
+    try { list = await state.mcp.listTools(GMAIL); } catch (e) { list = null; }
+    var srv = list && list.servers && list.servers.filter(function (s) { return s.server === GMAIL; })[0];
+    if (!srv) { state.gmail = 'missing'; gmailUI(); render(); return; }
+    if (srv.authStatus === 'needs_reauth') { state.gmail = 'reauth'; gmailUI(); render(); return; }
+    var st = 'prompt';
+    try { st = state.perms ? await state.perms.state('mcp:' + GMAIL) : 'prompt'; } catch (e) { st = 'prompt'; }
+    state.gmail = st === 'granted' ? 'ready' : st === 'denied' ? 'denied' : st === 'unavailable' ? 'missing' : 'ask';
+    gmailUI(); render();
+  }
+  function canGmail() { return state.mcp && (state.gmail === 'ready' || state.gmail === 'ask'); }
+
+  // Explains a failed Gmail call. Returns {cls, text}; may change the Gmail state.
+  function gmailError(e, what) {
+    var code = (e && e.code) || 'upstream_error';
+    if (code === 'needs_reauth') { state.gmail = 'reauth'; gmailUI(); return { cls: 'bad', text: 'Gmail muss neu verbunden werden (claude.ai → Einstellungen → Connectors). Nichts wurde gesendet.' }; }
+    if (code === 'server_not_connected' || code === 'server_not_found' || code === 'selection_required') { state.gmail = 'missing'; gmailUI(); return { cls: 'bad', text: 'Gmail ist nicht verbunden. Nichts wurde gesendet.' }; }
+    if (code === 'not_in_manifest') { state.gmail = 'denied'; gmailUI(); return { cls: 'bad', text: 'Gmail ist für diese Seite nicht erlaubt. Nichts wurde gesendet.' }; }
+    if (code === 'approval_required') return { cls: 'wait', text: 'Gmail wartet auf deine Erlaubnis. Erlaube es, wenn claude.ai fragt, und tippe dann noch einmal.' };
+    if (code === 'blocked_by_policy') return { cls: 'bad', text: 'Deine Organisation erlaubt diese Gmail-Funktion nicht.' };
+    if (code === 'tool_error') return { cls: 'bad', text: 'Gmail hat abgelehnt: ' + (e.message || 'unbekannter Grund') + '. Prüfe die Adresse.' };
+    if (code === 'bad_request' || code === 'transform_error') return { cls: 'bad', text: 'Die Anfrage war ungültig (' + code + '). Nichts wurde gesendet.' };
+    if (code === 'not_granted' || code === 'capability_disabled' || code === 'capability_removed') { state.gmail = 'none'; gmailUI(); return { cls: 'bad', text: 'Gmail ist in dieser Ansicht nicht verfügbar.' }; }
+    return { cls: 'wait', text: 'Unklar, ob ' + what + ' angekommen ist (' + code + '). Schau in Gmail nach – unter „Gesendet“ bzw. „Entwürfe“. Ist sie dort, tippe „Von Hand gesendet ✓“.' };
+  }
+
+  // ------------------------------------------------------------------ writing to the db
+  async function write(id, patch, btn) {
+    if (!state.db || state.busy[id]) return false;
+    state.busy[id] = true; if (btn) btn.disabled = true;
+    patch.updated_by = 'user'; patch.updated_at = new Date().toISOString();
+    var ok = true;
+    try { await state.db.doc('targets/' + id).update(patch); }
+    catch (e) { ok = false; state.notes[id] = { cls: 'bad', text: 'Speichern ging nicht (' + (e && e.code || 'Fehler') + '). Versuch es gleich nochmal.' }; }
+    state.busy[id] = false; if (btn) btn.disabled = false;
+    if (ok) delete state.edits[id];
+    render();
+    return ok;
+  }
+  function editsPatch(id) {
+    var r = state.rows[id], c = cur(id), p = {};
+    if (c.message !== (r.message || '')) { p.message = c.message; p.edited = true; }
+    if (r.subject != null && c.subject !== (r.subject || '')) { p.subject = c.subject; p.edited = true; }
+    if (isEmail(r) && c.email !== (r.email || '')) p.email = c.email;
+    return p;
+  }
+  function sentPatch(extra) { var t = today(); var p = { status: 'sent', sent_on: t, follow_up_on: plusDays(t, 7) }; for (var k in extra) p[k] = extra[k]; return p; }
+
+  // checks before an e-mail goes out; returns an error text or ''
+  function emailProblem(id) {
+    var r = state.rows[id], c = cur(id);
+    if (!EMAIL_RE.test(c.email)) return 'Trag oben die E-Mail-Adresse ein (von der About-Seite des Kanals).';
+    if (/\{postal_address\}/.test(fullBody(r, c.message))) return 'Die Postanschrift fehlt noch: oben unter „Absender für E-Mails“ eintragen.';
+    if (!c.subject.trim()) return 'Der Betreff fehlt.';
+    return '';
+  }
+
+  async function sendEmail(id, btn) {
+    var r = state.rows[id], c = cur(id);
+    var input = { to: [c.email], subject: c.subject, body: fullBody(r, c.message) };
+    if (state.signature) input.includeSignature = true;
+    state.busy[id] = true; if (btn) btn.disabled = true;
+    state.notes[id] = { cls: 'wait', text: 'Sende über Gmail …' }; render();
+    try {
+      var res = await state.mcp.callTool(GMAIL, 'send_message', input);
+      var p = (res && res.payload) || {};
+      state.gmail = 'ready'; gmailUI();
+      state.busy[id] = false;
+      var patch = editsPatch(id);
+      var sp = sentPatch({ sent_via: 'gmail', gmail_message_id: p.id || '', gmail_thread_id: p.threadId || '' });
+      for (var k in sp) patch[k] = sp[k];
+      state.notes[id] = { cls: 'ok', text: 'Gesendet an ' + c.email + '.' };
+      await write(id, patch);
+      return true;
+    } catch (e) {
+      state.busy[id] = false; if (btn) btn.disabled = false;
+      state.notes[id] = gmailError(e, 'die E-Mail');
+      render();
+      return false;
+    }
+  }
+  async function sendFollowup(id, btn) {
+    var r = state.rows[id];
+    var input = { to: [r.email], subject: /^re:/i.test(r.subject || '') ? r.subject : 'Re: ' + (r.subject || ''), body: fill(r.followup) };
+    if (r.gmail_thread_id) input.replyThreadId = r.gmail_thread_id;
+    if (state.signature) input.includeSignature = true;
+    state.busy[id] = true; if (btn) btn.disabled = true;
+    state.notes[id] = { cls: 'wait', text: 'Sende die Nachfrage über Gmail …' }; render();
+    try {
+      await state.mcp.callTool(GMAIL, 'send_message', input);
+      state.busy[id] = false;
+      state.notes[id] = { cls: 'ok', text: 'Nachfrage gesendet.' };
+      await write(id, { status: 'followup_sent', followup_on: today(), followup_via: 'gmail' });
+    } catch (e) {
+      state.busy[id] = false; if (btn) btn.disabled = false;
+      state.notes[id] = gmailError(e, 'die Nachfrage'); render();
+    }
+  }
+  async function draftEmail(id, btn) {
+    var r = state.rows[id], c = cur(id);
+    var input = { to: [c.email], subject: c.subject, body: fullBody(r, c.message) };
+    if (state.signature) input.includeSignature = true;
+    state.busy[id] = true; if (btn) btn.disabled = true;
+    try {
+      var res = await state.mcp.callTool(GMAIL, 'create_draft', input);
+      var p = (res && res.payload) || {};
+      state.gmail = 'ready'; gmailUI();
+      state.busy[id] = false;
+      var patch = editsPatch(id); patch.gmail_draft_id = p.id || ''; patch.gmail_draft_url = p.viewUrl || '';
+      state.notes[id] = { cls: 'ok', text: 'Entwurf liegt in Gmail. Du kannst ihn dort senden und hier „Von Hand gesendet ✓“ tippen.' };
+      await write(id, patch);
+    } catch (e) {
+      state.busy[id] = false; if (btn) btn.disabled = false;
+      state.notes[id] = gmailError(e, 'der Entwurf'); render();
+    }
+  }
+
+  // ------------------------------------------------------------------ the page
+  function counts() {
     var rows = Object.values(state.rows), c = function (f) { return rows.filter(f).length; };
-    var items = [
-      ['Bereit', c(function (r) { return r.status === 'draft'; }), ''],
-      ['Warten', c(function (r) { return r.status === 'hold'; }), ''],
-      ['Gesendet', c(function (r) { return r.status === 'sent' || r.status === 'followup_sent'; }), ''],
-      ['Nachfrage fällig', c(isDue), 'due'],
-      ['Zusagen', c(function (r) { return r.status === 'yes'; }), '']
-    ];
+    return {
+      draft: c(function (r) { return r.status === 'draft'; }), approved: c(function (r) { return r.status === 'approved'; }),
+      hold: c(function (r) { return r.status === 'hold'; }), sent: c(function (r) { return r.status === 'sent' || r.status === 'followup_sent'; }),
+      due: c(isDue), yes: c(function (r) { return r.status === 'yes'; })
+    };
+  }
+  function kpis(n) {
+    var items = [['Bereit', n.draft, ''], ['Freigegeben', n.approved, ''], ['Gesendet', n.sent, ''], ['Nachfrage fällig', n.due, 'due'], ['Zusagen', n.yes, '']];
     var box = $('kpis'); box.textContent = '';
     items.forEach(function (it) { var k = el('div', 'kpi ' + it[2]); k.appendChild(el('b', null, String(it[1]))); k.appendChild(el('span', null, it[0])); box.appendChild(k); });
   }
+  function tabs(n) {
+    var nav = $('tabs'); nav.textContent = '';
+    var num = { ready: n.draft, approved: n.approved, hold: n.hold, sent: n.sent, done: null };
+    TABS.forEach(function (t) {
+      var b = el('button'); b.type = 'button'; b.setAttribute('aria-pressed', String(state.tab === t[0]));
+      b.appendChild(document.createTextNode(t[1]));
+      if (num[t[0]]) { b.appendChild(document.createTextNode(' ')); b.appendChild(el('span', 'n', String(num[t[0]]))); }
+      b.onclick = function () { state.tab = t[0]; state.confirm = null; render(); };
+      nav.appendChild(b);
+    });
+  }
 
-  async function write(id, patch, btn) {
-    if (!state.db || state.busy[id]) return;
-    state.busy[id] = true; if (btn) btn.disabled = true;
-    patch.updated_by = 'user'; patch.updated_at = new Date().toISOString();
-    try { await state.db.doc('targets/' + id).update(patch); }
-    catch (e) { $('loadnote').hidden = false; $('loadnote').textContent = 'Speichern ging nicht (' + (e && e.code || 'Fehler') + '). Versuch es gleich nochmal.'; }
-    state.busy[id] = false; if (btn) btn.disabled = false;
+  function noteEl(id) { var n = state.notes[id]; return n ? el('p', 'result ' + n.cls, n.text) : null; }
+
+  function confirmRow(text, yesLabel, onYes) {
+    var row = el('div', 'confirm');
+    row.appendChild(el('span', null, text));
+    var y = el('button', 'primary small', yesLabel); y.type = 'button';
+    var n = el('button', 'small', 'Abbrechen'); n.type = 'button';
+    y.onclick = function () { state.confirm = null; onYes(y); };
+    n.onclick = function () { state.confirm = null; render(); };
+    row.appendChild(y); row.appendChild(n);
+    return row;
   }
 
   function card(id, r) {
+    r._id = id;
     var c = el('article', 'card');
     var top = el('div', 'top');
     top.appendChild(el('h2', null, r.name));
     top.appendChild(el('span', 'chip' + (r.type === 'creator' ? ' creator' : ''), r.type === 'creator' ? 'Creator' : 'Pack'));
+    top.appendChild(el('span', 'chip way', isEmail(r) ? 'E-Mail' : (r.channel || '').split(',')[0]));
     top.appendChild(el('span', 'score', 'Score ' + r.score));
     c.appendChild(top);
     c.appendChild(el('div', 'sub', r.platform + (r.fit ? ' · passt: ' + r.fit : '')));
     if (r.status === 'hold' && r.status_note) c.appendChild(el('p', 'hold', r.status_note));
     var p1 = el('p', 'note'); p1.appendChild(el('b', null, 'Weg: ')); p1.appendChild(document.createTextNode(r.route || '')); c.appendChild(p1);
     var p2 = el('p', 'note'); p2.appendChild(el('b', null, 'Warum eingeladen: ')); p2.appendChild(document.createTextNode(r.why || '')); c.appendChild(p2);
-    if (r.before) { var p3 = el('p', 'note'); p3.appendChild(el('b', null, 'Vor dem Senden: ')); p3.appendChild(document.createTextNode(r.before)); c.appendChild(p3); }
+    if (r.before && (r.status === 'draft' || r.status === 'approved')) { var p3 = el('p', 'note'); p3.appendChild(el('b', null, 'Vor dem Senden: ')); p3.appendChild(document.createTextNode(r.before)); c.appendChild(p3); }
     if (r.facts && r.facts.length) {
       var d = el('details', 'facts'); d.appendChild(el('summary', null, 'Belege (' + r.facts.length + ')'));
       var ul = el('ul'); r.facts.forEach(function (f) { ul.appendChild(el('li', null, f)); }); d.appendChild(ul); c.appendChild(d);
     }
 
-    // the message
+    var open = r.status === 'draft' || r.status === 'approved' || r.status === 'hold';
     var m = el('div', 'msg');
     m.appendChild(el('div', 'label', 'Text · ' + (r.channel || '')));
-    var subj = null;
     var ed = state.edits[id] || {};
-    if (r.subject) { subj = el('input'); subj.value = ed.subject != null ? ed.subject : r.subject; subj.setAttribute('aria-label', 'Betreff'); m.appendChild(subj); }
-    var ta = el('textarea'); ta.value = ed.message != null ? ed.message : (r.message || ''); ta.setAttribute('aria-label', 'Nachricht'); m.appendChild(ta);
+    var mail = null, subj = null;
+    if (isEmail(r) && open) {
+      var lab = el('label', 'f', 'An (E-Mail-Adresse, nur in dieser privaten Seite gespeichert)');
+      mail = el('input'); mail.type = 'email'; mail.inputMode = 'email'; mail.autocomplete = 'off'; mail.placeholder = 'name@beispiel.de';
+      mail.value = ed.email != null ? ed.email : (r.email || '');
+      if (mail.value && !EMAIL_RE.test(mail.value.trim())) mail.classList.add('badfield');
+      lab.appendChild(mail); m.appendChild(lab);
+    }
+    if (r.subject || isEmail(r)) {
+      subj = el('input'); subj.value = ed.subject != null ? ed.subject : (r.subject || ''); subj.setAttribute('aria-label', 'Betreff'); subj.placeholder = 'Betreff';
+      if (!open) subj.readOnly = true;
+      m.appendChild(subj);
+    }
+    var ta = el('textarea'); ta.value = ed.message != null ? ed.message : (r.message || ''); ta.setAttribute('aria-label', 'Nachricht');
+    if (!open) ta.readOnly = true;
+    m.appendChild(ta);
     if (r.footer) m.appendChild(el('div', 'footer', fill(r.footer)));
-    var warn = el('div', 'warn'); m.appendChild(warn);
-    var acts = el('div', 'actions');
-    var bCopy = el('button', 'primary', 'Text kopieren'); bCopy.type = 'button';
-    bCopy.onclick = function () {
-      var t = fill(ta.value + (r.footer ? '\n\n' + r.footer : ''));
-      warn.textContent = /\{postal_address\}/.test(t) ? 'Die Postanschrift fehlt noch: oben unter „Absender für E-Mails“ eintragen.' : '';
-      copy(bCopy, t, ta);
-    };
-    acts.appendChild(bCopy);
-    if (subj) { var bSub = el('button', null, 'Betreff kopieren'); bSub.type = 'button'; bSub.onclick = function () { copy(bSub, subj.value, subj); }; acts.appendChild(bSub); }
-    if (r.url) { var a = el('a', 'btn', 'Öffnen ↗'); a.href = r.url; a.target = '_blank'; a.rel = 'noopener'; acts.appendChild(a); }
     var bSave = el('button', null, 'Änderung speichern'); bSave.type = 'button'; bSave.hidden = true;
     var mark = function () {
-      var same = (ta.value === (r.message || '')) && (!subj || subj.value === r.subject);
-      bSave.hidden = same;
-      if (same) delete state.edits[id]; else state.edits[id] = { message: ta.value, subject: subj ? subj.value : undefined };
+      var e = { message: ta.value };
+      if (subj) e.subject = subj.value;
+      if (mail) { e.email = mail.value; mail.classList.toggle('badfield', !!mail.value && !EMAIL_RE.test(mail.value.trim())); }
+      var same = e.message === (r.message || '') && (!subj || e.subject === (r.subject || '')) && (!mail || e.email.trim() === (r.email || ''));
+      bSave.hidden = same || !open;
+      if (same) delete state.edits[id]; else state.edits[id] = e;
     };
     mark();
-    ta.addEventListener('input', mark); if (subj) subj.addEventListener('input', mark);
-    bSave.onclick = async function () { var p = { message: ta.value, edited: true }; if (subj) p.subject = subj.value; await write(id, p, bSave); delete state.edits[id]; };
-    acts.appendChild(bSave);
-    m.appendChild(acts);
-    c.appendChild(m);
+    ta.addEventListener('input', mark); if (subj) subj.addEventListener('input', mark); if (mail) mail.addEventListener('input', mark);
+    bSave.onclick = function () { var p = editsPatch(id); if (Object.keys(p).length) write(id, p, bSave); };
 
-    // status
+    var acts = el('div', 'actions');
+    var note = noteEl(id);
     var s = el('div', 'actions');
-    function btn(label, cls, patch) { var b = el('button', cls, label); b.type = 'button'; b.onclick = function () { write(id, typeof patch === 'function' ? patch() : patch, b); }; s.appendChild(b); }
+    function btn(box, label, cls, patchFn) { var b = el('button', cls, label); b.type = 'button'; b.onclick = function () { var p = typeof patchFn === 'function' ? patchFn() : patchFn; if (p) write(id, p, b); }; box.appendChild(b); return b; }
+    function copyBtn(box, label, getText, cls) { var b = el('button', cls || null, label); b.type = 'button'; b.onclick = function () { copyText(getText(), b, ta); }; box.appendChild(b); return b; }
+
     if (r.status === 'draft') {
-      btn('Gesendet ✓', 'okb', function () { var t = today(); return { status: 'sent', sent_on: t, follow_up_on: plusDays(t, 7) }; });
-      btn('Später', null, { status: 'hold', status_note: 'Von dir zurückgestellt.' });
-      btn('Nicht senden', 'badb', { status: 'skip' });
-    } else if (r.status === 'hold') {
-      btn('Jetzt freigeben', null, { status: 'draft' });
-      btn('Nicht senden', 'badb', { status: 'skip' });
-    } else if (r.status === 'sent' || r.status === 'followup_sent') {
-      var info = el('p', 'state' + (isDue(r) ? ' due' : ''), 'Gesendet am ' + de(r.sent_on) + (r.status === 'sent' ? ' · Nachfrage ab ' + de(r.follow_up_on) : ' · Nachfrage gesendet am ' + de(r.followup_on || '')));
-      c.appendChild(info);
-      if (isDue(r) && r.followup) {
-        var fu = el('div', 'footer', r.followup); c.appendChild(fu);
-        var bFu = el('button', null, 'Nachfrage kopieren'); bFu.type = 'button'; bFu.onclick = function () { copy(bFu, r.followup, null); }; s.appendChild(bFu);
-        btn('Nachfrage gesendet', 'okb', function () { return { status: 'followup_sent', followup_on: today() }; });
+      btn(acts, 'Freigeben ✓', 'primary', function () { var p = editsPatch(id); p.status = 'approved'; p.approved_on = today(); delete state.notes[id]; return p; });
+      acts.appendChild(bSave);
+      copyBtn(acts, 'Text kopieren', function () { return fullBody(r, cur(id).message); });
+      btn(s, 'Später', null, { status: 'hold', status_note: 'Von dir zurückgestellt.' });
+      btn(s, 'Nicht senden', 'badb', { status: 'skip' });
+      btn(s, 'Von Hand gesendet ✓', 'okb', function () { var p = editsPatch(id); var sp = sentPatch({ sent_via: 'manual' }); for (var k in sp) p[k] = sp[k]; return p; });
+    } else if (r.status === 'approved') {
+      if (isEmail(r)) {
+        var bSend = el('button', 'primary', 'Senden'); bSend.type = 'button';
+        bSend.disabled = !canGmail() || !!state.busy[id];
+        bSend.onclick = function () {
+          var prob = emailProblem(id);
+          if (prob) { state.notes[id] = { cls: 'bad', text: prob }; render(); return; }
+          state.confirm = id; render();
+        };
+        acts.appendChild(bSend);
+        if (canGmail()) { var bDraft = el('button', null, 'Als Entwurf in Gmail'); bDraft.type = 'button'; bDraft.onclick = function () { var prob = emailProblem(id); if (prob) { state.notes[id] = { cls: 'bad', text: prob }; render(); return; } draftEmail(id, bDraft); }; acts.appendChild(bDraft); }
+        var c0 = cur(id);
+        var gm = el('a', 'btn', 'In Gmail öffnen ↗');
+        gm.href = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + enc(c0.email) + '&su=' + enc(c0.subject) + '&body=' + enc(fullBody(r, c0.message));
+        gm.target = '_blank'; gm.rel = 'noopener'; acts.appendChild(gm);
+        if (r.gmail_draft_url) { var dv = el('a', 'btn', 'Entwurf ansehen ↗'); dv.href = r.gmail_draft_url; dv.target = '_blank'; dv.rel = 'noopener'; acts.appendChild(dv); }
+        acts.appendChild(bSave);
+        if (!canGmail()) acts.appendChild(el('span', 'sub', state.gmail === 'none' ? 'Senden mit einem Klick: nur auf claude.ai' : 'Senden mit einem Klick: erst Gmail oben verbinden'));
+      } else {
+        targets(r).forEach(function (t, i) {
+          var a = el('a', 'btn' + (i === 0 ? ' primary' : ''), t.label); a.href = t.url; a.target = '_blank'; a.rel = 'noopener';
+          a.addEventListener('click', function () { if (!t.prefilled) copyText(fullBody(r, cur(id).message), null, ta); });
+          acts.appendChild(a);
+        });
+        copyBtn(acts, 'Nur kopieren', function () { return fullBody(r, cur(id).message); });
+        acts.appendChild(bSave);
       }
-      btn('Antwort: Ja', 'okb', { status: 'yes' });
-      btn('Antwort: Nein', null, { status: 'no' });
-      btn('Stop', 'badb', { status: 'stop' });
+      btn(s, isEmail(r) ? 'Von Hand gesendet ✓' : 'Gesendet ✓', 'okb', function () { var p = editsPatch(id); var sp = sentPatch({ sent_via: isEmail(r) ? 'manual' : 'copy' }); for (var k in sp) p[k] = sp[k]; return p; });
+      btn(s, 'Zurück zu „Bereit“', null, function () { var p = editsPatch(id); p.status = 'draft'; return p; });
+      btn(s, 'Nicht senden', 'badb', { status: 'skip' });
+    } else if (r.status === 'hold') {
+      acts.appendChild(bSave);
+      btn(s, 'Jetzt freigeben', null, function () { var p = editsPatch(id); p.status = 'draft'; return p; });
+      btn(s, 'Nicht senden', 'badb', { status: 'skip' });
+    } else if (r.status === 'sent' || r.status === 'followup_sent') {
+      var via = { gmail: ' über Gmail', manual: ' von Hand', copy: '' }[r.sent_via] || '';
+      c.appendChild(el('p', 'state' + (isDue(r) ? ' due' : ''), 'Gesendet am ' + de(r.sent_on) + via + (r.status === 'sent' ? ' · Nachfrage ab ' + de(r.follow_up_on) : ' · Nachfrage gesendet am ' + de(r.followup_on || ''))));
+      if (isDue(r) && r.followup) {
+        c.appendChild(el('div', 'footer', fill(r.followup)));
+        if (isEmail(r) && r.email && canGmail()) {
+          var bF = el('button', 'primary', 'Nachfrage senden'); bF.type = 'button';
+          bF.onclick = function () { state.confirm = id + '#fu'; render(); };
+          s.appendChild(bF);
+        } else if (!isEmail(r)) {
+          targets(r).slice(0, 1).forEach(function (t) {
+            var a = el('a', 'btn primary', 'Nachfrage kopieren & öffnen ↗'); a.href = t.url.replace(/\/issues\/new\?.*$/, '/issues'); a.target = '_blank'; a.rel = 'noopener';
+            a.addEventListener('click', function () { copyText(fill(r.followup), null, null); }); s.appendChild(a);
+          });
+        }
+        copyBtn(s, 'Nachfrage kopieren', function () { return fill(r.followup); });
+        btn(s, 'Nachfrage gesendet ✓', 'okb', function () { return { status: 'followup_sent', followup_on: today() }; });
+      }
+      btn(s, 'Antwort: Ja', 'okb', { status: 'yes' });
+      btn(s, 'Antwort: Nein', null, { status: 'no', email: '' });
+      btn(s, 'Stop', 'badb', { status: 'stop', email: '', gmail_draft_url: '' });
     } else {
       c.appendChild(el('p', 'state end', END[r.status] || r.status));
-      if (r.status !== 'stop') btn('Zurück zu „Bereit“', null, { status: 'draft' });
+      if (r.status !== 'stop') btn(s, 'Zurück zu „Bereit“', null, { status: 'draft' });
     }
-    c.appendChild(s);
+    m.appendChild(acts);
+    if (state.confirm === id) m.appendChild(confirmRow('Jetzt an ' + cur(id).email + ' senden?', 'Ja, senden', function (b) { sendEmail(id, b); }));
+    if (state.confirm === id + '#fu') m.appendChild(confirmRow('Nachfrage jetzt an ' + r.email + ' senden?', 'Ja, senden', function (b) { sendFollowup(id, b); }));
+    if (note) m.appendChild(note);
+    c.appendChild(m);
+    if (s.childNodes.length) c.appendChild(s);
     return c;
   }
 
-  function render() {
-    kpis();
-    var list = $('list'); list.textContent = '';
-    var ids = Object.keys(state.rows).filter(function (id) { return TABS[state.tab].indexOf(state.rows[id].status) >= 0; });
-    ids.sort(function (a, b) { var A = state.rows[a], B = state.rows[b]; return (isDue(B) - isDue(A)) || (B.score - A.score) || A.name.localeCompare(B.name); });
-    if (!ids.length) list.appendChild(el('p', 'empty', { ready: 'Gerade nichts zu senden. Neue Entwürfe kommen werktags.', hold: 'Nichts wartet.', sent: 'Noch nichts gesendet.', done: 'Noch nichts erledigt.' }[state.tab]));
-    ids.forEach(function (id) { list.appendChild(card(id, state.rows[id])); });
+  function bulkUI(ids) {
+    var box = $('bulk'); box.textContent = '';
+    if (state.tab !== 'approved') return;
+    var mails = ids.filter(function (id) { return isEmail(state.rows[id]); });
+    var ready = mails.filter(function (id) { return !emailProblem(id); });
+    if (!mails.length && !state.bulk) return;
+    var p = el('section', 'panel');
+    var h = el('h3', null, 'Alle freigegebenen E-Mails'); p.appendChild(h);
+    if (state.bulk) {
+      p.appendChild(el('p', null, state.bulk.text));
+    } else {
+      p.appendChild(el('p', null, ready.length + ' von ' + mails.length + ' sind bereit (Adresse, Betreff und Postanschrift da). Die Seite sendet sie nacheinander und hält beim ersten Problem an.'));
+      var acts = el('div', 'actions');
+      var b = el('button', 'primary', 'Alle ' + ready.length + ' senden'); b.type = 'button';
+      b.disabled = !ready.length || !canGmail();
+      b.onclick = function () { state.confirm = 'bulk'; render(); };
+      acts.appendChild(b); p.appendChild(acts);
+      if (state.confirm === 'bulk') p.appendChild(confirmRow(ready.length + ' E-Mails jetzt senden?', 'Ja, alle senden', function () { runBulk(ready); }));
+    }
+    box.appendChild(p);
+  }
+  async function runBulk(ids) {
+    var done = 0;
+    for (var i = 0; i < ids.length; i++) {
+      state.bulk = { text: 'Sende ' + (i + 1) + ' von ' + ids.length + ' …' }; render();
+      var ok = await sendEmail(ids[i], null);
+      if (!ok) { state.bulk = null; render(); return; }
+      done++;
+    }
+    state.bulk = { text: done + ' E-Mails gesendet. Sie stehen jetzt unter „Gesendet“.' }; render();
+    setTimeout(function () { state.bulk = null; render(); }, 6000);
   }
 
-  document.querySelectorAll('nav.tabs button').forEach(function (b) {
-    b.addEventListener('click', function () {
-      state.tab = b.dataset.tab;
-      document.querySelectorAll('nav.tabs button').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
-      render();
-    });
-  });
+  function render() {
+    var n = counts(); kpis(n); tabs(n);
+    var statuses = TABS.filter(function (t) { return t[0] === state.tab; })[0][2];
+    var ids = Object.keys(state.rows).filter(function (id) { return statuses.indexOf(state.rows[id].status) >= 0; });
+    ids.sort(function (a, b) { var A = state.rows[a], B = state.rows[b]; return (isDue(B) - isDue(A)) || (B.score - A.score) || A.name.localeCompare(B.name); });
+    bulkUI(ids);
+    var list = $('list');
+    var focus = document.activeElement && list.contains(document.activeElement) ? { id: document.activeElement.closest('article') && document.activeElement.closest('article').dataset.id, tag: document.activeElement.tagName, type: document.activeElement.type, pos: document.activeElement.selectionStart } : null;
+    list.textContent = '';
+    if (!ids.length) list.appendChild(el('p', 'empty', EMPTY[state.tab]));
+    ids.forEach(function (id) { var a = card(id, state.rows[id]); a.dataset.id = id; list.appendChild(a); });
+    if (focus && focus.id) {
+      var art = list.querySelector('article[data-id="' + focus.id + '"]');
+      var f = art && (focus.tag === 'TEXTAREA' ? art.querySelector('textarea') : focus.type === 'email' ? art.querySelector('input[type=email]') : focus.tag === 'INPUT' ? art.querySelector('input:not([type=email])') : null);
+      if (f) { f.focus(); try { if (focus.pos != null) f.setSelectionRange(focus.pos, focus.pos); } catch (e) {} }
+    }
+  }
 
   function senderUI() {
     var s = state.sender || {};
@@ -281,19 +606,30 @@ details.facts ul { margin: 8px 0 0; padding-left: 20px; font-size: 13.5px; displ
     b.disabled = false;
   });
 
+  gmailUI();
+  render();
+
   (async function start() {
     var db = null;
     try { db = window.claude && window.claude.use ? await window.claude.use('db') : null; } catch (e) { db = null; }
-    if (!db) { $('loadnote').textContent = 'Die Entwürfe lassen sich in dieser Ansicht nicht laden. Öffne die Seite auf claude.ai oder in der Claude-App.'; return; }
-    state.db = db;
-    var timer = setTimeout(function () { $('loadnote').textContent = 'Die Daten sind noch nicht erreichbar. Einen Moment …'; }, 10000);
-    db.collection('targets').onSnapshot(function (snap) {
-      var rows = {}; snap.docs.forEach(function (d) { if (d.exists) rows[d.id] = d.data(); });
-      state.rows = rows;
-      if (!snap.metadata.fromCache) { clearTimeout(timer); $('loadnote').hidden = true; }
-      render();
-    }, function (e) { clearTimeout(timer); $('loadnote').hidden = false; $('loadnote').textContent = 'Die Entwürfe lassen sich gerade nicht laden (' + (e && e.code || 'Fehler') + ').'; });
-    db.doc('settings/sender').onSnapshot(function (d) { state.sender = d.exists ? d.data() : {}; senderUI(); render(); }, function () {});
+    if (!db) { $('loadnote').textContent = 'Die Entwürfe lassen sich in dieser Ansicht nicht laden. Öffne die Seite auf claude.ai oder in der Claude-App.'; }
+    else {
+      state.db = db;
+      var timer = setTimeout(function () { $('loadnote').textContent = 'Die Daten sind noch nicht erreichbar. Einen Moment …'; }, 10000);
+      db.collection('targets').onSnapshot(function (snap) {
+        var rows = {}; snap.docs.forEach(function (d) { if (d.exists) rows[d.id] = d.data(); });
+        state.rows = rows;
+        if (!snap.metadata.fromCache) { clearTimeout(timer); $('loadnote').hidden = true; }
+        render();
+      }, function (e) { clearTimeout(timer); $('loadnote').hidden = false; $('loadnote').textContent = 'Die Entwürfe lassen sich gerade nicht laden (' + (e && e.code || 'Fehler') + ').'; });
+      db.doc('settings/sender').onSnapshot(function (d) { state.sender = d.exists ? d.data() : {}; senderUI(); render(); }, function () {});
+    }
+  })();
+
+  (async function startGmail() {
+    try { state.perms = window.claude && window.claude.use ? await window.claude.use('permissions') : null; } catch (e) { state.perms = null; }
+    try { state.mcp = window.claude && window.claude.use ? await window.claude.use('mcp') : null; } catch (e) { state.mcp = null; }
+    checkGmail();
   })();
 })();
 </script>

@@ -179,6 +179,11 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   Beschreibung für YouTube. Upload-Kit `beachcraft/documentary/v2/youtube.md`. Dateien im Chat: Limit erst 500, dann 400 MiB;
   die 1080p60-Doku (610 MiB) deshalb als HEVC neu kodiert (2 Pässe, 2250 kbit/s, 374 MiB, geliefert). Die alten 3.0-Bilder in `img/` erst
   löschen, wenn die neue Seite online ist. Offen beim Nutzer: Doku auf YouTube laden, Beschreibungen einfügen.
+- **Wachstumsplan (7.11.):** Recherche zu CurseForge-Ranking, Optimierung, neuen Projekten und Outreach:
+  `research/curseforge-wachstum-2026-11.md` (+ CSV), Seite https://claude.ai/artifact/PrjZuwcwu8HErjGgS6doef
+  (`research/tools/build_growth.py`). Kern: Popularity ≈ Downloads der letzten 60–90 Tage; Suche nur Name +
+  Summary; Modpack-Aufnahme ist der größte Hebel; Modrinth fehlt. Offene Entscheidungen beim Nutzer: Bisect-Banner
+  nach unten (Regel vom 22.10.2026), Name „Tamagotchi“ (Bandai-Marke), neue Namen/Summaries in der Author Console.
 - **V1.4.1 Menü-Fix (6.11. nachts):** Der Nutzer sah im Trailer, dass Singleplayer, Multiplayer, Options und Quit Game
   hinter dem lila Balken lagen (Vanilla-Knöpfe unter dem eigenen Bild-Element). Fix: `render_custom_elements_behind_vanilla
   = true` in allen 8 Titel-Layouts (Modpack-Development 20856ba), im Produktiv-Client geprüft. **mkpack.py baut aus

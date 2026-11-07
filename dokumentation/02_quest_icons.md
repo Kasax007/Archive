@@ -8,10 +8,13 @@ ein komplettes Quest-Buch im Stil von FTB Quests geworden.
 eine Quest-Story. Quest Icons hatte schon ein CurseForge-Projekt und lässt sich per API hochladen, deshalb kam das
 Quest-System dort hinein (siehe `dreamcraft/PLAN.md` im Archiv).
 
+Stand 7.11.2026: Die neueste FTB-Quests-Datei ist 26.1.2.10 vom 5.11. (nur NeoForge); für 26.2 und 26.3 gibt es
+keine. Seit 1.2.0 holt `/quests import ftbquests` ein FTB-Quests-Buch herüber (Abschnitt 12).
+
 | Eckdaten | |
 | --- | --- |
-| Minecraft / Loader | 26.3, Fabric (Loader 0.19.5 oder neuer), Java 25, braucht Fabric API |
-| Aktuelle Version | **1.1.0+26.3** (CurseForge-Datei 9429010) |
+| Minecraft / Loader | 26.3 (Loader 0.19.5 oder neuer, Branch `26.3`), seit 1.2.0 auch 26.2 (Loader 0.18.4 oder neuer, Branch `26.2`); Fabric, Java 25, braucht Fabric API |
+| Aktuelle Version | **1.2.0** für 26.3 und 26.2: gebaut und getestet (7.11.2026), der Upload wartet auf die Freigabe des Nutzers. Auf CurseForge: 1.1.0+26.3 (Datei 9429010) |
 | Mod-ID / Paket | `questsicons` / `net.kasax.questsicons` |
 | Port | von 1.21.1 (Yarn-Namen) auf 26.3 (offizielle Mojang-Namen) |
 | Server | muss auf dem Server **und** auf jedem Client installiert sein |
@@ -143,6 +146,7 @@ Advancement), wird die Aufgabe mit **einer** Meldung im Log abgeschaltet, statt 
 | `/quests givebook <Spieler>` | OP | gibt ein Quest Book |
 | `/quests complete <Quest\|all> [Spieler]` | OP | erledigt eine Quest oder alle |
 | `/quests reset <Quest\|all> [Spieler]` | OP | setzt eine Quest oder den ganzen Fortschritt zurück |
+| `/quests import ftbquests [preview\|run\|merge] [Ordner]` | OP (Level 2) | importiert ein FTB-Quests-Buch (seit 1.2.0, Abschnitt 12) |
 | `/quests team info \| create \| invite \| join \| leave` | alle | Teams (siehe oben) |
 
 `/questbook` funktioniert genauso wie `/quests` (Weiterleitung). Quelle: `server/QuestCommands.java`.
@@ -301,9 +305,11 @@ Polished Blackstone | Polished Blackstone | Polished Blackstone
 | **1.0.1+26.3** | 9409345 | 2.11.2026 | Wer mit `/quests team join` einem Team beitrat, bekam beim nächsten Login ein zweites Quest Book. Das Team merkt sich jetzt, dass der Spieler schon eines hat. |
 | **1.0.2+26.3** | 9415031 | 3.11.2026 | **Hotfix:** Klicks im Quest-Buch gingen nicht (siehe unten). |
 | **1.1.0+26.3** | 9429010 | 3./4.11.2026 | Dream Star und Pedestal; Escape schließt zuerst das offene Fenster; keine Klicks mehr „durch“ Auswahlfenster und Menüs; weggescrollte Knöpfe reagieren nicht mehr; Team-Reparatur nach Server-Neustart; kaputte Aufgaben werden abgeschaltet statt Log-Spam; Quests ohne ID überschreiben sich nicht; XP-Aufgaben zählen die aktuellen XP; 99 % statt Haken; Mystery Reward ohne Creative-Blöcke; Loot Crates in normalen Stapeln; kein Barrier-Block für unbekannte Items |
+| **1.2.0+26.3** | Upload offen | 7.11.2026 | FTB-Quests-Import (`/quests import ftbquests`, Abschnitt 12); dafür neu: optionale Aufgaben, Items als „eins von“ oder ganze Mod (`@mod`), unscharfer Abgleich der Item-Daten, zufällige Bonus-Menge, Befehle mit Level 3 und 4, Bilder nach einer Quest, versteckte Linien zu Folge-Quests, unsichtbare Kapitel, Form „none“, FTB-Text (`&#RRGGBB`, `{keys}`); große Bücher als „large payload“; abgeschnittene Titel behalten ihre Farbe; fehlende Bilder werden weggelassen |
+| **1.2.0+26.2** | Upload offen | 7.11.2026 | Erste Fassung für 26.2 (Branch `26.2`), gleicher Umfang wie auf 26.3; Loader 0.18.4 oder neuer |
 
 Die Changelogs liegen in `docs/curseforge/changelog-<version>.md` im Mod-Repo. Dreamcraft nutzte 1.0.0 (V1, V1.1),
-1.0.1 (V1.2), 1.0.2 (V1.2.1); V1.3 (4.11.2026) nutzt 1.1.0.
+1.0.1 (V1.2), 1.0.2 (V1.2.1); V1.3 bis V1.4.1 nutzen 1.1.0.
 
 ### Wie es zum Hotfix 1.0.2 kam
 1. **Das Symptom:** Spieler meldeten im Discord (Dreamcraft V1.2 mit Quest Icons 1.0.1), dass sie keine Quest öffnen
@@ -335,3 +341,87 @@ Die Changelogs liegen in `docs/curseforge/changelog-<version>.md` im Mod-Repo. D
 (`docs/curseforge/img/book.png`, `quest.png`, `icons.png`) und **10 Spoiler-Boxen** (Screenshots, Öffnen, Befehle,
 Aufgaben- und Belohnungs-Typen, Kisten, Teams, Pins, Dream-Star-Rezepte, Quest-Dateien, Editor). Einfügen von Hand,
 siehe [06_videos_und_beschreibungen.md](06_videos_und_beschreibungen.md).
+
+Seit 7.11.2026 (1.2): `docs/curseforge/make_images_v3.py` baut `header_v3` (Sticker „1.2“, beide Versionen, „FTB
+Quests import“), `glance_v3` (Band „Neu in 1.2“), `strip_import_v3`, `import_v3` (drei Schritte und was mitkommt) und
+`strip_star_v3`; die übrigen Bilder bleiben `*_v2`. Die Seite hat einen neuen Abschnitt „Import from FTB Quests“, der
+Spoiler nennt 26.2 und die Grenzen des Imports (Commit 81919fa). Kurzbeschreibung (Vorschlag auf der Übergabeseite):
+„A quest book in the style of FTB Quests that imports your FTB Quests book with one command – chapters, quest map,
+rewards, loot crates, teams, an in-game editor and 32 quest icons.“ Die neue Seite erst einfügen, wenn 1.2.0 auf
+CurseForge freigegeben ist.
+
+---
+
+## 12. FTB-Quests-Import (neu in 1.2.0)
+
+`/quests import ftbquests [preview|run|merge] [Ordner]` (Operatoren, Level 2). Quelle: `server/FtbImportCommand.java`
+und das Paket `importer/` (`FtbFolder`, `FtbSnbtReader`, `Json5Reader`, `FtbItems`, `FtbImporter`, `ImportReport`).
+
+- **Ordner:** Standard ist `config/ftbquests/quests` im Spiel- oder Server-Ordner. Ein Instanz-Ordner, ein
+  `config`-Ordner oder ein absoluter Pfad geht auch.
+- **preview** (Standard) liest nur und schreibt `config/questsicons/ftbquests-import-report.txt`.
+- **run** sichert `config/questsicons/quests` nach `config/questsicons/backups/quests-<Zeit>/`, ersetzt das Buch und
+  lädt es für alle neu. **merge** sichert genauso, behält die eigenen Kapitel und ersetzt oder ergänzt die FTB-Kapitel
+  nach ID.
+- **Chat:** Zahlen, die häufigsten Abweichungen und die fehlenden Mods mit der Zahl ihrer IDs. Lesen und Umwandeln
+  laufen neben dem Server-Thread.
+
+**Drei Formate:** 1.20 und älter (SNBT, Texte in den Kapitel-Dateien), 1.21 (SNBT mit `lang/<sprache>.snbt` oder
+geteilten `lang/<sprache>/`-Ordnern wie in ATM10) und 26.1 (JSON5 mit geteilten Sprach-Ordnern; so speichert FTB
+Quests 26.1.2.x alles). Der SNBT-Leser folgt den Regeln von FTB Library; der JSON5-Leser hält 64-Bit-IDs exakt.
+
+**Was übernommen wird:** Buch (Titel, Icon, Standard-Form, Team-Belohnungen, Auto-Claim), Kapitelgruppen und Kapitel
+in FTB-Reihenfolge, Kartenbilder (Position, Größe, Drehung, Farbe, „erst nach Quest X“), Quests (Platz, Größe, Form,
+Linien, Texte mit `&`-Codes, `&#RRGGBB`, `{keys}`; Abhängigkeiten „eine“ oder „alle“, optional, unsichtbar, versteckt
+bis erledigt, ohne Toast). Aufgaben: Item (IDs, 1.20-NBT, 1.21-Components, Upgrade mit dem Data Fixer von Minecraft,
+Item-Filter als „eins von“, Tags, ganze Mods; Forge-Tags werden `c`-Tags), Checkmark, Kill, Advancement, Dimension,
+Biom, Struktur, XP, Statistik, Observation (alle 7 Arten), Ort. Belohnungen: Item (mit Zufallsbonus), XP, Level,
+Advancement, Befehl (Level 2–4, Platzhalter), random, loot (mit FTBs Chance auf „nichts“), choice, „all of table“
+(eine Belohnung je Eintrag); Reward Tables nach Dateiname mit skalierten Gewichten. Die FTB-IDs bleiben, ein zweiter
+Import aktualisiert das Buch statt es zu verdoppeln (getestet).
+
+**Was nicht genau übernommen wird (steht alles im Bericht):** Flüssigkeit, Energie, Game Stages, KubeJS und andere
+Mod-Aufgaben werden Checkmarks mit beschreibendem Titel. Übersprungen: Toast-, Game-Stage-, KubeJS- und
+Währungs-Belohnungen (FTB Money), Quest-Links, Klick-Aktionen auf Bildern, Mob-Loot-Kisten, sequenzielle Aufgaben,
+Guide-Seiten. Angenähert: flexible Progression, „versteckt bis Abhängigkeiten sichtbar“, „mindestens N“, wiederholbare
+Quests (einmalig), Ort als Kugel statt Box. **Fortschritt wird nicht übernommen** (FTB speichert ihn in den
+Weltdaten).
+
+**Tests:**
+- 16 JUnit-Tests (26.3 und 26.2): ein handgeschriebenes Buch in allen drei Formaten, beide Leser, Filter,
+  Re-Import, zweite Sprache, unbekannte IDs nach Mod.
+- Sechs echte Modpack-Bücher, gegengeprüft mit einem unabhängigen Python-Leser (`-PftbSamples=<Ordner>`; die Bücher
+  sind „All Rights Reserved“ und nicht im Repo, `python3 -I tools/ftb_samples.py fetch <dir>` lädt sie neu):
+
+| Pack | Format | Gruppen / Kapitel | Quests | Aufgaben (→ Checkmarks) | Belohnungen FTB → QI | Paket |
+| --- | --- | --- | --- | --- | --- | --- |
+| ATM9 | 2001, Texte im Kapitel | 9 / 67 | 4.034 | 4.898 (66) | 5.469 → 5.468 | 400 KiB |
+| Prominence II (Fabric) | 2001 | 8 / 30 | 1.754 | 2.431 (16) | 2.133 → 2.085 | 259 KiB |
+| ATM10 | 2101, geteilte lang | 10 / 67 | 4.891 | 6.137 (4) | 7.351 → 7.350 | 910 KiB |
+| FTB StoneBlock 4 | 2101, `lang/en_us.snbt` | 3 / 22 | 942 | 1.611 (93) | 1.421 → 410 | 224 KiB |
+| ATM11 | 26.1.2.9, JSON5 | 10 / 69 | 4.978 | 6.171 (4) | 7.085 → 6.575 | 907 KiB |
+| FTB Evolution 2 | 26.1.2.10, JSON5 | 5 / 42 | 1.784 | 2.586 (56) | 3.364 → 1.733 | 475 KiB |
+
+  Weniger Belohnungen: StoneBlock 4 hat 794 Währungs- und 248 Game-Stage-Belohnungen, Evolution 2 1.620
+  Währungs-Belohnungen; bei ATM11 fehlt 508 Choice-Belohnungen schon im Original die Tabelle.
+- Selbsttest im Spiel (`./gradlew runSelftest [-PselftestFtb=<Ordner>] [-PselftestFtbLarge=<Ordner>]`): 60 Prüfungen,
+  0 Fehler auf 26.3 und 26.2. Einzelspieler mit echten Klicks (Kapitel, Quest, drei Checkmarks, Belohnung; 8
+  Eichenstämme erfüllen die `#minecraft:logs`-Quest), dazu ein Server im Prozess, der ATM11 (4.978 Quests, 907 KiB) über
+  den Large-Payload-Weg an den Client schickt.
+- Produktiv-Rauchtests mit echten Fabric-Servern und den Release-Jars: 26.3 mit Loader 0.19.5 und ATM10; 26.2 mit
+  Loader 0.18.4 und FTB Evolution 2 sowie ATM11.
+
+**Unterschiede der 26.2-Fassung:** `Player.drop` ohne Vorhersage-Argument, `PushReaction.BLOCK` statt `IMMOVEABLE`,
+Blöcke mit Block-Entity deklarieren noch `codec()`, Eingabe über GLFW (`InputConstants.Type.KEYSYM`), der Stern dreht
+sich mit `PoseStack.mulPose`. Der Trigger `recipe_unlocked` liest dort `"recipe"` statt `"recipes"` (drei Advancements
+korrigiert).
+
+**Dateien und Commits:** `QuestIcons-1.2.0+26.3.jar` (sha1 `e8d50612cdbaf8f3df6ec6b31c8a583bc3fe6fc9`) und
+`QuestIcons-1.2.0+26.2.jar` (sha1 `0f871056fd17883002c8762787c3b1ad811f1d1b`) lagen im Scratchpad
+(`release_qi12/`); neu bauen mit `./gradlew build` auf dem jeweiligen Branch. 26.3: 441f27a, 1bed1c6, b088270
+(Changelog), 81919fa (Beschreibung). 26.2: 441f27a, da1e46b, a5c4fd4, a561573. Changelogs
+`docs/curseforge/changelog-1.2.0+26.3.md` und `changelog-1.2.0+26.2.md` mit „How to import from FTB Quests“.
+CurseForge-Spielversionen: 26.3 = 17045, 26.2 = 16498, dazu Fabric 7499, Client 9638, Server 9639, Java 25 14454.
+
+**Offen:** Bücher von FTB Quests 2111 (1.21.11) werden wie 1.21.1 behandelt (ungetestet, nur 4 Packs nutzen 2111).
+ATM9-Texte sind Übersetzungsschlüssel `{atm9.…}` und brauchen die KubeJS-Sprachdateien des Packs.

@@ -1,5 +1,5 @@
 {
- "date": "Stand 7. November 2026",
+ "date": "Stand 7. November 2026, mit Quest Icons 1.2",
  "intro": "Alle vier Projektseiten im neuen Stil, dazu bei jedem Projekt die neue <b>Kurzbeschreibung</b> (Summary) zum Kopieren. Die CurseForge-Suche liest nur Name und Kurzbeschreibung, nicht die Beschreibung. Ändern kannst du beides in der <a href=\"https://authors.curseforge.com/\" target=\"_blank\" rel=\"noopener\">Author Console</a>: Projekt öffnen, dann die Projekt-Details (Name, Summary, Kategorien) bearbeiten und speichern. Bei Projekten mit Video fügst du den YouTube-Link ins Feld ein; ohne Link fehlt nur der Video-Block.",
  "footer": "Alle Texte liegen auch als HTML-Dateien im Chat und in den Repos unter <code>docs/curseforge/description.html</code> (Branch <code>26.3</code>). Die alten Bilder bleiben in den Repos, bis die neuen Seiten online sind.",
  "projects": [
@@ -135,20 +135,21 @@
    "name": "Quest Icons",
    "chip": [
     "new",
-    "neu gestaltet"
+    "1.2: FTB-Import · 26.2"
    ],
-   "ids": "Mod · Projekt 690531 · Version 1.1.0+26.3 (Datei 9429010)",
+   "ids": "Mod · Projekt 690531 · Version 1.2.0 für 26.3 und 26.2 (gebaut und getestet, Upload wartet auf deine Freigabe)",
    "about": [
-    "In den Farben des Quest-Buchs: dunkles Lila, Gold und Pixelschrift.",
-    "- 359 statt 1.552 Wörter, 17 neue Grafiken: die 32 Icons, das Quest-Buch mit Erklärungen, 11 Aufgaben und 8 Belohnungen, Loot-Kisten, Teams, der Dream Star mit Rezept und ein Abschnitt für Pack-Ersteller.",
-    "- Befehle, Team-Regeln und die Quest-Dateien stehen im Spoiler. Ein Video gibt es hier nicht."
+    "Neu für 1.2: Die Seite zeigt den FTB-Quests-Import und Minecraft 26.2.",
+    "- Neues Kopfbild mit „1.2“ und beiden Versionen, die Übersicht „Neu in 1.2“ und ein eigener Abschnitt „Import from FTB Quests“: Ordner kopieren, <code>/quests import ftbquests</code> (Vorschau), <code>… run</code> (Buch ersetzen), dazu was übernommen wird.",
+    "- Im Spoiler: Voraussetzungen für 26.3 und 26.2, der neue Befehl und die Grenzen des Imports (Fortschritt, Flüssigkeits- und KubeJS-Aufgaben).",
+    "- Die Bilder liegen im Repo (Branch 26.3) und sind schon online. Die Kurzbeschreibung nennt jetzt den Import, denn die Suche liest nur Name und Kurzbeschreibung."
    ],
    "html": "/home/user/Kasax_Quests_Items_Mod-1.19.2/docs/curseforge/description.html",
    "preview": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/desc_qi_preview.png",
    "url": "https://www.curseforge.com/minecraft/mc-mods/quest-icons",
    "video": null,
    "meta": {
-    "summary_new": "A full quest book in the style of FTB Quests – chapters, quest map, tasks, rewards, loot crates, teams and an in-game editor – plus 32 quest icons.",
+    "summary_new": "A quest book in the style of FTB Quests that imports your FTB Quests book with one command – chapters, quest map, rewards, loot crates, teams, an in-game editor and 32 quest icons.",
     "summary_old": "Quest Items for you to use in your pack!",
     "name_new": "Quest Icons – Quest Book & Icons",
     "name_old": "Quest Icons",

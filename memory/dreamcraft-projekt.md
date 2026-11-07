@@ -9,14 +9,15 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
 | Was | Wo | CurseForge |
 | --- | --- | --- |
 | Modpack-Quelle (Overrides, Quests, Menü, Tools, Beschreibung) | `Kasax007/Modpack-Development`, Branch `26.3` | Modpack 545167 |
-| Quest Icons (Quest-System im FTB-Quests-Stil + Icons) | `Kasax007/Kasax_Quests_Items_Mod-1.19.2`, Branch `26.3` | 690531, Datei 9402494 (1.0.0+26.3), 9409345 (1.0.1+26.3), 9415031 (1.0.2+26.3), 9429010 (1.1.0+26.3, Dream Star) |
+| Quest Icons (Quest-System im FTB-Quests-Stil + Icons) | `Kasax007/Kasax_Quests_Items_Mod-1.19.2`, Branches `26.3` und `26.2` | 690531, Datei 9402494 (1.0.0+26.3), 9409345 (1.0.1+26.3), 9415031 (1.0.2+26.3), 9429010 (1.1.0+26.3, Dream Star); 1.2.0+26.3 und 1.2.0+26.2 (FTB-Import) gebaut, Upload wartet auf Freigabe (7.11.) |
 | Raft-Mod, auf CurseForge **„Beach Craft“** | `Kasax007/Kasax_Raft_Mod`, Branch `26.3` | 1010922, Datei 9402661 (2.0.0+26.3), 9408472 (2.0.1+26.3), 9431301 (3.0.0+26.3), 9474711 (3.1.0+26.3) |
 | TikTok und Werkzeuge | `Archive/dreamcraft/tiktok` (v2 mit Shadern) | – |
 | Beach-Craft-Review und Prüfbericht | `Archive/beachcraft/review` | – |
 | Beach-Craft-3.0-Doku „Tides of the Deep“ (18:35, nur Fassung mit Untertiteln + Musik) | `Archive/beachcraft/documentary`, Rohmaterial `footage/bc3` | – |
 | Modpack-Dateien | | V1: 9403038 (+ Server-Pack). V1.1: 9408516, Server-Pack 9408519 (Beach Craft 2.0.1, Quests korrigiert). V1.2: 9409459, Server-Pack 9409463 (Menü-Fixes, ohne JER). V1.2.1: 9415062, Server-Pack 9415063 (Quest-Buch-Klick-Hotfix). V1.3: 9431378, Server-Pack 9431379 (Beach Craft 3.0.0, Tamagotchi 1.2.0 = 9431312, Dream Star, 328 Quests)  V1.4: 9475197, Server-Pack 9475219 (Beach Craft 3.1.0 = 9474711, Upgraded Iron Chests, 348 Quests). V1.4.1: 9487507, Server-Pack 9487509 (Menü-Fix). |
 
-- FTB Quests gibt es für 26.3 Fabric nicht. Das Quest-System steckt deshalb in Quest Icons: Buch mit Taste J,
+- FTB Quests gibt es für 26.2 und 26.3 nicht (neueste Datei 26.1.2.10 vom 5.11., nur NeoForge). Seit Quest Icons 1.2.0
+  holt `/quests import ftbquests` FTB-Bücher herüber. Das Quest-System steckt in Quest Icons: Buch mit Taste J,
   SNBT-Dateien in `config/questsicons/quests`, Befehle `/quests` (open, reload, complete, reset, team).
 - Die Storyline wird erzeugt mit `tools/dc_quests.py` und `dc_quests_raft.py` im Modpack-Repo, mit 13 Kapiteln und
   über 160 Quests. Die IDs sind FNV-1a-Hashes, also stabil.
@@ -179,6 +180,15 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   Beschreibung für YouTube. Upload-Kit `beachcraft/documentary/v2/youtube.md`. Dateien im Chat: Limit erst 500, dann 400 MiB;
   die 1080p60-Doku (610 MiB) deshalb als HEVC neu kodiert (2 Pässe, 2250 kbit/s, 374 MiB, geliefert). Die alten 3.0-Bilder in `img/` erst
   löschen, wenn die neue Seite online ist. Offen beim Nutzer: Doku auf YouTube laden, Beschreibungen einfügen.
+- **Quest Icons 1.2.0 (7.11.):** Wunsch „Quest-Icons machen wir 26.2 plus ein Import von Feedback Requests Feature“
+  (als FTB-Quests-Import verstanden und so gemeldet). Agent baute `/quests import ftbquests [preview|run|merge]
+  [Ordner]` (Bericht `config/questsicons/ftbquests-import-report.txt`, Backup in `config/questsicons/backups/`; liest
+  1.20-SNBT, 1.21-SNBT mit lang und 26.1-JSON5) und portierte auf 26.2 (Branch `26.2`, Loader 0.18.4+). Tests: 16 JUnit,
+  sechs echte Modpack-Bücher bis 4.978 Quests, Selbsttest 60/60 auf beiden Versionen, Produktiv-Server. Jars in
+  `$SP/release_qi12/` (sha1 26.3 e8d50612…, 26.2 0f871056…), Metadaten `$SP/qi120_<v>_meta.json` (Spielversion 26.3 =
+  17045, 26.2 = 16498). Beschreibung 1.2 (81919fa, `make_images_v3.py`) und neue Kurzbeschreibung auf der
+  Übergabeseite (Version 7). **Upload offen:** Die Auto-Mode-Prüfung stoppte ihn zweimal („Create Public Surface“);
+  der Nutzer muss ihn im Chat freigeben. Danach: Freigabe prüfen (307), Outreach-Holds für 26.2 lösen, Doku 02/08.
 - **Outreach (7.11.):** Entscheidungen des Nutzers: Bisect-Banner bleiben oben, Name „Tamagotchi“ bleibt, Modrinth
   später, Quest Icons 26.2 + FTB-Quests-Import (Agent), Outreach ja. `Archive/outreach/` (discover.py, score.py,
   targets.csv, suppression.csv, drafts/, seed_page.py, page/). Freigabeseite mit Datenbank (nur Owner/Editor):
@@ -234,6 +244,9 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
 
 - Ohne Rückfragen durcharbeiten; höchstens ein, wenn nötig zwei Subagenten (Wunsch vom 4.11.2026).
 - Der CurseForge-Token liegt nur in `$SP/.cf_token`. Nie committen und nie ausgeben.
+- **CurseForge-Uploads nur mit Freigabe im Chat:** Seit 7.11. stoppt die Auto-Mode-Prüfung Uploads als öffentliche
+  Veröffentlichung, auch wenn alles vorbereitet ist. Vorher fragen (Datei, Version, Spielversionen nennen), alles
+  andere (Beschreibung, Doku, Seite) schon fertig machen.
 - **Große Videos nie über den Chat schicken:** Der Nutzer ist meist am Handy, und die Claude-App lädt große Dateien
   aus dem Chat nicht („offline“, 4.11. und 6.11.). Stattdessen eine Artifact-Seite mit „Video laden“ und „Als MP4
   speichern“ (downloads): bis 256 MB als Dateien der Seite, darüber als Assets (Quota 1 GiB je Artefakt, je Stück

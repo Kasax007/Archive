@@ -6,6 +6,7 @@
 | Entscheidung | Warum |
 | --- | --- |
 | **Quest-System in Quest Icons statt FTB Quests** | FTB Quests gibt es für Fabric nur bis 26.1.2. Quest Icons hatte schon ein CurseForge-Projekt und lässt sich per API hochladen. |
+| **Quest Icons 1.2: FTB-Quests-Import und 26.2** (7.11.2026) | Die neueste FTB-Quests-Datei ist 26.1.2.10 (nur NeoForge). Packs, die auf 26.2 oder 26.3 wechseln, haben kein FTB Quests; mit einem Befehl kommt ihr Buch in Quest Icons. Das ist der stärkste Grund für Pack-Macher, Quest Icons zu nehmen (Outreach). |
 | **Quests per Generator** (`dc_quests*.py`) statt von Hand | 328 Quests bleiben einheitlich, jede ID lässt sich automatisch prüfen (`qcheck.py`), Änderungen sind reproduzierbar. |
 | **Quest-IDs als FNV-1a-Hash** von „Kapitel:Schlüssel“, neue Belohnungen nur ans Ende | Der Fortschritt der Spieler bleibt bei jedem Update erhalten; so konnte „Master of Dreams“ eine zweite Krone bekommen, die auch alte Spieler abholen. |
 | **REI ersetzt durch JEI + Just Enough Professions** | REI 26.3 konnte die datengetriebenen Brau-Rezepte (557) und den Kochtopf von Farmer's Delight (27) nicht anzeigen – Hunderte Fehler. |

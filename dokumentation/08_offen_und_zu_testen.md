@@ -9,9 +9,10 @@ Spielmechaniken oder per Code eingefügter Beute. Die Beach-Craft-Checks (Szene 
 Dreamcraft V1.4 (348 Quests) mit Beach Craft 3.1.0 im vollen Pack: startet ohne neue Fehler, die 4 neuen Quests
 (eigenes Floß, Segel und Motor, ein NPC, alle 8 NPCs) und „Raft Lanterns“ lassen sich erfüllen und abholen (`qrun3`).
 
-**Noch nicht hochgeladen (wartet auf deine Freigabe):** Beach Craft 3.1.0 (Floß selbst bauen, NPCs, Sounds und Musik,
-Welt-Fixes), Dreamcraft V1.4 (Upgraded Iron Chests, Kapitel „Quality of Life“, Beach Craft 3.1.0) und das
-Challenge-Craft-Modpack v5 (erst nach deiner Testrunde, falls Quests sich noch ändern).
+**Noch nicht hochgeladen (wartet auf deine Freigabe, Stand 7.11.):** Quest Icons 1.2.0 für 26.3 und 26.2
+(FTB-Quests-Import, gebaut und getestet, siehe [02](02_quest_icons.md#12-ftb-quests-import-neu-in-120)) und das
+Challenge-Craft-Modpack v5 (erst nach deiner Testrunde, falls Quests sich noch ändern). Beach Craft 3.1.0 und
+Dreamcraft V1.4/V1.4.1 sind seit dem 6./7.11. online.
 
 ## A. Deine Entscheidungen (blockieren die nächsten Schritte)
 
@@ -21,7 +22,8 @@ Challenge-Craft-Modpack v5 (erst nach deiner Testrunde, falls Quests sich noch �
 - [x] **Dreamcraft V1.3 gebaut, getestet und hochgeladen** (4.11.) – Client 9431378, Server-Pack 9431379.
   - [ ] Auf CurseForge prüfen, ob 9431379 als Server Pack markiert ist (geht nur von Hand).
 - [ ] **Neue Beschreibungen einfügen** (Quellcode-Ansicht, siehe [06](06_videos_und_beschreibungen.md#4-die-curseforge-beschreibungen-finale-fassungen)):
-  - [ ] Quest Icons (1.1.0 ist veröffentlicht).
+  - [ ] Quest Icons: Seite für 1.2 (FTB-Import, 26.2) erst einfügen, wenn 1.2.0 freigegeben ist; dazu die neue
+    Kurzbeschreibung von der Übergabeseite.
   - [ ] Beach Craft (3.0.0 ist veröffentlicht).
   - [ ] Dreamcraft (V1.3 ist hochgeladen).
   - [ ] Dreamcraft-Kurzbeschreibung (Summary) prüfen: stand am 2.11. noch „800+ quests“.
@@ -120,6 +122,9 @@ Challenge-Craft-Modpack v5 (erst nach deiner Testrunde, falls Quests sich noch �
   - Log: „Dev warning – Untranslated Item Tags“.
 
 ## E. Quest Icons – zu testen
+- [ ] Quest Icons 1.2.0: Upload beider Dateien (26.3 und 26.2) freigeben; danach Freigabe auf CurseForge prüfen.
+- [ ] FTB-Import mit einem eigenen oder freien FTB-Buch ausprobieren: `/quests import ftbquests` (Vorschau), Bericht
+  `config/questsicons/ftbquests-import-report.txt` lesen, dann `run`.
 - [ ] Teams auf einem echten Server: einladen per Klick im Chat, beitreten, Server neu starten – kein leeres Team mehr.
 - [ ] Edit-Modus als OP auf einem Server: Quest ziehen, SNBT bearbeiten, „Reload files from disk“.
 - [ ] Mystery Reward ein paarmal öffnen (keine Creative-Blöcke).

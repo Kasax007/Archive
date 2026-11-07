@@ -270,6 +270,12 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   Hilfe anbieten. Nie „No pressure – I won't follow up more than once“, „One message only“, „This is a one-off
   message. Reply stop …“ (klingt nach KI/Mailverteiler). E-Mail-Adressen immer selbst eintragen (öffentliche
   Kanalbeschreibung, Website); nur in der privaten Datenbank der Seite, nie in Git.
+- **Freigabe vom 7.11. (spät):** „Wenn Beach Craft, Tamacraft und der Rest fertig ist, machen wir das Modpack und du
+  darfst hochladen.“ Gilt für Beach Craft 3.2/3.3, Tamacraft 1.3.0, die Quest-Icons-Ports und das nächste
+  Dreamcraft-Update – erst wenn alles fertig und getestet ist.
+- **Beach-Craft-Wünsche 7.11.:** Textur-Kanten (Satellitenschüssel, Control Terminal), Z-Fighting, eigenes Floß
+  (Shift-Rechtsklick zerlegt, Lenkrad-Animation, Segel + Mast, Segeln, Anker, Motor-Fuel-Fenster, schnelleres
+  Umwandeln) → 3.2.0; dazu „viel mehr cozy dekorative Blöcke bzw. mehr Nutzen der Deko“ → eigenes Modul, 3.3.0.
 - **CurseForge-Uploads nur mit Freigabe im Chat:** Seit 7.11. stoppt die Auto-Mode-Prüfung Uploads als öffentliche
   Veröffentlichung, auch wenn alles vorbereitet ist. Vorher fragen (Datei, Version, Spielversionen nennen), alles
   andere (Beschreibung, Doku, Seite) schon fertig machen.

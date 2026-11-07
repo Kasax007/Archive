@@ -31,6 +31,11 @@ Dreamcraft V1.4/V1.4.1 sind seit dem 6./7.11. online.
   (Branch `bugcheck-2026-11`). Behalten (dann 1.1.4 veröffentlichen) oder anders lösen? Siehe
   [05](05_challenge_craft.md#die-entscheidung-die-du-treffen-musst-der-crafter).
 
+- [ ] **BisectHosting-Partner-ID prüfen:** Dreamcraft (ab V1.4.2) nutzt 4395 wie Dreamcraft 1.20.1, das
+  Challenge-Craft-Modpack 4385. In der Partnerkonsole (bisecthosting.com/partners/console.php) nachsehen, welche
+  stimmt, und das andere Pack anpassen.
+- [ ] Dreamcraft V1.4.2: Server-Pack 9499399 auf CurseForge als Server Pack markieren (geht nur von Hand).
+
 ## B. Risiken und Aufräumen
 - [ ] **Die Build-Werkzeuge hängen am flüchtigen Scratchpad.** `mkpack.py` hat den Scratchpad-Pfad dieser Sitzung fest
   eingetragen und braucht dort `packdb.json` (Modliste mit Datei-Pfaden), `jars/` (Mod-Cache), `ownjars/` (Quest Icons

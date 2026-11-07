@@ -14,7 +14,7 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
 | TikTok und Werkzeuge | `Archive/dreamcraft/tiktok` (v2 mit Shadern) | – |
 | Beach-Craft-Review und Prüfbericht | `Archive/beachcraft/review` | – |
 | Beach-Craft-3.0-Doku „Tides of the Deep“ (18:35, nur Fassung mit Untertiteln + Musik) | `Archive/beachcraft/documentary`, Rohmaterial `footage/bc3` | – |
-| Modpack-Dateien | | V1: 9403038 (+ Server-Pack). V1.1: 9408516, Server-Pack 9408519 (Beach Craft 2.0.1, Quests korrigiert). V1.2: 9409459, Server-Pack 9409463 (Menü-Fixes, ohne JER). V1.2.1: 9415062, Server-Pack 9415063 (Quest-Buch-Klick-Hotfix). V1.3: 9431378, Server-Pack 9431379 (Beach Craft 3.0.0, Tamagotchi 1.2.0 = 9431312, Dream Star, 328 Quests)  V1.4: 9475197, Server-Pack 9475219 (Beach Craft 3.1.0 = 9474711, Upgraded Iron Chests, 348 Quests). V1.4.1: 9487507, Server-Pack 9487509 (Menü-Fix). |
+| Modpack-Dateien | | V1: 9403038 (+ Server-Pack). V1.1: 9408516, Server-Pack 9408519 (Beach Craft 2.0.1, Quests korrigiert). V1.2: 9409459, Server-Pack 9409463 (Menü-Fixes, ohne JER). V1.2.1: 9415062, Server-Pack 9415063 (Quest-Buch-Klick-Hotfix). V1.3: 9431378, Server-Pack 9431379 (Beach Craft 3.0.0, Tamagotchi 1.2.0 = 9431312, Dream Star, 328 Quests)  V1.4: 9475197, Server-Pack 9475219 (Beach Craft 3.1.0 = 9474711, Upgraded Iron Chests, 348 Quests). V1.4.1: 9487507, Server-Pack 9487509 (Menü-Fix). V1.4.2: 9499392, Server-Pack 9499399 (Bisect-Config, Changelog nur „Bug fixes“). |
 
 - FTB Quests gibt es für 26.2 und 26.3 nicht (neueste Datei 26.1.2.10 vom 5.11., nur NeoForge). Seit Quest Icons 1.2.0
   holt `/quests import ftbquests` FTB-Bücher herüber. Das Quest-System steckt in Quest Icons: Buch mit Taste J,
@@ -180,6 +180,11 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   Beschreibung für YouTube. Upload-Kit `beachcraft/documentary/v2/youtube.md`. Dateien im Chat: Limit erst 500, dann 400 MiB;
   die 1080p60-Doku (610 MiB) deshalb als HEVC neu kodiert (2 Pässe, 2250 kbit/s, 374 MiB, geliefert). Die alten 3.0-Bilder in `img/` erst
   löschen, wenn die neue Seite online ist. Offen beim Nutzer: Doku auf YouTube laden, Beschreibungen einfügen.
+- **V1.4.2 Bisect-Config (7.11. abends):** Nutzer: „Bei meinem Modpack fehlt die bisectmod config … damit ich meine
+  Provision erhalte!! Quick fix!! Nur ‚bug fixes‘ in den Changelog.“ Die Mod bhmenu war im Pack, die Config nie.
+  Jetzt `pack/overrides/config/bhmenu/bhmenu.properties` mit partner_id 4395 und pack_id 19732 (aus Dreamcraft
+  1.20.1). Challenge Craft hat partner_id 4385 – Nutzer soll die richtige ID in der Bisect-Konsole prüfen. **Jedes
+  Pack braucht diese Config; bei neuen Packs immer mitliefern.** Upload: 9499392 / Server-Pack 9499399.
 - **Quest Icons 1.2.0 (7.11.):** Wunsch „Quest-Icons machen wir 26.2 plus ein Import von Feedback Requests Feature“
   (als FTB-Quests-Import verstanden und so gemeldet). Agent baute `/quests import ftbquests [preview|run|merge]
   [Ordner]` (Bericht `config/questsicons/ftbquests-import-report.txt`, Backup in `config/questsicons/backups/`; liest

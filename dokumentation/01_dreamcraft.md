@@ -515,6 +515,7 @@ Fehler (Oberwelt 1521 Chunks in 1:43, Raft-Dimension 729 Chunks, früher auch Ne
 | **V1.3** | 9431378 | 9431379 | Beach Craft 3.0.0 (9431301), Tamagotchi 1.2.0 (9431312), Quest Icons 1.1.0 (9429010) mit Dream Star, Quests 164 → 328 (hochgeladen am 4.11.2026) |
 | **V1.4** | 9475197 | 9475219 | Beach Craft 3.1.0 (9474711: eigenes Floß, Menschen der See, Sounds und Musik, Kai in allen Lagern), Upgraded Iron Chests 1.5.1 neu, Kapitel „Quality of Life“, Quests 328 → 348 in 15 Kapiteln (hochgeladen am 6.11.2026) |
 | **V1.4.1** | 9487507 | 9487509 | Menü-Fix: Singleplayer, Multiplayer, Options und Quit Game lagen hinter dem lila Seitenbalken (gemeldet vom Nutzer am 6.11. anhand des Trailers); sonst identisch mit V1.4 |
+| **V1.4.2** | 9499392 | 9499399 | BisectHosting-Menü-Config (`config/bhmenu/bhmenu.properties`) mit Partner-ID wieder im Pack (gemeldet vom Nutzer am 7.11.); öffentlicher Changelog nur „Bug fixes“; sonst identisch mit V1.4.1 |
 
 ### Was V1.3 bringt (Changelog `changelog-26.3-V1.3.md`)
 - **Beach Craft 3.0 „Tides of the Deep“** – Inselwelt, Story, Boss, Expedition Raft, Tauchen ([03](03_beach_craft.md)).
@@ -534,6 +535,22 @@ Fehler (Oberwelt 1521 Chunks in 1:43, Raft-Dimension 729 Chunks, früher auch Ne
 - **Bestehende Welten:** Schon erkundete Teile der Endless Sea behalten ihre alte Form – weiter hinausfahren. Alte
   Ankunftsplattformen haben keine Castaway-Truhe: Expedition Journal herstellen (Buch, Kompass, Papier) und auf See
   schleichend benutzen.
+
+### V1.4.2: die Bisect-Config (7.11.2026 abends)
+- **Problem:** Der Nutzer meldete, dass die Config der BisectHosting-Mod fehlt, über die er seine Provision bekommt.
+  Die Mod (*BisectHosting Server Integration Menu [FABRIC]*, `bhmenu-fabric-26.3-3.0.0.jar`) war seit V1 im Pack,
+  ihre Config aber nie: Ohne Datei schreibt die Mod eine leere (`partner_id=`), Käufe werden dann nicht zugeordnet.
+- **Fix:** `pack/overrides/config/bhmenu/bhmenu.properties` im Format von bhmenu 3.0.0 (wie im Challenge-Craft-Pack)
+  mit den Werten aus Dreamcraft 1.20.1 (`$SP/dl/dc120/overrides/config/bhmenu/`): `partner_id=4395`,
+  `pack_id=19732`, Banner „Need a server?“ / „Click me to get your own server, use code "Kasax007" for 25% off!“,
+  `pack_edit_mode=true` wie bisher. Modpack-Development 96a3780.
+- **Achtung:** Das Challenge-Craft-Modpack (v4/v5) hat `partner_id=4385`, Dreamcraft 1.20.1 hatte 4395. Eine der
+  beiden Zahlen ist vermutlich ein Tippfehler; die richtige steht in der BisectHosting-Partnerkonsole.
+- **Bau und Upload:** `python3 tools/mkpack.py V1.4.2 9429010 9474711` (vorher die Config nach `$SP/pack/overrides`
+  kopiert). Gegenüber V1.4.1 sind nur `manifest.json` und die neue Config anders; der Server-Pack enthält sie auch.
+  Upload am 7.11. um 21:33 Uhr deutscher Zeit per `$SP/upload142.sh`, Changelog nur „Bug fixes“ (Wunsch des
+  Nutzers): Client 9499392, Server-Pack 9499399 (`parentFileID` 9499392). Den Server-Pack auf CurseForge von Hand
+  als Server Pack markieren.
 
 ### V1.4.1: der Menü-Fix (6.11.2026 abends)
 - **Ursache:** Der lila Seitenbalken ist ein eigenes Bild-Element (`sidebar.png`). FancyMenu zeichnet eigene Elemente

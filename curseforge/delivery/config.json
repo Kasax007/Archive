@@ -1,5 +1,5 @@
 {
- "date": "Stand 7. November 2026, mit Quest Icons 1.2",
+ "date": "Stand 7. November 2026, mit Quest Icons 1.3 und Tamacraft",
  "intro": "Alle vier Projektseiten im neuen Stil, dazu bei jedem Projekt die neue <b>Kurzbeschreibung</b> (Summary) zum Kopieren. Die CurseForge-Suche liest nur Name und Kurzbeschreibung, nicht die Beschreibung. Ändern kannst du beides in der <a href=\"https://authors.curseforge.com/\" target=\"_blank\" rel=\"noopener\">Author Console</a>: Projekt öffnen, dann die Projekt-Details (Name, Summary, Kategorien) bearbeiten und speichern. Bei Projekten mit Video fügst du den YouTube-Link ins Feld ein; ohne Link fehlt nur der Video-Block.",
  "footer": "Alle Texte liegen auch als HTML-Dateien im Chat und in den Repos unter <code>docs/curseforge/description.html</code> (Branch <code>26.3</code>). Die alten Bilder bleiben in den Repos, bis die neuen Seiten online sind.",
  "projects": [
@@ -92,16 +92,14 @@
    "key": "tama",
    "name": "Tamagotchi",
    "chip": [
-    "new",
-    "neu gestaltet"
+    "upd",
+    "wird zu Tamacraft"
    ],
    "ids": "Mod · Projekt 1758309 · Version 1.2.0 (Datei 9431312)",
    "about": [
+    "Umbenennung läuft: Tamagotchi heißt jetzt Tamacraft. Name und Kurzbeschreibung unten gelten ab sofort; die neue Beschreibung mit allen Bildern folgt mit Tamacraft 1.3.0.",
     "In Rosa mit dem grünen Pet-Bildschirm aus dem Spiel.",
-    "- 370 statt 1.658 Wörter, 19 neue Grafiken: alle zehn Haustiere mit Zuhause, Chance, Talent und Lieblingsleckerli, Bedürfnisse und Stimmungen, Spielzeug, Rucksack und Ei, die 25 Möbelstücke und „Neu in 1.2: Made for Modpacks“.",
-    "- Anforderungen, Mehrspieler, Modpacks und FAQ stehen im Spoiler.",
-    "- Neu sind die Zeilen „Made with love, sweat and tears / Fabric only“ und der Link zu deinen anderen Projekten, wie auf den anderen Seiten. Du kannst sie wieder löschen.",
-    "- Das 2-Minuten-Showcase kommt als Video-Block dazu."
+    "- 370 statt 1.658 Wörter, 19 neue Grafiken: alle zehn Haustiere mit Zuhause, Chance, Talent und Lieblingsleckerli, Bedürfnisse und Stimmungen, Spielzeug, Rucksack und Ei, die 25 Möbelstücke und „Neu in 1.2: Made for Modpacks“."
    ],
    "html": "/home/user/tamagotchi/docs/curseforge/description.html",
    "preview": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/desc_tama_preview.png",
@@ -113,9 +111,9 @@
     "hint": "Video speichern: das Showcase aus dem Chat (2:03, Hochformat, mit Untertiteln und Musik)."
    },
    "meta": {
-    "summary_new": "Ten rare pets to find, tame and care for – needs, moods, talents, toys and 25 pieces of furniture make them real companions.",
+    "summary_new": "Ten rare pets to find, tame and care for – needs, moods, talents, toys and 25 pieces of furniture make them real companions. Inspired by classic virtual pets.",
     "summary_old": "Find and Tame your own Tamagotchi!",
-    "name_new": "Tamagotchi – Rare Pets",
+    "name_new": "Tamacraft – Rare Pets",
     "name_old": "Tamagotchi",
     "cats_new": [
      "Mobs (Hauptkategorie)",
@@ -135,21 +133,20 @@
    "name": "Quest Icons",
    "chip": [
     "new",
-    "1.2: FTB-Import · 26.2"
+    "1.3: 470 Icons · Editor"
    ],
-   "ids": "Mod · Projekt 690531 · Version 1.2.0 für 26.3 und 26.2 (gebaut und getestet, Upload wartet auf deine Freigabe)",
+   "ids": "Mod · Projekt 690531 · Version 1.3.0 für 26.3 und 26.2 (gebaut und getestet, Upload wartet auf deine Freigabe)",
    "about": [
-    "Neu für 1.2: Die Seite zeigt den FTB-Quests-Import und Minecraft 26.2.",
-    "- Neues Kopfbild mit „1.2“ und beiden Versionen, die Übersicht „Neu in 1.2“ und ein eigener Abschnitt „Import from FTB Quests“: Ordner kopieren, <code>/quests import ftbquests</code> (Vorschau), <code>… run</code> (Buch ersetzen), dazu was übernommen wird.",
-    "- Im Spoiler: Voraussetzungen für 26.3 und 26.2, der neue Befehl und die Grenzen des Imports (Fortschritt, Flüssigkeits- und KubeJS-Aufgaben).",
-    "- Die Bilder liegen im Repo (Branch 26.3) und sind schon online. Die Kurzbeschreibung nennt jetzt den Import, denn die Suche liest nur Name und Kurzbeschreibung."
+    "Neu für 1.3: 470 Icons in 23 Kategorien (A–Z, Zahlen, Symbole, Pfeile, Ränge, Tech, Magie, Natur, Erze, NPC-Sprechblasen …), 56 Bilder für die Questkarte und der Ingame-Editor: Formulare und Auswahlfenster statt SNBT.",
+    "- Neues Kopfbild „1.3“, Übersicht „Neu in 1.3“, Abschnitte „Edit in game“, Icon-Bibliothek und Kartenbilder; der FTB-Import bleibt. Die Bilder (v4) sind schon online.",
+    "- Erst einfügen, wenn 1.3.0 auf CurseForge freigegeben ist."
    ],
-   "html": "/home/user/Kasax_Quests_Items_Mod-1.19.2/docs/curseforge/description.html",
-   "preview": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/desc_qi_preview.png",
+   "html": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/qi13desc/description.html",
+   "preview": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/qi13desc/preview.png",
    "url": "https://www.curseforge.com/minecraft/mc-mods/quest-icons",
    "video": null,
    "meta": {
-    "summary_new": "A quest book in the style of FTB Quests that imports your FTB Quests book with one command – chapters, quest map, rewards, loot crates, teams, an in-game editor and 32 quest icons.",
+    "summary_new": "470 quest icons and an FTB-Quests-style quest book you build in game – forms instead of SNBT, chapters, rewards, loot crates, teams – that can import your FTB Quests book.",
     "summary_old": "Quest Items for you to use in your pack!",
     "name_new": "Quest Icons – Quest Book & Icons",
     "name_old": "Quest Icons",

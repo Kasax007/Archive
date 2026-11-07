@@ -14,7 +14,7 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
 | TikTok und Werkzeuge | `Archive/dreamcraft/tiktok` (v2 mit Shadern) | – |
 | Beach-Craft-Review und Prüfbericht | `Archive/beachcraft/review` | – |
 | Beach-Craft-3.0-Doku „Tides of the Deep“ (18:35, nur Fassung mit Untertiteln + Musik) | `Archive/beachcraft/documentary`, Rohmaterial `footage/bc3` | – |
-| Modpack-Dateien | | V1: 9403038 (+ Server-Pack). V1.1: 9408516, Server-Pack 9408519 (Beach Craft 2.0.1, Quests korrigiert). V1.2: 9409459, Server-Pack 9409463 (Menü-Fixes, ohne JER). V1.2.1: 9415062, Server-Pack 9415063 (Quest-Buch-Klick-Hotfix). V1.3: 9431378, Server-Pack 9431379 (Beach Craft 3.0.0, Tamagotchi 1.2.0 = 9431312, Dream Star, 328 Quests)  V1.4: 9475197, Server-Pack 9475219 (Beach Craft 3.1.0 = 9474711, Upgraded Iron Chests, 348 Quests). |
+| Modpack-Dateien | | V1: 9403038 (+ Server-Pack). V1.1: 9408516, Server-Pack 9408519 (Beach Craft 2.0.1, Quests korrigiert). V1.2: 9409459, Server-Pack 9409463 (Menü-Fixes, ohne JER). V1.2.1: 9415062, Server-Pack 9415063 (Quest-Buch-Klick-Hotfix). V1.3: 9431378, Server-Pack 9431379 (Beach Craft 3.0.0, Tamagotchi 1.2.0 = 9431312, Dream Star, 328 Quests)  V1.4: 9475197, Server-Pack 9475219 (Beach Craft 3.1.0 = 9474711, Upgraded Iron Chests, 348 Quests). V1.4.1: 9487507, Server-Pack 9487509 (Menü-Fix). |
 
 - FTB Quests gibt es für 26.3 Fabric nicht. Das Quest-System steckt deshalb in Quest Icons: Buch mit Taste J,
   SNBT-Dateien in `config/questsicons/quests`, Befehle `/quests` (open, reload, complete, reset, team).
@@ -187,8 +187,8 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
 - **V1.4.1 Menü-Fix (6.11. nachts):** Der Nutzer sah im Trailer, dass Singleplayer, Multiplayer, Options und Quit Game
   hinter dem lila Balken lagen (Vanilla-Knöpfe unter dem eigenen Bild-Element). Fix: `render_custom_elements_behind_vanilla
   = true` in allen 8 Titel-Layouts (Modpack-Development 20856ba), im Produktiv-Client geprüft. **mkpack.py baut aus
-  `$SP/pack/overrides`, nicht aus dem Repo** – Änderungen dorthin kopieren. Upload V1.4.1 per `$SP/upload141.sh`, geplant
-  für 7.11. 7:30 Uhr deutscher Zeit (send_later trig_01HKHhXEiyAG9k6DufCX7mNE). Trailer-Menü-Shot und Seitenbild erneuert.
+  `$SP/pack/overrides`, nicht aus dem Repo** – Änderungen dorthin kopieren. V1.4.1 hochgeladen am 7.11. um 7:31 Uhr
+  deutscher Zeit: Client 9487507, Server-Pack 9487509. Trailer-Menü-Shot und Seitenbild erneuert.
 - **Alle vier Seiten grafisch (6.11. abends):** Wunsch: Dreamcraft, Tamagotchi und Quest Icons „genauso super gestalten
   wie bei Beach Craft“. Zwei Agenten bauten sie, jede Seite mit eigener Optik und eigenem Bild-Generator, jede Zahl aus
   dem Code: Dreamcraft 21bf9e6 (`make_images_v14.py`, Traum-Stil der BisectHosting-Banner, 251 Mods, 348 Quests, 157

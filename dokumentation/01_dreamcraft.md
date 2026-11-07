@@ -514,7 +514,7 @@ Fehler (Oberwelt 1521 Chunks in 1:43, Raft-Dimension 729 Chunks, früher auch Ne
 | **V1.2.1** | 9415062 | 9415063 | Hotfix: Quest Icons 1.0.2 – das Quest-Buch reagiert wieder auf Klicks (26.3-Maustasten) |
 | **V1.3** | 9431378 | 9431379 | Beach Craft 3.0.0 (9431301), Tamagotchi 1.2.0 (9431312), Quest Icons 1.1.0 (9429010) mit Dream Star, Quests 164 → 328 (hochgeladen am 4.11.2026) |
 | **V1.4** | 9475197 | 9475219 | Beach Craft 3.1.0 (9474711: eigenes Floß, Menschen der See, Sounds und Musik, Kai in allen Lagern), Upgraded Iron Chests 1.5.1 neu, Kapitel „Quality of Life“, Quests 328 → 348 in 15 Kapiteln (hochgeladen am 6.11.2026) |
-| **V1.4.1** | (Upload 7.11., 7:30) | (Upload 7.11., 7:30) | Menü-Fix: Singleplayer, Multiplayer, Options und Quit Game lagen hinter dem lila Seitenbalken (gemeldet vom Nutzer am 6.11. anhand des Trailers); sonst identisch mit V1.4 |
+| **V1.4.1** | 9487507 | 9487509 | Menü-Fix: Singleplayer, Multiplayer, Options und Quit Game lagen hinter dem lila Seitenbalken (gemeldet vom Nutzer am 6.11. anhand des Trailers); sonst identisch mit V1.4 |
 
 ### Was V1.3 bringt (Changelog `changelog-26.3-V1.3.md`)
 - **Beach Craft 3.0 „Tides of the Deep“** – Inselwelt, Story, Boss, Expedition Raft, Tauchen ([03](03_beach_craft.md)).
@@ -549,7 +549,8 @@ Fehler (Oberwelt 1521 Chunks in 1:43, Raft-Dimension 729 Chunks, früher auch Ne
   Vergleich der Zips mit V1.4: anders sind nur `manifest.json` und die acht Layouts).
 - Dazu neu: das Menübild der CurseForge-Seite (`menu_v14.jpg`) und der Menü-Shot des Trailers (`footage/dc/menu_land.mp4`,
   aus dem neuen Screenshot mit derselben langsamen Zoomfahrt).
-- Upload: per `$SP/upload141.sh`, geplant für den 7.11. um 7:30 Uhr deutscher Zeit (Wunsch des Nutzers).
+- Upload am 7.11. um 7:31 Uhr deutscher Zeit (Wunsch des Nutzers: 7:30) per `$SP/upload141.sh`: Client 9487507,
+  Server-Pack 9487509 (`parentFileID` 9487507). Den Server-Pack auf CurseForge von Hand als Server Pack markieren.
 
 ### So wurde V1.4 gebaut (6.11.2026)
 1. Beach Craft 3.1.0 hochgeladen (Datei 9474711), nach rund 15 Minuten freigegeben (Download-Link 307).

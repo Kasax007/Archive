@@ -562,7 +562,8 @@ Fehler (Oberwelt 1521 Chunks in 1:43, Raft-Dimension 729 Chunks, früher auch Ne
   `cp -a pack/overrides/. $SP/pack/overrides/` kopieren (der erste Bau hatte die Configs deshalb nicht; der
   Zip-Vergleich zeigte es).
 - **Upload** am 7.11. (Freigabe des Nutzers „Ja, V1.4.3 hochladen wenn der Test passt“): Client 9500352, Server-Pack
-  9500367 (`parentFileID` 9500352). Den Server-Pack auf CurseForge von Hand als Server Pack markieren.
+  9500367 (`parentFileID` 9500352), beide um 22:52 Uhr deutscher Zeit freigegeben. Den Server-Pack auf
+  CurseForge von Hand als Server Pack markieren.
 
 ### V1.4.2: die Bisect-Config (7.11.2026 abends)
 - **Problem:** Der Nutzer meldete, dass die Config der BisectHosting-Mod fehlt, über die er seine Provision bekommt.

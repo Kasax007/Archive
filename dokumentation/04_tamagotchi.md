@@ -17,7 +17,7 @@
 >
 > **Stand:** Tamacraft 1.3.0 (26.3, Branch `26.3` 6ece433, Jar sha1 328cedd5…) und 1.3.0+1.21.1 (Branch
 > `port/1.21.1` 184ab9d, sha1 7fdfd412…), beide getestet (Client-Spieltest 58/58, Produktiv-Rauchtest), am 7.11.
-> hochgeladen (Freigabe des Nutzers): 26.3 = Datei 9501672, 1.21.1 = Datei 9501673. Das GitHub-Repo heißt weiter `Kasax007/Tamagotchi` (Bilder der Seite laden von dort). Volle ID-Liste:
+> hochgeladen (Freigabe des Nutzers): 26.3 = Datei 9501672, 1.21.1 = Datei 9501673, beide freigegeben (Download-Link 307). Das GitHub-Repo heißt weiter `Kasax007/Tamagotchi` (Bilder der Seite laden von dort). Volle ID-Liste:
 > `$SP/tama1211/id_mapping.txt` (alle Pfade bleiben, nur `tamagotchi_heart` → `tamacraft_heart`, Creative-Tab
 > `tamacraft:tamacraft`).
 >

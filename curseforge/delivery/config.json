@@ -208,26 +208,26 @@
     "new",
     "neu gestaltet"
    ],
-   "ids": "Modpack · Projekt 1653698 · v4 online (v5 wartet auf deine Testrunde)",
+   "ids": "Modpack · Projekt 1653698 · v4 (Datei 9399868, Server-Pack 9399871) – bleibt Vanilla plus Challenge Craft",
    "about": [
-    "Gleiche Optik wie der Mod: was das Pack dazugibt (3 Shader-Packs, Proximity Voice, Soundscape, großer Speicher, Komfort, eigenes Menü), das Menü, „Start a run with friends“ in fünf Schritten und die Challenge-Übersicht.",
-    "- Im Spoiler: Voraussetzungen, Inhalt des Server-Packs, die Mod-Liste mit Links und FAQ.",
-    "- Mod-Liste und Zahlen stammen aus dem v5-Stand; bei v4 fehlen evtl. Storage Drawers und Upgraded Iron Chests. Erst nach dem v5-Upload einfügen oder die Zeile anpassen."
+    "Gleiche Optik wie der Mod. Das Pack ist Vanilla-Gameplay plus Challenge Craft; obendrauf nur Shader, Proximity Voice, Soundscape, Leistung, Komfort und das eigene Menü (27 Mods + 3 Shader-Packs, Stand v4).",
+    "- „What is in the pack“, das Menü, „Start a run with friends“ in fünf Schritten (Server-Pack: 15 Mods) und die Challenge-Übersicht.",
+    "- Im Spoiler: Voraussetzungen, Inhalt des Server-Packs, die Mod-Liste mit Links und FAQ. Kann sofort eingefügt werden."
    ],
    "html": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/ccdesc/description-modpack.html",
    "preview": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/ccdesc/preview-modpack.png",
    "url": "https://www.curseforge.com/minecraft/modpacks/challenge-craft",
    "video": null,
    "meta": {
-    "summary_new": "Challenge Craft ready to play: 51 challenge runs plus shaders, proximity voice chat, a full soundscape and a custom menu. Server pack included.",
+    "summary_new": "Challenge Craft ready to play: vanilla gameplay, 51 challenge runs, shaders, proximity voice chat and a custom menu. Server pack included.",
     "summary_old": "⚔️ Play the challenges from your favorite YouTubers! ⚔️ 50 unlockable challenges, randomizers... Every world is a new challenge run.",
     "name_new": "Challenge Craft Modpack – Challenge Runs with Friends",
     "name_old": "Challenge Craft",
     "cats_new": [
      "Mini Game (Hauptkategorie)",
      "Multiplayer",
-     "Hardcore",
-     "Vanilla+"
+     "Vanilla+",
+     "Hardcore"
     ],
     "cats_old": [
      "Multiplayer",

@@ -274,6 +274,15 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   Tamacon bleibt). Alte Welten und alte IDs in Packs laufen über `LegacyIdMixin`. 1.3.0 (26.3) und 1.3.0+1.21.1 fertig
   und getestet, Upload offen (Jars `$SP/release_tamacraft_130/`, `$SP/release_tama_1211/`). CurseForge-Projekt 1758309:
   Name „Tamacraft – Rare Pets“ und Kurzbeschreibung ändert der Nutzer; Slug bleibt evtl. `tamagotchi`.
+- **Beschreibungen live (7.11.):** Der Nutzer zeigt Videos nur noch als verlinktes Vorschaubild (kein iframe, sonst
+  doppelt). Video-IDs: Beach Craft NdFPSYZ32R4 (Doku), Dreamcraft G-whF3xKTQ4, Tamacraft UIE0waos-yo; Dreamcraft hat
+  den RAM-Tutorial-Link UrYKsedRVKg. Live-Stand aller sechs Seiten in `curseforge/live-2026-11-07/` (über
+  api.cfwidget.com/<id> abrufbar; die CurseForge-Website-API liefert die Beschreibung nicht). Neue Beschreibungen
+  immer vom Live-Stand ausgehen.
+- **Beach-Craft-Weltgenerierung (7.11.):** zu viele, überlappende Strukturen (drei Oil Rigs an einem Ort), schlechte
+  Terrain-Anpassung (Leuchtturm auf Erdplattform, Hafen schneidet Hang), zu viel Land, Tamo fischt nicht am Wasser,
+  Treibgut zu stark und zu viel, Item Catcher nur in Fahrt → Agent B (3.2.0). Cozy-Agent (4. Agent, erlaubt vom
+  Nutzer): Deko + Funktionen, Foods, Crops, Waffen, Rüstung, Items, Almanac, am Ende CF-Beschreibung (3.3.0).
 - **Freigabe vom 7.11. (spät):** „Wenn Beach Craft, Tamacraft und der Rest fertig ist, machen wir das Modpack und du
   darfst hochladen.“ Gilt für Beach Craft 3.2/3.3, Tamacraft 1.3.0, die Quest-Icons-Ports und das nächste
   Dreamcraft-Update – erst wenn alles fertig und getestet ist.

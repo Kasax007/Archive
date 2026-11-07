@@ -10,8 +10,8 @@ Dreamcraft V1.4 (348 Quests) mit Beach Craft 3.1.0 im vollen Pack: startet ohne 
 (eigenes Floß, Segel und Motor, ein NPC, alle 8 NPCs) und „Raft Lanterns“ lassen sich erfüllen und abholen (`qrun3`).
 
 **Noch nicht hochgeladen (wartet auf deine Freigabe, Stand 7.11.):** Quest Icons 1.2.0 für 26.3 und 26.2
-(FTB-Quests-Import, gebaut und getestet, siehe [02](02_quest_icons.md#12-ftb-quests-import-neu-in-120)) und das
-Challenge-Craft-Modpack v5 (erst nach deiner Testrunde, falls Quests sich noch ändern). Beach Craft 3.1.0 und
+(FTB-Quests-Import, gebaut und getestet, siehe [02](02_quest_icons.md#12-ftb-quests-import-neu-in-120)). Das
+Challenge-Craft-Modpack v5 ist gestrichen (das Pack bleibt Vanilla plus Challenge Craft, Wunsch vom 7.11.). Beach Craft 3.1.0 und
 Dreamcraft V1.4/V1.4.1 sind seit dem 6./7.11. online.
 
 ## A. Deine Entscheidungen (blockieren die nächsten Schritte)

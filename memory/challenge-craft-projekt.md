@@ -181,3 +181,10 @@ neueste Anweisung des Nutzers.
   - Feste Film-Identität und Skin; kein Fadenkreuz, keine Toasts; UI-Uhren auf Spielzeit.
 - **Falle:** Liegen in einem Shot-Ordner Bilder zweier Takes (PNG + JPG), wechseln sie sich im Schnitt ab: Das Bild
   flackert. Vor dem Schnitt prüfen, ob in einem Ordner gemischte Takes liegen.
+
+## Wichtige Regel (7.11.2026)
+- **Das Challenge-Craft-Modpack bleibt Vanilla plus der Mod des Nutzers** („Challenge Craft soll vanilla bleiben bis
+  auf mein Mod, da soll kein Iron Chests oder sowas rein“). Nur Client-Politur, Leistung, Voice-Chat und Shader wie in
+  v4. Die v5 mit Upgraded Iron Chests und Storage Drawers war ein Fehler (der Quality-of-Life-Wunsch vom 4.11. galt dem
+  Dreamcraft-Questbuch) und ist gestrichen; das Pack bleibt auf v4 (9399868, Server-Pack 9399871). Ein neues Pack
+  kommt erst mit einer neuen Challenge-Craft-Version.

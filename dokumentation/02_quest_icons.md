@@ -14,7 +14,7 @@ keine. Seit 1.2.0 holt `/quests import ftbquests` ein FTB-Quests-Buch herüber (
 | Eckdaten | |
 | --- | --- |
 | Minecraft / Loader | 26.3 (Loader 0.19.5 oder neuer, Branch `26.3`), seit 1.2.0 auch 26.2 (Loader 0.18.4 oder neuer, Branch `26.2`); Fabric, Java 25, braucht Fabric API |
-| Aktuelle Version | **1.2.0** für 26.3 und 26.2: gebaut und getestet (7.11.2026), der Upload wartet auf die Freigabe des Nutzers. Auf CurseForge: 1.1.0+26.3 (Datei 9429010) |
+| Aktuelle Version | **1.3.0** für 26.3 (Datei 9501059) und 26.2 (Datei 9501060), hochgeladen am 7.11.2026; davor 1.2.0 (9499549 / 9499550) |
 | Mod-ID / Paket | `questsicons` / `net.kasax.questsicons` |
 | Port | von 1.21.1 (Yarn-Namen) auf 26.3 (offizielle Mojang-Namen) |
 | Server | muss auf dem Server **und** auf jedem Client installiert sein |
@@ -305,8 +305,10 @@ Polished Blackstone | Polished Blackstone | Polished Blackstone
 | **1.0.1+26.3** | 9409345 | 2.11.2026 | Wer mit `/quests team join` einem Team beitrat, bekam beim nächsten Login ein zweites Quest Book. Das Team merkt sich jetzt, dass der Spieler schon eines hat. |
 | **1.0.2+26.3** | 9415031 | 3.11.2026 | **Hotfix:** Klicks im Quest-Buch gingen nicht (siehe unten). |
 | **1.1.0+26.3** | 9429010 | 3./4.11.2026 | Dream Star und Pedestal; Escape schließt zuerst das offene Fenster; keine Klicks mehr „durch“ Auswahlfenster und Menüs; weggescrollte Knöpfe reagieren nicht mehr; Team-Reparatur nach Server-Neustart; kaputte Aufgaben werden abgeschaltet statt Log-Spam; Quests ohne ID überschreiben sich nicht; XP-Aufgaben zählen die aktuellen XP; 99 % statt Haken; Mystery Reward ohne Creative-Blöcke; Loot Crates in normalen Stapeln; kein Barrier-Block für unbekannte Items |
-| **1.2.0+26.3** | Upload offen | 7.11.2026 | FTB-Quests-Import (`/quests import ftbquests`, Abschnitt 12); dafür neu: optionale Aufgaben, Items als „eins von“ oder ganze Mod (`@mod`), unscharfer Abgleich der Item-Daten, zufällige Bonus-Menge, Befehle mit Level 3 und 4, Bilder nach einer Quest, versteckte Linien zu Folge-Quests, unsichtbare Kapitel, Form „none“, FTB-Text (`&#RRGGBB`, `{keys}`); große Bücher als „large payload“; abgeschnittene Titel behalten ihre Farbe; fehlende Bilder werden weggelassen |
-| **1.2.0+26.2** | Upload offen | 7.11.2026 | Erste Fassung für 26.2 (Branch `26.2`), gleicher Umfang wie auf 26.3; Loader 0.18.4 oder neuer |
+| **1.2.0+26.3** | 9499549 | 7.11.2026 | FTB-Quests-Import (`/quests import ftbquests`, Abschnitt 12); dafür neu: optionale Aufgaben, Items als „eins von“ oder ganze Mod (`@mod`), unscharfer Abgleich der Item-Daten, zufällige Bonus-Menge, Befehle mit Level 3 und 4, Bilder nach einer Quest, versteckte Linien zu Folge-Quests, unsichtbare Kapitel, Form „none“, FTB-Text (`&#RRGGBB`, `{keys}`); große Bücher als „large payload“; abgeschnittene Titel behalten ihre Farbe; fehlende Bilder werden weggelassen |
+| **1.2.0+26.2** | 9499550 | 7.11.2026 | Erste Fassung für 26.2 (Branch `26.2`), gleicher Umfang wie auf 26.3; Loader 0.18.4 oder neuer |
+| **1.3.0+26.3** | 9501059 | 7.11.2026 | 470 Icons in 23 Kategorien (A–Z, Zahlen 0–20/25/30/32/50/64/99, Symbole, Pfeile, Status, Ränge, Tech, Magie, Natur, Erze, NPC-Sprechblasen …), 56 Questkarten-Bilder, sechs neue Creative-Tabs und Tags `#questsicons:icons/<kategorie>`; Ingame-Editor ohne SNBT (Abschnitt 13); Dream-Star-Rezept nimmt das Tamacraft Heart (Tag `questsicons:dream_star_hearts`) |
+| **1.3.0+26.2** | 9501060 | 7.11.2026 | gleicher Umfang auf 26.2 |
 
 Die Changelogs liegen in `docs/curseforge/changelog-<version>.md` im Mod-Repo. Dreamcraft nutzte 1.0.0 (V1, V1.1),
 1.0.1 (V1.2), 1.0.2 (V1.2.1); V1.3 bis V1.4.1 nutzen 1.1.0.
@@ -425,3 +427,31 @@ CurseForge-Spielversionen: 26.3 = 17045, 26.2 = 16498, dazu Fabric 7499, Client 
 
 **Offen:** Bücher von FTB Quests 2111 (1.21.11) werden wie 1.21.1 behandelt (ungetestet, nur 4 Packs nutzen 2111).
 ATM9-Texte sind Übersetzungsschlüssel `{atm9.…}` und brauchen die KubeJS-Sprachdateien des Packs.
+
+---
+
+## 13. Icon-Bibliothek und Ingame-Editor (neu in 1.3.0)
+
+**Wunsch des Nutzers (7.11.):** „mega viele Symbole … das ABC, Zahlen und was in Kommentaren auf der Page erwähnt
+wurde … direkt ingame einfügen“ und „Not everyone can easily write SNBT“. Umgesetzt von einem Agenten, gepusht auf
+26.3 (05caa46 … 63c9080) und 26.2 (cba18fb … b312da0).
+
+- **Kommentar-Wünsche abgedeckt:** Buchstaben (dreams01), Science/Industrie/Zukunft (madscientistslack: 24
+  Tech-Icons, 12 Barren, 11 Erze), „mit NPC sprechen“ (tayengo: Questgeber- und Abgabe-Marker, Sprechblasen mit !, ?
+  und rot), „so wenig Inhalt“ (jetzt 470 Icons, 56 Bilder). Offene Wünsche aus den Kommentaren: Forge-1.20.1-Port
+  (läuft im Port-Agenten), Hinweis „nur Fabric“ (steht schon auf der Seite).
+- **Aufbau:** Jedes Icon steht einmal in `tools/icons/manifest.py` (+ Kunst-Module); `generate.py` schreibt Texturen,
+  Modelle, Sprache, Tags und `icon_library.json`, die der Mod beim Start liest (Registrierung, Tabs, Picker). Für
+  Versionen vor 1.21.4 `--legacy`, für 1.20.x `--tag-folder items` (README in `tools/icons/`).
+- **Editor (Edit-Modus, Operatoren):** Formulare für Quests, alle 11 Aufgaben- und 8 Belohnungstypen, Kapitel,
+  Gruppen, Buch-Einstellungen, Reward Tables und Kartenbilder; Picker für Icons (Bibliothek nach Kategorie mit Suche,
+  Inventar, alle Items, Item in der Hand), Bilder, Mobs, Biome, Dimensionen, Strukturen, Advancements, Loot-Tabellen,
+  Statistiken, Quests und Tabellen; Prüfung vor dem Speichern (rotes Feld statt kaputtem Buch). Karte: Rechtsklick
+  „New quest here / Paste here / Add picture here“, Ziehen mit Raster, Shift-Ziehen verbindet, Klick auf eine Linie
+  entfernt sie, Strg für Mehrfachauswahl; Kopieren/Einfügen (Strg+C/V), Duplizieren, In Kapitel verschieben, Löschen
+  mit Rückfrage, Undo (30 Schritte, Strg+Z). Speichert in dieselben SNBT-Dateien und schickt Änderungen sofort an alle.
+- **Tests:** 15 Unit-Tests, Selbsttest 139/139 auf beiden Versionen (ein ganzes Kapitel nur über den Editor gebaut,
+  dann neu geladen), Server-Selbsttest, Produktiv-Server 26.3 und 26.2. Nicht getestet: Produktiv-Client, zweiter
+  Client gleichzeitig.
+- **Beschreibung:** `description.html` mit `*_v4`-Bildern (`make_images_v4.py`), auf der Übergabeseite zum Kopieren.
+  Erst nach der Freigabe einfügen.

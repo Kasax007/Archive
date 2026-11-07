@@ -71,6 +71,9 @@ Weitere Fakten [Daten]:
 
 - **Seit dem Neustart auf 26.3 (2.11.)** zählen die 26.3-Dateien: Dreamcraft 332 Downloads, Quest Icons 193,
   Beach Craft 232. Das sind die Zahlen pro Datei, die cfwidget selbst „nicht mehr genau“ nennt [S21].
+- **Tempo in einer Stunde** (6.11., 22:49–23:51 UTC, Gesamtzahlen): Dreamcraft +4, Quest Icons +2,
+  Beach Craft +2, Tamagotchi +2, Challenge Craft (Mod) +2, Challenge Craft (Pack) 0. Eine Stunde ist nur ein
+  grober Ausschnitt. Die Gesamtzahlen von CurseForge ändern sich aber mindestens stündlich.
 - **Woher Quest Icons seine Downloads hat:** Die Datei 0.0.3 für 1.19.2 hat 112.574 Downloads, Dreamcraft
   1.19.2 V8 hat 85.617. Die Datei 0.0.4 für 1.20.1 hat 38.541, Dreamcraft 1.20.1 V4 hat 35.371. Den Rest
   brachten andere Packs: Laut der Dependents-Liste stecken bis zu 80 Packs mit Quest Icons auf CurseForge
@@ -145,8 +148,19 @@ Downloads aus cfwidget für 358 davon:
 - **Ein einfaches Modell passt gut:** „Downloads der letzten 60–90 Tage“ erklärt die Reihenfolge am besten
   (Spearman 0,94). „Alle Downloads“ erreicht 0,885, „letzte 7 Tage“ nur 0,76. Das Modell nimmt eine gleichmäßige
   Download-Rate an, ist also nur ein grober Hinweis.
-
-<!-- VELOCITY -->
+- **Zweiter Abruf eine Stunde später** (7.11., 00:13–00:21 UTC; geplant waren 2 Stunden, ein Neustart des
+  Containers verkürzte das Fenster):
+  - Die 8 Packs mit den meisten neuen Downloads pro Stunde standen alle in den Popularity-Top 10. Immersed With
+    Shaders bekam +153/h (Rang 2), Keo optimized +100/h (Rang 3), Xray Pack +38/h (Rang 4).
+  - In den Top 50 passt die Stunden-Rate zur Reihenfolge ähnlich gut wie die Gesamtzahl (Spearman 0,74 bzw.
+    0,77; ohne Fabulously Optimized 0,84). Über alle 358 Packs aber nur 0,44, weil eine Stunde bei kleinen
+    Packs fast nur Nullen liefert. Das 60-Tage-Modell bleibt mit 0,94 am besten.
+  - **Die Zählung springt in Schüben.** Fabulously Optimized (Rang 1) bekam in dieser Stunde +0.
+    ID's questwright bekam +6.587 (vorher 2.267 insgesamt), AntOS +8.125, Vanilla Progression +1.945.
+    Gleichzeitige Sprünge mehrerer Quest-Mods passen zu einem großen Pack, das sie enthält und gerade viele
+    Installationen bekam, oder zu einer verspäteten Nachzählung. Belegen lässt sich beides nicht.
+  - [Ableitung] Popularity folgt den frischen Downloads, glättet aber über Wochen. Einzelne Stunden sagen
+    wenig. Wer den Algorithmus genau vermessen will, braucht tägliche Abrufe über 2–3 Wochen (1.7).
 
 **Abgeleitet** [Ableitung]:
 
@@ -261,6 +275,9 @@ Stand der Regeln: 22.10.2026 [Doku] [S5]:
 
 - **Nur ein Tag, nur ein Ausschnitt:** die vollständige Rangfolge der 26.3-Fabric-Modpacks, Mod-Suchen zu
   einigen Stichwörtern und die Top 20 der 26.3-Mods. Korrelation ist keine Ursache.
+- **Tempo-Messung nur über eine Stunde:** Der zweite Abruf sollte 2 Stunden nach dem ersten kommen. Nach einem
+  Neustart des Containers lief er schon nach rund 1 Stunde. Weil CurseForge die Zahlen in Schüben aktualisiert,
+  ist diese Messung nur ein grober Zusatzbeleg.
 - **Ranglisten aus der Website:** per Abruf und Textauszug. Die Download-Zahlen dort sind gerundet; ich habe sie
   mit cfwidget gegengeprüft. Für 37 der 395 Packs fand cfwidget das Projekt über den Pfad nicht. Ein
   Auszugsfehler fiel bei der Prüfung auf: Ein Pack wurde fälschlich als 26.3-Nutzer von Quest Icons
@@ -771,17 +788,20 @@ Claude Code kann geplante Cloud-Aufgaben ausführen (früher „Routines“, For
 
 ## Anhang A: Methode und Daten
 
-- **Abrufe am 6.11.2026, 22–24 Uhr UTC.** Rangfolgen von der CurseForge-Website (Sortierung und Filter wie in
-  der URL) per Abruf und Textauszug [S24]. Projektdaten (Downloads, Datum, Dateien, Kategorien, Mitglieder) von
-  api.cfwidget.com, das stündlich von CurseForge nachlädt [S21].
+- **Abrufe am 6.11.2026, 22–24 Uhr UTC, und am 7.11., 00:13–00:21 UTC.** Rangfolgen von der
+  CurseForge-Website (Sortierung und Filter wie in der URL) per Abruf und Textauszug [S24]. Projektdaten
+  (Downloads, Datum, Dateien, Kategorien, Mitglieder) von api.cfwidget.com, das stündlich von CurseForge
+  nachlädt [S21].
+- **Tempo-Messung:** Gesamt-Downloads aller Packs und der 29 Quest-Mods zweimal abgerufen, mit dem Zeitstempel
+  von cfwidget („last-modified“). Fenster je Projekt 1,00–1,11 Stunden.
 - **Modrinth-Zahlen:** über api.modrinth.com (Suche mit Facetten, Projekt-Details, Abgleich der Dreamcraft-Jars
   per SHA1) [S22].
 - **Rangkorrelation:** Spearman zwischen Popularity-Reihenfolge und Kennzahl.
   - Modell „letzte W Tage“ = Gesamt-Downloads × min(1, W/Alter in Tagen).
   - Packs: n = 358 von 395. Für 37 fand cfwidget das Projekt über den Pfad nicht.
   - Mods: n = 29, die Treffer für „quest“.
-- **Rohdaten:** `research/curseforge-wachstum-2026-11-daten.csv` (Rang, Slug, Downloads, Erstellt, Alter,
-  Kategorien der 26.3-Fabric-Packs).
+- **Rohdaten:** `research/curseforge-wachstum-2026-11-daten.csv`: Rang, Slug, Downloads, Erstellt, Alter und
+  Kategorien der 26.3-Fabric-Packs und der 31 Quest-Mods, dazu beide Abrufe der Tempo-Messung.
 - **Nicht geprüft:**
   - Klick- und Seitenaufruf-Daten (nur im Autoren-Dashboard sichtbar);
   - wie die App ihre Startseite pro Spieler mischt;

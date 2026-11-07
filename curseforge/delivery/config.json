@@ -1,6 +1,6 @@
 {
- "date": "Stand 7. November 2026, mit Quest Icons 1.3 und Tamacraft",
- "intro": "Alle vier Projektseiten im neuen Stil, dazu bei jedem Projekt die neue <b>Kurzbeschreibung</b> (Summary) zum Kopieren. Die CurseForge-Suche liest nur Name und Kurzbeschreibung, nicht die Beschreibung. Ändern kannst du beides in der <a href=\"https://authors.curseforge.com/\" target=\"_blank\" rel=\"noopener\">Author Console</a>: Projekt öffnen, dann die Projekt-Details (Name, Summary, Kategorien) bearbeiten und speichern. Bei Projekten mit Video fügst du den YouTube-Link ins Feld ein; ohne Link fehlt nur der Video-Block.",
+ "date": "Stand 7. November 2026, mit Challenge Craft",
+ "intro": "Alle sechs Projektseiten im neuen Stil, dazu bei jedem Projekt die neue <b>Kurzbeschreibung</b> (Summary) zum Kopieren. Die CurseForge-Suche liest nur Name und Kurzbeschreibung, nicht die Beschreibung. Ändern kannst du beides in der <a href=\"https://authors.curseforge.com/\" target=\"_blank\" rel=\"noopener\">Author Console</a>: Projekt öffnen, dann die Projekt-Details (Name, Summary, Kategorien) bearbeiten und speichern. Bei Projekten mit Video fügst du den YouTube-Link ins Feld ein; ohne Link fehlt nur der Video-Block.",
  "footer": "Alle Texte liegen auch als HTML-Dateien im Chat und in den Repos unter <code>docs/curseforge/description.html</code> (Branch <code>26.3</code>). Die alten Bilder bleiben in den Repos, bis die neuen Seiten online sind.",
  "projects": [
   {
@@ -164,6 +164,76 @@
      "Cosmetic",
      "Miscellaneous",
      "Utility & QoL"
+    ]
+   }
+  },
+  {
+   "key": "ccmod",
+   "name": "Challenge Craft (Mod)",
+   "chip": [
+    "new",
+    "neu gestaltet"
+   ],
+   "ids": "Mod · Projekt 1508454 · Version 1.1.3 für 26.3",
+   "about": [
+    "Im Arcade-Stil des Pack-Logos: magenta Pixel-Buchstaben, Nachtlila, goldene Rahmen.",
+    "- 51 Challenges, 20 Level, 8 Perks, 304 Bingo-Ziele, 484 Trivia-Fragen, 25 Daily Runs (alles aus dem Code gezählt); So funktioniert's, Level und Perks, alle Challenges mit echten Szenen, Daily/Codes/Run-Karte, Casino (mit „Spielgeld“-Hinweis), Koop und Bob mit „Early Development Stage“.",
+    "- Im Spoiler: Voraussetzungen, Server, Steuerung, Befehle und FAQ. Bilder liegen im Repo (Branch 26.3-lockout-bot) und sind online."
+   ],
+   "html": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/ccdesc/description-mod.html",
+   "preview": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/ccdesc/preview-mod.png",
+   "url": "https://www.curseforge.com/minecraft/mc-mods/challenge",
+   "video": null,
+   "meta": {
+    "summary_new": "51 stackable challenge runs: Lockout Bingo, Force Item Battle, All Biomes, Void Trail, a casino and more. Earn Lifetime XP and level up across worlds.",
+    "summary_old": "⚔️ Play the challenges from your favorite YouTubers! ⚔️ 45 challenge modes, randomizers, and chaos mechanics combined with lifetime XP progression. Every world is a new challenge run.",
+    "name_new": "Challenge Craft – Challenge Runs & Lockout Bingo",
+    "name_old": "Challenge Craft",
+    "cats_new": [
+     "Adventure and RPG (Hauptkategorie)",
+     "Miscellaneous",
+     "Server Utility"
+    ],
+    "cats_old": [
+     "Addons",
+     "Adventure and RPG",
+     "Skyblock"
+    ]
+   }
+  },
+  {
+   "key": "ccpack",
+   "name": "Challenge Craft (Modpack)",
+   "chip": [
+    "new",
+    "neu gestaltet"
+   ],
+   "ids": "Modpack · Projekt 1653698 · v4 online (v5 wartet auf deine Testrunde)",
+   "about": [
+    "Gleiche Optik wie der Mod: was das Pack dazugibt (3 Shader-Packs, Proximity Voice, Soundscape, großer Speicher, Komfort, eigenes Menü), das Menü, „Start a run with friends“ in fünf Schritten und die Challenge-Übersicht.",
+    "- Im Spoiler: Voraussetzungen, Inhalt des Server-Packs, die Mod-Liste mit Links und FAQ.",
+    "- Mod-Liste und Zahlen stammen aus dem v5-Stand; bei v4 fehlen evtl. Storage Drawers und Upgraded Iron Chests. Erst nach dem v5-Upload einfügen oder die Zeile anpassen."
+   ],
+   "html": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/ccdesc/description-modpack.html",
+   "preview": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/ccdesc/preview-modpack.png",
+   "url": "https://www.curseforge.com/minecraft/modpacks/challenge-craft",
+   "video": null,
+   "meta": {
+    "summary_new": "Challenge Craft ready to play: 51 challenge runs plus shaders, proximity voice chat, a full soundscape and a custom menu. Server pack included.",
+    "summary_old": "⚔️ Play the challenges from your favorite YouTubers! ⚔️ 50 unlockable challenges, randomizers... Every world is a new challenge run.",
+    "name_new": "Challenge Craft Modpack – Challenge Runs with Friends",
+    "name_old": "Challenge Craft",
+    "cats_new": [
+     "Mini Game (Hauptkategorie)",
+     "Multiplayer",
+     "Hardcore",
+     "Vanilla+"
+    ],
+    "cats_old": [
+     "Multiplayer",
+     "Skyblock",
+     "Expert",
+     "Quests"
     ]
    }
   }

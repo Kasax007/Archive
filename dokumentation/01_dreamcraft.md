@@ -550,7 +550,8 @@ Fehler (Oberwelt 1521 Chunks in 1:43, Raft-Dimension 729 Chunks, früher auch Ne
 - Dazu neu: das Menübild der CurseForge-Seite (`menu_v14.jpg`) und der Menü-Shot des Trailers (`footage/dc/menu_land.mp4`,
   aus dem neuen Screenshot mit derselben langsamen Zoomfahrt).
 - Upload am 7.11. um 7:31 Uhr deutscher Zeit (Wunsch des Nutzers: 7:30) per `$SP/upload141.sh`: Client 9487507,
-  Server-Pack 9487509 (`parentFileID` 9487507). Den Server-Pack auf CurseForge von Hand als Server Pack markieren.
+  Server-Pack 9487509 (`parentFileID` 9487507), beide um 7:39 Uhr freigegeben (Download-Link 307). Den Server-Pack auf
+  CurseForge von Hand als Server Pack markieren.
 
 ### So wurde V1.4 gebaut (6.11.2026)
 1. Beach Craft 3.1.0 hochgeladen (Datei 9474711), nach rund 15 Minuten freigegeben (Download-Link 307).

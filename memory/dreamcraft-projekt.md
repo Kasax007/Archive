@@ -10,11 +10,11 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
 | --- | --- | --- |
 | Modpack-Quelle (Overrides, Quests, Menü, Tools, Beschreibung) | `Kasax007/Modpack-Development`, Branch `26.3` | Modpack 545167 |
 | Quest Icons (Quest-System im FTB-Quests-Stil + Icons) | `Kasax007/Kasax_Quests_Items_Mod-1.19.2`, Branches `26.3` und `26.2` | 690531, Datei 9402494 (1.0.0+26.3), 9409345 (1.0.1+26.3), 9415031 (1.0.2+26.3), 9429010 (1.1.0+26.3, Dream Star); 1.2.0 (FTB-Import): 9499549 (26.3) / 9499550 (26.2); 1.3.0 (470 Icons, Editor ohne SNBT): 9501059 (26.3) / 9501060 (26.2); Ports 1.3.0 (8.11., je Branch `port/<v>`): 9506691 (Fabric 1.21.1), 9506692 (NeoForge 1.21.1), 9506693 (Fabric 1.21.11), 9506695 (Fabric 26.1.2), 9506696 (Forge 1.20.1), 9506697 (Fabric 1.20.1) |
-| Raft-Mod, auf CurseForge **„Beach Craft“** | `Kasax007/Kasax_Raft_Mod`, Branch `26.3` | 1010922, Datei 9402661 (2.0.0+26.3), 9408472 (2.0.1+26.3), 9431301 (3.0.0+26.3), 9474711 (3.1.0+26.3), 9506698 (3.2.0+26.3), 9506700 (3.2.0+1.21.1, Branch `port/1.21.1`) |
+| Raft-Mod, auf CurseForge **„Beach Craft“** | `Kasax007/Kasax_Raft_Mod`, Branch `26.3` | 1010922, Datei 9402661 (2.0.0+26.3), 9408472 (2.0.1+26.3), 9431301 (3.0.0+26.3), 9474711 (3.1.0+26.3), 9506698 (3.2.0+26.3), 9506700 (3.2.0+1.21.1, Branch `port/1.21.1`), 9507188 (3.3.0+26.3, Cozy/Küche/Ausrüstung) |
 | TikTok und Werkzeuge | `Archive/dreamcraft/tiktok` (v2 mit Shadern) | – |
 | Beach-Craft-Review und Prüfbericht | `Archive/beachcraft/review` | – |
 | Beach-Craft-3.0-Doku „Tides of the Deep“ (18:35, nur Fassung mit Untertiteln + Musik) | `Archive/beachcraft/documentary`, Rohmaterial `footage/bc3` | – |
-| Modpack-Dateien | | V1: 9403038 (+ Server-Pack). V1.1: 9408516, Server-Pack 9408519 (Beach Craft 2.0.1, Quests korrigiert). V1.2: 9409459, Server-Pack 9409463 (Menü-Fixes, ohne JER). V1.2.1: 9415062, Server-Pack 9415063 (Quest-Buch-Klick-Hotfix). V1.3: 9431378, Server-Pack 9431379 (Beach Craft 3.0.0, Tamagotchi 1.2.0 = 9431312, Dream Star, 328 Quests)  V1.4: 9475197, Server-Pack 9475219 (Beach Craft 3.1.0 = 9474711, Upgraded Iron Chests, 348 Quests). V1.4.1: 9487507, Server-Pack 9487509 (Menü-Fix). V1.4.2: 9499392, Server-Pack 9499399 (Bisect-Config, Changelog nur „Bug fixes“). |
+| Modpack-Dateien | | V1: 9403038 (+ Server-Pack). V1.1: 9408516, Server-Pack 9408519 (Beach Craft 2.0.1, Quests korrigiert). V1.2: 9409459, Server-Pack 9409463 (Menü-Fixes, ohne JER). V1.2.1: 9415062, Server-Pack 9415063 (Quest-Buch-Klick-Hotfix). V1.3: 9431378, Server-Pack 9431379 (Beach Craft 3.0.0, Tamagotchi 1.2.0 = 9431312, Dream Star, 328 Quests)  V1.4: 9475197, Server-Pack 9475219 (Beach Craft 3.1.0 = 9474711, Upgraded Iron Chests, 348 Quests). V1.4.1: 9487507, Server-Pack 9487509 (Menü-Fix). V1.4.2: 9499392, Server-Pack 9499399 (Bisect-Config, Changelog nur „Bug fixes“). V1.4.3: 9500352, Server-Pack 9500367 (Inventar, WorldEdit-Hacke). V1.5: 9507488, Server-Pack 9507490 (Beach Craft 3.3.0, Tamacraft 1.3.0, Quest Icons 1.3.0, Island Life, 369 Quests). |
 
 - FTB Quests gibt es für 26.2 und 26.3 nicht (neueste Datei 26.1.2.10 vom 5.11., nur NeoForge). Seit Quest Icons 1.2.0
   holt `/quests import ftbquests` FTB-Bücher herüber. Das Quest-System steckt in Quest Icons: Buch mit Taste J,
@@ -295,6 +295,10 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   mit 32 GUI-Pixeln ohne Glättung, 1024 px flimmert), Commit `0ae7d9e` auf `26.3`. Agent B soll es nach `fix/3.1.1` mergen
   und in `port/1.21.1` cherry-picken, der Cozy-Agent nach `feature/cozy`. Vor dem Upload von 3.2.0/3.3.0 prüfen, ob das
   neue Icon im Jar ist.
+- **Stand 8.11. mittags:** Alles aus der Liste vom 7.11. ist hochgeladen und freigegeben: Quest-Icons-Ports (6), Beach
+  Craft 3.2.0 (26.3 + 1.21.1) und 3.3.0, Dreamcraft V1.5 (Island Life, Tamacraft). Offen: die Cozy-Inhalte von 3.3 für
+  1.21.1 (dort fehlen Vanilla-Regal und Speer), Beschreibungen einfügen (Übergabeseite Version 15), CC-Partner-ID 4385
+  vs. 4395, Server-Packs auf CurseForge von Hand markieren, GitHub-Repo heißt noch tamagotchi.
 - **CurseForge-Uploads nur mit Freigabe im Chat:** Seit 7.11. stoppt die Auto-Mode-Prüfung Uploads als öffentliche
   Veröffentlichung, auch wenn alles vorbereitet ist. Vorher fragen (Datei, Version, Spielversionen nennen), alles
   andere (Beschreibung, Doku, Seite) schon fertig machen.

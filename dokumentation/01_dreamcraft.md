@@ -1271,3 +1271,26 @@ Dream“ frei. Rezepte und Sockel im Detail: [02_quest_icons.md](02_quest_icons.
   Spiel (Hauptmenü, neue Welt, Quest-Buch mit 14 Kapiteln; „0/203“ zählt nur Pflicht-Quests, dazu 125 optionale = 328),
   Server-Pack gestartet (363 Mods, „Done“ nach 33 s, 328 Quests, Raft-Strukturen per `/locate` gefunden). Im Log nur
   Umgebungsfehler (kein Ton, keine Anmeldung, kein Discord).
+
+## V1.5 (8.11.2026): Island Life, Tamacraft, Quest Icons 1.3.0
+
+Client-Pack 9507488, Server-Pack 9507490 (Projekt 545167). Mit Freigabe des Nutzers („Beides“) nach bestandenem Test hochgeladen.
+
+- **Mods:** Beach Craft 3.3.0 (9507188, mit allem aus 3.2.0), Tamacraft 1.3.0 (9501672, vorher Tamagotchi; gleiches
+  CurseForge-Projekt 1758309, Slug jetzt `tamacraft`), Quest Icons 1.3.0 (9501059). 253 Mods im Manifest.
+- **Quests (369):** neuer Nebenpfad **Island Life** (21 Quests, `tools/dc_quests_island.py`): bewachte Orte und
+  Mini-Bosse, Segel und Ankerwinde, Gemütlichkeit/Rested, Inselpflanzen, Kochtopf, Fischfalle, Bumerang, Muschel- und
+  Entdecker-Rüstung, Wrack-Kompass, Goldener Köder. Scavenger Chief und Reef Warden sind Elite-Varianten ohne eigenen
+  Entity-Typ, ihre Quests sind deshalb Häkchen. Im Endless-Sea-Kapitel erklären Leviathan, Haken, Item Catcher und
+  eigenes Floß den Stand von 3.2. Tamagotchi heißt überall Tamacraft (IDs `tamacraft:`, Herz `tamacraft_heart`); die
+  Quest-IDs blieben gleich, der Fortschritt bleibt erhalten.
+- **Werkzeuge:** `mkpack.py` überspringt `tamacraft-*` wie `tamagotchi-*` (sonst doppelt im Server-Pack),
+  `prodtest/cf_install.py` nimmt jetzt auch eine lokale Pack-Zip (Test vor dem Upload).
+- **Tests:** `qcheck --offline` (alle neuen IDs gültig; die 8 Meldungen sind veraltete Offline-Listen von V1.4-Mods),
+  Quest-Durchlauf im Spiel (`dcrun.sh v15_qrun -Pscene=qrun -Pqonly=island,pets,nether:pup,end:kitten,epilogue:star_heart`:
+  49 von 51, die zwei Fehler führten zu den Häkchen), Installation wie ein Launcher (253 Mods, 0 Fehler), echter Client
+  (neue Welt, Questbuch mit Tamacraft und Island Life), Server-Pack (Start in 25 s, keine Fehler unserer Mods; im
+  Container mit Java 25 im PATH, das Standard-Java ist 21).
+- **Beschreibung:** alle Bilder als `*_v15` (`make_images_v15.py`: Kopfbild V1.5, 369 Quests in 16 Kapiteln, sieben
+  Nebenpfade, „Neu in V1.5“, Tamacraft-Texte); Changelog `docs/curseforge/changelog-26.3-V1.5.md`.
+

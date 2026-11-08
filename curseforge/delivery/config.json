@@ -8,14 +8,14 @@
    "name": "Beach Craft",
    "chip": [
     "new",
-    "3.4: Kochtopf · Angel · Welt"
+    "3.4 für 26.3 und 1.21.1"
    ],
-   "ids": "Mod · Projekt 1010922 · Version 3.4.0+26.3 (Datei 9512111, freigegeben) und 3.3.0+1.21.1 (Datei 9509049); 3.4.0 für 1.21.1 folgt",
+   "ids": "Mod · Projekt 1010922 · Version 3.4.0+26.3 (Datei 9512111, freigegeben) und 3.4.0+1.21.1 (Datei 9518456, in Prüfung)",
    "about": [
     "Neu für 3.4: drei Zeilen „New in 3.4“ (Kochtopf zum Zuschauen, Treibholz-Angel mit Köderkasten, seltenere große Orte auf festem Grund mit gefüllten Fässern und Lootr) und in den Voraussetzungen JEI und Lootr als optionale Mods.",
     "- Die Floß-Grafik zeigt jetzt Anlegen statt „Drop anchor“.",
     "- Ausgangspunkt ist deine Live-Beschreibung: das Video bleibt ein verlinktes Vorschaubild, der YouTube-Link kommt nur einmal vor.",
-    "- Neu: Die Voraussetzungen nennen 3.3 jetzt auch für Minecraft 1.21.1 (mit allem; Regal und Hai-Speer sind dort eigene Umsetzungen, weil 1.21.1 beides nicht hat)."
+    "- Neu: Die Voraussetzungen nennen 3.4 auch für Minecraft 1.21.1 (mit allem; optional JEI 19 und Lootr 1.11)."
    ],
    "html": "/home/user/Kasax_Raft_Mod/docs/curseforge/description.html",
    "preview": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/desc15/bc_preview.png",
@@ -50,7 +50,7 @@
    "modrinth": {
     "md": "/home/user/Archive/curseforge/modrinth/descriptions/beach-craft.md",
     "url": "https://modrinth.com/mod/beach-craft",
-    "note": "Bei Modrinth in Prüfung. Versionen 3.4.0 (26.3), 3.3.0 (26.3, 1.21.1), Lizenz MIT. Die Beschreibung mit den 3.4-Zeilen ist dort schon eingetragen."
+    "note": "Bei Modrinth in Prüfung. Versionen 3.4.0 und 3.3.0 für 26.3 und 1.21.1, Lizenz MIT. Die Beschreibung ist dort schon eingetragen."
    }
   },
   {

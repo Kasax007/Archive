@@ -851,5 +851,11 @@ parallel in eigenen Worktrees, zusammengeführt in `release/3.4.0` und per Fast-
 - Tests nach der Zusammenführung: cozy 28/28, food 191/191, kitchen 25/25 (mit und ohne JEI), look 11/11 (ein
   Zeitfehler beim Aufheben behoben), foundation_water 2/2, raft_5/enc_32/boss_32 ohne Mod-Fehler, Produktiv-Test
   (Server + Client nur mit Fabric API): 0 Fehler.
-- 1.21.1-Fassung von 3.4.0: Agent auf `port/1.21.1` (läuft).
+- **3.4.0+1.21.1** (CurseForge 9518456, Modrinth uFzX7PJH; `port/1.21.1` = 8330014, Merge cd48ba7): alles aus 3.4.0. Unterschiede:
+  JEI 19 (gebaut gegen 19.56, weil 19.57+ Loom 1.18 braucht; 19.70 läuft im Produktiv-Client), Lootr 1.11 (braucht Cloth
+  Config, Anbindung über Block-Entity-Converter), Angel-Modell/-Schnur/-Haken über 1.21.1-Wege (zwei Mixins), kein
+  „Bundle voll“-Klang, Sonnenschirm wird vom Kolben abgebaut statt „gepoppt“; Fix: Reef-Guardian-Leerlaufklang war seit
+  3.3.0+1.21.1 stumm. Tests: kitchen 25/25 (mit/ohne JEI), look 11/11, Wasser 2/2, cozy 28/28, food 191/191,
+  shelf_spear 26/26, Lootr 6/6, raft_5/enc_32/boss_32 ohne Fehler, Weltprüfung (1,77 große Orte/km², ≥ 386 Blöcke),
+  Produktiv-Test (Server + Client mit Fabric API 0.116.17) ohne Mod-Fehler.
 

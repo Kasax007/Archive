@@ -305,6 +305,26 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   gekauft wird“ → Dreamcraft 6 GB (pid 597, Bisect-Empfehlung), Challenge-Craft-Modpack 4 GB (pid 595); beide
   Beschreibungen verlinken Banner und Text so. Seit Dreamcraft V1.5.1 (9508556/9508559) und Challenge Craft v4.2
   (9508554/9508555, beide freigegeben 8.11. um 12:02 UTC) steht `pack_edit_mode=false` in der Config. Mod-Seiten behalten `bisecthosting.com/kasax007`.
+- **Modrinth (8.11. nachmittags):** Nutzer gab einen Modrinth-Token (nur `$SP/.mr_token`, streng vertraulich, nie
+  committen). Alle sechs Projekte eingerichtet, Details und Werkzeuge in `curseforge/modrinth/README.md`: Beschreibungen
+  als eigene Modrinth-Fassung (Überschriften ≤ 80 Zeichen, Prüfung per `GET /v3/project/<id>/validate`), Lizenz MIT
+  (Mods), CC-BY-4.0 (Challenge Craft + Pack), Dreamcraft MIT; 15 Mod-Versionen byte-gleich mit CurseForge; Packs als
+  .mrpack (Challenge Craft komplett; Dreamcraft ohne 7 Mods, die nicht auf Modrinth gebündelt werden dürfen – Vorlage
+  für Autoren in `curseforge/modrinth/AUTOREN-ANFRAGE.md`, Nutzer fragt selbst). Offenlegung KI-Hilfe + Werbung (Packs).
+  Status: Challenge Craft freigegeben, Rest in Prüfung. Regel des Nutzers: Steht auf der Mod-Seite, dass Modpacks
+  erlaubt sind, nicht fragen; sonst ohne die Mod veröffentlichen mit Hinweis in der Beschreibung.
+- **CurseForge leert Links mit eckigen Klammern** (`configoption%5B…%5D`): der Bisect-Bestell-Link führte zurück auf
+  die Seite (cfwidget zeigt `href=""`). Seit 8.11. ohne Klammern:
+  `https://www.bisecthosting.com/configure?id=<Tarif>&plan=minecraft&billing_cycle=monthly&game_version=java&modpack=<intern>&source=mod&aid=4395`
+  (intern: Dreamcraft 2344, Challenge Craft 3747; im Browser geprüft: Pack und Tarif vorausgewählt). Bei Bisect selbst
+  offen: Challenge Craft zeigt bei 4 GB „Insufficient RAM“ (Empfehlung 8 GB), Dreamcraft wird dort noch als
+  „Dreamcraft 1.20.1“ installiert – beides in der Partnerkonsole des Nutzers zu ändern.
+- **Beach Craft 3.4 (in Arbeit, 8.11.):** Feedback des Nutzers in drei Agenten-Worktrees von `26.3`: `wt/bc-look`
+  (`feature/3.4-look`: Texturen Banane/Gerichte/Seilteppich/Laterne/Pflanzkübel/Blumenkasten/Vase, Sonnenschirm 3 hoch,
+  fließendes Wasser an Fundamenten), `wt/bc-kitchen` (`feature/3.4-kitchen`: Kochtopf falsche Zutaten + Anzeige, JEI,
+  Treibholz-Angel mit Köder-/Lure-Slots, Creative-Tabs sortieren), `wt/bc-world` (`feature/3.4-world`: große Strukturen
+  seltener und weiter auseinander, Fässer mit Loot, Lootr, Strukturen bis zum Boden). Danach zusammenführen, 3.4.0,
+  Port 1.21.1, Uploads CurseForge + Modrinth (mit Freigabe).
 - **CurseForge-Uploads nur mit Freigabe im Chat:** Seit 7.11. stoppt die Auto-Mode-Prüfung Uploads als öffentliche
   Veröffentlichung, auch wenn alles vorbereitet ist. Vorher fragen (Datei, Version, Spielversionen nennen), alles
   andere (Beschreibung, Doku, Seite) schon fertig machen.

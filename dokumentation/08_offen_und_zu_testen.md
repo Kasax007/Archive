@@ -37,6 +37,14 @@ Dreamcraft V1.4/V1.4.1 sind seit dem 6./7.11. online.
   Beschreibung bestellt 4 GB. In der Partnerkonsole auf 4 GB senken, damit Bestellseite und Menü dasselbe empfehlen.
 - [ ] Dreamcraft V1.4.2: Server-Pack 9499399 auf CurseForge als Server Pack markieren (geht nur von Hand).
 
+- [ ] **CurseForge-Beschreibungen neu einfügen** (Übergabeseite Version 20): Dreamcraft, Challenge-Craft-Modpack und
+  -Mod haben Bisect-Links ohne eckige Klammern (CurseForge hatte den alten Link geleert).
+- [ ] **Bisect-Partnerkonsole:** RAM-Empfehlung für Challenge Craft (Pack 27138) auf 4 GB senken (sonst „Insufficient RAM“
+  auf der Bestellseite); Dreamcraft-Eintrag (19732) auf die 26.3-Version stellen (zeigt noch „Dreamcraft 1.20.1“).
+- [ ] **Modrinth:** Prüfung abwarten (Beach Craft, Quest Icons, Tamacraft, Challenge-Craft-Pack, Dreamcraft); Autoren
+  der 7 fehlenden Dreamcraft-Mods fragen (Vorlage `curseforge/modrinth/AUTOREN-ANFRAGE.md`).
+- [ ] **Beach Craft 3.4** fertigstellen (drei Agenten-Branches), dann 1.21.1-Port und Uploads.
+
 ## B. Risiken und Aufräumen
 - [ ] **Die Build-Werkzeuge hängen am flüchtigen Scratchpad.** `mkpack.py` hat den Scratchpad-Pfad dieser Sitzung fest
   eingetragen und braucht dort `packdb.json` (Modliste mit Datei-Pfaden), `jars/` (Mod-Cache), `ownjars/` (Quest Icons

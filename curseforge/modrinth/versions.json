@@ -1,0 +1,151 @@
+{
+ "3PmzwJU0:3.3.0+1.21.1": {
+  "id": "T8h3js4Z",
+  "file": "raft-3.3.0+1.21.1.jar",
+  "url": "https://cdn.modrinth.com/data/3PmzwJU0/versions/T8h3js4Z/raft-3.3.0%2B1.21.1.jar",
+  "sha1": "e64053dbb124fbd59eff8314c3daf9e79f869981",
+  "sha512": "30c40565b22074ca819d9636051cbcae7b3ffe8496f37a1c2f03406f97f82b783540f73e748c153c8ab39b7063d930bce729116139279bce24e8f9c0af7647ac",
+  "size": 28175264,
+  "same_bytes": true
+ },
+ "3PmzwJU0:3.3.0+26.3": {
+  "id": "Y5Zv6jnq",
+  "file": "raft-3.3.0-26.3.jar",
+  "url": "https://cdn.modrinth.com/data/3PmzwJU0/versions/Y5Zv6jnq/raft-3.3.0-26.3.jar",
+  "sha1": "a0c26ad17e3fa7e10f958ba9e50dd69c6ae1978a",
+  "sha512": "66c20aed73a0d49f83ebfe311b51f1d1725225577f14067d08dce31fad6b3e1c2052f81b4837c4d61d104c4636497fb21a8135d899ac4e285be03f4115c133d1",
+  "size": 28132885,
+  "same_bytes": true
+ },
+ "ohf5LwXu:1.3.0+1.20.1-forge": {
+  "id": "UfPEEQnQ",
+  "file": "QuestIcons-1.3.0-1.20.1-forge.jar",
+  "url": "https://cdn.modrinth.com/data/ohf5LwXu/versions/UfPEEQnQ/QuestIcons-1.3.0-1.20.1-forge.jar",
+  "sha1": "3a31da7fb691216f38991bc65554673596f1bb15",
+  "sha512": "cb143ed0b632a8d2593f5ae5cb9b900c622258d33edadcd7304c47eb5be962a82976ffc633222b2423980a2b7e6a8b2ca11aa02cd3a7ed76ecbfb3b6332cef89",
+  "size": 1050400,
+  "same_bytes": true
+ },
+ "ohf5LwXu:1.3.0+1.20.1": {
+  "id": "UbARvEKD",
+  "file": "QuestIcons-1.3.0-1.20.1.jar",
+  "url": "https://cdn.modrinth.com/data/ohf5LwXu/versions/UbARvEKD/QuestIcons-1.3.0-1.20.1.jar",
+  "sha1": "ddbb1dae6b311f5c5d60da4cf18659450bdde42d",
+  "sha512": "5eba0b8508bc85440116809640eccb2cfab3f9275b0393806c19d3c6d5a66f401e9659f40d11a349dc9bbb5912eedd33be85b1762234d95129f3956c3d17a5df",
+  "size": 1045377,
+  "same_bytes": true
+ },
+ "ohf5LwXu:1.3.0+1.21.1-neoforge": {
+  "id": "aDTJ1Nkd",
+  "file": "QuestIcons-1.3.0-1.21.1-neoforge.jar",
+  "url": "https://cdn.modrinth.com/data/ohf5LwXu/versions/aDTJ1Nkd/QuestIcons-1.3.0-1.21.1-neoforge.jar",
+  "sha1": "ddb694281b047c70b81d5125e40e67fc67b2abf7",
+  "sha512": "02189eabffa0f045ce14ab824c561345daddf0b1c6d5913876a8296c67ee63b6ea41f0f0c9c922749f6bfe8aa673159f9000dd74db0ad3ffc2b4a2e26ad5d63f",
+  "size": 1030757,
+  "same_bytes": true
+ },
+ "ohf5LwXu:1.3.0+1.21.1": {
+  "id": "f0SVkAKO",
+  "file": "QuestIcons-1.3.0-1.21.1.jar",
+  "url": "https://cdn.modrinth.com/data/ohf5LwXu/versions/f0SVkAKO/QuestIcons-1.3.0-1.21.1.jar",
+  "sha1": "cb97ae2afde48369317c79ac2f03b6243612f5c9",
+  "sha512": "5a9d64462990e8fa70abfa637cfe5ed74890d6e2700b3b00ecdcc209b273811d640b3c3ac3e37b54103014c6dd4a4684eeff8a4848870b9ebfba5dff018570be",
+  "size": 1048051,
+  "same_bytes": true
+ },
+ "ohf5LwXu:1.3.0+1.21.11": {
+  "id": "VtjuOIU6",
+  "file": "QuestIcons-1.3.0-1.21.11.jar",
+  "url": "https://cdn.modrinth.com/data/ohf5LwXu/versions/VtjuOIU6/QuestIcons-1.3.0-1.21.11.jar",
+  "sha1": "0f789c5240112680f74aed0742768c660cb2ac14",
+  "sha512": "3b9281a3dee31826842af62b19bb8ab0def22825bc9d2d504518e0c4ce7b7650bcc26bd26d1aa01ecd27e3e4e76edec6475d0283495168d333883fc6e5781f6b",
+  "size": 1151393,
+  "same_bytes": true
+ },
+ "ohf5LwXu:1.3.0+26.1.2": {
+  "id": "iA42anhe",
+  "file": "QuestIcons-1.3.0-26.1.2.jar",
+  "url": "https://cdn.modrinth.com/data/ohf5LwXu/versions/iA42anhe/QuestIcons-1.3.0-26.1.2.jar",
+  "sha1": "3f6e38dfe2fc3c3eb4dcc9d5484e205535a13676",
+  "sha512": "5b8ef7f624ef14ca801669a743cd9404b7ed47e6b8d9cce1361a16baf7717662cb97649ff9a6d5a5590b891432c52b08fbc8f30511dfd3025c2c7826c1898a4d",
+  "size": 1155500,
+  "same_bytes": true
+ },
+ "ohf5LwXu:1.3.0+26.2": {
+  "id": "Hl3fIfdu",
+  "file": "QuestIcons-1.3.0-26.2.jar",
+  "url": "https://cdn.modrinth.com/data/ohf5LwXu/versions/Hl3fIfdu/QuestIcons-1.3.0-26.2.jar",
+  "sha1": "ef2ada3aa9fc1ae8a20cb8d25255600d28509947",
+  "sha512": "52072ad47a6f7b38dc54a525c9594c9b327980d8850453408e3c86f8116e8a05f7c2020343d10aed125d944dbd58ed25ce1121712e705eacefef3d84e4d18102",
+  "size": 1155820,
+  "same_bytes": true
+ },
+ "ohf5LwXu:1.3.0+26.3": {
+  "id": "fZMAQ16h",
+  "file": "QuestIcons-1.3.0-26.3.jar",
+  "url": "https://cdn.modrinth.com/data/ohf5LwXu/versions/fZMAQ16h/QuestIcons-1.3.0-26.3.jar",
+  "sha1": "20deeb9d6270c58d4ec39487e5bfd924915de1dc",
+  "sha512": "50f1072e8b7f9ae9993cd39a779d9f1ac9d50f3b19430f2d8698e9624e2021e382dc0d26e56902dde13829002a9afb73e74bb0d1bc1238abd805004d9a00a745",
+  "size": 1155678,
+  "same_bytes": true
+ },
+ "lyuVXQEh:1.3.0+1.21.1": {
+  "id": "1ZA6tv8P",
+  "file": "tamacraft-1.3.0-1.21.1.jar",
+  "url": "https://cdn.modrinth.com/data/lyuVXQEh/versions/1ZA6tv8P/tamacraft-1.3.0-1.21.1.jar",
+  "sha1": "7fdfd41206880b84355e6f4a30f713d4f2af3970",
+  "sha512": "a616d80294fe964c413f9bf14acb54deb1cc0ba998d0ac855a1a7a3f87f5da8141be44ae63e134233a1d8285719f05e1cf60025f96dddebfb3f7f96aaa7d2753",
+  "size": 1853058,
+  "same_bytes": true
+ },
+ "lyuVXQEh:1.3.0+26.3": {
+  "id": "KElQwpoR",
+  "file": "tamacraft-1.3.0.jar",
+  "url": "https://cdn.modrinth.com/data/lyuVXQEh/versions/KElQwpoR/tamacraft-1.3.0.jar",
+  "sha1": "328cedd50a8b62ebd9eb36d149e965a72bf68d04",
+  "sha512": "df46f7e503c9e1376d04780aebfffd6f3cbc03421770c99385f193661acc8317ae0205e4e493f9046342764348aae537aae53a493b759c10a05fca8e8d876da3",
+  "size": 1865607,
+  "same_bytes": true
+ },
+ "3qs3GQyx:1.0.1": {
+  "id": "5BKZGGFL",
+  "file": "challengecraft-1.0.1.jar",
+  "url": "https://cdn.modrinth.com/data/3qs3GQyx/versions/5BKZGGFL/challengecraft-1.0.1.jar",
+  "sha1": "e208e088041f4586c4e495769aca68a3a0f0a0b7",
+  "sha512": "43a603c0abc92a6ef88c8a9ffc9af5ada3eef49b427399f0102b3998173ad1c5d66ec1db7ebdfac1e9718d7d8c555e0a2d9058a1ada31c46f7fb6a548366baf2",
+  "size": 593167,
+  "same_bytes": true
+ },
+ "3qs3GQyx:1.1.2": {
+  "id": "V47NFj5O",
+  "file": "challengecraft-1.1.2.jar",
+  "url": "https://cdn.modrinth.com/data/3qs3GQyx/versions/V47NFj5O/challengecraft-1.1.2.jar",
+  "sha1": "8ca0a5964db2a83433f0b32d28391bba0116332a",
+  "sha512": "2f916186832f16c0525269f9b3947de73c90462aedbd51edba944c37eec33d844c8238c0b1ea6228d62e9d0aad944d45eb52a26c90674ff76c822ffef7069d3e",
+  "size": 3060379,
+  "same_bytes": true
+ },
+ "3qs3GQyx:1.1.3": {
+  "id": "ht9OL2tN",
+  "file": "challengecraft-1.1.3.jar",
+  "url": "https://cdn.modrinth.com/data/3qs3GQyx/versions/ht9OL2tN/challengecraft-1.1.3.jar",
+  "sha1": "3606cbbb2ae8a91b8aeb6be9ffa332a2a0a15a4a",
+  "sha512": "ca8813f1bb9153c500c8efa4c82979830399f37e4787f5d2da0cf0c2f7c53b3eaf274b7c3fdf25d2c9a0909d626d6e995008589ff01444ec05ec4709cb258d50",
+  "size": 3228269,
+  "same_bytes": true
+ },
+ "XVYCqsNs:26.3-v4.2": {
+  "id": "QwknCvxT",
+  "file": "Challenge Craft 26.3-v4.2.mrpack",
+  "url": "https://cdn.modrinth.com/data/XVYCqsNs/versions/QwknCvxT/Challenge%20Craft%2026.3-v4.2.mrpack",
+  "sha1": "951ff46ad69d410057a46a0bcb9a4b0258023231",
+  "size": 10997626
+ },
+ "jRXfjUwW:26.3-V1.5.1": {
+  "id": "kgGJxfOB",
+  "file": "Dreamcraft 26.3 V1.5.1.mrpack",
+  "url": "https://cdn.modrinth.com/data/jRXfjUwW/versions/kgGJxfOB/Dreamcraft%2026.3%20V1.5.1.mrpack",
+  "sha1": "65b29f57443eb76a1bcadf2522eabb3068043eea",
+  "size": 3982964
+ }
+}

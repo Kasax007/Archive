@@ -1,5 +1,5 @@
 {
- "date": "Stand 8. November 2026: Beach Craft 3.3 auch für 1.21.1, Quest Icons auf allen Versionen, Dreamcraft V1.5.1 und Challenge Craft v4.2 mit Bisect-Bestell-Links",
+ "date": "Stand 8. November 2026, Nachmittag: alle Projekte auf Modrinth, Bisect-Links ohne Klammern, Beach Craft 3.3 auch für 1.21.1",
  "intro": "Alle sechs Projektseiten im neuen Stil, dazu bei jedem Projekt die neue <b>Kurzbeschreibung</b> (Summary) zum Kopieren. Die CurseForge-Suche liest nur Name und Kurzbeschreibung, nicht die Beschreibung. Ändern kannst du beides in der <a href=\"https://authors.curseforge.com/\" target=\"_blank\" rel=\"noopener\">Author Console</a>: Projekt öffnen, dann die Projekt-Details (Name, Summary, Kategorien) bearbeiten und speichern. Bei Projekten mit Video fügst du den YouTube-Link ins Feld ein; ohne Link fehlt nur der Video-Block.",
  "footer": "Alle Texte liegen auch als HTML-Dateien im Chat und in den Repos unter <code>docs/curseforge/description.html</code> (Branch <code>26.3</code>). Die alten Bilder bleiben in den Repos, bis die neuen Seiten online sind.",
  "projects": [
@@ -46,6 +46,11 @@
      "World Gen",
      "Technology"
     ]
+   },
+   "modrinth": {
+    "md": "/home/user/Archive/curseforge/modrinth/descriptions/beach-craft.md",
+    "url": "https://modrinth.com/mod/beach-craft",
+    "note": "Bei Modrinth in Prüfung. Versionen 3.3.0 für 26.3 und 1.21.1, Lizenz MIT. Die Beschreibung ist dort schon eingetragen; dieser Text ist die Archiv-Fassung."
    }
   },
   {
@@ -57,7 +62,7 @@
    ],
    "ids": "Modpack · Projekt 545167 · V1.5.1 (Datei 9508556, Server-Pack 9508559, freigegeben) – BisectHosting Partner 4395 / Pack 19732",
    "about": [
-    "Neu: Das Bisect-Banner und der Hinweis „Play with friends“ führen jetzt direkt zur Bestellung eines 6-GB-Servers mit Dreamcraft vorinstalliert (Tarif und Pack sind im Link gesetzt), der Code Kasax007 bleibt. Im Pack ist der Bisect-Editiermodus aus (V1.5.1).",
+    "Neu: Der Bisect-Link ist jetzt ohne eckige Klammern. CurseForge hatte den alten Bestell-Link geleert, ein Klick führte zurück auf die Seite. Weiterhin 6-GB-Server mit Dreamcraft, Code Kasax007. Bitte die Beschreibung neu einfügen.",
     "- Neu für V1.5: Kopfbild, „Auf einen Blick“ (369 Quests in 16 Kapiteln), die Karte mit sieben Nebenpfaden (neu: Island Life, 21 Quests) und „Neu in V1.5“ (Beach Craft 3.3, Tamacraft, Quest Icons 1.3) sind neu gerendert, alle Bilder als *_v15.",
     "- Tamagotchi heißt überall Tamacraft (Text, Links auf /tamacraft, Mod-Liste, Haustier-Collage, Dream-Star-Grafik).",
     "- Der Server-Hinweis erklärt das Update von V1.4: tamagotchi-*.jar durch tamacraft-*.jar ersetzen, die Welten bleiben.",
@@ -92,6 +97,11 @@
      "Tech",
      "Magic"
     ]
+   },
+   "modrinth": {
+    "md": "/home/user/Archive/curseforge/modrinth/descriptions/dreamcraft.md",
+    "url": "https://modrinth.com/modpack/dreamcraft",
+    "note": "Erneut in Prüfung. 26.3-V1.5.1 als .mrpack mit 244 von 251 Mods; sieben fehlen, bis ihre Autoren zustimmen (siehe Karte unten). Client und Server getestet."
    }
   },
   {
@@ -134,6 +144,11 @@
      "Mobs",
      "Adventure and RPG"
     ]
+   },
+   "modrinth": {
+    "md": "/home/user/Archive/curseforge/modrinth/descriptions/tamacraft.md",
+    "url": "https://modrinth.com/mod/tamacraft",
+    "note": "In Prüfung. Tamacraft 1.3.0 für 26.3 und 1.21.1, Lizenz MIT."
    }
   },
   {
@@ -169,6 +184,11 @@
      "Miscellaneous",
      "Utility & QoL"
     ]
+   },
+   "modrinth": {
+    "md": "/home/user/Archive/curseforge/modrinth/descriptions/quest-icons.md",
+    "url": "https://modrinth.com/mod/quest-icons",
+    "note": "In Prüfung. Acht Versionen 1.3.0: Fabric 26.3, 26.2, 26.1.2, 1.21.11, 1.21.1, 1.20.1, NeoForge 1.21.1, Forge 1.20.1. Lizenz MIT."
    }
   },
   {
@@ -182,7 +202,8 @@
    "about": [
     "Im Arcade-Stil des Pack-Logos: magenta Pixel-Buchstaben, Nachtlila, goldene Rahmen.",
     "- 51 Challenges, 20 Level, 8 Perks, 304 Bingo-Ziele, 484 Trivia-Fragen, 25 Daily Runs (alles aus dem Code gezählt); So funktioniert's, Level und Perks, alle Challenges mit echten Szenen, Daily/Codes/Run-Karte, Casino (mit „Spielgeld“-Hinweis), Koop und Bob mit „Early Development Stage“.",
-    "- Im Spoiler: Voraussetzungen, Server, Steuerung, Befehle und FAQ. Bilder liegen im Repo (Branch 26.3-lockout-bot) und sind online."
+    "- Im Spoiler: Voraussetzungen, Server, Steuerung, Befehle und FAQ. Bilder liegen im Repo (Branch 26.3-lockout-bot) und sind online.",
+    "- Neu: Banner und „Want to play with friends?“ bestellen jetzt einen 4-GB-Server mit dem Challenge-Craft-Pack (Link ohne Klammern). Bitte neu einfügen."
    ],
    "html": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/ccdesc/description-mod.html",
    "preview": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/ccdesc/preview-mod.png",
@@ -203,6 +224,11 @@
      "Adventure and RPG",
      "Skyblock"
     ]
+   },
+   "modrinth": {
+    "md": "/home/user/Archive/curseforge/modrinth/descriptions/challenge_craft.md",
+    "url": "https://modrinth.com/mod/challenge_craft",
+    "note": "Freigegeben. Neu: 1.1.3 und 1.1.2 für 26.3, 1.0.1 für 1.21.5. Beschreibung mit kurzen Überschriften und dem Bestell-Link."
    }
   },
   {
@@ -217,7 +243,7 @@
     "Gleiche Optik wie der Mod. Das Pack ist Vanilla-Gameplay plus Challenge Craft; obendrauf nur Shader, Proximity Voice, Soundscape, Leistung, Komfort und das eigene Menü (27 Mods + 3 Shader-Packs, Stand v4).",
     "- „What is in the pack“, das Menü, „Start a run with friends“ in fünf Schritten (Server-Pack: 15 Mods) und die Challenge-Übersicht.",
     "- Im Spoiler: Voraussetzungen, Inhalt des Server-Packs, die Mod-Liste mit Links und FAQ. Kann sofort eingefügt werden.",
-    "- Neu: Das Bisect-Banner und „Want to play with friends?“ führen jetzt direkt zur Bestellung eines 4-GB-Servers mit Challenge Craft vorinstalliert; „Need a server?“ in Multiplayer bestellt ebenfalls mit Pack (v4.2, Bisect-Editiermodus aus)."
+    "- Neu: Bestell-Link ohne eckige Klammern (CurseForge hatte ihn geleert, der Klick lief ins Leere). Bitte neu einfügen."
    ],
    "html": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/ccdesc/description-modpack.html",
    "preview": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/desc15/ccpack_preview.png",
@@ -240,7 +266,37 @@
      "Expert",
      "Quests"
     ]
+   },
+   "modrinth": {
+    "md": "/home/user/Archive/curseforge/modrinth/descriptions/challenge-craft-modpack.md",
+    "url": "https://modrinth.com/modpack/challenge-craft-modpack",
+    "note": "In Prüfung. 26.3-v4.2 als .mrpack: alle 30 Dateien kommen von Modrinth. Lizenz CC BY 4.0."
    }
+  }
+ ],
+ "notes": [
+  {
+   "key": "mrauthors",
+   "title": "Modrinth: Autoren um Erlaubnis fragen",
+   "chip": [
+    "new",
+    "Vorlage"
+   ],
+   "html": "    <p>Modrinth-Packs laden ihre Mods von Modrinth. Eine Mod, die dort fehlt, darf nur mit Erlaubnis oder einer freien Lizenz in die Pack-Datei. Darum fehlen in der Modrinth-Fassung von Dreamcraft sieben Mods. Steht auf der Mod-Seite, dass Modpacks erlaubt sind, ist es ohne Frage in Ordnung. Das trifft hier auf keine zu: More Villagers erlaubt Modpacks, verbietet aber jedes Hosting außer CurseForge.</p>\n    <ul>\n      <li><strong>someaddon</strong> (Cupboard, Memory Settings, Smooth Chunk Save, Structure Essentials, fix GPU memory leak; All Rights Reserved): <a href=\"https://www.curseforge.com/members/someaddon\" target=\"_blank\" rel=\"noopener\">CurseForge-Profil</a> bzw. Kommentare auf den Projektseiten, <a href=\"https://www.patreon.com/someaddons\" target=\"_blank\" rel=\"noopener\">Patreon</a>. Eine Nachricht für alle fünf.</li>\n      <li><strong>More Villagers</strong> (SameButDifferent, Zero_DSRS_VX, Drex): <a href=\"https://github.com/samedifferent/morevillagers/issues\" target=\"_blank\" rel=\"noopener\">GitHub Issues</a>, <a href=\"https://discord.gg/KZwDvzthmK\" target=\"_blank\" rel=\"noopener\">Discord</a>.</li>\n      <li><strong>EpheroLib</strong>: nicht nötig, keine Mod im Pack braucht sie. <strong>Quarry Reborn</strong> ist unter CC0 mit Namensnennung im Pack.</li>\n    </ul>\n    <p>Kommt ein Ja: Antwort aufheben (Screenshot oder Link), dann kommt die Mod in die nächste Modrinth-Version.</p>",
+   "copy": [
+    {
+     "label": "Vorlage someaddon kopieren",
+     "text": "Subject: Permission to include Cupboard, Memory Settings, Smooth Chunk Save, Structure Essentials and fix GPU memory leak in the Modrinth version of my modpack Dreamcraft\n\nHi Someaddon,\n\nI'm Kasax007, the author of the modpack Dreamcraft for Minecraft 26.3 (Fabric):\nhttps://www.curseforge.com/minecraft/modpacks/dreamcraft-new\n\nI'm publishing Dreamcraft on Modrinth as well: https://modrinth.com/modpack/dreamcraft\nModrinth packs download their mods from Modrinth, and a mod that isn't there can only be bundled inside the pack with\nits author's permission. These mods aren't on Modrinth, so for now it is left out of the Modrinth version.\n\nMay I include Cupboard, Memory Settings, Server Performance - Smooth Chunk Save, Structure Essentials and fix GPU memory leak (the unchanged Fabric 26.3 files from CurseForge) in the Modrinth version of Dreamcraft? I'll credit\nyou and link your CurseForge page in the pack's description and changelog. If you'd rather publish them on Modrinth\nyourself, I'll simply use them from there.\n\nThanks a lot for your work!\nKasax007\n"
+    },
+    {
+     "label": "Vorlage More Villagers kopieren",
+     "text": "Subject: Permission to include More Villagers in the Modrinth version of my modpack Dreamcraft\n\nHi SameButDifferent, Zero_DSRS_VX and Drex,\n\nI'm Kasax007, the author of the modpack Dreamcraft for Minecraft 26.3 (Fabric):\nhttps://www.curseforge.com/minecraft/modpacks/dreamcraft-new\n\nI'm publishing Dreamcraft on Modrinth as well: https://modrinth.com/modpack/dreamcraft\nModrinth packs download their mods from Modrinth, and a mod that isn't there can only be bundled inside the pack with\nits author's permission. More Villagers isn't on Modrinth, so for now it is left out of the Modrinth version.\n\nI saw on your page that CurseForge is the only place the mod may be hosted, so I'm asking before bundling it. May I include More Villagers (the unchanged Fabric 26.3 file from CurseForge) in the Modrinth version of Dreamcraft? I'll credit\nyou and link your CurseForge page in the pack's description and changelog. If you'd rather publish it on Modrinth\nyourself, I'll simply use it from there.\n\nThanks a lot for your work!\nKasax007\n"
+    },
+    {
+     "label": "Allgemeine Vorlage kopieren",
+     "text": "Subject: Permission to include MOD in the Modrinth version of my modpack Dreamcraft\n\nHi AUTHOR,\n\nI'm Kasax007, the author of the modpack Dreamcraft for Minecraft 26.3 (Fabric):\nhttps://www.curseforge.com/minecraft/modpacks/dreamcraft-new\n\nI'm publishing Dreamcraft on Modrinth as well: https://modrinth.com/modpack/dreamcraft\nModrinth packs download their mods from Modrinth, and a mod that isn't there can only be bundled inside the pack with\nits author's permission. MOD isn't on Modrinth, so for now it is left out of the Modrinth version.\n\nMay I include MOD (the unchanged Fabric 26.3 file from CurseForge) in the Modrinth version of Dreamcraft? I'll credit\nyou and link your CurseForge page in the pack's description and changelog. If you'd rather publish it on Modrinth\nyourself, I'll simply use it from there.\n\nThanks a lot for your work!\nKasax007\n"
+    }
+   ]
   }
  ]
 }

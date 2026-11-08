@@ -125,18 +125,43 @@ for p in cfg['projects']:
       </div>''')
         meta = '\n    <div class="meta">' + ''.join(rows) + '\n    </div>'
 
+    mr = ''
+    if p.get('modrinth'):
+        m = p['modrinth']
+        data[k + '_mr'] = read(m['md'])
+        mr = f'''
+    <div class="meta">
+      <div class="mlabel">Modrinth-Fassung <span class="size">{kb(data[k + '_mr'])}</span></div>
+      <p class="mnew">{m['note']}</p>
+      <div class="actions">
+        <button type="button" data-copy="{k}_mr">Modrinth-Text kopieren</button>
+        <a class="btn" href="{m['url']}" target="_blank" rel="noopener">Modrinth-Seite ↗</a>
+      </div>
+      <textarea class="fallback" data-fallback="{k}_mr" readonly hidden></textarea>
+    </div>'''
+
     chip_cls, chip_label = p['chip']
     cards.append(f'''
   <article class="card{' lead' if chip_cls != 'same' else ''}" id="{k}">
     <div class="top"><h2>{p['name']}</h2><span class="chip {chip_cls}">{chip_label}</span></div>
     <div class="ids">{p['ids']}</div>
-{chr(10).join(about)}{meta}{preview}{yt}
+{chr(10).join(about)}{meta}{mr}{preview}{yt}
     <div class="actions">
       <button class="primary" data-copy="{k}">HTML kopieren</button>
       <a class="btn" href="{p['url']}" target="_blank" rel="noopener">Projektseite ↗</a>
       <span class="size" id="size-{k}">{kb(html)}</span>
     </div>
     <textarea class="fallback" data-fallback="{k}" readonly hidden></textarea>{yt_help}
+  </article>''')
+
+import html as _hh
+for n in cfg.get('notes', []):
+    btns = ''.join(f'<button type="button" data-copytext="{_hh.escape(c["text"], quote=True)}">{c["label"]}</button>' for c in n.get('copy', []))
+    cards.append(f'''
+  <article class="card" id="{n['key']}">
+    <div class="top"><h2>{n['title']}</h2><span class="chip {n.get('chip', ['new', ''])[0]}">{n.get('chip', ['new', ''])[1]}</span></div>
+{n['html']}
+    <div class="actions">{btns}</div>
   </article>''')
 
 videos = [p['key'] for p in cfg['projects'] if p.get('video')]

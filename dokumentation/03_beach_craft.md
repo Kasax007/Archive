@@ -773,3 +773,37 @@ Spoiler-Boxen**; der Boss steht nur hinter einem Spoiler. Einfügen von Hand, si
 **Logo (8.11.2026):** neues Projekt-Logo in `beachcraft/logo/` (Archiv). Es zeigt einen isometrischen Strand-Chunk aus den
 Texturen des Mods (Palmeninsel, Floß mit gestreiftem Segel, flaches Wasser), dazu den Titel in Luckiest Guy wie auf der Seite.
 Hochladen: `logo_1024.png`. Neu erzeugen mit `make_logo.py` (siehe `README.md` dort).
+
+## 9. Beach Craft 3.2.0 und 3.3.0 (8.11.2026)
+
+**3.2.0** (26.3 = Datei 9506698, 1.21.1 = Datei 9506700, beide freigegeben), gebaut von einem Agenten auf `fix/3.1.1`,
+danach nach `26.3` übernommen; die 1.21.1-Fassung liegt auf `port/1.21.1`:
+- Eigenes Floß: Mast und zusammenwachsende Segel (einrollbar), Ankerwinde, Brennstoff-Fenster des Motors, drehendes
+  Steuerrad; Shift + Benutzen am Rad legt an (wieder Blöcke); Ablegen ohne Hänger (leere Werft-Chunks).
+- Welt: Landanteil 15,4 % → 7,7 %, Strukturen 114 → 43,5 pro km², Ölplattformen ≥ 600 Blöcke auseinander, Labor
+  seltener und ≥ 10 Blöcke unter Wasser, Dschungelinseln selten, Leuchtturm/Saltmere nur auf passendem Gelände,
+  Old Tamo fischt am Steg, Treibgut etwa ein Zehntel, Item Catcher nur auf einem fahrenden Floß, Möwenschwärme.
+- Inseln voller Tiere (Startinsel 26 → 89), Modul `encounters`: bewachte Strukturen in drei Stufen, neue Gegner
+  Scavenger, Reef Guardian, Corsair Captain, Mini-Bosse Scavenger Chief und Reef Warden.
+- Leviathan: Schlüssel wird verbraucht, bleibt tief im Pool (Hitbox-Oberkante 0,9–4 Blöcke unter der Oberfläche),
+  750 Leben, stärkere Angriffe und Tidelings, 12–18 Schuppen und 800 XP neben dem Spieler.
+- Saubere Modellkanten, Z-Fighting-Korrektur (Blöcke, Modelle, Strukturen), neues Mod-Icon (128 px, Logo ohne Schrift).
+- 1.21.1: gleiche Inhalte; Minecraft fragt beim Erstellen einer Welt nach „experimentellen Einstellungen“.
+
+**3.3.0** (26.3 = Datei 9507188), Agent auf `feature/cozy`, im Hauptstrang mit 3.2.0 zusammengeführt (`26.3` = `e0aa724`):
+- Module `cozy` (44 Blöcke: Sitzmöbel, Tische, Servierteller, Regale, Weidenkorb, schaltbare Lampen, Steel Drum,
+  Muschelhorn, Sonnenschirm, Deko, Muschelfliesen und Bimsziegel), `food` (Süßkartoffel, Chili, Banane, Reis,
+  Seetrauben, Kochtopf, Fischfalle, 15 Gerichte), `gear` (Speer, Bumerang, Machete, Muschel- und Entdecker-Rüstung,
+  Wrack-Kompass, Kapitäns-Fernrohr, Köder, Goldener Köder).
+- Effekt **Rested** (`raft:rested`): Sitzen/Liegen 3 s → heilt ½ Herz pro 4 s, 25 % weniger Hunger; Dauer 2 min +
+  1 min pro Gemütlichkeitspunkt (11 Arten von Dingen in 6 Blöcken, Block-Tags `raft:comfort/*`).
+- Almanach: drei neue Kapitel (Cozy Living, Island Kitchen, Gear & Gadgets); das Überleben-Kapitel beschreibt jetzt
+  Treibgut und Item Catcher wie seit 3.2.
+- Loot-Format von 26.3: `condition` / `modifier` mit `type`; die alten `conditions` / `functions` werden still
+  ignoriert. Der Umwandler liegt jetzt in `tools/bclib/loot26.py`, alle bclib-Loot-Schreiber nutzen ihn.
+- Tests nach der Zusammenführung: cozy 28/28, food 191/191, Floß (Anlegen, Ablegen), Wachen (Leuchtturm: 3 Scavenger
+  mit Beute), Leviathan (Schlüssel verbraucht, tief im Pool), Produktiv-Test (Server + Client, 0 Fehler).
+- CurseForge-Seite: `header_33.png`, `glance_33.png` (18 Kreaturen, 198 Blöcke, Band „New in 3.2 and 3.3“),
+  Abschnitte Cozy/Kitchen/Gear, Floß-Grafik mit „Moor“; `make_images31.py header33 glance33`.
+- Offen: die Cozy-Inhalte für 1.21.1 (dort fehlen das Vanilla-Regal und der Speer, beides bräuchte eigene Umsetzungen).
+

@@ -455,3 +455,24 @@ wurde … direkt ingame einfügen“ und „Not everyone can easily write SNBT�
   Client gleichzeitig.
 - **Beschreibung:** `description.html` mit `*_v4`-Bildern (`make_images_v4.py`), auf der Übergabeseite zum Kopieren.
   Seit 7.11. 23:24 Uhr freigegeben: jetzt einfügen.
+
+## 14. Ports von 1.3.0 (8.11.2026)
+
+Ausgewählt nach den neuen Modrinth-Modpacks (11.5.–7.11.2026): NeoForge 1.21.1 (857), Fabric 1.21.11 (624), Forge 1.20.1
+(451), Fabric 1.21.1 (327), Fabric 26.1.x (381), Fabric 1.20.1 (211). Je ein Branch `port/<version>`, kein Architectury;
+die Loader-Teile stecken in den Einstiegsklassen, `QuestNet`/`ClientNet` und (Forge) `ModRegistry`, ein kleines
+`compat`-Paket hält den Quest-Code gleich wie in 26.x. Große Pakete gehen auf 1.21.1 und älter in nummerierten Teilen.
+
+| Version | Datei | Getestet |
+| --- | --- | --- |
+| Fabric 1.21.1 | 9506691 | 16 JUnit, 139 Selbsttest-Prüfungen, ATM10-Import (4891 Quests), Produktiv-Server + Client |
+| NeoForge 1.21.1 | 9506692 | 16 JUnit, 128 Prüfungen inkl. JEI, Produktiv: Import, Quest per echten Klicks gespeichert |
+| Fabric 1.21.11 | 9506693 | 16 JUnit, 139 Prüfungen, Produktiv mit ATM10 |
+| Fabric 26.1.2 | 9506695 | 16 JUnit, 139 Prüfungen, Produktiv mit ATM10 |
+| Forge 1.20.1 | 9506696 | 15 JUnit im Spiel, 128 Prüfungen inkl. JEI, Produktiv (zwei Jar-Fehler gefunden und behoben) |
+| Fabric 1.20.1 | 9506697 | 16 JUnit, 139 Prüfungen, Produktiv |
+
+Unterschiede: auf 1.20.1 ist Item-Daten NBT (`tag`), Komponenten aus 1.21/26.1-FTB-Büchern fallen beim Import weg; das
+Vanilla-Rezept des Dream Star nimmt dort ein Heart of the Sea statt Heavy Core. JEI 15.74 auf Forge 1.20.1 muss auch auf
+dem Server liegen. Die Beschreibung nennt jetzt alle Versionen und Loader (Kopfbild „Fabric · NeoForge · Forge“).
+

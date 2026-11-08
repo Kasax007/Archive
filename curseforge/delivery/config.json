@@ -1,5 +1,5 @@
 {
- "date": "Stand 8. November 2026: Beach Craft 3.3, Quest Icons auf allen Versionen, Dreamcraft V1.5, Challenge Craft v4.1",
+ "date": "Stand 8. November 2026: Beach Craft 3.3, Quest Icons auf allen Versionen, Dreamcraft V1.5.1 und Challenge Craft v4.2 mit Bisect-Bestell-Links",
  "intro": "Alle sechs Projektseiten im neuen Stil, dazu bei jedem Projekt die neue <b>Kurzbeschreibung</b> (Summary) zum Kopieren. Die CurseForge-Suche liest nur Name und Kurzbeschreibung, nicht die Beschreibung. Ändern kannst du beides in der <a href=\"https://authors.curseforge.com/\" target=\"_blank\" rel=\"noopener\">Author Console</a>: Projekt öffnen, dann die Projekt-Details (Name, Summary, Kategorien) bearbeiten und speichern. Bei Projekten mit Video fügst du den YouTube-Link ins Feld ein; ohne Link fehlt nur der Video-Block.",
  "footer": "Alle Texte liegen auch als HTML-Dateien im Chat und in den Repos unter <code>docs/curseforge/description.html</code> (Branch <code>26.3</code>). Die alten Bilder bleiben in den Repos, bis die neuen Seiten online sind.",
  "projects": [
@@ -52,11 +52,12 @@
    "name": "Dreamcraft",
    "chip": [
     "new",
-    "V1.5: Island Life · Tamacraft"
+    "V1.5.1: Bestell-Link 6 GB"
    ],
-   "ids": "Modpack · Projekt 545167 · V1.5 (Datei 9507488, Server-Pack 9507490)",
+   "ids": "Modpack · Projekt 545167 · V1.5.1 (Datei 9508556, Server-Pack 9508559) – BisectHosting Partner 4395 / Pack 19732",
    "about": [
-    "Neu für V1.5: Kopfbild, „Auf einen Blick“ (369 Quests in 16 Kapiteln), die Karte mit sieben Nebenpfaden (neu: Island Life, 21 Quests) und „Neu in V1.5“ (Beach Craft 3.3, Tamacraft, Quest Icons 1.3) sind neu gerendert, alle Bilder als *_v15.",
+    "Neu: Das Bisect-Banner und der Hinweis „Play with friends“ führen jetzt direkt zur Bestellung eines 6-GB-Servers mit Dreamcraft vorinstalliert (Tarif und Pack sind im Link gesetzt), der Code Kasax007 bleibt. Im Pack ist der Bisect-Editiermodus aus (V1.5.1).",
+    "- Neu für V1.5: Kopfbild, „Auf einen Blick“ (369 Quests in 16 Kapiteln), die Karte mit sieben Nebenpfaden (neu: Island Life, 21 Quests) und „Neu in V1.5“ (Beach Craft 3.3, Tamacraft, Quest Icons 1.3) sind neu gerendert, alle Bilder als *_v15.",
     "- Tamagotchi heißt überall Tamacraft (Text, Links auf /tamacraft, Mod-Liste, Haustier-Collage, Dream-Star-Grafik).",
     "- Der Server-Hinweis erklärt das Update von V1.4: tamagotchi-*.jar durch tamacraft-*.jar ersetzen, die Welten bleiben.",
     "- Getestet: Quest-Durchlauf im Spiel (Island Life, Tamacraft, Dream Star), Installation wie ein Launcher mit allen 253 Mods, Questbuch im echten Client, Server-Pack."
@@ -103,7 +104,8 @@
    "about": [
     "Neuer Name, gleiche Pets: Aus Tamagotchi wird Tamacraft. Alles, was so hieß, ist umbenannt (Tamacon bleibt); alte Welten behalten Pets, Möbel und Items.",
     "- Neues Kopfbild „Tamacraft 1.3“, Video-Bild „The Tamacraft showcase“, Übersicht, Bisect-Banner „Play Tamacraft with your friends!“; die Marke steht nur noch im Satz „not affiliated with or endorsed by Bandai“.",
-    "- Tamacraft 1.3.0 ist freigegeben: Beschreibung jetzt einfügen."
+    "- Tamacraft 1.3.0 ist freigegeben: Beschreibung jetzt einfügen.",
+    "- Die GitHub-Links zeigen auf das umbenannte Repo github.com/Kasax007/tamacraft."
    ],
    "html": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/tc13desc/description.html",
    "preview": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/tc13desc/preview.png",
@@ -209,12 +211,12 @@
     "new",
     "neu gestaltet"
    ],
-   "ids": "Modpack · Projekt 1653698 · v4.1 (Datei 9507938, Server-Pack 9507939) – Vanilla plus Challenge Craft, BisectHosting Partner 4395 / Pack 27138",
+   "ids": "Modpack · Projekt 1653698 · v4.2 (Datei 9508554, Server-Pack 9508555) – Vanilla plus Challenge Craft, BisectHosting Partner 4395 / Pack 27138",
    "about": [
     "Gleiche Optik wie der Mod. Das Pack ist Vanilla-Gameplay plus Challenge Craft; obendrauf nur Shader, Proximity Voice, Soundscape, Leistung, Komfort und das eigene Menü (27 Mods + 3 Shader-Packs, Stand v4).",
     "- „What is in the pack“, das Menü, „Start a run with friends“ in fünf Schritten (Server-Pack: 15 Mods) und die Challenge-Übersicht.",
     "- Im Spoiler: Voraussetzungen, Inhalt des Server-Packs, die Mod-Liste mit Links und FAQ. Kann sofort eingefügt werden.",
-    "- Neu: Unter „Want to play with friends?“ steht jetzt, dass „Need a server?“ in Multiplayer einen BisectHosting-Server mit Challenge Craft vorinstalliert bestellt (dafür hat v4.1 die Pack-ID 27138 und Partner-ID 4395)."
+    "- Neu: Das Bisect-Banner und „Want to play with friends?“ führen jetzt direkt zur Bestellung eines 4-GB-Servers mit Challenge Craft vorinstalliert; „Need a server?“ in Multiplayer bestellt ebenfalls mit Pack (v4.2, Bisect-Editiermodus aus)."
    ],
    "html": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/ccdesc/description-modpack.html",
    "preview": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/desc15/ccpack_preview.png",

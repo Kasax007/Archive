@@ -14,7 +14,7 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
 | TikTok und Werkzeuge | `Archive/dreamcraft/tiktok` (v2 mit Shadern) | – |
 | Beach-Craft-Review und Prüfbericht | `Archive/beachcraft/review` | – |
 | Beach-Craft-3.0-Doku „Tides of the Deep“ (18:35, nur Fassung mit Untertiteln + Musik) | `Archive/beachcraft/documentary`, Rohmaterial `footage/bc3` | – |
-| Modpack-Dateien | | V1: 9403038 (+ Server-Pack). V1.1: 9408516, Server-Pack 9408519 (Beach Craft 2.0.1, Quests korrigiert). V1.2: 9409459, Server-Pack 9409463 (Menü-Fixes, ohne JER). V1.2.1: 9415062, Server-Pack 9415063 (Quest-Buch-Klick-Hotfix). V1.3: 9431378, Server-Pack 9431379 (Beach Craft 3.0.0, Tamagotchi 1.2.0 = 9431312, Dream Star, 328 Quests)  V1.4: 9475197, Server-Pack 9475219 (Beach Craft 3.1.0 = 9474711, Upgraded Iron Chests, 348 Quests). V1.4.1: 9487507, Server-Pack 9487509 (Menü-Fix). V1.4.2: 9499392, Server-Pack 9499399 (Bisect-Config, Changelog nur „Bug fixes“). V1.4.3: 9500352, Server-Pack 9500367 (Inventar, WorldEdit-Hacke). V1.5: 9507488, Server-Pack 9507490 (Beach Craft 3.3.0, Tamacraft 1.3.0, Quest Icons 1.3.0, Island Life, 369 Quests). |
+| Modpack-Dateien | | V1: 9403038 (+ Server-Pack). V1.1: 9408516, Server-Pack 9408519 (Beach Craft 2.0.1, Quests korrigiert). V1.2: 9409459, Server-Pack 9409463 (Menü-Fixes, ohne JER). V1.2.1: 9415062, Server-Pack 9415063 (Quest-Buch-Klick-Hotfix). V1.3: 9431378, Server-Pack 9431379 (Beach Craft 3.0.0, Tamagotchi 1.2.0 = 9431312, Dream Star, 328 Quests)  V1.4: 9475197, Server-Pack 9475219 (Beach Craft 3.1.0 = 9474711, Upgraded Iron Chests, 348 Quests). V1.4.1: 9487507, Server-Pack 9487509 (Menü-Fix). V1.4.2: 9499392, Server-Pack 9499399 (Bisect-Config, Changelog nur „Bug fixes“). V1.4.3: 9500352, Server-Pack 9500367 (Inventar, WorldEdit-Hacke). V1.5: 9507488, Server-Pack 9507490 (Beach Craft 3.3.0, Tamacraft 1.3.0, Quest Icons 1.3.0, Island Life, 369 Quests). V1.5.1: 9508556, Server-Pack 9508559 (pack_edit_mode=false, „Bug fixes“). |
 
 - FTB Quests gibt es für 26.2 und 26.3 nicht (neueste Datei 26.1.2.10 vom 5.11., nur NeoForge). Seit Quest Icons 1.2.0
   holt `/quests import ftbquests` FTB-Bücher herüber. Das Quest-System steckt in Quest Icons: Buch mit Taste J,
@@ -300,8 +300,12 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   1.21.1 (dort fehlen Vanilla-Regal und Speer), Beschreibungen einfügen (Übergabeseite Version 15), Server-Packs auf CurseForge von Hand markieren. GitHub-Repo heißt seit 8.11. `Kasax007/tamacraft` (lokal weiter `/home/user/tamagotchi`, Remote umgestellt).
 - **BisectHosting-IDs (8.11.):** Partner-ID 4395 für alle Packs; Pack-IDs: Dreamcraft 19732, Challenge Craft 27138.
   Wirkt im Spiel über `config/bhmenu/bhmenu.properties` (Eintrag „Need a server?“ in Multiplayer bestellt einen Server mit
-  vorinstalliertem Pack). Ein Beschreibungs-Link mit Pack-ID braucht einen Tarif (`modredirect.php?pid=…&aid=4395&configoption[29]=…`),
-  ohne `pid` landet er auf der Startseite – in Beschreibungen deshalb `bisecthosting.com/kasax007` + Code KASAX007.
+  vorinstalliertem Pack). Ein Beschreibungs-Link mit Pack-ID braucht einen Tarif:
+  `modredirect.php?pid=<Tarif>&aid=4395&configoption[29]=<Pack-ID>&configoption[2553]=25893&source=mod` (ohne `pid`,
+  `configoption[2553]` oder `source=mod` Startseite). Nutzerwunsch 8.11.: Tarif mit gutem ROI, „wahrscheinlich dass
+  gekauft wird“ → Dreamcraft 6 GB (pid 597, Bisect-Empfehlung), Challenge-Craft-Modpack 4 GB (pid 595); beide
+  Beschreibungen verlinken Banner und Text so. Seit Dreamcraft V1.5.1 (9508556/9508559) und Challenge Craft v4.2
+  (9508554/9508555) steht `pack_edit_mode=false` in der Config. Mod-Seiten behalten `bisecthosting.com/kasax007`.
 - **CurseForge-Uploads nur mit Freigabe im Chat:** Seit 7.11. stoppt die Auto-Mode-Prüfung Uploads als öffentliche
   Veröffentlichung, auch wenn alles vorbereitet ist. Vorher fragen (Datei, Version, Spielversionen nennen), alles
   andere (Beschreibung, Doku, Seite) schon fertig machen.

@@ -517,6 +517,8 @@ Fehler (Oberwelt 1521 Chunks in 1:43, Raft-Dimension 729 Chunks, früher auch Ne
 | **V1.4.1** | 9487507 | 9487509 | Menü-Fix: Singleplayer, Multiplayer, Options und Quit Game lagen hinter dem lila Seitenbalken (gemeldet vom Nutzer am 6.11. anhand des Trailers); sonst identisch mit V1.4 |
 | **V1.4.2** | 9499392 | 9499399 | BisectHosting-Menü-Config (`config/bhmenu/bhmenu.properties`) mit Partner-ID wieder im Pack (gemeldet vom Nutzer am 7.11.); öffentlicher Changelog nur „Bug fixes“; sonst identisch mit V1.4.1 |
 | **V1.4.3** | 9500352 | 9500367 | Aufgeräumtes Inventar (Inventory Profiles Next ohne Nachfüll-Pfeile, Profil-Leiste, Slot-Highlight, Ecken-Knöpfe, Crafting-Häkchen; nur noch ein Sortierknopf), Smooth Swapping aus, WorldEdit-Wand = Holzhacke (Wunsch des Nutzers am 7.11.) |
+| **V1.5** | 9507488 | 9507490 | Beach Craft 3.3.0, Tamacraft 1.3.0 (vorher Tamagotchi), Quest Icons 1.3.0, Nebenpfad Island Life, 369 Quests (siehe unten) |
+| **V1.5.1** | 9508556 | 9508559 | `pack_edit_mode=false` in der Bisect-Config (Banner „Need a server?“ im Release-Modus); öffentlicher Changelog nur „Bug fixes“; sonst identisch mit V1.5 |
 
 ### Was V1.3 bringt (Changelog `changelog-26.3-V1.3.md`)
 - **Beach Craft 3.0 „Tides of the Deep“** – Inselwelt, Story, Boss, Expedition Raft, Tauchen ([03](03_beach_craft.md)).
@@ -1293,4 +1295,20 @@ Client-Pack 9507488, Server-Pack 9507490 (Projekt 545167). Mit Freigabe des Nutz
   Container mit Java 25 im PATH, das Standard-Java ist 21).
 - **Beschreibung:** alle Bilder als `*_v15` (`make_images_v15.py`: Kopfbild V1.5, 369 Quests in 16 Kapiteln, sieben
   Nebenpfade, „Neu in V1.5“, Tamacraft-Texte); Changelog `docs/curseforge/changelog-26.3-V1.5.md`.
+
+## V1.5.1 (8.11.2026): Bisect im Release-Modus, Bestell-Link in der Beschreibung
+
+Client-Pack 9508556, Server-Pack 9508559, Changelog nur „Bug fixes“ (Freigabe des Nutzers im Chat). Gegenüber V1.5 sind
+nur `manifest.json` und `config/bhmenu/bhmenu.properties` anders: `pack_edit_mode=false` (BisectHosting: „Set this as
+false … once they are done“), `pack_id=19732`, `partner_id=4395`.
+
+- **Beschreibung:** Das Bisect-Banner (`bh_promo.png`) und der Satz „Play with friends“ verlinken jetzt die Bestellung
+  eines **6-GB-Servers** mit Dreamcraft vorinstalliert:
+  `https://www.bisecthosting.com/modredirect.php?pid=597&aid=4395&configoption[29]=19732&configoption[2553]=25893&source=mod`
+  (in HTML `&amp;`, eckige Klammern als `%5B`/`%5D`). Der Link leitet auf `/configure?id=597&…&modpack=2344&aid=4395`
+  weiter. Ohne `pid` landet er auf der Startseite, ohne `configoption[2553]` und `source=mod` ebenfalls.
+- **Warum 6 GB:** BisectHostings eigene Empfehlung für Pack 19732 (1–4 Spieler, RAM-API) und das Minimum der
+  Beschreibung; 17,99 $ im Monat, mit Code Kasax007 25 % weniger im ersten Monat. Kleiner ruckelt das Pack mit 253 Mods,
+  das kostet Kündigungen; größer verkauft sich schlechter. Die Tarife: 3 GB pid 594 (8,99 $), 4 GB 595 (11,99 $),
+  5 GB 596 (14,99 $), 6 GB 597 (17,99 $), 7 GB 598 (20,99 $), 8 GB 599 (23,99 $).
 

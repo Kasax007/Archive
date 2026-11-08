@@ -31,9 +31,10 @@ Dreamcraft V1.4/V1.4.1 sind seit dem 6./7.11. online.
   (Branch `bugcheck-2026-11`). Behalten (dann 1.1.4 veröffentlichen) oder anders lösen? Siehe
   [05](05_challenge_craft.md#die-entscheidung-die-du-treffen-musst-der-crafter).
 
-- [ ] **BisectHosting-Partner-ID prüfen:** Dreamcraft (ab V1.4.2) nutzt 4395 wie Dreamcraft 1.20.1, das
-  Challenge-Craft-Modpack 4385. In der Partnerkonsole (bisecthosting.com/partners/console.php) nachsehen, welche
-  stimmt, und das andere Pack anpassen.
+- [x] **BisectHosting-Partner-ID:** laut Nutzer (8.11.) immer 4395; beide Packs tragen sie (Dreamcraft ab V1.4.2,
+  Challenge Craft ab v4.1), seit V1.5.1/v4.2 mit `pack_edit_mode=false`.
+- [ ] **BisectHosting RAM-Empfehlung für Challenge Craft (Pack 27138)** steht auf 8 GB für 1–4 Spieler; die
+  Beschreibung bestellt 4 GB. In der Partnerkonsole auf 4 GB senken, damit Bestellseite und Menü dasselbe empfehlen.
 - [ ] Dreamcraft V1.4.2: Server-Pack 9499399 auf CurseForge als Server Pack markieren (geht nur von Hand).
 
 ## B. Risiken und Aufräumen

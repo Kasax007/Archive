@@ -95,3 +95,13 @@ nur `config/bhmenu/bhmenu.properties`: `partner_id=4395` (vorher 4385), `pack_id
 Code „Kasax007“ wie bei Dreamcraft. Gebaut aus den v4-Dateien von CurseForge (Skript und Dateien in `$SP/cc41`). Die
 Modpack-Beschreibung (Branch `26.3-lockout-bot`) nennt jetzt den Eintrag „Need a server?“ in Multiplayer.
 
+## Modpack v4.2 (8.11.2026)
+
+Client 9508554, Server-Pack 9508555, Changelog nur „Bug fixes“. Gegenüber v4.1 nur `pack_edit_mode=false` in
+`config/bhmenu/bhmenu.properties` (Release-Modus des Bisect-Menüs). Die Modpack-Beschreibung (Commit 1e741a0) verlinkt
+im Banner und unter „Want to play with friends?“ die Bestellung eines **4-GB-Servers** mit Challenge Craft
+vorinstalliert: `modredirect.php?pid=595&aid=4395&configoption[29]=27138&configoption[2553]=25893&source=mod` (leitet
+auf `/configure?id=595&…&modpack=3747` weiter). 4 GB (11,99 $) reichen für Vanilla plus Challenge Craft und kaufen sich
+leichter als 8 GB; BisectHostings RAM-Empfehlung für Pack 27138 steht allerdings auf 8 GB (in der Partnerkonsole
+senkbar). Die Mod-Beschreibung behält den allgemeinen Link `bisecthosting.com/p/kasax007`.
+

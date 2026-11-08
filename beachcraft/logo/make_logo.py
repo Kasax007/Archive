@@ -6,7 +6,8 @@ turquoise water) built from the mod's own textures, with the title in Luckiest G
 MOD_ROOT: a Kasax_Raft_Mod checkout (the textures). FONTS_DIR: Archive/fonts (LuckiestGuy-Regular.ttf).
 Vanilla textures (sand, sandstone, water, flowers) come from the Minecraft client jar ($MC_JAR, default: Loom cache).
 The scene is drawn three times larger and scaled down (--preview: once, quick). Writes logo_1024.png (the upload),
-logo_512.png, logo_400.png, logo_256.png, icon_1024.png (the scene alone, for an in-game icon) and preview.png
+logo_512.png, logo_400.png, logo_256.png, icon_1024.png (the scene alone), icon_128.png (the in-game mod icon,
+src/main/resources/assets/raft/icon.png: 128 px stays sharp where Mod Menu draws it at 32 GUI pixels) and preview.png
 (the logo at the sizes CurseForge shows it, on a light and a dark page)."""
 import io
 import math
@@ -483,7 +484,9 @@ def main():
     logo.save(os.path.join(OUT, 'logo_1024.png'))
     for s in (512, 400, 256):
         logo.resize((s, s), Image.LANCZOS).save(os.path.join(OUT, 'logo_%d.png' % s))
-    compose(chunk, with_title=False).save(os.path.join(OUT, 'icon_1024.png'))
+    icon = compose(chunk, with_title=False)
+    icon.save(os.path.join(OUT, 'icon_1024.png'))
+    icon.resize((128, 128), Image.LANCZOS).save(os.path.join(OUT, 'icon_128.png'), optimize=True)
     preview(logo).save(os.path.join(OUT, 'preview.png'))
     print('written to', OUT)
 

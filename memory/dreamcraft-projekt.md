@@ -289,6 +289,12 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
 - **Beach-Craft-Wünsche 7.11.:** Textur-Kanten (Satellitenschüssel, Control Terminal), Z-Fighting, eigenes Floß
   (Shift-Rechtsklick zerlegt, Lenkrad-Animation, Segel + Mast, Segeln, Anker, Motor-Fuel-Fenster, schnelleres
   Umwandeln) → 3.2.0; dazu „viel mehr cozy dekorative Blöcke bzw. mehr Nutzen der Deko“ → eigenes Modul, 3.3.0.
+- **Beach-Craft-Logo (8.11.):** neues CurseForge-Logo in `beachcraft/logo/` (Archiv): isometrischer Strand-Chunk aus den
+  Mod-Texturen (Palmeninsel, Floß mit rot-weißem Segel), Titel in Luckiest Guy; Skript `make_logo.py`. Der Nutzer lädt
+  `logo_1024.png` selbst als Projekt-Logo hoch. Auf Wunsch auch als Mod-Icon im Spiel: 128 px (Mod Menu zeichnet das Icon
+  mit 32 GUI-Pixeln ohne Glättung, 1024 px flimmert), Commit `0ae7d9e` auf `26.3`. Agent B soll es nach `fix/3.1.1` mergen
+  und in `port/1.21.1` cherry-picken, der Cozy-Agent nach `feature/cozy`. Vor dem Upload von 3.2.0/3.3.0 prüfen, ob das
+  neue Icon im Jar ist.
 - **CurseForge-Uploads nur mit Freigabe im Chat:** Seit 7.11. stoppt die Auto-Mode-Prüfung Uploads als öffentliche
   Veröffentlichung, auch wenn alles vorbereitet ist. Vorher fragen (Datei, Version, Spielversionen nennen), alles
   andere (Beschreibung, Doku, Seite) schon fertig machen.

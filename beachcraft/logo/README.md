@@ -11,7 +11,8 @@ Dazu kommen die eckige Minecraft-Sonne, Wolken und Möwen. Der Titel „BEACH CR
 | --- | --- |
 | `logo_1024.png` | **Upload auf CurseForge** (Projekt-Logo; quadratisch, CurseForge rundet die Ecken selbst) |
 | `logo_512.png`, `logo_400.png`, `logo_256.png` | Kleinere Fassungen (Outreach, Social, Banner) |
-| `icon_1024.png` | Die Szene ohne Schrift (z. B. als Mod-Icon im Spiel, `assets/raft/icon.png`) |
+| `icon_1024.png` | Die Szene ohne Schrift |
+| `icon_128.png` | **Mod-Icon im Spiel** (`src/main/resources/assets/raft/icon.png`, seit Commit `0ae7d9e` auf `26.3`). 128 px, weil Mod Menu das Icon mit 32 GUI-Pixeln ohne Glättung zeichnet; größere Bilder flimmern dort |
 | `preview.png` | So sieht das Logo bei 256, 128 und 64 px auf heller und dunkler Seite aus |
 
 Neu erzeugen (dauert ~3 s; `--preview` rendert ohne dreifaches Supersampling):

@@ -200,7 +200,7 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
 - **V1.4.2 Bisect-Config (7.11. abends):** Nutzer: „Bei meinem Modpack fehlt die bisectmod config … damit ich meine
   Provision erhalte!! Quick fix!! Nur ‚bug fixes‘ in den Changelog.“ Die Mod bhmenu war im Pack, die Config nie.
   Jetzt `pack/overrides/config/bhmenu/bhmenu.properties` mit partner_id 4395 und pack_id 19732 (aus Dreamcraft
-  1.20.1). Challenge Craft hat partner_id 4385 – Nutzer soll die richtige ID in der Bisect-Konsole prüfen. **Jedes
+  1.20.1). Challenge Craft hatte partner_id 4385 (falsch) – laut Nutzer (8.11.) ist die Partner-ID immer 4395, Challenge Craft hat bei Bisect die Pack-ID 27138; v4.1 (9507938, Server 9507939) trägt beides. **Jedes
   Pack braucht diese Config; bei neuen Packs immer mitliefern.** Upload: 9499392 / Server-Pack 9499399.
 - **Quest Icons 1.2.0 (7.11.):** Wunsch „Quest-Icons machen wir 26.2 plus ein Import von Feedback Requests Feature“
   (als FTB-Quests-Import verstanden und so gemeldet). Agent baute `/quests import ftbquests [preview|run|merge]
@@ -297,8 +297,11 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   neue Icon im Jar ist.
 - **Stand 8.11. mittags:** Alles aus der Liste vom 7.11. ist hochgeladen und freigegeben: Quest-Icons-Ports (6), Beach
   Craft 3.2.0 (26.3 + 1.21.1) und 3.3.0, Dreamcraft V1.5 (Island Life, Tamacraft). Offen: die Cozy-Inhalte von 3.3 für
-  1.21.1 (dort fehlen Vanilla-Regal und Speer), Beschreibungen einfügen (Übergabeseite Version 15), CC-Partner-ID 4385
-  vs. 4395, Server-Packs auf CurseForge von Hand markieren, GitHub-Repo heißt noch tamagotchi.
+  1.21.1 (dort fehlen Vanilla-Regal und Speer), Beschreibungen einfügen (Übergabeseite Version 15), Server-Packs auf CurseForge von Hand markieren, GitHub-Repo heißt noch tamagotchi.
+- **BisectHosting-IDs (8.11.):** Partner-ID 4395 für alle Packs; Pack-IDs: Dreamcraft 19732, Challenge Craft 27138.
+  Wirkt im Spiel über `config/bhmenu/bhmenu.properties` (Eintrag „Need a server?“ in Multiplayer bestellt einen Server mit
+  vorinstalliertem Pack). Ein Beschreibungs-Link mit Pack-ID braucht einen Tarif (`modredirect.php?pid=…&aid=4395&configoption[29]=…`),
+  ohne `pid` landet er auf der Startseite – in Beschreibungen deshalb `bisecthosting.com/kasax007` + Code KASAX007.
 - **CurseForge-Uploads nur mit Freigabe im Chat:** Seit 7.11. stoppt die Auto-Mode-Prüfung Uploads als öffentliche
   Veröffentlichung, auch wenn alles vorbereitet ist. Vorher fragen (Datei, Version, Spielversionen nennen), alles
   andere (Beschreibung, Doku, Seite) schon fertig machen.

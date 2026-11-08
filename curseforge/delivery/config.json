@@ -1,5 +1,5 @@
 {
- "date": "Stand 8. November 2026: Beach Craft 3.3, Quest Icons auf allen Versionen, Dreamcraft V1.5",
+ "date": "Stand 8. November 2026: Beach Craft 3.3, Quest Icons auf allen Versionen, Dreamcraft V1.5, Challenge Craft v4.1",
  "intro": "Alle sechs Projektseiten im neuen Stil, dazu bei jedem Projekt die neue <b>Kurzbeschreibung</b> (Summary) zum Kopieren. Die CurseForge-Suche liest nur Name und Kurzbeschreibung, nicht die Beschreibung. Ändern kannst du beides in der <a href=\"https://authors.curseforge.com/\" target=\"_blank\" rel=\"noopener\">Author Console</a>: Projekt öffnen, dann die Projekt-Details (Name, Summary, Kategorien) bearbeiten und speichern. Bei Projekten mit Video fügst du den YouTube-Link ins Feld ein; ohne Link fehlt nur der Video-Block.",
  "footer": "Alle Texte liegen auch als HTML-Dateien im Chat und in den Repos unter <code>docs/curseforge/description.html</code> (Branch <code>26.3</code>). Die alten Bilder bleiben in den Repos, bis die neuen Seiten online sind.",
  "projects": [
@@ -209,14 +209,15 @@
     "new",
     "neu gestaltet"
    ],
-   "ids": "Modpack · Projekt 1653698 · v4 (Datei 9399868, Server-Pack 9399871) – bleibt Vanilla plus Challenge Craft",
+   "ids": "Modpack · Projekt 1653698 · v4.1 (Datei 9507938, Server-Pack 9507939) – Vanilla plus Challenge Craft, BisectHosting Partner 4395 / Pack 27138",
    "about": [
     "Gleiche Optik wie der Mod. Das Pack ist Vanilla-Gameplay plus Challenge Craft; obendrauf nur Shader, Proximity Voice, Soundscape, Leistung, Komfort und das eigene Menü (27 Mods + 3 Shader-Packs, Stand v4).",
     "- „What is in the pack“, das Menü, „Start a run with friends“ in fünf Schritten (Server-Pack: 15 Mods) und die Challenge-Übersicht.",
-    "- Im Spoiler: Voraussetzungen, Inhalt des Server-Packs, die Mod-Liste mit Links und FAQ. Kann sofort eingefügt werden."
+    "- Im Spoiler: Voraussetzungen, Inhalt des Server-Packs, die Mod-Liste mit Links und FAQ. Kann sofort eingefügt werden.",
+    "- Neu: Unter „Want to play with friends?“ steht jetzt, dass „Need a server?“ in Multiplayer einen BisectHosting-Server mit Challenge Craft vorinstalliert bestellt (dafür hat v4.1 die Pack-ID 27138 und Partner-ID 4395)."
    ],
    "html": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/ccdesc/description-modpack.html",
-   "preview": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/ccdesc/preview-modpack.png",
+   "preview": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/desc15/ccpack_preview.png",
    "url": "https://www.curseforge.com/minecraft/modpacks/challenge-craft",
    "video": null,
    "meta": {

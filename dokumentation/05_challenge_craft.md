@@ -87,3 +87,11 @@ Infinite Chest und keine Casino-Geräte mehr her.**
   3. Den Fix zurücknehmen und die Umgehung als „Feature“ akzeptieren.
 - **Wenn du 1.1.4 willst:** Branch prüfen und auf `26.3` bzw. `26.3-lockout-bot` übernehmen, dann `mod_version` auf
   1.1.4 setzen – das löst die automatische Veröffentlichung aus. Das ist nach außen sichtbar und braucht dein Go.
+
+## Modpack v4.1 (8.11.2026)
+
+Client 9507938, Server-Pack 9507939 (Projekt 1653698), Changelog nur „Bug fixes“. Inhalt wie v4 (Vanilla plus Challenge Craft),
+nur `config/bhmenu/bhmenu.properties`: `partner_id=4395` (vorher 4385), `pack_id=27138` (vorher leer), Banner-Text mit
+Code „Kasax007“ wie bei Dreamcraft. Gebaut aus den v4-Dateien von CurseForge (Skript und Dateien in `$SP/cc41`). Die
+Modpack-Beschreibung (Branch `26.3-lockout-bot`) nennt jetzt den Eintrag „Need a server?“ in Multiplayer.
+

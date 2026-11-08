@@ -769,3 +769,7 @@ durch Wände. Die Frage nach den Steinmassiven hat 3.0 mit dem Archipel beantwor
 `img/bisect.png`, Abschnitts-Streifen `strip_*.png`, Collagen aus Screenshots (`make_images3.py`) und **23
 Spoiler-Boxen**; der Boss steht nur hinter einem Spoiler. Einfügen von Hand, siehe
 [06_videos_und_beschreibungen.md](06_videos_und_beschreibungen.md).
+
+**Logo (8.11.2026):** neues Projekt-Logo in `beachcraft/logo/` (Archiv). Es zeigt einen isometrischen Strand-Chunk aus den
+Texturen des Mods (Palmeninsel, Floß mit gestreiftem Segel, flaches Wasser), dazu den Titel in Luckiest Guy wie auf der Seite.
+Hochladen: `logo_1024.png`. Neu erzeugen mit `make_logo.py` (siehe `README.md` dort).

@@ -58,9 +58,9 @@
    "name": "Dreamcraft",
    "chip": [
     "new",
-    "V1.5.1: Bestell-Link 6 GB"
+    "V1.6: Beach Craft 3.4"
    ],
-   "ids": "Modpack · Projekt 545167 · V1.5.1 (Datei 9508556, Server-Pack 9508559, freigegeben) – BisectHosting Partner 4395 / Pack 19732",
+   "ids": "Modpack · Projekt 545167 · V1.6 (Datei 9512605, Server-Pack 9512608, in Prüfung) – BisectHosting Partner 4395 / Pack 19732",
    "about": [
     "Neu: Der Bisect-Link ist jetzt ohne eckige Klammern. CurseForge hatte den alten Bestell-Link geleert, ein Klick führte zurück auf die Seite. Weiterhin 6-GB-Server mit Dreamcraft, Code Kasax007. Bitte die Beschreibung neu einfügen.",
     "- Neu für V1.5: Kopfbild, „Auf einen Blick“ (369 Quests in 16 Kapiteln), die Karte mit sieben Nebenpfaden (neu: Island Life, 21 Quests) und „Neu in V1.5“ (Beach Craft 3.3, Tamacraft, Quest Icons 1.3) sind neu gerendert, alle Bilder als *_v15.",
@@ -101,7 +101,7 @@
    "modrinth": {
     "md": "/home/user/Archive/curseforge/modrinth/descriptions/dreamcraft.md",
     "url": "https://modrinth.com/modpack/dreamcraft",
-    "note": "Erneut in Prüfung. 26.3-V1.5.1 als .mrpack mit 244 von 251 Mods; sieben fehlen, bis ihre Autoren zustimmen (siehe Karte unten). Client und Server getestet."
+    "note": "Erneut in Prüfung. 26.3-V1.6 und 26.3-V1.5.1 als .mrpack mit 244 von 251 Mods; sieben fehlen, bis ihre Autoren zustimmen (siehe Karte unten). V1.6 getestet: Server-Pack-Server + Client wie aus dem Launcher."
    }
   },
   {

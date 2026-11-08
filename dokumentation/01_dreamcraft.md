@@ -519,6 +519,7 @@ Fehler (Oberwelt 1521 Chunks in 1:43, Raft-Dimension 729 Chunks, früher auch Ne
 | **V1.4.3** | 9500352 | 9500367 | Aufgeräumtes Inventar (Inventory Profiles Next ohne Nachfüll-Pfeile, Profil-Leiste, Slot-Highlight, Ecken-Knöpfe, Crafting-Häkchen; nur noch ein Sortierknopf), Smooth Swapping aus, WorldEdit-Wand = Holzhacke (Wunsch des Nutzers am 7.11.) |
 | **V1.5** | 9507488 | 9507490 | Beach Craft 3.3.0, Tamacraft 1.3.0 (vorher Tamagotchi), Quest Icons 1.3.0, Nebenpfad Island Life, 369 Quests (siehe unten) |
 | **V1.5.1** | 9508556 | 9508559 | `pack_edit_mode=false` in der Bisect-Config (Banner „Need a server?“ im Release-Modus); öffentlicher Changelog nur „Bug fixes“; sonst identisch mit V1.5 |
+| **V1.6** | 9512605 | 9512608 | Beach Craft 3.4.0 (9512111); Island-Life-Quest „Tackle Box“ (Treibholz-Angel) statt „Golden Lure“, Kochtopf-Text; 369 Quests; README: neue 26.3-Server haben eine Whitelist; Modrinth 26.3-V1.6 (ltyw0nwK) |
 
 ### Was V1.3 bringt (Changelog `changelog-26.3-V1.3.md`)
 - **Beach Craft 3.0 „Tides of the Deep“** – Inselwelt, Story, Boss, Expedition Raft, Tauchen ([03](03_beach_craft.md)).
@@ -1311,4 +1312,13 @@ false … once they are done“), `pack_id=19732`, `partner_id=4395`.
   Beschreibung; 17,99 $ im Monat, mit Code Kasax007 25 % weniger im ersten Monat. Kleiner ruckelt das Pack mit 253 Mods,
   das kostet Kündigungen; größer verkauft sich schlechter. Die Tarife: 3 GB pid 594 (8,99 $), 4 GB 595 (11,99 $),
   5 GB 596 (14,99 $), 6 GB 597 (17,99 $), 7 GB 598 (20,99 $), 8 GB 599 (23,99 $).
+
+## V1.6 (8.11.2026): Beach Craft 3.4.0
+
+Client 9512605, Server-Pack 9512608, Modrinth-Version ltyw0nwK (.mrpack, 244 von 251 Mods wie V1.5.1). Quests: „Golden
+Lure“ heißt jetzt **„Tackle Box“** (Aufgaben: Treibholz-Angel und Goldener Köder, gleiche Quest-ID), der Kochtopf-Text
+beschreibt den neuen Topf; weiter 369 Quests. Test: Server aus dem Server-Pack + Client wie aus dem Launcher, Client
+tritt bei, das JEI-Plugin von Beach Craft lädt (`raft:jei_plugin`), Angel/Kochtopf/Sonnenschirm im Spiel, keine
+Mod-Fehler; Lootr läuft auf dem Server mit. **Achtung:** Ein frischer 26.3-Server schaltet die Whitelist ein
+(`white-list=true`), der erste Test wurde deshalb abgewiesen; das README des Server-Packs sagt es jetzt.
 

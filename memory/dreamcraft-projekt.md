@@ -10,7 +10,7 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
 | --- | --- | --- |
 | Modpack-Quelle (Overrides, Quests, Menü, Tools, Beschreibung) | `Kasax007/Modpack-Development`, Branch `26.3` | Modpack 545167 |
 | Quest Icons (Quest-System im FTB-Quests-Stil + Icons) | `Kasax007/Kasax_Quests_Items_Mod-1.19.2`, Branches `26.3` und `26.2` | 690531, Datei 9402494 (1.0.0+26.3), 9409345 (1.0.1+26.3), 9415031 (1.0.2+26.3), 9429010 (1.1.0+26.3, Dream Star); 1.2.0 (FTB-Import): 9499549 (26.3) / 9499550 (26.2); 1.3.0 (470 Icons, Editor ohne SNBT): 9501059 (26.3) / 9501060 (26.2); Ports 1.3.0 (8.11., je Branch `port/<v>`): 9506691 (Fabric 1.21.1), 9506692 (NeoForge 1.21.1), 9506693 (Fabric 1.21.11), 9506695 (Fabric 26.1.2), 9506696 (Forge 1.20.1), 9506697 (Fabric 1.20.1) |
-| Raft-Mod, auf CurseForge **„Beach Craft“** | `Kasax007/Kasax_Raft_Mod`, Branch `26.3` | 1010922, Datei 9402661 (2.0.0+26.3), 9408472 (2.0.1+26.3), 9431301 (3.0.0+26.3), 9474711 (3.1.0+26.3), 9506698 (3.2.0+26.3), 9506700 (3.2.0+1.21.1, Branch `port/1.21.1`), 9507188 (3.3.0+26.3, Cozy/Küche/Ausrüstung) |
+| Raft-Mod, auf CurseForge **„Beach Craft“** | `Kasax007/Kasax_Raft_Mod`, Branch `26.3` | 1010922, Datei 9402661 (2.0.0+26.3), 9408472 (2.0.1+26.3), 9431301 (3.0.0+26.3), 9474711 (3.1.0+26.3), 9506698 (3.2.0+26.3), 9506700 (3.2.0+1.21.1, Branch `port/1.21.1`), 9507188 (3.3.0+26.3, Cozy/Küche/Ausrüstung), 9509049 (3.3.0+1.21.1, alles aus 3.3; Regal und Speer eigene Umsetzungen) |
 | TikTok und Werkzeuge | `Archive/dreamcraft/tiktok` (v2 mit Shadern) | – |
 | Beach-Craft-Review und Prüfbericht | `Archive/beachcraft/review` | – |
 | Beach-Craft-3.0-Doku „Tides of the Deep“ (18:35, nur Fassung mit Untertiteln + Musik) | `Archive/beachcraft/documentary`, Rohmaterial `footage/bc3` | – |
@@ -296,8 +296,7 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   und in `port/1.21.1` cherry-picken, der Cozy-Agent nach `feature/cozy`. Vor dem Upload von 3.2.0/3.3.0 prüfen, ob das
   neue Icon im Jar ist.
 - **Stand 8.11. mittags:** Alles aus der Liste vom 7.11. ist hochgeladen und freigegeben: Quest-Icons-Ports (6), Beach
-  Craft 3.2.0 (26.3 + 1.21.1) und 3.3.0, Dreamcraft V1.5 (Island Life, Tamacraft). Offen: die Cozy-Inhalte von 3.3 für
-  1.21.1 (dort fehlen Vanilla-Regal und Speer), Beschreibungen einfügen (Übergabeseite Version 15), Server-Packs auf CurseForge von Hand markieren. GitHub-Repo heißt seit 8.11. `Kasax007/tamacraft` (lokal weiter `/home/user/tamagotchi`, Remote umgestellt).
+  Craft 3.2.0 (26.3 + 1.21.1) und 3.3.0, Dreamcraft V1.5 (Island Life, Tamacraft). Seit 8.11. nachmittags auch 3.3.0+1.21.1 (9509049) mit allem aus 3.3. Offen: Beschreibungen einfügen (Übergabeseite Version 15), Server-Packs auf CurseForge von Hand markieren. GitHub-Repo heißt seit 8.11. `Kasax007/tamacraft` (lokal weiter `/home/user/tamagotchi`, Remote umgestellt).
 - **BisectHosting-IDs (8.11.):** Partner-ID 4395 für alle Packs; Pack-IDs: Dreamcraft 19732, Challenge Craft 27138.
   Wirkt im Spiel über `config/bhmenu/bhmenu.properties` (Eintrag „Need a server?“ in Multiplayer bestellt einen Server mit
   vorinstalliertem Pack). Ein Beschreibungs-Link mit Pack-ID braucht einen Tarif:

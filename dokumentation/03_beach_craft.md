@@ -805,5 +805,29 @@ danach nach `26.3` übernommen; die 1.21.1-Fassung liegt auf `port/1.21.1`:
   mit Beute), Leviathan (Schlüssel verbraucht, tief im Pool), Produktiv-Test (Server + Client, 0 Fehler).
 - CurseForge-Seite: `header_33.png`, `glance_33.png` (18 Kreaturen, 198 Blöcke, Band „New in 3.2 and 3.3“),
   Abschnitte Cozy/Kitchen/Gear, Floß-Grafik mit „Moor“; `make_images31.py header33 glance33`.
-- Offen: die Cozy-Inhalte für 1.21.1 (dort fehlen das Vanilla-Regal und der Speer, beides bräuchte eigene Umsetzungen).
+- 1.21.1: siehe unten, **3.3.0+1.21.1** (Datei 9509049).
+
+**3.3.0+1.21.1** (Datei 9509049, hochgeladen am 8.11. mit Freigabe des Nutzers), Agent im Worktree `/home/user/wt/bc1211`,
+Branch `port/1.21.1` = `4fdfd83` (`origin/26.3` hineingeführt, einziger Konflikt die Version):
+- Umwandler `tools/port1211` erweitert: Nadel des Wrack-Kompasses als Item-Property `raft:angle`, Kopien der 26.3-Modelle
+  für Speer in der Hand und Regal, Eisen- statt Kupfernugget in Rezepten (1.21.1 hat keine Kupfernuggets) (Hurricane Lantern, Driftwood Sconce), Texte
+  für Speer-Tooltip und Almanach, Mixin-Configs auf Java 21, Loot-Fix der Erkundungskarten, Schildertexte in Strukturen
+  als JSON-Zeilen; `tests.py` schreibt die 26.3-Testskripte in 1.21.1-Befehle um.
+- Java: Module cozy, food, gear auf 1.21.1-Klassen; Rüstungen als 1.21.1-Rüstungsmaterial, Machete als 1.21.1-Werkzeug;
+  eigener Mixin, damit Pflanzen auf dem Crop Plot wachsen.
+- **Regal** (`raft:palm_shelf`, `teak_shelf`, `weathered_shelf`): eigener Block mit Block-Entity und Renderer, gleiche
+  Blockstates und Modelle wie 26.3; drei Plätze, mit Redstone bis zu drei Regale als Reihe zum Tauschen mit der Hotbar,
+  Trichter, Komparator, Klänge des Chiseled Bookshelf.
+- **Hai-Speer** (`raft:shark_tooth_spear`): eigene Waffe, 320 Nutzungen; Stich 3 Schaden bei 4,5 Blöcken Reichweite,
+  Aufladen wie ein Dreizack (nach 0,6 s trifft er Mobs beim Anrennen/Reiten, Schaden nach Tempo), Loslassen = Ausfall
+  mit 3–6 Schaden.
+- Behobene Fehler der 1.21.1-Fassung 3.2.0: leere Story- und Galeonen-Truhen (Loot der Erkundungskarte lud nicht),
+  Saatgut auf dem Crop Plot, Rezept des Cracked Concrete (fehlender Beton-Tag), Schilder in Leuchtturm und Saltmere,
+  Kompost-Chancen wie 26.3.
+- Tests (1.21.1-Harness): cozy 28/28, food 191/191, neuer Test `shelf_spear` 26/26, raft_5/enc_32/boss_32 ohne
+  Abweichung zu 3.2 (in einem enc_32-Lauf fehlten zufällig Wachen auf dem schmalen Rig-Deck, zweiter Lauf vollständig);
+  Produktiv-Test: frischer Fabric-1.21.1-Server und Client nur mit Fabric API 0.116.17 und der Jar, keine Fehler der Mod.
+- Jar `raft-3.3.0+1.21.1.jar` (sha1 `e64053db…`), 5.223 Dateien (804 mehr als 3.2.0+1.21.1), Loot-Tabellen im alten
+  Format (`conditions`/`functions`), gleiches Icon wie 26.3. CurseForge-Beschreibung: Voraussetzungen nennen 3.3 für
+  1.21.1 (Commit 2174208 auf `26.3`).
 

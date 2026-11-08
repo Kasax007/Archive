@@ -10,7 +10,7 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
 | --- | --- | --- |
 | Modpack-Quelle (Overrides, Quests, Menü, Tools, Beschreibung) | `Kasax007/Modpack-Development`, Branch `26.3` | Modpack 545167 |
 | Quest Icons (Quest-System im FTB-Quests-Stil + Icons) | `Kasax007/Kasax_Quests_Items_Mod-1.19.2`, Branches `26.3` und `26.2` | 690531, Datei 9402494 (1.0.0+26.3), 9409345 (1.0.1+26.3), 9415031 (1.0.2+26.3), 9429010 (1.1.0+26.3, Dream Star); 1.2.0 (FTB-Import): 9499549 (26.3) / 9499550 (26.2); 1.3.0 (470 Icons, Editor ohne SNBT): 9501059 (26.3) / 9501060 (26.2); Ports 1.3.0 (8.11., je Branch `port/<v>`): 9506691 (Fabric 1.21.1), 9506692 (NeoForge 1.21.1), 9506693 (Fabric 1.21.11), 9506695 (Fabric 26.1.2), 9506696 (Forge 1.20.1), 9506697 (Fabric 1.20.1) |
-| Raft-Mod, auf CurseForge **„Beach Craft“** | `Kasax007/Kasax_Raft_Mod`, Branch `26.3` | 1010922, Datei 9402661 (2.0.0+26.3), 9408472 (2.0.1+26.3), 9431301 (3.0.0+26.3), 9474711 (3.1.0+26.3), 9506698 (3.2.0+26.3), 9506700 (3.2.0+1.21.1, Branch `port/1.21.1`), 9507188 (3.3.0+26.3, Cozy/Küche/Ausrüstung), 9509049 (3.3.0+1.21.1, alles aus 3.3; Regal und Speer eigene Umsetzungen) |
+| Raft-Mod, auf CurseForge **„Beach Craft“** | `Kasax007/Kasax_Raft_Mod`, Branch `26.3` | 1010922, Datei 9402661 (2.0.0+26.3), 9408472 (2.0.1+26.3), 9431301 (3.0.0+26.3), 9474711 (3.1.0+26.3), 9506698 (3.2.0+26.3), 9506700 (3.2.0+1.21.1, Branch `port/1.21.1`), 9507188 (3.3.0+26.3, Cozy/Küche/Ausrüstung), 9509049 (3.3.0+1.21.1, alles aus 3.3; Regal und Speer eigene Umsetzungen), 9512111 (3.4.0+26.3, Feedback-Update; Modrinth 6CXKC0qX) |
 | TikTok und Werkzeuge | `Archive/dreamcraft/tiktok` (v2 mit Shadern) | – |
 | Beach-Craft-Review und Prüfbericht | `Archive/beachcraft/review` | – |
 | Beach-Craft-3.0-Doku „Tides of the Deep“ (18:35, nur Fassung mit Untertiteln + Musik) | `Archive/beachcraft/documentary`, Rohmaterial `footage/bc3` | – |
@@ -319,7 +319,7 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   (intern: Dreamcraft 2344, Challenge Craft 3747; im Browser geprüft: Pack und Tarif vorausgewählt). Bei Bisect selbst
   offen: Challenge Craft zeigt bei 4 GB „Insufficient RAM“ (Empfehlung 8 GB), Dreamcraft wird dort noch als
   „Dreamcraft 1.20.1“ installiert – beides in der Partnerkonsole des Nutzers zu ändern.
-- **Beach Craft 3.4 (in Arbeit, 8.11.):** Feedback des Nutzers in drei Agenten-Worktrees von `26.3`: `wt/bc-look`
+- **Beach Craft 3.4.0 (8.11., hochgeladen):** siehe `dokumentation/03_beach_craft.md` Abschnitt 10. Danach: 1.21.1-Port (Agent), Dreamcraft V1.6 mit 3.4.0 (Quest „Tackle Box“ statt „Golden Lure“, Kochtopf-Text). Frühere Planung: Feedback des Nutzers in drei Agenten-Worktrees von `26.3`: `wt/bc-look`
   (`feature/3.4-look`: Texturen Banane/Gerichte/Seilteppich/Laterne/Pflanzkübel/Blumenkasten/Vase, Sonnenschirm 3 hoch,
   fließendes Wasser an Fundamenten), `wt/bc-kitchen` (`feature/3.4-kitchen`: Kochtopf falsche Zutaten + Anzeige, JEI,
   Treibholz-Angel mit Köder-/Lure-Slots, Creative-Tabs sortieren), `wt/bc-world` (`feature/3.4-world`: große Strukturen

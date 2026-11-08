@@ -831,3 +831,25 @@ Branch `port/1.21.1` = `4fdfd83` (`origin/26.3` hineingeführt, einziger Konflik
   Format (`conditions`/`functions`), gleiches Icon wie 26.3. CurseForge-Beschreibung: Voraussetzungen nennen 3.3 für
   1.21.1 (Commit 2174208 auf `26.3`).
 
+## 10. Beach Craft 3.4.0 (8.11.2026, Feedback des Nutzers)
+
+CurseForge-Datei 9512111 (26.3, Freigabe des Nutzers im Chat), Modrinth-Version 6CXKC0qX. Gebaut von drei Agenten
+parallel in eigenen Worktrees, zusammengeführt in `release/3.4.0` und per Fast-Forward nach `26.3` (13492b9):
+- **Look** (`feature/3.4-look`, 74a757c): Banane und Bananenstaude neu, alle Gerichte im Vanilla-Schüssel-Stil, Seilteppich
+  mit `noOcclusion` (sonst wurde das Gras darunter weggeschnitten → blaue Ecken), Hurricane Lantern mit Eisenkappe und
+  Henkel, Kokos-Pflanzkübel/Blumenkasten/Vase/Monstera/Weidenkorb geschlossen (der Generator hatte die innere Erdfläche
+  als „verdeckt“ entfernt), Sonnenschirm drei Blöcke hoch (`ParasolBlock`, alte zweiteilige bleiben gültig),
+  Fundamente im Meer wasserführend (`FoundationBlock`): kein fließendes Wasser mehr beim Abbauen oder Haibiss.
+- **Kitchen** (`feature/3.4-kitchen`, 2db0c69): Kochtopf nimmt nur passende Zutaten und sagt, was fehlt; Renderer mit
+  Zutaten, Flüssigkeitsfarbe, Blasen, Dampf, Glocke und schwebendem Gericht; Treibholz-Angel mit Köderkasten
+  (`raft:tackle`); optionales JEI-Plugin (Kochtopf, Fischfalle, Inselpflanzen, Infoseiten); zehn sortierte
+  Creative-Tabs (`raft:bc_0_raft` … `raft:bc_9_story`, `BcTabOrder`).
+- **World** (`feature/3.4-world`, 1ce7ce1): große Orte ca. 3,6× seltener, verschiedene große Orte ≥ 384 Blöcke
+  auseinander (`StructureSpacing`), Absenken auf den echten Boden bzw. Ablehnen schwebender Bauplätze (Ashen Forge,
+  Abyssal Sanctum, Coral Temple, Helix Station), Sockel aus dem Gestein darunter (`StructureFoundations`), 109 von 573
+  leeren Fässern/Kisten mit Loot (`tools/bclib/stock.py`), optionale Lootr-Unterstützung.
+- Tests nach der Zusammenführung: cozy 28/28, food 191/191, kitchen 25/25 (mit und ohne JEI), look 11/11 (ein
+  Zeitfehler beim Aufheben behoben), foundation_water 2/2, raft_5/enc_32/boss_32 ohne Mod-Fehler, Produktiv-Test
+  (Server + Client nur mit Fabric API): 0 Fehler.
+- 1.21.1-Fassung von 3.4.0: Agent auf `port/1.21.1` (läuft).
+

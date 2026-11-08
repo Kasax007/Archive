@@ -1,5 +1,5 @@
 {
- "date": "Stand 8. November 2026, Nachmittag: alle Projekte auf Modrinth, Bisect-Links ohne Klammern, Beach Craft 3.3 auch für 1.21.1",
+ "date": "Stand 8. November 2026, Abend: Beach Craft 3.4.0, alle Projekte auf Modrinth, Bisect-Links ohne Klammern",
  "intro": "Alle sechs Projektseiten im neuen Stil, dazu bei jedem Projekt die neue <b>Kurzbeschreibung</b> (Summary) zum Kopieren. Die CurseForge-Suche liest nur Name und Kurzbeschreibung, nicht die Beschreibung. Ändern kannst du beides in der <a href=\"https://authors.curseforge.com/\" target=\"_blank\" rel=\"noopener\">Author Console</a>: Projekt öffnen, dann die Projekt-Details (Name, Summary, Kategorien) bearbeiten und speichern. Bei Projekten mit Video fügst du den YouTube-Link ins Feld ein; ohne Link fehlt nur der Video-Block.",
  "footer": "Alle Texte liegen auch als HTML-Dateien im Chat und in den Repos unter <code>docs/curseforge/description.html</code> (Branch <code>26.3</code>). Die alten Bilder bleiben in den Repos, bis die neuen Seiten online sind.",
  "projects": [
@@ -8,11 +8,11 @@
    "name": "Beach Craft",
    "chip": [
     "new",
-    "3.3 auch für 1.21.1"
+    "3.4: Kochtopf · Angel · Welt"
    ],
-   "ids": "Mod · Projekt 1010922 · Version 3.3.0+26.3 (Datei 9507188) und 3.3.0+1.21.1 (Datei 9509049)",
+   "ids": "Mod · Projekt 1010922 · Version 3.4.0+26.3 (Datei 9512111, in Prüfung) und 3.3.0+1.21.1 (Datei 9509049); 3.4.0 für 1.21.1 folgt",
    "about": [
-    "Neu für 3.3: Kopfbild „Beach Craft 3.3“, „Auf einen Blick“ mit den Zahlen von 3.3 (18 Kreaturen, 198 Blöcke) und dem Band „Neu in 3.2 und 3.3“, drei neue Abschnitte (Cozy Living, Island Kitchen, Gear and Gadgets) und die Neuheiten von 3.2 in den Texten: Segel und Mast, Wachen und neue Gegner, Tiere auf den Inseln, der härtere Leviathan.",
+    "Neu für 3.4: drei Zeilen „New in 3.4“ (Kochtopf zum Zuschauen, Treibholz-Angel mit Köderkasten, seltenere große Orte auf festem Grund mit gefüllten Fässern und Lootr) und in den Voraussetzungen JEI und Lootr als optionale Mods.",
     "- Die Floß-Grafik zeigt jetzt Anlegen statt „Drop anchor“.",
     "- Ausgangspunkt ist deine Live-Beschreibung: das Video bleibt ein verlinktes Vorschaubild, der YouTube-Link kommt nur einmal vor.",
     "- Neu: Die Voraussetzungen nennen 3.3 jetzt auch für Minecraft 1.21.1 (mit allem; Regal und Hai-Speer sind dort eigene Umsetzungen, weil 1.21.1 beides nicht hat)."
@@ -50,7 +50,7 @@
    "modrinth": {
     "md": "/home/user/Archive/curseforge/modrinth/descriptions/beach-craft.md",
     "url": "https://modrinth.com/mod/beach-craft",
-    "note": "Bei Modrinth in Prüfung. Versionen 3.3.0 für 26.3 und 1.21.1, Lizenz MIT. Die Beschreibung ist dort schon eingetragen; dieser Text ist die Archiv-Fassung."
+    "note": "Bei Modrinth in Prüfung. Versionen 3.4.0 (26.3), 3.3.0 (26.3, 1.21.1), Lizenz MIT. Die Beschreibung mit den 3.4-Zeilen ist dort schon eingetragen."
    }
   },
   {

@@ -97,7 +97,7 @@ Modpack-Beschreibung (Branch `26.3-lockout-bot`) nennt jetzt den Eintrag „Need
 
 ## Modpack v4.2 (8.11.2026)
 
-Client 9508554, Server-Pack 9508555, Changelog nur „Bug fixes“. Gegenüber v4.1 nur `pack_edit_mode=false` in
+Client 9508554, Server-Pack 9508555 (von CurseForge freigegeben um 11:58 und 12:00 UTC), Changelog nur „Bug fixes“. Gegenüber v4.1 nur `pack_edit_mode=false` in
 `config/bhmenu/bhmenu.properties` (Release-Modus des Bisect-Menüs). Die Modpack-Beschreibung (Commit 1e741a0) verlinkt
 im Banner und unter „Want to play with friends?“ die Bestellung eines **4-GB-Servers** mit Challenge Craft
 vorinstalliert: `modredirect.php?pid=595&aid=4395&configoption[29]=27138&configoption[2553]=25893&source=mod` (leitet

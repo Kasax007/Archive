@@ -1298,7 +1298,7 @@ Client-Pack 9507488, Server-Pack 9507490 (Projekt 545167). Mit Freigabe des Nutz
 
 ## V1.5.1 (8.11.2026): Bisect im Release-Modus, Bestell-Link in der Beschreibung
 
-Client-Pack 9508556, Server-Pack 9508559, Changelog nur „Bug fixes“ (Freigabe des Nutzers im Chat). Gegenüber V1.5 sind
+Client-Pack 9508556, Server-Pack 9508559, Changelog nur „Bug fixes“ (Freigabe des Nutzers im Chat; von CurseForge freigegeben um 11:58 und 12:02 UTC). Gegenüber V1.5 sind
 nur `manifest.json` und `config/bhmenu/bhmenu.properties` anders: `pack_edit_mode=false` (BisectHosting: „Set this as
 false … once they are done“), `pack_id=19732`, `partner_id=4395`.
 

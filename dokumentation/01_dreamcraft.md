@@ -1315,7 +1315,7 @@ false … once they are done“), `pack_id=19732`, `partner_id=4395`.
 
 ## V1.6 (8.11.2026): Beach Craft 3.4.0
 
-Client 9512605, Server-Pack 9512608, Modrinth-Version ltyw0nwK (.mrpack, 244 von 251 Mods wie V1.5.1). Quests: „Golden
+Client 9512605, Server-Pack 9512608 (von CurseForge freigegeben um 16:58 und 17:02 UTC), Modrinth-Version ltyw0nwK (.mrpack, 244 von 251 Mods wie V1.5.1). Quests: „Golden
 Lure“ heißt jetzt **„Tackle Box“** (Aufgaben: Treibholz-Angel und Goldener Köder, gleiche Quest-ID), der Kochtopf-Text
 beschreibt den neuen Topf; weiter 369 Quests. Test: Server aus dem Server-Pack + Client wie aus dem Launcher, Client
 tritt bei, das JEI-Plugin von Beach Craft lädt (`raft:jei_plugin`), Angel/Kochtopf/Sonnenschirm im Spiel, keine

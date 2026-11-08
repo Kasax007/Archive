@@ -17,7 +17,7 @@
 >
 > **Stand:** Tamacraft 1.3.0 (26.3, Branch `26.3` 6ece433, Jar sha1 328cedd5…) und 1.3.0+1.21.1 (Branch
 > `port/1.21.1` 184ab9d, sha1 7fdfd412…), beide getestet (Client-Spieltest 58/58, Produktiv-Rauchtest), am 7.11.
-> hochgeladen (Freigabe des Nutzers): 26.3 = Datei 9501672, 1.21.1 = Datei 9501673, beide freigegeben (Download-Link 307). Das GitHub-Repo heißt weiter `Kasax007/Tamagotchi` (Bilder der Seite laden von dort). Volle ID-Liste:
+> hochgeladen (Freigabe des Nutzers): 26.3 = Datei 9501672, 1.21.1 = Datei 9501673, beide freigegeben (Download-Link 307). Das GitHub-Repo heißt seit 8.11.2026 `Kasax007/tamacraft` (vorher `Kasax007/Tamagotchi`; die Bilder der Seite laden von dort, alte Links leitet GitHub weiter). Volle ID-Liste:
 > `$SP/tama1211/id_mapping.txt` (alle Pfade bleiben, nur `tamagotchi_heart` → `tamacraft_heart`, Creative-Tab
 > `tamacraft:tamacraft`).
 >
@@ -29,7 +29,7 @@
 Der Rest dieses Kapitels beschreibt den Mod unter seinem alten Namen (Stand 1.2.0).
 
 
-**Tamagotchi** ist dein Fabric-Mod für Minecraft 26.3 (Repo `Kasax007/tamagotchi`, Mod-ID `tamagotchi`,
+**Tamagotchi** ist dein Fabric-Mod für Minecraft 26.3 (Repo damals `Kasax007/Tamagotchi`, heute `Kasax007/tamacraft`; Mod-ID damals `tamagotchi`,
 CurseForge-Projekt **1758309**). Zehn seltene Haustiere verstecken sich in den Strukturen der Welt. Man findet eines,
 zähmt es mit einem **Tamagotchi Heart** und kümmert sich darum – füttern, spielen, sauber halten, schlafen lassen.
 Dann wird es zum besten Freund: Es folgt dir, trägt einen Rucksack, kämpft mit, bringt dir goldene Äpfel, wenn du

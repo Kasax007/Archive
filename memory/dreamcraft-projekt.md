@@ -297,7 +297,7 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   neue Icon im Jar ist.
 - **Stand 8.11. mittags:** Alles aus der Liste vom 7.11. ist hochgeladen und freigegeben: Quest-Icons-Ports (6), Beach
   Craft 3.2.0 (26.3 + 1.21.1) und 3.3.0, Dreamcraft V1.5 (Island Life, Tamacraft). Offen: die Cozy-Inhalte von 3.3 für
-  1.21.1 (dort fehlen Vanilla-Regal und Speer), Beschreibungen einfügen (Übergabeseite Version 15), Server-Packs auf CurseForge von Hand markieren, GitHub-Repo heißt noch tamagotchi.
+  1.21.1 (dort fehlen Vanilla-Regal und Speer), Beschreibungen einfügen (Übergabeseite Version 15), Server-Packs auf CurseForge von Hand markieren. GitHub-Repo heißt seit 8.11. `Kasax007/tamacraft` (lokal weiter `/home/user/tamagotchi`, Remote umgestellt).
 - **BisectHosting-IDs (8.11.):** Partner-ID 4395 für alle Packs; Pack-IDs: Dreamcraft 19732, Challenge Craft 27138.
   Wirkt im Spiel über `config/bhmenu/bhmenu.properties` (Eintrag „Need a server?“ in Multiplayer bestellt einen Server mit
   vorinstalliertem Pack). Ein Beschreibungs-Link mit Pack-ID braucht einen Tarif (`modredirect.php?pid=…&aid=4395&configoption[29]=…`),

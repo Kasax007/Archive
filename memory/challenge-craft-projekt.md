@@ -145,6 +145,10 @@ neueste Anweisung des Nutzers.
   - `ModelStore` lädt aus `BOB_MODELS`, sonst `bob-models/`, sonst aus dem Classpath.
 - **Neue Maschine:** Python 3.10+ („Add to PATH“), JDK 25. Die `.bat` richten `runs\train\venv` ein und prüfen
   numpy/psutil. Optional: `gpu.bat`; Lithium, C2ME und FerriteCore nach `runs\train\mods\`.
+- **Tick-Sprint nur mit `CHALLENGECRAFT_BOT_SIM=1`** (Hinweis des Nutzers 9.11.): Sonst rechnet die Wegsuche nach
+  Uhrzeit, und Bob spielt schlechter, je schneller das Spiel läuft (3 Tode bei 1,5×, 18 bei 2,3×). SIM zählt Knoten pro
+  Spiel-Tick (`BotNavigator.SIM`, `SIM_NODES_PER_TICK`); `versus.sh` setzt Sprint nur mit SIM=1, der Trainer ebenso.
+  Jede neue Such-/Rechenlogik (z. B. der Brett-Planer) muss ihr Budget in Spiel-Ticks/Knoten zählen, nie in Uhrzeit.
 - **Sicherheitsnetz:** Das gelernte Cover-Modell darf nicht „stehen und kämpfen“ wählen, wenn die Berechnung den
   Kampf als verloren einstuft und die Regeln einen Ausweg kennen (`Guardian`).
 

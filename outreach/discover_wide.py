@@ -22,7 +22,7 @@ Packs already in targets.csv, creators.csv (by author), suppression.csv or draft
 
 Monthly downloads are not public on either site, so they are estimated:
 - CurseForge (api.cfwidget.com): downloads of the pack files uploaded in the last 45 days, scaled to 30 days by the
-  age of the oldest of those files; with no file that new, the newest file's downloads per day times 30.
+  age of the oldest of those files (at least 10 days); with no file that new, the newest file's downloads per day times 30.
 - Modrinth (API v2): the same with the per-version downloads of /project/<id>/version.
 Both undercount packs whose players stay on older files, and overcount right after a big release. Treat them as
 an order of magnitude, and say "estimate" in drafts.
@@ -72,7 +72,11 @@ QUEST_EXTRA = {'ftb-quests-forge', 'ftb-quests-neoforge', 'ftb-quests-fabric', '
                'better-questing-unofficial', 'questbook', 'simple-progression', 'vanilla-progression',
                'hqm', 'hardcore-questing-mode', 'questing-mode'}
 OCEAN_THEME = re.compile(r'\b(ocean|oceans|sea|seas|island|islands|raft|pirates?|sail(?:ing)?|ships?|boats?|beach|'
-                         r'tropical|castaway|shipwrecked|archipelago|survival island|exploration|explore|adventure)\b', re.I)
+                         r'tropical|castaway|shipwrecked|archipelago|survival island)\b', re.I)
+ADVENTURE_THEME = re.compile(r'\b(exploration|explore|adventure|adventures|voyage|journey)\b', re.I)
+CONTENT_CATS = {'Adventure and RPG', 'Quests', 'Tech', 'Magic', 'Exploration', 'Skyblock', 'Hardcore', 'Extra Large',
+                'Expert', 'Horror', 'Sci-Fi', 'Map Based', 'adventure', 'challenging', 'combat', 'kitchen-sink', 'magic',
+                'quests', 'technology'}
 COZY_THEME = re.compile(r'\b(cozy|cosy|comfy|wholesome|farm(?:ing)?|cottage|cottagecore|pets?|animals?|homestead|'
                         r'relax(?:ing)?|chill|peaceful|calm|village life)\b', re.I)
 EMAIL_RE = re.compile(r'[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}')
@@ -119,8 +123,8 @@ def monthly_estimate(files):
     if recent:
         oldest = max(D.days_since(f['date']) for f in recent)
         total = sum(f['downloads'] for f in recent)
-        span = max(oldest, 7)
-        est = int(total * 30 / span) if span > 30 else total
+        span = max(oldest, 10)            # very new files would inflate the rate
+        est = int(total * 30 / span)
         return est, f'{total} downloads on {len(recent)} files from the last {oldest} days'
     newest = max(dated, key=lambda f: f['date'])
     age = max(D.days_since(newest['date']), 1)
@@ -136,6 +140,11 @@ def fits(pairs, mods, text, cats):
     can = {k for k, p in SUPPORT.items() if any(v in p.get(l, []) for l, v in pairs)}
     if mods is None or mods.get('unknown'):
         return [], ['mod list not read']
+    content_mods = sum(mods.get('theme_counts', {}).values())
+    if not (set(cats or []) & CONTENT_CATS) and content_mods < 8:
+        return [], ['no content pack (categories/mod themes)']
+    if PERF_ONLY.search(text[:120] if text else '') and content_mods < 8:
+        return [], ['performance/shader pack']
     quest = list(mods['quest']) + [n for n in mods.get('quest_maybe', []) if 'quest' in n.lower()]
     quest_dirs = mods.get('quest_dirs') or []
     if 'QI' in can:
@@ -148,6 +157,8 @@ def fits(pairs, mods, text, cats):
             notes.append('raft mod present: ' + ', '.join(mods['raft'][:3]))
         elif OCEAN_THEME.search(blob):
             out.append('BC')
+        elif ADVENTURE_THEME.search(blob):
+            out.append('BC?')          # adventure/exploration pack without an ocean theme: weaker fit
     if 'TG' in can and 'TG' not in mods['ours']:
         if mods['pet']:
             notes.append('pet mod present: ' + ', '.join(mods['pet'][:3]))
@@ -397,7 +408,7 @@ def main():
     if not args.no_verify:
         log('Checking Discord invites and GitHub issue templates of fitting packs ...')
         check_discord(cands)
-    cands.sort(key=lambda c: (-len(c['fit']), -c['monthly_estimate']))
+    cands.sort(key=lambda c: (-len([f for f in c['fit'] if '?' not in f]), -c['monthly_estimate']))
     D.save_json(os.path.join(DATA, 'wide_candidates.json'),
                 {'generated': TODAY.isoformat(), 'min_monthly': args.min_monthly, 'requests': D.STATS,
                  'candidates': cands}, indent=1)

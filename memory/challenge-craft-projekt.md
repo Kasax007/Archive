@@ -188,3 +188,19 @@ neueste Anweisung des Nutzers.
   v4. Die v5 mit Upgraded Iron Chests und Storage Drawers war ein Fehler (der Quality-of-Life-Wunsch vom 4.11. galt dem
   Dreamcraft-Questbuch) und ist gestrichen; das Pack bleibt auf v4 (9399868, Server-Pack 9399871). Ein neues Pack
   kommt erst mit einer neuen Challenge-Craft-Version.
+
+## Stand 9.11.2026 (Challenge Craft 1.1.4, Bob-Modelle, Bob-Plan)
+
+- **1.1.4 veröffentlicht** (Freigabe „Ja 1.1.4 V1“): Bugcheck-Fixes (Infinite Chest Klicks/Speichern/Reichweite,
+  Crafter baut keine gesperrten Items, Würfel, Roulette/Kasse, Zähler) per Cherry-Pick auf `release/1.1.4`, ohne den
+  Pack-v5-Doku-Commit. Tests `challengecraft-gametest:challenge_fix_tests_*` 5/5. Push auf `26.3-lockout-bot`
+  (37246fe) → Action: GitHub-Release v1.1.4, CurseForge-Upload; Modrinth fehlt der Action (kein Secret) → von Hand
+  hochgeladen (Version ZyJkDRf0, byte-gleich). Filter für Game-Tests braucht den Namensraum, z. B.
+  `-PbotTest='challengecraft-gametest:challenge_fix_tests_*'`.
+- **Bob-Modelle vom Laptop (48 h Training, hochgeladen im Chat):** `cover.json` 20261020-192933 (54 Eingaben,
+  24.796 Kämpfe; Repo hatte 42 Eingaben/3.124), `goal.json` 20261021-164809 (32 Eingaben, 988 Ziele; Repo 25/617),
+  `champion.json` unverändert seit 16.10. (die Liga fand in 48 h keinen besseren Knopf-Satz). Kein Branch „push“ auf
+  GitHub. Vergleich alt/neu auf den Kampf-Tests mit `-PbotLearned` in `/home/user/bob-eval` (Skript
+  `$SP/bobeval/run.sh`).
+- **Bob-Plan:** Der Nutzer will Bob „so gut wie der beste Speedrunner im Lockout Bingo“, mit max. 4 Subagenten, bis
+  er „Stop“ sagt; Plan als Info, einmalige Freigabe.

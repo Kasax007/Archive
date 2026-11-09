@@ -198,6 +198,13 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   (`modrinth_id` dann eintragen; am 9.11. nur Challenge Craft freigegeben); „raft“-Treffer in „Minecraft“ behoben.
   12 frei gewordene 26.2-Packs von Hand geprüft (WebFetch liest CurseForge-Seiten, Playwright/curl bekommen 403):
   alle `skip` mit Grund. Neue Entwürfe: Challenge Craft für eldor (~4.9K) und KIAN (~102K), Adressen nur in der DB.
+- **Outreach-Großrunde 9.11.:** Nutzer: „2 reicht nicht … sooo viele creator … auch tiktok creator oder Instagram …
+  Modpack Autoren mit packs >1k Downloads im letzten Monat“. 3 Agenten → 49 neue DB-Zeilen (Seite jetzt 76 Ziele):
+  20 Challenge-/Dreamcraft-Creator, 20 Showcase-Creator (6 TikTok), 9 Packs (Better OneBlock, COBBLEVERSE, Dragon Mine Z,
+  Slimes Adventure, Create And Space, Cobblemon Origins; 3 Modrinth-only auf hold). Instagram nicht lesbar (Login/429).
+  Neu: `discover_wide.py` + `data/wide_cf_seeds.csv`, `tools/yt_*.py`, Vorlage F, tt-/ig-IDs. Routine trig_01CCt95…
+  auf 10–20 Entwürfe/Tag umgestellt (≥4 CC/DC-Creator, ≥4 Showcase, ≥3 Packs). Empfehlung an den Nutzer: E-Mails in
+  Portionen von 10–15 pro Tag senden. Brief für Agenten: `outreach/AGENT-BRIEF.md` (Fakten vor Wiederverwendung aktualisieren).
 - **Dreamcraft V1.4.3 (in Arbeit, 7.11.):** Nutzer: WorldEdit-Wand Holzhacke statt Holzaxt; Inventar zu voll (lila
   Pfeile = IPN-Nachfüll-Symbole, NONE-Leiste = IPN-Profile), keine Wisch-Animation (Smooth Swapping), kein
   Slot-Highlight. Configs: `config/inventoryprofilesnext/inventoryprofiles.json` (Abschnitte ModSettings,

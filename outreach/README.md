@@ -14,6 +14,8 @@ Discord mit „Kopieren & öffnen“. E-Mail-Adressen stehen nur in der privaten
 
 **Lauf 9.11.2026:** 1.834 Modrinth-Packs und 502 CurseForge-Slugs durchsucht, 916 Packs bewertet. Zwei Regeln korrigiert: Quest Icons gibt es seit 7.11. auch für 26.2 (dadurch wurden 12 CurseForge-Packs frei; alle von Hand geprüft und mit Grund auf `skip`: keine Links, keine Einladung oder schon ein Quest-System), und Modrinth-Packs bleiben auf `hold`, bis Beach Craft, Quest Icons oder Tamacraft dort freigegeben sind (in Prüfung seit 8.11.; dann `modrinth_id` in `config.json` eintragen). Neue Entwürfe: zwei Creator für Challenge Craft (eldor, KIAN).
 
+**Große Runde 9.11.2026** (Nutzer: „2 reicht nicht“): drei Recherche-Agenten, 49 neue Entwürfe auf der Seite – 20 Creator für Challenge Craft und Dreamcraft (YouTube, davon 4 deutsch), 20 Mod-Showcase-Creator (14 YouTube, 6 TikTok), 9 Pack-Autoren mit geschätzt 750 bis 40.000 Downloads im Monat (auch 1.21.1 und 1.20.1, Forge/NeoForge für Quest Icons). 30 Creator-Adressen stehen in der Datenbank, 10 Creator auf `hold` (Adresse nur hinter dem Captcha), 3 Modrinth-Packs auf `hold` (unsere Mods noch in Prüfung). Instagram war aus dem Container nicht lesbar. Neu: `discover_wide.py` (größere Packs auf allen Versionen unserer Mods, Seeds in `data/wide_cf_seeds.csv`, Ausgabe `data/wide_candidates.json`). Die Routine liefert seitdem 10–20 Entwürfe pro Werktag.
+
 ## Wochenablauf
 
 | Schritt | Wer | Wie |
@@ -59,6 +61,7 @@ etwa drei Mal pro Sekunde bei Modrinth (Grenze 300 pro Minute) und deutlich selt
 | `drafts/` | Ein Entwurf pro Ziel, Dateiname beginnt mit der ID (`cf-677008-…`, `yt-emaiye-…`, `tt-…`, `ig-…`) |
 | `tools/` | Hilfen für die Creator-Suche von Hand (seit 9.11.2026): `yt_search.py` (YouTube-Suche, Videos des letzten Monats), `yt_channel.py` (Beschreibung und neueste Videos), `yt_about.py` (Abos und die Adressen, die der Kanal selbst in seine Beschreibung schreibt; maskiert, `--show` nur für die Konsole). Wenige Abrufe pro Lauf, nur öffentliche Seiten |
 | `sync_page.py` | Holt Status, Sendedatum und Nachfrage-Datum von der Freigabeseite nach `targets.csv` (`python3 sync_page.py DB_DIR`) |
+| `discover_wide.py`, `data/wide_cf_seeds.csv` | Breite Pack-Suche (seit 9.11.2026): größere Packs auf allen Versionen, auf denen unsere Mods laufen, mit geschätzten Monats-Downloads; schreibt `data/wide_candidates.json` (nicht im Repo). Montags und donnerstags nach `discover.py` |
 | `cache/`, `data/candidates.json` | Werden bei jedem Lauf neu erzeugt, nicht ins Repo (`.gitignore`) |
 
 **CurseForge-Seeds nachtragen:** Die Such-API der Website antwortet Skripten mit 403. Neue Packs deshalb einmal pro

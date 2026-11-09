@@ -2,7 +2,7 @@
 
 | Feld | Inhalt |
 | --- | --- |
-| Ziel | [eldor](https://www.youtube.com/@eldor-devs) · `yt:@eldor-devs` · Score 75 · ~4.92K subscribers |
+| Ziel | [eldor](https://www.youtube.com/@eldor-devs) · `yt:@eldor-devs` · Score 85 · ~4.92K subscribers |
 | Status | Senden per E-Mail, werktags (Di–Do). |
 | Passt | Challenge Craft, Challenge Craft Modpack |
 | Kontaktweg | E-Mail an die Adresse, die der Kanal in seiner Beschreibung nennt (✉️). Die Adresse steht nur in der Datenbank der Seite. Nur per E-Mail, keine Kommentare, keine DMs. |

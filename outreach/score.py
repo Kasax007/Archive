@@ -241,10 +241,12 @@ def pack_status(c, fit, route_pts):
         return 'skip', 'no gap for our mods'
     if route_pts == 0 and c['platform'] != 'curseforge':   # Modrinth shows all project links; CurseForge hides the sidebar
         return 'skip', 'no contact route found'
-    if c['platform'] == 'modrinth' and not any(p.get('modrinth_id') for p in CFG['projects'].values()):
-        return 'hold', 'Modrinth only: our mods are not on Modrinth yet (report step 3)'
-    if fit == ['QI'] and '26.3' not in c['mc_versions']:
-        return 'hold', 'only 26.2: wait for the Quest Icons 26.2 build'
+    # a Modrinth pack can only add a fitting mod that is public there; config.json gets the modrinth_id once the
+    # project is approved (Challenge Craft alone does not count: it is pitched to creators, not to pack authors)
+    if c['platform'] == 'modrinth' and not any(CFG['projects'].get(k, {}).get('modrinth_id') for k in fit):
+        return 'hold', 'Modrinth only: ' + '/'.join(fit) + ' not public on Modrinth yet (in review since 8.11.2026)'
+    if fit == ['QI'] and not set(c['mc_versions']) & set(CFG['projects']['QI']['versions']):
+        return 'hold', 'Quest Icons is not out for ' + '/'.join(c['mc_versions']) + ' yet'
     return 'new', ''
 
 
@@ -269,7 +271,9 @@ def score_creator(c):
     aud = audience(c.get('audience'))
     dl = S['downloads'] if aud and S['creator_audience_min'] <= aud <= S['creator_audience_max'] else 0
     ev = (c.get('evidence') or '') + ' ' + focus
-    gap = S['gap_qi'] if re.search(r'26\.[123]|raft|ocean|quest|cozy|stardew|modpacks? of 2026', ev, re.I) else S['gap_other']
+    # \braft\b: plain "raft" also matched inside "Minecraft"; challenge words are the fit for Challenge Craft (CC)
+    gap = S['gap_qi'] if re.search(r'26\.[123]|\braft\b|ocean|quest|cozy|stardew|modpacks? of 2026'
+                                   r'|challenge|lockout|bingo|minecraft,? but|force item|manhunt', ev, re.I) else S['gap_other']
     route = c.get('route') or ''
     route_pts = 0 if route.lower().startswith('none') or not route else S['route_invited']
     lang = S['language'] if (c.get('language') or '')[:2] in S['languages'] else 0
@@ -279,7 +283,8 @@ def score_creator(c):
            f"evidence: {c.get('evidence')}")
     # address only behind YouTube's "View email address" button (captcha): hold, prefer creators with a public address
     captcha_only = bool(re.search(r'view email address|captcha', route, re.I)
-                        and not re.search(r'description (lists|gives|names)|in the description', route, re.I))
+                        and not re.search(r'description (lists|gives|names)[^;|]*e-?mail|e-?mail[^;|]*in the description',
+                                          route, re.I))
     if captcha_only:
         why = "hold: address only behind YouTube's View email address button (captcha) | " + why
     status = ('hold' if captcha_only else 'new') if route_pts else 'skip'

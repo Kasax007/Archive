@@ -192,6 +192,12 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   „Alle senden“, Kopieren & Öffnen für Kommentare/Discord. E-Mail-Adressen nur in der privaten Datenbank (bei
   stop/no gelöscht). Challenge Craft (Mod 1508454, Modpack 1653698) wird jetzt bei Creatorn beworben (Vorlage E);
   Routine trig_01CCt95NzvUNE8aKqaNFs2oi entsprechend angepasst.
+- **Outreach 9.11. (Montag):** `sync_page.py DB_DIR` holt Status/Sendedaten der Seite nach `targets.csv` (8.11.: 6
+  gesendet, Gmail/Kopie/manuell). score.py: Creator mit Adresse nur hinter YouTubes Captcha-Knopf → `hold`; Quest Icons
+  zählt jetzt auch für 26.2 (`config.json`); Modrinth-Packs bleiben `hold`, bis BC/QI/TG dort freigegeben sind
+  (`modrinth_id` dann eintragen; am 9.11. nur Challenge Craft freigegeben); „raft“-Treffer in „Minecraft“ behoben.
+  12 frei gewordene 26.2-Packs von Hand geprüft (WebFetch liest CurseForge-Seiten, Playwright/curl bekommen 403):
+  alle `skip` mit Grund. Neue Entwürfe: Challenge Craft für eldor (~4.9K) und KIAN (~102K), Adressen nur in der DB.
 - **Dreamcraft V1.4.3 (in Arbeit, 7.11.):** Nutzer: WorldEdit-Wand Holzhacke statt Holzaxt; Inventar zu voll (lila
   Pfeile = IPN-Nachfüll-Symbole, NONE-Leiste = IPN-Profile), keine Wisch-Animation (Smooth Swapping), kein
   Slot-Highlight. Configs: `config/inventoryprofilesnext/inventoryprofiles.json` (Abschnitte ModSettings,

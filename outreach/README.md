@@ -12,6 +12,8 @@ Discord mit „Kopieren & öffnen“. E-Mail-Adressen stehen nur in der privaten
 
 **Erste Runde (7.11.2026):** 1.821 Fabric-Packs für 26.2/26.3 auf Modrinth und 502 CurseForge-Slugs durchsucht, 917 Packs näher angesehen. 15 Pack-Entwürfe (9 jetzt möglich, davon 3 nur über einen Discord-Vorschlagskanal; 6 auf `hold`) und 10 Creator-Entwürfe in `drafts/`. Von Hand verworfene Ziele stehen mit Grund in `targets.csv` (`skip`, Spalte `notes`). Wichtigster Engpass: Unsere Mods fehlen auf Modrinth, deshalb sind fast alle Modrinth-Packs auf `hold`.
 
+**Lauf 9.11.2026:** 1.834 Modrinth-Packs und 502 CurseForge-Slugs durchsucht, 916 Packs bewertet. Zwei Regeln korrigiert: Quest Icons gibt es seit 7.11. auch für 26.2 (dadurch wurden 12 CurseForge-Packs frei; alle von Hand geprüft und mit Grund auf `skip`: keine Links, keine Einladung oder schon ein Quest-System), und Modrinth-Packs bleiben auf `hold`, bis Beach Craft, Quest Icons oder Tamacraft dort freigegeben sind (in Prüfung seit 8.11.; dann `modrinth_id` in `config.json` eintragen). Neue Entwürfe: zwei Creator für Challenge Craft (eldor, KIAN).
+
 ## Wochenablauf
 
 | Schritt | Wer | Wie |
@@ -90,8 +92,9 @@ Pflicht: 26.2 oder 26.3, Fabric. Teilpunkte dort, wo der Beleg nur teilweise da 
 | Englisch oder Deutsch | 5 |
 
 Creator: Modded-Inhalt 25, passendes Video in den letzten 2 Monaten 20 (6 Monate: 10), 1.000–100.000 Abos 15,
-26.x-, Floß-, Quest- oder Cozy-Inhalt 20 (sonst 10), selbst genannter Weg für Geschäftsanfragen 15, Englisch oder
-Deutsch 5.
+26.x-, Floß-, Quest-, Cozy- oder Challenge-Inhalt (Lockout, Bingo, „Minecraft, but…“, Force Item, Manhunt) 20 (sonst 10),
+selbst genannter Weg für Geschäftsanfragen 15, Englisch oder Deutsch 5. Steht die Adresse nur hinter YouTubes Knopf
+„View email address“ (Captcha), kommt der Creator auf `hold` (seit 9.11.2026).
 
 ## Rechtliche Regeln in Kürze (allgemeine Information, keine Rechtsberatung)
 

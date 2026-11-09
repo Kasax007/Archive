@@ -10,11 +10,10 @@
    "slug": "quest-icons",
    "url": "https://www.curseforge.com/minecraft/mc-mods/quest-icons",
    "versions": [
-    "26.3"
-   ],
-   "upcoming_versions": [
+    "26.3",
     "26.2"
    ],
+   "upcoming_versions": [],
    "modrinth_id": null
   },
   "BC": {

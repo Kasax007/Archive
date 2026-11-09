@@ -2,7 +2,7 @@
 
 | Feld | Inhalt |
 | --- | --- |
-| Ziel | [KIAN](https://www.youtube.com/@Kianissohot) · `yt:@Kianissohot` · Score 75 · ~102K subscribers |
+| Ziel | [KIAN](https://www.youtube.com/@Kianissohot) · `yt:@Kianissohot` · Score 85 · ~102K subscribers |
 | Status | Senden per E-Mail, werktags (Di–Do). |
 | Passt | Challenge Craft, Challenge Craft Modpack |
 | Kontaktweg | E-Mail an die Adresse, die der Kanal in seiner Beschreibung mit „biz:“ für Geschäftsanfragen nennt. Die Adresse steht nur in der Datenbank der Seite. Nur per E-Mail, keine Kommentare, keine DMs. |

@@ -38,10 +38,12 @@ Fassung; maßgeblich ist die Datenbank.
 
 ## Vorlagen (Stand 7.11.2026)
 
-Fakten für alle Texte: Quest Icons 1.1.0 für 26.3 Fabric, Build für 26.2 und ein Importer für FTB-Quests-Kapitel sind
-in Arbeit (nur als „coming“ nennen). FTB Quests gibt es für 26.2/26.3 nicht (letzte Version 26.1.2). Beach Craft 3.1.0
-für 26.3 Fabric. Tamacraft (früher Tamagotchi) 1.2.0/1.3.0 für 26.3 Fabric. Dreamcraft V1.4.1: 251 Mods, 348 Quests in 15 Kapiteln,
-Server-Pack. Discord des Nutzers: Kasax Lounge, `discord.gg/zuZVtVvJaY`. Challenge Craft (Mod, seit 7.11. im Outreach für Creator):
+Fakten für alle Texte (Stand 9.11.2026): Quest Icons 1.3.0 für 26.3 und 26.2 Fabric mit Icon-Bibliothek, Ingame-Editor
+und Import von FTB-Quests-Büchern, dazu Ports für Fabric 1.21.1, 1.21.11, 26.1.2 und 1.20.1, NeoForge 1.21.1 und Forge 1.20.1.
+FTB Quests gibt es für 26.2/26.3 nicht (letzte Version 26.1.2). Beach Craft 3.4.0 für 26.3 und 1.21.1 Fabric. Tamacraft
+(früher Tamagotchi) 1.3.0 für 26.3 und 1.21.1 Fabric. Dreamcraft V1.6: 251 Mods, 369 Quests in 16 Kapiteln, Server-Pack.
+Alle Projekte auch auf Modrinth (seit 8.11., teils noch in Prüfung). Die Zahlen in den Vorlagen unten sind älter; neue
+Entwürfe nehmen diese hier. Discord des Nutzers: Kasax Lounge, `discord.gg/zuZVtVvJaY`. Challenge Craft (Mod, seit 7.11. im Outreach für Creator):
 1.1.3 für 26.3 Fabric, 51 Challenges, stapelbar mit Schwierigkeit, Daily Challenge (gleicher Seed für alle),
 Challenge-Codes zum Teilen, Lifetime XP mit Level 1–20, alles koop-fähig, Lockout gegen den KI-Gegner Bob (immer
 „early stage of development“ nennen). Challenge-Craft-Modpack: der Mod plus Shader, Proximity-Voice-Chat und

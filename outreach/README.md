@@ -67,7 +67,7 @@ Woche von Hand (oder mit einem Abruf-Werkzeug) aus der Website-Liste übernehmen
 | Status | Bedeutung | Wer setzt ihn |
 | --- | --- | --- |
 | `new` | Bewertet, noch kein Entwurf | Skript |
-| `hold` | Passt, aber noch nicht möglich: Modrinth-Pack (unsere Mods sind nicht auf Modrinth) oder nur 26.2 (Quest Icons 26.2 fehlt noch) | Skript |
+| `hold` | Passt, aber noch nicht möglich: Modrinth-Pack (unsere Mods sind nicht auf Modrinth) oder nur 26.2 (Quest Icons 26.2 fehlt noch); Creator, deren Adresse nur hinter YouTubes Knopf „View email address“ (Captcha) steht (seit 9.11.2026) | Skript |
 | `draft` | Entwurf liegt in `drafts/` | Skript |
 | `approved` | Vom Nutzer freigegeben | Nutzer |
 | `sent` | Gesendet, `sent_on` eintragen | Nutzer |

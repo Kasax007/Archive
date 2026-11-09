@@ -277,7 +277,12 @@ def score_creator(c):
     why = (f"content {content} ({c.get('focus')}) | fresh {fresh} (evidence {month or '?'}) | audience {dl} "
            f"({c.get('audience') or '?'}) | fit {gap} | route {route_pts} | lang {lang} ({c.get('language')}) | "
            f"evidence: {c.get('evidence')}")
-    status = 'new' if route_pts else 'skip'
+    # address only behind YouTube's "View email address" button (captcha): hold, prefer creators with a public address
+    captcha_only = bool(re.search(r'view email address|captcha', route, re.I)
+                        and not re.search(r'description (lists|gives|names)|in the description', route, re.I))
+    if captcha_only:
+        why = "hold: address only behind YouTube's View email address button (captcha) | " + why
+    status = ('hold' if captcha_only else 'new') if route_pts else 'skip'
     return total, c.get('fit', '').replace(';', '+'), route or 'none found', why, status
 
 

@@ -90,3 +90,24 @@ als Aufhänger, junge Zuschauer; Bob immer „early stage of development“)
 > or set up a code for your community – just tell me! Mod: https://www.curseforge.com/minecraft/mc-mods/challenge ·
 > Modpack: https://www.curseforge.com/minecraft/modpacks/challenge-craft. I'd be so happy to hear what you think!
 > Warm wishes, Kasax
+
+**F: Creator, Mod-Showcase** (YouTube, TikTok, Instagram: „top mods“, Reviews, Spotlights, Shorts zu einzelnen Mods;
+seit 9.11.2026). Bitte: den passenden Mod (Beach Craft, Tamacraft oder Challenge Craft) in ein künftiges Video
+aufnehmen. Hilfe anbieten: Early Access, Footage/B-Roll, Testwelt oder Seed mit den besten Stellen, Server zum Filmen,
+Antworten auf Fragen. Ein konkreter, wahrer Bezug auf ein Video des Creators gehört in den ersten Satz.
+
+## Creator auf TikTok und Instagram (seit 9.11.2026)
+
+- IDs `tt:@handle` und `ig:@handle`, Dateien `drafts/tt-handle.md` und `drafts/ig-handle.md`; `seed_page.py` und
+  `sync_page.py` kennen beide Plattformen.
+- Eingeladen ist eine Geschäftsadresse in der Bio (oder auf Linktree/Beacons/Website) oder eine Bio, die ausdrücklich
+  zu Geschäfts-DMs einlädt („DM for business/collabs“). Dann Kanal `TikTok-DM, Englisch` bzw. `Instagram-DM, Englisch`
+  (die Seite kopiert den Text und öffnet das Profil). Ohne Einladung kein Entwurf.
+- TikTok-Profile lassen sich lesen (`"signature"` = Bio, `"followerCount"` im Quelltext); Instagram verlangt meist eine
+  Anmeldung, dann Linktree oder Website des Creators nutzen.
+
+## Menge (Wunsch des Nutzers, 9.11.2026)
+
+„2 reicht nicht“: täglich deutlich mehr Entwürfe, gemischt aus Challenge-/Dreamcraft-Creatorn, Mod-Showcase-Creatorn
+(YouTube, TikTok, Instagram) und Pack-Autoren mit etwa 1.000+ Downloads im Monat (auch 1.21.1 und 1.20.1, wo Quest
+Icons, Beach Craft und Tamacraft laufen). Qualität bleibt Pflicht: jeder Text mit echtem, geprüftem Bezug.

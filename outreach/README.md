@@ -56,7 +56,9 @@ etwa drei Mal pro Sekunde bei Modrinth (Grenze 300 pro Minute) und deutlich selt
 | `suppression.csv` | Sperrliste (`key, added_on, reason`). Schlüssel: Ziel-ID, URL oder `author:<name>`. Beide Skripte beachten sie: Gesperrte Ziele werden weder abgefragt noch in die Tabelle geschrieben |
 | `creators.csv` | Von Hand gepflegte Creator-Liste. Nur Kanalname, Plattform, URL, Sprache, ungefähre Reichweite, der vom Kanal selbst genannte Weg für Geschäftsanfragen (ohne Adresse) und das Video, das die Passung belegt |
 | `data/cf_seeds.csv` | Zusätzliche CurseForge-Slugs von der Website (26.2-Liste, Seiten 1–4, Stand 7.11.); ergänzt die Recherche-CSV mit allen 26.3-Packs |
-| `drafts/` | Ein Entwurf pro Ziel, Dateiname beginnt mit der ID (`cf-677008-…`, `yt-emaiye-…`) |
+| `drafts/` | Ein Entwurf pro Ziel, Dateiname beginnt mit der ID (`cf-677008-…`, `yt-emaiye-…`, `tt-…`, `ig-…`) |
+| `tools/` | Hilfen für die Creator-Suche von Hand (seit 9.11.2026): `yt_search.py` (YouTube-Suche, Videos des letzten Monats), `yt_channel.py` (Beschreibung und neueste Videos), `yt_about.py` (Abos und die Adressen, die der Kanal selbst in seine Beschreibung schreibt; maskiert, `--show` nur für die Konsole). Wenige Abrufe pro Lauf, nur öffentliche Seiten |
+| `sync_page.py` | Holt Status, Sendedatum und Nachfrage-Datum von der Freigabeseite nach `targets.csv` (`python3 sync_page.py DB_DIR`) |
 | `cache/`, `data/candidates.json` | Werden bei jedem Lauf neu erzeugt, nicht ins Repo (`.gitignore`) |
 
 **CurseForge-Seeds nachtragen:** Die Such-API der Website antwortet Skripten mit 403. Neue Packs deshalb einmal pro

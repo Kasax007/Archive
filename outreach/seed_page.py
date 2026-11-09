@@ -41,8 +41,8 @@ for fn in sorted(os.listdir(os.path.join(HERE, 'drafts'))):
     followup = quote(fu.group(1)) if fu else ''
     prefix = key.split('-')[0]
     rows[key] = dict(
-        name=name, type='creator' if prefix == 'yt' else 'pack',
-        platform={'cf': 'CurseForge', 'mr': 'Modrinth', 'yt': 'YouTube'}.get(prefix, prefix), url=url, score=score,
+        name=name, type='creator' if prefix in ('yt', 'tt', 'ig') else 'pack',
+        platform={'cf': 'CurseForge', 'mr': 'Modrinth', 'yt': 'YouTube', 'tt': 'TikTok', 'ig': 'Instagram'}.get(prefix, prefix), url=url, score=score,
         status=status, status_note=status_note, fit=table.get('Passt', ''), route=table.get('Kontaktweg', ''),
         why=table.get('Warum eingeladen', ''), before=table.get('Vor dem Senden', ''), facts=facts,
         channel=channel, subject=subject, message=message, footer=footer, followup=followup,

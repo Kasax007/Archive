@@ -16,8 +16,8 @@ def csv_id(doc_id):
     p, rest = doc_id.split('-', 1)
     if p in ('cf', 'mr'):
         return f'{p}:{rest.split("-", 1)[0]}'
-    if p == 'yt':
-        return f'yt:@{rest}'
+    if p in ('yt', 'tt', 'ig'):
+        return f'{p}:@{rest}'
     return doc_id
 
 

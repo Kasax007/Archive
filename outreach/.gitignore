@@ -2,3 +2,4 @@
 cache/
 data/candidates.json
 *.tmp
+data/wide_candidates.json

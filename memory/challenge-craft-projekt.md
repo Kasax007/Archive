@@ -200,7 +200,8 @@ neueste Anweisung des Nutzers.
 - **Bob-Modelle vom Laptop (48 h Training, hochgeladen im Chat):** `cover.json` 20261020-192933 (54 Eingaben,
   24.796 Kämpfe; Repo hatte 42 Eingaben/3.124), `goal.json` 20261021-164809 (32 Eingaben, 988 Ziele; Repo 25/617),
   `champion.json` unverändert seit 16.10. (die Liga fand in 48 h keinen besseren Knopf-Satz). Kein Branch „push“ auf
-  GitHub. Vergleich alt/neu auf den Kampf-Tests mit `-PbotLearned` in `/home/user/bob-eval` (Skript
-  `$SP/bobeval/run.sh`).
+  GitHub. Vergleich alt/neu auf den Kampf-Tests (brawl, guardian, shield) mit `-PbotLearned`: neu 33/34 (nur das
+  wackelige `brawl_zombie_trio`), alt 30/34 (Tode in brawl_enderman, brawl_enderman_slope, low_with_two_zombies).
+  Übernommen auf `26.3-lockout-bot` = d85f36f (ohne Versionsänderung; der nächste Release trägt sie).
 - **Bob-Plan:** Der Nutzer will Bob „so gut wie der beste Speedrunner im Lockout Bingo“, mit max. 4 Subagenten, bis
   er „Stop“ sagt; Plan als Info, einmalige Freigabe.

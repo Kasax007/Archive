@@ -21,8 +21,8 @@ Spielmechaniken oder per Code eingefügter Beute. Die Beach-Craft-Checks (Szene 
 1. **Von Hand auf CurseForge/Bisect:** Beschreibungen neu einfügen (Beach Craft, Dreamcraft, beide Challenge-Craft-Seiten;
    Übergabeseite), Server-Packs als Server Pack markieren, Bisect-Partnerkonsole (Challenge Craft RAM-Empfehlung 4 GB,
    Dreamcraft-Eintrag 19732 auf 26.3).
-2. **Entscheidungen:** Challenge Craft Crafter-Änderung → 1.1.4 ja/nein (Abschnitt G); offene Design-Fragen aus Beach Craft
-   2.0.1 (Abschnitt D).
+2. **Entscheidungen:** Challenge Craft 1.1.4 ja/nein (Crafter-Fix plus Infinite-Chest-Dupe-Fix, Abschnitt G); Beach-Craft-
+   Balance-Fragen 1–7 aus 2.0.1 (Abschnitt D, Vorschlag: gesammelt als 3.5; Details im Chat vom 9.11.).
 3. **Nur mit echten Spielern:** Quest-Buch mit echten Klicks, Server mit zwei Spielern (`/quests team`), Bosskampf mit
    Freunden, Teams und Edit-Modus von Quest Icons auf einem echten Server.
 4. **Modrinth:** Prüfung abwarten; Autoren der 7 fehlenden Dreamcraft-Mods fragen (`curseforge/modrinth/AUTOREN-ANFRAGE.md`).
@@ -147,8 +147,8 @@ Spielmechaniken oder per Code eingefügter Beute. Die Beach-Craft-Checks (Szene 
     zu Strukturen (Strukturprüfung 6.11.).
   - [x] Der Coral Temple liegt jetzt immer ganz unter Wasser (3.1.0).
   - Neue Gebiete der Raft-Dimension: Der Server fällt 90–180 s zurück.
-  - Log: „Dev warning – Untranslated Item Tags“: Stand 3.4.0 haben alle 63 Item-Tags von Beach Craft keinen Namen
-    (`tag.item.raft.…` fehlt in den Sprachdateien); JEI zeigt dann die rohe Tag-ID. Kleine Verbesserung für 3.4.1.
+  - [x] Log: „Dev warning – Untranslated Item Tags“: in 3.4.1 (9.11.) haben alle 63 Item-Tags einen Namen; JEI zeigt
+    keine rohen Tag-IDs mehr. Dreamcraft bekommt 3.4.1 beim nächsten größeren Update.
 
 ## E. Quest Icons – zu testen
 - [x] Quest Icons 1.2.0 und 1.3.0 hochgeladen und freigegeben (1.3.0: 26.3 = 9501059, 26.2 = 9501060, dazu 6 Ports).

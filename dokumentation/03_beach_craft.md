@@ -859,3 +859,15 @@ parallel in eigenen Worktrees, zusammengeführt in `release/3.4.0` und per Fast-
   shelf_spear 26/26, Lootr 6/6, raft_5/enc_32/boss_32 ohne Fehler, Weltprüfung (1,77 große Orte/km², ≥ 386 Blöcke),
   Produktiv-Test (Server + Client mit Fabric API 0.116.17) ohne Mod-Fehler.
 
+
+## 11. Beach Craft 3.4.1 (9.11.2026)
+
+Freigabe des Nutzers am 9.11.: „Mache 3.4.1 und lade hoch“ (Dreamcraft bekommt 3.4.1 erst beim nächsten größeren
+Update). Inhalt: Anzeigenamen für alle 63 Item-Tags (`tag.item.raft.<Pfad mit Punkten>`, z. B. „Grill Fuel“, „Island
+Seeds“, „Wetsuit Repair Materials“, „Loot: Gold Coin“), damit JEI, REI und EMI keine rohen Tag-IDs wie
+`#raft:grill_fuel` mehr zeigen. Das behebt die Fabric-Dev-Warnung „Untranslated Item Tags“. Die Namen stehen in
+`src/main/resources/assets/raft/lang/en_us.json`, weil die Modul-Generatoren (`tools/bclib/assets.py`, `flush`) ihre
+eigenen Sprachdateien jedes Mal neu schreiben.
+
+- **26.3:** Branch `release/3.4.1` (2ba9c08), per Fast-Forward auf `26.3`. Look-Test 11/11, Warnung im Log weg.
+  CurseForge 9533271, Modrinth `Ph00GCn2` (byte-gleich).

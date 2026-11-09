@@ -871,3 +871,4 @@ eigenen Sprachdateien jedes Mal neu schreiben.
 
 - **26.3:** Branch `release/3.4.1` (2ba9c08), per Fast-Forward auf `26.3`. Look-Test 11/11, Warnung im Log weg.
   CurseForge 9533271, Modrinth `Ph00GCn2` (byte-gleich).
+- **1.21.1:** `port/1.21.1` (5ec6114), Look-Test 11/11. CurseForge 9533319, Modrinth `w0JXgjtq` (byte-gleich).

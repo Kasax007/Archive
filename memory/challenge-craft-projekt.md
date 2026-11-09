@@ -207,5 +207,10 @@ neueste Anweisung des Nutzers.
   GitHub. Vergleich alt/neu auf den Kampf-Tests (brawl, guardian, shield) mit `-PbotLearned`: neu 33/34 (nur das
   wackelige `brawl_zombie_trio`), alt 30/34 (Tode in brawl_enderman, brawl_enderman_slope, low_with_two_zombies).
   Übernommen auf `26.3-lockout-bot` = d85f36f (ohne Versionsänderung; der nächste Release trägt sie).
-- **Bob-Plan:** Der Nutzer will Bob „so gut wie der beste Speedrunner im Lockout Bingo“, mit max. 4 Subagenten, bis
-  er „Stop“ sagt; Plan als Info, einmalige Freigabe.
+- **Bob-Plan (freigegeben 9.11. abends, „Ich finde deinen Plan mit Schritt 1 bis 4 sehr gut“):** Bob „so gut wie der
+  beste Speedrunner im Lockout Bingo“, Algorithmen und Wissen, max. 4 Subagenten, bis der Nutzer „Stop“ sagt. Runden als
+  Workflows (Runde 1: Brett-Gehirn mit Simulator und Suchplaner, Speedrunner-Wissen/Zeitschätzung, Eröffnung; dann
+  Integration + Liga und ein Paket für den BisectHosting-Server des Nutzers, 22 GB, `docs/bob-bisect-server.md`).
+  Wecker `trig_01QyWcet15ZS1jPAYKtU48gK` alle 2 h – bei „Stop“ löschen (delete_trigger) und laufende Workflows stoppen.
+  Keine Challenge-Craft-Version veröffentlichen, bevor Bob deutlich besser ist und der Nutzer zustimmt. Rust-Nachbauten
+  von Minecraft (Pumpkin, Valence, FerrumC) hat der Nutzer angesprochen; Bewertung in Runde 1 (Brain-Agent).

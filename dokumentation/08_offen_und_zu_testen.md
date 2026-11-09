@@ -1,18 +1,32 @@
 # 08 – Offen und zu testen (Checkliste)
 
-Stand 5.11.2026. Alle Repos sind gepusht (lokaler Stand = GitHub). Seit dem 4.11. sind Beach Craft 3.0.0, Tamagotchi 1.2.0 und Dreamcraft V1.3 hochgeladen.
+**Stand 9.11.2026 (Testrunde-Erinnerung vom 5.11. abgearbeitet).** Alles, was am 5.11. zum Hochladen offen war, ist
+online und von CurseForge freigegeben: Beach Craft 3.1.0 bis 3.4.0 (26.3 und 1.21.1), Dreamcraft V1.4 bis V1.6
+(369 Quests in 16 Kapiteln), Quest Icons 1.3.0 mit allen Ports, Tamacraft 1.3.0 (26.3 und 1.21.1), Challenge-Craft-Modpack
+v4.2. Das Challenge-Craft-Modpack v5 ist gestrichen (Pack bleibt Vanilla plus Challenge Craft, Wunsch vom 7.11.). Alle
+sechs Projekte sind auch auf Modrinth (Challenge Craft freigegeben, der Rest in Prüfung).
+
+**Getestet seit dem 5.11.:** Dreamcraft V1.5 (neue Quests im Spiel mit `qrun`, neue Welt mit Questbuch, Server-Pack-Start)
+und V1.6 (Server aus dem Server-Pack + Client wie aus dem Launcher; neue 26.3-Server haben `white-list=true`, das README
+des Server-Packs sagt es). Beach Craft 3.4.0: Look-Tests 11/11 im zusammengeführten Stand, 1.21.1-Port getestet.
+Was unten noch offen ist, geht nur von Hand, braucht deine Entscheidung oder ist eine kleine Verbesserung für später.
 
 **Testrunde 5.11. (automatisch im Spiel):** Alle 344 Dreamcraft-Quests lassen sich erfüllen und abholen (Szene `qrun`,
 `tools/qrun_plan.py`; 317 im ersten Lauf, die 27 übrigen nach Harness-Fixes im zweiten). Die statische Quellen-Prüfung
 (`tools/qsource.py`) findet für 292 von 298 Quest-Items eine Quelle im Überlebensmodus; die 6 übrigen kommen aus
 Spielmechaniken oder per Code eingefügter Beute. Die Beach-Craft-Checks (Szene `bccheck`) stehen unten in D.
-Dreamcraft V1.4 (348 Quests) mit Beach Craft 3.1.0 im vollen Pack: startet ohne neue Fehler, die 4 neuen Quests
-(eigenes Floß, Segel und Motor, ein NPC, alle 8 NPCs) und „Raft Lanterns“ lassen sich erfüllen und abholen (`qrun3`).
 
-**Noch nicht hochgeladen (wartet auf deine Freigabe, Stand 7.11.):** Quest Icons 1.2.0 für 26.3 und 26.2
-(FTB-Quests-Import, gebaut und getestet, siehe [02](02_quest_icons.md#12-ftb-quests-import-neu-in-120)). Das
-Challenge-Craft-Modpack v5 ist gestrichen (das Pack bleibt Vanilla plus Challenge Craft, Wunsch vom 7.11.). Beach Craft 3.1.0 und
-Dreamcraft V1.4/V1.4.1 sind seit dem 6./7.11. online.
+## Kurz: was jetzt noch bei dir liegt (9.11.)
+
+1. **Von Hand auf CurseForge/Bisect:** Beschreibungen neu einfügen (Beach Craft, Dreamcraft, beide Challenge-Craft-Seiten;
+   Übergabeseite), Server-Packs als Server Pack markieren, Bisect-Partnerkonsole (Challenge Craft RAM-Empfehlung 4 GB,
+   Dreamcraft-Eintrag 19732 auf 26.3).
+2. **Entscheidungen:** Challenge Craft Crafter-Änderung → 1.1.4 ja/nein (Abschnitt G); offene Design-Fragen aus Beach Craft
+   2.0.1 (Abschnitt D).
+3. **Nur mit echten Spielern:** Quest-Buch mit echten Klicks, Server mit zwei Spielern (`/quests team`), Bosskampf mit
+   Freunden, Teams und Edit-Modus von Quest Icons auf einem echten Server.
+4. **Modrinth:** Prüfung abwarten; Autoren der 7 fehlenden Dreamcraft-Mods fragen (`curseforge/modrinth/AUTOREN-ANFRAGE.md`).
+5. **Outreach:** 76 Entwürfe auf der Freigabeseite (Stand 9.11.), E-Mails in Portionen von 10–15 pro Tag senden.
 
 ## A. Deine Entscheidungen (blockieren die nächsten Schritte)
 
@@ -41,9 +55,9 @@ Dreamcraft V1.4/V1.4.1 sind seit dem 6./7.11. online.
   -Mod haben Bisect-Links ohne eckige Klammern (CurseForge hatte den alten Link geleert).
 - [ ] **Bisect-Partnerkonsole:** RAM-Empfehlung für Challenge Craft (Pack 27138) auf 4 GB senken (sonst „Insufficient RAM“
   auf der Bestellseite); Dreamcraft-Eintrag (19732) auf die 26.3-Version stellen (zeigt noch „Dreamcraft 1.20.1“).
-- [ ] **Modrinth:** Prüfung abwarten (Beach Craft, Quest Icons, Tamacraft, Challenge-Craft-Pack, Dreamcraft); Autoren
+- [ ] **Modrinth:** Prüfung abwarten (Stand 9.11.: Challenge Craft freigegeben; Beach Craft, Quest Icons, Tamacraft, Challenge-Craft-Pack, Dreamcraft in Prüfung); Autoren
   der 7 fehlenden Dreamcraft-Mods fragen (Vorlage `curseforge/modrinth/AUTOREN-ANFRAGE.md`).
-- [ ] **Beach Craft 3.4** fertigstellen (drei Agenten-Branches), dann 1.21.1-Port und Uploads.
+- [x] **Beach Craft 3.4.0** fertig, 26.3 (9512111) und 1.21.1 (9518456) hochgeladen und freigegeben (8./9.11.).
 
 ## B. Risiken und Aufräumen
 - [ ] **Die Build-Werkzeuge hängen am flüchtigen Scratchpad.** `mkpack.py` hat den Scratchpad-Pfad dieser Sitzung fest
@@ -133,10 +147,11 @@ Dreamcraft V1.4/V1.4.1 sind seit dem 6./7.11. online.
     zu Strukturen (Strukturprüfung 6.11.).
   - [x] Der Coral Temple liegt jetzt immer ganz unter Wasser (3.1.0).
   - Neue Gebiete der Raft-Dimension: Der Server fällt 90–180 s zurück.
-  - Log: „Dev warning – Untranslated Item Tags“.
+  - Log: „Dev warning – Untranslated Item Tags“: Stand 3.4.0 haben alle 63 Item-Tags von Beach Craft keinen Namen
+    (`tag.item.raft.…` fehlt in den Sprachdateien); JEI zeigt dann die rohe Tag-ID. Kleine Verbesserung für 3.4.1.
 
 ## E. Quest Icons – zu testen
-- [ ] Quest Icons 1.2.0: Upload beider Dateien (26.3 und 26.2) freigeben; danach Freigabe auf CurseForge prüfen.
+- [x] Quest Icons 1.2.0 und 1.3.0 hochgeladen und freigegeben (1.3.0: 26.3 = 9501059, 26.2 = 9501060, dazu 6 Ports).
 - [ ] FTB-Import mit einem eigenen oder freien FTB-Buch ausprobieren: `/quests import ftbquests` (Vorschau), Bericht
   `config/questsicons/ftbquests-import-report.txt` lesen, dann `run`.
 - [ ] Teams auf einem echten Server: einladen per Klick im Chat, beitreten, Server neu starten – kein leeres Team mehr.
@@ -145,8 +160,8 @@ Dreamcraft V1.4/V1.4.1 sind seit dem 6./7.11. online.
 
 ## F. Tamagotchi – nach dem Release (1.2.0 = 9431312)
 - [x] CurseForge-Datei-ID von 1.2.0 (9431312) notiert und in Dreamcraft V1.3 verwendet.
-- [ ] Optional: CurseForge-Beschreibung um die Modpack-Funktionen von 1.2.0 ergänzen (sie ist noch auf 1.1.0).
-- [ ] Modrinth: nur wenn `MODRINTH_TOKEN` und `modrinth_id` gesetzt sind.
+- [x] Beschreibung: seit 1.3.0 (Tamacraft) mit Modpack-Abschnitt (Struktur- und Item-Tags).
+- [x] Modrinth: Tamacraft ist eingerichtet (8.11.), wartet auf die Prüfung.
 
 ## G. Challenge Craft
 - [ ] Crafter-Entscheidung (siehe A).
@@ -156,4 +171,4 @@ Dreamcraft V1.4/V1.4.1 sind seit dem 6./7.11. online.
   Abbauen behalten, Update-Tag, XP vom Client, wer Bob in die Lobby holen darf, Trivia-Antwort an den Client,
   `ROULETTE_LEAVE`.
 - [ ] Bob: Zielen unter Lag (`sniper_duel`) ansehen.
-- [ ] Alt, aber offen: Modrinth hat noch 1.1.1 (1.1.2 und 1.1.3 fehlen; es fehlt der Modrinth-Token).
+- [x] Modrinth hat jetzt 1.1.2 und 1.1.3 (8.11., byte-gleich mit CurseForge).

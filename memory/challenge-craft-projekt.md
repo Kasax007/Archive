@@ -214,3 +214,27 @@ neueste Anweisung des Nutzers.
   Wecker `trig_01QyWcet15ZS1jPAYKtU48gK` alle 2 h – bei „Stop“ löschen (delete_trigger) und laufende Workflows stoppen.
   Keine Challenge-Craft-Version veröffentlichen, bevor Bob deutlich besser ist und der Nutzer zustimmt. Rust-Nachbauten
   von Minecraft (Pumpkin, Valence, FerrumC) hat der Nutzer angesprochen; Bewertung in Runde 1 (Brain-Agent).
+
+## Stand 10.11.2026 (Bob Runde 1 übernommen, Runde 2 läuft)
+
+- **Runde 1 (Bob-plan Abschnitt 27, „Runde 22“) übernommen:** `26.3-lockout-bot` = d9c5cac (83aa770 = Runde 1 + Merge
+  des Server-Pakets). Liga 9 (12 Seeds, 20 min, hart, SIM=1): 2,88 statt 2,08 Felder pro Bob (gepaart +0,79, SE 0,39),
+  erstes Feld Median 265 statt 440 s, Tode gleich (0,25/Bob), aber Ertrinken 5 in 40 Bot-Spielen (alt 0) – AirTask
+  „dig instead“ hängt. Eröffnung: vier Steinwerkzeuge 109 statt 196 s, 1,88 statt 0,62 Felder in 10 min.
+  Brett-Gehirn (Simulator `bot/lockout/sim`, Vorausschau `search=1`): im Simulator +1,68 Felder/90 min, in echten
+  Spielen (Liga 10) schlechter (−1,0 Felder) → bleibt aus. Wissensbasis `bob-knowledge/speedrun.json` (304 Ziele,
+  46 Mobs, 16 Strukturen), `docs/bob-reference-times.md`. SIM-Regel geprüft: die Vorausschau zählt in SIM nach Spiel-
+  Ticks (60 Spiele/Tick), Uhrzeit nur als Hänger-Wächter.
+- **Rust-Nachbauten (Pumpkin, Valence, FerrumC):** geprüft – nein. Keiner kann Fabric/Java-Bob laufen lassen, Mob-KI,
+  Loot, Kampf und Advancements fehlen. Stattdessen: abstrakter Simulator für Strategie, Vanilla-Server mit SIM=1 und
+  Test-Arenen für Fähigkeiten.
+- **BisectHosting-Paket (Bob-Autopilot, `src/autopilot`, `docs/bob-bisect-server.md`):** eigene Start-Jar
+  `bob-autopilot.jar` (reines Java 17), startet pro Spiel einen Fabric-Server mit frischer Welt, Liga wie
+  `bobleague.py`, Export-Zip alle 12 h zum Hochladen im Chat. Dem Nutzer am 10.11. als `bob-bisect-paket.zip`
+  geschickt (Anleitung, Autopilot, Mod-Jar mit Bob-Commit d9c5cac, Fabric API 0.161.0+26.3). Auf einem echten
+  Bisect-Panel noch ungetestet; bei 22 GB `league_games=auto` = 3 Spiele parallel.
+- **Runde 2 (ab 10.11. ~10:45 UTC):** zwei Build-Workflows – A: `bob/r2-survival` (Ertrinken, Zombies ohne Waffe,
+  Skelette vor dem Schild, Deckungsmodell gegen Gruppen) und `bob/r2-kit` (Eisen aus bekannten Strukturen/Höhlen,
+  Schmelzen ohne Warten, Adern ganz abbauen, Sprinten, Essen in Sicht, baumlose Starts, Item-Verlangsamung als Knopf);
+  B: `bob/r2-brain` (zu optimistische Schätzungen, Simulator auf neuen Code kalibrieren, Vorausschau entscheidet Chores,
+  Loot-/Jagd-Routen testen). Danach Integration mit Liga (16 Seeds) und Gate; Wecker kennt den Ablauf.

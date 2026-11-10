@@ -873,3 +873,30 @@ eigenen Sprachdateien jedes Mal neu schreiben.
   CurseForge 9533271, Modrinth `Ph00GCn2` (byte-gleich).
 - **1.21.1:** `port/1.21.1` (5ec6114), Look-Test 11/11. CurseForge 9533319, Modrinth `w0JXgjtq` (byte-gleich).
 - Beide Dateien von CurseForge freigegeben (geprüft 9.11., 23:02 UTC).
+
+## 12. Beach Craft 3.4.2 (10.11.2026, Entscheidungen des Nutzers zum 2.0.1-Review)
+
+Der Nutzer hat am 9.11. die alten Design-Fragen entschieden: angenommen 2, 3, 4, 6 (bleibt) und 7; Punkt 5 anders als
+vorgeschlagen („Treibholz ist kein Baum“: Setzling raus aus Beute und Tabs); Punkt 1 abgelehnt (Titanofen verdoppelt
+weiter). Versionsname auf Wunsch 3.4.2 statt 3.5.0 („keine Major-Version“). Hochladen hatte er freigegeben.
+
+- **Energie bleibt im Item** (Batterie, Solarpanel, Steinbruch, Chunk Destroyer, Windrad, Luftkompressor): Komponente
+  `raft:stored_energy`, Tooltip, Loot mit `copy_components`; leere Maschinen stapeln wie bisher. Kabel behalten ihren
+  kleinen Puffer bewusst nicht.
+- **Chunk Destroyer**: 100.000 FE nur für Säulen, in denen er wirklich abbaut; leere Säulen (Luft, Wasser, Lava,
+  Grundgestein) kostenlos und sofort übersprungen (16 pro Tick).
+- **Item Catcher**: 9 Fänge-Fächer plus Netz-Fach; alte Welten laden den einen Fang ins erste Fach; Trichter ziehen aus
+  allen neun. Der Komparator misst jetzt über 10 Fächer (schwächeres Signal bei gleichem Fang).
+- **Treibholz-Setzling**: nicht mehr in Treibgut-Fässern, Blätter lassen Stöcke fallen, nicht mehr im Kreativ-Tab;
+  Block und Item bleiben registriert (alte Welten). JEI zeigt ihn noch.
+- **Plastic Hook**: zieht nur mit freier Sichtlinie (auch Glas und die Blöcke eines fahrenden Floßes stoppen ihn).
+- **Nur 1.21.1, alte Fehler seit 3.2.0+1.21.1 behoben**: elf Blöcke waren unsichtbar (Item Catcher, Batterie, Solarpanel,
+  Steinbruch, Chunk Destroyer, Grill, Wasserreiniger, Luftkompressor, beide Kabel, Research Terminal, Leviathan-Altar);
+  ein zurückgelassenes fahrendes Floß ließ den Server abstürzen, und beim Schließen der Welt mit fahrendem Floß wurde
+  nicht gespeichert.
+- **Tests**: catcher 26/26, machines 42/42, hook_saplings 19/19, look 11/11 (beide Versionen), dazu raft_leave 8/8 und
+  machine_looks 2/2 (1.21.1) und Server-Smoke-Tests. Kein separater Prüf-Agent (Wunsch des Nutzers).
+- **Uploads**: 26.3 = CurseForge 9536199, Modrinth `76jxbxBe`; 1.21.1 = CurseForge 9536202, Modrinth `A9k3TCkB` (byte-gleich).
+  Branches: `26.3` = `f48caaf` (Fast-Forward von `release/3.4.2`), `port/1.21.1` = `f2e52ca`. Remote-Branch
+  `release/3.5.0` ist überholt (alles in 3.4.2) und kann gelöscht werden. Dreamcraft bekommt 3.4.2 beim nächsten
+  größeren Update.

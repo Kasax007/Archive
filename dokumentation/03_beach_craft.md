@@ -896,7 +896,7 @@ weiter). Versionsname auf Wunsch 3.4.2 statt 3.5.0 („keine Major-Version“). 
   nicht gespeichert.
 - **Tests**: catcher 26/26, machines 42/42, hook_saplings 19/19, look 11/11 (beide Versionen), dazu raft_leave 8/8 und
   machine_looks 2/2 (1.21.1) und Server-Smoke-Tests. Kein separater Prüf-Agent (Wunsch des Nutzers).
-- **Uploads**: 26.3 = CurseForge 9536199, Modrinth `76jxbxBe`; 1.21.1 = CurseForge 9536202, Modrinth `A9k3TCkB` (byte-gleich).
+- **Uploads**: 26.3 = CurseForge 9536199, Modrinth `76jxbxBe`; 1.21.1 = CurseForge 9536202, Modrinth `A9k3TCkB` (byte-gleich). Beide CurseForge-Dateien freigegeben (geprüft 10.11., 04:04 UTC).
   Branches: `26.3` = `f48caaf` (Fast-Forward von `release/3.4.2`), `port/1.21.1` = `f2e52ca`. Remote-Branch
   `release/3.5.0` ist überholt (alles in 3.4.2) und kann gelöscht werden. Dreamcraft bekommt 3.4.2 beim nächsten
   größeren Update.

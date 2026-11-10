@@ -255,3 +255,22 @@ neueste Anweisung des Nutzers.
   abbauen/laufen, kein Hunger, Start-Kit, Strukturwissen). Vom Nutzer vorerst abgelehnt („wenn 1 nichts bringt,
   dann in Zukunft das“).
 - Zwischenstand Runde 2 und offene Testpunkte: `docs/bob-plan.md` Abschnitt 28.
+
+## Stand 10.11.2026 nachts (Runde 3: Algorithmen + Laptop-App „Bob-Trainer“)
+
+- Nutzer wollte modernere Algorithmen (1 Weltmodell/Bayes-Suche, 2 Bewegung mit Spielphysik, 3 Risiko in der
+  Wegsuche) und eine Laptop-Software statt Bisect. Erlaubt war **ein** effizienter Agent (verbrauchte ~0,6 Mio.
+  Tokens, ~1,8 h). Zweig `bob/r3-algos` = `26.3-lockout-bot` = 8ca58ee (mod_version 1.1.4, nichts veröffentlicht).
+- Neue Schalter `riskpath`, `beliefs`, `motionsearch`: im Code an (Tests), in champion.json/Knobs.java/bobleague.py
+  aus (Standard 0) – die Liga testet sie zuerst. Gemessen (Szenen, je 3 Läufe): riskpath 0 statt 12–21 HP gegen zwei
+  Skelette; beliefs: Schätzungen hängen vom Kontext ab (Eisen 202 s Ebene / 68 s Berg / 37 s bekannte Höhle; Kuh diesseits
+  statt über den Fluss 103 statt 184 Ticks); motionsearch nur +3–6 % (Bob sprintet in Testkursen schon 5–7 Blöcke/s; die
+  3,3 Blöcke/s aus echten Partien kommen von Pausen, Wasser, Graben – noch nicht gemessen).
+- **Bob-Trainer** (`src/autopilot`, Gradle `bobTrainerJar`, `scripts/trainer/`, `scripts/bot/package_trainer.sh`):
+  Windows-Start per `Bob-Trainer starten.bat` (unsichtbar, javaw), Dashboard http://127.0.0.1:8765 (Pause, Sofort
+  pausieren, Weiter, Beenden, Export, Leistung), EULA nur durch den Nutzer, Java-25-Suche/Download (Temurin), Fabric-
+  Server-Launcher gebündelt, Lithium + FerriteCore (C2ME/ScalableLux nicht: Weltgleichheit ungeprüft), +18 % Tempo.
+  Liga: jede Partie neue Zufallswelt (gepaart), Bayes-Sequenztest (≥ 8 Welten, P > 0,95 befördern, < 0,05 raus, max 24),
+  ungetestete Schalter zuerst, dann Thompson-Sampling; 30-min-Spiele, jedes 5. 90 min; Tagebuch mit Kontext je Ziel.
+  Paket `Bob-Trainer.zip` (sha1 db064b3e…) am 10.11. geschickt. Windows/macOS-Skripte nicht im Container getestet.
+- Weiter: Nutzer lässt den Trainer laufen und lädt Exporte hoch; kurze Sitzung wertet aus. Reserve „Bob Pro“.

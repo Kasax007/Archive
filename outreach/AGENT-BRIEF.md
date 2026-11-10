@@ -1,6 +1,7 @@
-# Outreach brief for research agents (9.11.2026) - read fully before you start
+# Outreach brief for research agents (Stand 10.11.2026) - read fully before you start
 
-Copy of the brief used for the big round on 9.11.2026. Update the facts (versions, numbers) before reusing it.
+Brief of the big round on 9.11.2026, updated for the daily routine on 10.11.2026. Update the facts (versions,
+numbers) before reusing it.
 
 You research outreach targets for Kasax (CurseForge author Kasax007) and write personal draft messages.
 You NEVER send, post, comment, DM, follow, subscribe or sign up anywhere. Kasax reads, edits and sends every message
@@ -16,6 +17,15 @@ Do NOT edit `creators.csv`, `targets.csv`, `suppression.csv`, `config.json` or a
 push. Only create new files in `drafts/` (and scratch files under
 `/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/agents/<your name>/`).
 Skip every target whose id is already in `targets.csv`, `creators.csv`, `suppression.csv` or `drafts/`.
+Several agents work at the same time: before you research a target in depth, claim it with
+`mkdir /tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/agents/claims/<file stem>`
+(e.g. `yt-Handle`, `tt-handle`, `cf-123456`). If mkdir fails, another agent has it: pick a different target.
+Never overwrite an existing file in `drafts/`.
+Exception to the skip rule: rows in `targets.csv` with status `new` and a note starting with `Lead` are good candidates
+an earlier run found but could not draft (e.g. the day's HOLD quota was full). Check those first; if they still fit
+(fresh video, invited route), claim and draft them - they count as new. Rows with status `skip` and a note
+`Geprüft <date>, verworfen: ...` were checked and rejected; look at them again only if the reason may have changed
+(e.g. a channel that was inactive).
 
 ## Hard rules
 
@@ -45,7 +55,7 @@ Skip every target whose id is already in `targets.csv`, `creators.csv`, `suppres
 8. Follow-up (template D) exactly as in the eldor draft, adapted to the name and project.
 9. Be polite to the websites: one request at a time, short pauses, no bulk crawling.
 
-## Facts you may use (all free, all true on 9.11.2026)
+## Facts you may use (all free, all true on 10.11.2026)
 
 - **Challenge Craft** (mod, Fabric 26.3, also older builds for 26.2 and 1.21.5): turns any world into a challenge run.
   51 challenges you can stack (each combination gets a difficulty rating), e.g. Lockout Bingo (up to 4 teams on a
@@ -62,7 +72,7 @@ Skip every target whose id is already in `targets.csv`, `creators.csv`, `suppres
   with story places and a boss (Beach Craft), ten rare pets to tame (Tamacraft), server pack, BisectHosting order link
   (code KASAX007 = 25% off). https://www.curseforge.com/minecraft/modpacks/dreamcraft-new ; short:
   https://www.youtube.com/watch?v=G-whF3xKTQ4 ; trailer and a 21-minute documentary exist (footage on request).
-- **Beach Craft 3.4.0** (mod, Fabric 26.3 and 1.21.1): the open-sea survival of the game Raft in Minecraft. Driftwood
+- **Beach Craft 3.4.2** (mod, Fabric 26.3 and 1.21.1): the open-sea survival of the game Raft in Minecraft. Driftwood
   portal to the Endless Sea; build a raft block by block and sail it like a ship (mast, sails, anchor, motor, wheel);
   hook debris, purify water, farm on deck; Bruce the shark bites your raft. Twelve biomes (palm, jungle, mangrove,
   volcanic isles, reefs, kelp forests, frost floes, trenches), seven story places (castaway, Old Lighthouse, Saltmere,
@@ -85,12 +95,12 @@ Skip every target whose id is already in `targets.csv`, `creators.csv`, `suppres
 
 ## Tools that work from this container
 
-- YouTube search (public results page, videos from the last month):
-  `cd /tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/ccyt && python3 search.py "term" "term2"`
-  (writes results.json in the current dir - copy the scripts to your own scratch dir first so agents don't clash).
-  `python3 about.py @handle ...` = subscribers, video count, masked e-mails in the description.
-  `python3 chan.py @handle` = description (e-mails masked) + latest 12 videos with age, views, ids.
-  To read an unmasked address for your report, fetch the About page yourself and print it to the console only.
+- YouTube (public pages, low volume; run from your own scratch dir, the search writes `yt_results.json` there):
+  `python3 /home/user/Archive/outreach/tools/yt_search.py "term" "term2"` = videos uploaded this month with channel
+  handle, title, age, views. `python3 /home/user/Archive/outreach/tools/yt_channel.py @handle` = description (e-mails
+  masked) + latest 12 videos with age, views, ids. `python3 /home/user/Archive/outreach/tools/yt_about.py @handle` =
+  subscribers, video count, masked e-mails; with `--show` it prints them unmasked to your console only (for your
+  final report - never redirect that output into a file).
 - TikTok profile pages are readable with curl (Chrome user agent): JSON in the HTML has `"signature"` (bio) and
   `"followerCount"`. TikTok search pages need JS; find TikTok creators via the WebSearch tool, via links on their
   YouTube channels, or via linktree/beacons pages.
@@ -122,7 +132,7 @@ File name = id with ":" and "@" removed: `yt:@Handle` -> `drafts/yt-Handle.md`, 
 | Warum eingeladen | <why this route is invited; for e-mails add: "Achtung § 7 UWG: Eine Geschäftsadresse ist keine Einwilligung; einzeln, persönlich und mit Fußzeile senden, Restrisiko bleibt."> |
 | Vor dem Senden | <what Kasax should check first, German> |
 
-**Belege** (geprüft am 9.11.2026):
+**Belege** (geprüft am <date of your check, e.g. 10.11.2026>):
 
 - <evidence bullet with title, URL, age/date>
 - <...>

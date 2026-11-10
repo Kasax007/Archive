@@ -16,6 +16,8 @@ Discord mit „Kopieren & öffnen“. E-Mail-Adressen stehen nur in der privaten
 
 **Große Runde 9.11.2026** (Nutzer: „2 reicht nicht“): drei Recherche-Agenten, 49 neue Entwürfe auf der Seite – 20 Creator für Challenge Craft und Dreamcraft (YouTube, davon 4 deutsch), 20 Mod-Showcase-Creator (14 YouTube, 6 TikTok), 9 Pack-Autoren mit geschätzt 750 bis 40.000 Downloads im Monat (auch 1.21.1 und 1.20.1, Forge/NeoForge für Quest Icons). 30 Creator-Adressen stehen in der Datenbank, 10 Creator auf `hold` (Adresse nur hinter dem Captcha), 3 Modrinth-Packs auf `hold` (unsere Mods noch in Prüfung). Instagram war aus dem Container nicht lesbar. Neu: `discover_wide.py` (größere Packs auf allen Versionen unserer Mods, Seeds in `data/wide_cf_seeds.csv`, Ausgabe `data/wide_candidates.json`). Die Routine liefert seitdem 10–20 Entwürfe pro Werktag.
 
+**Lauf 10.11.2026** (Routine, Dienstag): drei Recherche-Agenten und je ein Prüf-Agent (Workflow). 13 neue Entwürfe auf der Seite: 8 Creator für Challenge Craft und Dreamcraft (davon 1 deutsch, 2 auf `hold`) und 5 Mod-Showcase-Creator (1 TikTok, 2 auf `hold`); 9 Adressen in der Datenbank. Die Prüfer verwarfen 2 Entwürfe (Impressum-Adresse ohne Einladung; TikTok ohne Mod-Video seit 71 Tagen). Kein Pack-Entwurf: Keiner der 237 großen Packs aus `discover_wide.py` und etwa 90 weiteren CurseForge-Packs hatte zugleich passende Version, echte Lücke, eingeladenen Weg und genug Downloads. Neu: Verworfene Kandidaten stehen mit Grund als `skip` in `targets.csv` (Notiz „Geprüft <Datum>, verworfen: …“), gute Kandidaten, die nur am HOLD-Kontingent scheiterten, als `new` mit Notiz „Lead <Datum>: …“ (die nächste Runde entwirft sie zuerst). Die Hilfsskripte der Routine liegen jetzt in `tools/`.
+
 ## Wochenablauf
 
 | Schritt | Wer | Wie |
@@ -41,6 +43,15 @@ python3 discover.py --no-verify  # ohne Prüfung der Discord-Einladungen und Git
 python3 score.py --top 25        # Tabelle aktualisieren, beste offene Ziele zeigen
 python3 score.py --due           # fällige Nachfragen
 python3 score.py --kpi           # Wochenzahlen
+```
+
+Hilfsskripte der täglichen Routine (temporäre Dateien im Ordner `$SP`, Standard: Scratchpad der Sitzung):
+
+```
+python3 tools/check_drafts.py yt-Handle cf-123-slug ...   # Format wie seed_page.py, verbotene Sätze, Casino, Bob, Länge, Adressen
+python3 tools/merge_reports.py REPORT.json                # Agenten-Berichte OHNE Adressen -> creators.csv / targets.csv
+python3 tools/seed_new.py DB_IDS.txt [ONLY.txt]            # neue Entwürfe -> JSON je Zeile + Batch-Einträge für die Seite
+python3 tools/add_skips.py WORKFLOW_OUTPUT.json LEAD_ID ... # verworfene Kandidaten als skip, Leads als new in targets.csv
 ```
 
 Nur Python 3.10+ ohne Zusatzpakete. Netz: `api.modrinth.com`, `api.cfwidget.com`, `mediafilez.forgecdn.net`,

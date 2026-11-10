@@ -18,7 +18,8 @@ push. Only create new files in `drafts/` (and scratch files under
 `/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/agents/<your name>/`).
 Skip every target whose id is already in `targets.csv`, `creators.csv`, `suppression.csv` or `drafts/`.
 Several agents work at the same time: before you research a target in depth, claim it with
-`mkdir /tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/agents/claims/<file stem>`
+`mkdir -p .../scratchpad/agents/claims-<today as YYYYMMDD>` once, then
+`mkdir /tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/agents/claims-<YYYYMMDD>/<file stem>`
 (e.g. `yt-Handle`, `tt-handle`, `cf-123456`). If mkdir fails, another agent has it: pick a different target.
 Never overwrite an existing file in `drafts/`.
 Exception to the skip rule: rows in `targets.csv` with status `new` and a note starting with `Lead` are good candidates

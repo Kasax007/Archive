@@ -238,3 +238,20 @@ neueste Anweisung des Nutzers.
   Schmelzen ohne Warten, Adern ganz abbauen, Sprinten, Essen in Sicht, baumlose Starts, Item-Verlangsamung als Knopf);
   B: `bob/r2-brain` (zu optimistische Schätzungen, Simulator auf neuen Code kalibrieren, Vorausschau entscheidet Chores,
   Loot-/Jagd-Routen testen). Danach Integration mit Liga (16 Seeds) und Gate; Wecker kennt den Ablauf.
+
+## Stand 10.11.2026 abends (Bob-Runden beendet, Messen auf dem Server)
+
+- **Nutzer-Feedback (wichtig):** Er wollte große, radikale Verbesserungen, keine kleinen Schritte; die zwei
+  Agenten-Runden waren ihm zu teuer für den messbaren Gewinn (je Runde ~3 Mio. erzeugte Tokens, dazu viel
+  wiederholt gelesener Kontext, weil Agenten stundenlang auf den Build-Lock warteten). Runde 2 auf seinen Wunsch
+  gestoppt, der Zwei-Stunden-Wecker ist gelöscht. **Keine weiteren Bob-Agenten-Runden ohne neuen Auftrag.**
+  Vor teurer Arbeit immer Kosten und erwarteten Nutzen nennen.
+- **Entscheidung „Option 1“:** Ertrinken-Fix fest an (`drystairs`, `halfair`, `airsafe`, `drowsafe`); alle anderen
+  Runde-2-Änderungen zusammengeführt (`bob/r2-knobs`, `26.3-lockout-bot` = 0249894), im normalen Spiel aus
+  (`bob-models/champion.json`) und in den Liga-Tabellen (Autopilot `Knobs.java`, Laptop `bobleague.py`, Standard 0;
+  `search` 0/2). Die Server-Liga schaltet sie als Herausforderer um. Dem Nutzer `bob-bisect-paket-2.zip`
+  geschickt (Mod-Jar Bob-Commit 0249894). Er schickt Export-Zips; eine kurze Sitzung wertet aus.
+- **Reserve „Bob Pro“:** falls die Server-Liga nichts bringt – höchste Stufe mit offenen Vorteilen (schneller
+  abbauen/laufen, kein Hunger, Start-Kit, Strukturwissen). Vom Nutzer vorerst abgelehnt („wenn 1 nichts bringt,
+  dann in Zukunft das“).
+- Zwischenstand Runde 2 und offene Testpunkte: `docs/bob-plan.md` Abschnitt 28.

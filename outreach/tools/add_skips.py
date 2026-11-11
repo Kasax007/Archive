@@ -8,6 +8,8 @@ D = f'{TODAY.day}.{TODAY.month}.{TODAY.year}'
 EM = re.compile(r'[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,}')
 IDRE = re.compile(r'(?:yt|tt|ig):@[\w.\-]*\w|cf:\d+|mr:[A-Za-z0-9]{8}')
 res = json.load(open(sys.argv[1]))['result']
+if isinstance(res, dict):  # a one-stream run returns {report, verdicts}, a multi-stream run a list of them
+    res = [res]
 leads = set(sys.argv[2:])
 tpath = os.path.join(OUT, 'targets.csv')
 rows = list(csv.DictReader(open(tpath, encoding='utf-8', newline='')))

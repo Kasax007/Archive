@@ -2,7 +2,7 @@
 
 | Feld | Inhalt |
 | --- | --- |
-| Ziel | [IsKevin](https://www.youtube.com/@IsKevin) · `yt:@IsKevin` · Score 100 · ~71K subscribers |
+| Ziel | [IsKevin](https://www.youtube.com/@IsKevin) · `yt:@IsKevin` · Score 90 · ~71K subscribers |
 | Status | HOLD: Adresse steht nur hinter YouTubes „View email address“ (Captcha). Von Hand auf der About-Seite nachsehen, in die Datenbank eintragen, dann senden per E-Mail, werktags (Di–Do). |
 | Passt | Dreamcraft |
 | Kontaktweg | Die About-Seite bietet eine Geschäftsadresse hinter „View email address“ (Captcha) – von Hand nachsehen. Nur per E-Mail an diese Adresse, keine Kommentare, keine DMs. |

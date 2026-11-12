@@ -2,7 +2,7 @@
 
 | Feld | Inhalt |
 | --- | --- |
-| Ziel | [TBF Craft](https://www.youtube.com/@TBFCRAFT) · `yt:@TBFCRAFT` · Score 85 · ~792 subscribers (Folgen mit 1.8K–68K Aufrufen, EP1 68K) |
+| Ziel | [TBF Craft](https://www.youtube.com/@TBFCRAFT) · `yt:@TBFCRAFT` · Score 75 · ~792 subscribers (Folgen mit 1.8K–68K Aufrufen, EP1 68K) |
 | Status | Senden per E-Mail, werktags (Di–Do). |
 | Passt | Dreamcraft |
 | Kontaktweg | E-Mail an die Adresse, die der Kanal in seiner Beschreibung unter „Email for inquiries:“ nennt. Die Adresse steht nur in der Datenbank der Seite. Nur per E-Mail, keine Kommentare, keine DMs. |

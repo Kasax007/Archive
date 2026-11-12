@@ -2,7 +2,7 @@
 
 | Feld | Inhalt |
 | --- | --- |
-| Ziel | [HanLink](https://www.youtube.com/@HanLink) · `yt:@HanLink` · Score 85 · ~333K subscribers |
+| Ziel | [HanLink](https://www.youtube.com/@HanLink) · `yt:@HanLink` · Score 70 · ~333K subscribers |
 | Status | Senden per E-Mail, werktags (Di–Do). |
 | Passt | Challenge Craft |
 | Kontaktweg | E-Mail an die Adresse, die der Kanal in seiner Beschreibung unter „Kontakt für Anfragen:“ nennt. Die Adresse steht nur in der Datenbank der Seite. Nur per E-Mail, keine Kommentare, keine DMs. |

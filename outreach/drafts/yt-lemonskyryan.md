@@ -2,12 +2,12 @@
 
 | Feld | Inhalt |
 | --- | --- |
-| Ziel | [LemonskyRyan](https://www.youtube.com/@lemonskyryan) · `yt:@lemonskyryan` · Score 85 · ~296K subscribers (TikTok ~240K) |
+| Ziel | [LemonskyRyan](https://www.youtube.com/@lemonskyryan) · `yt:@lemonskyryan` · Score 75 · ~296K subscribers (TikTok ~240K) |
 | Status | HOLD: Adresse steht nur hinter YouTubes „View email address“ (Captcha). Von Hand auf der About-Seite nachsehen, in die Datenbank eintragen, dann senden per E-Mail, werktags (Di–Do). |
 | Passt | Tamacraft |
 | Kontaktweg | Die About-Seite bietet eine Geschäftsadresse hinter „View email address“ (Captcha) – von Hand nachsehen. Nur per E-Mail an diese Adresse, keine Kommentare, keine DMs. Das verlinkte Google-Formular ist eine Bewerbung für Builder, kein Kontaktweg. |
 | Warum eingeladen | Der Kanal hinterlegt selbst eine Geschäftsadresse bei YouTube. Achtung § 7 UWG: Eine Geschäftsadresse ist keine Einwilligung; einzeln, persönlich und mit Fußzeile senden, Restrisiko bleibt. |
-| Vor dem Senden | Lead vom 10.11.2026, heute erneut geprüft: weiter keine öffentliche Adresse (Beschreibung „Subscribe for silly little Minecraft videos :)“, TikTok-Bio ohne Weg). Gibt es den Knopf „View email address“ nicht mehr, nicht senden (dann `skip`). Der Text nennt nur Titel, keine Szenen. |
+| Vor dem Senden | Lead vom 10.11.2026, heute erneut geprüft: weiter keine öffentliche Adresse (Beschreibung „Subscribe for silly little Minecraft videos :)“, TikTok-Bio ohne Weg, nur ein Discord-Link). About-Seite zeigt am 12.11. „Sign in to see email address“ (Captcha-Adresse vorhanden). Gibt es den Knopf „View email address“ nicht mehr, nicht senden (dann `skip`). Der Text nennt nur Titel, keine Szenen. |
 
 **Belege** (geprüft am 12.11.2026):
 

@@ -2,7 +2,7 @@
 
 | Feld | Inhalt |
 | --- | --- |
-| Ziel | [Ennesimo](https://www.youtube.com/@Ennesimo) · `yt:@Ennesimo` · Score 85 · ~205K subscribers |
+| Ziel | [Ennesimo](https://www.youtube.com/@Ennesimo) · `yt:@Ennesimo` · Score 70 · ~205K subscribers |
 | Status | HOLD: Adresse steht nur hinter YouTubes „View email address“ (Captcha). Von Hand auf der About-Seite nachsehen, in die Datenbank eintragen, dann senden per E-Mail, werktags (Di–Do). |
 | Passt | Challenge Craft |
 | Kontaktweg | Die About-Seite bietet eine Geschäftsadresse hinter „View email address“ (Captcha) – von Hand nachsehen. Nur per E-Mail an diese Adresse, keine Kommentare, keine DMs. |

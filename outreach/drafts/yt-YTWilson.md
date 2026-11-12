@@ -2,7 +2,7 @@
 
 | Feld | Inhalt |
 | --- | --- |
-| Ziel | [Wilson](https://www.youtube.com/@YTWilson) · `yt:@YTWilson` · Score 85 · ~269K subscribers |
+| Ziel | [Wilson](https://www.youtube.com/@YTWilson) · `yt:@YTWilson` · Score 75 · ~269K subscribers |
 | Status | Senden per E-Mail, werktags (Di–Do). |
 | Passt | Dreamcraft |
 | Kontaktweg | E-Mail an die Adresse, die der Kanal in seiner Beschreibung unter „Business inquiries:“ nennt. Die Adresse steht nur in der Datenbank der Seite. Nur per E-Mail, keine Kommentare, keine DMs. |

@@ -23,7 +23,7 @@
 
 > Hi Buodq,
 >
-> I came across "Surviving EVERY HORROR MOD on an Endless Ocean" and "This Kraken Mod Is GENUINELY TERRIFYING" – your ocean survival videos with your friends are so much fun, and the titles alone make me want to click!
+> I came across "Surviving EVERY HORROR MOD on an Endless Ocean" and "This Kraken Mod Is GENUINELY TERRIFYING" – your ocean survival videos sound like so much fun, and the titles alone make me want to click!
 >
 > I make Beach Craft, a free mod that brings the open-sea survival of Raft to Minecraft. You go through a driftwood portal to the Endless Sea, build a raft block by block and sail it, while Bruce the shark bites your raft. There are volcanic isles, deep trenches and guarded places with bosses like the Corsair Captain and the Reef Warden. It runs on Fabric and NeoForge for 1.21.1 and 26.3.
 >

@@ -15,6 +15,12 @@ for h in [a for a in sys.argv[1:] if a != '--show']:
     subs=(re.search(r'"subscriberCountText":"([^"]+)"',html) or re.search(r'([\d.,]+[KM]?) subscribers',html))
     vids=re.search(r'"videoCountText":"([^"]+)"',html) or re.search(r'([\d,]+) videos',html)
     desc=(re.search(r'"description":"(.*?)","',html) or [None,''])[1]
+    # (The description is JSON-escaped: a line break before an address is "\\n" and would read as an "n" in front of
+    # it - "\\nname@x" became "nname@x". Turn the escapes into real characters first.)
+    try:
+        desc = json.loads('"' + desc + '"')
+    except ValueError:
+        desc = desc.replace('\\n', ' ').replace('\\r', ' ').replace('\\t', ' ')
     emails=sorted({e for e in EM.findall(desc) if not e.endswith(('.png','.jpg'))})
     masked=emails if SHOW else [e[0]+'***@'+e.split('@')[1] for e in emails]
     has_button='View email address' in html or 'businessEmail' in html

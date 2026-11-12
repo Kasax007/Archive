@@ -39,6 +39,7 @@ Im Mod-Repo ist `CLAUDE.md` vom Nutzer per `.gitignore` ausgeschlossen (seine lo
 | `beachcraft/structure-check/` | Strukturprüfung 6.11. (alle 19 Strukturen Block für Block, Personen, Vorher/Nachher, Bilder). Siehe `README.md` dort |
 | `beachcraft/logo/` | CurseForge-Logo (isometrischer Strand-Chunk aus Mod-Texturen + Titel), Skript `make_logo.py`, Fassungen 1024/512/400/256, Icon ohne Schrift |
 | `tamagotchi/` | Videos zum Mod Tamagotchi (Short, 2-Minuten-Showcase, Review-Schnitt mit echten Spielgeräuschen), Werkzeuge, Endkarten. Siehe `tamagotchi/README.md` |
+| `crawl-of-fame/` | Ablage zum Mod „Crawl of Fame“: Aufträge an die Agenten (`briefs/`), Workflow-Skripte. Gedächtnis: `memory/crawl-of-fame-projekt.md` |
 | `fonts/` | Schriften für Untertitel und Titel (vor dem Rendern nach `$SP/fonts` kopieren) |
 | `motion/` | Remotion-Projekt (Motion Graphics für Story 5.1) |
 | `stills/`, `research/`, `curseforge/` | Kontaktbögen, Recherche, Mod- und Modpack-Beschreibung, Changelog |

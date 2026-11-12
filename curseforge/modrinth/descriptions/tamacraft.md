@@ -1,9 +1,8 @@
 <p align="center"><img src="https://raw.githubusercontent.com/Kasax007/tamacraft/26.3/docs/curseforge/img/header_v2.png" alt="Tamacraft 1.3 - Find them. Tame them. Love them."></p>
-<h3 align="center"><strong>Made with love, sweat and tears<br>Fabric only</strong></h3>
+<h3 align="center"><strong>Made with love, sweat and tears<br>Fabric and NeoForge</strong></h3>
 <p align="center"><a href="https://bisecthosting.com/kasax007"><img src="https://raw.githubusercontent.com/Kasax007/tamacraft/26.3/docs/curseforge/img/bisect.png" alt="Play Tamacraft with your friends - rent a server at BisectHosting, code KASAX007 for 25% off"></a></p>
 <p align="center"><strong>Tamacraft brings the little egg on your keychain into Minecraft.<br>Ten rare pets hide in the world's structures. Find one, tame it and look after it, and it becomes your best friend.</strong></p>
 <p align="center"><em>New name, same pets: from version 1.3 the mod is called Tamacraft. Your worlds keep their pets, furniture and items.</em></p>
-<p align="center"><iframe width="405" height="720" src="https://www.youtube.com/embed/UIE0waos-yo" frameborder="0" allowfullscreen></iframe></p>
 
 <p align="center"><a href="https://www.youtube.com/watch?v=UIE0waos-yo"><img src="https://raw.githubusercontent.com/Kasax007/tamacraft/26.3/docs/curseforge/img/video_v2.jpg" alt="Watch the 2-minute Tamacraft showcase"></a></p>
 <p align="center"><em>Two minutes with the pets. Music: "Itty Bitty 8 Bit" by Kevin MacLeod (<a href="https://incompetech.com">incompetech.com</a>), licensed under <a href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</em></p>
@@ -40,12 +39,13 @@
 
 <p><strong>Requirements</strong></p>
 <ul>
-<li>Minecraft 26.3, Fabric Loader 0.19.5 or newer and Fabric API.</li>
+<li>Fabric: Minecraft 26.3 (Fabric Loader 0.19.5 or newer) or 1.21.1 (Fabric Loader 0.16 or newer), each with Fabric API.</li>
+<li>NeoForge: Minecraft 26.3 with NeoForge 26.3 or newer, or Minecraft 1.21.1 with NeoForge 21.1 or newer. No Fabric API needed; pets, items and save data are the same as on Fabric.</li>
 <li>JEI and REI show every recipe, plus info pages on where to find each pet.</li>
 </ul>
 <p><strong>Multiplayer</strong></p>
 <ul>
-<li>Install Tamacraft and Fabric API on the server and on every client, on the same Minecraft version.</li>
+<li>Install Tamacraft (on Fabric together with Fabric API) on the server and on every client, with the same Minecraft version and loader.</li>
 </ul>
 <p><strong>Modpacks</strong></p>
 <ul>
@@ -53,7 +53,7 @@
 </ul>
 <p><strong>FAQ</strong></p>
 <ul>
-<li><strong>Forge or NeoForge?</strong> No, Tamacraft is a Fabric mod.</li>
+<li><strong>Forge or NeoForge?</strong> NeoForge yes, for Minecraft 26.3 and 1.21.1. Classic Forge no.</li>
 <li><strong>Why the new name?</strong> In 1.3 the mod got its own name, Tamacraft. Worlds from older versions load with all their pets, furniture and items; in data packs and modpack files the old ids still work too.</li>
 <li><strong>Are the pets guaranteed?</strong> No. Each structure only has a chance to hold its pet, so explore more of them!</li>
 <li><strong>What happens when my pet is defeated?</strong> It faints into a Tama Egg that keeps everything. Wake it up with the egg, or hatch it in a Pet Incubator.</li>

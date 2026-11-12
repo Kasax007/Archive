@@ -900,3 +900,25 @@ weiter). Versionsname auf Wunsch 3.4.2 statt 3.5.0 („keine Major-Version“). 
   Branches: `26.3` = `f48caaf` (Fast-Forward von `release/3.4.2`), `port/1.21.1` = `f2e52ca`. Remote-Branch
   `release/3.5.0` ist überholt (alles in 3.4.2) und kann gelöscht werden. Dreamcraft bekommt 3.4.2 beim nächsten
   größeren Update.
+
+## 13. Beach Craft auf NeoForge (12.11.2026)
+
+- **Auftrag:** Beach Craft, Tamacraft und Quest Icons auf allen Versionen, auf denen es sie gibt, auch für die
+  Forge-Welt; hochladen nach eigener Prüfung. Ab 1.21 ist NeoForge der Forge-Loader der Packs, darum NeoForge
+  (klassisches Forge nur, wo es schon war: Quest Icons 1.20.1).
+- **Zweige:** `port/1.21.1-neoforge` (8597f34, auf `port/1.21.1`) und `port/26.3-neoforge` (08913c8, auf `26.3`).
+  Ein Paket `net.kasax.raft.platform` bildet die genutzten Fabric-API- und Team-Reborn-Energy-Aufrufe mit gleichen
+  Namen auf NeoForge ab; der Mod-Code änderte fast nur Importe (`tools/neoforge_imports.py src` nach Merges).
+  Doku je Zweig: `docs/neoforge.md`.
+- **Gleich wie Fabric:** Mod-ID `raft`, alle IDs, Ressourcen, Energie-Komponente, Block-Entity-Daten. Welten von
+  Fabric werden übernommen (Spieler- und Chunk-Daten, 26.3 seit 08913c8 auch die NPC-Marken der Chunks).
+- **Anders als Fabric:** Kompost/Brennstoff (1.21.1) bzw. Brennbarkeit/Entrinden (26.3) als NeoForge-Data-Maps;
+  Energie und Item-Rohre über NeoForges eigenes System; Loot-Pools hängen auch an Tabellen, die ein Datapack
+  ersetzt; Vogelscheuche (26.3) über NeoForges Spawn-Event.
+- **Geprüft:** Registry-Abgleich mit Fabric (1.21.1: 1.677 IDs, 26.3: 2.473 IDs, Rezepte, Fortschritte; nur
+  NeoForge-eigene Einträge dazu), Server-Smoke (21/21 Strukturen, 35/37 Wesen, 319 Blöcke), NeoForge-Gametests
+  10/10, bctest-Skripte (Maschinen 42/42, Fänger 26/26, Küche mit JEI 25/25, Lootr 6/6 auf beiden), Bilder.
+- **Hochgeladen:** CurseForge 9568165 (1.21.1) und 9568661 (26.3); Modrinth BolsUVzx und 8QWwng5j. JEI und Lootr
+  optional. Jars: `raft-3.4.2+<mc>-neoforge.jar`.
+- **Beschreibung:** Kopfzeile „Fabric and NeoForge“, Voraussetzungen mit beiden Loadern, Kopfbild-Schild
+  „26.3 & 1.21.1 · Fabric & NeoForge“ (26.3 = a70c418). Modrinth eingetragen; CurseForge über die Übergabeseite.

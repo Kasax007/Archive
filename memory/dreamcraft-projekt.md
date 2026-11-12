@@ -350,3 +350,17 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   https://claude.ai/artifact/L3gp3aBtLzw4Rt7jdN8Z8L (20 Stücke, Quelltext in `beachcraft/documentary/v2/share/`).
 - Beschreibungen im Stil der Tamagotchi-Seite: Header-Bild, Abschnitts-Streifen, Screenshots und Badges.
 - Beschreibungen mit BisectHosting-Banner (Code KASAX007) und vielen Spoilern; Pack immer so testen, wie Spieler es installieren.
+
+## Stand 12.11.2026 – NeoForge-Ports (Beach Craft, Tamacraft, Quest Icons)
+
+- Auftrag des Nutzers: Forge-Welt für alle Versionen, auf denen es die Mods gibt; Upload nach eigener Prüfung
+  freigegeben, Modrinth-Beschreibungen darf ich selbst ändern. Zwei Agenten (TC+QI, BC), ich prüfte jede Jar selbst
+  (sha1, mods.toml, Java-Klassenversion, keine Fabric-Reste, Registry-Diff gegen Fabric, Bilder) vor dem Upload.
+- Hochgeladen (CurseForge / Modrinth): BC 1.21.1 9568165/BolsUVzx, BC 26.3 9568661/8QWwng5j; TC 1.21.1
+  9567877/eR1iHzPw, TC 26.3 9567878/RNpFeemN; QI 26.3 9567879/i89SZwEU, 26.2 9568900/ZFJSFvH3, 26.1.2
+  9568902/1wkkdN5a, 1.21.11 9568903/E6u2yclB. Werkzeuge: `$SP/cf_upload.py`, `$SP/mr_upload2.py` (Loader + Deps).
+  CurseForge-IDs: NeoForge 10150, Forge 7498; 26.2 16498, 26.1.2 16082, 1.21.11 14406.
+- Klassisches Forge für 1.21.1/26.3 bewusst nicht (NeoForge ist dort der Standard). Details: `dokumentation/02–04`.
+- Beschreibungen: Modrinth eingetragen; CurseForge-HTML in den Repos (26.3) und auf der Übergabeseite (Version 24);
+  Kopfbilder BC/TC mit Schild „26.3 & 1.21.1 · Fabric & NeoForge“ (wirkt sofort auch auf der alten CF-Seite).
+- Modrinth: BC, TC, QI, Dreamcraft, CC-Pack seit 8.11. „processing“ (keine Moderator-Nachricht), nur Challenge Craft frei.

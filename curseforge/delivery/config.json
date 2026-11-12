@@ -1,24 +1,23 @@
 {
- "date": "Stand 8. November 2026, Abend: Beach Craft 3.4.0, alle Projekte auf Modrinth, Bisect-Links ohne Klammern",
- "intro": "Alle sechs Projektseiten im neuen Stil, dazu bei jedem Projekt die neue <b>Kurzbeschreibung</b> (Summary) zum Kopieren. Die CurseForge-Suche liest nur Name und Kurzbeschreibung, nicht die Beschreibung. Ändern kannst du beides in der <a href=\"https://authors.curseforge.com/\" target=\"_blank\" rel=\"noopener\">Author Console</a>: Projekt öffnen, dann die Projekt-Details (Name, Summary, Kategorien) bearbeiten und speichern. Bei Projekten mit Video fügst du den YouTube-Link ins Feld ein; ohne Link fehlt nur der Video-Block.",
+ "date": "Stand 12. November 2026: Beach Craft, Tamacraft und Quest Icons gibt es jetzt auch für NeoForge",
+ "intro": "Neu seit 12.11.: Nur die Beschreibungen von <b>Beach Craft</b>, <b>Tamacraft</b> und <b>Quest Icons</b> haben sich geändert. Sie nennen jetzt die NeoForge-Versionen (Kopfzeile, Voraussetzungen, FAQ). Die Kopfbilder von Beach Craft und Tamacraft zeigen schon „26.3 &amp; 1.21.1 · Fabric &amp; NeoForge“, auch auf der alten Beschreibung. Dreamcraft und Challenge Craft bleiben, wie sie sind. Auf Modrinth sind die neuen Texte schon eingetragen. Alle sechs Projektseiten im neuen Stil, dazu bei jedem Projekt die neue <b>Kurzbeschreibung</b> (Summary) zum Kopieren. Die CurseForge-Suche liest nur Name und Kurzbeschreibung, nicht die Beschreibung. Ändern kannst du beides in der <a href=\"https://authors.curseforge.com/\" target=\"_blank\" rel=\"noopener\">Author Console</a>: Projekt öffnen, dann die Projekt-Details (Name, Summary, Kategorien) bearbeiten und speichern. Bei Projekten mit Video fügst du den YouTube-Link ins Feld ein; ohne Link fehlt nur der Video-Block.",
  "footer": "Alle Texte liegen auch als HTML-Dateien im Chat und in den Repos unter <code>docs/curseforge/description.html</code> (Branch <code>26.3</code>). Die alten Bilder bleiben in den Repos, bis die neuen Seiten online sind.",
  "projects": [
   {
    "key": "bc",
    "name": "Beach Craft",
    "chip": [
-    "new",
-    "3.4 für 26.3 und 1.21.1"
+    "upd",
+    "Neu: NeoForge für 26.3 und 1.21.1"
    ],
-   "ids": "Mod · Projekt 1010922 · Version 3.4.0+26.3 (Datei 9512111, freigegeben) und 3.4.0+1.21.1 (Datei 9518456, freigegeben)",
+   "ids": "Mod · Projekt 1010922 · 3.4.2: Fabric 26.3 und 1.21.1; neu NeoForge 26.3 (Datei 9568661) und 1.21.1 (Datei 9568165)",
    "about": [
     "Neu für 3.4: drei Zeilen „New in 3.4“ (Kochtopf zum Zuschauen, Treibholz-Angel mit Köderkasten, seltenere große Orte auf festem Grund mit gefüllten Fässern und Lootr) und in den Voraussetzungen JEI und Lootr als optionale Mods.",
-    "- Die Floß-Grafik zeigt jetzt Anlegen statt „Drop anchor“.",
-    "- Ausgangspunkt ist deine Live-Beschreibung: das Video bleibt ein verlinktes Vorschaubild, der YouTube-Link kommt nur einmal vor.",
-    "- Neu: Die Voraussetzungen nennen 3.4 auch für Minecraft 1.21.1 (mit allem; optional JEI 19 und Lootr 1.11)."
+    "- Kopfzeile „Fabric and NeoForge“, das Kopfbild sagt „26.3 &amp; 1.21.1 · Fabric &amp; NeoForge“.",
+    "- Voraussetzungen: Fabric und NeoForge getrennt, mit den Loader-Versionen; auf NeoForge laufen Energie und Item-Rohre über NeoForges eigenes System."
    ],
-   "html": "/home/user/Kasax_Raft_Mod/docs/curseforge/description.html",
-   "preview": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/desc15/bc_preview.png",
+   "html": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/desc/bc-cf.new.html",
+   "preview": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/desc16/bc_preview.png",
    "url": "https://www.curseforge.com/minecraft/mc-mods/beach-craft",
    "video": {
     "label": "Doku „Tides of the Deep“ (21:27)",
@@ -50,15 +49,15 @@
    "modrinth": {
     "md": "/home/user/Archive/curseforge/modrinth/descriptions/beach-craft.md",
     "url": "https://modrinth.com/mod/beach-craft",
-    "note": "Bei Modrinth in Prüfung. Versionen 3.4.0 und 3.3.0 für 26.3 und 1.21.1, Lizenz MIT. Die Beschreibung ist dort schon eingetragen."
+    "note": "In Prüfung (seit 8.11.). Neu: NeoForge 26.3 und 1.21.1 neben Fabric. Die neue Beschreibung ist dort schon eingetragen."
    }
   },
   {
    "key": "dc",
    "name": "Dreamcraft",
    "chip": [
-    "new",
-    "V1.6: Beach Craft 3.4"
+    "same",
+    "unverändert"
    ],
    "ids": "Modpack · Projekt 545167 · V1.6 (Datei 9512605, Server-Pack 9512608, freigegeben) – BisectHosting Partner 4395 / Pack 19732",
    "about": [
@@ -108,18 +107,17 @@
    "key": "tama",
    "name": "Tamacraft",
    "chip": [
-    "new",
-    "neu: Tamacraft 1.3"
+    "upd",
+    "Neu: NeoForge für 26.3 und 1.21.1"
    ],
-   "ids": "Mod · Projekt 1758309 · Tamacraft 1.3.0 für 26.3 (Datei 9501672) und 1.21.1 (Datei 9501673), freigegeben",
+   "ids": "Mod · Projekt 1758309 · 1.3.0: Fabric 26.3 (9501672) und 1.21.1 (9501673); neu NeoForge 26.3 (9567878) und 1.21.1 (9567877)",
    "about": [
     "Neuer Name, gleiche Pets: Aus Tamagotchi wird Tamacraft. Alles, was so hieß, ist umbenannt (Tamacon bleibt); alte Welten behalten Pets, Möbel und Items.",
-    "- Neues Kopfbild „Tamacraft 1.3“, Video-Bild „The Tamacraft showcase“, Übersicht, Bisect-Banner „Play Tamacraft with your friends!“; die Marke steht nur noch im Satz „not affiliated with or endorsed by Bandai“.",
-    "- Tamacraft 1.3.0 ist freigegeben: Beschreibung jetzt einfügen.",
-    "- Die GitHub-Links zeigen auf das umbenannte Repo github.com/Kasax007/tamacraft."
+    "- Kopfzeile „Fabric and NeoForge“, das Kopfbild sagt „26.3 &amp; 1.21.1 · Fabric &amp; NeoForge“.",
+    "- Voraussetzungen nennen jetzt auch 1.21.1 und NeoForge; Multiplayer-Hinweis und FAQ („Forge or NeoForge?“) angepasst."
    ],
-   "html": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/tc13desc/description.html",
-   "preview": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/tc13desc/preview.png",
+   "html": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/desc/tc-cf.new.html",
+   "preview": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/desc16/tc_preview.png",
    "url": "https://www.curseforge.com/minecraft/mc-mods/tamagotchi",
    "video": {
     "label": "Showcase (2:03, Hochformat)",
@@ -148,23 +146,24 @@
    "modrinth": {
     "md": "/home/user/Archive/curseforge/modrinth/descriptions/tamacraft.md",
     "url": "https://modrinth.com/mod/tamacraft",
-    "note": "In Prüfung. Tamacraft 1.3.0 für 26.3 und 1.21.1, Lizenz MIT."
+    "note": "In Prüfung (seit 8.11.). Neu: NeoForge 26.3 und 1.21.1 neben Fabric. Die neue Beschreibung ist dort schon eingetragen."
    }
   },
   {
    "key": "qi",
    "name": "Quest Icons",
    "chip": [
-    "new",
-    "1.3 auf allen Versionen"
+    "upd",
+    "Neu: NeoForge auf allen 1.21+-Versionen"
    ],
-   "ids": "Mod · Projekt 690531 · Version 1.3.0: Fabric 26.3 (9501059), 26.2 (9501060), 26.1.2 (9506695), 1.21.11 (9506693), 1.21.1 (9506691), 1.20.1 (9506697), NeoForge 1.21.1 (9506692), Forge 1.20.1 (9506696), alle freigegeben",
+   "ids": "Mod · Projekt 690531 · 1.3.0: Fabric 26.3, 26.2, 26.1.2, 1.21.11, 1.21.1, 1.20.1; NeoForge 26.3 (9567879), 26.2 (9568900), 26.1.2 (9568902), 1.21.11 (9568903) und 1.21.1 (9506692); Forge 1.20.1 (9506696)",
    "about": [
     "Neu: Quest Icons 1.3.0 gibt es jetzt für sechs weitere Versionen, auch für NeoForge und Forge. Das Kopfbild sagt „Fabric · NeoForge · Forge“, oben steht eine Zeile mit allen Versionen und die Voraussetzungen nennen jede Version mit ihrem Loader.",
-    "- Sonst wie bei 1.3: 470 Icons, 56 Kartenbilder und der Ingame-Editor ohne SNBT."
+    "- Die Zeile mit allen Versionen nennt NeoForge jetzt für 26.3, 26.2, 26.1.2, 1.21.11 und 1.21.1.",
+    "- Die Voraussetzungen nennen die passende NeoForge-Version je Minecraft-Version."
    ],
-   "html": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/qi13desc/description.html",
-   "preview": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/desc15/qi_preview.png",
+   "html": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/desc/qi-cf.new.html",
+   "preview": "/tmp/claude-0/-home-user/4ca9508b-4f8c-5a8e-91dc-6059d6cc887c/scratchpad/desc16/qi_preview.png",
    "url": "https://www.curseforge.com/minecraft/mc-mods/quest-icons",
    "video": null,
    "meta": {
@@ -188,15 +187,15 @@
    "modrinth": {
     "md": "/home/user/Archive/curseforge/modrinth/descriptions/quest-icons.md",
     "url": "https://modrinth.com/mod/quest-icons",
-    "note": "In Prüfung. Acht Versionen 1.3.0: Fabric 26.3, 26.2, 26.1.2, 1.21.11, 1.21.1, 1.20.1, NeoForge 1.21.1, Forge 1.20.1. Lizenz MIT."
+    "note": "In Prüfung (seit 8.11.). Jetzt zwölf Versionen 1.3.0: Fabric 26.3, 26.2, 26.1.2, 1.21.11, 1.21.1, 1.20.1, NeoForge 26.3, 26.2, 26.1.2, 1.21.11, 1.21.1, Forge 1.20.1. Die neue Beschreibung ist dort schon eingetragen."
    }
   },
   {
    "key": "ccmod",
    "name": "Challenge Craft (Mod)",
    "chip": [
-    "new",
-    "neu gestaltet"
+    "same",
+    "unverändert"
    ],
    "ids": "Mod · Projekt 1508454 · Version 1.1.3 für 26.3",
    "about": [
@@ -235,8 +234,8 @@
    "key": "ccpack",
    "name": "Challenge Craft (Modpack)",
    "chip": [
-    "new",
-    "neu gestaltet"
+    "same",
+    "unverändert"
    ],
    "ids": "Modpack · Projekt 1653698 · v4.2 (Datei 9508554, Server-Pack 9508555, freigegeben) – Vanilla plus Challenge Craft, BisectHosting Partner 4395 / Pack 27138",
    "about": [

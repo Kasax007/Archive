@@ -476,3 +476,15 @@ Unterschiede: auf 1.20.1 ist Item-Daten NBT (`tag`), Komponenten aus 1.21/26.1-F
 Vanilla-Rezept des Dream Star nimmt dort ein Heart of the Sea statt Heavy Core. JEI 15.74 auf Forge 1.20.1 muss auch auf
 dem Server liegen. Die Beschreibung nennt jetzt alle Versionen und Loader (Kopfbild „Fabric · NeoForge · Forge“).
 
+
+## 15. NeoForge auf allen 1.21+-Versionen (12.11.2026)
+
+- **Neu:** NeoForge 26.3 (`port/26.3-neoforge`, a16e423), 26.2 (42d12fc), 26.1.2 (b61a958), 1.21.11 (ff65fcf); dazu
+  wie bisher NeoForge 1.21.1 und Forge 1.20.1. Große Bücher teilt NeoForge selbst in Pakete; die Dream-Star-Rezepte
+  nutzen NeoForges Ladebedingungen. 26.1.2 und 1.21.11 nutzen `logoFile` (kennen `iconFile` noch nicht).
+- **Geprüft je Version:** Unit-Tests 16/16 in NeoForge, Selbsttest 128/128 mit Bildern, Registry-Abgleich mit Fabric
+  leer (1.034 Zeilen), echter NeoForge-Server per RCON und mit verbundenem Client 12/12 (Buch übers Netz, Editor,
+  FTB-Import, Belohnungen).
+- **Hochgeladen:** CurseForge 9567879 (26.3), 9568900 (26.2), 9568902 (26.1.2), 9568903 (1.21.11); Modrinth i89SZwEU,
+  ZFJSFvH3, 1wkkdN5a, E6u2yclB. Damit zwölf Versionen 1.3.0 auf beiden Seiten.
+- **Beschreibung:** Versionszeile und Voraussetzungen nennen NeoForge für 26.3, 26.2, 26.1.2, 1.21.11 und 1.21.1.

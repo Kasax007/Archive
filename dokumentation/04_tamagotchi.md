@@ -165,3 +165,17 @@ deshalb genau die CurseForge-Datei 9431312.
 Short (ca. 43 s), 2-Minuten-Showcase und ein Review-Schnitt (ca. 3:05, nur für dich) mit echten Spielgeräuschen
 liegen im Archiv unter `tamagotchi/` – siehe [06_videos_und_beschreibungen.md](06_videos_und_beschreibungen.md).
 Sie zeigen Version 1.1; für 1.2.0 gibt es kein neues Video.
+
+## 5. Tamacraft auf NeoForge (12.11.2026)
+
+- **Zweige:** `port/1.21.1-neoforge` (b8692e5) und `port/26.3-neoforge` (9e413ab) im Repo `Kasax007/tamacraft`.
+  ModDevGradle 2.0.148; NeoForge 21.1.265 bzw. 26.3.0.102.
+- **Anders als Fabric:** leuchtende Modellteile über NeoForges Licht-Daten je Element (4 Modelle), Access
+  Transformer für drei Setter der Block-Displays, Pet-Typen mit ihrer ID gebaut (mit `null` stürzte NeoForge ab).
+  Das Film-Werkzeug `src/film` bleibt auf Fabric.
+- **Geprüft:** Registry-Abgleich mit Fabric identisch (548 bzw. 546 Zeilen), Gametests 7/7 bzw. 8/8, Client-Selbsttest
+  58/58 (26.3: zwei einzelne Zeit-Ausreißer in vier Läufen), Server-Smoke 83/83 (alle 12 Pet-Heime gefunden), JEI und
+  REI optional getestet.
+- **Hochgeladen:** CurseForge 9567877 (1.21.1) und 9567878 (26.3), beide freigegeben; Modrinth eR1iHzPw und RNpFeemN.
+- **Beschreibung:** „Fabric and NeoForge“, Voraussetzungen mit 1.21.1 und NeoForge, FAQ „Forge or NeoForge?“ neu,
+  Kopfbild-Schild „26.3 & 1.21.1 · Fabric & NeoForge“ (26.3 = 4f10738).

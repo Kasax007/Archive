@@ -62,6 +62,15 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
 - Reihenfolge so, dass jede Stufe veröffentlichbar ist: erst 3 Ebenen rund (Grafik, Show, Karte, Stage Door,
   Mehrspieler-Prüfung), dann Rollen, NPCs, Audio, dann Ebenen 4–10, zuletzt Sponsoren/Interviews und Abschluss.
 
+## Container und Speicher
+
+- Der Container (16 GB) wurde am 12.11. einmal neu gestartet, als drei Checkouts gleichzeitig bauten und testeten.
+  Dateien blieben erhalten, alle Prozesse und Workflows waren weg. Seitdem: `~/.gradle/gradle.properties` mit
+  `org.gradle.jvmargs=-Xmx1200m -XX:MaxMetaspaceSize=512m` und `idletimeout=60000`; Test-Server mit `-Xmx2G`
+  (build.gradle), Mehrspieler-Test 3G + 2G. Nach einem Reset diese Datei neu anlegen (auch `org.gradle.java.home`).
+- Unterbrochene Agenten-Arbeit: im Worktree als lokalen WIP-Commit sichern und die Aufgabe mit einem
+  CONTINUE-Hinweis (was liegt wo, nicht neu anfangen) neu starten. Aufträge liegen in `crawl-of-fame/briefs/`.
+
 ## Test-Werkzeuge
 
 - `tools/dev/gametest.sh`: Server-Spieltests aller Module (Stand Runde 2: 35 Tests).
@@ -74,13 +83,22 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
 
 ## Stand
 
-- 12.11. abends: Runde 1 und 2 fertig und integriert. Es gibt: Welt (Dimension, Generator, Ebenen 1–3 aus
-  Vanilla-Blöcken), Lauf-Logik (Stage Door, Cast, Sendezeit, Set Strike, Treppen, Remains, Sieg), Charakter (Werte,
-  Level, Fertigkeiten, HUD, Fenster), 38 Monster und Bosse für Ebenen 1–3 mit Regisseur und Boss-Arenen, Ausrüstung
-  mit Affixen und Sets, Tränke, Bomben, Münzen, Loot, Prize Crates mit Unboxing, Stash, Schmuck.
-- Runde 3 läuft: Spur B = Welt-Grafik Ebene 1 (B5), dann Minimap und Karte (B6); Spur A = Show-Modul mit Emcee,
-  Achievements, Hype/Fans (A5), dann Zauber (A6). Die Hauptsitzung baut die Mehrspieler-Prüfung.
-- Danach: B7 (Ebenen 2–3 im Stil von Ebene 1, Stage Door als Oberwelt-Struktur, benannte Plätze für NPCs und
-  Stationen), A7 (Rollen und Makeovers), NPCs/Händler/Tutorial, Audio, Balance, Ebenen 4–10, Sponsoren/Interviews,
-  README/CREDITS/CurseForge-Text. Stand-Liste: `docs/PLAN.md` im Mod-Repo.
-- Kosten bisher (Agenten-Tokens): Buch-Auswertung 6,2 Mio., Runde 1 1,2 Mio., Runde 2 1,6 Mio.
+- 12.11. spät: Runden 1–3 integriert. Es gibt: Welt mit eigener Grafik für Ebene 1 (Set-Baukasten mit rund 50
+  Blöcken und Requisiten, Wegweiser, Loot-Behälter platziert), Lauf-Logik, Charakter mit HUD, 38 Monster und Bosse
+  (Ebenen 1–3), Ausrüstung/Affixe/Sets, Tränke, Bomben, Münzen, Loot, Prize Crates mit Unboxing, Stash, Schmuck,
+  Show-Modul (Emcee mit 29 Anlässen, 149 Achievements, Hype/Fans, Fan Mail, Staffel-Rückblick, Bestenliste).
+- Von der Hauptsitzung: Mehrspieler-Abnahme (`tools/crawltest/mp.sh`, 26 Prüfungen grün: gleiche Stage Door = eine
+  Gruppe, Relog, Tod mit Remains, Server-Neustart mitten im Lauf, Set Strike), Schutz für Modpacks (`run.Guard`:
+  Spieler ohne Lauf werden hinausgeführt, kein Friendly Fire, `RunEvents.LEFT`, Cash-Out per Config), Prize Trunks
+  (Stash, ungeöffnete Crates, Münzen, Finale-Crate gehen beim Sieg als Truhen-Items mit), Tod nur einmal gemeldet.
+- Runde 4 läuft (nach einem Container-Neustart fortgesetzt): Spur A = Zauber (A6), dann Rollen/Makeovers (A7);
+  Spur B = Karte (B6), Stage Door als Oberwelt-Struktur + benannte Plätze (B8), zweiter Grafik-Durchgang (B7).
+- Danach: A8 NPCs/Tutorial/Händler/Quests, B9 Fallen/Schreine/Ebenen-Regeln, Audio (numpy + ffmpeg/libvorbis
+  vorhanden; incompetech und opengameart erreichbar, kenney und freesound gesperrt), Prüf-Runde (4 Agenten, je
+  2 Module), Balance, Ebenen 4–10, README/CREDITS/CurseForge-Text. Stand-Liste: `docs/PLAN.md` im Mod-Repo.
+- Urteil zur Grafik nach B5: Flure und Green Rooms gut; große Räume zu gleichförmig (niedrig, braun, Requisiten im
+  Raster). Auftrag B7: Raumhöhe nach Größe, Zonen und Blickfang, Licht als Führung, Farbe, Boss-Arenen als Bühne,
+  eigene Sprache für Ebene 2 (Lager bei Nacht) und 3 (Filmstadt in der Höhle).
+- Beobachtung Balance: nackter Level-1-Spieler verliert im ersten Kampfraum in 3 s 17 von 40 Leben; Boss Ebene 1 tötet
+  ihn in Sekunden. Balance-Durchgang mit Auto-Kampf-Bot einplanen.
+- Kosten bisher (Agenten-Tokens): Buch-Auswertung 6,2 Mio., Runde 1 1,2 Mio., Runde 2 1,6 Mio., Runde 3 rund 1,5 Mio.

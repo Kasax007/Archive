@@ -1,4 +1,4 @@
-# Outreach brief for research agents (Stand 10.11.2026) - read fully before you start
+# Outreach brief for research agents (Stand 12.11.2026) - read fully before you start
 
 Brief of the big round on 9.11.2026, updated for the daily routine on 10.11.2026. Update the facts (versions,
 numbers) before reusing it.
@@ -56,7 +56,7 @@ an earlier run found but could not draft (e.g. the day's HOLD quota was full). C
 8. Follow-up (template D) exactly as in the eldor draft, adapted to the name and project.
 9. Be polite to the websites: one request at a time, short pauses, no bulk crawling.
 
-## Facts you may use (all free, all true on 10.11.2026)
+## Facts you may use (all free, all true on 12.11.2026)
 
 - **Challenge Craft** (mod, Fabric 26.3, also older builds for 26.2 and 1.21.5): turns any world into a challenge run.
   51 challenges you can stack (each combination gets a difficulty rating), e.g. Lockout Bingo (up to 4 teams on a
@@ -73,7 +73,7 @@ an earlier run found but could not draft (e.g. the day's HOLD quota was full). C
   with story places and a boss (Beach Craft), ten rare pets to tame (Tamacraft), server pack, BisectHosting order link
   (code KASAX007 = 25% off). https://www.curseforge.com/minecraft/modpacks/dreamcraft-new ; short:
   https://www.youtube.com/watch?v=G-whF3xKTQ4 ; trailer and a 21-minute documentary exist (footage on request).
-- **Beach Craft 3.4.2** (mod, Fabric 26.3 and 1.21.1): the open-sea survival of the game Raft in Minecraft. Driftwood
+- **Beach Craft 3.4.2** (mod, Fabric and NeoForge, Minecraft 26.3 and 1.21.1 - NeoForge since 12.11.2026, same content and save data, no Fabric API needed there): the open-sea survival of the game Raft in Minecraft. Driftwood
   portal to the Endless Sea; build a raft block by block and sail it like a ship (mast, sails, anchor, motor, wheel);
   hook debris, purify water, farm on deck; Bruce the shark bites your raft. Twelve biomes (palm, jungle, mangrove,
   volcanic isles, reefs, kelp forests, frost floes, trenches), seven story places (castaway, Old Lighthouse, Saltmere,
@@ -82,7 +82,7 @@ an earlier run found but could not draft (e.g. the day's HOLD quota was full). C
   decorations, cozy furniture with a "Rested" buff, an island kitchen (crops, cooking pot, fish trap, dishes), gear
   (shark tooth spear, boomerang, machete, armour sets, wreck compass), Seafarer's Almanac guide book, optional JEI and
   Lootr support. https://www.curseforge.com/minecraft/mc-mods/beach-craft (Modrinth page still in review - don't link)
-- **Tamacraft 1.3.0** (mod, Fabric 26.3 and 1.21.1; formerly "Tamagotchi"): ten rare pets hide in structures; find,
+- **Tamacraft 1.3.0** (mod, Fabric and NeoForge, Minecraft 26.3 and 1.21.1 - NeoForge since 12.11.2026; formerly "Tamagotchi"): ten rare pets hide in structures; find,
   tame and look after them; moods on a pet screen and in bubbles; pets dance to jukeboxes, warm up at campfires, hide
   from thunder, play together, carry your things and help in fights, never die (they faint into a Tama Egg); furniture
   like a running wheel (redstone signal), toys, treat dispenser, incubator, pet door; Tamacon guide; JEI/REI info
@@ -90,7 +90,7 @@ an earlier run found but could not draft (e.g. the day's HOLD quota was full). C
   https://www.curseforge.com/minecraft/mc-mods/tamagotchi (Modrinth still in review - don't link)
 - **Quest Icons 1.3.0** (mod): FTB-Quests-style quest book - chapters, quest maps, tasks, rewards, loot crates, teams
   and an in-game editor with forms and pickers (nobody has to write SNBT), 470 icons, 56 quest-map pictures, imports
-  FTB Quests books (1.20, 1.21, 26.1). Versions: Fabric 26.3, 26.2, 26.1.2, 1.21.11, 1.21.1, 1.20.1; NeoForge 1.21.1;
+  FTB Quests books (1.20, 1.21, 26.1). Versions: Fabric 26.3, 26.2, 26.1.2, 1.21.11, 1.21.1, 1.20.1; NeoForge 26.3, 26.2, 26.1.2, 1.21.11, 1.21.1;
   Forge 1.20.1. FTB Quests does not exist for 26.2/26.3. https://www.curseforge.com/minecraft/mc-mods/quest-icons
 - Kasax's Discord: Kasax Lounge, discord.gg/zuZVtVvJaY. All mods may be used in modpacks.
 

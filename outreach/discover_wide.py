@@ -4,8 +4,9 @@
 discover.py covers 26.2/26.3 Fabric packs with 500-100,000 total downloads. This script looks wider, at packs
 that are big enough to matter and that could add one of our mods:
 
-    Quest Icons:            Fabric 26.3, 26.2, 26.1.2, 1.21.11, 1.21.1, 1.20.1; NeoForge 1.21.1; Forge 1.20.1
-    Beach Craft, Tamacraft: Fabric 26.3 and 1.21.1
+    Quest Icons:            Fabric 26.3, 26.2, 26.1.2, 1.21.11, 1.21.1, 1.20.1; NeoForge 26.3, 26.2, 26.1.2,
+                            1.21.11, 1.21.1; Forge 1.20.1
+    Beach Craft, Tamacraft: Fabric and NeoForge, 26.3 and 1.21.1 (NeoForge since 12.11.2026)
 
 Usage (from the outreach folder):
 
@@ -59,10 +60,10 @@ DATA = D.DATA
 
 # where each of our mods exists (loader -> versions)
 SUPPORT = {
-    'QI': {'fabric': ['26.3', '26.2', '26.1.2', '1.21.11', '1.21.1', '1.20.1'], 'neoforge': ['1.21.1'],
-           'forge': ['1.20.1']},
-    'BC': {'fabric': ['26.3', '1.21.1']},
-    'TG': {'fabric': ['26.3', '1.21.1']},
+    'QI': {'fabric': ['26.3', '26.2', '26.1.2', '1.21.11', '1.21.1', '1.20.1'],
+           'neoforge': ['26.3', '26.2', '26.1.2', '1.21.11', '1.21.1'], 'forge': ['1.20.1']},
+    'BC': {'fabric': ['26.3', '1.21.1'], 'neoforge': ['26.3', '1.21.1']},
+    'TG': {'fabric': ['26.3', '1.21.1'], 'neoforge': ['26.3', '1.21.1']},
 }
 PAIRS = sorted({(l, v) for p in SUPPORT.values() for l, vs in p.items() for v in vs})
 CF_LOADER = {'Fabric': 'fabric', 'NeoForge': 'neoforge', 'Forge': 'forge', 'Quilt': 'quilt'}

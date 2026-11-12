@@ -10,6 +10,11 @@ import csv, glob, json, os, re, subprocess, sys, datetime
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 db_dir = sys.argv[1]
+# (ArtifactData's out_dir puts the documents under <out_dir>/targets/: either folder may be given.)
+if not glob.glob(os.path.join(db_dir, '*.json')) and os.path.isdir(os.path.join(db_dir, 'targets')):
+    db_dir = os.path.join(db_dir, 'targets')
+if not glob.glob(os.path.join(db_dir, '*.json')):
+    sys.exit(f'no target documents (*.json) in {db_dir}: nothing synced')
 
 
 def csv_id(doc_id):

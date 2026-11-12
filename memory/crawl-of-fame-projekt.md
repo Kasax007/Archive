@@ -52,9 +52,35 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   einen Branch; jedes Modul hat eigene Dateien (auch eigene Mixin-Config und Lang-Datei), damit nichts kollidiert.
 - Commit-Fußzeile ohne Modellnamen: `Co-Authored-By: Claude <noreply@anthropic.com>` + `Claude-Session: …`.
 
+## Arbeitsweise mit den Agenten
+
+- Zwei Spuren (A und B), je ein Workflow mit einer Kette von zwei Aufgaben (Opus, effort high). Pro Aufgabe etwa
+  0,4 Mio. Agenten-Tokens und 35–45 Minuten. Jede Aufgabe liefert einen Bericht `docs/reports/<Aufgabe>.md`.
+- Bilder für die Abnahme legen die Agenten nach `/home/user/shots/<Aufgabe>/` (nicht ins Repo). Die Hauptsitzung
+  sieht sie an und gibt die Grafik-Richtung für die nächste Aufgabe vor.
+- Erst eine Ebene „fertig aussehen“ lassen (Ebene 1), ansehen, dann den Stil auf die anderen Ebenen übertragen.
+- Reihenfolge so, dass jede Stufe veröffentlichbar ist: erst 3 Ebenen rund (Grafik, Show, Karte, Stage Door,
+  Mehrspieler-Prüfung), dann Rollen, NPCs, Audio, dann Ebenen 4–10, zuletzt Sponsoren/Interviews und Abschluss.
+
+## Test-Werkzeuge
+
+- `tools/dev/gametest.sh`: Server-Spieltests aller Module (Stand Runde 2: 35 Tests).
+- `tools/crawltest/run.sh <skript> <ordner>`: ferngesteuerter Client mit Screenshots (Xvfb + EGL; nach einem
+  Container-Reset `apt-get install -y libegl1 libegl-mesa0`).
+- `tools/crawltest/mp.sh <host> <gast> <ordner>`: Mehrspieler-Test. Der Host startet einen Dedicated Server im
+  eigenen JVM (Skript-Befehl `server`), der Gast ist ein zweiter Client (`join localhost:25599`). Befehle `connect`,
+  `disconnect`, `restart`, `signal`/`await`, Prüfungen über `/mpcheck` (Test-Mod). Die Test-API gibt dem Server nur
+  10 s zum Starten: der Gast darf erst starten, wenn der Server läuft.
+
 ## Stand
 
-- 12.11. abends: Phase 0 fertig (Gerüst, Layout-Generator, Design, Schnittstellen). Runde 1 läuft als zwei
-  Workflows: Spur A (Welt, dann Lauf-Logik), Spur B (Asset-Werkzeuge und Test-Harness, dann Werte, HUD,
-  Charakter-Fenster). Danach laut `docs/PLAN.md`: Monster, Items und Crates, Show-Ebene, Magie und Rollen, NPCs,
-  Audio, Ebenen 4–10, Release-Prüfung.
+- 12.11. abends: Runde 1 und 2 fertig und integriert. Es gibt: Welt (Dimension, Generator, Ebenen 1–3 aus
+  Vanilla-Blöcken), Lauf-Logik (Stage Door, Cast, Sendezeit, Set Strike, Treppen, Remains, Sieg), Charakter (Werte,
+  Level, Fertigkeiten, HUD, Fenster), 38 Monster und Bosse für Ebenen 1–3 mit Regisseur und Boss-Arenen, Ausrüstung
+  mit Affixen und Sets, Tränke, Bomben, Münzen, Loot, Prize Crates mit Unboxing, Stash, Schmuck.
+- Runde 3 läuft: Spur B = Welt-Grafik Ebene 1 (B5), dann Minimap und Karte (B6); Spur A = Show-Modul mit Emcee,
+  Achievements, Hype/Fans (A5), dann Zauber (A6). Die Hauptsitzung baut die Mehrspieler-Prüfung.
+- Danach: B7 (Ebenen 2–3 im Stil von Ebene 1, Stage Door als Oberwelt-Struktur, benannte Plätze für NPCs und
+  Stationen), A7 (Rollen und Makeovers), NPCs/Händler/Tutorial, Audio, Balance, Ebenen 4–10, Sponsoren/Interviews,
+  README/CREDITS/CurseForge-Text. Stand-Liste: `docs/PLAN.md` im Mod-Repo.
+- Kosten bisher (Agenten-Tokens): Buch-Auswertung 6,2 Mio., Runde 1 1,2 Mio., Runde 2 1,6 Mio.

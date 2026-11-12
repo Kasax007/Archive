@@ -274,3 +274,22 @@ neueste Anweisung des Nutzers.
   ungetestete Schalter zuerst, dann Thompson-Sampling; 30-min-Spiele, jedes 5. 90 min; Tagebuch mit Kontext je Ziel.
   Paket `Bob-Trainer.zip` (sha1 db064b3e…) am 10.11. geschickt. Windows/macOS-Skripte nicht im Container getestet.
 - Weiter: Nutzer lässt den Trainer laufen und lädt Exporte hoch; kurze Sitzung wertet aus. Reserve „Bob Pro“.
+
+## Stand 12.11.2026 (Bob-Trainer 1.1: Windows/OneDrive-Fix)
+
+- Nutzer hatte den Trainer in `C:\Users\…\OneDrive\Documents\Bob Trainer` entpackt, 8 Liga-Plätze. Fehler:
+  „Start nicht moeglich: …\work\liga-N\config“ (alle Plätze, jede 2. Runde; OneDrive markiert/sperrt Ordner) und bei
+  neuen Plätzen „Detected incomplete install, reinstalling“ → „used by another process“. Ursache 2: die Startjar von
+  Fabrics Download-Launcher nennt ihre Bibliotheken relativ (`../../libraries`) zum **Spielordner**; ein geteiltes
+  `.fabric/server` ließ jeden neuen Platz die geteilte Startjar neu schreiben, die laufende Spiele offen halten.
+- Fix (Zweig `trainer/onedrive-fix` → `26.3-lockout-bot`, Commits 86ee65a + a3b79c3, Trainer-Version 1.1):
+  jedes Spiel eigenes `.fabric/server` + eigene `libraries/`; geteilt nur Minecrafts `26.3-server.jar` über
+  `-Dfabric.installer.server.gameJar`; erster Download allein. Liegt der Trainer in OneDrive/Dropbox/Google Drive/iCloud,
+  kommen Spielwelten + Minecraft nach `%LOCALAPPDATA%\Bob-Trainer\trainer-<hash>` (Liga, Journal, Logs, Export bleiben).
+  Löschen OneDrive-fest (markierte Ordner leeren, Junctions als Link), Hardlinks/Junctions bleiben, Wiederholungen,
+  klare Meldungen, `work_dir` (Windows-Pfade mit `\`), Start-Fehler blockieren 20 s statt alle Plätze auf einmal.
+- Geprüft: 49 Unit-Tests; 3 echte Läufe mit Minecraft in einem „OneDrive“-Pfad (2 Plätze parallel, 0 Fehler); Review-
+  Workflow (7 Agenten) fand 2 echte Fehler (Laufwerkswechsel bei work_dir, geteilte Root-libraries) → behoben.
+  Unter Windows selbst nicht getestet. ZIP an den Nutzer: `Bob-Trainer.zip` 1.1 (12.11.).
+- Lehre: Auf Linux lassen sich offene Dateien löschen – Windows-Sperren fallen hier nicht auf. Geteilte, beschreibbare
+  Dateien zwischen gleichzeitigen Servern vermeiden; Nutzer-Ordner in OneDrive immer mitdenken.

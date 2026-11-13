@@ -263,4 +263,9 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   `python3 tools/content/voice/build.py` laufen lassen: es meldet Schlüssel, die es nicht mehr gibt.
 - Zwischenstand-Jar 3 kommt, sobald der Bau-Schritt von THEMES1 „fertig“ meldet (dann voller Testlauf grün):
   `./gradlew assemble`, `tools/dev/prod.sh`, nach `crawl-of-fame/builds/`, Roh-Link an den Nutzer.
+- **13.11. 23:46 UTC: Container-Neustart Nr. 4.** Nichts verloren (Scratchpad mit Sprachmodellen, Aufnahmen, Worktrees
+  mit lokalen Commits blieben). Wieder gestartet: Aufnahme-Dauerläufer (`nohup tools/content/voice/lead/supervise.sh`
+  aus dem Haupt-Checkout; er räumt `STOP`/`QUIT` beim Start weg), beide Workflows per
+  `Workflow({scriptPath, resumeFromRunId})` (Spur A `crawl-themes-a6.js` / `wf_fd2adf47-3f4`, Spur B
+  `crawl-items-b7.js` / `wf_f8e4cb2a-61a`). Stand der Aufnahmen: 113 Ansager-Zeilen im Modul.
 

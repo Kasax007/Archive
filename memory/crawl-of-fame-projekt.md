@@ -68,8 +68,12 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   Dateien blieben erhalten, alle Prozesse und Workflows waren weg. Seitdem: `~/.gradle/gradle.properties` mit
   `org.gradle.jvmargs=-Xmx1200m -XX:MaxMetaspaceSize=512m` und `idletimeout=60000`; Test-Server mit `-Xmx2G`
   (build.gradle), Mehrspieler-Test 3G + 2G. Nach einem Reset diese Datei neu anlegen (auch `org.gradle.java.home`).
-- Unterbrochene Agenten-Arbeit: im Worktree als lokalen WIP-Commit sichern und die Aufgabe mit einem
-  CONTINUE-Hinweis (was liegt wo, nicht neu anfangen) neu starten. Aufträge liegen in `crawl-of-fame/briefs/`.
+- Zweiter Neustart am 13.11. kurz nach Mitternacht trotz Speicher-Grenzen (Kernel-Stand der VM wechselte):
+  Neustarts kommen von der Infrastruktur und können wieder passieren.
+- Vorgehen seitdem: jede Aufgabe beginnt mit dem Hinweis aus `crawl-of-fame/briefs/continue.txt` (frühere Arbeit im
+  Worktree suchen: lokale Commits, `git status`, Bericht; dort fortsetzen). Die Agenten committen laufend lokal.
+  Nach einem Neustart genügt `Workflow({scriptPath, resumeFromRunId})`: fertige Aufgaben kommen aus dem Cache,
+  die unterbrochene setzt an ihren Commits an. Eigene, nicht gepushte Arbeit im Haupt-Checkout zuerst committen.
 
 ## Test-Werkzeuge
 

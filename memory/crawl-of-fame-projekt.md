@@ -139,6 +139,15 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   im Dungeon abgeschaltet. Lehre: `helper.onEachTick` der Testumgebung legt je Tick bis zum Timeout einen Eintrag an
   (bei 2 Mio. Ticks unbrauchbar langsam); eigene Tick-Ereignisse nutzen und den Test über `succeedWhen` beenden.
   `balance.sh` und `load.sh` laufen jetzt allein (`-PtestFilter`).
+- 13.11. 08:55 UTC: **Balance, zweiter Durchgang** (Commit `3911d1c`, 147 Tests grün, Mehrspieler-Abnahme 26/26):
+  Ausrüstung wuchs nur in drei Materialstufen (Ebenen 1–3, 4–6, 7–10), Monster jede Ebene → Ebene 3 war härter als
+  Ebene 4. Jetzt wächst Ausrüstung mit dem Item-Level (`item.Gear.levelScale`, 15 % pro Ebene; Stufe bleibt nur als
+  Name im Tooltip). „Shock" setzte die Treffer-Abklingzeit des Opfers zurück → Rudel machten ein Vielfaches an Schaden
+  (Raum 509 %, Boss Merrybolt bis 1500 %); behoben (Funke vor dem Schlag, Abklingzeit bleibt). Bosse halten höchstens
+  vier Helfer. `tools/dev/balance.sh` zeigt jetzt je Kampf den Boss und **wer den Schaden gemacht hat** (danach
+  abstimmen). Gemessen: Räume Ebenen 1–4 bei 0–82 %, Bosse meist 144–250 %. Offen: Ebene 5 wurde von Spur B noch
+  gegen die alte Ausrüstungskurve abgestimmt (Ausrüstung dort jetzt rund 10 % stärker) → nach Lieferung nachmessen;
+  am Schluss alle Ebenen mit `balance.sh` und `load.sh` durchmessen.
 - Gefunden beim eigenen Durchlauf (`tools/crawltest/scripts/journey.txt`): eine Stage Door entstand in einem Dorf und
   war von einem Haus versperrt → Türen halten jetzt 10 Chunks Abstand zu Dörfern (`exclusion_zone`).
 - 106 Server-Tests grün auf frischer Testwelt (`tools/dev/gametest.sh` löscht die Testwelt vor jedem Lauf; Tests mit

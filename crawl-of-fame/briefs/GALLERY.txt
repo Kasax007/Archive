@@ -1,0 +1,20 @@
+TASK __ID__: the pictures of the mod page. The mod is complete; what is missing are the screenshots a visitor of the CurseForge and Modrinth pages sees first. You change no game code in this task (if a picture shows a defect, fix it only when it is small and yours to see; otherwise list it). Reports to read: docs/PLAN.md (what exists), tools/crawltest/README.md (the scripted client: world, commands, camera, shots), the tour and line-up scripts under tools/crawltest/scripts (they already reach every place and screen: reuse their commands), docs/reports of the floors (operator commands per floor). The page text is /home/user/Archive/crawl-of-fame/curseforge/mod-description.md (read it: the pictures must show what it promises); the header banners in art/ show the look of the page.
+
+DELIVER
+1. A script (or a few) tools/crawltest/scripts/gallery*.txt that produces the pictures again at any time, at 1920x1080, and a small tool tools/page/gallery.py that crops, orders and names them and builds one contact sheet. Final pictures as JPEG (quality 90, under 600 kB each) in art/screens/, named 01-stage-door.jpg and so on.
+2. The pictures, each one composed like a still of a trailer (a clear subject, light on it, nothing half cut off, no debug text, no chat clutter; the HUD on where it is the subject or shows play, off where the place is the subject):
+   - the Stage Door in the Overworld at dusk or night with its marquee lit, from a low angle, and one of the red curtain from close by;
+   - a green room with the Unboxing Booth; the unboxing show at its best moment;
+   - a fight in a hall of floor 1 with the full HUD (crawler panel, clock, minimap, spell bar, a boss or elite in view, damage happening);
+   - a boss title card; a boss fight in its arena in the third person;
+   - the crawler screen (stats), the stash, the map screen with a floor half explored, the Casting Desk with its role cards, a makeover in the third person, the sponsor screen, a vendor's shop;
+   - one picture per floor that shows what is special about it: its best hall and, where it can be seen, its rule at work (steam in a striped corridor, the tide in a basin, spores, a whiteout, the wheel, the static, the audience);
+   - the finale: the arena of the last floor, the win with confetti, the gold curtain;
+   - a sidekick at its crawler's side, if the module exists;
+   - two crawlers of one cast in one picture (tools/crawltest/mp.sh has the second client).
+   About 24 to 30 pictures. Look at every one at full size; throw out what is dark, empty or unclear and take it again from a better spot or at a better moment. Compare with the first screenshots of well-known mod pages: would this one make somebody click?
+3. A banner picture for the top of the page, art/screenshots-banner.jpg (1120 px wide): a montage of four or five of the best pictures under the title, drawn by tools/page/gallery.py from the final pictures.
+4. Put the pictures into the page text where they belong (markdown image lines with the {{IMG}} placeholder that the text already uses, a "Screenshots" section near the end with the rest) and fill the text's other placeholders with the real numbers ({{MONSTERS}}, {{BOSSES}}, {{ACHIEVEMENTS}}: count them from the data files; say how in the report). Commit the page text in /home/user/Archive (branch claude/determined-edison-xwiksi, same commit footer) and push it there.
+5. Copy the contact sheet and the banner to /home/user/shots/__ID__/ for the lead.
+
+ACCEPTANCE: the scripts run through without a failed check; every picture exists, was looked at and shows what its name says; tools/dev/jc.sh passes if you touched code; tools/dev/check_names.py passes; the page text has no placeholder left except {{IMG}}.

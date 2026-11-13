@@ -27,7 +27,8 @@ def creator_followup(name, what):
 T = {}
 
 # ------------------------------------------------------------------ creators (e-mail)
-T['yt-emaiye'] = dict(email='emaiye.business@gmail.com',
+# The addresses are kept only in the page database (field `email`), never in this file.
+T['yt-emaiye'] = dict(
   subject="A cozy pet mod for your forever world",
   message=f"""Hi emaiye,
 
@@ -45,7 +46,7 @@ Thank you for making such calm, lovely videos – I'd love to hear what you thin
 {SIGN}""",
   followup=creator_followup('emaiye', 'Tamagotchi'), footer=FOOT)
 
-T['yt-NoxusMods'] = dict(email='noxusbusiness@gmail.com',
+T['yt-NoxusMods'] = dict(
   subject="Two small mods for a future \"Unknown Mods\" video",
   message=f"""Hi Noxus,
 

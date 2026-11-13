@@ -283,6 +283,9 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   Hilfe anbieten. Nie „No pressure – I won't follow up more than once“, „One message only“, „This is a one-off
   message. Reply stop …“ (klingt nach KI/Mailverteiler). E-Mail-Adressen immer selbst eintragen (öffentliche
   Kanalbeschreibung, Website); nur in der privaten Datenbank der Seite, nie in Git.
+  Das Archiv-Repo ist **öffentlich** (geprüft 13.11.2026). `outreach/page/warm_texts.py` enthielt seit Commit 7553d54
+  zwei Creator-Adressen: am 13.11. aus der Datei entfernt, in der Git-Historie stehen sie noch (Historie umschreiben
+  und Force-Push nur nach Freigabe des Nutzers). Vor jedem Outreach-Commit die getrackten Textdateien auf Adressen prüfen.
 - **Tamacraft (7.11.):** Tamagotchi heißt jetzt Tamacraft (Mod-ID `tamacraft`, Herz `tamacraft:tamacraft_heart`,
   Tamacon bleibt). Alte Welten und alte IDs in Packs laufen über `LegacyIdMixin`. 1.3.0 (26.3) und 1.3.0+1.21.1 hochgeladen
   am 7.11.: Dateien 9501672 (26.3) und 9501673 (1.21.1). CurseForge-Projekt 1758309:

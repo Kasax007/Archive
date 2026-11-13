@@ -219,3 +219,27 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   mit Wiederholung) fährt die Hauptsitzung als Hintergrund-Lauf und committet in Etappen.
 - Kosten seit der letzten Summe: R-B 0,56, F4 0,68, F5 0,77, F6 ~0,7, F7+F9 0,90, F8 + F10-Abbruch 1,12,
   SIDEKICK 0,28 + 0,62, F10-Rest 0,27, UI1 läuft. Summe rund 20 Mio.
+- **13.11. 21:10 UTC, Antwort des Nutzers auf die Hörproben und neue Wünsche:** (1) „Habe immer einen Plan, was wir
+  schon gemacht haben und noch machen müssen“: der Plan steht in `docs/PLAN.md` im Mod-Repo (Phase 3b, in der
+  Reihenfolge seiner Liste) und wird nach jedem Schritt nachgeführt; in jeder Antwort kurz den Stand nennen.
+  (2) Stimmen: **Ansager = Kandidat C** (sehr tiefe Trailer-Stimme) **mit etwas schnellerem Tempo**; die „eine
+  Stimme, sechs Stimmungen“ klingt super; die schnelle Engine gefällt ihm nicht: „Wir investieren die Zeit.“
+  Referenz liegt als `$SP/voice/work/ref/emcee.wav` (= `cast/c_trailer_intro.wav`), `cast.json` bekommt für den
+  Ansager die Beschreibung C mit zügigem Tempo und `"tempo": 1.06`. (3) **Fliegende Säbel zu schwer und schwer zu
+  treffen** → umgebaut zum Duellanten (größer, langsamer, angekündigter Stoß, danach liegt er 2,5 s wehrlos);
+  dabei gefunden: der Anlauf eines Sturmangriffs wurde nur im KI-Schritt gezählt, den ein stillstehendes Monster
+  nicht bekommt (Monster mit CHARGE froren ein) → Zähler laufen jetzt in `Abilities.held`. (4) **Alles auf Ebene 1
+  und 2 ist Show-Thema; er will sehr viele verschiedene Themes, zufällig gewählt, je mit eigenen Mobs, Stil,
+  Räumen** → Auftrag `THEMES1` (Ort und Tiefe trennen, Reihenfolge pro Lauf auslosen) und danach neue Welten nach
+  `docs/WORLDS.md` (zehn Entwürfe: Hollowmere Manor, Sun Tomb, Arcade Zero, Toy Chest, Halcyon Nine, Idol Steps,
+  Sugar Works, Smugglers' Grotto, Pop-Up Kingdom, Deep Seam), Vorlage `briefs/PLACE.txt`
+  (`brief.py W1-manor PLACE.txt b NAME="Hollowmere Manor"`). (5) „Setze all das um, gib mir dann eine neue Jar und
+  entwickle weiter; alles, was Spieler sehen und tun, muss top sein.“ Das Tutorial bleibt im Dungeon (seine
+  Klarstellung; die von ihm zurückkopierte Liste nennt noch die alte Fassung).
+- Aufnahme-Pipeline (`$SP/voice/synth/`, noch nicht im Repo): Entwurf in Vierer-Stapeln gleicher Länge mit eigener
+  Obergrenze je Zeile, dann Stimm-Angleich mit dem Zwei-Schritt-Decoder (`s3gen_meanflow` aus
+  `ResembleAI/chatterbox-turbo`: Echtzeit statt 4- bis 17-fach, gleiche Sprecher-Ähnlichkeit), dann Wortprüfung
+  auf dem fertigen Ton (faster-whisper small.en) und Sprecher-Prüfung, dann Preset und Ogg. Wasserzeichen der
+  Bibliothek bleibt an. Test mit 7 Zeilen: alle im ersten Versuch gut. Engpass ist der Entwurf (unter Last der
+  Agenten bis ×18 Echtzeit).
+

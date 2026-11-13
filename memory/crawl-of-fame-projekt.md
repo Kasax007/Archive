@@ -148,6 +148,12 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   abstimmen). Gemessen: Räume Ebenen 1–4 bei 0–82 %, Bosse meist 144–250 %. Offen: Ebene 5 wurde von Spur B noch
   gegen die alte Ausrüstungskurve abgestimmt (Ausrüstung dort jetzt rund 10 % stärker) → nach Lieferung nachmessen;
   am Schluss alle Ebenen mit `balance.sh` und `load.sh` durchmessen.
+- 13.11. 09:35 UTC: **Ebene 5 (Sunken Archive) fertig** (0,77 Mio. Tokens, 141 min; 190 Tests grün; Urteil: gut, eigener
+  Ort, Gezeiten klar lesbar; nachgemessen: Räume 0–40 %, Bosse 103–203 %, Last 3,0 ms pro Tick bei vier Läufen).
+  Ebene 6 ist inhaltlich gepusht (Spur A stimmt ab, dann Ebene 8). Laufend: Spur A `crawl-floors-a2.js`, Lauf
+  `wf_451d6ac5-454`; Spur B `crawl-floors-b2.js` (Ebene 7, dann 9), Lauf `wf_26b12359-f29`. Danach Spur A: Ebene 10
+  (`F10.txt`, ID `F10-floor`); Spur B: `SIDEKICK.txt`, dann `GALLERY.txt` (Screenshots der Seite, füllt auch die
+  Platzhalter der CurseForge-Beschreibung). Kosten Ebenen bisher: 0,68 + 0,77 Mio.
 - Gefunden beim eigenen Durchlauf (`tools/crawltest/scripts/journey.txt`): eine Stage Door entstand in einem Dorf und
   war von einem Haus versperrt → Türen halten jetzt 10 Chunks Abstand zu Dörfern (`exclusion_zone`).
 - 106 Server-Tests grün auf frischer Testwelt (`tools/dev/gametest.sh` löscht die Testwelt vor jedem Lauf; Tests mit

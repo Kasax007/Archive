@@ -62,6 +62,15 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
 - Reihenfolge so, dass jede Stufe veröffentlichbar ist: erst 3 Ebenen rund (Grafik, Show, Karte, Stage Door,
   Mehrspieler-Prüfung), dann Rollen, NPCs, Audio, dann Ebenen 4–10, zuletzt Sponsoren/Interviews und Abschluss.
 
+- **Seit 13.11. abends: Aufgaben per Agent-Werkzeug statt Workflow starten.** Der Workflow gibt jedem Agenten nur
+  die *letzte* Nutzer-Nachricht als Auftrag mit; ist die eng (z. B. „Im Inventar scrollen“), lehnt der Agent einen
+  größeren Auftrag ab. Vorgehen: `python3 briefs/brief.py <ID> <Datei> <a|b>` schreibt den ganzen Auftrag nach
+  `wf/out/<ID>.brief.txt`; dann Agent (model opus, Hintergrund) mit kurzem Text „Auftrag der Leitung steht in dieser
+  Datei“ und dem Bezug auf den Wunsch des Nutzers. Ein Agent pro Spur.
+- Platte: frei halten (Agenten-Läufe brauchen mehrere GB). `tools/crawltest/run.sh` und `tools/dev/gametest.sh`
+  löschen ihre Welten jetzt selbst; das Archiv ist als Sparse-Checkout eingerichtet (`memory`, `crawl-of-fame`,
+  `dokumentation`, `curseforge`; zurück mit `git sparse-checkout disable`).
+
 ## Container und Speicher
 
 - Der Container (16 GB) wurde am 12.11. einmal neu gestartet, als drei Checkouts gleichzeitig bauten und testeten.
@@ -180,3 +189,33 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   ihn in Sekunden. Balance-Durchgang mit Auto-Kampf-Bot einplanen.
 - Kosten bisher (Agenten-Tokens): Buch-Auswertung 6,2 Mio., Runde 1 1,2 Mio., Runde 2 1,6 Mio., Runde 3 rund 1,5 Mio.,
   Runde 4 je Spur 0,9 und 1,1 Mio., Runde 5 je Spur 1,0 und 0,9 Mio. Summe bis hier rund 14 Mio.
+- **13.11. abends: Zehn Ebenen fertig** (281 Tests), Zwischenstand-Jar Nr. 2 in `crawl-of-fame/builds/`. Der Nutzer
+  hat gespielt. **Seine Rückmeldung bestimmt Phase 3b** (Reihenfolge = Gewicht): mehr 3D-Modelle für Items und
+  Rüstungen (Schild in der Hand!), feinere Texturen überall, Item-Animationen; Waffen und Inventar-Filter schwer zu
+  verstehen, unklar was man anlegen soll, bessere Sortierung, **im Inventar scrollen**; UI nicht überall richtig
+  skaliert; **Tutorial im Dungeon** (geführte Einweisung auf Ebene 1, eigene Figuren und Texte); Musik nicht
+  dauernd, vor allem nicht außerhalb von Kämpfen; funktionale Blöcke, Dinge zum Plündern, interaktive Räume statt
+  nur Monster; viele Dinge zum Ausprobieren und Builds über den Lauf; **Ansager und NPCs als echte Sprachausgabe**
+  (Englisch, gute Emotion, genaue Regie); **die Show automatisch erzeugt auf einem großen Fernseher** in Green Rooms
+  oder Küchen, wo NPCs Essen geben. Erledigt: Tooltips auf dem Crate-Ergebnis (`unbox_hover.txt`).
+- Aufträge dafür (alle in `crawl-of-fame/briefs/`): Spur A: `UI1` (läuft, Bausatz + Hauptschirme) → `ITEMS`
+  (Power-Wert, Item-Karte mit Vergleich, scrollender Stash mit Filtern/Suche/Sortierung, Loadout, Armoury) →
+  `TUTORIAL` (Rehearsal Wing mit dem Gaffer) → `ROOMS1` (Durchsuchen, Requisiten, das Set als Waffe, Gefangene,
+  Kopfgeld) → `ROOMS2` (Bonus Rounds: zehn Spiele, Publikums-Aufgaben) → `BROADCAST` (Fernseher, Kantine, Köchin)
+  → `UI2`. Spur B: `SIDEKICK` (fertig, 296 Tests) → `VOICE` (läuft: Sprechtext, Wiedergabe, Musik nur in Kämpfen)
+  → `MODELS` (3D-Waffen, Schilde, Rüstungsformen, Item-Leben, Icons neu) → `BUILDS1` (Technik je Waffentyp, zehn
+  neue Waffentypen, Zustände/Kombos, Übungspuppe mit DPS, zwei Loadouts) → `BUILDS2` (Rewrites: 1 aus 3, 90 Perks,
+  regelbrechende Uniques, Script Doctor) → `CREATURES1–3` → `GALLERY`.
+- **Sprachausgabe, Entscheidung nach Test** (Arbeitsordner `$SP/voice`, nichts davon im Repo): Qwen3-TTS
+  VoiceDesign 1.7B (Apache 2.0) spricht nach Stimm-Beschreibung plus Regie-Anweisung je Satz, wortgenau (Whisper),
+  aber die Klangfarbe schwankt zwischen Sätzen (Sprecher-Ähnlichkeit 0,79). Deshalb zweiter Schritt: Chatterbox-VC
+  (MIT, `ResembleAI/chatterbox` `s3gen`) bringt jede Zeile auf die Referenz der Figur (danach 0,92; Wörter und
+  Betonung bleiben). Tempo auf der ausgelasteten Maschine: Entwurf im Stapel (8–9 Sätze) ×4 Echtzeit, VC ×4,
+  zusammen rund 8 s Rechenzeit je Sekunde Sprache; einzeln ×12. Chatterbox Turbo war langsamer (×20–30) und hat
+  keine Regie; Kokoro (×1,5–2) dient nur als Platzhalter (`$SP/voice/draft.sh`). Hörproben für den Nutzer:
+  https://claude.ai/artifact/YCniHiBsmdrUSUWPDqLNe6 (Ansager A/B/C; ohne Antwort weiter mit A). Vertrag mit dem
+  Agenten steht im Auftrag `VOICE.txt` (Sprechtext `tools/content/voice/script/<sprecher>.json`, `cast.json`,
+  Presets, `process.py`); die Aufnahme (`synth.py`: Entwurf → Wörter prüfen → VC → Stimme prüfen → Preset → OGG,
+  mit Wiederholung) fährt die Hauptsitzung als Hintergrund-Lauf und committet in Etappen.
+- Kosten seit der letzten Summe: R-B 0,56, F4 0,68, F5 0,77, F6 ~0,7, F7+F9 0,90, F8 + F10-Abbruch 1,12,
+  SIDEKICK 0,28 + 0,62, F10-Rest 0,27, UI1 läuft. Summe rund 20 Mio.

@@ -128,9 +128,17 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
 - Seite: Banner und Logos in `art/` (`tools/page/headers.py`), Entwurf der CurseForge-Beschreibung in
   `crawl-of-fame/curseforge/mod-description.md` (Platzhalter `{{MONSTERS}}`, `{{BOSSES}}`, `{{ACHIEVEMENTS}}`,
   `{{IMG}}` am Ende füllen; Screenshots fehlen noch).
-- Laufend: Spur A Ebene 4 (`crawl-floors-a1.js`, Lauf `wf_1905afc3-cf2`, fast fertig), Spur B Ebene 5
-  (`crawl-floors-b1.js`, Lauf `wf_f23b8e47-dcc`). `briefs/common.txt` enthält jetzt die Lehren aus den Prüfrunden.
-  Danach Spur A: Ebenen 6, 8, 10; Spur B: 7, 9. Kosten Prüfrunde Spur B: 0,56 Mio.
+- 13.11. 08:00 UTC: **Ebene 4 (Boiler Room) fertig** (0,68 Mio. Tokens, 90 min; 146 Tests grün; Urteil: gut, Hallen
+  etwas dunkel und ähnlich → Hinweis in den Aufträgen der späteren Ebenen). Laufend: Spur A `crawl-floors-a2.js`
+  (Ebene 6, dann 8), Lauf `wf_451d6ac5-454`; Spur B `crawl-floors-b1.js` (Ebene 5), Lauf `wf_f23b8e47-dcc`.
+  Danach Spur B: `crawl-floors-b2.js` (Ebene 7, dann 9), dann Auftrag `briefs/SIDEKICK.txt` (Tierbegleiter als neues
+  Modul; schließt die ungenutzte Fertigkeit Beast Handling). Spur A danach: Ebene 10 aus `briefs/F10.txt` (mit
+  Abschnitt zum Finale: Siegessequenz, Abspann). `briefs/common.txt` enthält die Lehren aus den Prüfrunden.
+- **Leistung gemessen** (`tools/dev/load.sh <läufe> <ebene>`, Profil mit `CRAWL_JFR=1` und `tools/dev/jfr_top.py`):
+  acht gleichzeitige Läufe auf Ebene 1 kosten im Mittel 4,0 ms pro Server-Tick (p95 7,4 ms). Natürliches Spawnen ist
+  im Dungeon abgeschaltet. Lehre: `helper.onEachTick` der Testumgebung legt je Tick bis zum Timeout einen Eintrag an
+  (bei 2 Mio. Ticks unbrauchbar langsam); eigene Tick-Ereignisse nutzen und den Test über `succeedWhen` beenden.
+  `balance.sh` und `load.sh` laufen jetzt allein (`-PtestFilter`).
 - Gefunden beim eigenen Durchlauf (`tools/crawltest/scripts/journey.txt`): eine Stage Door entstand in einem Dorf und
   war von einem Haus versperrt → Türen halten jetzt 10 Chunks Abstand zu Dörfern (`exclusion_zone`).
 - 106 Server-Tests grün auf frischer Testwelt (`tools/dev/gametest.sh` löscht die Testwelt vor jedem Lauf; Tests mit

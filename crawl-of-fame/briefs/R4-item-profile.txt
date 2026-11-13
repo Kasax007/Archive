@@ -1,0 +1,15 @@
+TASK __ID__: independent review of the modules item (gear, loot, crates, stash, trinkets, Prize Trunks) and profile (packages net.kasax.crawl.item, net.kasax.crawl.profile and their client parts, resources and tests). You did not write this code. Find the real defects before players do, prove them and fix them. Reports to read: B2-profile, B3-items, B4-crates; the lead added item.stash.Winnings and TrunkItem.
+
+Read the code of these modules completely. Look for, in this order of importance:
+1. Server and multiplayer. Anything that trusts the client: every payload handler must check who sends it and that the request is possible right now (the sender is a living crawler, in the right place, ranges, cooldowns, counts, ownership). State in static fields that must be per server, per run or per player, or that survives when a singleplayer world is closed and another one opened in the same game. Client classes reachable from server code. Work on the wrong thread.
+2. Persistence. What must survive a relog and a server restart and does not; what is saved but never cleaned up; saved data that breaks when a key is missing (older saves).
+3. Duplication and loss of items, coins and crates: every path that moves stacks (menus, shift-click, number keys, drag, drops, death, win, leaving, disconnecting while a screen is open, two players at the same container, a full inventory).
+4. Crashes: null, missing registry entries, empty lists, division by zero, concurrent modification, unloaded chunks, entities removed in the middle of a tick, players who disconnect in the middle of a flow.
+5. Performance: loops per tick over all entities, players or blocks; allocations per tick; lookups that load chunks; packets sent every tick; collections that only grow.
+6. Rules of DESIGN.md that the code breaks; texts whose arguments do not fit their lang entry; lang keys used in code that are missing in the lang files; unused leftovers of earlier attempts.
+
+METHOD: prove every suspicion before you touch anything: follow the callers, write a game test that fails, or reproduce it with a crawltest script (tools/crawltest/mp.sh runs a real dedicated server with two clients, see its README). Fix only proven defects, each with a test where a test is possible. No refactoring, no restyling, no new features. Keep the list of findings while you work. Stop after the important paths are covered; do not polish.
+
+DELIVER: the fixes, pushed; docs/reports/__ID__.md with a table of the proven defects (severity, where, what happens, proof, fix) and a second list of suspicions you could not prove or that need a decision by the lead (with your recommendation).
+
+ACCEPTANCE: tools/dev/jc.sh passes; tools/dev/gametest.sh passes (all tests of all modules); tools/dev/check_names.py passes; no new warnings from the mod in the logs.

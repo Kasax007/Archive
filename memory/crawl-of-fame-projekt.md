@@ -107,6 +107,14 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
 - Prüf-Runde läuft auf Spur A (R1 run+show, R2 magic+npc, R3 mob); für Spur B danach R4 item+profile,
   R5 world+map+rules (Skripte `briefs/crawl-review-lane-*.js`). Danach Ebenen 4–10 nach `docs/FLOORS.md` mit der
   Vorlage `briefs/FLOOR.txt` (eine Ebene pro Aufgabe, zwei Spuren parallel, eigene Dateien je Ebene).
+- 13.11. 06:20 UTC: Audio fertig (183 Klänge, 181 per `tools/content/audio/synth.py` erzeugt, 11 Musik-Loops von
+  Kevin MacLeod CC BY 4.0, Gelächter CC0 von OpenGameArt, alles in `CREDITS.md`; Jar 18,3 MB). Prüfberichte R1–R3
+  ausgewertet: echte Fehler behoben (Remains verschwand bei zwei Betrachtern, statische Zustände über Welten hinweg,
+  Rolle ohne Casting Office unterschreibbar, Abklingzeiten durch Relog zurückgesetzt, Boss-Leiste nach Tod);
+  Entscheidungen der Leitung stehen am Ende von `docs/reports/R*.md`. Spur B prüft R4 (item+profile) und
+  R5 (world+map+rules). Als Nächstes Spur A: Ebene 4 (`briefs/crawl-floors-a1.js`), Spur B danach Ebene 5.
+- Gefunden beim eigenen Durchlauf (`tools/crawltest/scripts/journey.txt`): eine Stage Door entstand in einem Dorf und
+  war von einem Haus versperrt → Türen halten jetzt 10 Chunks Abstand zu Dörfern (`exclusion_zone`).
 - 106 Server-Tests grün auf frischer Testwelt (`tools/dev/gametest.sh` löscht die Testwelt vor jedem Lauf; Tests mit
   Test-Spielern müssen auf geladene Chunks warten: `managedBlock`).
 - Von der Hauptsitzung zusätzlich: Balance-Modell und Simulation (`docs/BALANCE.md`, `tools/dev/balance.sh`: ein
@@ -121,4 +129,4 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
 - Beobachtung Balance: nackter Level-1-Spieler verliert im ersten Kampfraum in 3 s 17 von 40 Leben; Boss Ebene 1 tötet
   ihn in Sekunden. Balance-Durchgang mit Auto-Kampf-Bot einplanen.
 - Kosten bisher (Agenten-Tokens): Buch-Auswertung 6,2 Mio., Runde 1 1,2 Mio., Runde 2 1,6 Mio., Runde 3 rund 1,5 Mio.,
-  Runde 4 je Spur 0,9 und 1,1 Mio., Runde 5 Spur A 1,0 Mio. Summe bis hier rund 13 Mio.
+  Runde 4 je Spur 0,9 und 1,1 Mio., Runde 5 je Spur 1,0 und 0,9 Mio. Summe bis hier rund 14 Mio.

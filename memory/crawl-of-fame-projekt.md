@@ -113,6 +113,24 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   Rolle ohne Casting Office unterschreibbar, Abklingzeiten durch Relog zurückgesetzt, Boss-Leiste nach Tod);
   Entscheidungen der Leitung stehen am Ende von `docs/reports/R*.md`. Spur B prüft R4 (item+profile) und
   R5 (world+map+rules). Als Nächstes Spur A: Ebene 4 (`briefs/crawl-floors-a1.js`), Spur B danach Ebene 5.
+- 13.11. 07:20 UTC: Prüfrunden R4 (item+profile) und R5 (world+map+rules) fertig und ausgewertet (12 weitere
+  echte Fehler behoben, u. a. Crates gingen beim Öffnen verloren, Speicherlecks in Stash/Nav/Fallen, entschärfte
+  Konfettikanone feuerte weiter). Entscheidungen der Leitung umgesetzt: Crates nur an der Unboxing Booth, Spinde
+  schließen bei Entfernung, Bomben/Blitze treffen nur Monster (`item.Blast.canHit`), **Zellen liegen jetzt drei
+  Regionen auseinander** (`Cells.STRIDE = 3`; bei Sichtweite 32 wurde sonst die Nachbarzelle vor ihrem Plan als
+  Bedrock erzeugt), Casting Call sucht 64 Chunks und merkt sich die Antwort. 128 Server-Tests grün.
+- HUD: Die Minimap verdeckte die Vanilla-Effektsymbole; sie stehen jetzt links daneben
+  (`tools/crawltest/scripts/hud_effects.txt`).
+- Modpack-Verträglichkeit: `tools/dev/compat.sh` (Sätze verbreiteter Mods von Modrinth, statischer Mixin-Abgleich
+  `compat_scan.py`, Läufe daneben). Statischer Abgleich mit 37 Jars ohne harte Überschneidung. **Die Läufe mit
+  fremden Jars (`compat.sh prod|client`) hat die Sicherheitsprüfung der Sitzung abgelehnt („Code from External“):
+  nicht umgehen; der Nutzer muss das freigeben oder selbst starten.**
+- Seite: Banner und Logos in `art/` (`tools/page/headers.py`), Entwurf der CurseForge-Beschreibung in
+  `crawl-of-fame/curseforge/mod-description.md` (Platzhalter `{{MONSTERS}}`, `{{BOSSES}}`, `{{ACHIEVEMENTS}}`,
+  `{{IMG}}` am Ende füllen; Screenshots fehlen noch).
+- Laufend: Spur A Ebene 4 (`crawl-floors-a1.js`, Lauf `wf_1905afc3-cf2`, fast fertig), Spur B Ebene 5
+  (`crawl-floors-b1.js`, Lauf `wf_f23b8e47-dcc`). `briefs/common.txt` enthält jetzt die Lehren aus den Prüfrunden.
+  Danach Spur A: Ebenen 6, 8, 10; Spur B: 7, 9. Kosten Prüfrunde Spur B: 0,56 Mio.
 - Gefunden beim eigenen Durchlauf (`tools/crawltest/scripts/journey.txt`): eine Stage Door entstand in einem Dorf und
   war von einem Haus versperrt → Türen halten jetzt 10 Chunks Abstand zu Dörfern (`exclusion_zone`).
 - 106 Server-Tests grün auf frischer Testwelt (`tools/dev/gametest.sh` löscht die Testwelt vor jedem Lauf; Tests mit

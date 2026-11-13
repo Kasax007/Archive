@@ -13,4 +13,11 @@ RULES
 - Anything visible must be looked at: take screenshots with tools/crawltest (README there) and view them, and view sheets of what you drew; fix what looks wrong and look again. Judge like a player who downloads the mod, not like its author.
 - If the task turns out too large, finish the core in good quality first, deliver it, and list the rest under open_points. Do not deliver half-working parts.
 - Deliver as ARCHITECTURE section 9 says: rebase on origin/claude/determined-edison-xwiksi, tools/dev/jc.sh, then git push origin HEAD:claude/determined-edison-xwiksi. Never force-push, never push another branch. Commit footer exactly as in section 9 (no model names anywhere).
+- Lessons of five review rounds (each of these was a real defect; do not repeat them):
+  * Static state: every static map or cache keyed by a player, run, level or chunk is cleared on disconnect, at the end of the run and at SERVER_STOPPED. No WeakHashMap whose values reference their keys. Nothing static may hold a ServerPlayer, a level or a floor plan.
+  * What must outlive a relog or a server restart (timers, cooldowns, opened or used states) is saved (member data, floor state, block entity) or heals itself when it is missing after a restart. Timers never load chunks.
+  * A packet from a client proves nothing: check that the sender is a living crawler of the run, stands where the action is possible, and that every index is in range.
+  * toUpperCase/toLowerCase only with Locale.ROOT. Player-facing text only through lang keys.
+  * Area effects of crawlers hit monsters only (item.Blast.canHit, magic.Targets.hostile); effects of monsters and of the floor never reach into green rooms.
+  * Game tests must not depend on rolled content (stock, loot, layouts) or on what other tests do at the same time.
 - At the end write docs/reports/__ID__.md (at most 60 lines: what exists and how to use it, commands, open points), commit and push it with your work, then return the structured report.

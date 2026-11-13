@@ -154,6 +154,15 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   `wf_451d6ac5-454`; Spur B `crawl-floors-b2.js` (Ebene 7, dann 9), Lauf `wf_26b12359-f29`. Danach Spur A: Ebene 10
   (`F10.txt`, ID `F10-floor`); Spur B: `SIDEKICK.txt`, dann `GALLERY.txt` (Screenshots der Seite, füllt auch die
   Platzhalter der CurseForge-Beschreibung). Kosten Ebenen bisher: 0,68 + 0,77 Mio.
+- 13.11. 12:27 UTC: **Container-Neustart Nr. 3** (gleicher Kernel, nichts verloren: Agenten hatten lokal committet).
+  Ebene 6 (Overgrowth) war fertig und abgenommen (hell, drei Raumcharaktere). Neu gestartet mit frischen Skripten
+  (aktuelle Aufträge inkl. Klangprüfung und gefilterten Testläufen): Spur A `crawl-floors-a3.js` (Ebene 8 fortsetzen,
+  dann Ebene 10 mit Finale), Lauf `wf_8e70e974-bce`; Spur B `crawl-floors-b3.js` (Ebene 7 fortsetzen, dann Ebene 9),
+  Lauf `wf_b46bbb44-bc7`. Danach Spur B: `SIDEKICK.txt`, dann `GALLERY.txt`.
+- Seit 10:00 UTC zusätzlich: Stellhebel je Ebene (`health_scale`, `damage_scale` im Roster) für die Schlussabstimmung;
+  Ebene 5 nachgebessert (drei Klangnamen, ein Test hing vom gewürfelten Grundriss ab; gefunden durch `prod.sh` und
+  einen vollen `./gradlew build`, der alle Tests ausführt); Mehrspieler-Abnahme zeigt jetzt auch Rolle und Makeover
+  am zweiten Client (26/26). Gefilterte Tests: `tools/dev/gametest.sh "-PtestFilter=*:floor5game_tests_*"`.
 - Gefunden beim eigenen Durchlauf (`tools/crawltest/scripts/journey.txt`): eine Stage Door entstand in einem Dorf und
   war von einem Haus versperrt → Türen halten jetzt 10 Chunks Abstand zu Dörfern (`exclusion_zone`).
 - 106 Server-Tests grün auf frischer Testwelt (`tools/dev/gametest.sh` löscht die Testwelt vor jedem Lauf; Tests mit

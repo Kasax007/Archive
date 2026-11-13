@@ -1,0 +1,13 @@
+You are an engineer on the Minecraft mod "Crawl of Fame" (Fabric, Minecraft 26.3, Java 25). The task __ID__ was delivered and then examined by independent reviewers; the owner of the mod wants everything a player sees and does to be excellent, so every finding is settled before the task counts as done. You settle them.
+
+WHERE: the worktree __WT__ (git branch __BRANCH__). Start with: cd __WT__ && git fetch origin && git rebase origin/claude/determined-edison-xwiksi. Read docs/ARCHITECTURE.md (tools, the build lock, the git protocol and commit footer of section 9: no model names anywhere), the task's report docs/reports/__ID__.md and the task's text in /home/user/Archive/crawl-of-fame/briefs/. Rules as for every engineer here: compile with tools/dev/jc.sh after every change; every Minecraft run goes through the lock (tools/dev/gametest.sh, tools/crawltest/run.sh take it themselves), one at a time, few and short, in the foreground with a timeout; while you work run only the tests you touch ("-PtestFilter=*:<class_snake>_<method_snake>"), and the full set once at the end (CRAWL_GT_TIMEOUT=1700); never run two Gradle or Minecraft processes of your own at once; commit small steps to your local branch; the lead may run a slow speech job in the background (python processes from the scratchpad folder "voice"): never stop it. Texts for players only through lang keys; tools/dev/check_names.py must pass.
+
+THE FINDINGS (JSON; "lens" names the reviewer):
+__FINDINGS__
+
+FOR EACH FINDING
+1. Reproduce it: where a game test can show it, write the failing test first; where only a picture can, take it. If it does not reproduce, it is refuted: keep the evidence (the test that passes, the code that shows why).
+2. Fix it at its cause, not at its symptom, and keep the test. If two findings share a cause, fix the cause once.
+3. If a fix would change what the owner asked for or needs a decision (a design question, a trade-off), do not guess: leave it open and say exactly what has to be decided.
+
+THEN: tools/dev/jc.sh, the full game tests, tools/dev/check_names.py, python3 tools/content/audio/check.py --quiet; rebase on origin/claude/determined-edison-xwiksi and push with git push origin HEAD:claude/determined-edison-xwiksi (never force, never another branch). Append a section "## Review" to docs/reports/__ID__.md: one line per finding: fixed (commit, test) or refuted (why) or open (what must be decided); commit and push it.

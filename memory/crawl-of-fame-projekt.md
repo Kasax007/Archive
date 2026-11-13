@@ -242,4 +242,25 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   auf dem fertigen Ton (faster-whisper small.en) und Sprecher-Prüfung, dann Preset und Ogg. Wasserzeichen der
   Bibliothek bleibt an. Test mit 7 Zeilen: alle im ersten Versuch gut. Engpass ist der Entwurf (unter Last der
   Agenten bis ×18 Echtzeit).
+- **13.11. 23:30 UTC:** UI1 geliefert und abgenommen (Bausatz `client.ui`, `docs/UI.md` bindend; Skalierungsfehler der
+  Attribut-Zeilen auf niedrigen Fenstern von der Leitung behoben: `StatsTab.compact`, `ui_small.txt`). VOICE
+  geliefert (Modul `voice`: 802 Zeilen, 28 Sprecher, Wiedergabe mit Warteschlange und Ducking, Musik nur in Kämpfen;
+  301 Tests). Erste 87 Ansager-Aufnahmen sind im Modul (`tools/content/voice/lead/publish.sh <staging>`), Pipeline
+  liegt jetzt im Repo unter `tools/content/voice/lead/` (README dort), Herkunft und Lizenzen in `CREDITS.md`.
+  Aufnahme läuft als Dauerläufer (`lead/supervise.sh`, zwei Threads; Steuerdateien im Arbeitsordner
+  `$SP/voice/work`: `repo.txt`, `PAUSE`, `STOP`, `QUIT`); bei jedem Check-in: `publish.sh $SP/voice/out_ogg`,
+  committen, pushen. Hörproben-Seite hat oben vier echte Aufnahmen (Stimme C, Tempo 1,06).
+- **Ultracode ist an** (Meldung des Systems): Aufgaben laufen wieder über das Workflow-Werkzeug, je Spur ein
+  Workflow mit Qualitätsschleife aus `briefs/gen2.py`: Bauen → zwei unabhängige Prüfungen nacheinander (Linsen in
+  `briefs/lenses_<AUFGABE>.txt`, allgemein `lenses_default.txt`; Prüfer ändern nichts) → Korrekturen (`fix2.txt`).
+  Weiter höchstens zwei Agenten gleichzeitig (Maschine: ein Minecraft-Lauf zur Zeit). Der Workflow reicht den
+  Agenten die letzte Nutzer-Nachricht als Auftrag weiter: die vom 13.11. 21:10 deckt alles ab; nach einer kurzen
+  Nachricht des Nutzers wieder das Agent-Werkzeug mit `brief.py` nehmen. Laufend: Spur A `crawl-themes-a6.js`
+  (THEMES1), Spur B `crawl-items-b7.js` (erst Prüfung und Korrektur von VOICE, dann ITEMS).
+- Zusammenführen ist Sache der Leitung: THEMES1 hat die Regel-Texte von `show.floor.rule.<n>` auf
+  `world.place.<id>.rule` umgestellt (dazu `show.floor.service.casting|coins|sponsors`, `rules.hint.casting_floor`);
+  der Sprechtext (`tools/content/voice/lines/emcee_floors.txt`) folgt dem jetzt. Nach jedem Merge
+  `python3 tools/content/voice/build.py` laufen lassen: es meldet Schlüssel, die es nicht mehr gibt.
+- Zwischenstand-Jar 3 kommt, sobald der Bau-Schritt von THEMES1 „fertig“ meldet (dann voller Testlauf grün):
+  `./gradlew assemble`, `tools/dev/prod.sh`, nach `crawl-of-fame/builds/`, Roh-Link an den Nutzer.
 

@@ -12,7 +12,8 @@ abgelegt am 13.11.2026. Die Modpack-Dateien liegen auf dem CurseForge-CDN unter
 | `dreamcraft-forge_schriftzug_1440x1080.png` | Dreamcraft Forge 1.19.2-1.0.2 (CurseForge-Datei 3983512): `overrides/config/drippyloadingscreen/logofabricnostars.png` (der Name täuscht: das Bild zeigt „DREAMCRAFT FORGE“) | `8f4b84e6857f01e8479059676a4096e511cbdb7b` |
 | `dreamcraft_fenster-icon_32.png` | Dreamcraft 1.20.1-1.0.39 (CurseForge-Datei 5042444): `overrides/config/fancymenu/minecraftwindow/icons/icon32x32.png` | `c77816093871d3cb785113cb4d2d9a82e1db4861` |
 | `dreamcraft_fenster-icon_16.png` | dieselbe Datei: `…/minecraftwindow/icons/icon16x16.png` | `b367f9b9537fdb2b1d51c52bbf40f0e0eca9b738` |
-| `tamacraft_icon_render_1024.png` | neu gezeichnet mit `icons/render_tamacraft.py` aus `tools/petart/icon.py` im Repo `tamagotchi` (Commit 4f10738), bei 4096 px gezeichnet und auf 1024 px verkleinert | `672fb7b9d9bee8a617de91c185c4616892934940` |
+| `tamacraft_icon_render_1024.png` | neu gezeichnet mit `icons/render_tamacraft.py`: Zeichen-Code des Mods (`tools/petart` im Repo `Kasax007/tamagotchi`, Commit 4f10738) und die Maße aus `icon.py`, bei 4096 px gezeichnet und auf 1024 px verkleinert | `9a4762389df8b7bd10986be8cfa1b9883561a784` |
+| `beach-craft_altes-mod-icon_1024.jpg` | Repo `Kasax_Raft_Mod`, `src/main/resources/assets/raft/icon.png` bis Version 3.1 (git-Objekt 9c231eb5, nur noch in der Historie); in der Jar `raft-3.1.0-26.3.jar` | `ef6ac2557157a11ad0a0baf95375c7ffad0dab3f` |
 
 ## Was in den alten Packs sonst noch lag
 
@@ -20,8 +21,12 @@ Durchgesehen am 13.11.2026: Dreamcraft Fabric 1.17.1, 1.18.1, 1.19, 1.19.2 und 1
 Lightspeed Performance 1.0.1 und 1.0.2, Beautifully 1.0.3, Challenge Craft Modpack v4.2 (CurseForge und Modrinth).
 
 - Das Logo „DREAMCRAFT FABRIC“ mit Mond und Sternen liegt im Repo von Quest Icons
-  (`assets/questsicons/textures/item/logo_fabric.png`) und in den alten Packs als `welcome.png`.
+  (`assets/questsicons/textures/item/logo_fabric.png`) und im Pack für 1.18.1 als
+  `kubejs/assets/kubejs/textures/ftbquests/welcome.png`.
 - Der Schriftzug ohne Mond und Sterne (`logofabricnostars.png` in den Fabric-Packs) ist bildgleich mit
   `loading_logo.png` im Pack für 26.3.
 - Lightspeed Performance, Beautifully und Dreamcraft 1.17.1 enthalten keine Bilder.
+- Im Challenge Craft Modpack liegt noch `config/fancymenu/assets/old.png` (1024×222): ein älterer Schriftzug, den
+  kein Menü mehr benutzt. Er ist absichtlich nicht im Pack.
+- Ein Fenster-Icon hat nur das Pack für 1.20.1. Das Pack für 26.3 und das Forge-Pack haben keins.
 - Eine größere Fassung des Dreamcraft-Icons (800 px) oder des Quest-Icons-Icons (800 px) war nirgends dabei.

@@ -2,8 +2,9 @@
 """Renders the Tamacraft icon from its source, sharp and larger than the files that are published.
 
 The icon is drawn by tools/petart/icon.py in the mod repository: three pets on a pink tile, drawn at 512 px and
-saved as a 128 px file for the jar. CurseForge needs at least 400 px, so the 128 px file was enlarged for the
-project page, which is why the icon looks soft there. This script draws the same picture again.
+saved as a 128 px file for the jar. The 400 px file on the CurseForge project page is soft: by its measurements it
+is an enlargement of that 128 px file. This script draws the same picture again, with the mod's own drawing code
+(tools/petart: build, render, rig, pets) and the layout of icon.py, every length multiplied by a factor.
 
     python3 render_tamacraft.py /path/to/tamagotchi OUT.png [size] [oversampling]     defaults: 1024 and 4
 
@@ -41,9 +42,11 @@ def tile(k, build, render, pack):
     s = 512 * k
     im = Image.new('RGBA', (s, s), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
-    d.rounded_rectangle((8 * k, 8 * k, s - 8 * k, s - 8 * k), radius=90 * k, fill=(244, 175, 200, 255),
+    # Pillow's corner points belong to the shape: the mod draws 8..504 and 40..472 at 512 px, k times larger
+    # that is 8k..505k-1 and 40k..473k-1.
+    d.rounded_rectangle((8 * k, 8 * k, 505 * k - 1, 505 * k - 1), radius=90 * k, fill=(244, 175, 200, 255),
                         outline=(200, 110, 146, 255), width=14 * k)
-    d.rounded_rectangle((40 * k, 40 * k, s - 40 * k, s - 40 * k), radius=60 * k, fill=(195, 214, 158, 255))
+    d.rounded_rectangle((40 * k, 40 * k, 473 * k - 1, 473 * k - 1), radius=60 * k, fill=(195, 214, 158, 255))
     for name, expr, x, y, size, yaw in PETS:
         im.alpha_composite(pet(name, expr, size * k, yaw), (x * k, y * k))
     for yy, row in enumerate(HEART):

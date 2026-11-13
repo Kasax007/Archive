@@ -371,16 +371,28 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
 ## Stand 13.11.2026 – Icon-Pack, alle Projekte des Kontos, Tamacraft-Adresse
 
 - **Icon-Pack** (Wunsch des Nutzers: „alle Icons meiner Projekte als Pack“): `Archive/icons/` mit `build_pack.py`
-  (`--fetch` lädt die Plattform-Dateien neu), `pack/` (Inhalt), `Kasax-Projekt-Icons.zip`, `manifest.json`. Regel: größte
-  vorhandene Fassung bytegenau, kleinere per Lanczos, nichts hochskalieren (außer Pixel-Art).
+  (`--fetch` lädt die Plattform-Dateien neu), `pack/` (Inhalt), `Kasax-Projekt-Icons.zip` (100 Dateien, 19 MB),
+  `quellen/` (Originale, die in keinem Repo liegen, mit `QUELLEN.md`), `plattform-originale/`, `manifest.json`.
+  Regel: größte vorhandene Fassung bytegenau, kleinere per Lanczos, nichts hochskalieren (außer Pixel-Art).
+  Zwei Prüfrunden per Workflow (0,7 + 0,5 Mio. Tokens); die erste fand die wichtigsten Lücken.
+- **Lehre:** Originale von Logos stecken oft in den veröffentlichten Modpack-Dateien (Menü-Grafiken), nicht in den
+  Repos. Alte Dateien liegen auf `mediafilez.forgecdn.net/files/<Datei-Nr. // 1000>/<Datei-Nr. % 1000>/<Dateiname>`
+  (Nummern und Namen aus `api.cfwidget.com/<Projekt-Nr.>`).
 - **Das CurseForge-Konto hat 9 Projekte** (Mitglieds-Nr. 102817337): die sechs aktiven und dazu Dreamcraft [FORGE]
   (582205), Lightspeed Performance (552356), Beautifully [NEW] (552343). Auf Modrinth sind es sechs.
   Abfrage ohne Zugangsdaten: `api.cfwidget.com/author/102817337` und `api.cfwidget.com/<Projekt-Nr.>` (kanonische
   Adresse, Logo unter `thumbnail`; Original: `media.forgecdn.net/avatars/<a>/<b>/<datei>`).
-- **Größte Logo-Fassungen:** Dreamcraft 800 px (CurseForge), Beach Craft 1024 (Archiv), Quest Icons 800 (CurseForge),
-  Tamacraft 400 (CurseForge), Challenge Craft 720 (JPEG, `docs/curseforge/src/pack_logo.jpg` im Mod-Repo), die zwei
-  alten Modpacks 400. Auf Modrinth liegt beim Challenge-Craft-Modpack nur ein 64-px-Icon.
+- **Größte Logo-Fassungen:** Challenge Craft 3240 px (`config/fancymenu/assets/final.png` im Modpack v4.2, jetzt in
+  `icons/quellen`; dazu die Schriftzüge `cc_wordmark.png`, `by_kasax.png`), Beach Craft 1024 (Archiv), Dreamcraft 800
+  und Quest Icons 800 (CurseForge), die zwei alten Modpacks 400. Dreamcraft-Logo mit Mond und Sternen:
+  `logo_fabric.png` im Quest-Icons-Repo; Fenster-Icon (Mond) nur im Pack für 1.20.1; „DREAMCRAFT FORGE“ im Forge-Pack.
+- **Tamacraft-Icon:** Die 400-px-Datei auf CurseForge ist eine Vergrößerung des Mod-Icons (128 px) und weich.
+  `icons/render_tamacraft.py` zeichnet dasselbe Bild scharf (Zeichen-Code des Mods, 4096 px, verkleinert auf 1024);
+  das Pack nutzt diese Fassung. Sie ist noch nirgends hochgeladen (Entscheidung des Nutzers offen).
+- **Offen, dem Nutzer gemeldet:** Modrinth-Icon des Challenge-Craft-Modpacks hat nur 64 px. Im Dreamcraft-Pack für 26.3
+  steht in `config/fancymenu/options.txt` der Fenstertitel `Challenge Craft 26.2` (seit V1, nicht im Spiel geprüft);
+  beim nächsten Pack korrigieren.
 - **Tamacraft auf CurseForge:** Adresse ist jetzt `/minecraft/mc-mods/tamacraft` (bis zur Umbenennung `/tamagotchi`).
   Ob die alte Adresse weiterleitet, ließ sich nicht prüfen: `www.curseforge.com` hat einen Bot-Schutz (HTTP 403), den
-  ich nicht umgehe. 10 gesendete Outreach-Nachrichten (8.11. und 11.11.) enthalten die alte Adresse; Brief, Configs und
-  alle ungesendeten Entwürfe (Seite und `outreach/drafts`) stehen auf der neuen.
+  ich nicht umgehe (auch nicht mit Browser-Kennung). 10 gesendete Outreach-Nachrichten (8.11. und 11.11.) enthalten
+  die alte Adresse; Brief, Configs und alle ungesendeten Entwürfe (Seite und `outreach/drafts`) stehen auf der neuen.

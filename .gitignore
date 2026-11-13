@@ -6,3 +6,5 @@ __pycache__/
 
 # build folder of icons/build_pack.py (only there while a build runs)
 icons/.pack_build/
+icons/pack.alt/
+icons/*.neu

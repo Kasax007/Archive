@@ -65,7 +65,7 @@
  {
   "project": "dreamcraft",
   "set": "extras",
-  "file": "01_dreamcraft/extras/dreamcraft_logo_zugeschnitten.png",
+  "file": "01_dreamcraft/extras/dreamcraft_logo_zugeschnitten_1420x584.png",
   "width": 1420,
   "height": 584,
   "how": "dasselbe Logo ohne den leeren Rand",
@@ -83,7 +83,7 @@
  {
   "project": "dreamcraft",
   "set": "extras",
-  "file": "01_dreamcraft/extras/dreamcraft_schriftzug_zugeschnitten.png",
+  "file": "01_dreamcraft/extras/dreamcraft_schriftzug_zugeschnitten_1410x395.png",
   "width": 1410,
   "height": 395,
   "how": "derselbe Schriftzug ohne den leeren Rand",
@@ -104,7 +104,7 @@
   "file": "01_dreamcraft/extras/dreamcraft_fenster-icon_32.png",
   "width": 32,
   "height": 32,
-  "how": "Icon des Spielfensters (Mond mit Sternen), aus dem Pack für 1.20.1",
+  "how": "Icon des Spielfensters (Mond mit Sternen), aus dem Pack für 1.20.1; die kleinen Sterne sind durchsichtige Punkte",
   "sha1": "c77816093871d3cb785113cb4d2d9a82e1db4861"
  },
  {
@@ -236,20 +236,11 @@
  {
   "project": "beach-craft",
   "set": "extras",
-  "file": "02_beach-craft/extras/beach-craft_mod-icon_bis-3.1_1024.jpg",
+  "file": "02_beach-craft/extras/beach-craft_altes-mod-icon_1024.jpg",
   "width": 1024,
   "height": 1024,
-  "how": "altes Mod-Icon (Floß zwischen Inseln), in der Jar bis Version 3.1; die Datei ist ein JPEG",
+  "how": "altes Mod-Icon (Floß zwischen Inseln), in der Jar bis Version 3.1; ein JPEG, so lag es in der Jar",
   "sha1": "ef6ac2557157a11ad0a0baf95375c7ffad0dab3f"
- },
- {
-  "project": "beach-craft",
-  "set": "extras",
-  "file": "02_beach-craft/extras/beach-craft_mod-icon_bis-3.1_1024.png",
-  "width": 1024,
-  "height": 1024,
-  "how": "dasselbe Bild als PNG",
-  "sha1": "5888ccb6759c560f1ae111b870097820362d5bac"
  },
  {
   "project": "quest-icons",
@@ -357,7 +348,7 @@
   "width": 1024,
   "height": 1024,
   "how": "neu gezeichnet",
-  "sha1": "672fb7b9d9bee8a617de91c185c4616892934940"
+  "sha1": "9a4762389df8b7bd10986be8cfa1b9883561a784"
  },
  {
   "project": "tamacraft",
@@ -366,7 +357,7 @@
   "width": 512,
   "height": 512,
   "how": "verkleinert",
-  "sha1": "83e027c5d54c2b43f5bb8e03d6056ab277e7201e"
+  "sha1": "7e61ed4858493e39dbe90f0a878f54a877a64117"
  },
  {
   "project": "tamacraft",
@@ -375,7 +366,7 @@
   "width": 400,
   "height": 400,
   "how": "verkleinert",
-  "sha1": "67d726a1601aa81ba1b2237976005c29befd17db"
+  "sha1": "2a803e1d194e5666aa99dd100b4d2798dddfc47e"
  },
  {
   "project": "tamacraft",
@@ -384,7 +375,7 @@
   "width": 256,
   "height": 256,
   "how": "verkleinert",
-  "sha1": "ac675ea5ce189d694b233c57ae138996a7987c6c"
+  "sha1": "82edf7df892ce895f0a42f2c5a50d5b7a27785f1"
  },
  {
   "project": "tamacraft",
@@ -393,7 +384,7 @@
   "width": 128,
   "height": 128,
   "how": "verkleinert",
-  "sha1": "3f7b3c88347931137f137747184d7c1395214485"
+  "sha1": "60846a116d1127634219cd90edd33164a9c335cb"
  },
  {
   "project": "tamacraft",
@@ -402,7 +393,7 @@
   "width": 64,
   "height": 64,
   "how": "verkleinert",
-  "sha1": "b698c0be9150f6beea24b607293cdc97ecef6eb3"
+  "sha1": "c1998802884f72b1474dadb60f4828d70881f92c"
  },
  {
   "project": "tamacraft",
@@ -428,7 +419,7 @@
   "file": "04_tamacraft/extras/tamacraft_icon_curseforge_400.png",
   "width": 400,
   "height": 400,
-  "how": "das Icon, wie es auf CurseForge liegt: aus 128 px vergrößert und deshalb weich",
+  "how": "das Icon, wie es auf CurseForge liegt: weich, weil es eine Vergrößerung des Mod-Icons (128 px) ist",
   "sha1": "6d1105c27fe399d04dafa7280f76d643953c5391"
  },
  {
@@ -518,7 +509,7 @@
   "file": "05_challenge-craft/extras/challenge-craft_schriftzug_2040x427.png",
   "width": 2040,
   "height": 427,
-  "how": "Schriftzug „CHALLENGE CRAFT“ aus dem Menü des Modpacks, durchsichtiger Grund",
+  "how": "Schriftzug „CHALLENGE CRAFT“ aus dem Menü des Modpacks, durchsichtiger Grund; ohne Rand, beim Einsetzen etwas Abstand lassen",
   "sha1": "865bf7ab23b31b4e7f6ed64f1f9aea2c5129b80b"
  },
  {
@@ -527,17 +518,8 @@
   "file": "05_challenge-craft/extras/challenge-craft_by-kasax_2048x298.png",
   "width": 2048,
   "height": 298,
-  "how": "Schriftzug „BY KASAX“ aus dem Menü des Modpacks, durchsichtiger Grund",
+  "how": "Schriftzug „BY KASAX“ aus dem Menü des Modpacks, durchsichtiger Grund; ohne Rand",
   "sha1": "0692827bb70b77801b57b2539b6cce6262c00dc5"
- },
- {
-  "project": "challenge-craft-modpack",
-  "set": "icon",
-  "file": "06_challenge-craft-modpack/challenge-craft-modpack_icon_3240.png",
-  "width": 3240,
-  "height": 3240,
-  "how": "Original",
-  "sha1": "db8678049e4ff10d4774a3130874f0d5c2f875c6"
  },
  {
   "project": "challenge-craft-modpack",
@@ -659,7 +641,7 @@
  {
   "project": "dreamcraft-forge",
   "set": "extras",
-  "file": "07_dreamcraft-forge/extras/dreamcraft-forge_schriftzug_zugeschnitten.png",
+  "file": "07_dreamcraft-forge/extras/dreamcraft-forge_schriftzug_zugeschnitten_1410x362.png",
   "width": 1410,
   "height": 362,
   "how": "derselbe Schriftzug ohne den leeren Rand",
@@ -771,7 +753,7 @@
   "width": 400,
   "height": 400,
   "how": "Kopie von tamacraft_icon_400.png",
-  "sha1": "67d726a1601aa81ba1b2237976005c29befd17db"
+  "sha1": "2a803e1d194e5666aa99dd100b4d2798dddfc47e"
  },
  {
   "project": "challenge-craft",
@@ -852,7 +834,7 @@
   "width": 256,
   "height": 256,
   "how": "Kopie von tamacraft_icon_256.png",
-  "sha1": "ac675ea5ce189d694b233c57ae138996a7987c6c"
+  "sha1": "82edf7df892ce895f0a42f2c5a50d5b7a27785f1"
  },
  {
   "project": "challenge-craft",

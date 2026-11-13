@@ -1,0 +1,942 @@
+[
+ {
+  "project": "dreamcraft",
+  "set": "icon",
+  "file": "01_dreamcraft/dreamcraft_icon_800.png",
+  "size": 800,
+  "how": "Original",
+  "sha1": "b554ba8eb87417663bc7cec4cdace54d8b6d331f"
+ },
+ {
+  "project": "dreamcraft",
+  "set": "icon",
+  "file": "01_dreamcraft/dreamcraft_icon_512.png",
+  "size": 512,
+  "how": "verkleinert",
+  "sha1": "14d76a2c19c9b1ef6b08e8a72285a2570f903eb7"
+ },
+ {
+  "project": "dreamcraft",
+  "set": "icon",
+  "file": "01_dreamcraft/dreamcraft_icon_400.png",
+  "size": 400,
+  "how": "verkleinert",
+  "sha1": "71f2ffde1d954049dd822603bd73fc3296af8229"
+ },
+ {
+  "project": "dreamcraft",
+  "set": "icon",
+  "file": "01_dreamcraft/dreamcraft_icon_256.png",
+  "size": 256,
+  "how": "verkleinert",
+  "sha1": "5c4c141b974c821a340d15e7774f0298a5de65a1"
+ },
+ {
+  "project": "dreamcraft",
+  "set": "icon",
+  "file": "01_dreamcraft/dreamcraft_icon_128.png",
+  "size": 128,
+  "how": "verkleinert",
+  "sha1": "2c3730fc69a3ec002ef0889e0b41add77c083fd0"
+ },
+ {
+  "project": "dreamcraft",
+  "set": "icon",
+  "file": "01_dreamcraft/dreamcraft_icon_64.png",
+  "size": 64,
+  "how": "verkleinert",
+  "sha1": "958bc1ba962be6e8abdf2c61c40ebb225d3580a5"
+ },
+ {
+  "project": "dreamcraft",
+  "set": "extras",
+  "file": "01_dreamcraft/extras/dreamcraft_server-icon_64.png",
+  "size": "64×64",
+  "how": "Symbol in der Serverliste (aus dem Server-Pack)",
+  "label": "Server-Icon",
+  "sha1": "cafa00e52c44524868f75b1d228abd8c5d6dbca2"
+ },
+ {
+  "project": "dreamcraft",
+  "set": "extras",
+  "file": "01_dreamcraft/extras/dreamcraft_schriftzug_1440x1080.png",
+  "size": "1440×1080",
+  "how": "Schriftzug vom Ladebildschirm, mit durchsichtigem Rand",
+  "label": "Schriftzug",
+  "sha1": "3994b499a6984ceab6e9ac587b33ba7dffced0ad"
+ },
+ {
+  "project": "dreamcraft",
+  "set": "extras",
+  "file": "01_dreamcraft/extras/dreamcraft_schriftzug_zugeschnitten.png",
+  "size": "1410×395",
+  "how": "derselbe Schriftzug ohne den leeren Rand",
+  "label": "Schriftzug, zugeschnitten",
+  "sha1": "80e9c09cbc80731ee4df2ac4cb56d25061ff5518"
+ },
+ {
+  "project": "beach-craft",
+  "set": "icon",
+  "file": "02_beach-craft/beach-craft_icon_1024.png",
+  "size": 1024,
+  "how": "Original",
+  "sha1": "9a933184e90419101663414a239f56d5f01056f9"
+ },
+ {
+  "project": "beach-craft",
+  "set": "icon",
+  "file": "02_beach-craft/beach-craft_icon_512.png",
+  "size": 512,
+  "how": "eigene Fassung",
+  "sha1": "f1e41a54037eafc3813644ff8ed9aebfda73b21a"
+ },
+ {
+  "project": "beach-craft",
+  "set": "icon",
+  "file": "02_beach-craft/beach-craft_icon_400.png",
+  "size": 400,
+  "how": "eigene Fassung",
+  "sha1": "ccd1819f01ee4413061d58581163a96e63a3f263"
+ },
+ {
+  "project": "beach-craft",
+  "set": "icon",
+  "file": "02_beach-craft/beach-craft_icon_256.png",
+  "size": 256,
+  "how": "eigene Fassung",
+  "sha1": "a1dc6722337baa779da10cac354e7d98d3b810e2"
+ },
+ {
+  "project": "beach-craft",
+  "set": "icon",
+  "file": "02_beach-craft/beach-craft_icon_128.png",
+  "size": 128,
+  "how": "verkleinert",
+  "sha1": "cd8764161e9ee9ee8ced5cad1c173b9841d870ce"
+ },
+ {
+  "project": "beach-craft",
+  "set": "icon",
+  "file": "02_beach-craft/beach-craft_icon_64.png",
+  "size": 64,
+  "how": "verkleinert",
+  "sha1": "e0d93f6381b7762b24239963d9ae65c8ba6fac7d"
+ },
+ {
+  "project": "beach-craft",
+  "set": "icon-ohne-titel",
+  "file": "02_beach-craft/beach-craft_icon-ohne-titel_1024.png",
+  "size": 1024,
+  "how": "Original",
+  "sha1": "25a10631e7eab2fa71c8154d6718c9973cbc22bc"
+ },
+ {
+  "project": "beach-craft",
+  "set": "icon-ohne-titel",
+  "file": "02_beach-craft/beach-craft_icon-ohne-titel_512.png",
+  "size": 512,
+  "how": "verkleinert",
+  "sha1": "597cf3592ef648d2812a583e33434930ea2151bb"
+ },
+ {
+  "project": "beach-craft",
+  "set": "icon-ohne-titel",
+  "file": "02_beach-craft/beach-craft_icon-ohne-titel_400.png",
+  "size": 400,
+  "how": "verkleinert",
+  "sha1": "73bac53678f69285b1a01b5ec2c14dcb7714adaf"
+ },
+ {
+  "project": "beach-craft",
+  "set": "icon-ohne-titel",
+  "file": "02_beach-craft/beach-craft_icon-ohne-titel_256.png",
+  "size": 256,
+  "how": "verkleinert",
+  "sha1": "2e3cd50db9e2bd93b95488571a1b1830a805c83e"
+ },
+ {
+  "project": "beach-craft",
+  "set": "icon-ohne-titel",
+  "file": "02_beach-craft/beach-craft_icon-ohne-titel_128.png",
+  "size": 128,
+  "how": "eigene Fassung",
+  "sha1": "8e7d20d06af027024c5775a579311bef5bbda3ee"
+ },
+ {
+  "project": "beach-craft",
+  "set": "icon-ohne-titel",
+  "file": "02_beach-craft/beach-craft_icon-ohne-titel_64.png",
+  "size": 64,
+  "how": "verkleinert",
+  "sha1": "519c9de85fbfdbc05f536c46740c691a9d87ffe4"
+ },
+ {
+  "project": "beach-craft",
+  "set": "extras",
+  "file": "02_beach-craft/extras/beach-craft_mod-icon-alt_1024.png",
+  "size": "1024×1024",
+  "how": "Mod-Icon in der Jar bis Version 3.1 (Floß zwischen Inseln)",
+  "label": "altes Mod-Icon",
+  "sha1": "ef6ac2557157a11ad0a0baf95375c7ffad0dab3f"
+ },
+ {
+  "project": "quest-icons",
+  "set": "icon",
+  "file": "03_quest-icons/quest-icons_icon_800.png",
+  "size": 800,
+  "how": "Original",
+  "sha1": "fe149854650fec6c8d02f9f1109550b66295005d"
+ },
+ {
+  "project": "quest-icons",
+  "set": "icon",
+  "file": "03_quest-icons/quest-icons_icon_512.png",
+  "size": 512,
+  "how": "verkleinert",
+  "sha1": "cc631de2660a785395a9c8d270ed045e7c75b3bf"
+ },
+ {
+  "project": "quest-icons",
+  "set": "icon",
+  "file": "03_quest-icons/quest-icons_icon_400.png",
+  "size": 400,
+  "how": "verkleinert",
+  "sha1": "8219c1834465eb60a3d8d17e63ec82043a77990a"
+ },
+ {
+  "project": "quest-icons",
+  "set": "icon",
+  "file": "03_quest-icons/quest-icons_icon_256.png",
+  "size": 256,
+  "how": "verkleinert",
+  "sha1": "46b46b6645c234de1b4ecb9a915bb4b170301807"
+ },
+ {
+  "project": "quest-icons",
+  "set": "icon",
+  "file": "03_quest-icons/quest-icons_icon_128.png",
+  "size": 128,
+  "how": "verkleinert",
+  "sha1": "d105935e2d3fdf682bae6182e4744a932bfd47f3"
+ },
+ {
+  "project": "quest-icons",
+  "set": "icon",
+  "file": "03_quest-icons/quest-icons_icon_64.png",
+  "size": 64,
+  "how": "verkleinert",
+  "sha1": "731bb83e627b72ba3a9632fc3aae95bd9bd9728b"
+ },
+ {
+  "project": "quest-icons",
+  "set": "mod-icon",
+  "file": "03_quest-icons/quest-icons_mod-icon_512.png",
+  "size": 512,
+  "how": "Pixel-Art, verlustfrei vergrößert",
+  "sha1": "d79e87d42a01213a91fe7f6fb89811b794ffb350"
+ },
+ {
+  "project": "quest-icons",
+  "set": "mod-icon",
+  "file": "03_quest-icons/quest-icons_mod-icon_256.png",
+  "size": 256,
+  "how": "Pixel-Art, verlustfrei vergrößert",
+  "sha1": "289168bb5aa405600892c4da352bac98ee18e20f"
+ },
+ {
+  "project": "quest-icons",
+  "set": "mod-icon",
+  "file": "03_quest-icons/quest-icons_mod-icon_128.png",
+  "size": 128,
+  "how": "Original",
+  "sha1": "e76d179e7404fc5b4c47f999fe3612dff1d40fd7"
+ },
+ {
+  "project": "quest-icons",
+  "set": "mod-icon",
+  "file": "03_quest-icons/quest-icons_mod-icon_64.png",
+  "size": 64,
+  "how": "Pixel-Art, verlustfrei",
+  "sha1": "4f302de220cdfa475901bdcfbf25095878abeeaf"
+ },
+ {
+  "project": "quest-icons",
+  "set": "mod-icon",
+  "file": "03_quest-icons/quest-icons_mod-icon_16.png",
+  "size": 16,
+  "how": "Pixel-Art, verlustfrei",
+  "sha1": "30cfc19cd49af573aec059d2f8422213b5a6b39e"
+ },
+ {
+  "project": "tamacraft",
+  "set": "icon",
+  "file": "04_tamacraft/tamacraft_icon_400.png",
+  "size": 400,
+  "how": "Original",
+  "sha1": "6d1105c27fe399d04dafa7280f76d643953c5391"
+ },
+ {
+  "project": "tamacraft",
+  "set": "icon",
+  "file": "04_tamacraft/tamacraft_icon_256.png",
+  "size": 256,
+  "how": "verkleinert",
+  "sha1": "28bbc6c92075a048b2572d78d94001da94a51924"
+ },
+ {
+  "project": "tamacraft",
+  "set": "icon",
+  "file": "04_tamacraft/tamacraft_icon_128.png",
+  "size": 128,
+  "how": "verkleinert",
+  "sha1": "dfb7f0b11005013dd013661183c7e158e48b545f"
+ },
+ {
+  "project": "tamacraft",
+  "set": "icon",
+  "file": "04_tamacraft/tamacraft_icon_64.png",
+  "size": 64,
+  "how": "verkleinert",
+  "sha1": "9b049e7cc688416e457cb387aed648290b352694"
+ },
+ {
+  "project": "tamacraft",
+  "set": "mod-icon",
+  "file": "04_tamacraft/tamacraft_mod-icon_128.png",
+  "size": 128,
+  "how": "Original",
+  "sha1": "93fa1431dfa94d203f77fed259033c010daf6c1a"
+ },
+ {
+  "project": "tamacraft",
+  "set": "mod-icon",
+  "file": "04_tamacraft/tamacraft_mod-icon_64.png",
+  "size": 64,
+  "how": "verkleinert",
+  "sha1": "9f7b23c205c48a68f53e77f0b91ac8d12b7e8249"
+ },
+ {
+  "project": "challenge-craft",
+  "set": "icon",
+  "file": "05_challenge-craft/challenge-craft_icon_720.jpg",
+  "size": 720,
+  "how": "Original",
+  "sha1": "9eb612031cf19c4bb4f1bd6c4d1858cf17cb3d5b"
+ },
+ {
+  "project": "challenge-craft",
+  "set": "icon",
+  "file": "05_challenge-craft/challenge-craft_icon_720.png",
+  "size": 720,
+  "how": "Original (JPEG) als PNG",
+  "sha1": "330e8198e7bc31b6b3cd33432c5cabdc700a55d3"
+ },
+ {
+  "project": "challenge-craft",
+  "set": "icon",
+  "file": "05_challenge-craft/challenge-craft_icon_512.png",
+  "size": 512,
+  "how": "verkleinert",
+  "sha1": "e0007c815dab05114ed345c43b037d2dd7b707d3"
+ },
+ {
+  "project": "challenge-craft",
+  "set": "icon",
+  "file": "05_challenge-craft/challenge-craft_icon_400.png",
+  "size": 400,
+  "how": "verkleinert",
+  "sha1": "fbfb7d3a1dad72d268d9703c4b9d07f0dd1eb950"
+ },
+ {
+  "project": "challenge-craft",
+  "set": "icon",
+  "file": "05_challenge-craft/challenge-craft_icon_256.png",
+  "size": 256,
+  "how": "verkleinert",
+  "sha1": "dad2da9975750803f2eb101474ee60767b6817be"
+ },
+ {
+  "project": "challenge-craft",
+  "set": "icon",
+  "file": "05_challenge-craft/challenge-craft_icon_128.png",
+  "size": 128,
+  "how": "verkleinert",
+  "sha1": "eafb3316a90bc84412db0e47a8c0349a45520cf7"
+ },
+ {
+  "project": "challenge-craft",
+  "set": "icon",
+  "file": "05_challenge-craft/challenge-craft_icon_64.png",
+  "size": 64,
+  "how": "verkleinert",
+  "sha1": "9381bbd8591bccc806eb86c56c94f8923a9bed93"
+ },
+ {
+  "project": "challenge-craft",
+  "set": "mod-icon",
+  "file": "05_challenge-craft/challenge-craft_mod-icon_128.png",
+  "size": 128,
+  "how": "Original",
+  "sha1": "4c4dc7d4132d953f7869d68094f9f069ae49aaf2"
+ },
+ {
+  "project": "challenge-craft",
+  "set": "mod-icon",
+  "file": "05_challenge-craft/challenge-craft_mod-icon_64.png",
+  "size": 64,
+  "how": "verkleinert",
+  "sha1": "c1ce5182152014f513e9f7db8b00f9eda7e52307"
+ },
+ {
+  "project": "challenge-craft-modpack",
+  "set": "icon",
+  "file": "06_challenge-craft-modpack/challenge-craft-modpack_icon_720.jpg",
+  "size": 720,
+  "how": "Original",
+  "sha1": "9eb612031cf19c4bb4f1bd6c4d1858cf17cb3d5b"
+ },
+ {
+  "project": "challenge-craft-modpack",
+  "set": "icon",
+  "file": "06_challenge-craft-modpack/challenge-craft-modpack_icon_720.png",
+  "size": 720,
+  "how": "Original (JPEG) als PNG",
+  "sha1": "330e8198e7bc31b6b3cd33432c5cabdc700a55d3"
+ },
+ {
+  "project": "challenge-craft-modpack",
+  "set": "icon",
+  "file": "06_challenge-craft-modpack/challenge-craft-modpack_icon_512.png",
+  "size": 512,
+  "how": "verkleinert",
+  "sha1": "e0007c815dab05114ed345c43b037d2dd7b707d3"
+ },
+ {
+  "project": "challenge-craft-modpack",
+  "set": "icon",
+  "file": "06_challenge-craft-modpack/challenge-craft-modpack_icon_400.png",
+  "size": 400,
+  "how": "verkleinert",
+  "sha1": "fbfb7d3a1dad72d268d9703c4b9d07f0dd1eb950"
+ },
+ {
+  "project": "challenge-craft-modpack",
+  "set": "icon",
+  "file": "06_challenge-craft-modpack/challenge-craft-modpack_icon_256.png",
+  "size": 256,
+  "how": "verkleinert",
+  "sha1": "dad2da9975750803f2eb101474ee60767b6817be"
+ },
+ {
+  "project": "challenge-craft-modpack",
+  "set": "icon",
+  "file": "06_challenge-craft-modpack/challenge-craft-modpack_icon_128.png",
+  "size": 128,
+  "how": "verkleinert",
+  "sha1": "eafb3316a90bc84412db0e47a8c0349a45520cf7"
+ },
+ {
+  "project": "challenge-craft-modpack",
+  "set": "icon",
+  "file": "06_challenge-craft-modpack/challenge-craft-modpack_icon_64.png",
+  "size": 64,
+  "how": "verkleinert",
+  "sha1": "9381bbd8591bccc806eb86c56c94f8923a9bed93"
+ },
+ {
+  "project": "dreamcraft-forge",
+  "set": "icon",
+  "file": "07_dreamcraft-forge/dreamcraft-forge_icon_800.png",
+  "size": 800,
+  "how": "Original",
+  "sha1": "b554ba8eb87417663bc7cec4cdace54d8b6d331f"
+ },
+ {
+  "project": "dreamcraft-forge",
+  "set": "icon",
+  "file": "07_dreamcraft-forge/dreamcraft-forge_icon_512.png",
+  "size": 512,
+  "how": "verkleinert",
+  "sha1": "14d76a2c19c9b1ef6b08e8a72285a2570f903eb7"
+ },
+ {
+  "project": "dreamcraft-forge",
+  "set": "icon",
+  "file": "07_dreamcraft-forge/dreamcraft-forge_icon_400.png",
+  "size": 400,
+  "how": "verkleinert",
+  "sha1": "71f2ffde1d954049dd822603bd73fc3296af8229"
+ },
+ {
+  "project": "dreamcraft-forge",
+  "set": "icon",
+  "file": "07_dreamcraft-forge/dreamcraft-forge_icon_256.png",
+  "size": 256,
+  "how": "verkleinert",
+  "sha1": "5c4c141b974c821a340d15e7774f0298a5de65a1"
+ },
+ {
+  "project": "dreamcraft-forge",
+  "set": "icon",
+  "file": "07_dreamcraft-forge/dreamcraft-forge_icon_128.png",
+  "size": 128,
+  "how": "verkleinert",
+  "sha1": "2c3730fc69a3ec002ef0889e0b41add77c083fd0"
+ },
+ {
+  "project": "dreamcraft-forge",
+  "set": "icon",
+  "file": "07_dreamcraft-forge/dreamcraft-forge_icon_64.png",
+  "size": 64,
+  "how": "verkleinert",
+  "sha1": "958bc1ba962be6e8abdf2c61c40ebb225d3580a5"
+ },
+ {
+  "project": "lightspeed-performance",
+  "set": "icon",
+  "file": "08_lightspeed-performance/lightspeed-performance_icon_400.png",
+  "size": 400,
+  "how": "Original",
+  "sha1": "a21dbe57832fdcccf237a8a99cbb3b3040bccfa1"
+ },
+ {
+  "project": "lightspeed-performance",
+  "set": "icon",
+  "file": "08_lightspeed-performance/lightspeed-performance_icon_256.png",
+  "size": 256,
+  "how": "verkleinert",
+  "sha1": "74ad2330d4c35646b548ad2ad7f384498f4a87ff"
+ },
+ {
+  "project": "lightspeed-performance",
+  "set": "icon",
+  "file": "08_lightspeed-performance/lightspeed-performance_icon_128.png",
+  "size": 128,
+  "how": "verkleinert",
+  "sha1": "26d494b6dddb8f2e01a8c70339e15160d9ca2878"
+ },
+ {
+  "project": "lightspeed-performance",
+  "set": "icon",
+  "file": "08_lightspeed-performance/lightspeed-performance_icon_64.png",
+  "size": 64,
+  "how": "verkleinert",
+  "sha1": "bbbd8d7ef1a161fa544a0abaed0b4444d75cd5a5"
+ },
+ {
+  "project": "beautifully",
+  "set": "icon",
+  "file": "09_beautifully/beautifully_icon_400.png",
+  "size": 400,
+  "how": "Original",
+  "sha1": "ef803e6efb9289bf16bda48a21f5294f3ef9e3b5"
+ },
+ {
+  "project": "beautifully",
+  "set": "icon",
+  "file": "09_beautifully/beautifully_icon_256.png",
+  "size": 256,
+  "how": "verkleinert",
+  "sha1": "a858df0f4732acbe19441c1da3b10d2581a4febc"
+ },
+ {
+  "project": "beautifully",
+  "set": "icon",
+  "file": "09_beautifully/beautifully_icon_128.png",
+  "size": 128,
+  "how": "verkleinert",
+  "sha1": "7283fc6326554b923e5ac8f130b7d14ec629ff8d"
+ },
+ {
+  "project": "beautifully",
+  "set": "icon",
+  "file": "09_beautifully/beautifully_icon_64.png",
+  "size": 64,
+  "how": "verkleinert",
+  "sha1": "a8ee61f3e88732f0ab1b2dac258b409cc0076aad"
+ },
+ {
+  "project": "dreamcraft",
+  "set": "alle",
+  "file": "alle-icons_400px/01_dreamcraft.png",
+  "size": 400,
+  "how": "Kopie",
+  "sha1": "71f2ffde1d954049dd822603bd73fc3296af8229"
+ },
+ {
+  "project": "beach-craft",
+  "set": "alle",
+  "file": "alle-icons_400px/02_beach-craft.png",
+  "size": 400,
+  "how": "Kopie",
+  "sha1": "ccd1819f01ee4413061d58581163a96e63a3f263"
+ },
+ {
+  "project": "quest-icons",
+  "set": "alle",
+  "file": "alle-icons_400px/03_quest-icons.png",
+  "size": 400,
+  "how": "Kopie",
+  "sha1": "8219c1834465eb60a3d8d17e63ec82043a77990a"
+ },
+ {
+  "project": "tamacraft",
+  "set": "alle",
+  "file": "alle-icons_400px/04_tamacraft.png",
+  "size": 400,
+  "how": "Kopie",
+  "sha1": "6d1105c27fe399d04dafa7280f76d643953c5391"
+ },
+ {
+  "project": "challenge-craft",
+  "set": "alle",
+  "file": "alle-icons_400px/05_challenge-craft.png",
+  "size": 400,
+  "how": "Kopie",
+  "sha1": "fbfb7d3a1dad72d268d9703c4b9d07f0dd1eb950"
+ },
+ {
+  "project": "challenge-craft-modpack",
+  "set": "alle",
+  "file": "alle-icons_400px/06_challenge-craft-modpack.png",
+  "size": 400,
+  "how": "Kopie",
+  "sha1": "fbfb7d3a1dad72d268d9703c4b9d07f0dd1eb950"
+ },
+ {
+  "project": "dreamcraft-forge",
+  "set": "alle",
+  "file": "alle-icons_400px/07_dreamcraft-forge.png",
+  "size": 400,
+  "how": "Kopie",
+  "sha1": "71f2ffde1d954049dd822603bd73fc3296af8229"
+ },
+ {
+  "project": "lightspeed-performance",
+  "set": "alle",
+  "file": "alle-icons_400px/08_lightspeed-performance.png",
+  "size": 400,
+  "how": "Kopie",
+  "sha1": "a21dbe57832fdcccf237a8a99cbb3b3040bccfa1"
+ },
+ {
+  "project": "beautifully",
+  "set": "alle",
+  "file": "alle-icons_400px/09_beautifully.png",
+  "size": 400,
+  "how": "Kopie",
+  "sha1": "ef803e6efb9289bf16bda48a21f5294f3ef9e3b5"
+ },
+ {
+  "project": "dreamcraft",
+  "set": "alle",
+  "file": "alle-icons_256px/01_dreamcraft.png",
+  "size": 256,
+  "how": "Kopie",
+  "sha1": "5c4c141b974c821a340d15e7774f0298a5de65a1"
+ },
+ {
+  "project": "beach-craft",
+  "set": "alle",
+  "file": "alle-icons_256px/02_beach-craft.png",
+  "size": 256,
+  "how": "Kopie",
+  "sha1": "a1dc6722337baa779da10cac354e7d98d3b810e2"
+ },
+ {
+  "project": "quest-icons",
+  "set": "alle",
+  "file": "alle-icons_256px/03_quest-icons.png",
+  "size": 256,
+  "how": "Kopie",
+  "sha1": "46b46b6645c234de1b4ecb9a915bb4b170301807"
+ },
+ {
+  "project": "tamacraft",
+  "set": "alle",
+  "file": "alle-icons_256px/04_tamacraft.png",
+  "size": 256,
+  "how": "Kopie",
+  "sha1": "28bbc6c92075a048b2572d78d94001da94a51924"
+ },
+ {
+  "project": "challenge-craft",
+  "set": "alle",
+  "file": "alle-icons_256px/05_challenge-craft.png",
+  "size": 256,
+  "how": "Kopie",
+  "sha1": "dad2da9975750803f2eb101474ee60767b6817be"
+ },
+ {
+  "project": "challenge-craft-modpack",
+  "set": "alle",
+  "file": "alle-icons_256px/06_challenge-craft-modpack.png",
+  "size": 256,
+  "how": "Kopie",
+  "sha1": "dad2da9975750803f2eb101474ee60767b6817be"
+ },
+ {
+  "project": "dreamcraft-forge",
+  "set": "alle",
+  "file": "alle-icons_256px/07_dreamcraft-forge.png",
+  "size": 256,
+  "how": "Kopie",
+  "sha1": "5c4c141b974c821a340d15e7774f0298a5de65a1"
+ },
+ {
+  "project": "lightspeed-performance",
+  "set": "alle",
+  "file": "alle-icons_256px/08_lightspeed-performance.png",
+  "size": 256,
+  "how": "Kopie",
+  "sha1": "74ad2330d4c35646b548ad2ad7f384498f4a87ff"
+ },
+ {
+  "project": "beautifully",
+  "set": "alle",
+  "file": "alle-icons_256px/09_beautifully.png",
+  "size": 256,
+  "how": "Kopie",
+  "sha1": "a858df0f4732acbe19441c1da3b10d2581a4febc"
+ },
+ {
+  "project": "beach-craft",
+  "set": "plattform",
+  "file": "plattform-originale/curseforge/beach-craft_curseforge_256.png",
+  "size": "256×256",
+  "how": "Plattform-Original",
+  "sha1": "43997aa13d65efb0da7609937eefb51b4e988627"
+ },
+ {
+  "project": "beach-craft",
+  "set": "plattform",
+  "file": "plattform-originale/curseforge/beach-craft_curseforge_original.png",
+  "size": "400×400",
+  "how": "Plattform-Original",
+  "sha1": "913a39018ada62a46de63194223eac10d172a63b"
+ },
+ {
+  "project": "beautifully",
+  "set": "plattform",
+  "file": "plattform-originale/curseforge/beautifully_curseforge_256.png",
+  "size": "256×256",
+  "how": "Plattform-Original",
+  "sha1": "5dc482112b1700ceb45f14646fbd7eb9b947245c"
+ },
+ {
+  "project": "beautifully",
+  "set": "plattform",
+  "file": "plattform-originale/curseforge/beautifully_curseforge_original.png",
+  "size": "400×400",
+  "how": "Plattform-Original",
+  "sha1": "ef803e6efb9289bf16bda48a21f5294f3ef9e3b5"
+ },
+ {
+  "project": "challenge-craft-modpack",
+  "set": "plattform",
+  "file": "plattform-originale/curseforge/challenge-craft-modpack_curseforge_256.png",
+  "size": "256×256",
+  "how": "Plattform-Original",
+  "sha1": "dee7843db6d9afb0cdc49f8ee692333c8078cc3a"
+ },
+ {
+  "project": "challenge-craft-modpack",
+  "set": "plattform",
+  "file": "plattform-originale/curseforge/challenge-craft-modpack_curseforge_original.png",
+  "size": "400×400",
+  "how": "Plattform-Original",
+  "sha1": "47d10384c3bab9e16de7679a9f8c98c33438b6fb"
+ },
+ {
+  "project": "challenge-craft",
+  "set": "plattform",
+  "file": "plattform-originale/curseforge/challenge-craft_curseforge_256.png",
+  "size": "256×256",
+  "how": "Plattform-Original",
+  "sha1": "dee7843db6d9afb0cdc49f8ee692333c8078cc3a"
+ },
+ {
+  "project": "challenge-craft",
+  "set": "plattform",
+  "file": "plattform-originale/curseforge/challenge-craft_curseforge_original.png",
+  "size": "400×400",
+  "how": "Plattform-Original",
+  "sha1": "47d10384c3bab9e16de7679a9f8c98c33438b6fb"
+ },
+ {
+  "project": "dreamcraft-forge",
+  "set": "plattform",
+  "file": "plattform-originale/curseforge/dreamcraft-forge_curseforge_256.png",
+  "size": "256×256",
+  "how": "Plattform-Original",
+  "sha1": "24657a8dd12dee82a85a1836d0d372905606a5b8"
+ },
+ {
+  "project": "dreamcraft-forge",
+  "set": "plattform",
+  "file": "plattform-originale/curseforge/dreamcraft-forge_curseforge_original.png",
+  "size": "800×800",
+  "how": "Plattform-Original",
+  "sha1": "b554ba8eb87417663bc7cec4cdace54d8b6d331f"
+ },
+ {
+  "project": "dreamcraft",
+  "set": "plattform",
+  "file": "plattform-originale/curseforge/dreamcraft_curseforge_256.png",
+  "size": "256×256",
+  "how": "Plattform-Original",
+  "sha1": "24657a8dd12dee82a85a1836d0d372905606a5b8"
+ },
+ {
+  "project": "dreamcraft",
+  "set": "plattform",
+  "file": "plattform-originale/curseforge/dreamcraft_curseforge_original.png",
+  "size": "800×800",
+  "how": "Plattform-Original",
+  "sha1": "b554ba8eb87417663bc7cec4cdace54d8b6d331f"
+ },
+ {
+  "project": "lightspeed-performance",
+  "set": "plattform",
+  "file": "plattform-originale/curseforge/lightspeed-performance_curseforge_256.png",
+  "size": "256×256",
+  "how": "Plattform-Original",
+  "sha1": "7d20e3d6aaa48721a57de80b7f231911d5164d58"
+ },
+ {
+  "project": "lightspeed-performance",
+  "set": "plattform",
+  "file": "plattform-originale/curseforge/lightspeed-performance_curseforge_original.png",
+  "size": "400×400",
+  "how": "Plattform-Original",
+  "sha1": "a21dbe57832fdcccf237a8a99cbb3b3040bccfa1"
+ },
+ {
+  "project": "quest-icons",
+  "set": "plattform",
+  "file": "plattform-originale/curseforge/quest-icons_curseforge_256.png",
+  "size": "256×256",
+  "how": "Plattform-Original",
+  "sha1": "f8f1f55efe68d4124ed4052a3af472583772318b"
+ },
+ {
+  "project": "quest-icons",
+  "set": "plattform",
+  "file": "plattform-originale/curseforge/quest-icons_curseforge_original.png",
+  "size": "800×800",
+  "how": "Plattform-Original",
+  "sha1": "fe149854650fec6c8d02f9f1109550b66295005d"
+ },
+ {
+  "project": "tamacraft",
+  "set": "plattform",
+  "file": "plattform-originale/curseforge/tamacraft_curseforge_256.png",
+  "size": "256×256",
+  "how": "Plattform-Original",
+  "sha1": "1303288ca812c6b06c5de549cb80bfe629145a28"
+ },
+ {
+  "project": "tamacraft",
+  "set": "plattform",
+  "file": "plattform-originale/curseforge/tamacraft_curseforge_original.png",
+  "size": "400×400",
+  "how": "Plattform-Original",
+  "sha1": "6d1105c27fe399d04dafa7280f76d643953c5391"
+ },
+ {
+  "project": "beach-craft",
+  "set": "plattform",
+  "file": "plattform-originale/modrinth/beach-craft_modrinth_96.webp",
+  "size": "96×96",
+  "how": "Plattform-Original",
+  "sha1": "a49624f739d144077ffad7e190d5cb00d4a9f093"
+ },
+ {
+  "project": "beach-craft",
+  "set": "plattform",
+  "file": "plattform-originale/modrinth/beach-craft_modrinth_original.png",
+  "size": "1024×1024",
+  "how": "Plattform-Original",
+  "sha1": "9a933184e90419101663414a239f56d5f01056f9"
+ },
+ {
+  "project": "challenge-craft-modpack",
+  "set": "plattform",
+  "file": "plattform-originale/modrinth/challenge-craft-modpack_modrinth_96.webp",
+  "size": "64×64",
+  "how": "Plattform-Original",
+  "sha1": "76de6e4abad03396faa8d26edca09812044fe451"
+ },
+ {
+  "project": "challenge-craft-modpack",
+  "set": "plattform",
+  "file": "plattform-originale/modrinth/challenge-craft-modpack_modrinth_original.png",
+  "size": "64×64",
+  "how": "Plattform-Original",
+  "sha1": "37ccecfb49e1ad14882a8fc511d311675731b3d3"
+ },
+ {
+  "project": "challenge-craft",
+  "set": "plattform",
+  "file": "plattform-originale/modrinth/challenge-craft_modrinth_96.webp",
+  "size": "96×96",
+  "how": "Plattform-Original",
+  "sha1": "c868fac84d23deaef02247c426466f7ce823a06b"
+ },
+ {
+  "project": "challenge-craft",
+  "set": "plattform",
+  "file": "plattform-originale/modrinth/challenge-craft_modrinth_original.png",
+  "size": "486×486",
+  "how": "Plattform-Original",
+  "sha1": "05c21a3e23604a0ac2f7437c44c8c12e40e8c221"
+ },
+ {
+  "project": "dreamcraft",
+  "set": "plattform",
+  "file": "plattform-originale/modrinth/dreamcraft_modrinth_96.webp",
+  "size": "96×96",
+  "how": "Plattform-Original",
+  "sha1": "b08e42b1853accc6c273e9d587c24693faed5caa"
+ },
+ {
+  "project": "dreamcraft",
+  "set": "plattform",
+  "file": "plattform-originale/modrinth/dreamcraft_modrinth_original.png",
+  "size": "800×800",
+  "how": "Plattform-Original",
+  "sha1": "b554ba8eb87417663bc7cec4cdace54d8b6d331f"
+ },
+ {
+  "project": "quest-icons",
+  "set": "plattform",
+  "file": "plattform-originale/modrinth/quest-icons_modrinth_96.webp",
+  "size": "96×96",
+  "how": "Plattform-Original",
+  "sha1": "fa906a620b32fa09f87b0b8efd842d9701a6456d"
+ },
+ {
+  "project": "quest-icons",
+  "set": "plattform",
+  "file": "plattform-originale/modrinth/quest-icons_modrinth_original.png",
+  "size": "256×256",
+  "how": "Plattform-Original",
+  "sha1": "f8f1f55efe68d4124ed4052a3af472583772318b"
+ },
+ {
+  "project": "tamacraft",
+  "set": "plattform",
+  "file": "plattform-originale/modrinth/tamacraft_modrinth_96.webp",
+  "size": "96×96",
+  "how": "Plattform-Original",
+  "sha1": "de2f7415501d7b6146465e1920bb4cd01d85d736"
+ },
+ {
+  "project": "tamacraft",
+  "set": "plattform",
+  "file": "plattform-originale/modrinth/tamacraft_modrinth_original.png",
+  "size": "256×256",
+  "how": "Plattform-Original",
+  "sha1": "1303288ca812c6b06c5de549cb80bfe629145a28"
+ }
+]

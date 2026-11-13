@@ -99,9 +99,16 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   Auswahl im Casting Office), Spur B hat Karte (Minimap, Karten-Fenster, Pings) und Stage Door (Oberwelt-Struktur in
   3 Varianten und 3 Biom-Stilen, Casting-Call-Flyer, Advancements, benannte Plätze `world.Spots`/`Stations`)
   geliefert und arbeitet am zweiten Grafik-Durchgang (B7).
-- Runde 5 läuft: Spur A = NPCs/Tutorial/Händler/Quests (A8), dann Sponsoren/Interviews/Trophäe (A9). Für Spur B
-  liegt bereit: Ebenen-Regeln/Fallen/Schreine (B9), dann Audio. Skripte: `crawl-of-fame/briefs/crawl-round5-lane-*.js`,
-  gebaut mit `briefs/gen.py` aus `common.txt` + `continue.txt` + Aufgabentext.
+- 13.11. morgens: Runde 5 Spur A fertig (A8: Gaffer mit Tutorial, 4 Händler, Verkaufsautomat, Bewohner mit 6
+  Quests, Hinweis-Toasts; A9: 12 Sponsoren mit Perks und Aufgaben, Interviews zwischen den Ebenen, Monitore, Fanpost,
+  Trophäe, Hall-of-Fame-Tafel). Spur B: B7 (zweiter Grafik-Durchgang: Hallen mit Volumen und Kulissenteilen, Ebene 2
+  als Requisitenlager, Ebene 3 als Filmstadt) und B9 (Regel-Baukasten: Meter, Zyklen, Ziele, Kampf-Modifikatoren;
+  8 Fallen mit Entschärfen, Schreine, Geheimnisse) fertig; Audio läuft.
+- Prüf-Runde läuft auf Spur A (R1 run+show, R2 magic+npc, R3 mob); für Spur B danach R4 item+profile,
+  R5 world+map+rules (Skripte `briefs/crawl-review-lane-*.js`). Danach Ebenen 4–10 nach `docs/FLOORS.md` mit der
+  Vorlage `briefs/FLOOR.txt` (eine Ebene pro Aufgabe, zwei Spuren parallel, eigene Dateien je Ebene).
+- 106 Server-Tests grün auf frischer Testwelt (`tools/dev/gametest.sh` löscht die Testwelt vor jedem Lauf; Tests mit
+  Test-Spielern müssen auf geladene Chunks warten: `managedBlock`).
 - Von der Hauptsitzung zusätzlich: Balance-Modell und Simulation (`docs/BALANCE.md`, `tools/dev/balance.sh`: ein
   Test-Spieler kämpft Räume und Bosse durch; Monster wuchsen pro Level viel schneller als der Spieler, Formeln und
   Boss-Werte angepasst), Design der Ebenen 4–10 (`docs/FLOORS.md`), README/LICENSE/CREDITS, Doku für Pack-Macher
@@ -114,4 +121,4 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
 - Beobachtung Balance: nackter Level-1-Spieler verliert im ersten Kampfraum in 3 s 17 von 40 Leben; Boss Ebene 1 tötet
   ihn in Sekunden. Balance-Durchgang mit Auto-Kampf-Bot einplanen.
 - Kosten bisher (Agenten-Tokens): Buch-Auswertung 6,2 Mio., Runde 1 1,2 Mio., Runde 2 1,6 Mio., Runde 3 rund 1,5 Mio.,
-  Runde 4 Spur A 0,9 Mio. (Spur B läuft noch).
+  Runde 4 je Spur 0,9 und 1,1 Mio., Runde 5 Spur A 1,0 Mio. Summe bis hier rund 13 Mio.

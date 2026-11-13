@@ -95,14 +95,23 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   Gruppe, Relog, Tod mit Remains, Server-Neustart mitten im Lauf, Set Strike), Schutz für Modpacks (`run.Guard`:
   Spieler ohne Lauf werden hinausgeführt, kein Friendly Fire, `RunEvents.LEFT`, Cash-Out per Config), Prize Trunks
   (Stash, ungeöffnete Crates, Münzen, Finale-Crate gehen beim Sieg als Truhen-Items mit), Tod nur einmal gemeldet.
-- Runde 4 läuft (nach einem Container-Neustart fortgesetzt): Spur A = Zauber (A6), dann Rollen/Makeovers (A7);
-  Spur B = Karte (B6), Stage Door als Oberwelt-Struktur + benannte Plätze (B8), zweiter Grafik-Durchgang (B7).
-- Danach: A8 NPCs/Tutorial/Händler/Quests, B9 Fallen/Schreine/Ebenen-Regeln, Audio (numpy + ffmpeg/libvorbis
-  vorhanden; incompetech und opengameart erreichbar, kenney und freesound gesperrt), Prüf-Runde (4 Agenten, je
-  2 Module), Balance, Ebenen 4–10, README/CREDITS/CurseForge-Text. Stand-Liste: `docs/PLAN.md` im Mod-Repo.
+- 13.11. früh: Runde 4 Spur A fertig (36 Zauber in sechs Schulen mit Zauberleiste; 16 Rollen und 14 Makeovers mit
+  Auswahl im Casting Office), Spur B hat Karte (Minimap, Karten-Fenster, Pings) und Stage Door (Oberwelt-Struktur in
+  3 Varianten und 3 Biom-Stilen, Casting-Call-Flyer, Advancements, benannte Plätze `world.Spots`/`Stations`)
+  geliefert und arbeitet am zweiten Grafik-Durchgang (B7).
+- Runde 5 läuft: Spur A = NPCs/Tutorial/Händler/Quests (A8), dann Sponsoren/Interviews/Trophäe (A9). Für Spur B
+  liegt bereit: Ebenen-Regeln/Fallen/Schreine (B9), dann Audio. Skripte: `crawl-of-fame/briefs/crawl-round5-lane-*.js`,
+  gebaut mit `briefs/gen.py` aus `common.txt` + `continue.txt` + Aufgabentext.
+- Von der Hauptsitzung zusätzlich: Balance-Modell und Simulation (`docs/BALANCE.md`, `tools/dev/balance.sh`: ein
+  Test-Spieler kämpft Räume und Bosse durch; Monster wuchsen pro Level viel schneller als der Spieler, Formeln und
+  Boss-Werte angepasst), Design der Ebenen 4–10 (`docs/FLOORS.md`), README/LICENSE/CREDITS, Doku für Pack-Macher
+  (`docs/DATAPACKS.md`), Mehrspieler-Abnahme auf dem integrierten Stand erneut grün (26/26), 73 Server-Tests.
+- Danach: Prüf-Runde (4 Agenten, je 2 Module, `briefs/review.txt`), Balance nachmessen, Ebenen 4–10 nach
+  `docs/FLOORS.md` (größter verbleibender Posten, grob 5 Mio. Agenten-Tokens), Abschluss.
 - Urteil zur Grafik nach B5: Flure und Green Rooms gut; große Räume zu gleichförmig (niedrig, braun, Requisiten im
   Raster). Auftrag B7: Raumhöhe nach Größe, Zonen und Blickfang, Licht als Führung, Farbe, Boss-Arenen als Bühne,
   eigene Sprache für Ebene 2 (Lager bei Nacht) und 3 (Filmstadt in der Höhle).
 - Beobachtung Balance: nackter Level-1-Spieler verliert im ersten Kampfraum in 3 s 17 von 40 Leben; Boss Ebene 1 tötet
   ihn in Sekunden. Balance-Durchgang mit Auto-Kampf-Bot einplanen.
-- Kosten bisher (Agenten-Tokens): Buch-Auswertung 6,2 Mio., Runde 1 1,2 Mio., Runde 2 1,6 Mio., Runde 3 rund 1,5 Mio.
+- Kosten bisher (Agenten-Tokens): Buch-Auswertung 6,2 Mio., Runde 1 1,2 Mio., Runde 2 1,6 Mio., Runde 3 rund 1,5 Mio.,
+  Runde 4 Spur A 0,9 Mio. (Spur B läuft noch).

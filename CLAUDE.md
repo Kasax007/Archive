@@ -38,7 +38,7 @@ Im Mod-Repo ist `CLAUDE.md` vom Nutzer per `.gitignore` ausgeschlossen (seine lo
 | `beachcraft/documentary/` | Doku „Tides of the Deep“ zu Beach Craft 3.0 (18:35, nur mit Untertiteln und Musik, in 4 Teilen), Werkzeuge, Rohmaterial in `footage/bc3`. Siehe `README.md` dort |
 | `beachcraft/structure-check/` | Strukturprüfung 6.11. (alle 19 Strukturen Block für Block, Personen, Vorher/Nachher, Bilder). Siehe `README.md` dort |
 | `beachcraft/logo/` | CurseForge-Logo (isometrischer Strand-Chunk aus Mod-Texturen + Titel), Skript `make_logo.py`, Fassungen 1024/512/400/256, Icon ohne Schrift |
-| `icons/` | Icon-Pack aller Projekte (9 auf CurseForge, 6 davon auf Modrinth): Projekt-Icons in allen Größen, Mod-Icons, Plattform-Originale, `Kasax-Projekt-Icons.zip`, Skript `build_pack.py` (`--fetch` lädt die Plattform-Dateien neu) |
+| `icons/` | Icon-Pack aller Projekte (9 auf CurseForge, 6 davon auf Modrinth): `pack/` (Inhalt des ZIP), `Kasax-Projekt-Icons.zip`, `quellen/` (Originale, die in keinem Repo liegen, siehe `QUELLEN.md`), `plattform-originale/` (was CurseForge und Modrinth ausliefern), Skripte `build_pack.py` (`--fetch` lädt die Plattform-Dateien neu) und `render_tamacraft.py` |
 | `tamagotchi/` | Videos zum Mod Tamagotchi (Short, 2-Minuten-Showcase, Review-Schnitt mit echten Spielgeräuschen), Werkzeuge, Endkarten. Siehe `tamagotchi/README.md` |
 | `fonts/` | Schriften für Untertitel und Titel (vor dem Rendern nach `$SP/fonts` kopieren) |
 | `motion/` | Remotion-Projekt (Motion Graphics für Story 5.1) |

@@ -3,3 +3,6 @@ node_modules/
 out/
 *.tmp
 __pycache__/
+
+# build folder of icons/build_pack.py (only there while a build runs)
+icons/.pack_build/

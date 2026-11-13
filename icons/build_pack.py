@@ -2,18 +2,22 @@
 """Builds the icon pack: the icons and logos of all projects on CurseForge and Modrinth.
 
     python3 build_pack.py            build pack/ and Kasax-Projekt-Icons.zip from the sources on disk
-    python3 build_pack.py --fetch    download the platform originals again first (CurseForge, Modrinth)
+    python3 build_pack.py --fetch    first download the platform files again and check for new icons
 
 Sources
-  * pack/plattform-originale/   the files exactly as CurseForge and Modrinth serve them (table LIVE)
-  * beachcraft/logo/            in this archive
-  * the mod repositories        next to this archive (REPOS, default: the parent folder), read through git
+  * plattform-originale/   the files exactly as CurseForge and Modrinth serve them (table LIVE)
+  * quellen/               originals that are in no repository (see quellen/QUELLEN.md)
+  * beachcraft/logo/       in this archive
+  * the mod repositories   next to this archive (REPOS, default: the parent folder), read as git objects by
+                           their hash, so the checked-out branch does not matter
 
 Rules
   * The largest version that exists is kept untouched (same bytes).
   * Smaller sizes are made from it with Lanczos. Nothing is scaled up, except real pixel art (nearest neighbour).
-  * Images with transparency keep it; Pillow resizes them with premultiplied alpha, so edges get no dark fringe.
+  * Images with transparency keep it; Pillow resizes them with premultiplied alpha, so edges get no fringe.
+  * The pack is built in a fresh folder and swapped in at the end, so nothing stale can stay behind.
 """
+import datetime
 import hashlib
 import io
 import json
@@ -30,15 +34,20 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ARCHIVE = os.path.dirname(HERE)
 REPOS = os.environ.get('REPOS', os.path.dirname(ARCHIVE))
 PACK = os.path.join(HERE, 'pack')
-ORIG = os.path.join(PACK, 'plattform-originale')
+WORK = os.path.join(HERE, '.pack_build')
+ORIG = os.path.join(HERE, 'plattform-originale')
+QUELLEN = os.path.join(HERE, 'quellen')
 NAME = 'Kasax-Projekt-Icons'
-STAND = '13.11.2026'
+TODAY = datetime.date.today()
+STAND = TODAY.strftime('%d.%m.%Y')
 SIZES = [1024, 512, 400, 256, 128, 64]
+UNIFORM = (400, 256)
 UA = 'icon-pack-builder/1.0'
+MAGIC = {'.png': b'\x89PNG\r\n\x1a\n', '.jpg': b'\xff\xd8\xff', '.webp': b'RIFF'}
 
 # Where the platforms serve the icons. CurseForge: media.forgecdn.net/avatars/<path> (original) and
 # .../avatars/thumbnails/<a>/<b>/256/256/<file> (thumbnail). Modrinth: cdn.modrinth.com/data/<id>/<sha1>.png and
-# ..._96.webp. A new icon gets a new path, so this table has to be updated when an icon changes.
+# ..._96.webp. A new icon gets a new path; --fetch compares the CurseForge paths with api.cfwidget.com.
 LIVE = {
     'dreamcraft': dict(cf='578/913/637943586710882910.png', mr=('jRXfjUwW', 'b554ba8eb87417663bc7cec4cdace54d8b6d331f')),
     'beach-craft': dict(cf='2184/685/639296932728613749.png', mr=('3PmzwJU0', '9a933184e90419101663414a239f56d5f01056f9')),
@@ -56,70 +65,102 @@ def cf_orig(key):
     return os.path.join(ORIG, 'curseforge', f'{key}_curseforge_original.png')
 
 
-def git(repo, spec):
-    """A file from a repository: 'HEAD:path' or a blob hash, so the result does not depend on the checkout."""
-    return ('git', os.path.join(REPOS, repo), spec)
+def blob(repo, sha):
+    """A file from a repository by the hash of its git object."""
+    return ('git', os.path.join(REPOS, repo), sha)
+
+
+def quelle(name):
+    return os.path.join(QUELLEN, name)
 
 
 BC_LOGO = os.path.join(ARCHIVE, 'beachcraft', 'logo')
-CC_LOGO = git('Kasax_Challenge_Craft', 'HEAD:docs/curseforge/src/pack_logo.jpg')
-DC_MENU = 'HEAD:pack/overrides/config/fancymenu/assets/dreamcraft/loading_logo.png'
+CC_LOGO = quelle('challenge-craft_logo_3240.png')
+CC_SOURCE = ('Menü des Modpacks (`config/fancymenu/assets/final.png` in Challenge Craft 26.3 v4.2), gesichert im '
+             'Archiv unter `icons/quellen`')
+DC_LOGO = blob('Kasax_Quests_Items_Mod-1.19.2', 'd579c973c575b62a2ba2d7d3d84649873581124d')   # textures/item/logo_fabric.png
+DC_LOADING = blob('Modpack-Development', '38206e145769f6375676795bf6f8c259a66211d2')          # .../dreamcraft/loading_logo.png
+DC_SERVER = blob('Modpack-Development', '8d970902a0c4a7b18e4f9e6840fb13d166ba7e64')           # pack/server-icon.png
+BC_OLD = blob('Kasax_Raft_Mod', '9c231eb5ed90dc2bec5c52c618a023031e0d275f')                   # assets/raft/icon.png until 3.1
+QI_MOD = blob('Kasax_Quests_Items_Mod-1.19.2', '7ad8d701802a1f718f7ba7c7b492bf01c5d8dbe0')    # assets/questsicons/icon.png
+TC_MOD = blob('tamagotchi', '036efb2a3cc6bbb8ea2496c728ff5b5f2c6cf860')                       # assets/tamacraft/icon.png
+CC_MOD = blob('Kasax_Challenge_Craft', 'e26376f134084c1104b71346e7acac672c533883')            # assets/challengecraft/icon.png
 
-# One entry per project. sets: tag -> files <key>_<tag>_<size>.png. master = the largest version that exists;
-# fixed = sizes that exist as their own file (used as they are); pixel = pixel art (nearest neighbour, may grow).
+# One entry per project.
+# sets: files <key>_<tag>_<size>.png. master = the largest version; fixed = sizes that exist as their own file;
+#       pixel = pixel art with that many points per side (nearest neighbour, may grow).
+# extras: files in extras/. make: 'trim' cuts the empty border away, 'png' converts, ('pixel', n) enlarges
+#       pixel art n times. show: the label under the small picture on the overview sheet.
 PROJECTS = [
-    dict(nr='01', key='dreamcraft', name='Dreamcraft – Quests & Adventure', kind='Modpack (Fabric)', cf_id=545167,
+    dict(nr='01', key='dreamcraft', name='Dreamcraft - Quests & Adventure', kind='Modpack (Fabric)', cf_id=545167,
          cf_url='https://www.curseforge.com/minecraft/modpacks/dreamcraft-new', mr_url='https://modrinth.com/modpack/dreamcraft',
          sets=[dict(tag='icon', label='Projekt-Icon', master=cf_orig('dreamcraft'),
                     source='CurseForge (dieselbe Datei liegt auf Modrinth)')],
-         extras=[dict(file='dreamcraft_server-icon_64.png', src=git('Modpack-Development', 'HEAD:pack/server-icon.png'),
-                      label='Server-Icon', note='Symbol in der Serverliste (aus dem Server-Pack)'),
-                 dict(file='dreamcraft_schriftzug_1440x1080.png', src=git('Modpack-Development', DC_MENU),
-                      label='Schriftzug', note='Schriftzug vom Ladebildschirm, mit durchsichtigem Rand'),
-                 dict(file='dreamcraft_schriftzug_zugeschnitten.png', src=git('Modpack-Development', DC_MENU), trim=True,
-                      label='Schriftzug, zugeschnitten', note='derselbe Schriftzug ohne den leeren Rand')]),
+         extras=[dict(file='dreamcraft_logo_1440x1080.png', src=DC_LOGO,
+                      note='Logo „DREAMCRAFT FABRIC“ mit Mond und Sternen, durchsichtiger Grund'),
+                 dict(file='dreamcraft_logo_zugeschnitten.png', src=DC_LOGO, make='trim', show='Logo',
+                      note='dasselbe Logo ohne den leeren Rand'),
+                 dict(file='dreamcraft_schriftzug_1440x1080.png', src=DC_LOADING,
+                      note='Schriftzug „DREAMCRAFT FABRIC“ vom Ladebildschirm, ohne Mond und Sterne'),
+                 dict(file='dreamcraft_schriftzug_zugeschnitten.png', src=DC_LOADING, make='trim', show='Schriftzug',
+                      note='derselbe Schriftzug ohne den leeren Rand'),
+                 dict(file='dreamcraft_server-icon_64.png', src=DC_SERVER, show='Server-Icon',
+                      note='Icon in der Serverliste (aus dem Server-Pack)'),
+                 dict(file='dreamcraft_fenster-icon_32.png', src=quelle('dreamcraft_fenster-icon_32.png'),
+                      note='Icon des Spielfensters (Mond mit Sternen), aus dem Pack für 1.20.1'),
+                 dict(file='dreamcraft_fenster-icon_16.png', src=quelle('dreamcraft_fenster-icon_16.png'),
+                      note='dasselbe in 16 px, aus dem Pack für 1.20.1'),
+                 dict(file='dreamcraft_fenster-icon_256.png', src=quelle('dreamcraft_fenster-icon_32.png'), make=('pixel', 8),
+                      show='Fenster-Icon', note='das Fenster-Icon achtfach vergrößert (Pixel-Art, verlustfrei)')]),
     dict(nr='02', key='beach-craft', name='Beach Craft – Raft Survival', kind='Mod', cf_id=1010922,
          cf_url='https://www.curseforge.com/minecraft/mc-mods/beach-craft', mr_url='https://modrinth.com/mod/beach-craft',
          sets=[dict(tag='icon', label='Projekt-Icon (mit Titel)', master=os.path.join(BC_LOGO, 'logo_1024.png'),
                     fixed={512: os.path.join(BC_LOGO, 'logo_512.png'), 400: os.path.join(BC_LOGO, 'logo_400.png'),
                            256: os.path.join(BC_LOGO, 'logo_256.png')},
-                    source='Archiv `beachcraft/logo` (1024 liegt auf Modrinth, 400 auf CurseForge)'),
+                    source='Archiv `beachcraft/logo` (die 1024er liegt auf Modrinth, eine 400er auf CurseForge)'),
                dict(tag='icon-ohne-titel', label='Icon ohne Titel', master=os.path.join(BC_LOGO, 'icon_1024.png'),
                     fixed={128: os.path.join(BC_LOGO, 'icon_128.png')},
-                    source='Archiv `beachcraft/logo`; die 128er Fassung ist das Mod-Icon in der Jar (seit 3.2.0)')],
-         extras=[dict(file='beach-craft_mod-icon-alt_1024.png',
-                      src=git('Kasax_Raft_Mod', '9c231eb5ed90dc2bec5c52c618a023031e0d275f'),
-                      label='altes Mod-Icon', note='Mod-Icon in der Jar bis Version 3.1 (Floß zwischen Inseln)')]),
-    dict(nr='03', key='quest-icons', name='Quest Icons – Quest Book & Icons', kind='Mod', cf_id=690531,
+                    source='Archiv `beachcraft/logo`; die 128er ist das Mod-Icon in der Jar (seit 3.2.0)')],
+         extras=[dict(file='beach-craft_mod-icon_bis-3.1_1024.jpg', src=BC_OLD,
+                      note='altes Mod-Icon (Floß zwischen Inseln), in der Jar bis Version 3.1; die Datei ist ein JPEG'),
+                 dict(file='beach-craft_mod-icon_bis-3.1_1024.png', src=BC_OLD, make='png', show='altes Mod-Icon',
+                      note='dasselbe Bild als PNG')]),
+    dict(nr='03', key='quest-icons', name='Quest Icons - Quest Book & Icons', kind='Mod', cf_id=690531,
          cf_url='https://www.curseforge.com/minecraft/mc-mods/quest-icons', mr_url='https://modrinth.com/mod/quest-icons',
          sets=[dict(tag='icon', label='Projekt-Icon', master=cf_orig('quest-icons'), source='CurseForge'),
-               dict(tag='mod-icon', label='Mod-Icon (im Spiel)', pixel=16, sizes=[512, 256, 128, 64, 16],
-                    master=git('Kasax_Quests_Items_Mod-1.19.2', 'HEAD:src/main/resources/assets/questsicons/icon.png'),
-                    source='Jar (`assets/questsicons/icon.png`); Pixel-Art mit 16×16 Punkten, 128 ist die Datei aus der Jar')]),
+               dict(tag='mod-icon', label='Mod-Icon (im Spiel)', pixel=16, sizes=[512, 256, 128, 64, 16], master=QI_MOD,
+                    source='Jar (`assets/questsicons/icon.png`); Pixel-Art mit 16×16 Punkten')]),
     dict(nr='04', key='tamacraft', name='Tamacraft – Rare Pets', kind='Mod', cf_id=1758309,
          cf_url='https://www.curseforge.com/minecraft/mc-mods/tamacraft', mr_url='https://modrinth.com/mod/tamacraft',
-         sets=[dict(tag='icon', label='Projekt-Icon', master=cf_orig('tamacraft'),
-                    source='CurseForge; die Ecken sind durchsichtig'),
-               dict(tag='mod-icon', label='Mod-Icon (im Spiel)',
-                    master=git('tamagotchi', 'HEAD:src/main/resources/assets/tamacraft/icon.png'),
-                    source='Jar (`assets/tamacraft/icon.png`)')]),
+         sets=[dict(tag='icon', label='Projekt-Icon', master=quelle('tamacraft_icon_render_1024.png'),
+                    master_how='neu gezeichnet',
+                    source='neu gezeichnet mit dem Skript, das auch das Mod-Icon erzeugt (`tools/petart/icon.py` im '
+                           'Mod-Repo, Aufruf über `icons/render_tamacraft.py` im Archiv); die Ecken sind durchsichtig'),
+               dict(tag='mod-icon', label='Mod-Icon (im Spiel)', master=TC_MOD, source='Jar (`assets/tamacraft/icon.png`)')],
+         extras=[dict(file='tamacraft_icon_curseforge_400.png', src=cf_orig('tamacraft'), show='Fassung von CurseForge',
+                      note='das Icon, wie es auf CurseForge liegt: aus 128 px vergrößert und deshalb weich')]),
     dict(nr='05', key='challenge-craft', name='Challenge Craft – Challenge Runs & Lockout Bingo', kind='Mod (Fabric)',
          cf_id=1508454, cf_url='https://www.curseforge.com/minecraft/mc-mods/challenge',
          mr_url='https://modrinth.com/mod/challenge_craft',
-         sets=[dict(tag='icon', label='Projekt-Icon', master=CC_LOGO, keep_jpg=True,
-                    source='Mod-Repo `docs/curseforge/src/pack_logo.jpg` (720 px, JPEG): die größte Fassung, die es gibt'),
-               dict(tag='mod-icon', label='Mod-Icon (im Spiel)',
-                    master=git('Kasax_Challenge_Craft', 'HEAD:src/main/resources/assets/challengecraft/icon.png'),
-                    source='Jar (`assets/challengecraft/icon.png`)')]),
+         sets=[dict(tag='icon', label='Projekt-Icon', master=CC_LOGO, source=CC_SOURCE),
+               dict(tag='mod-icon', label='Mod-Icon (im Spiel)', master=CC_MOD, source='Jar (`assets/challengecraft/icon.png`)')],
+         extras=[dict(file='challenge-craft_schriftzug_2040x427.png', src=quelle('challenge-craft_schriftzug_2040x427.png'),
+                      show='Schriftzug', note='Schriftzug „CHALLENGE CRAFT“ aus dem Menü des Modpacks, durchsichtiger Grund'),
+                 dict(file='challenge-craft_by-kasax_2048x298.png', src=quelle('challenge-craft_by-kasax_2048x298.png'),
+                      show='„By Kasax“', note='Schriftzug „BY KASAX“ aus dem Menü des Modpacks, durchsichtiger Grund')]),
     dict(nr='06', key='challenge-craft-modpack', name='Challenge Craft Modpack', kind='Modpack (Fabric)', cf_id=1653698,
          cf_url='https://www.curseforge.com/minecraft/modpacks/challenge-craft',
-         mr_url='https://modrinth.com/modpack/challenge-craft-modpack',
-         sets=[dict(tag='icon', label='Projekt-Icon', master=CC_LOGO, keep_jpg=True,
-                    source='dasselbe Bild wie beim Mod Challenge Craft')]),
+         mr_url='https://modrinth.com/modpack/challenge-craft-modpack', same_as='05',
+         sets=[dict(tag='icon', label='Projekt-Icon', master=CC_LOGO,
+                    source='dasselbe Bild wie beim Mod Challenge Craft (Ordner 05, dort liegen auch die Schriftzüge)')]),
     dict(nr='07', key='dreamcraft-forge', name='Dreamcraft [FORGE]', kind='Modpack (Forge, 2022)', cf_id=582205,
-         cf_url='https://www.curseforge.com/minecraft/modpacks/dreamcraft-forge',
+         cf_url='https://www.curseforge.com/minecraft/modpacks/dreamcraft-forge', same_as='01',
          sets=[dict(tag='icon', label='Projekt-Icon', master=cf_orig('dreamcraft-forge'),
-                    source='CurseForge; dasselbe Bild wie bei Dreamcraft (Fabric)')]),
+                    source='CurseForge; dasselbe Bild wie bei Dreamcraft (Ordner 01)')],
+         extras=[dict(file='dreamcraft-forge_schriftzug_1440x1080.png', src=quelle('dreamcraft-forge_schriftzug_1440x1080.png'),
+                      note='Schriftzug „DREAMCRAFT FORGE“ vom Ladebildschirm des Forge-Packs, durchsichtiger Grund'),
+                 dict(file='dreamcraft-forge_schriftzug_zugeschnitten.png', src=quelle('dreamcraft-forge_schriftzug_1440x1080.png'),
+                      make='trim', show='Schriftzug', note='derselbe Schriftzug ohne den leeren Rand')]),
     dict(nr='08', key='lightspeed-performance', name='Lightspeed Performance', kind='Modpack (2021)', cf_id=552356,
          cf_url='https://www.curseforge.com/minecraft/modpacks/lightspeed-performance',
          sets=[dict(tag='icon', label='Projekt-Icon', master=cf_orig('lightspeed-performance'), source='CurseForge')]),
@@ -133,14 +174,15 @@ PROJECTS = [
 
 def read(src):
     if isinstance(src, tuple):
-        _, repo, spec = src
-        cmd = ['git', '-C', repo, 'show', spec] if ':' in spec else ['git', '-C', repo, 'cat-file', 'blob', spec]
-        return subprocess.run(cmd, check=True, capture_output=True).stdout
+        return subprocess.run(['git', '-C', src[1], 'cat-file', 'blob', src[2]], check=True, capture_output=True).stdout
     with open(src, 'rb') as f:
         return f.read()
 
 
 def write(path, data):
+    """Writes a file and refuses content that does not fit the name (a JPEG called .png, for example)."""
+    magic = MAGIC.get(os.path.splitext(path)[1])
+    assert magic is None or data.startswith(magic), f'{path}: content does not fit the extension'
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, 'wb') as f:
         f.write(data)
@@ -152,11 +194,6 @@ def png(im):
     return out.getvalue()
 
 
-def opaque(im):
-    """True when nothing of the image is see-through (CurseForge stores some opaque icons with alpha 250-255)."""
-    return im.mode not in ('RGBA', 'LA', 'PA') or im.convert('RGBA').getchannel('A').getextrema()[0] >= 250
-
-
 def load(data):
     im = Image.open(io.BytesIO(data))
     im.load()
@@ -165,275 +202,306 @@ def load(data):
     return im
 
 
+def opaque(im):
+    """True when nothing of the image is see-through (CurseForge stores some opaque icons with alpha 250-255)."""
+    return im.mode not in ('RGBA', 'LA') or im.convert('RGBA').getchannel('A').getextrema()[0] >= 250
+
+
 def scaled(im, size, pixel=False):
     if pixel:
         return im.resize((size, size), Image.NEAREST)
-    if opaque(im):
-        return im.convert('RGB').resize((size, size), Image.LANCZOS)
-    return im.convert('RGBA').resize((size, size), Image.LANCZOS)
+    return im.convert('RGB' if opaque(im) else 'RGBA').resize((size, size), Image.LANCZOS)
+
+
+def get(url):
+    req = urllib.request.Request(url, headers={'User-Agent': UA})
+    with urllib.request.urlopen(req, timeout=60) as r:
+        return r.read()
 
 
 def fetch():
-    def get(url, out):
-        req = urllib.request.Request(url, headers={'User-Agent': UA})
-        with urllib.request.urlopen(req, timeout=60) as r:
-            write(out, r.read())
-        print('fetched', os.path.relpath(out, PACK))
-
-    for key, live in LIVE.items():
+    """Downloads the platform files again; a file is only replaced by something that opens as an image."""
+    for p in PROJECTS:
+        live = LIVE[p['key']]
         a, b, name = live['cf'].split('/')
-        get(f'https://media.forgecdn.net/avatars/{live["cf"]}', cf_orig(key))
-        get(f'https://media.forgecdn.net/avatars/thumbnails/{a}/{b}/256/256/{name}',
-            os.path.join(ORIG, 'curseforge', f'{key}_curseforge_256.png'))
+        thumb = f'https://media.forgecdn.net/avatars/thumbnails/{a}/{b}/256/256/{name}'
+        try:
+            now = json.loads(get(f'https://api.cfwidget.com/{p["cf_id"]}')).get('thumbnail')
+            if now != thumb:
+                print(f'WARNING {p["key"]}: CurseForge now shows another icon ({now}); update LIVE')
+        except Exception as e:  # the check is a convenience, the download below does not depend on it
+            print(f'could not ask api.cfwidget.com about {p["key"]}: {e}')
+        jobs = [(f'https://media.forgecdn.net/avatars/{live["cf"]}', cf_orig(p['key'])),
+                (thumb, os.path.join(ORIG, 'curseforge', f'{p["key"]}_curseforge_256.png'))]
         if 'mr' in live:
             pid, sha = live['mr']
-            get(f'https://cdn.modrinth.com/data/{pid}/{sha}.png', os.path.join(ORIG, 'modrinth', f'{key}_modrinth_original.png'))
-            get(f'https://cdn.modrinth.com/data/{pid}/{sha}_96.webp', os.path.join(ORIG, 'modrinth', f'{key}_modrinth_96.webp'))
+            jobs += [(f'https://cdn.modrinth.com/data/{pid}/{sha}.png', os.path.join(ORIG, 'modrinth', f'{p["key"]}_modrinth_original.png')),
+                     (f'https://cdn.modrinth.com/data/{pid}/{sha}_96.webp', os.path.join(ORIG, 'modrinth', f'{p["key"]}_modrinth_vorschau.webp'))]
+        for url, out in jobs:
+            data = get(url)
+            Image.open(io.BytesIO(data)).verify()
+            write(out, data)
+            print('fetched', os.path.relpath(out, HERE))
 
 
 # ---------------------------------------------------------------- the pack
 
-def build_sets():
-    """Writes the project folders and returns the manifest rows."""
-    rows = []
+def row(p, kind, rel, how, data, **more):
+    im = load(data)
+    return dict(project=p['key'], set=kind, file=rel, width=im.size[0], height=im.size[1], how=how,
+                sha1=hashlib.sha1(data).hexdigest(), **more)
+
+
+def build_sets(rows):
     for p in PROJECTS:
-        folder = os.path.join(PACK, f'{p["nr"]}_{p["key"]}')
-        shutil.rmtree(folder, ignore_errors=True)
+        folder = f'{p["nr"]}_{p["key"]}'
         for s in p['sets']:
             data = read(s['master'])
             master = load(data)
-            assert master.size[0] == master.size[1], (p['key'], s['tag'], master.size)
+            assert master.format == 'PNG' and master.size[0] == master.size[1], (p['key'], s['tag'], master.format, master.size)
             native = master.size[0]
+            s['native'] = native
             sizes = s.get('sizes') or [n for n in SIZES if n < native]
+            grid = None
+            if s.get('pixel'):
+                grid = master.resize((s['pixel'], s['pixel']), Image.NEAREST)
+                assert grid.resize(master.size, Image.NEAREST).tobytes() == master.tobytes(), 'not pixel art'
             for size in sorted(set(sizes) | {native}, reverse=True):
-                rel = f'{p["nr"]}_{p["key"]}/{p["key"]}_{s["tag"]}_{size}.png'
+                rel = f'{folder}/{p["key"]}_{s["tag"]}_{size}.png'
                 if size == native:
-                    if master.format == 'PNG':
-                        out, how = data, 'Original'
-                    else:  # a JPEG master: the same pixels as PNG, and the file itself next to it
-                        out, how = png(master.convert('RGB')), f'Original ({master.format}) als PNG'
-                        if s.get('keep_jpg'):
-                            jpg = rel[:-4] + '.jpg'
-                            write(os.path.join(PACK, jpg), data)
-                            rows.append(dict(project=p['key'], set=s['tag'], file=jpg, size=native, how='Original'))
-                elif size in s.get('fixed', {}):
-                    out, how = read(s['fixed'][size]), 'eigene Fassung'
-                elif s.get('pixel'):
-                    assert size % s['pixel'] == 0 and native % s['pixel'] == 0
-                    grid = master.resize((s['pixel'], s['pixel']), Image.NEAREST)
-                    assert grid.resize(master.size, Image.NEAREST).tobytes() == master.tobytes(), 'not pixel art'
+                    out, how = data, s.get('master_how', 'Original')
+                elif grid is not None:
+                    assert size % s['pixel'] == 0
                     out = png(scaled(grid, size, pixel=True))
-                    how = 'Pixel-Art, verlustfrei vergrößert' if size > native else 'Pixel-Art, verlustfrei'
+                    how = 'Pixel-Art, verlustfrei vergrößert' if size > native else 'Pixel-Art, verlustfrei verkleinert'
                 else:
                     assert size < native, (rel, 'would be scaled up')
-                    out, how = png(scaled(master, size)), 'verkleinert'
-                write(os.path.join(PACK, rel), out)
-                rows.append(dict(project=p['key'], set=s['tag'], file=rel, size=size, how=how))
+                    mine = scaled(master, size)
+                    out, how = png(mine), 'verkleinert'
+                    if size in s.get('fixed', {}):  # a file of its own: use it, and say so only if it really differs
+                        out = read(s['fixed'][size])
+                        own = load(out)
+                        assert own.size == (size, size), (rel, own.size)
+                        if own.convert(mine.mode).tobytes() != mine.tobytes():
+                            how = 'eigene Fassung'
+                write(os.path.join(WORK, rel), out)
+                rows.append(row(p, s['tag'], rel, how, out))
         for e in p.get('extras', []):
             data = read(e['src'])
-            if e.get('trim'):
+            make = e.get('make')
+            if make == 'trim':
                 im = load(data).convert('RGBA')
                 box = im.getchannel('A').point(lambda v: 255 if v > 8 else 0).getbbox()
                 pad = 16
-                box = (max(0, box[0] - pad), max(0, box[1] - pad), min(im.size[0], box[2] + pad), min(im.size[1], box[3] + pad))
-                data = png(im.crop(box))
-            rel = f'{p["nr"]}_{p["key"]}/extras/{e["file"]}'
-            write(os.path.join(PACK, rel), data)
-            im = load(data)
-            rows.append(dict(project=p['key'], set='extras', file=rel, size=f'{im.size[0]}×{im.size[1]}',
-                             how=e['note'], label=e['label']))
-    return rows
+                data = png(im.crop((max(0, box[0] - pad), max(0, box[1] - pad),
+                                    min(im.size[0], box[2] + pad), min(im.size[1], box[3] + pad))))
+            elif make == 'png':
+                data = png(load(data))
+            elif make:
+                im = load(data)
+                data = png(im.resize((im.size[0] * make[1], im.size[1] * make[1]), Image.NEAREST))
+            rel = f'{folder}/extras/{e["file"]}'
+            write(os.path.join(WORK, rel), data)
+            rows.append(row(p, 'extras', rel, e['note'], data))
 
 
 def build_uniform(rows):
     """One folder per size with the icon of every project, for grids and lists."""
-    for size in (400, 256):
-        folder = os.path.join(PACK, f'alle-icons_{size}px')
-        shutil.rmtree(folder, ignore_errors=True)
+    for size in UNIFORM:
         for p in PROJECTS:
-            src = os.path.join(PACK, f'{p["nr"]}_{p["key"]}', f'{p["key"]}_icon_{size}.png')
+            data = read(os.path.join(WORK, f'{p["nr"]}_{p["key"]}', f'{p["key"]}_icon_{size}.png'))
             rel = f'alle-icons_{size}px/{p["nr"]}_{p["key"]}.png'
-            write(os.path.join(PACK, rel), read(src))
-            rows.append(dict(project=p['key'], set='alle', file=rel, size=size, how='Kopie'))
+            write(os.path.join(WORK, rel), data)
+            rows.append(row(p, 'alle', rel, f'Kopie von {p["key"]}_icon_{size}.png', data))
 
 
 def font(name, size):
     return ImageFont.truetype(os.path.join(ARCHIVE, 'fonts', name), size)
 
 
-def tile(path, size):
-    """An image fitted into a square, on the card colour (transparent parts show the card)."""
+def tile(path, w, h):
+    """An image fitted into a box, keeping its shape; transparent parts show the card behind it."""
     im = load(read(path)).convert('RGBA')
-    w, h = im.size
-    k = min(size / w, size / h)
-    new = (max(1, round(w * k)), max(1, round(h * k)))
-    im = im.resize(new, Image.NEAREST if max(w, h) <= 128 and k >= 1 else Image.LANCZOS)
-    out = Image.new('RGBA', (size, size), (0, 0, 0, 0))
-    out.alpha_composite(im, ((size - new[0]) // 2, (size - new[1]) // 2))
-    return out
+    k = min(w / im.size[0], h / im.size[1])
+    new = (max(1, round(im.size[0] * k)), max(1, round(im.size[1] * k)))
+    return im.resize(new, Image.NEAREST if max(im.size) <= 128 and k >= 1 else Image.LANCZOS)
 
 
 def build_overview():
     bg, card, line, text, muted, accent = (18, 19, 28), (30, 32, 46), (52, 55, 78), (240, 241, 248), (160, 165, 190), (150, 200, 255)
-    cols, cw, ch, gap, margin, top = 3, 620, 356, 24, 40, 132
+    cols, cw, ch, gap, margin, top = 3, 620, 372, 24, 40, 150
     rows_n = (len(PROJECTS) + cols - 1) // cols
     W = margin * 2 + cols * cw + (cols - 1) * gap
     H = top + rows_n * ch + (rows_n - 1) * gap + margin
     im = Image.new('RGBA', (W, H), bg + (255,))
     d = ImageDraw.Draw(im)
-    d.text((margin, 34), 'Kasax007 – Projekt-Icons', font=font('InterDisplay-Bold.otf', 44), fill=text)
-    d.text((margin, 92), f'Stand {STAND} · 9 Projekte auf CurseForge, 6 davon auch auf Modrinth · '
-                         'die Zahl nennt die größte Fassung in Pixeln', font=font('Inter-SemiBold.otf', 18), fill=muted)
+    f_sub = font('Inter-SemiBold.otf', 18)
+    d.text((margin, 30), 'Kasax007 – Projekt-Icons', font=font('InterDisplay-Bold.otf', 44), fill=text)
+    d.text((margin, 88), f'Stand {STAND} · 9 Projekte auf CurseForge, 6 davon auch auf Modrinth · '
+                         '„Icon bis 800 px“ = größte vorhandene Größe', font=f_sub, fill=muted)
+    d.text((margin, 114), 'Alle neun Icons in einer Größe: Ordner alle-icons_256px und alle-icons_400px', font=f_sub, fill=muted)
     f_name, f_kind, f_small = font('InterDisplay-Bold.otf', 23), font('Inter-SemiBold.otf', 16), font('Inter-SemiBold.otf', 13)
     for i, p in enumerate(PROJECTS):
         x = margin + (i % cols) * (cw + gap)
         y = top + (i // cols) * (ch + gap)
         d.rounded_rectangle([x, y, x + cw, y + ch], 18, fill=card, outline=line)
-        folder = os.path.join(PACK, f'{p["nr"]}_{p["key"]}')
-        main = p['sets'][0]
-        native = load(read(main['master'])).size[0]
-        im.alpha_composite(tile(os.path.join(folder, f'{p["key"]}_icon_{native}.png'), 232), (x + 20, y + 20))
+        folder = os.path.join(WORK, f'{p["nr"]}_{p["key"]}')
+        native = p['sets'][0]['native']
+        big = tile(os.path.join(folder, f'{p["key"]}_icon_{min(native, 1024)}.png'), 232, 232)
+        im.alpha_composite(big, (x + 20, y + 20))
         tx = x + 274
-        # the name, wrapped to the card
-        words, lines_, cur = p['name'].split(), [], ''
-        for w in words:
+        lines_, cur = [], ''
+        for w in p['name'].split():
             t = (cur + ' ' + w).strip()
             if d.textlength(t, font=f_name) <= cw - 274 - 18 or not cur:
                 cur = t
             else:
-                lines_.append(cur); cur = w
+                lines_.append(cur)
+                cur = w
         lines_.append(cur)
         ty = y + 22
         for ln in lines_[:3]:
-            d.text((tx, ty), ln, font=f_name, fill=text); ty += 30
-        d.text((tx, ty + 4), p['kind'], font=f_kind, fill=muted); ty += 30
-        d.text((tx, ty), 'CurseForge + Modrinth' if p.get('mr_url') else 'CurseForge', font=f_kind, fill=accent); ty += 28
-        d.text((tx, ty), f'Ordner {p["nr"]}_{p["key"]}', font=f_small, fill=muted); ty += 20
-        d.text((tx, ty), f'Icon bis {native} px', font=f_small, fill=muted)
-        # the other pictures of the project
+            d.text((tx, ty), ln, font=f_name, fill=text)
+            ty += 30
+        d.text((tx, ty + 4), p['kind'], font=f_kind, fill=muted)
+        ty += 30
+        d.text((tx, ty), 'CurseForge + Modrinth' if p.get('mr_url') else 'CurseForge', font=f_kind, fill=accent)
+        ty += 28
+        for ln in [f'Ordner {p["nr"]}_{p["key"]}', f'Icon bis {native} px'] + ([f'gleiches Bild wie {p["same_as"]}'] if p.get('same_as') else []):
+            d.text((tx, ty), ln, font=f_small, fill=muted)
+            ty += 20
+        # the other pictures of the project, each with its name and size underneath
         small = []
         for s in p['sets'][1:]:
-            n = load(read(s['master'])).size[0]
-            small.append((os.path.join(folder, f'{p["key"]}_{s["tag"]}_{n}.png'), s['label'].split(' (')[0], f'{n} px'))
+            small.append((os.path.join(folder, f'{p["key"]}_{s["tag"]}_{s["native"]}.png'), s['label'].split(' (')[0], f'{s["native"]} px'))
         for e in p.get('extras', []):
-            if e.get('trim'):
-                continue
-            path = os.path.join(folder, 'extras', e['file'])
-            sz = load(read(path)).size
-            small.append((path, e['label'], f'{sz[0]} px' if sz[0] == sz[1] else f'{sz[0]}×{sz[1]}'))
+            if e.get('show'):
+                path = os.path.join(folder, 'extras', e['file'])
+                sz = Image.open(path).size
+                small.append((path, e['show'], f'{sz[0]} px' if sz[0] == sz[1] else f'{sz[0]}×{sz[1]}'))
         sx = x + 20
-        for path, label, px in small[:5]:
-            im.alpha_composite(tile(path, 64), (sx, y + 268))
-            d.text((sx + 72, y + 276), label, font=f_small, fill=text)
-            d.text((sx + 72, y + 296), px, font=f_small, fill=muted)
-            sx += 72 + int(max(d.textlength(label, font=f_small), d.textlength(px, font=f_small))) + 22
+        for path, label, px in small:
+            t = tile(path, 176, 56)
+            wide = max(t.size[0], int(d.textlength(label, font=f_small)), int(d.textlength(px, font=f_small)))
+            im.alpha_composite(t, (sx, y + 266 + (56 - t.size[1]) // 2))
+            d.text((sx, y + 328), label, font=f_small, fill=text)
+            d.text((sx, y + 346), px, font=f_small, fill=muted)
+            sx += wide + 18
+            assert sx <= x + cw, f'{p["key"]}: the small pictures do not fit on the card'
         if not small:
-            d.text((x + 20, y + 290), 'nur das Projekt-Icon', font=f_small, fill=muted)
-    write(os.path.join(PACK, 'uebersicht.png'), png(im.convert('RGB')))
-
-
-def dims(path):
-    im = Image.open(path)
-    return f'{im.size[0]}×{im.size[1]}'
+            d.text((x + 20, y + 300), 'nur das Projekt-Icon', font=f_small, fill=muted)
+    write(os.path.join(WORK, 'uebersicht.png'), png(im.convert('RGB')))
 
 
 def build_readme(rows):
-    L = []
-    L += ['# Icons meiner Projekte (Kasax007)', '',
-          f'Stand: {STAND}. 9 Projekte auf CurseForge, 6 davon auch auf Modrinth. Alle Bilder auf einen Blick: '
-          '`uebersicht.png`.', '',
-          '## Inhalt', '',
-          '| Ordner | Projekt | Art | Projekt-Icon bis | Sonst noch |', '| --- | --- | --- | --- | --- |']
+    def sizes_of(p, tag):
+        return sorted((r['width'] for r in rows if r['project'] == p['key'] and r['set'] == tag), reverse=True)
+
+    L = ['# Icons meiner Projekte (Kasax007)', '',
+         f'Stand: {STAND}. Neun Projekte auf CurseForge, sechs davon auch auf Modrinth. Alle Bilder auf einen Blick: '
+         '`uebersicht.png`.', '',
+         '## Welche Datei nehme ich?', '',
+         '- **Website, Shop-Seite, Endkarte im Video:** die größte Datei im Projektordner.',
+         '- **Discord-Server oder Profilbild:** `_512`; wo es die nicht gibt, die größte.',
+         '- **Liste oder Raster mit allen Projekten:** Ordner `alle-icons_256px` (oder `alle-icons_400px`).',
+         '- **Auf farbigem Grund:** Tamacraft hat durchsichtige Ecken, alle anderen Icons sind volle Quadrate. '
+         'Logos und Schriftzüge in `extras/` haben einen durchsichtigen Grund und wirken am besten auf Dunkel.', '',
+         '## Inhalt', '',
+         '| Ordner | Projekt | Art | Icon-Größen (px) | Außerdem |', '| --- | --- | --- | --- | --- |']
     for p in PROJECTS:
-        native = max(r['size'] for r in rows if r['project'] == p['key'] and r['set'] == 'icon')
-        more = [s['label'] for s in p['sets'][1:]] + [e['label'] for e in p.get('extras', [])]
-        L.append(f'| `{p["nr"]}_{p["key"]}` | {p["name"]} | {p["kind"]} | {native} px | {", ".join(more) or "–"} |')
-    L += ['| `alle-icons_400px`, `alle-icons_256px` | alle 9 Projekt-Icons in einer Größe | | 400 und 256 px | |',
-          '| `plattform-originale` | die Dateien genau so, wie CurseForge und Modrinth sie ausliefern | | | |', '',
+        more = [s['label'].split(' (')[0] for s in p['sets'][1:]] + [e['show'] for e in p.get('extras', []) if e.get('show')]
+        if p.get('same_as'):
+            more.insert(0, f'gleiches Bild wie {p["same_as"]}')
+        L.append(f'| `{p["nr"]}_{p["key"]}` | {p["name"]} | {p["kind"]} | {", ".join(map(str, sizes_of(p, "icon")))} | '
+                 f'{", ".join(more) or "–"} |')
+    L += ['| `alle-icons_400px`, `alle-icons_256px` | alle neun Projekt-Icons in einer Größe, benannt `NN_<projekt>.png` | | 400, 256 | |', '',
           '## Dateinamen', '',
-          '- `<projekt>_icon_<größe>.png`: das Projekt-Icon, wie es auf CurseForge und Modrinth zu sehen ist. Die Zahl ist '
-          'die Kantenlänge in Pixeln, alle Bilder sind quadratisch.',
-          '- `<projekt>_icon-ohne-titel_<größe>.png`: Beach Craft ohne den Schriftzug.',
-          '- `<projekt>_mod-icon_<größe>.png`: das Symbol, das im Spiel in der Mod-Liste steht (es steckt in der Jar).',
-          '- `extras/`: Server-Icon, Schriftzug und ältere Fassungen.', '',
+          '- `<projekt>_icon_<größe>.png`: das Projekt-Icon. Die Zahl ist die Kantenlänge in Pixeln; alle Icons sind quadratisch.',
+          '- `<projekt>_icon-ohne-titel_<größe>.png`: das Beach-Craft-Icon ohne den Titel.',
+          '- `<projekt>_mod-icon_<größe>.png`: das Icon, das im Spiel in der Mod-Liste steht (es steckt in der Jar).',
+          '- `extras/`: Logos, Schriftzüge, Server- und Fenster-Icon, ältere Fassungen.', '',
           '## So sind die Größen entstanden', '',
-          '- Die größte Datei jeder Reihe ist das Original und unverändert (Byte für Byte).',
-          '- Kleinere Größen sind daraus verkleinert. Nichts wurde hochgerechnet, deshalb gibt es je Projekt '
-          'unterschiedlich viele Größen.',
-          '- Ausnahme Quest Icons, Mod-Icon: Das ist Pixel-Art mit 16×16 Punkten und lässt sich ohne Verlust vergrößern.',
-          '- Beach Craft: 512, 400 und 256 sind die Fassungen aus dem Archiv (400 liegt auf CurseForge).', '',
+          '- Die größte Datei jedes Icons ist das unveränderte Original (Byte für Byte). Bei Tamacraft ist es eine neu '
+          'gezeichnete Fassung, siehe unten.',
+          '- Kleinere Größen sind daraus verkleinert. Nichts wurde künstlich vergrößert; deshalb hört die Liste bei '
+          'manchen Projekten schon bei 400 px auf.',
+          '- Pixel-Art lässt sich ohne Verlust vergrößern. Das gilt für das Mod-Icon von Quest Icons und das Fenster-Icon '
+          'von Dreamcraft; von ihnen gibt es deshalb auch größere Fassungen.', '',
           '## Gut zu wissen', '',
-          '- **Challenge Craft:** Mod und Modpack haben dasselbe Icon. Die größte Fassung ist ein JPEG mit 720 px; sie liegt '
-          'als `.jpg` (Original) und als `.png` bei. Auf CurseForge liegt eine Fassung mit 400 px.',
-          '- **Dreamcraft:** Fabric und Forge haben dasselbe Icon (800 px).',
-          '- **Tamacraft:** Die Ecken des Icons sind durchsichtig. Das Mod-Icon in der Jar ist etwas anders zugeschnitten.',
-          '- **Beach Craft:** Das Mod-Icon in der Jar ist `beach-craft_icon-ohne-titel_128.png`. Bis Version 3.1 war es das '
-          'Bild in `extras/`.',
-          '- **Modrinth:** Dort liegt beim Challenge Craft Modpack nur eine Fassung mit 64 px, bei Quest Icons und Tamacraft '
-          'eine mit 256 px. Modrinth zeigt Icons mit 96 px an.',
-          '- **Lightspeed Performance, Beautifully:** Von diesen Icons gibt es nur die 400 px von CurseForge.', '']
-    L += ['## Alle Dateien', '']
+          '- **Challenge Craft:** Das Original mit 3240 px stammt aus dem Menü des Modpacks. Mod und Modpack haben dasselbe '
+          'Icon. Das Mod-Icon im Spiel ist dagegen ein weißes Feld mit dem Text „Challenge Craft“.',
+          '- **Tamacraft:** Auf CurseForge liegt eine weiche Fassung mit 400 px. Sie wurde aus dem kleinen Mod-Icon (128 px) '
+          'vergrößert, weil CurseForge mindestens 400 px verlangt. Das Icon in diesem Pack ist neu gezeichnet, mit demselben '
+          'Skript, das auch das Mod-Icon erzeugt: dasselbe Bild, aber scharf und bis 1024 px. Die Fassung von CurseForge '
+          'liegt in `extras/`.',
+          '- **Dreamcraft:** Fabric und Forge haben dasselbe Icon. In `extras/` liegen das Logo „DREAMCRAFT FABRIC“ mit '
+          'Mond und Sternen, der Schriftzug ohne beides, das Server-Icon und das Fenster-Icon aus dem Pack für 1.20.1. '
+          'Der Schriftzug „DREAMCRAFT FORGE“ liegt im Ordner 07.',
+          '- **Beach Craft:** Das Mod-Icon in der Jar ist `beach-craft_icon-ohne-titel_128.png` (seit 3.2.0). Bis Version '
+          '3.1 war es das Bild in `extras/`.',
+          '- **Lightspeed Performance, Beautifully:** Von diesen Icons gibt es nur die 400 px von CurseForge. Im 400er-Satz '
+          'wirken sie etwas weicher als die anderen; für Raster ist der 256er-Satz am gleichmäßigsten.', '',
+          '## Die Projekte im Einzelnen', '']
     for p in PROJECTS:
-        links = f'[CurseForge]({p["cf_url"]}) (Projekt {p["cf_id"]})' + (f', [Modrinth]({p["mr_url"]})' if p.get('mr_url') else '')
+        links = f'[CurseForge]({p["cf_url"]}) (Projekt-Nr. {p["cf_id"]})' + (f' · [Modrinth]({p["mr_url"]})' if p.get('mr_url') else '')
         L += [f'### {p["nr"]} · {p["name"]}', '', f'{p["kind"]} · {links}', '']
         for s in p['sets']:
-            L += [f'**{s["label"]}** – Vorlage: {s["source"]}', '', '| Datei | Pixel | Entstehung |', '| --- | --- | --- |']
-            for r in [r for r in rows if r['project'] == p['key'] and r['set'] == s['tag']]:
-                L.append(f'| `{os.path.basename(r["file"])}` | {r["size"]}×{r["size"]} | {r["how"]} |')
-            L.append('')
-        ex = [r for r in rows if r['project'] == p['key'] and r['set'] == 'extras']
-        if ex:
-            L += ['**Extras**', '', '| Datei | Pixel | Was es ist |', '| --- | --- | --- |']
-            L += [f'| `extras/{os.path.basename(r["file"])}` | {r["size"]} | {r["how"]} |' for r in ex]
-            L.append('')
-    L += ['### Plattform-Originale', '',
-          'Unverändert heruntergeladen. `original` ist die hochgeladene Datei, `256` und `96` sind die Vorschaubilder der '
-          'Plattform.', '', '| Datei | Pixel |', '| --- | --- |']
-    for sub in ('curseforge', 'modrinth'):
-        for fn in sorted(os.listdir(os.path.join(ORIG, sub))):
-            L.append(f'| `plattform-originale/{sub}/{fn}` | {dims(os.path.join(ORIG, sub, fn))} |')
-    L.append('')
-    write(os.path.join(PACK, 'LIESMICH.md'), '\n'.join(L).encode('utf-8'))
+            mine = [r for r in rows if r['project'] == p['key'] and r['set'] == s['tag']]
+            names = {'Original': 'Original', 'neu gezeichnet': 'neu gezeichnet'}
+            parts = []
+            for r in mine:
+                mark = names.get(r['how']) or ('eigene Fassung' if r['how'] == 'eigene Fassung' else '')
+                if s.get('pixel') and r['how'] == 'Original':
+                    mark = 'Datei aus der Jar'
+                parts.append(f'{r["width"]}' + (f' ({mark})' if mark else ''))
+            tail = ' Die anderen Größen sind verlustfreie Pixel-Art-Fassungen.' if s.get('pixel') else ''
+            L.append(f'- **{s["label"]}:** {", ".join(parts)} px. Quelle: {s["source"]}.{tail}')
+        for r in [r for r in rows if r['project'] == p['key'] and r['set'] == 'extras']:
+            L.append(f'- `extras/{os.path.basename(r["file"])}` ({r["width"]}×{r["height"]}): {r["how"]}.')
+        L.append('')
+    write(os.path.join(WORK, 'LIESMICH.md'), '\n'.join(L).encode('utf-8'))
 
 
-def build_zip():
+def build_zip(files):
     out = os.path.join(HERE, f'{NAME}.zip')
-    files = []
-    for root, dirs, names in os.walk(PACK):
-        dirs.sort()
-        for n in sorted(names):
-            files.append(os.path.join(root, n))
+    stamp = (TODAY.year, TODAY.month, TODAY.day, 12, 0, 0)
     with zipfile.ZipFile(out, 'w', zipfile.ZIP_DEFLATED, compresslevel=9) as z:
-        for path in sorted(files, key=lambda q: os.path.relpath(q, PACK)):
-            info = zipfile.ZipInfo(f'{NAME}/' + os.path.relpath(path, PACK).replace(os.sep, '/'), (2026, 11, 13, 12, 0, 0))
+        for rel in sorted(files):
+            info = zipfile.ZipInfo(f'{NAME}/{rel}', stamp)
             info.compress_type = zipfile.ZIP_DEFLATED
             info.external_attr = 0o644 << 16
-            z.writestr(info, read(path))
-    return out, len(files)
+            z.writestr(info, read(os.path.join(PACK, rel)))
+    return out
 
 
 def main():
     if '--fetch' in sys.argv:
         fetch()
-    missing = [k for k in LIVE if not os.path.exists(cf_orig(k))]
-    if missing:
-        sys.exit(f'platform originals missing for {missing}: run with --fetch')
-    for stale in ('uebersicht.png', 'LIESMICH.md'):
-        if os.path.exists(os.path.join(PACK, stale)):
-            os.remove(os.path.join(PACK, stale))
-    rows = build_sets()
+    # everything the build reads must be there before anything is replaced
+    needed = [cf_orig(k) for k in LIVE]
+    for p in PROJECTS:
+        needed += [s['master'] for s in p['sets']] + [f for s in p['sets'] for f in s.get('fixed', {}).values()]
+        needed += [e['src'] for e in p.get('extras', [])]
+    for src in needed:
+        try:
+            read(src)
+        except Exception as e:
+            sys.exit(f'source missing: {src} ({e})')
+    shutil.rmtree(WORK, ignore_errors=True)
+    rows = []
+    build_sets(rows)
     build_uniform(rows)
     build_overview()
     build_readme(rows)
-    for sub in ('curseforge', 'modrinth'):
-        for fn in sorted(os.listdir(os.path.join(ORIG, sub))):
-            rows.append(dict(project=fn.split('_')[0], set='plattform', file=f'plattform-originale/{sub}/{fn}',
-                             size=dims(os.path.join(ORIG, sub, fn)), how='Plattform-Original'))
-    for r in rows:
-        r['sha1'] = hashlib.sha1(read(os.path.join(PACK, r['file']))).hexdigest()
+    files = [r['file'] for r in rows] + ['LIESMICH.md', 'uebersicht.png']
+    on_disk = sorted(os.path.relpath(os.path.join(root, n), WORK).replace(os.sep, '/')
+                     for root, _, names in os.walk(WORK) for n in names)
+    assert on_disk == sorted(files), 'the build folder holds other files than the list'
+    shutil.rmtree(PACK, ignore_errors=True)
+    os.rename(WORK, PACK)
     write(os.path.join(HERE, 'manifest.json'), json.dumps(rows, ensure_ascii=False, indent=1).encode('utf-8'))
-    out, n = build_zip()
-    print(f'{n} files, {os.path.getsize(out) / 1e6:.1f} MB: {out}')
+    out = build_zip(files)
+    print(f'{len(files)} files, {os.path.getsize(out) / 1e6:.1f} MB: {out}')
 
 
 if __name__ == '__main__':

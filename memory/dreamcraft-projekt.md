@@ -367,3 +367,20 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
 - Beschreibungen: Modrinth eingetragen; CurseForge-HTML in den Repos (26.3) und auf der Übergabeseite (Version 24);
   Kopfbilder BC/TC mit Schild „26.3 & 1.21.1 · Fabric & NeoForge“ (wirkt sofort auch auf der alten CF-Seite).
 - Modrinth: BC, TC, QI, Dreamcraft, CC-Pack seit 8.11. „processing“ (keine Moderator-Nachricht), nur Challenge Craft frei.
+
+## Stand 13.11.2026 – Icon-Pack, alle Projekte des Kontos, Tamacraft-Adresse
+
+- **Icon-Pack** (Wunsch des Nutzers: „alle Icons meiner Projekte als Pack“): `Archive/icons/` mit `build_pack.py`
+  (`--fetch` lädt die Plattform-Dateien neu), `pack/` (Inhalt), `Kasax-Projekt-Icons.zip`, `manifest.json`. Regel: größte
+  vorhandene Fassung bytegenau, kleinere per Lanczos, nichts hochskalieren (außer Pixel-Art).
+- **Das CurseForge-Konto hat 9 Projekte** (Mitglieds-Nr. 102817337): die sechs aktiven und dazu Dreamcraft [FORGE]
+  (582205), Lightspeed Performance (552356), Beautifully [NEW] (552343). Auf Modrinth sind es sechs.
+  Abfrage ohne Zugangsdaten: `api.cfwidget.com/author/102817337` und `api.cfwidget.com/<Projekt-Nr.>` (kanonische
+  Adresse, Logo unter `thumbnail`; Original: `media.forgecdn.net/avatars/<a>/<b>/<datei>`).
+- **Größte Logo-Fassungen:** Dreamcraft 800 px (CurseForge), Beach Craft 1024 (Archiv), Quest Icons 800 (CurseForge),
+  Tamacraft 400 (CurseForge), Challenge Craft 720 (JPEG, `docs/curseforge/src/pack_logo.jpg` im Mod-Repo), die zwei
+  alten Modpacks 400. Auf Modrinth liegt beim Challenge-Craft-Modpack nur ein 64-px-Icon.
+- **Tamacraft auf CurseForge:** Adresse ist jetzt `/minecraft/mc-mods/tamacraft` (bis zur Umbenennung `/tamagotchi`).
+  Ob die alte Adresse weiterleitet, ließ sich nicht prüfen: `www.curseforge.com` hat einen Bot-Schutz (HTTP 403), den
+  ich nicht umgehe. 10 gesendete Outreach-Nachrichten (8.11. und 11.11.) enthalten die alte Adresse; Brief, Configs und
+  alle ungesendeten Entwürfe (Seite und `outreach/drafts`) stehen auf der neuen.

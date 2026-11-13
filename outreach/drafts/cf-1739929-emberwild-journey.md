@@ -22,7 +22,7 @@
 >
 > I also make Tamagotchi (ten rare pets hidden in structures) if you ever want companions.
 >
-> https://www.curseforge.com/minecraft/mc-mods/beach-craft · https://www.curseforge.com/minecraft/mc-mods/tamagotchi
+> https://www.curseforge.com/minecraft/mc-mods/beach-craft · https://www.curseforge.com/minecraft/mc-mods/tamacraft
 >
 > I won't follow up more than once. – Kasax
 

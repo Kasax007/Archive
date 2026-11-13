@@ -19,7 +19,7 @@
 
 > Hi Stackelyy! Sensible MC already takes good care of pets – Respawnable Pets and Perfected Pet are in the list – so here's a suggestion that adds new ones without changing the basic gameplay: Tamagotchi hides ten rare pets in structures that you tame and look after. It's made for modpacks: diets and pet homes are tags, so it's easy to tune.
 >
-> https://www.curseforge.com/minecraft/mc-mods/tamagotchi (Modrinth: {modrinth_url})
+> https://www.curseforge.com/minecraft/mc-mods/tamacraft (Modrinth: {modrinth_url})
 >
 > One message only. – Kasax
 

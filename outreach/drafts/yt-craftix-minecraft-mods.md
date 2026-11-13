@@ -28,7 +28,7 @@
 >
 > I'd love to help with a future list: early access, a test world with the best spots ready to film, or B-roll.
 >
-> https://www.curseforge.com/minecraft/mc-mods/tamagotchi
+> https://www.curseforge.com/minecraft/mc-mods/tamacraft
 > https://www.curseforge.com/minecraft/mc-mods/beach-craft
 >
 > Thank you for giving community mods a stage – I'd be so happy to hear what you think!

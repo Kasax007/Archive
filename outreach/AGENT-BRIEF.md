@@ -87,7 +87,8 @@ an earlier run found but could not draft (e.g. the day's HOLD quota was full). C
   from thunder, play together, carry your things and help in fights, never die (they faint into a Tama Egg); furniture
   like a running wheel (redstone signal), toys, treat dispenser, incubator, pet door; Tamacon guide; JEI/REI info
   pages. For packs: pet homes are structure tags, diets are item tags (easy datapack).
-  https://www.curseforge.com/minecraft/mc-mods/tamagotchi (Modrinth still in review - don't link)
+  https://www.curseforge.com/minecraft/mc-mods/tamacraft (Modrinth still in review - don't link). The address
+  ended in /tamagotchi until the rename; use only /tamacraft (checked 13.11.2026).
 - **Quest Icons 1.3.0** (mod): FTB-Quests-style quest book - chapters, quest maps, tasks, rewards, loot crates, teams
   and an in-game editor with forms and pickers (nobody has to write SNBT), 470 icons, 56 quest-map pictures, imports
   FTB Quests books (1.20, 1.21, 26.1). Versions: Fabric 26.3, 26.2, 26.1.2, 1.21.11, 1.21.1, 1.20.1; NeoForge 26.3, 26.2, 26.1.2, 1.21.11, 1.21.1;

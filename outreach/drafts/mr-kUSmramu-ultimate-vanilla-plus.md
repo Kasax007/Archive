@@ -19,7 +19,7 @@
 
 > Hi Superduash! You invited suggestions on Discord, so here's one that keeps the vanilla feel: Tamagotchi (26.3 Fabric) hides ten rare pets in structures – a nice extra reward for exploring your ten Dungeons and Taverns overhauls. You tame the pets and look after them. Pet homes are structure tags, so you can choose which structures hold them.
 >
-> https://www.curseforge.com/minecraft/mc-mods/tamagotchi (Modrinth: {modrinth_url})
+> https://www.curseforge.com/minecraft/mc-mods/tamacraft (Modrinth: {modrinth_url})
 >
 > One message only. – Kasax
 

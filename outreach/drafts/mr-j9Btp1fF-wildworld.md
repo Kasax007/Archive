@@ -19,7 +19,7 @@
 
 > Hi ChongYu668! WildWorld has a great animal lineup – the whole Animal Garden series plus Alex's Mobs – and the moon events make the nights tense. A suggestion from a mod author: Tamagotchi (26.3 Fabric) hides ten rare pets in structures; you tame them and look after them, and they grow with you. It's made for modpacks: pet homes are structure tags and diets are item tags, so you can tune where pets appear and what they eat with a small datapack.
 >
-> https://www.curseforge.com/minecraft/mc-mods/tamagotchi (Modrinth: {modrinth_url})
+> https://www.curseforge.com/minecraft/mc-mods/tamacraft (Modrinth: {modrinth_url})
 >
 > Feel free to close this if it doesn't fit – I won't follow up more than once. – Kasax
 

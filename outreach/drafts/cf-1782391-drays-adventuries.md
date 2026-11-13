@@ -19,7 +19,7 @@
 
 > Hi Dray! You said mod suggestions reach you fastest on Discord, so here's one. Your pack already has Fishing Paradise and Moog's Ocean Structures, plus The Sift and The Rift as new worlds – Beach Craft would add a whole ocean dimension: build your own raft, sail between islands, dive, meet 8 NPCs and fight the Leviathan (26.3 Fabric, server-tested). And since Call Your Cat is in there: Tamagotchi hides ten rare pets in structures to tame and look after.
 >
-> https://www.curseforge.com/minecraft/mc-mods/beach-craft · https://www.curseforge.com/minecraft/mc-mods/tamagotchi
+> https://www.curseforge.com/minecraft/mc-mods/beach-craft · https://www.curseforge.com/minecraft/mc-mods/tamacraft
 >
 > I make both; one message only. – Kasax
 

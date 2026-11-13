@@ -30,7 +30,7 @@
 > If you'd like to try them, I'm happy to help: early access to updates, a test world with the best spots, or footage for your edit.
 >
 > https://www.curseforge.com/minecraft/mc-mods/beach-craft
-> https://www.curseforge.com/minecraft/mc-mods/tamagotchi
+> https://www.curseforge.com/minecraft/mc-mods/tamacraft
 >
 > Thank you for your lovely videos – I'd be so happy to hear what you think!
 >

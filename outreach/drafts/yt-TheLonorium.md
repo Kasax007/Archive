@@ -28,7 +28,7 @@
 >
 > If either fits a future month, I'd love to help: early access, a test world with the best spots, or footage.
 >
-> https://www.curseforge.com/minecraft/mc-mods/tamagotchi
+> https://www.curseforge.com/minecraft/mc-mods/tamacraft
 >
 > https://www.curseforge.com/minecraft/mc-mods/beach-craft
 >

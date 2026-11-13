@@ -29,7 +29,7 @@
 > I'd love to help: a test world with the best spots ready to film, early access to updates, footage or B-roll, or answers to any question.
 >
 > https://www.curseforge.com/minecraft/mc-mods/beach-craft
-> https://www.curseforge.com/minecraft/mc-mods/tamagotchi
+> https://www.curseforge.com/minecraft/mc-mods/tamacraft
 >
 > Keep up the great work – I'd be so happy to hear what you think!
 >

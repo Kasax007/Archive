@@ -31,7 +31,7 @@
 >
 > Ich helfe euch gern: mit einer Testwelt, einem Server für eure Gruppe oder einer eigenen Challenge, die ich nur für euch baue.
 >
-> https://www.curseforge.com/minecraft/mc-mods/tamagotchi
+> https://www.curseforge.com/minecraft/mc-mods/tamacraft
 > https://www.curseforge.com/minecraft/mc-mods/challenge
 >
 > Danke für eure Videos – ich würde mich riesig freuen, von dir zu hören!

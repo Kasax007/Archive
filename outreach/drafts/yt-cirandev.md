@@ -23,7 +23,7 @@
 >
 > If you're interested, I can send early access to the next update, B-roll from our trailer and documentary, and help setting up a server. No payment involved, no obligations.
 >
-> Tamagotchi: https://www.curseforge.com/minecraft/mc-mods/tamagotchi · Beach Craft: https://www.curseforge.com/minecraft/mc-mods/beach-craft · Quest Icons: https://www.curseforge.com/minecraft/mc-mods/quest-icons
+> Tamagotchi: https://www.curseforge.com/minecraft/mc-mods/tamacraft · Beach Craft: https://www.curseforge.com/minecraft/mc-mods/beach-craft · Quest Icons: https://www.curseforge.com/minecraft/mc-mods/quest-icons
 >
 > This is a one-off message. Reply "stop" and you won't hear from me again. Sender: Kasax, {postal_address}
 

@@ -22,7 +22,7 @@
 >
 > For the explore half: Beach Craft adds an ocean dimension with your own raft, islands, diving and a boss. Happy to help with configs.
 >
-> https://www.curseforge.com/minecraft/mc-mods/tamagotchi · https://www.curseforge.com/minecraft/mc-mods/beach-craft
+> https://www.curseforge.com/minecraft/mc-mods/tamacraft · https://www.curseforge.com/minecraft/mc-mods/beach-craft
 >
 > One message only. – Kasax
 

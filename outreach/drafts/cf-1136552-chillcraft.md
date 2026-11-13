@@ -19,7 +19,7 @@
 
 > Hi Gabriele! ChillCraft does relaxed really well – Waystones, Towns and Towers, Farming and Cooking for Blockheads, even Shogi. If you ever want a gentle goal for players: Tamagotchi (26.3 Fabric) hides ten rare pets in structures; you tame them, feed them and look after them – nothing hard or grindy. It's made for modpacks (diets and pet homes are tags, so it plays nicely with other mods).
 >
-> https://www.curseforge.com/minecraft/mc-mods/tamagotchi
+> https://www.curseforge.com/minecraft/mc-mods/tamacraft
 >
 > One message only. – Kasax
 

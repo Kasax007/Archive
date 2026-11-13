@@ -28,7 +28,7 @@
 >
 > If you'd like to try it, I'm happy to help: early access to updates, a test world, or answers to any question about the pets.
 >
-> https://www.curseforge.com/minecraft/mc-mods/tamagotchi
+> https://www.curseforge.com/minecraft/mc-mods/tamacraft
 >
 > Thank you for your silly little Minecraft videos – I'd be so happy to hear what you think!
 >

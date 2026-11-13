@@ -18,7 +18,7 @@
 
 > Hi Metzerhigh! You asked for mod suggestions in the comments: for a cozy pack with the Kaleidoscope cooking set (Cookery, Grilling, Tavern), Tamagotchi might fit – ten rare pets hide in structures, and you tame them, feed them and look after them (26.3 Fabric). Their diets are item tags, so your cooked dishes can be added with a small datapack.
 >
-> https://www.curseforge.com/minecraft/mc-mods/tamagotchi
+> https://www.curseforge.com/minecraft/mc-mods/tamacraft
 >
 > – Kasax (I made it; one comment only)
 

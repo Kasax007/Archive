@@ -30,7 +30,7 @@
 >
 > https://www.curseforge.com/minecraft/mc-mods/beach-craft
 >
-> https://www.curseforge.com/minecraft/mc-mods/tamagotchi
+> https://www.curseforge.com/minecraft/mc-mods/tamacraft
 >
 > Keep the lists coming – I'd be so happy to hear what you think!
 >

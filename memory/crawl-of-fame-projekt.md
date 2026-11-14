@@ -295,3 +295,15 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   `amark <name>`. Auswertung: `$SP/voice/q312/bin/python tools/crawltest/listen.py <ordner>` (Wörter per
   faster-whisper, Pegel: Ruhe beim Erkunden, Musik im Kampf, Musik unter einer Ansage, Übersteuerung) und
   `game.mp3` als Hörprobe für den Nutzer. Skript: `tools/crawltest/scripts/listen.txt`.
+- **14.11. 02:20 UTC, Ton-Mischung nach den ersten Mitschnitten (Leitung):** Gemessen mit `listen.py`: Kampfmusik war
+  so laut wie die Stimme → `MusicDirector.LEVEL` 0,5 (vorher 0,8), unter Sprache −11 dB (vorher −8). Jingles/Fanfaren
+  (`show.*`, −17,7 dB RMS, 0,7–3,5 s laut) starteten im selben Bild wie die Ansage → `VoiceQueue.hold` +
+  `ClientShow.leadMs(cue)` (Stimme setzt nach dem lauten Teil ein, höchstens 1,5 s) und `audio.CueSound` (Jingle −9 dB
+  unter Sprache). Boss-Karte spielt über `ClientShow.play` und spricht die Vorstellung selbst (Chat-Zeilen erreichen
+  Clients mit ausgeblendetem Chat nicht; im Test-Skript deshalb `chat on`). Ansagen hängen an ihren Einblendungen:
+  ein Mitschnitt braucht gezeichnete Bilder (`pace` zeichnet alle 250 ms eins). `process.py`: Lautheit bleibt bei
+  Vorbis-Überschwingern erhalten (nur Spitzen werden gedrückt). Übergangsregel: Solange nur ein Teil der Varianten
+  eines Anlasses aufgenommen ist, nimmt der Ansager die aufgenommenen (`Emcee.voiced`, gesetzt vom Modul voice aus
+  dem Index im Jar). Erster Boss-Sieg entschärft: ein Kisten-Jingle pro Tick (`audio.CrateJingles`), eine Chat-Zeile
+  für alle Achievements eines Ticks, eine Level-Zeile. Frachtschalter in Prop Storage ohne Tresor (Tiefe 1) liefern
+  jetzt eine Kiste. Offene Frage an den Nutzer: Tempo/Lautstärke des Ansagers und Musik-Pegel (Hörprobe-Seite).

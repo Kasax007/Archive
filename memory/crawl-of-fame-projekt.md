@@ -542,3 +542,30 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   45 %). Für Jar 6 noch: eigener Kampf (`$SP/lead_fight6.txt`), volle Tests, prod.sh, `lead_journey3.txt` (angepasst:
   Neuling erreicht die Markierung jetzt durchs Geradeauslaufen), `orientation.txt` (lief 15/15).
 - Aufräumen: alte Prüf-Kopien unter /tmp gelöscht (frei ~8–10 GB halten; `df -h /` bei jedem Check-in).
+- **14.11. 16:45 UTC:** Mod `470dd1a`. MODELS2 abgenommen (16 Funde behoben, 413 Tests; Entscheidungen in
+  `docs/reports/MODELS2.md`). Spur A: GOLDENPATH baut (wf_e1fdd138-f0d); Spur B: PRE-Prüfung LEADUI, dann CREATURES1A
+  (wf_a430d11f-5d9). Jar-6-Prüfkette läuft im Hintergrund auf dem Hauptverzeichnis (`$SP/jar6_*.out`, letzte Datei endet
+  mit „ALL DONE“); sie teilt die Build-Sperre mit beiden Spuren und wartet deshalb lange (ein GOLDENPATH-Lauf dauert bis
+  26 min). **Während die Kette läuft, keinen Code ins Hauptverzeichnis ziehen** (nur Doku-Commits, ohne `git pull`).
+- **Alle späteren Aufträge neu geschrieben** (Orte und Tiefen, Kit-Regeln, Clips, Sprechskript, Überlebens-Skripte,
+  Streifen, Etappe im Dauertest, prod.sh) und geteilt, damit jeder Teil eigene Prüfrunden bekommt: ROOMS2A (Rahmen der
+  Bonusrunde + 5 Spiele), ROOMS2B (5 weitere + Double or Nothing + Publikums-Aufgaben), CANTEEN (Küche, Koch, Teller,
+  Sitzen: die Küchen-Hälfte des TV-Wunsches, früh auf Spur A), BROADCAST1 (Momente, Sendung, 6 Segmente, Bildwand),
+  BROADCAST2 (6 weitere Segmente, Vollbild, „Feet up“), BUILDS2A (Rewrites: Draft aus 3 Karten, 60 Stück, Build-Reiter),
+  BUILDS2B (24 regelbrechende Uniques, 6er-Sets, Script Doctor), WORKSHOP (aktualisiert). Linsen: `lenses_ROOMS2`,
+  `lenses_CANTEEN`, `lenses_BROADCAST`, `lenses_BUILDS2`, `lenses_WORKSHOP`. `PLACE.txt` trägt jetzt die Lehren aus dem
+  Manor (Arenen brauchen die Teile der Regel, Bosse bleiben in ihrer Arena, Zustand über Neuladen, eigene Silhouetten,
+  gemalte Texturen, Namen suchen, Flure beleuchten). Alte Fassungen: `*_whole_until_1411.txt`.
+- **Reihenfolge:** A: GOLDENPATH → ROOMS1 → ROOMS1B → Ort 2 → ROOMS2A → Ort 3 → CANTEEN → ROOMS2B → Ort 4 → WORKSHOP →
+  weitere Orte. B: CREATURES1A → BUILDS1 → CREATURES1B → UI2A → CREATURES2 → BUILDS1B → CREATURES3 → BUILDS1C →
+  BUILDS2A → BROADCAST1 → BUILDS2B → BROADCAST2 → UI2B. Start eines Orts:
+  `gen2.py <out.js> <name> a W2-<kurz> PLACE.txt "<Titel>" lenses_PLACE.txt NAME="<Name aus docs/WORLDS.md>"`.
+- **Namensprüfung der Leitung (14.11.):** alle ~1.100 erfundenen Namen gelesen, alle 9.774 Texte und Sprechzeilen nach
+  Sprüchen echter Sendungen, Filme und Spiele durchsucht. Ein Fund: Bestätigungstitel am Casting-Tisch („Final answer?“)
+  → „Sign on the dotted line?“. `docs/NAMES_NOT_ALLOWED.txt` enthält jetzt auch solche Sprüche. Zwei geplante
+  Bonusrunden geändert, weil sie echten Formaten glichen (Nagelbrett → „Fly Lines“: Seile beobachten; Statuen mit
+  Puppe → „On Camera“: Deckung vor einer schwenkenden Kamera). Regel in den Aufträgen: keine Formate, Kulissen,
+  Sprüche oder Moderator-Manieren echter Shows.
+- **Rotes Bild in der Außenansicht** (Manor, Dienstbotenhalle): war kein Vorhang-Fehler, sondern die normale Kamera
+  des Spiels mit dem Rücken am geschlossenen Boss-Tor (zeigt das rote Hemd der Spielfigur aus einer Handbreit).
+  Polierliste entsprechend korrigiert; Idee für später: Spielfigur ausblenden, wenn die Kamera so nah ist.

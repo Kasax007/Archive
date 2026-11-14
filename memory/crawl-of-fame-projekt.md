@@ -519,3 +519,26 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
 - Jar 6 (Aufgabe #100): wenn LEADFIX-Korrekturen und MODELS2-Korrekturen auf origin sind: volle Tests, prod.sh,
   `$SP/lead_journey3.txt` + `tools/crawltest/scripts/orientation.txt` (erste Minuten im Überlebensmodus), Hör-Test,
   ein Kampf mit den neuen Schlägen; Jar erst ins Archiv kopieren, dann Jar 5 entfernen.
+- **14.11. 15:50 UTC:** Mod `bf09941`. **Alle 972 Zeilen vertont und veröffentlicht** (30 Sprecher, 102,7 min; Werbesprecher
+  im 4. Anlauf mit 114 Hz); Stimmproben-Seite Version 9 (alle Stimmen). Aufseher pausiert (`$SP/voice/work/PAUSE`), die
+  Kette der Leitung (`lead_chain.log`: --refs, Rest aufnehmen, `--recheck`) läuft noch mit der Gegenprüfung; danach
+  PAUSE entfernen, falls wieder Zeilen dazukommen (neue Aufträge schreiben Zeilen ins Sprechskript).
+- LEADFIX auf Spur A abgeschlossen (9 Funde, alle behoben, 412 Tests; `docs/reports/LEADFIX.md` mit Entscheidungen der
+  Leitung): Ohrhörer und Lautsprecher wechseln sich ab, ohne Zeilen zu verlieren; Ohrhörer tritt unter einer Person
+  zurück; Probenflügel gilt nur auf Tiefe 1 vor dem Vorhang als eigenes Gelände. Hör-Test 2 der Leitung
+  (`$SP/listen/run7`): 5 von 5 Dialogzeilen 94–100 %, Interview-Intro wird gesprochen (Auswertung von `listen.py` schnitt
+  es falsch zu: stückweise mit faster-whisper nachhören hilft). Noch gehört, geht als zweite Linse („two voices again“)
+  in die Prüfung LEADUI vor CREATURES1A auf Spur B: normale Lautsprecher-Zeile startet unter sprechender Person und geht
+  unter; Stimme eines Hinweis-Kärtchens startet unter dringender Lautsprecher-Zeile. Entscheidung der Leitung:
+  Abwechseln gilt vollständig; nur dringende Lautsprecher-Zeile und vom Spieler geöffnete Dialogseite dürfen über eine
+  sprechende Zeile.
+- Nächster Workflow Spur B liegt fertig erzeugt bereit: `crawl-creatures1a-b10.js` (PRE=LEADUI mit zwei Linsen: Kärtchen/
+  Ton und Stimmen; dann CREATURES1A: Animationssystem + sieben Referenzfiguren der Understage inkl. Gaffer). Start, sobald
+  der Hintergrund-Agent `ab608192c0c4f9802` (MODELS2-Korrekturen) per SubagentHandback fertig meldet. Weitere neu
+  geschnittene Aufträge: CREATURES1B, UI2A (HUD im Spiel) / UI2B (übrige Menüs).
+- Blick der Leitung auf die fertigen Animations-Streifen (`/tmp/ct-motion2`, eigene Bögen in
+  `/home/user/shots/lead-models2/strips`): Dolch und Hammer klar verschieden, Stich und Stoß zeigen in der Außenansicht
+  aufs Ziel, Lichtblitz sitzt am Schildrand, Lichtspur folgt der Klinge, Ruheposen ganz im Bild (rechts von 62 %, unter
+  45 %). Für Jar 6 noch: eigener Kampf (`$SP/lead_fight6.txt`), volle Tests, prod.sh, `lead_journey3.txt` (angepasst:
+  Neuling erreicht die Markierung jetzt durchs Geradeauslaufen), `orientation.txt` (lief 15/15).
+- Aufräumen: alte Prüf-Kopien unter /tmp gelöscht (frei ~8–10 GB halten; `df -h /` bei jedem Check-in).

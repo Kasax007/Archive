@@ -56,7 +56,7 @@ A floor's number only says how deep you are and how strong everything is. **What
 
 **Other worlds** (the Network does not only own a studio)
 
-- 🕯️ **Hollowmere Manor** — a dark house of walnut and damask. **Candlelight:** candles burn down while you fight, and what waits in the dark is patient. Light them, carry tapers, and do not cut the wrong chandelier.
+- 🕯️ **Hollowmere Manor** — a dark house of walnut and damask. **Candlelight:** candles burn down while you fight, and what waits in the dark is patient. Light them again with tapers, and think twice before you cut a chandelier down: it hits hard, and it was a light.
 - *More worlds are on the way.*
 
 ![Your crawler]({{IMG}}/crawler.png)

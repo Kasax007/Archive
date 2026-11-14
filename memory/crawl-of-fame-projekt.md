@@ -569,3 +569,22 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
 - **Rotes Bild in der Außenansicht** (Manor, Dienstbotenhalle): war kein Vorhang-Fehler, sondern die normale Kamera
   des Spiels mit dem Rücken am geschlossenen Boss-Tor (zeigt das rote Hemd der Spielfigur aus einer Handbreit).
   Polierliste entsprechend korrigiert; Idee für später: Spielfigur ausblenden, wenn die Kamera so nah ist.
+- **14.11. 17:45 UTC: Jar 6 geliefert** (`crawl-of-fame/builds/crawloffame-0.1.0-mc26.3-zwischenstand-6.jar`, 64,5 MB,
+  Mod-Stand `e9debbc`; Jar 5 entfernt). Prüfungen: 413 Spieltests, `prod.sh both` sauber, Neuling-Durchlauf 3/3
+  (`/home/user/shots/lead-jar6c`), Probenflügel 15/15 (`lead-jar6d`), Kampf (`lead-fight6`). Bekannt und gesagt: Funde
+  der LEADUI-Prüfung (siehe unten), schlichte Texturen der Manor-Figuren.
+- **Gegenprüfung aller Aufnahmen:** Die Kette der Leitung wurde vom Zeitlimit (2 h) beendet, als die erste Stufe fertig
+  war. Erste Stufe ausgewertet mit `$SP/lead/recheck_apply.py`: 970 von 972 wortgetreu; neu aufgenommen und
+  veröffentlicht: `emcee/arrive.high_roller_hall.1`, `pip/npc.dlg.pip.yes`. Zweite Stufe (durch die Presets, „für ein
+  Ohr“) läuft als `$SP/lead/recheck_final.py` in Teilen, die man fortsetzen kann (Ergebnis in
+  `$SP/voice/work/recheck_final.part.json`, Liste am Ende in `log.txt`). PAUSE ist entfernt: der Aufseher nimmt neue
+  Zeilen wieder selbst auf. **Lange Jobs nie als eine Hintergrund-Kette über 2 h bauen:** in Teile schneiden, die ihr
+  Ergebnis sichern.
+- **LEADUI-Prüfung 1 (Kärtchen und Ton) fand sechs Mängel an den höheren Kärtchen der Leitung:** bei 480x270 passt
+  kein Erfolgs-Kärtchen neben die Zeile des Gaffers (wartet, solange er spricht, und hält alle dahinter auf); bei
+  427x240 deckt ein hohes Kärtchen unter einem hohen Banner die Hungerleiste; neun Erfolge brauchen über eine Minute;
+  ein toter Crawler bekommt eine Kiste angezeigt, die er nicht erhält; die Lohn-Zeile nennt andere Beträge als gezahlt
+  werden; der Gaffer wartet bis 6,4 s auf ein Kärtchen (Regel: höchstens 4 s). Prüfung 2 (Stimmen) lieferte F7–F11.
+  Korrekturen laufen auf Spur B (Aufgaben #102–#106 in der Aufgabenliste stammen vom Korrektur-Agenten).
+- Fertig erzeugte nächste Workflows: `crawl-rooms1-a10.js` (Spur A nach GOLDENPATH), `crawl-builds1-b11.js` (Spur B
+  nach CREATURES1A).

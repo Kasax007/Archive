@@ -319,3 +319,12 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   über IDs und englische Namen ist in Ordnung; Stash rastet zeilenweise; Ausrüsten-Taste `I`; Zweihänder sperren
   künftig die Nebenhand (steht als Punkt 4b im Auftrag BUILDS1). Regel der Leitung für eigene größere Änderungen:
   von einer Spur unabhängig prüfen lassen (PRE-Stufe in `gen2.py`), damit es bei zwei Agenten bleibt.
+- **14.11. 03:30 UTC, HUD (Leitung, gepusht als 8eb1658):** Bei 1080p mit Standard-GUI-Skalierung („Auto“ = 480×270
+  GUI-Pixel; im Test 1280×720 GUI 3 oder 854×480 GUI 2) lag die Boss-Leiste quer über der Bildmitte. Jetzt stehen
+  Boss-Name und Lebensbalken auf schmalen Bildschirmen in der oberen Leiste statt des Ebenen-Namens
+  (`CrawlerHud.centreHead`, `BossHud.StripPart`); Monster-Namensschilder schrumpfen unter sechs Blöcken Abstand
+  (`MonsterRenderer.submitNameDisplay`; gemessen: auf 1,4 Blöcke nur noch 1,6-mal so breit wie auf 6 statt 4,3-mal).
+  Regeln dazu in `docs/UI.md` („The HUD in a fight“). Offen für UI2 (Auftrag ergänzt, Punkt 7): kompaktes HUD von
+  selbst bei kleiner GUI-Fläche (die linke Spalte nimmt bei 480×270 rund 45 % der Höhe). Prüf-Skripte der Leitung:
+  `$SP/lead_hud3.txt`, `$SP/lead_plate.txt` (mit `tick freeze`; `summon` mit NBT ruft kein `finalizeSpawn` auf, dann
+  fehlt das Namensschild). Lehre: bei jedem HUD-Teil auch 427×240 GUI-Pixel ansehen.

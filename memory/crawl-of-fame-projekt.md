@@ -462,3 +462,22 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   per Hand zu prüfen). Zwei Prüfungen und Korrekturen laufen im selben Workflow `wf_10323761-684`. Danach GOLDENPATH.
 - BUILDS1-Auftrag ergänzt (Clip-System aus MODELS2, HUD-Ebenen). Reihenfolge: Spur A Manor → [LEADFIX] GOLDENPATH →
   ROOMS1 → ROOMS2 → WORKSHOP; Spur B MODELS2 → BUILDS1 → BUILDS2 → BROADCAST → UI2 → CREATURES.
+- **14.11. 13:25 UTC:** Aufnahmen 808 von 972 veröffentlicht (Mod `ca5e718`); 29 von 30 Figuren haben ihre Stimme
+  (quill, vesper, agnes, bellamy neu); Werbesprecher (`announcer_ads`) kam dreimal zu hoch heraus → Beschreibung in
+  `cast.json` umgestellt („A man in his forties with a deep, smooth, low baritone voice …“, wie beim Ansager zuerst
+  Geschlecht und Tiefe). Stimmproben-Seite Version 8 (gleiche Adresse).
+- Prüfungen Manor (14 Funde, 2 spielbrechend: drei von vier Boss-Arenen ohne Kerzen-Nachschub → Boss unverwundbar;
+  große Rahmen des Kurators nicht benutzbar; dazu: Hallen waren das Studio-Skelett in neuen Materialien) und MODELS2
+  (15 Funde: dritte Person kann den Gegenstand nicht in der Hand drehen, Hammer-Vollschlag wirkt wie ein Tippen,
+  Kamera-Nicken passiert nie, Bögen/Glanz/Blitz schweben neben der Waffe, andere Spieler sehen bei jeder Block-Benutzung
+  einen Schlag). Korrekturen laufen in beiden Workflows. Eigener Fund der Leitung **L1** (per `SendMessage` an den
+  laufenden Korrektur-Agenten `ab608192c0c4f9802` geschickt, kam an): in Ego-Sicht stehen die einhändigen 3D-Waffen in
+  Ruhe senkrecht am rechten Bildrand und werden abgeschnitten (Vanilla-Transform für flache Sprites auf aufrechten
+  Modellen, `tools/content/item/models.py`); Bogen der Leitung: `/home/user/shots/lead-models2/rest_fp.png`.
+- ROOMS1 geteilt und auf Orte/Tiefen umgeschrieben: **ROOMS1** (durchsuchen, Requisiten mit Beute in jedem Ort, Raum
+  als Waffe, Kartenmarken, Beat im Probenflügel) und **ROOMS1B** (Leute in Not, Gadgets, Kopfgelder); Linsen
+  `lenses_ROOMS1.txt` (exploits, clarity), `lenses_ROOMS1B.txt` (exploits, stories).
+- Reihenfolge jetzt (auch in `docs/PLAN.md`): Spur A Manor-Korrekturen → [LEADFIX] GOLDENPATH → ROOMS1 → ROOMS1B → 2.
+  neuer Ort → ROOMS2 → 3. neuer Ort → WORKSHOP; Spur B MODELS2-Korrekturen → BUILDS1 → BUILDS2 → BROADCAST → UI2 →
+  CREATURES 1–3. Workflow-Agenten sind per `SendMessage` mit ihrer agentId erreichbar (Nachricht kommt als „The
+  coordinator sent a message while you were working“ an).

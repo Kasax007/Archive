@@ -359,3 +359,9 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   Ton-Änderungen der Leitung mit zwei Linsen und Korrekturen, dann Hollowmere Manor mit Prüfungen). Spur B weiter
   `wf_4c66326c-72b` (MODELS-Bau). Mod-Repo-Stand eb912ad. Jar 4 in Arbeit (Blick der Leitung auf den Wing bei
   854×480, Produktions-Check, `./gradlew assemble`). Aufnahme: 218 von 941.
+- **14.11. 05:35 UTC: Zwischenstand-Jar 4 geliefert** (`crawl-of-fame/builds/crawloffame-0.1.0-mc26.3-zwischenstand-4.jar`,
+  32,6 MB, Mod-Stand eb912ad; Jar 3 entfernt): Gegenstände verständlich (Power, Itemkarte, Stash mit Filtern), Tutorial
+  im Dungeon, korrigierte Ton-Mischung, HUD bei kleiner GUI-Fläche, 218 vertonte Zeilen, Korrekturen aus vier
+  Prüfrunden; 357 Spieltests, Produktions-Check sauber, Wing bei 854×480 von der Leitung angesehen. Bekannt und dem
+  Nutzer gesagt: noch keine 3D-Modelle, keine neuen Welten, Nebenfiguren meist nur Text. Jar 5 nach MODELS und
+  Hollowmere Manor.

@@ -337,3 +337,10 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   vorhandene Referenzen (nach jedem neuen Referenz-Durchgang laufen lassen). Vor Aufnahmen anderer Sprecher immer
   erst prüfen. Der laufende Durchgang wurde mit `STOP` beendet; der Aufseher startet nach zehn Minuten neu und
   entwirft die fünf fehlenden Referenzen mit der Prüfung. Die Ansager-Referenz (vom Nutzer gewählt) liegt bei 75 Hz.
+- Hörproben-Seite (Version 5, 03:55 UTC): neuer Abschnitt „Die Stimmen der Figuren“ mit der Referenz jeder Figur
+  (Veto-Möglichkeit für den Nutzer, bevor Zeilen aufgenommen sind). Neu bauen: `python3 $SP/voice/page/make_refs_json.py
+  <repo>`, dann `python3 $SP/voice/page/build.py $SP/listen/run4`, dann dieselbe Datei veröffentlichen. Nach dem
+  Neuentwurf der fünf verworfenen Referenzen (Fennick, Odile, Rosalind, Vesna, Pip) und sobald Host, Werbesprecher,
+  Quill und Vesper Referenzen haben: Seite neu bauen und veröffentlichen. Nennt der Nutzer einen Namen: `ref/<id>.wav`
+  und `.desc` löschen, `.tries` erhöhen, ggf. Beschreibung in `cast.json` anpassen, Zeilen des Sprechers aus
+  `state.json` nehmen (bei gestopptem Aufseher).

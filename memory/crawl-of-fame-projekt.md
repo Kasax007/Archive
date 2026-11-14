@@ -588,3 +588,20 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   Korrekturen laufen auf Spur B (Aufgaben #102–#106 in der Aufgabenliste stammen vom Korrektur-Agenten).
 - Fertig erzeugte nächste Workflows: `crawl-rooms1-a10.js` (Spur A nach GOLDENPATH), `crawl-builds1-b11.js` (Spur B
   nach CREATURES1A).
+- **14.11. 18:30 UTC:** Mod `3be5aeb`. Nach Jar 6 von der Leitung erledigt (kommt in Jar 7):
+  - **Hörprobe durch die Presets fertig:** 955 von 972 sofort ganz gehört; die übrigen 17 (alle Emcee über
+    Lautsprecher) stückweise mit zwei Erkennern ganz gehört (`$SP/lead/hear_pieces.py`): der Erkenner bricht im Hall
+    ab, die Wörter sind da. Zwei erste Wörter klingen über die Lautsprecher weich („Boss down!“, „Patch note:“):
+    für das Ohr des Nutzers.
+  - **Käfig-Gitter und Fangnetz** lasen sich als graues Rauschen (Rauten von 4 Pixeln, jede zweite Zeile ein
+    Schachbrett aus Einzelpixeln; dazu zeichnete jede Gitter-Zelle ihre Flächen gegen die Nachbarn). Jetzt Rauten
+    von 8 Pixeln, `HalfTransparentBlock` für `cage_mesh`. Systematisch geprüft: keine weitere Textur hat das Muster.
+    **Falle:** `tools/content/world/blocks.py` zeichnet auch `cracked_wall/dead_air*.png`; die waren veraltet (dunkler
+    als ihre Wand) und sind jetzt neu erzeugt. Nach jedem Lauf eines Art-Skripts `git status` lesen.
+  - **Außenansicht:** Bestätigt per Bild (`/home/user/shots/lead-gate3p/g05`): hat die Kamera hinter der Spielfigur
+    keinen Platz, füllt die eigene Haut das Bild. Steht als Punkt 4b im Auftrag UI2B (eigenen Körper nicht zeichnen,
+    wenn die Kamera näher als etwa 0,75 Blöcke ist).
+  - README des Mods und Entwurf der CurseForge-Seite samt Changelog auf heutigem Stand (11 Orte, über 140 Monster,
+    45 Uniques, 239 Erfolge, 972 Aufnahmen; neue Platzhalter `{{PLACES}}`, `{{LINES}}`, `{{VOICES}}`).
+  - Ein eigener Testlauf der Leitung baute ins Leere („That position is not loaded“): in Skripten erst
+    `cmd forceload add …` und warten, dann `fill`.

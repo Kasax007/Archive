@@ -422,7 +422,8 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   Dateien in Prüfung stehen in keiner der beiden Listen; dafür die Freigabe-Adresse der einzelnen Datei (307/404).
   Zusatzdateien eines Packs: `…/api/v1/mods/<Projekt>/files/<Pack-Datei>/additional-files`.
 - **Server-Pack-Markierung:** Über die Upload-API kommt das Server-Pack als Zusatzdatei an, aber `hasServerPack` bleibt
-  `false` (V1.6.1 und v4.3 am 14.11.; bei V1.6 und v4.2 steht `true`, dort hat der Nutzer es von Hand markiert).
+  `false` (V1.6.1 und v4.3 am 14.11.; bei V1.6 und v4.2 steht `true` – meine Annahme: der Nutzer hat es dort von Hand markiert; ob CurseForge es später
+  selbst setzt, ist ungeprüft).
   Nach jedem Pack-Upload dem Nutzer sagen, dass er das Server-Pack markieren muss.
 - **Nicht angefasst:** Modrinth (alle sechs), die NeoForge-26.3-Dateien (Beach Craft 3.4.2, Tamacraft 1.3.0,
   Quest Icons 1.3.0), andere Minecraft-Versionen, die drei alten Packs des Kontos. Dem Nutzer als nächster Schritt

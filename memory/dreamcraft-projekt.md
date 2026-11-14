@@ -391,8 +391,45 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   das Pack nutzt diese Fassung. Sie ist noch nirgends hochgeladen (Entscheidung des Nutzers offen).
 - **Offen, dem Nutzer gemeldet:** Modrinth-Icon des Challenge-Craft-Modpacks hat nur 64 px. Im Dreamcraft-Pack für 26.3
   steht in `config/fancymenu/options.txt` der Fenstertitel `Challenge Craft 26.2` (seit V1, nicht im Spiel geprüft);
-  beim nächsten Pack korrigieren.
+  beim nächsten Pack korrigieren (erledigt am 14.11. in V1.6.1).
 - **Tamacraft auf CurseForge:** Adresse ist jetzt `/minecraft/mc-mods/tamacraft` (bis zur Umbenennung `/tamagotchi`).
   Ob die alte Adresse weiterleitet, ließ sich nicht prüfen: `www.curseforge.com` hat einen Bot-Schutz (HTTP 403), den
   ich nicht umgehe (auch nicht mit Browser-Kennung). 10 gesendete Outreach-Nachrichten (8.11. und 11.11.) enthalten
   die alte Adresse; Brief, Configs und alle ungesendeten Entwürfe (Seite und `outreach/drafts`) stehen auf der neuen.
+
+## Stand 14.11.2026 – Wochenend-Update: alle sechs Projekte für 26.3 auf CurseForge
+
+- **Auftrag:** jedes Projekt einmal für 26.3 aktualisieren, „um den Download Algorithmus zu pushen“; erst Mods, dann
+  Modpacks; Changelog: Neues nennen, sonst „Bug fixes“; Packs „Mod update“; Freigabe zum Hochladen erteilt. Wortlaut
+  und Challenge-Craft-Teil: `memory/challenge-craft-projekt.md`, Stand 14.11.
+- **Ergebnis (alles Fabric 26.3, nur CurseForge):**
+
+  | Projekt | Version | Datei | Branch | Echte Korrektur |
+  | --- | --- | --- | --- | --- |
+  | Beach Craft | 3.4.3+26.3 | 9608842 | `release/3.4.3` = 5cd91f5, `26.3` nachgezogen | Meldungen der Riesenmuschel (2 fehlende Sprachschlüssel), Website-Knopf (`/mc-mods/beach-craft` statt `/raft`) |
+  | Tamacraft | 1.3.1 | 9608843 | `release/1.3.1` = ec3bf3a, `26.3` nachgezogen | Links in `fabric.mod.json` (Repo-Name, Website-Knopf) |
+  | Quest Icons | 1.3.1+26.3 | 9608844 | `release/1.3.1` = 1d9e683, `26.3` nachgezogen | 25 Tag-Namen für JEI/REI/EMI |
+  | Challenge Craft | 1.1.5 | 9608867 | `release/1.1.5` = 58686bc | Roulette-Nachricht, deutscher Text; erste CurseForge-Datei mit den 1.1.4-Fixes |
+  | Dreamcraft | V1.6.1 | 9609213, Server-Pack 9609216 | Modpack-Repo `26.3` = 03e25f3 | die drei Mods, Fenstertitel `Dreamcraft 26.3` |
+  | Challenge Craft Modpack | v4.3 | 9609296, Server-Pack 9609297 | – (aus den v4.2-Zips) | Challenge Craft 1.1.5, Fenstertitel `Challenge Craft 26.3` |
+
+  Mods hochgeladen 11:28–11:31 UTC, alle vier nach spätestens 11 Minuten freigegeben; Dreamcraft 12:01, Challenge-Craft-Pack
+  12:08 UTC. Die von CurseForge ausgelieferten Jars sind bytegleich mit den gebauten.
+- **Nicht angefasst:** Modrinth (alle sechs), die NeoForge-26.3-Dateien (Beach Craft 3.4.2, Tamacraft 1.3.0,
+  Quest Icons 1.3.0), andere Minecraft-Versionen, die drei alten Packs des Kontos. Dem Nutzer als nächster Schritt
+  angeboten.
+- **So fand ich die kleinen echten Fehler (für das nächste Mal):** statische Prüfungen statt langer Suche –
+  Übersetzungsschlüssel im Code gegen die Sprachdateien, Tag-Namen (`tag.item.<ns>.<pfad>`), Item-Namen, JSON,
+  doppelte Schlüssel, Platzhalter en/de, Links in `fabric.mod.json`, Fenstertitel der Packs.
+- **Ablauf, der sich bewährt hat:** je Mod ein Release-Branch vom letzten Release, Jar gegen die Vorversion vergleichen
+  (`$SP/we/jardiff.py`), Start auf einem echten Fabric-Server (`$SP/we/smoke.py`), hochladen (`$SP/cf_upload.py`),
+  Freigabe abwarten, ausgelieferte Datei per sha1 vergleichen, erst dann die Packs.
+- **Produktiv-Test der Packs:** Die Werkzeuge aus `tools/prodtest` in eine Kopie im Scratchpad legen (`$SP/we/prod`),
+  weil `launch.py` neben sich `libraries/`, `assets/` und `natives/` anlegt (im Repo wären das unversionierte Dateien).
+  `fabric_profile.json` kommt von `meta.fabricmc.net/v2/versions/loader/26.3/<loader>/profile/json` (Dreamcraft 0.20.1,
+  Challenge-Craft-Pack 0.19.5). Die Installation aller 253 Dateien dauerte rund zwei Minuten.
+- **`tools/qcheck.py`:** `$SP/regdump.json` ist vom 4.11. und kennt die eigenen Mods und Upgraded Iron Chests nur alt.
+  Für die eigenen Mods `--offline` nehmen (liest die Jars aus `$SP/ownjars`), für fremde Mods den Dump; am 14.11.
+  blieben so keine echten Treffer. Bei Gelegenheit einen neuen Dump schreiben.
+- **Platz:** nur noch rund 2 GB frei. Nach jedem Pack-Test Instanz und entpackten Server löschen (mit vollem,
+  wörtlichem Pfad – `rm` mit Variablen oder nach `cd` wird vom Sicherheits-Check abgelehnt).

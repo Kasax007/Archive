@@ -488,3 +488,15 @@ dem Server liegen. Die Beschreibung nennt jetzt alle Versionen und Loader (Kopfb
 - **Hochgeladen:** CurseForge 9567879 (26.3), 9568900 (26.2), 9568902 (26.1.2), 9568903 (1.21.11); Modrinth i89SZwEU,
   ZFJSFvH3, 1wkkdN5a, E6u2yclB. Damit zwölf Versionen 1.3.0 auf beiden Seiten.
 - **Beschreibung:** Versionszeile und Voraussetzungen nennen NeoForge für 26.3, 26.2, 26.1.2, 1.21.11 und 1.21.1.
+
+## 16. Quest Icons 1.3.1 (14.11.2026, nur Fabric 26.3)
+
+Kleines Update zum Wochenende (Auftrag: jedes Projekt einmal für 26.3 aktualisieren).
+
+- **Behoben:** Die 25 Item-Tags des Mods haben jetzt Namen. JEI, REI und EMI zeigen „Quest Icons: Arrows“ statt
+  `#questsicons:icons/arrows` (Schlüssel `tag.item.questsicons.icons`, `…icons.<kategorie>`,
+  `…dream_star_hearts`). Der Generator `tools/icons/generate.py` schreibt die Namen mit.
+- **Geprüft:** Jar-Vergleich mit 1.3.0 (nur Sprachdatei und `fabric.mod.json`), Start auf einem echten Fabric-Server.
+- **Hochgeladen:** CurseForge 9608844 „Quest Icons 1.3.1 (Minecraft 26.3)“, freigegeben. Branch `release/1.3.1`
+  = `1d9e683`, `26.3` nachgezogen.
+- **Nicht dabei:** Modrinth, NeoForge und die anderen Minecraft-Versionen stehen weiter auf 1.3.0.

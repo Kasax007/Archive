@@ -198,8 +198,9 @@ neueste Anweisung des Nutzers.
 - **1.1.4 veröffentlicht** (Freigabe „Ja 1.1.4 V1“): Bugcheck-Fixes (Infinite Chest Klicks/Speichern/Reichweite,
   Crafter baut keine gesperrten Items, Würfel, Roulette/Kasse, Zähler) per Cherry-Pick auf `release/1.1.4`, ohne den
   Pack-v5-Doku-Commit. Tests `challengecraft-gametest:challenge_fix_tests_*` 5/5. Push auf `26.3-lockout-bot`
-  (37246fe) → Action: GitHub-Release v1.1.4, CurseForge-Upload; Modrinth fehlt der Action (kein Secret) → von Hand
-  hochgeladen (Version ZyJkDRf0, byte-gleich). Filter für Game-Tests braucht den Namensraum, z. B.
+  (37246fe) → Action: nur GitHub-Release v1.1.4. **Korrektur 14.11.: Auf CurseForge kam 1.1.4 nie an** – dem Repo
+  fehlen beide Secrets (`CURSEFORGE_TOKEN`, `MODRINTH_TOKEN`), die Action ruft dann nur `publishGithub` auf. Modrinth
+  von Hand hochgeladen (Version ZyJkDRf0, byte-gleich). Filter für Game-Tests braucht den Namensraum, z. B.
   `-PbotTest='challengecraft-gametest:challenge_fix_tests_*'`.
 - **Bob-Modelle vom Laptop (48 h Training, hochgeladen im Chat):** `cover.json` 20261020-192933 (54 Eingaben,
   24.796 Kämpfe; Repo hatte 42 Eingaben/3.124), `goal.json` 20261021-164809 (32 Eingaben, 988 Ziele; Repo 25/617),
@@ -293,3 +294,35 @@ neueste Anweisung des Nutzers.
   Unter Windows selbst nicht getestet. ZIP an den Nutzer: `Bob-Trainer.zip` 1.1 (12.11.).
 - Lehre: Auf Linux lassen sich offene Dateien löschen – Windows-Sperren fallen hier nicht auf. Geteilte, beschreibbare
   Dateien zwischen gleichzeitigen Servern vermeiden; Nutzer-Ordner in OneDrive immer mitdenken.
+
+## Stand 14.11.2026 (Wochenend-Update: 1.1.5 auf CurseForge, Modpack v4.3)
+
+- **Auftrag (wörtlich):** „Ich will ein Update all meiner Projekte auf curseforge um den Download Algorithmus zu pushen.
+  Sprich jeder mod und modpack einmal für 26.3. erst mods und dann modpack. In die change log schreiben wir wenn es
+  etwas Neues gab das und wenn nicht nur bug fixes. Modpacks können wir schreiben mod update oder ähnlich. […] Du hast
+  Freigabe hochzuladen“. Meine Auslegung: die sechs aktiven Projekte, nur CurseForge, nur Fabric 26.3; jede Datei mit
+  mindestens einer echten kleinen Korrektur, damit „Bug fixes“ stimmt. Übersicht aller Dateien:
+  `memory/dreamcraft-projekt.md`, Stand 14.11.
+- **1.1.5:** Branch `release/1.1.5` = `58686bc` (von `release/1.1.4` = 37246fe, **ohne** die Bob-Arbeit). Inhalt:
+  `RouletteScreen.onClose()` schickte `ROULETTE_LEAVE`, das der Server nie behandelt hat (entfernt, auch die Konstante);
+  ein Leerzeichen im deutschen Blackjack-Text. Tests 5/5, Start auf echtem Fabric-Server. GitHub-Release `v1.1.5` über
+  `publish.yml` per `workflow_dispatch` auf dem Release-Branch (erster Lauf scheiterte an Maven Central 403, Wiederholung
+  lief). CurseForge von Hand: Datei **9608867** „Challenge Craft 1.1.5“, freigegeben, bytegleich mit dem GitHub-Asset
+  (sha1 8f048e50…). Der Changelog nennt auch die Fixes aus 1.1.4. **Modrinth: 1.1.5 nicht hochgeladen** (nicht beauftragt).
+- **Lehre:** Nach jeder Veröffentlichung die Dateiliste der Plattform selbst prüfen (`api.cfwidget.com/<Projekt>` oder
+  die Freigabe-Adresse `…/api/v1/mods/<Projekt>/files/<Datei>/download`: 307 = freigegeben, 404 = in Prüfung), nicht
+  dem grünen Workflow glauben. CurseForge-Uploads von Challenge Craft gehen bis auf Weiteres nur von Hand
+  (`$SP/cf_upload.py`), solange das Repo keine Secrets hat.
+- **Für den nächsten Release aus `26.3-lockout-bot`** (a3b79c3, `mod_version` 1.1.4, unverändert): Version größer als
+  1.1.5 wählen und die zwei Fixes aus `58686bc` übernehmen. Die Regel „keine Version, bevor Bob deutlich besser ist“
+  gilt weiter für alles mit Bob; 1.1.5 enthält nichts davon.
+- **Modpack v4.3:** Client **9609296**, Server-Pack **9609297** (14.11., 12:08 UTC). Gebaut aus den v4.2-Zips mit
+  `Archive/curseforge/modpack-tools/mkpacks.py` (neu: optionales 7. Argument für den Fenstertitel). Änderungen: Manifest
+  (Version, Challenge-Craft-Datei 9608867) und `config/fancymenu/options.txt` (`custom_window_title` war noch
+  `Challenge Craft 26.2`, jetzt `Challenge Craft 26.3`). Geprüft wie ein Launcher (30 Dateien, Menü, Reiter Challenges,
+  neue Welt mit Timer, Server-Pack 56 Mods). Changelog `curseforge/modpack-changelog-v4.3.md` („Mod update“).
+- **Dem Nutzer gemeldet, nicht geändert:** Arbeitsdateien im Pack (`overrides/menu_art_source/` mit Python-Quellen und
+  `__pycache__`, `fancymenu_data/last_world.fmdata` mit einer Server-Adresse, eine `.bak`-Layoutdatei) und das
+  Server-README mit „Java 17“. Erst nach seiner Antwort anfassen.
+- **Frischer Client im Test:** zuerst Minecrafts Begrüßung „Welcome to Minecraft“ (Continue klicken), dann das
+  Tutorial des Mods (unten rechts „Skip tutorial“). Fenstertitel lesen: `_NET_WM_NAME` über python-xlib.

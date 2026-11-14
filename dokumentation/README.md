@@ -22,6 +22,18 @@ damit sie exakt stimmen. Wo sich etwas nicht prüfen ließ, steht „unklar“.
 
 ## Wo wir stehen (Kurzfassung)
 
+**Stand 14.11.2026 – neueste Dateien für Minecraft 26.3 (Fabric) auf CurseForge.** Die Tabellen darunter stammen vom
+4.11.; die Kapitel 01 bis 05 führen die Versionen dazwischen.
+
+| Projekt | Version | Datei-ID |
+| --- | --- | --- |
+| Beach Craft (1010922) | 3.4.3 | 9608842 |
+| Tamacraft (1758309) | 1.3.1 | 9608843 |
+| Quest Icons (690531) | 1.3.1 | 9608844 |
+| Challenge Craft (1508454) | 1.1.5 | 9608867 |
+| Dreamcraft (545167) | V1.6.1 | 9609213, Server-Pack 9609216 |
+| Challenge Craft Modpack (1653698) | v4.3 | 9609296, Server-Pack 9609297 |
+
 ### Veröffentlicht auf CurseForge
 | Projekt | Versionen (Datei-ID) |
 | --- | --- |

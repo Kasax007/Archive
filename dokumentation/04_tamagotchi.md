@@ -179,3 +179,14 @@ Sie zeigen Version 1.1; für 1.2.0 gibt es kein neues Video.
 - **Hochgeladen:** CurseForge 9567877 (1.21.1) und 9567878 (26.3), beide freigegeben; Modrinth eR1iHzPw und RNpFeemN.
 - **Beschreibung:** „Fabric and NeoForge“, Voraussetzungen mit 1.21.1 und NeoForge, FAQ „Forge or NeoForge?“ neu,
   Kopfbild-Schild „26.3 & 1.21.1 · Fabric & NeoForge“ (26.3 = 4f10738).
+
+## 6. Tamacraft 1.3.1 (14.11.2026, nur Fabric 26.3)
+
+Kleines Update zum Wochenende (Auftrag: jedes Projekt einmal für 26.3 aktualisieren).
+
+- **Behoben:** Die Links in der Mod-Liste. Die veröffentlichte 1.3.0 zeigte noch auf das Repository unter seinem alten
+  Namen und hatte keinen Website-Knopf; jetzt führt er auf `curseforge.com/minecraft/mc-mods/tamacraft`.
+- **Geprüft:** Jar-Vergleich mit 1.3.0 (nur `fabric.mod.json`), Start auf einem echten Fabric-Server.
+- **Hochgeladen:** CurseForge 9608843 „Tamacraft 1.3.1 (Minecraft 26.3)“, freigegeben. Branch `release/1.3.1`
+  = `ec3bf3a`, `26.3` nachgezogen.
+- **Nicht dabei:** Modrinth, NeoForge 26.3 und 1.21.1 stehen weiter auf 1.3.0.

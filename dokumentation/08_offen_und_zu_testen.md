@@ -1,5 +1,11 @@
 # 08 – Offen und zu testen (Checkliste)
 
+**Stand 14.11.2026 (Wochenend-Update).** Alle sechs Projekte haben auf CurseForge eine neue Datei für 26.3 (Fabric):
+Beach Craft 3.4.3, Tamacraft 1.3.1, Quest Icons 1.3.1, Challenge Craft 1.1.5, Dreamcraft V1.6.1 und das
+Challenge-Craft-Modpack v4.3. Jede enthält mindestens eine echte kleine Korrektur. Noch offen: dieselben Versionen auf
+Modrinth und für NeoForge 26.3 (nicht beauftragt), die Server-Packs von Hand als Server Pack markieren, und was mit den
+Arbeitsdateien im Challenge-Craft-Pack geschehen soll (siehe 05).
+
 **Stand 9.11.2026 (Testrunde-Erinnerung vom 5.11. abgearbeitet).** Alles, was am 5.11. zum Hochladen offen war, ist
 online und von CurseForge freigegeben: Beach Craft 3.1.0 bis 3.4.0 (26.3 und 1.21.1), Dreamcraft V1.4 bis V1.6
 (369 Quests in 16 Kapiteln), Quest Icons 1.3.0 mit allen Ports, Tamacraft 1.3.0 (26.3 und 1.21.1), Challenge-Craft-Modpack
@@ -21,8 +27,8 @@ Spielmechaniken oder per Code eingefügter Beute. Die Beach-Craft-Checks (Szene 
 1. **Von Hand auf CurseForge/Bisect:** Beschreibungen neu einfügen (Beach Craft, Dreamcraft, beide Challenge-Craft-Seiten;
    Übergabeseite), Server-Packs als Server Pack markieren, Bisect-Partnerkonsole (Challenge Craft RAM-Empfehlung 4 GB,
    Dreamcraft-Eintrag 19732 auf 26.3).
-2. **Entscheidungen:** erledigt – Challenge Craft 1.1.4 veröffentlicht (9.11.), Beach-Craft-Fragen entschieden und als
-   3.4.2 hochgeladen (10.11.).
+2. **Entscheidungen:** erledigt – Challenge Craft 1.1.4 veröffentlicht (9.11.; Korrektur vom 14.11.: nur auf GitHub und
+   Modrinth, auf CurseForge kam erst 1.1.5 an), Beach-Craft-Fragen entschieden und als 3.4.2 hochgeladen (10.11.).
 3. **Nur mit echten Spielern:** Quest-Buch mit echten Klicks, Server mit zwei Spielern (`/quests team`), Bosskampf mit
    Freunden, Teams und Edit-Modus von Quest Icons auf einem echten Server.
 4. **Modrinth:** Prüfung abwarten; Autoren der 7 fehlenden Dreamcraft-Mods fragen (`curseforge/modrinth/AUTOREN-ANFRAGE.md`).

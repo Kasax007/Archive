@@ -1,7 +1,10 @@
 """Builds the next modpack and server pack from the last ones: only Challenge Craft changes.
 
 mkpacks.py server OLD_SERVER.zip NEW_JAR OUT.zip OLD_TAG NEW_TAG
-mkpacks.py client OLD_CLIENT.zip OUT.zip OLD_TAG NEW_TAG MOD_FILE_ID
+mkpacks.py client OLD_CLIENT.zip OUT.zip OLD_TAG NEW_TAG MOD_FILE_ID [WINDOW_TITLE]
+
+WINDOW_TITLE sets the title of the game window (FancyMenu, overrides/config/fancymenu/options.txt), for example
+"Challenge Craft 26.3". Up to v4.2 the window still said "Challenge Craft 26.2".
 """
 import re
 import sys
@@ -38,7 +41,7 @@ def server(old, jar, out, old_tag, new_tag):
             dst.writestr(copy_info(info, name), src.read(info))
 
 
-def client(old, out, old_tag, new_tag, file_id):
+def client(old, out, old_tag, new_tag, file_id, title=None):
     src = zipfile.ZipFile(old)
     with zipfile.ZipFile(out, "w") as dst:
         for info in src.infolist():
@@ -50,6 +53,12 @@ def client(old, out, old_tag, new_tag, file_id):
                 assert n1 == 1 and n2 == 1, (n1, n2)
                 data = text.encode("utf-8")
                 print("manifest: version", new_tag, "Challenge Craft file", file_id)
+            if title and info.filename == "overrides/config/fancymenu/options.txt":
+                text = data.decode("utf-8")
+                text, n = re.subn(r"(S:custom_window_title = ')[^']*(';)", lambda m: m.group(1) + title + m.group(2), text)
+                assert n == 1, n
+                data = text.encode("utf-8")
+                print("window title:", title)
             dst.writestr(copy_info(info, info.filename), data)
 
 
@@ -57,4 +66,4 @@ if __name__ == "__main__":
     if sys.argv[1] == "server":
         server(*sys.argv[2:7])
     else:
-        client(*sys.argv[2:6], int(sys.argv[6]))
+        client(*sys.argv[2:6], int(sys.argv[6]), sys.argv[7] if len(sys.argv) > 7 else None)

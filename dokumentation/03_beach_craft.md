@@ -922,3 +922,17 @@ weiter). Versionsname auf Wunsch 3.4.2 statt 3.5.0 („keine Major-Version“). 
   optional. Jars: `raft-3.4.2+<mc>-neoforge.jar`.
 - **Beschreibung:** Kopfzeile „Fabric and NeoForge“, Voraussetzungen mit beiden Loadern, Kopfbild-Schild
   „26.3 & 1.21.1 · Fabric & NeoForge“ (26.3 = a70c418). Modrinth eingetragen; CurseForge über die Übergabeseite.
+
+## 14. Beach Craft 3.4.3 (14.11.2026, nur Fabric 26.3)
+
+Kleines Update zum Wochenende (Auftrag: jedes Projekt einmal für 26.3 aktualisieren).
+
+- **Behoben:** Eine geschlossene oder leere Riesenmuschel zeigte die rohen Textschlüssel
+  (`block.raft.giant_clam.closed`, `block.raft.giant_clam.empty`); die zwei Texte fehlten in der Sprachdatei.
+  Der Website-Knopf in der Mod-Liste zeigte noch auf die alte Adresse `/mc-mods/raft`, jetzt auf `/mc-mods/beach-craft`,
+  dazu der Link zum Issue-Tracker.
+- **Geprüft:** Jar-Vergleich mit 3.4.2 (nur `en_us.json` und `fabric.mod.json`), Start auf einem echten Fabric-Server,
+  beide Meldungen im Spiel (`tools/content/world/tests/clam_messages.txt`), Website-Knopf im Dreamcraft-Client.
+- **Hochgeladen:** CurseForge 9608842 „Beach Craft 3.4.3 (Minecraft 26.3)“, freigegeben. Branch `release/3.4.3`
+  = `5cd91f5`, `26.3` nachgezogen.
+- **Nicht dabei:** Modrinth, NeoForge 26.3 und 1.21.1 stehen weiter auf 3.4.2.

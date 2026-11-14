@@ -520,6 +520,7 @@ Fehler (Oberwelt 1521 Chunks in 1:43, Raft-Dimension 729 Chunks, früher auch Ne
 | **V1.5** | 9507488 | 9507490 | Beach Craft 3.3.0, Tamacraft 1.3.0 (vorher Tamagotchi), Quest Icons 1.3.0, Nebenpfad Island Life, 369 Quests (siehe unten) |
 | **V1.5.1** | 9508556 | 9508559 | `pack_edit_mode=false` in der Bisect-Config (Banner „Need a server?“ im Release-Modus); öffentlicher Changelog nur „Bug fixes“; sonst identisch mit V1.5 |
 | **V1.6** | 9512605 | 9512608 | Beach Craft 3.4.0 (9512111); Island-Life-Quest „Tackle Box“ (Treibholz-Angel) statt „Golden Lure“, Kochtopf-Text; 369 Quests; README: neue 26.3-Server haben eine Whitelist; Modrinth 26.3-V1.6 (ltyw0nwK) |
+| **V1.6.1** | 9609213 | 9609216 | Mod-Update: Beach Craft 3.4.3 (9608842), Quest Icons 1.3.1 (9608844), Tamacraft 1.3.1 (9608843); Fenstertitel „Dreamcraft 26.3“; sonst identisch mit V1.6; nur CurseForge |
 
 ### Was V1.3 bringt (Changelog `changelog-26.3-V1.3.md`)
 - **Beach Craft 3.0 „Tides of the Deep“** – Inselwelt, Story, Boss, Expedition Raft, Tauchen ([03](03_beach_craft.md)).
@@ -1322,3 +1323,21 @@ tritt bei, das JEI-Plugin von Beach Craft lädt (`raft:jei_plugin`), Angel/Kocht
 Mod-Fehler; Lootr läuft auf dem Server mit. **Achtung:** Ein frischer 26.3-Server schaltet die Whitelist ein
 (`white-list=true`), der erste Test wurde deshalb abgewiesen; das README des Server-Packs sagt es jetzt.
 
+
+## V1.6.1 (14.11.2026): Mod-Update zum Wochenende
+
+Auftrag: jedes Projekt einmal für 26.3 aktualisieren, erst die Mods, dann die Packs, Changelog der Packs „Mod update“.
+Client 9609213, Server-Pack 9609216 (hochgeladen 12:01 UTC; der Client war um 12:08 UTC freigegeben).
+
+- **Inhalt:** Beach Craft 3.4.3 statt 3.4.0 (also alles aus 3.4.1 bis 3.4.3: Maschinen behalten ihre Energie,
+  Item Catcher mit neun Fächern, Chunk Destroyer, Plastic Hook, kein Treibholz-Setzling mehr, Tag-Namen in JEI,
+  Meldungen der Riesenmuschel), Quest Icons 1.3.1, Tamacraft 1.3.1. Quests, Menü und die 250 anderen Mods sind gleich.
+- **Fenstertitel:** In `config/fancymenu/options.txt` stand seit V1 `Challenge Craft 26.2`. Jetzt `Dreamcraft 26.3`
+  (im Test am Fenster abgelesen).
+- **Prüfung vor dem Upload:** Quest-Buch gegen die neuen Jars (`tools/qcheck.py --offline`: keine Treffer in den
+  eigenen Mods), Pack wie ein Launcher installiert (253 Dateien von CurseForge; gegenüber der letzten Installation
+  unterscheiden sich nur die drei eigenen Mods), Hauptmenü bei 854×480, 1366×768 und 1920×1080, alle Knöpfe, neue Welt,
+  Questbuch (J) mit den Kapiteln Island Life und Tamacraft, Website-Knopf von Beach Craft in der Mod-Liste,
+  Server-Pack mit `start.sh` (364 Mods, bereit nach 27 s, `list`, sauberes Stoppen).
+- **Nicht dabei:** Modrinth (die .mrpack-Fassung steht weiter auf V1.6) und keine Updates fremder Mods.
+- Modpack-Repo: `26.3` = `03e25f3`, Changelog `docs/curseforge/changelog-26.3-V1.6.1.md`.

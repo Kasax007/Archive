@@ -105,3 +105,29 @@ auf `/configure?id=595&…&modpack=3747` weiter). 4 GB (11,99 $) reichen für Va
 leichter als 8 GB; BisectHostings RAM-Empfehlung für Pack 27138 steht allerdings auf 8 GB (in der Partnerkonsole
 senkbar). Die Mod-Beschreibung behält den allgemeinen Link `bisecthosting.com/p/kasax007`.
 
+
+## Challenge Craft 1.1.5 und Modpack v4.3 (14.11.2026)
+
+**Wichtige Korrektur:** Challenge Craft 1.1.4 ist am 9.11. nie auf CurseForge angekommen. Die Action im Mod-Repo hat
+nur das GitHub-Release angelegt, weil dem Repository die Zugangsdaten für CurseForge und Modrinth fehlen (keine
+Secrets `CURSEFORGE_TOKEN` und `MODRINTH_TOKEN`). Auf Modrinth kam 1.1.4 von Hand, auf CurseForge stand bis zum 14.11.
+weiter 1.1.3. Aufgefallen ist das an der Dateiliste des Projekts.
+
+- **1.1.5** (Branch `release/1.1.5` = `58686bc`, von `release/1.1.4`, ohne die Bob-Arbeit): der Roulette-Bildschirm
+  schickt beim Schließen keine Nachricht mehr, auf die der Server nie geantwortet hat; ein Satzzeichen im deutschen
+  Blackjack-Text. Der Changelog nennt zusätzlich alle Fixes aus 1.1.4, weil CurseForge sie erst jetzt bekommt.
+- **Geprüft:** Jar-Vergleich mit 1.1.4, Game-Tests 5/5, Start auf einem echten Fabric-Server.
+- **Veröffentlicht:** GitHub-Release `v1.1.5` (Action von Hand auf dem Release-Branch gestartet), CurseForge 9608867
+  „Challenge Craft 1.1.5“ von Hand, freigegeben und bytegleich mit dem GitHub-Asset. Modrinth: nicht hochgeladen.
+- **Für später:** `26.3-lockout-bot` steht auf `mod_version` 1.1.4. Die nächste Version von dort muss größer als 1.1.5
+  sein und die zwei Fixes aus `58686bc` mitnehmen.
+
+**Modpack v4.3** (Client 9609296, Server-Pack 9609297, hochgeladen 12:08 UTC): Challenge Craft 1.1.5 statt 1.1.3 und
+der Fenstertitel „Challenge Craft 26.3“ (bisher stand dort 26.2). Sonst identisch mit v4.2; gebaut mit
+`curseforge/modpack-tools/mkpacks.py` (neues optionales Argument für den Fenstertitel). Geprüft: wie ein Launcher
+installiert (30 Dateien von CurseForge), Hauptmenü, Welt-Erstellung mit dem Reiter Challenges, neue Welt mit dem Timer,
+Server-Pack auf einem Fabric-Server (56 Mods, bereit nach 3 s). Changelog: `curseforge/modpack-changelog-v4.3.md`.
+
+**Aufgefallen, nicht geändert:** Im Pack liegen Arbeitsdateien (`menu_art_source/` mit Python-Quellen,
+`fancymenu_data/last_world.fmdata` mit einer Server-Adresse, eine `.bak`-Datei), und das README des Server-Packs
+nennt Java 17 (26.3 braucht Java 25).

@@ -365,3 +365,28 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   Prüfrunden; 357 Spieltests, Produktions-Check sauber, Wing bei 854×480 von der Leitung angesehen. Bekannt und dem
   Nutzer gesagt: noch keine 3D-Modelle, keine neuen Welten, Nebenfiguren meist nur Text. Jar 5 nach MODELS und
   Hollowmere Manor.
+- **14.11. 06:50 UTC:** Mod-Repo e359c50. Leitung: (1) Ansager-Banner: wo der Text neben dem „EMCEE“-Schild schmaler
+  als 190 wäre (jede GUI unter ~600 Breite, also auch 1080p mit Standard-Skalierung), steht das Schild als Kopfzeile
+  und der Text nutzt die ganze Breite; bis fünf Zeilen bei jeder Breite, sonst „…“. Vorher passten 122 der 468
+  Ansager-Zeilen bei 427 GUI-Breite nicht, jetzt 12. Bilder: `/home/user/shots/lead-banner*`. Lehre für Skripte:
+  die Uhr des Banners ist Echtzeit, ein Tick des Test-Clients dauert in großen Fenstern länger: nach `voice banner`
+  höchstens ~25 Ticks warten. (2) Aufnahmen: `process.py` kürzt Pausen im Satz auf 0,7 s (51 von 290 Aufnahmen hatten
+  bis 2,5 s; die Tonprüfung `audio/check.py` lässt höchstens 1,2 s zu und schlug bei Wren an). 277 von 944 Zeilen
+  (neu: Gaffer im Rehearsal Wing). Werbesprecher: zwei Kandidaten zu hoch, Beschreibung beginnt jetzt mit „A man …
+  deep“. Quill und Vesper bekommen ihre Referenz erst mit ihrer Stufe.
+- Prüfung „AUDIOMIX: timing“ (Spur A, 05:52 UTC) fand fünf echte Fehler in der Warteregel der Leitung (Abstieg: Regel
+  der Karte vor der Ankunftszeile; ein Halt setzt die 4-s-Lebenszeit wartender Zeilen zurück; die Sammler am
+  Tick-Ende laufen vor `ShowFlow.tick`, daher weiter zwei „unlocked“-Zeilen und ein verlorener Gold-Jingle; ein
+  Banner verliert seine Stimme an eine höhere Zeile; Ankunftszeilen ignorieren „aufgenommene Variante zuerst“).
+  Korrekturen macht Spur A nach der zweiten Linse („ears“). Lehre bestätigt: eigene größere Änderungen der Leitung
+  immer unabhängig prüfen lassen.
+- MODELS-Bau (Spur B, 06:01 UTC, 359 Tests): 3D-Modelle für alle Waffen/Schilde, 25 Unikate mit eigener Form,
+  sechs Rüstungssets als Kostüme, Drops mit Strahl. Vom Bau NICHT geliefert: Schlag-Bögen, Blitz beim Blocken,
+  Wurf-Nachschwung, Schimmer beim vollen Schlag, Amulett/Abzeichen am Körper, Münzstapel, Icon-Überarbeitung.
+  Blick der Leitung auf die Bögen (`/home/user/shots/MODELS`): Schild beim Blocken in Ego-Sicht nicht im Bild,
+  Zweihänder in Ego-Sicht kaum zu sehen, Stab und Hellebarde wie eine Lanze getragen, Strahlen dünn, Unikat-Icons
+  passen nicht zu den Modellen. Dafür neuer Auftrag **MODELS2** („the item in action“: Clip-System für gehaltene
+  Gegenstände, ein Schlag je Waffenklasse leicht/voll, Bögen und Treffer-Funken, Schild im Bild, Fernkampf, Zaubern,
+  Trageposen, Icons, Münzen, Strahlen; Beweis als Bildstreifen pro Tick; Linsen `lenses_MODELS2.txt`): auf Spur B
+  direkt nach den MODELS-Korrekturen, vor ROOMS1 (Punkt 4 der Liste des Nutzers nennt Item-Animationen ausdrücklich).
+  BUILDS1 soll seine Techniken später als Clips in dieses System hängen.

@@ -111,7 +111,7 @@ senkbar). Die Mod-Beschreibung behält den allgemeinen Link `bisecthosting.com/p
 **Wichtige Korrektur:** Challenge Craft 1.1.4 ist am 9.11. nie auf CurseForge angekommen. Die Action im Mod-Repo hat
 nur das GitHub-Release angelegt, weil dem Repository die Zugangsdaten für CurseForge und Modrinth fehlen (keine
 Secrets `CURSEFORGE_TOKEN` und `MODRINTH_TOKEN`). Auf Modrinth kam 1.1.4 von Hand, auf CurseForge stand bis zum 14.11.
-weiter 1.1.3. Aufgefallen ist das an der Dateiliste des Projekts.
+weiter 1.1.3. Aufgefallen ist das an der Dateiliste des Projekts; CurseForges eigene Liste zeigt nach 1.1.3 direkt 1.1.5.
 
 - **1.1.5** (Branch `release/1.1.5` = `58686bc`, von `release/1.1.4`, ohne die Bob-Arbeit): der Roulette-Bildschirm
   schickt beim Schließen keine Nachricht mehr, auf die der Server nie geantwortet hat; ein Satzzeichen im deutschen

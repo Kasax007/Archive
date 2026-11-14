@@ -413,8 +413,17 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   | Dreamcraft | V1.6.1 | 9609213, Server-Pack 9609216 | Modpack-Repo `26.3` = 03e25f3 | die drei Mods, Fenstertitel `Dreamcraft 26.3` |
   | Challenge Craft Modpack | v4.3 | 9609296, Server-Pack 9609297 | – (aus den v4.2-Zips) | Challenge Craft 1.1.5, Fenstertitel `Challenge Craft 26.3` |
 
-  Mods hochgeladen 11:28–11:31 UTC, alle vier nach spätestens 11 Minuten freigegeben; Dreamcraft 12:01, Challenge-Craft-Pack
-  12:08 UTC. Die von CurseForge ausgelieferten Jars sind bytegleich mit den gebauten.
+  Mods hochgeladen 11:28–11:31 UTC, alle vier nach 4 bis 6 Minuten freigegeben; Dreamcraft 12:01 (freigegeben 12:05),
+  Challenge-Craft-Pack 12:08 UTC. Die von CurseForge ausgelieferten Jars sind bytegleich mit den gebauten.
+- **Verlässliche Dateiliste:** `https://www.curseforge.com/api/v1/mods/<Projekt>/files?pageIndex=0&pageSize=20&sort=dateCreated&sortDescending=true`
+  antwortet auf eine schlichte Anfrage (keine Browser-Kennung; bei 403 nicht umgehen) und zeigt alle freigegebenen
+  Dateien mit `status` (4 = freigegeben), `dateModified` (Zeit der Freigabe), `totalDownloads`, `additionalFilesCount`
+  und `hasServerPack`. **cfwidget hinkt hinterher:** 40 Minuten nach der Freigabe kannte es noch keine der neuen Dateien.
+  Dateien in Prüfung stehen in keiner der beiden Listen; dafür die Freigabe-Adresse der einzelnen Datei (307/404).
+  Zusatzdateien eines Packs: `…/api/v1/mods/<Projekt>/files/<Pack-Datei>/additional-files`.
+- **Server-Pack-Markierung:** Über die Upload-API kommt das Server-Pack als Zusatzdatei an, aber `hasServerPack` bleibt
+  `false` (V1.6.1 und v4.3 am 14.11.; bei V1.6 und v4.2 steht `true`, dort hat der Nutzer es von Hand markiert).
+  Nach jedem Pack-Upload dem Nutzer sagen, dass er das Server-Pack markieren muss.
 - **Nicht angefasst:** Modrinth (alle sechs), die NeoForge-26.3-Dateien (Beach Craft 3.4.2, Tamacraft 1.3.0,
   Quest Icons 1.3.0), andere Minecraft-Versionen, die drei alten Packs des Kontos. Dem Nutzer als nächster Schritt
   angeboten.

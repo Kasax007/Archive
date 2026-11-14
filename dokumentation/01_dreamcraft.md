@@ -1327,7 +1327,7 @@ Mod-Fehler; Lootr läuft auf dem Server mit. **Achtung:** Ein frischer 26.3-Serv
 ## V1.6.1 (14.11.2026): Mod-Update zum Wochenende
 
 Auftrag: jedes Projekt einmal für 26.3 aktualisieren, erst die Mods, dann die Packs, Changelog der Packs „Mod update“.
-Client 9609213, Server-Pack 9609216 (hochgeladen 12:01 UTC; der Client war um 12:08 UTC freigegeben).
+Client 9609213, Server-Pack 9609216 (hochgeladen 12:01 UTC, Client freigegeben 12:05 UTC, Server-Pack bis 12:12 UTC).
 
 - **Inhalt:** Beach Craft 3.4.3 statt 3.4.0 (also alles aus 3.4.1 bis 3.4.3: Maschinen behalten ihre Energie,
   Item Catcher mit neun Fächern, Chunk Destroyer, Plastic Hook, kein Treibholz-Setzling mehr, Tag-Namen in JEI,

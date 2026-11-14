@@ -309,9 +309,10 @@ neueste Anweisung des Nutzers.
   `publish.yml` per `workflow_dispatch` auf dem Release-Branch (erster Lauf scheiterte an Maven Central 403, Wiederholung
   lief). CurseForge von Hand: Datei **9608867** „Challenge Craft 1.1.5“, freigegeben, bytegleich mit dem GitHub-Asset
   (sha1 8f048e50…). Der Changelog nennt auch die Fixes aus 1.1.4. **Modrinth: 1.1.5 nicht hochgeladen** (nicht beauftragt).
-- **Lehre:** Nach jeder Veröffentlichung die Dateiliste der Plattform selbst prüfen (`api.cfwidget.com/<Projekt>` oder
-  die Freigabe-Adresse `…/api/v1/mods/<Projekt>/files/<Datei>/download`: 307 = freigegeben, 404 = in Prüfung), nicht
-  dem grünen Workflow glauben. CurseForge-Uploads von Challenge Craft gehen bis auf Weiteres nur von Hand
+- **Lehre:** Nach jeder Veröffentlichung die Dateiliste der Plattform selbst prüfen, nicht dem grünen Workflow glauben.
+  Am besten CurseForges eigene Liste `https://www.curseforge.com/api/v1/mods/1508454/files?pageIndex=0&pageSize=20&sort=dateCreated&sortDescending=true`
+  (am 14.11. damit bestätigt: nach 1.1.3 kommt dort direkt 1.1.5, eine 1.1.4 gab es nie); cfwidget hinkt Stunden
+  hinterher. Einzelne Datei: `…/api/v1/mods/<Projekt>/files/<Datei>/download` (307 = freigegeben, 404 = in Prüfung). CurseForge-Uploads von Challenge Craft gehen bis auf Weiteres nur von Hand
   (`$SP/cf_upload.py`), solange das Repo keine Secrets hat.
 - **Für den nächsten Release aus `26.3-lockout-bot`** (a3b79c3, `mod_version` 1.1.4, unverändert): Version größer als
   1.1.5 wählen und die zwei Fixes aus `58686bc` übernehmen. Die Regel „keine Version, bevor Bob deutlich besser ist“

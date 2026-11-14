@@ -5,17 +5,18 @@
 ### What is in it
 
 - 🚪 **Stage Doors** in the Overworld: walk through the red curtain and you are on the show. Friends who take the same door are one cast.
-- 🎬 **Ten floors** of film sets under the ground, each with its own look, three factions of monsters, district bosses and one rule to learn: steam, tide, spores, cold, the wheel, the signal, the audience.
+- 🎬 **Ten floors, a new season every run**: which place stands at which depth is drawn per run from {{PLACES}} places: the studio's departments and Hollowmere Manor, the first of the Network's other worlds. Each has its own look, three factions of monsters, district bosses and one rule to learn: steam, tide, spores, cold, the wheel, the signal, candlelight, the audience.
 - ⏱️ **Airtime**: every floor is on air for a limited time, then the set is struck.
 - 👹 **{{MONSTERS}} monsters and {{BOSSES}} bosses** with their own models, abilities and title cards.
-- 🎁 **Loot**: gear in six rarities with more than forty affixes, armour sets, unique items, potions, bombs, trinkets, coins, and prize crates with an unboxing show.
+- 🎁 **Loot**: gear in six rarities with more than fifty affixes, armour sets, unique items, potions, bombs, trinkets, coins, and prize crates with an unboxing show. 3D models for every weapon and shield, a swing of its own for every weapon class.
 - 📈 **Your crawler**: five stats, 24 skills that grow by use, 36 spells in six schools, 16 roles and 14 makeovers.
 - 🎙️ **The show**: the Emcee, {{ACHIEVEMENTS}} achievements, Hype and Fans, sponsors, interviews, a season recap and a server leaderboard.
+- 🗣️ **Voices**: {{LINES}} recorded lines by {{VOICES}} voices (English): the Emcee, the Gaffer, every vendor and inhabitant, the late-night host, the sponsors' announcer.
 - 🗺️ **A map** with minimap, waypoints and pings.
-- 🧑‍🤝‍🧑 **People**: the Gaffer and his tutorial, vendors, a vending machine, inhabitants with quests.
+- 🧑‍🤝‍🧑 **People**: the Gaffer and his Rehearsal Wing (ten small sets that teach the show by doing), vendors, a vending machine, inhabitants with quests.
 - 🐾 **Sidekicks**: an animal of the studio's Animal Department at your side from floor 2.
 - 🏆 **The finale**: the Executive Producer, the gold curtain, Prize Trunks to take home, end credits.
-- 🔊 **Its own sound**: jingles, an audience that reacts, monster voices, music that follows the situation.
+- 🔊 **Its own sound**: jingles, an audience that reacts, monster voices, music for fights and big moments.
 
 ### For servers and modpacks
 

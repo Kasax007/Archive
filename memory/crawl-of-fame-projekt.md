@@ -403,3 +403,29 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
 - Hörproben-Seite Version 7: je Figur „Vorlage“ und eine fertige Spielzeile (21 Figuren mit Zeile, 25 mit Vorlage).
 - Geplant: Jar 5 schon nach den Korrekturrunden MODELS und AUDIOMIX (nicht erst nach Hollowmere Manor); Jar 6 mit
   Manor und MODELS2.
+- **14.11. 08:15 UTC, schwerer Fehler in Jar 4 gefunden und behoben:** Im Überlebensmodus setzte der Wächter des
+  Run-Moduls (`run.Guard`, einmal pro Sekunde: „verirrte“ Crawler zurück auf ihr Set) jeden Neuling im Rehearsal Wing
+  an den Ankunftspunkt zurück, mit Ansager-Zeile „You wandered off set…“. Der Wing liegt neben der Zelle von Tiefe 1
+  in keiner Zelle (`Cells.of` = null). Das Tutorial war in Jar 4 im Überlebensmodus nicht spielbar. Niemand sah es:
+  Client-Skripte liefen kreativ (der Wächter überspringt Kreativ-Spieler), die Spieltests wiederholten „zurückgenommene“
+  Teleports. Spur: `orientation_game_tests_every_beat_detected` schlug in 2 von 3 Vollläufen am Schritt „keep“ fehl
+  (einziger Positions-Schritt ohne Wiederholung). Fix f8cfbbc: `Runs.backstage` (Wing des eigenen Runs) ist eigener
+  Boden in `Guard.tick` und `RunFlow.track`; Test `the_guard_leaves_the_wing_alone` (schlägt ohne Fix fehl);
+  `orientation.txt` läuft jetzt im Überlebensmodus (15/15). Dazu 96c0c9f: Neuling kommt mit Blick den Wing entlang an
+  (`Runs.Arrived` mit Richtung; vorher Blick auf die Seitenwand). **Lehren:** (1) jedes Client-Skript, das zeigt, was
+  ein Spieler tut, im Überlebensmodus fahren (`cmd gamemode survival Crawler` nach `world`); (2) ein Test, der eine
+  Wiederholung braucht, hat etwas gefunden: Ursache suchen statt Wiederholung schreiben; (3) der Test-Mod lässt nur
+  markierte Spieler in den Wing, deshalb sah keine der „Reisen“ der Leitung den Wing im Überlebensmodus: für den
+  echten ersten Weg `pcmd tag @s add crawl_rehearse` + `crawl door tp` + laufen (`$SP/lead_journey3.txt`). Beide
+  Lehren stehen jetzt in `$SP/wf/common.txt`.
+- **14.11. 09:25 UTC: Zwischenstand-Jar 5 geliefert** (`crawl-of-fame/builds/crawloffame-0.1.0-mc26.3-zwischenstand-5.jar`,
+  39,6 MB, Mod-Stand 96c0c9f; Jar 4 entfernt): Wing-Fix, 3D-Modelle (MODELS mit Korrekturen), Ton-Korrekturen
+  (AUDIOMIX, 13 Befunde), Ohrhörer-Regel, HUD „ein Panel zur Zeit“ und Banner-Layout, 367 von 944 Zeilen vertont.
+  370 Spieltests, Produktions-Check Server und Client sauber (Client braucht unter Last >45 s: `CRAWL_PROD_WAIT`
+  Standard jetzt 150). Bekannt: vier HUD-Befunde der Prüfung HUDSTAGE (Toast rutscht in die Gaffer-Zeile, Karte über
+  stehenden Toasts, Etagenkarte spielt nach einem Tod in der Oberwelt nach, Gaffer-Text ohne Stimme nach einer
+  Karte) werden auf Spur B behoben; noch keine eigenen Schlag-Animationen (MODELS2 läuft), keine neue Welt
+  (Hollowmere Manor im Bau auf Spur A). Achtung beim Ablegen: `git rm` der letzten Datei löscht den Ordner `builds/`:
+  erst die neue Jar kopieren, dann die alte entfernen.
+- Spuren 09:25 UTC: A `wf_10323761-684` (Manor-Bau, Welt und Mobs fertig, Regel „Candlelight“ in Arbeit), B
+  `wf_82284bd3-e41` (HUDSTAGE-Prüfung „layers“ fertig mit 4 Befunden, „pauses“ läuft, dann Korrekturen, dann MODELS2).

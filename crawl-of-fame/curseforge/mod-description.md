@@ -2,51 +2,62 @@
 
 ![Minecraft](https://img.shields.io/badge/Minecraft-26.3-5fbf4a?style=for-the-badge) ![Loader](https://img.shields.io/badge/Loader-Fabric-3f9bff?style=for-the-badge) ![Java](https://img.shields.io/badge/Java-25-f89820?style=for-the-badge) ![Floors](https://img.shields.io/badge/Floors-10-c0392b?style=for-the-badge) ![Multiplayer](https://img.shields.io/badge/Multiplayer-ready-9b59ff?style=for-the-badge)
 
-**Crawl of Fame** turns Minecraft into a deadly game show. Stage Doors have appeared all over the Overworld: a red carpet, a marquee of light bulbs, stairs behind a red curtain. Walk through and you are a contestant. Below you lie **ten floors of film sets**, a clock on every floor, monsters with stage names, an **Emcee** who comments on everything you do, and an audience that wants a show.
+**Crawl of Fame** turns Minecraft into a deadly game show. Stage Doors have appeared all over the Overworld: a red carpet, a marquee of light bulbs, stairs behind a red curtain. Walk through and you are a contestant. Below you lie **ten floors**, drawn fresh for every run from the studio's film sets and from whole worlds the Network owns, a clock on every floor, monsters with stage names, an **Emcee** who comments on everything you do out loud, and an audience that wants a show.
 
 Bring whatever you own. If you die down there, it stays down there.
 
-**Inside:** 🎬 **10 floors**, each with its own look, monsters and rule · 👹 **{{MONSTERS}} monsters and {{BOSSES}} bosses** · 🎁 **prize crates** with an unboxing show · 🧙 **36 spells** · 🎭 **16 roles and 14 makeovers** · 🏆 **{{ACHIEVEMENTS}} achievements** · 🗺️ a **map** that fills in as you explore · 🤝 built for **multiplayer and modpacks**
+**Inside:** 🎬 **{{PLACES}} places** for ten floors, a new season every run, each place with its own look, monsters and rule · 👹 **{{MONSTERS}} monsters and {{BOSSES}} bosses** · 🎙️ **fully voiced**: {{LINES}} recorded lines, {{VOICES}} voices · ⚔️ **3D weapons** with a swing of their own · 🎁 **prize crates** with an unboxing show · 🧙 **36 spells** · 🎭 **16 roles and 14 makeovers** · 🐾 **6 sidekicks** · 🏆 **{{ACHIEVEMENTS}} achievements** · 🗺️ a **map** that fills in as you explore · 🤝 built for **multiplayer and modpacks**
 
 ![How a run goes]({{IMG}}/how-a-run-goes.png)
 
 1. **Find a Stage Door.** They generate in the Overworld. A *Casting Call* flyer points to the nearest one.
 2. **Walk through the red curtain.** Friends who take the same door within five minutes are one **cast** and share one dungeon. Everyone else gets a dungeon of their own.
-3. **Beat the clock.** Every floor is on air for a limited time. When the airtime is over, the set is struck, with everybody who is still on it. The stairwells down open after the first quarter; some are guarded by a boss.
-4. **Rest in the green rooms.** Monsters stay out. This is where you open your prize crates, spend your points and catch your breath.
-5. **Die, and you are written out.** You wake up at your spawn point. Everything you carried lies in a *Remains* box where you fell, and your cast can pick it up.
-6. **Win,** and you leave through the gold curtain with everything you carry, plus **Prize Trunks** with your stash, your sealed crates, your coins and the Finale crate. From floor 3 on you can also **cash out** at a stairwell and go home with what you have.
+3. **Rehearse.** The first floor begins backstage, in the Rehearsal Wing: the Gaffer walks new crawlers through ten small sets, a minute of doing each, and hands out the starter kit. Old hands walk straight through.
+4. **Beat the clock.** Every floor is on air for a limited time. When the airtime is over, the set is struck, with everybody who is still on it. The stairwells down open after the first quarter; some are guarded by a boss.
+5. **Rest in the green rooms.** Monsters stay out. This is where you open your prize crates, spend your points and catch your breath.
+6. **Die, and you are written out.** You wake up at your spawn point. Everything you carried lies in a *Remains* box where you fell, and your cast can pick it up.
+7. **Win,** and you leave through the gold curtain with everything you carry, plus **Prize Trunks** with your stash, your sealed crates, your coins and the Finale crate. From floor 3 on you can also **cash out** at a stairwell and go home with what you have.
 
-Runs can be repeated as often as you like. Every run builds a new dungeon.
+Runs can be repeated as often as you like. Every run builds a new dungeon and draws a new season: which place stands at which depth.
 
 ![Features]({{IMG}}/features.png)
 
-- **A dungeon of its own** — a separate dimension, generated per run: floors of 60 to 140 rooms with districts, boss arenas, vaults, secret rooms, shops and green rooms, dressed as film sets with hundreds of new blocks and props
+- **A dungeon of its own** — a separate dimension, generated per run: floors of 60 to 140 rooms with districts, boss arenas, vaults, secret rooms, shops and green rooms, built from hundreds of new blocks and props
 - **Your crawler** — five stats, levels, 24 skills that grow by use, and a HUD made for the show
-- **Loot worth showing** — gear in six rarities with more than forty affixes, armour sets, unique items, potions, bombs, trinkets, coins
+- **Loot worth showing** — gear in six rarities with more than fifty affixes, armour sets, unique items, potions, bombs, trinkets, coins; one Power number and a card on every piece that says what it is, how it plays and whether it beats what you wear
+- **Weapons you can feel** — every weapon and shield is a 3D model in your hand, and every weapon class swings its own way: a dagger flicks, a maul winds up; other players see it too
 - **Prize crates** — won from bosses, achievements, fan mail and sponsors, opened at the Unboxing Booth with a show of their own
 - **Magic** — 36 spells in six schools, learned from tomes or cast from scrolls
 - **Roles and makeovers** — on floor 3 the Casting Office offers you a role and a new look, picked from how you played so far
 - **The show** — an Emcee who comments on everything, achievements for glory and for stupidity, Hype, Fans, sponsors, interviews, a season recap and a server leaderboard
+- **Voices** — the Emcee, the Gaffer, every vendor and inhabitant, the late-night host and the sponsors' announcer speak their lines (English), one at a time, with the text on screen
+- **Sidekicks** — from the second floor the Animal Department offers three of six studio animals; yours follows you down, fights at your side and is hooked off stage instead of dying
 - **A map** — fills in as the cast explores, with minimap, waypoints and pings
 - **People** — the Gaffer explains the show, vendors and a vending machine take your coins, inhabitants hand out quests
-- **Its own sound** — jingles, an audience that reacts, monster voices and music that follows the situation
+- **Its own sound** — jingles, an audience that reacts, monster voices, and music for fights and big moments
 - **Your world stays your world** — nothing changes in the Overworld except the Stage Doors
 
-![The floors]({{IMG}}/floors.png)
+![The places]({{IMG}}/floors.png)
 
-Every floor is a department of the studio, with its own sets, its own three factions of monsters, district bosses, and one **rule** you have to learn.
+A floor's number only says how deep you are and how strong everything is. **What** stands there is drawn per run: every place has its own sets, its own three factions of monsters, district bosses, and one **rule** you have to learn. The last floor is always the Final Curtain.
 
-- 🧱 **1 · The Understage** — brick service tunnels and prop storage. The pilot episode: the Gaffer shows you the ropes.
-- 📦 **2 · Prop Storage** — a warehouse of crates, mannequins and props that move. The first traps.
-- 🏘️ **3 · The Backlot** — a fake town in a cavern, and it is inhabited. Shops, quests and the Casting Office.
-- 🔥 **4 · The Boiler Room** — where the special effects are made. **Pressure:** when the gauges peak, the marked corridors vent steam.
-- 🌊 **5 · The Sunken Archive** — every episode ever made, and the roof leaks. **The Tide** rises and falls.
-- 🍄 **6 · The Overgrowth** — a nature show nobody cancelled. **Spores** fill your lungs; clearcaps cure them.
-- ❄️ **7 · Cold Storage** — where the network keeps what it might need again. **Cold**, braziers and whiteouts.
-- 🎰 **8 · The High Roller Hall** — the game show inside the game show. **The Wheel** spins a new rule for every fight.
-- 📡 **9 · Dead Air** — islands in a sky of static. Switch on three transmitters to open the way down.
-- 🎭 **10 · The Final Curtain** — live, in front of everybody. Three champions, then the Executive Producer.
+**The studio's departments**
+
+- 🧱 **The Understage** — brick service tunnels under the stage. No rule: this is where the pilot was shot.
+- 📦 **Prop Storage** — a warehouse of crates, mannequins and props that move. Traps everywhere.
+- 🏘️ **The Backlot** — a fake town in a cavern, and it is inhabited.
+- 🔥 **The Boiler Room** — where the special effects are made. **Pressure:** when the gauges peak, the marked corridors vent steam.
+- 🌊 **The Sunken Archive** — every episode ever made, and the roof leaks. **The Tide** rises and falls.
+- 🍄 **The Overgrowth** — a nature show nobody cancelled. **Spores** fill your lungs; clearcaps cure them.
+- ❄️ **Cold Storage** — where the Network keeps what it might need again. **Cold**, braziers and whiteouts.
+- 🎰 **The High Roller Hall** — the game show inside the game show. **The Wheel** spins a new rule for every fight.
+- 📡 **Dead Air** — islands in a sky of static. Switch on three transmitters to open the way down.
+- 🎭 **The Final Curtain** — live, in front of everybody. Three champions, then the Executive Producer.
+
+**Other worlds** (the Network does not only own a studio)
+
+- 🕯️ **Hollowmere Manor** — a dark house of walnut and damask. **Candlelight:** candles burn down while you fight, and what waits in the dark is patient. Light them, carry tapers, and do not cut the wrong chandelier.
+- *More worlds are on the way.*
 
 ![Your crawler]({{IMG}}/crawler.png)
 
@@ -78,8 +89,8 @@ Made for dedicated servers and tested on one, with two players through every ste
 
 ![For modpacks]({{IMG}}/modpacks.png)
 
-- ⚙️ **`config/crawloffame.json`** — join window, airtime, number of floors, cashing out, friendly fire and more
-- 📦 **Data driven** — monsters, rosters, loot tables, affixes, achievements, spells, roles and makeovers are data files a pack can override
+- ⚙️ **`config/crawloffame.json`** — join window, airtime, number of floors, the order of the places (random, classic or your own list), cashing out, friendly fire and more
+- 📦 **Data driven** — places, monsters, rosters, loot tables, affixes, achievements, spells, roles and makeovers are data files a pack can override
 - 🗺️ **Stage Doors by data pack** — where they generate is a structure set and a biome tag
 - 🏅 **Advancements** — a tab of vanilla advancements for quest mods to hook into
 - 🗡️ **Your gear works** — vanilla and modded weapons, armour, food and potions work in the dungeon, and what you find there keeps working outside
@@ -99,6 +110,7 @@ Made for dedicated servers and tested on one, with two players through every ste
 - **Can I leave?** From floor 3 you can cash out at a stairwell and keep everything. Before that the only ways out are the gold curtain and the other one.
 - **Does it change my world?** No. The dungeon is its own dimension and is thrown away after the run.
 - **Is it hard?** Floor 1 is fair for a player in iron. It gets worse. Bring friends.
+- **Do I have to listen to the Emcee?** No. `/crawlsound` sets how much he talks, turns voices off and chooses when music plays.
 
 ### Credits
 

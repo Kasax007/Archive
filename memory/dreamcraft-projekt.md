@@ -443,3 +443,33 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   blieben so keine echten Treffer. Bei Gelegenheit einen neuen Dump schreiben.
 - **Platz:** nur noch rund 2 GB frei. Nach jedem Pack-Test Instanz und entpackten Server löschen (mit vollem,
   wörtlichem Pfad – `rm` mit Variablen oder nach `cd` wird vom Sicherheits-Check abgelehnt).
+
+## Stand 14./15.11.2026 – Dreamcraft V1.6.2: Truhen-Items rutschen nach (Discord-Meldung)
+
+- **Meldung:** Items in Truhen rutschen nach, wenn man eins herausnimmt; Shift-Klick holt manchmal mehrere Stacks.
+- **Ursache (Bytecode + im Spiel nachgestellt):** Upgraded Iron Chests 1.5.1 hat die Spieler-Einstellung
+  „Keep stored items tidy“ (Auto-Compaction), Standard AN, gespeichert als Fabric-Attachment am Spieler je Welt/Server.
+  Der Server schiebt beim Öffnen und bei jedem Klick alle Stacks nach vorn – auch Vanilla-Truhen, Fässer, Endertruhen,
+  Lootr. Keine Config, kein Befehl, keine Gamerule ändert den Standard. Jeder Spieler kann es selbst abschalten
+  (Inventar im Survival-Modus → Zahnrad unter dem Inventar; im Kreativ-Inventar gibt es den Knopf nicht).
+  Dazu Inventory Profiles Next „container_swipe_moving_items“ (Shift+Linksklick gehalten = jeden Tick ein Shift-Klick)
+  → mehrere Stacks. Zweiter Fund: R war IPN-Sortieren UND JEI-Rezept.
+- **Fix:** Quest Icons 1.3.2 (CF-Datei 9620815) mit Pack-Option `config/questsicons/pack_options.json`
+  `{"upgraded_iron_chests_tidy": "off_by_default"}` (Server liest beim Start; schaltet einmal je Spieler und Welt ab,
+  Marker-Attachment `questsicons:uic_tidy_default_applied`, Chat-Hinweis bei >1 min Spielzeit, Rücklese-Prüfung).
+  Ohne Datei tut Quest Icons nichts. IPN-Config: `Hotkeys.sort_inventory.main.keys = ""`,
+  `Tweaks.container_swipe_moving_items.value = false` (beides im Spiel geprüft).
+- **Einmal-Datei:** `pack/overrides/config/upgraded-iron-chests-client.properties` (pendingServerApply=true) nur in
+  V1.6.2 (für Server, die noch V1.6.1 haben). **Vor V1.6.3 löschen** (Repo und `$SP/pack/overrides`) und den Eintrag in
+  `ONE_VERSION_ONLY` in `tools/mkpack.py` entfernen – der Builder bricht sonst ab. Grund: jede weitere Auslieferung
+  würde das selbst wieder eingeschaltete „tidy“ still abschalten.
+- `tools/mkpack.py` prüft jetzt auch, dass in `$SP/ownjars` genau ein QuestIcons- und ein raft-Jar liegen.
+- Testrezept Truhe: `/execute align xyz run tp @s ~0.5 ~ ~0.5 0 29`, `/fill ~-1 ~ ~1 ~1 ~2 ~3 minecraft:air`,
+  `/setblock ~ ~ ~2 minecraft:chest`, `/item replace block ~ ~ ~2 container.N with minecraft:stone 64`, Rechtsklick.
+- Server-Update von V1.6.1: QuestIcons-Jar tauschen, `config/questsicons/pack_options.json` dazu,
+  `config/questsicons/quests` ersetzen, neu starten.
+- **Offen (Nutzer entscheidet):** Better Combat 3.2.2 trifft nicht durch eine 1-Block-Lücke. Grund: Zielsuche prüft zwei
+  Strahlen vom Auge zum nächsten Hitbox-Punkt und zur Mitte des Mobs (`TargetFinder$RadialFilter`,
+  `allow_attacking_thru_walls=false`); wohin man zielt, zählt nicht. Option `true` würde Schläge durch ganze Wände
+  erlauben. Ausbauen geht technisch (kein Mod hat Better Combat als Pflicht), aber Arsenal, Archers, Paladins, Rogues,
+  Wizards (und Ube's/Farmer's Delight) bringen ~170 Waffen-Dateien dafür mit; Quest „undead“ nennt Better Combat.

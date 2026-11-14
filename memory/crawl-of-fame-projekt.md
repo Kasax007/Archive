@@ -390,3 +390,16 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   Trageposen, Icons, Münzen, Strahlen; Beweis als Bildstreifen pro Tick; Linsen `lenses_MODELS2.txt`): auf Spur B
   direkt nach den MODELS-Korrekturen, vor ROOMS1 (Punkt 4 der Liste des Nutzers nennt Item-Animationen ausdrücklich).
   BUILDS1 soll seine Techniken später als Clips in dieses System hängen.
+- **14.11. 07:00 UTC:** Mod-Repo a32f314. Zweite Reise der Leitung bei 480×270 GUI-Pixeln (1080p Standard;
+  `$SP/lead_journey2.txt`, Bilder `/home/user/shots/lead-journey2`): bei Ankunft auf einer Etage lagen Etagenkarte,
+  Gaffer-Einblendung und Toasts übereinander, die Line-up-Karte über dem Ansager-Banner, die Einblendung unter dem
+  Toast-Stapel. Regel „ein Panel zur Zeit“ (`docs/UI.md`): Karte = oberste Ebene (`FloorCard.covers/due`,
+  `BossHud.cardCovers`), Banner und Gaffer-Zeile werden darunter nicht gezeichnet (Gaffer-Uhr steht), Toasts starten
+  nicht unter einer Karte (`Toasts.holdWhile`) und bleiben über der Gaffer-Zeile (`Toasts.floorAt`). Geprüft mit
+  `$SP/lead_stage.txt` und dem Tutorial-Skript (15 von 15). Gut bei dieser Größe: Tier-Auswahl, Casting Desk.
+  Offen und in UI2 (Punkt 9) aufgenommen: Ansager-Zeilen stehen zusätzlich 10 s im Chat-Overlay (doppelt, verdeckt
+  ein Viertel des Bilds), kompakte Line-up-Karte. Bestätigt im echten Spiel: Schild beim Blocken unsichtbar (wird in
+  den MODELS-Korrekturen behoben). Tiefe 1–2 haben keinen Laden (nur Automat im Green Room): so entworfen.
+- Hörproben-Seite Version 7: je Figur „Vorlage“ und eine fertige Spielzeile (21 Figuren mit Zeile, 25 mit Vorlage).
+- Geplant: Jar 5 schon nach den Korrekturrunden MODELS und AUDIOMIX (nicht erst nach Hollowmere Manor); Jar 6 mit
+  Manor und MODELS2.

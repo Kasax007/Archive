@@ -605,3 +605,17 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
     45 Uniques, 239 Erfolge, 972 Aufnahmen; neue Platzhalter `{{PLACES}}`, `{{LINES}}`, `{{VOICES}}`).
   - Ein eigener Testlauf der Leitung baute ins Leere („That position is not loaded“): in Skripten erst
     `cmd forceload add …` und warten, dann `fill`.
+- **14.11. 20:15 UTC:** Mod `c6a79b0`+. **LEADUI abgeschlossen** (Spur B: 10 von 11 Funden behoben; Entscheidungen der
+  Leitung in `docs/reports/LEADUI.md`). Von der Leitung danach gebaut und belegt: (1) **Sammel-Kärtchen**: ab drei
+  wartenden Erfolgen ein Kärtchen (`Toasts.pushGrouped`/`burstOf`, `ShowClient.burst`); (2) Kärtchen fasst acht
+  Zeilen (Lohn steht auf zwei Zeilen); (3) **Gesprächsseite wartet** mit ihrer Stimme, solange eine dringende
+  Lautsprecher-Zeile spricht oder ansteht (`VoiceQueue.pageNow`, `VoiceDirector.personPage`). Belege: Stimmen-Tests
+  18/18, Hörprobe `$SP/listen/run9` (keine Überlagerung, 21/21), Streifen `/home/user/shots/lead-burst3`,
+  `hud_layers.txt` mit neuem Fall E (10/10).
+- **Lehre aus dieser Runde (eigene HUD-Änderungen):** Jede Änderung an einem HUD-Teil mit jedem Nachbarn ansehen, der
+  in denselben Zeilen stehen kann (Gaffer-Zeile, hohes Banner, Vanilla-Leisten), bei 480x270 und 427x240, und als
+  Häufung. Jede Änderung an der Stimmen-Reihenfolge mit einer Hörprobe im Spiel belegen (`lead_people2.txt`,
+  CT_AUDIO=1, `listen.py`), nicht nur mit dem Warteschlangen-Test.
+- Die Build-Sperre ist der Engpass: ein GOLDENPATH-Lauf hält sie bis 26 min; eigene Läufe der Leitung warten dann
+  20–30 min. Eigene Läufe bündeln und als Kette in den Hintergrund legen; in der Wartezeit ohne Sperre arbeiten
+  (Aufträge, Texte, statische Prüfungen).

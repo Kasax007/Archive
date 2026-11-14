@@ -307,3 +307,15 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   dem Index im Jar). Erster Boss-Sieg entschärft: ein Kisten-Jingle pro Tick (`audio.CrateJingles`), eine Chat-Zeile
   für alle Achievements eines Ticks, eine Level-Zeile. Frachtschalter in Prop Storage ohne Tresor (Tiefe 1) liefern
   jetzt eine Kiste. Offene Frage an den Nutzer: Tempo/Lautstärke des Ansagers und Musik-Pegel (Hörprobe-Seite).
+- **14.11. 02:55 UTC:** Alles gepusht (Mod-Repo b2f90fe): ITEMS-Bau von Spur B zusammengeführt (333 Spieltests auf
+  dem gemeinsamen Stand), Ton-Mischung, Frachtschalter, 171 von 852 Aufnahmen (Ansager Stufe 1 komplett, Referenzen
+  für 23 Sprecher). Hörprobe aus dem Spiel steht oben auf der Hörproben-Seite (Lauf `$SP/listen/run4`, Seite neu
+  bauen: `python3 $SP/voice/page/build.py <lauf-ordner>`, dann dieselbe Datei wieder veröffentlichen). Der Nutzer ist
+  gefragt: Tempo/Lautstärke des Ansagers, Musik-Pegel. Laufend: Spur A TUTORIAL-Bau (`wf_87ef502a-355`), Spur B
+  ITEMS-Prüfungen (`wf_f8e4cb2a-61a`). Vorbereitet, noch nicht gestartet: Spur A danach
+  `workflows/scripts/crawl-manor-a8.js` (erst unabhängige Prüfung der Ton-Änderungen der Leitung „AUDIOMIX“ mit
+  `lenses_AUDIOMIX.txt`/`delivered_AUDIOMIX.txt`, dann Hollowmere Manor); Spur B danach MODELS (`gen2.py … MODELS
+  MODELS.txt … lenses_MODELS.txt`). Entscheidungen zu ITEMS (nach den Prüfungen in den Bericht schreiben): Suche nur
+  über IDs und englische Namen ist in Ordnung; Stash rastet zeilenweise; Ausrüsten-Taste `I`; Zweihänder sperren
+  künftig die Nebenhand (steht als Punkt 4b im Auftrag BUILDS1). Regel der Leitung für eigene größere Änderungen:
+  von einer Spur unabhängig prüfen lassen (PRE-Stufe in `gen2.py`), damit es bei zwei Agenten bleibt.

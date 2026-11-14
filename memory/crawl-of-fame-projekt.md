@@ -619,3 +619,12 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
 - Die Build-Sperre ist der Engpass: ein GOLDENPATH-Lauf hält sie bis 26 min; eigene Läufe der Leitung warten dann
   20–30 min. Eigene Läufe bündeln und als Kette in den Hintergrund legen; in der Wartezeit ohne Sperre arbeiten
   (Aufträge, Texte, statische Prüfungen).
+- **14.11. 20:48–23:20 UTC: Nutzungs-Limit (5 Stunden) und Container-Neustart Nr. 5.** Beide Bau-Schritte brachen mit
+  „You've hit your 5-hour limit“ ab (Spur A GOLDENPATH bei WIP `2f63239`, Spur B CREATURES1A bei WIP `45acf4d`); beim
+  Zurücksetzen startete die VM neu (alle Hintergrundprozesse weg, Platte und Scratchpad unversehrt). Nichts verloren.
+  23:27 UTC wieder gestartet: Aufnahme-Dauerläufer (`setsid nohup tools/content/voice/lead/supervise.sh` aus dem
+  Haupt-Checkout), beide Workflows per `Workflow({scriptPath, resumeFromRunId})` (A `crawl-golden-a9.js` /
+  `wf_e1fdd138-f0d`, B `crawl-creatures1a-b10.js` / `wf_a430d11f-5d9`; der Bau-Auftrag enthält „FIRST, CHECK FOR
+  EARLIER WORK“, der neue Agent setzt auf den WIP-Commits auf), Prüfkette für Jar 7 (`$SP/jar7_chain.sh`, Stand
+  `222b27f`). **Merke:** Nach einem Limit zuerst `uptime` und `ps` ansehen: Dauerläufer und Ketten müssen neu
+  gestartet werden; die Workflows melden sich nicht von selbst zurück.

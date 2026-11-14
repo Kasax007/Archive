@@ -269,3 +269,27 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   `Workflow({scriptPath, resumeFromRunId})` (Spur A `crawl-themes-a6.js` / `wf_fd2adf47-3f4`, Spur B
   `crawl-items-b7.js` / `wf_f8e4cb2a-61a`). Stand der Aufnahmen: 113 Ansager-Zeilen im Modul.
 
+- **14.11. 01:30 UTC:** Zwischenstand-Jar 3 geliefert (`crawl-of-fame/builds/…-zwischenstand-3.jar`, Stand 54a2bbc:
+  zufällige Orte, neue Oberfläche, Sidekicks, erste Ansager-Aufnahmen, Säbel- und Sturmangriff-Korrektur). THEMES1
+  ist samt zwei Prüfungen und Korrekturen fertig (323 Spieltests; Entscheidungen der Leitung im Bericht). VOICE:
+  Prüfung und Korrekturen fertig (Sprechtext jetzt 850 Zeilen, 13 485 Wörter, rund 90 Minuten).
+  `tools/content/voice/lead/publish.sh <staging> <work>` veröffentlicht nur Aufnahmen, deren Zeile noch so lautet wie
+  aufgenommen (Digest im Zustand), und entfernt überholte. Stand der Aufnahme: 138 von 850.
+- Laufend seit 01:30: Spur A `crawl-tutorial-a7.js` / `wf_87ef502a-355` (TUTORIAL: Rehearsal Wing vor dem Ort der
+  Tiefe 1, Linsen `lenses_TUTORIAL.txt`), Spur B weiter `crawl-items-b7.js` / `wf_f8e4cb2a-61a` (ITEMS im Bau, dann
+  zwei Prüfungen und Korrekturen). Danach: Spur A erste neue Welt (`brief.py W1-manor PLACE.txt a NAME="Hollowmere
+  Manor"` bzw. `gen2.py` mit `PLACE.txt`), Spur B MODELS.
+- Workflow-Weitergabe geprüft (Sonde): Ein Workflow, der in einem durch eine Benachrichtigung ausgelösten Zug
+  startet, gibt den Agenten **keinen** Nutzer-Auftrag mit (sie sehen nur die Aufgabe); auch fortgesetzte Workflows
+  liefen. Nach einer kurzen Nutzer-Nachricht trotzdem den ersten Agenten kontrollieren (Transkript im
+  Workflow-Ordner: liest er die Unterlagen oder lehnt er ab?).
+- **Platzhalter-Aufnahmen** (`*.draft.ogg`, schnelle Engine, vom Nutzer abgelehnt) hört kein Spieler mehr: Der Client
+  lässt sie aus dem Index, außer mit `-Dcrawl.voice.drafts=true` (setzt der crawltest-Lauf). Unvertonte Zeilen sind
+  nur Text.
+- **Das Spiel hören** (neu, Leitung): `CT_AUDIO=1 tools/crawltest/run.sh <skript> <ordner>` lässt den Test-Client den
+  Ton über den Wave-Writer von OpenAL Soft (liegt LWJGL bei; `ALSOFT_DRIVERS=wave`, `ALSOFT_CONF`) nach
+  `<ordner>/game.wav` schreiben. Skript-Befehle dafür: `pace <ticks>` (Echtzeit, 20 Ticks/s, ohne Bilder; `wait`
+  läuft so schnell wie die Maschine kann), `vol <quelle> <0-1>`, `beep` (Ton zum Abgleich von Aufnahme und Log),
+  `amark <name>`. Auswertung: `$SP/voice/q312/bin/python tools/crawltest/listen.py <ordner>` (Wörter per
+  faster-whisper, Pegel: Ruhe beim Erkunden, Musik im Kampf, Musik unter einer Ansage, Übersteuerung) und
+  `game.mp3` als Hörprobe für den Nutzer. Skript: `tools/crawltest/scripts/listen.txt`.

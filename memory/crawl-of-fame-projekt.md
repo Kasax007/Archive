@@ -479,5 +479,14 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   `lenses_ROOMS1.txt` (exploits, clarity), `lenses_ROOMS1B.txt` (exploits, stories).
 - Reihenfolge jetzt (auch in `docs/PLAN.md`): Spur A Manor-Korrekturen → [LEADFIX] GOLDENPATH → ROOMS1 → ROOMS1B → 2.
   neuer Ort → ROOMS2 → 3. neuer Ort → WORKSHOP; Spur B MODELS2-Korrekturen → BUILDS1 → BUILDS2 → BROADCAST → UI2 →
-  CREATURES 1–3. Workflow-Agenten sind per `SendMessage` mit ihrer agentId erreichbar (Nachricht kommt als „The
-  coordinator sent a message while you were working“ an).
+  CREATURES 1–3.
+- **Fehler der Leitung, 14.11. 13:18–13:28 UTC (nie wiederholen):** `SendMessage` an die agentId eines LAUFENDEN
+  Workflow-Agenten stellt die Nachricht NICHT zu, sondern startet eine zweite Kopie aus seinem Transkript („Resuming
+  agent“). Zehn Minuten lang arbeiteten zwei Kopien des MODELS2-Korrektur-Agenten im selben Arbeitsordner
+  (`/home/user/wt/b`), also drei Agenten statt höchstens zwei. Bemerkt durch die Nachricht des Originals („someone else
+  is editing the same worktree“). Behoben: Workflow `wf_82284bd3-e41` per `TaskStop wkg1wfb5x` gestoppt (Original
+  beendet), die Kopie `ab608192c0c4f9802` läuft als normaler Hintergrund-Agent weiter (für sie funktioniert
+  `SendMessage`: „queued for delivery at its next tool round“), hat alle Funde F1–F15 + L1 und meldet per
+  `SubagentHandback`. Regel: Workflow-Agenten sind von außen nicht erreichbar. Eigene Funde der Leitung erst nach dem
+  Ende des Workflows als Nachbesserung vergeben (oder vorher in den Auftrag schreiben). Im Zweifel `ListAgents`
+  prüfen: Nur was dort steht, ist erreichbar.

@@ -344,3 +344,13 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   Quill und Vesper Referenzen haben: Seite neu bauen und veröffentlichen. Nennt der Nutzer einen Namen: `ref/<id>.wav`
   und `.desc` löschen, `.tries` erhöhen, ggf. Beschreibung in `cast.json` anpassen, Zeilen des Sprechers aus
   `state.json` nehmen (bei gestopptem Aufseher).
+- **14.11. 04:25 UTC:** Spur B: ITEMS fertig (Bau, zwei Prüfungen, neun Befunde: acht behoben, einer entschieden; 348
+  Spieltests; Entscheidungen der Leitung im Bericht: Fernkampf-Krits und Waffen-Sets kommen mit BUILDS1 (Punkt 4c),
+  Zweihänder sperren die Nebenhand (4b), Rest an UI2). Neu gestartet: `crawl-models-b8.js` / `wf_4c66326c-72b` (MODELS:
+  3D-Waffen, Schilde, Rüstungsformen, Beute-Strahlen, Icons; Linsen `lenses_MODELS.txt`). Spur A weiter
+  `wf_87ef502a-355` (TUTORIAL: Bau im Repo, zweite Prüfung läuft, dann Korrekturen); danach `crawl-manor-a8.js`.
+  Fund der Leitung: der einmal gescheiterte Gezeiten-Test war ein echter seltener Fehler (aus dem Becken gelaufenes
+  Wasser blieb bei Ebbe liegen, weil die Regel Blöcke ohne Nachbar-Updates setzt): `Floor5Rule.layer` räumt jetzt
+  bei Ebbe jedes Wasser des Raums auf dieser Höhe ab; Test mit „schlafendem“ Wasserblock (`UPDATE_SKIP_ON_PLACE`).
+  Lehre: ein „Timing-Fehler unter Last“ im Test ist erst dann einer, wenn die Zahlen dazu passen (hier: 240 Ticks
+  gewartet, Wasser blieb).

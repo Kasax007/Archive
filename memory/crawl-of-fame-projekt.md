@@ -429,3 +429,21 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   erst die neue Jar kopieren, dann die alte entfernen.
 - Spuren 09:25 UTC: A `wf_10323761-684` (Manor-Bau, Welt und Mobs fertig, Regel „Candlelight“ in Arbeit), B
   `wf_82284bd3-e41` (HUDSTAGE-Prüfung „layers“ fertig mit 4 Befunden, „pauses“ läuft, dann Korrekturen, dann MODELS2).
+- **14.11. 10:50 UTC:** Mod-Repo 49b9b52 (+ Bericht HUDSTAGE). Seit Jar 5: (1) Prüfung HUDSTAGE (Spur B) fand 7 Fehler
+  in den HUD-/Pausen-Änderungen der Leitung, alle behoben (Toasts warten ungesehen unter Karten, Karte verfällt bei
+  Tod/Verlassen, verdeckte Stimme wird zurückgenommen und startet mit ihrem Text neu; Pausenschnitt an der leisesten
+  Stelle mit Überblendung, 1,1 s wo das Skript eine Pause will; 90 Aufnahmen neu verarbeitet; Skript
+  `hud_layers.txt` + crawltest `hcheck` prüfen die Ebenen). (2) Reise 4 der Leitung (Tiefen 4–10, Überleben, 480×270,
+  `$SP/lead_journey4.txt`): Sporennebel der Overgrowth entstand an den Augen (lila Quadrate über ein Viertel des
+  Bilds) → jetzt 2–4,5 Blöcke um den Spieler; Banner konnte unter Karten veralten → nach 30 s verworfen;
+  Namensschilder im Nahkampf halb so breit wie das Bild → Mindestskalierung 0,15. (3) Aufnahmen 593 von 944.
+  (4) Neuer Auftrag **GOLDENPATH** (`$SP/wf/GOLDENPATH.txt`, Linsen honest/breaks): ganze Staffel im Überlebensmodus
+  durch die echten Türen, zu Fuß, per Skript, `tools/dev/golden.sh`, vor jeder Jar; startet auf Spur A nach dem Manor,
+  mit vorgeschalteter Prüfung LEADFIX (Wächter-Fix, Ankunftsrichtung, Ohrhörer-Regel). Danach ROOMS1 auf Spur A.
+- Offen für die nächste Pause des Aufsehers: `synth.py --redo emcee/mob.phase.leading_man.2`, dann `synth.py --recheck`
+  (listet Zeilen „für ein Ohr“). Noch ohne Referenz: announcer_ads, quill, vesper.
+- Hinweis: Ein `rm -rf` auf den Ordner, in dem die Shell gerade steht, wird von der Sicherheitsprüfung abgelehnt (zu
+  Recht). Bildordner nie löschen, sondern neue Ordner nehmen (`lead-spores2`); `/home/user/shots/lead-spores` (4 alte
+  Bilder) kann der Nutzer löschen. Vor Befehlen immer `cd /home/user/dungeon-crawler-steve`.
+- Spuren 10:50 UTC: A `wf_10323761-684` (Manor-Bau: Tests/Balance/Bilder), B `wf_82284bd3-e41` (MODELS2-Bau läuft).
+  Nächster Check-in 10:55 UTC (`trig_01UYsExDN9bPzNwFHBqajVJt`).

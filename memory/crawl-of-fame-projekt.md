@@ -328,3 +328,12 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   selbst bei kleiner GUI-Fläche (die linke Spalte nimmt bei 480×270 rund 45 % der Höhe). Prüf-Skripte der Leitung:
   `$SP/lead_hud3.txt`, `$SP/lead_plate.txt` (mit `tick freeze`; `summon` mit NBT ruft kein `finalizeSpawn` auf, dann
   fehlt das Namensschild). Lehre: bei jedem HUD-Teil auch 427×240 GUI-Pixel ansehen.
+- **14.11. 03:45 UTC, Referenzstimmen:** Die Referenz eines Sprechers bestimmt alle seine Zeilen, und niemand hört
+  sie. Von den ersten 23 automatisch gewählten passten sechs nicht zur Beschreibung (Männerstimme für Rosalind und
+  Odile, Frauenstimme für Fennick, Pip viel zu hoch, Tilda zu hoch, Vesna knapp zu tief). Jetzt: `synth.pitch_band`
+  leitet aus der Beschreibung einen erlaubten Bereich der mittleren Tonhöhe ab (Geschlecht aus Pronomen und
+  Stimmfach, Lage aus Wörtern wie „bass“, „tenor“, „contralto“), `make_refs` verwirft Kandidaten außerhalb und zieht
+  beim nächsten Versuch andere Stimmen (`ref/<sprecher>.tries`), `audit_refs.py --fix` prüft und repariert
+  vorhandene Referenzen (nach jedem neuen Referenz-Durchgang laufen lassen). Vor Aufnahmen anderer Sprecher immer
+  erst prüfen. Der laufende Durchgang wurde mit `STOP` beendet; der Aufseher startet nach zehn Minuten neu und
+  entwirft die fünf fehlenden Referenzen mit der Prüfung. Die Ansager-Referenz (vom Nutzer gewählt) liegt bei 75 Hz.

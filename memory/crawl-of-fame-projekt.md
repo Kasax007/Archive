@@ -69,7 +69,9 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   Datei“ und dem Bezug auf den Wunsch des Nutzers. Ein Agent pro Spur.
 - Platte: frei halten (Agenten-Läufe brauchen mehrere GB). `tools/crawltest/run.sh` und `tools/dev/gametest.sh`
   löschen ihre Welten jetzt selbst; das Archiv ist als Sparse-Checkout eingerichtet (`memory`, `crawl-of-fame`,
-  `dokumentation`, `curseforge`; zurück mit `git sparse-checkout disable`).
+  `dokumentation`, `curseforge`; zurück mit `git sparse-checkout disable`). Seit 14.11. 02:00 UTC ist es zusätzlich ein
+  Teil-Klon (`git clone --filter=blob:none --sparse`): `.git` 27 MB statt 5,65 GB; Dateien außerhalb der vier Ordner
+  lädt Git erst beim Auschecken nach (für Video-Arbeit dann einzelne Ordner mit `git sparse-checkout add <ordner>`).
 
 ## Container und Speicher
 

@@ -354,3 +354,8 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   bei Ebbe jedes Wasser des Raums auf dieser Höhe ab; Test mit „schlafendem“ Wasserblock (`UPDATE_SKIP_ON_PLACE`).
   Lehre: ein „Timing-Fehler unter Last“ im Test ist erst dann einer, wenn die Zahlen dazu passen (hier: 240 Ticks
   gewartet, Wasser blieb).
+- **14.11. 05:15 UTC:** TUTORIAL fertig (Bau, zwei Prüfungen, 14 Befunde, alle behoben; 357 Spieltests; Entscheidungen
+  der Leitung im Bericht). Spur A neu gestartet: `crawl-manor-a8.js` / `wf_10323761-684` (erst Prüfung „AUDIOMIX“ der
+  Ton-Änderungen der Leitung mit zwei Linsen und Korrekturen, dann Hollowmere Manor mit Prüfungen). Spur B weiter
+  `wf_4c66326c-72b` (MODELS-Bau). Mod-Repo-Stand eb912ad. Jar 4 in Arbeit (Blick der Leitung auf den Wing bei
+  854×480, Produktions-Check, `./gradlew assemble`). Aufnahme: 218 von 941.

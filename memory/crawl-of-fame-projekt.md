@@ -447,3 +447,18 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   Bilder) kann der Nutzer löschen. Vor Befehlen immer `cd /home/user/dungeon-crawler-steve`.
 - Spuren 10:50 UTC: A `wf_10323761-684` (Manor-Bau: Tests/Balance/Bilder), B `wf_82284bd3-e41` (MODELS2-Bau läuft).
   Nächster Check-in 10:55 UTC (`trig_01UYsExDN9bPzNwFHBqajVJt`).
+- **14.11. 12:00 UTC:** Mod-Repo nach „Plan: Hollowmere Manor built“. Aufnahmen 639 von 944. Reise 5 der Leitung (Tiefen
+  8–10, Überleben, 480×270, `$SP/lead_journey5.txt`, Crawler mit `resistance 4` am Leben gehalten): Glücksrad der High
+  Roller Hall zeigte die Erklärung als Spiel-Untertitel (doppelte Größe, nie umbrochen → an beiden Rändern
+  abgeschnitten); jetzt Name als Titel, Erklärung im Ansager-Banner (über der Hotbar kollidierte sie mit dem Chat).
+  Namensschilder skalieren nach dem Abstand des Schilds selbst (Flieger im Gesicht). In UI2 aufgenommen (Punkt 10/11):
+  eigene Show-Karte statt der Spiel-Titel (Rad, Clip-Karten Etage 5, Rerun im Finale), HUD-Ebenen (`client.ui.Layers`).
+  Allgemein bei 480 GUI-Breite: die Aktionsleiste des Spiels (Regel-Meldungen wie „The cable wraps round your boots!“)
+  liegt auf dem Chat, wenn der voll ist (Vanilla-Layout) → gehört zu UI2 Punkt 9 (Chat entlasten, Statuszeile).
+  Crawler sind im Dungeon im Abenteuermodus (Prüfungen mit `gamemode=adventure`).
+- Hollowmere Manor (Spur A): Bau geliefert (401 Spieltests, Bericht `docs/reports/W1-manor.md`, Bilder
+  `/home/user/shots/W1-manor`); Blick der Leitung auf Tour- und Besetzungsbogen: eigenständiger Ort (Walnuss, Damast,
+  Läufer, Wintergarten, Keller), Boss-Bühne der Ruhelosen im Dunkeln fast schwarz (Regel Kerzenlicht: gewollt, aber
+  per Hand zu prüfen). Zwei Prüfungen und Korrekturen laufen im selben Workflow `wf_10323761-684`. Danach GOLDENPATH.
+- BUILDS1-Auftrag ergänzt (Clip-System aus MODELS2, HUD-Ebenen). Reihenfolge: Spur A Manor → [LEADFIX] GOLDENPATH →
+  ROOMS1 → ROOMS2 → WORKSHOP; Spur B MODELS2 → BUILDS1 → BUILDS2 → BROADCAST → UI2 → CREATURES.

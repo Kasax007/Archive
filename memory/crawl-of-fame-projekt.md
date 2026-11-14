@@ -490,3 +490,32 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   `SubagentHandback`. Regel: Workflow-Agenten sind von außen nicht erreichbar. Eigene Funde der Leitung erst nach dem
   Ende des Workflows als Nachbesserung vergeben (oder vorher in den Auftrag schreiben). Im Zweifel `ListAgents`
   prüfen: Nur was dort steht, ist erreichbar.
+- **14.11. 14:30 UTC:** Mod `5dcba6e`. Manor: Korrekturrunde geliefert (410 Tests), von der Leitung im Überlebensmodus
+  angesehen (`/home/user/shots/lead-manor1`, `lead-manor2`, Skripte `$SP/lead_manor.txt`, `lead_manor2.txt`) und
+  abgenommen; Entscheidungen in `docs/reports/W1-manor.md`. Eigene Änderungen der Leitung: Zonen-Boss heißt jetzt
+  „The Twelfth Stroke“ (alter Name = Titel aus bekannter Serie; nur Anzeigetexte, Entity-Id bleibt `the_long_night`;
+  `$SP/lead/rename_boss.py`), Statuszeile mit Ton (`Objectives.TONE_WARN/GOOD`: „Out of candlelight“ rot mit
+  Warnsymbol statt grün), ein Kärtchen pro Erfolg mit vollem Text (vorher 2 Kärtchen, Text nach 3 Zeilen abgeschnitten
+  bei 225 von 240 Erfolgen; `ui.Toast` bis 7 Zeilen, Titel 2 Zeilen, längere Standzeit), „Framed Photo of an Applause
+  Seal“. Aufnahmen 834 von 972.
+- GOLDENPATH läuft auf Spur A seit 13:46 UTC: `wf_e1fdd138-f0d` (Aufgabe `wwgphx0l5`, Skript `crawl-golden-a9.js`).
+  Vorgeschaltete Prüfung LEADFIX fand 9 Punkte (1 spielbrechend: eigener Probenflügel gilt auf jeder Tiefe als eigenes
+  Gelände; 8 zur Ohrhörer-Regel, darunter beide Funde aus dem Hör-Test der Leitung: Person und Ohrhörer gleichzeitig in
+  voller Lautstärke; Stimme eines Bildschirmtexts fällt nach 4 s Warten weg). Korrekturen laufen dort; danach den
+  Hör-Test `$SP/lead_people.txt` (CT_AUDIO=1, Ausgabe `$SP/listen/run7`) wiederholen: Hollis ≥ 90 %, Interview-Intro
+  gesprochen.
+- Spur B: nur noch der Hintergrund-Agent `ab608192c0c4f9802` (kein Workflow). Er hat L1 umgesetzt (Ruheposen ganz im
+  Bild, `/home/user/shots/MODELS2/review/rest_fp.png`); Nachforderung der Leitung 14:25 UTC: einhändige Waffen rechts
+  von 62 % der Breite und unter 45 % der Höhe halten (Kurzschwert, Säbel, Streitkolben, Stab, Zauberstab standen zu
+  mittig). Hinweis: `SendMessage` an einen laufenden registrierten Hintergrund-Agenten stellt zu und schiebt dessen
+  gerade laufenden Tool-Aufruf in den Hintergrund. Nach seiner Rückmeldung (SubagentHandback): Streifen ansehen,
+  Entscheidungen in `docs/reports/MODELS2.md`, dann **CREATURES1** auf Spur B starten (`gen2.py … crawl-creatures1-b10.js
+  crawl-creatures1-b10 b CREATURES1 CREATURES1.txt "creatures, part 1" lenses_CREATURES.txt`).
+- Aufträge neu geschnitten (alle in `$SP/wf` und `Archive/crawl-of-fame/briefs`): BUILDS1 (Techniken, Dummy, zwei
+  Hände), BUILDS1B (Zustände, Kombinationen, Fernkampf, zwei Waffensets, Monster-Eigenschaften), BUILDS1C (zehn neue
+  Waffentypen); CREATURES 1–3 auf Orte umgestellt (2 enthält den Manor, 3 die Sidekicks), eigene Linsen
+  `lenses_CREATURES.txt`. Reihenfolge Spur B: MODELS2-Korrekturen → CREATURES1 → BUILDS1 → CREATURES2 → BUILDS1B →
+  CREATURES3 → BUILDS1C → BUILDS2 → BROADCAST → UI2.
+- Jar 6 (Aufgabe #100): wenn LEADFIX-Korrekturen und MODELS2-Korrekturen auf origin sind: volle Tests, prod.sh,
+  `$SP/lead_journey3.txt` + `tools/crawltest/scripts/orientation.txt` (erste Minuten im Überlebensmodus), Hör-Test,
+  ein Kampf mit den neuen Schlägen; Jar erst ins Archiv kopieren, dann Jar 5 entfernen.

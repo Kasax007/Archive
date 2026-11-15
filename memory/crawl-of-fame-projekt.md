@@ -691,3 +691,8 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   untertitelt die Ankunftszeile, Kopfzeile EMCEE). Jar-8-Kette gestartet auf `034c43a` (`$SP/jar8_chain.sh`:
   Volltests, prod.sh, Ebenen, Probereise, golden.sh); die LEADCAP-Korrekturen kommen mit Jar 9. Platte: Reste des
   fertigen CREATURES1A-Workflows in `/tmp` gelöscht (8,3 GB frei).
+- **15.11. 08:10 UTC: Zwischenstand-Jar 8 geliefert** (`crawl-of-fame/builds/…-zwischenstand-8.jar`, Stand `034c43a`,
+  64,6 MB; Jar 7 entfernt). Volltests 435/435, Client-Produktionsprüfung sauber. Die Server-Prüfung meldete „nicht
+  hochgefahren“: der Server wartete 28 min auf die Build-Sperre und kam dann in 2,6 s hoch; `prod.sh` zählte die
+  Wartezeit mit. Behoben (wartet jetzt, solange der gesperrte Befehl lebt; Commit in `wt/lead2`), Wiederholung
+  `$SP/jar8_prodserver.out` läuft. Ebenen, Probereise und golden.sh laufen in der Kette weiter (`$SP/jar8_*.out`).

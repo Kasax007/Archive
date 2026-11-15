@@ -684,3 +684,10 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   des Nutzers ist mit dem Mod allein nicht auslösbar (Verdacht: Iris/Grafiktreiber oder C2ME-Alpha mit nativer
   Mathematik); Antwort des Nutzers abwarten. Platte 8,7 GB frei (Kopie von Jar 7 im Scratchpad gelöscht; `voice/`
   belegt 11 GB, davon `hf` 6,8 GB Modelle: nicht löschen, der Aufseher braucht sie).
+- **15.11. 06:50 UTC:** GOLDENPATH-Bau gelandet (`034c43a`: `tools/dev/golden.sh`, `docs/TESTING.md`, zwei grüne
+  Läufe; Dead-Air-Treppen und Gewinne bei vollem Beutel als Funde behoben), Bahn A jetzt in den zwei Prüfungen.
+  Bahn B: LEADCAP-Prüfung fand 9 Punkte an der Untertitel-Leiste (u. a. Seite passt in den ersten 4–9 s nicht zur
+  Ankunftszeile, Ende fest statt mit der Stimme, Blitz nach offenem Fenster); der Fixer baut sie um (folgt der Stimme,
+  untertitelt die Ankunftszeile, Kopfzeile EMCEE). Jar-8-Kette gestartet auf `034c43a` (`$SP/jar8_chain.sh`:
+  Volltests, prod.sh, Ebenen, Probereise, golden.sh); die LEADCAP-Korrekturen kommen mit Jar 9. Platte: Reste des
+  fertigen CREATURES1A-Workflows in `/tmp` gelöscht (8,3 GB frei).

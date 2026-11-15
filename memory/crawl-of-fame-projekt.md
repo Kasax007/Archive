@@ -628,3 +628,19 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   EARLIER WORK“, der neue Agent setzt auf den WIP-Commits auf), Prüfkette für Jar 7 (`$SP/jar7_chain.sh`, Stand
   `222b27f`). **Merke:** Nach einem Limit zuerst `uptime` und `ps` ansehen: Dauerläufer und Ketten müssen neu
   gestartet werden; die Workflows melden sich nicht von selbst zurück.
+- **14.11. 23:55 UTC: Zwischenstand-Jar 7 geliefert** (`crawl-of-fame/builds/…-zwischenstand-7.jar`, Stand `222b27f`,
+  64,5 MB; Jar 6 entfernt). Der Nutzer bat nach dem Limit ausdrücklich um eine Status-Jar „when possible“: Prüfkette
+  deshalb umgestellt (`$SP/jar7b_chain.sh`: zuerst `prod.sh both` und die Jar, dann Ebenen-Skript und Probereise).
+  Ergebnisse: prod.sh sauber; 412/413 Spieltests (der rote zählte ein Kurzschwert, das die Übungskiste gewürfelt
+  hatte: Testfehler, korrigiert in `3828d55`); Probereise 3/3; `hud_layers.txt` 9/10 (Fall D: ein ausgleitendes Banner
+  stand 3 Bilder lang 5 px über einem Kärtchen; behoben, `EmceeBanner.SLIDE_PX`).
+- **15.11. 00:00 UTC, Leitung:** Die Bilder des Dauertests (`/home/user/shots/GOLDENPATH`) zeigen: die Etagen-Karte
+  bleibt abgedunkelt in der Bildmitte, bis der Emcee Ankunftszeile, Regel und Hinweise gelesen hat (10–30 s, auch
+  im ersten Kampf). Umbau im Worktree `/home/user/wt/lead` (Zweig `lead-work`): nach 4,6 s weicht die Karte einer
+  Untertitel-Leiste am Platz des Banners (`FloorCard.drawCaption`, Seiten aus ganzen Sätzen, umgeblättert mit der
+  Stimme: `VoiceDirector.progress`), Minimap zurück, Kärtchen darunter. Beleg läuft: `$SP/lead_caption_chain.sh`
+  (Skript `$SP/lead_caption.txt` mit CT_AUDIO=1, dann `hud_layers.txt`; Bilder `lead-caption`, `lead-layers3`).
+  Danach: unabhängige Prüfung (PRE-Stufe der nächsten Workflows) und Jar 8. Kärtchen über offenen Fenstern der Show
+  (Interview, Todesbildschirm) stehen jetzt im Auftrag UI2A.
+- Haupt-Checkout bleibt während Prüfketten unberührt; Leitungs-Code entsteht in `/home/user/wt/lead` und wird von dort
+  gepusht (vorher `git fetch` + Rebase).

@@ -652,3 +652,8 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   Linsen layers und time) ist die Vorstufe von `crawl-builds1-b11.js` (neu erzeugt; alte Fassung
   `$SP/wf/crawl-builds1-b11.before-leadcap.js`). Neue Funde für UI2A im Auftrag: Kärtchen über offenen Fenstern der
   Show, Kärtchen zwei Etagen zu spät, Chat unter der Zauberleiste.
+- **15.11. 02:20 UTC:** CREATURES1A gebaut und gepusht (`e650976`: Animationssystem `client.mob.anim`, sieben
+  Kreaturen neu, 419 Spieltests), jetzt in den Prüfungen. Offene Entscheidung der Leitung: der Boss Eternal
+  Understudy trifft wegen 12 Ticks Ausholen seltener (Routine ohne Ausweichen: 273 % → 152 % der Lebenspunkte bei
+  Stufe 4; Band 150–250 %). Neigung der Leitung: Schlag schwerer machen, nicht das Ausholen kürzer (Ziel um 200 %).
+  GOLDENPATH baut noch (Dead-Air-Treppen waren für Spieler zu Fuß nicht begehbar: gefunden und behoben, `2e27c80`).

@@ -670,3 +670,7 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   (6) Etagen-Ansage vor dem Interview: Ankunftszeile kommt jetzt nach dem Interview (`ShowEvents.FLOOR_ANNOUNCED`).
   Alles im Worktree `/home/user/wt/lead2` (Zweig `lead-fix`, Commit `df5b550`), volle Spieltests eingereiht
   (`$SP/lead2_tests.sh`), danach Push und Jar 8.
+- **15.11. 04:15 UTC:** Korrekturen zum Spielbericht gepusht (`20fa3fe`, Plan `7e367b2`): 423 Spieltests grün,
+  darunter vier neue (Begleiter-Rückzug, Interview vor der Ansage, Pfeile im Loot, Applaus-Schilder im Tutorial) und
+  die angepassten Stimmen-Tests. Absturz an der Falle weiter offen (Antwort des Nutzers zu `hs_err`/C2ME abwarten;
+  Nachstell-Lauf mit Ton `$SP/lead_trap2.sh` eingereiht). Jar 8 nach CREATURES1A und GOLDENPATH.

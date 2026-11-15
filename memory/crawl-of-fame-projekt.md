@@ -674,3 +674,9 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   darunter vier neue (Begleiter-Rückzug, Interview vor der Ansage, Pfeile im Loot, Applaus-Schilder im Tutorial) und
   die angepassten Stimmen-Tests. Absturz an der Falle weiter offen (Antwort des Nutzers zu `hs_err`/C2ME abwarten;
   Nachstell-Lauf mit Ton `$SP/lead_trap2.sh` eingereiht). Jar 8 nach CREATURES1A und GOLDENPATH.
+- **15.11. 04:40 UTC:** CREATURES1A abgenommen (Bahn B: 15 Prüf-Funde behoben, 431 Tests; u. a. Ausweichen aus
+  schweren Schlägen durch Gehen, leichte Arten holen vor dem Treffer aus, Boss-Todesszene vor der Beute). Entscheidung
+  der Leitung: Schlag des Eternal Understudy wiegt 2,0 (`Blows.Spec.damage`, nur der schwere Schlag; Ausholen bleibt):
+  Tiefe 1, Stufe 6: 213 % (Band 150–250), Stufe 4: 315 % (Startstufen-Band 225–375). Bahn B läuft jetzt mit
+  `crawl-builds1-b11.js` (Workflow `wf_4968d637-4a3`, Aufgabe `wh9bmx018`): erst Prüfung LEADCAP, dann BUILDS1.
+  Bahn A: GOLDENPATH baut noch. Jar 8, sobald GOLDENPATH gelandet ist (oder früher, wenn es lange dauert).

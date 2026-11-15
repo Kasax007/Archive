@@ -454,6 +454,8 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   (Inventar im Survival-Modus → Zahnrad unter dem Inventar; im Kreativ-Inventar gibt es den Knopf nicht).
   Dazu Inventory Profiles Next „container_swipe_moving_items“ (Shift+Linksklick gehalten = jeden Tick ein Shift-Klick)
   → mehrere Stacks. Zweiter Fund: R war IPN-Sortieren UND JEI-Rezept.
+- **Hochgeladen und freigegeben 15.11. 00:19 UTC:** Dreamcraft V1.6.2 Client 9621125, Server-Pack 9621127 (Nutzer muss
+  es evtl. von Hand als Server-Pack markieren). Ohne Ingame-Test des fertigen Packs (Nutzer: „No test just upload“).
 - **Fix:** Quest Icons 1.3.2 (CF-Datei 9620815) mit Pack-Option `config/questsicons/pack_options.json`
   `{"upgraded_iron_chests_tidy": "off_by_default"}` (Server liest beim Start; schaltet einmal je Spieler und Welt ab,
   Marker-Attachment `questsicons:uic_tidy_default_applied`, Chat-Hinweis bei >1 min Spielzeit, Rücklese-Prüfung).

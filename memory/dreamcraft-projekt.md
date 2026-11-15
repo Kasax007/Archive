@@ -475,3 +475,7 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   `allow_attacking_thru_walls=false`); wohin man zielt, zählt nicht. Option `true` würde Schläge durch ganze Wände
   erlauben. Ausbauen geht technisch (kein Mod hat Better Combat als Pflicht), aber Arsenal, Archers, Paladins, Rogues,
   Wizards (und Ube's/Farmer's Delight) bringen ~170 Waffen-Dateien dafür mit; Quest „undead“ nennt Better Combat.
+- **V1.6.3 (15.11., Client 9621616, Server 9621626):** Nutzer wählte „Wandprüfung abschalten“: Pack liefert
+  `config/bettercombat/server.json5` mit `allow_attacking_thru_walls: true` (Server synchronisiert es an Clients;
+  Nebenwirkung: Schläge treffen auch durch Wände in Waffenreichweite). Die Einmal-Datei
+  `upgraded-iron-chests-client.properties` ist wieder raus, `ONE_VERSION_ONLY` in `tools/mkpack.py` ist leer.

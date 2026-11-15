@@ -680,3 +680,7 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   Tiefe 1, Stufe 6: 213 % (Band 150–250), Stufe 4: 315 % (Startstufen-Band 225–375). Bahn B läuft jetzt mit
   `crawl-builds1-b11.js` (Workflow `wf_4968d637-4a3`, Aufgabe `wh9bmx018`): erst Prüfung LEADCAP, dann BUILDS1.
   Bahn A: GOLDENPATH baut noch. Jar 8, sobald GOLDENPATH gelandet ist (oder früher, wenn es lange dauert).
+- **15.11. 05:30 UTC:** Fallen-Lauf auch mit Ton ohne Absturz (`/home/user/shots/lead-trapcrash2`, 2/2): der Absturz
+  des Nutzers ist mit dem Mod allein nicht auslösbar (Verdacht: Iris/Grafiktreiber oder C2ME-Alpha mit nativer
+  Mathematik); Antwort des Nutzers abwarten. Platte 8,7 GB frei (Kopie von Jar 7 im Scratchpad gelöscht; `voice/`
+  belegt 11 GB, davon `hf` 6,8 GB Modelle: nicht löschen, der Aufseher braucht sie).

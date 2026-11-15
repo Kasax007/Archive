@@ -657,3 +657,16 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   Understudy trifft wegen 12 Ticks Ausholen seltener (Routine ohne Ausweichen: 273 % → 152 % der Lebenspunkte bei
   Stufe 4; Band 150–250 %). Neigung der Leitung: Schlag schwerer machen, nicht das Ausholen kürzer (Ziel um 200 %).
   GOLDENPATH baut noch (Dead-Air-Treppen waren für Spieler zu Fuß nicht begehbar: gefunden und behoben, `2e27c80`).
+- **15.11. 03:20 UTC, Spielbericht des Nutzers (Jar 7, mit Iris/Complementary-Shadern):** (1) Absturz beim Laufen
+  über die Fallgrube (Bühnen-Falltür, Prop Storage); sein `latest.log` endet ohne Fehler direkt nach der Fallen-Zeile
+  (also nativer Absturz oder Einfrieren). Nachgestellt ohne Shader und ohne Ton: kein Absturz
+  (`/home/user/shots/lead-trapcrash`); Lauf mit Ton (`$SP/lead_trap2.sh`) eingereiht; Absturzbericht beim Nutzer
+  erfragt (`crash-reports/`, `hs_err_pid*.log`). (2) Pfeile in den Loot: neue Vorrats-Kategorie `ammo`
+  (8–16, +2 je Tiefe; Monster, Behälter, Kisten, Requisiten-Händler). (3) Begleiter zu aggressiv, starb sofort:
+  Rückzug unter 40 % bis 70 % mit Ruhe-Heilung, beißen und zurückspringen, schweren Schlägen ausweichen, keine Packs.
+  (4) Emcee unterbricht sich selbst bei vielen Erfolgen: die Warteschlange schneidet keine leise Zeile mehr ab
+  (höhere wartet, ihre Uhr läuft ab dem Ende); Level-Up-Bemerkung höchstens alle 90 s, Fan-Meilenstein alle 60 s.
+  (5) Applaus-Schilder im Tutorial gaben Hype/Fans/Erfolge: jetzt Kulisse außerhalb der Live-Audience-Regel.
+  (6) Etagen-Ansage vor dem Interview: Ankunftszeile kommt jetzt nach dem Interview (`ShowEvents.FLOOR_ANNOUNCED`).
+  Alles im Worktree `/home/user/wt/lead2` (Zweig `lead-fix`, Commit `df5b550`), volle Spieltests eingereiht
+  (`$SP/lead2_tests.sh`), danach Push und Jar 8.

@@ -696,3 +696,14 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   hochgefahren“: der Server wartete 28 min auf die Build-Sperre und kam dann in 2,6 s hoch; `prod.sh` zählte die
   Wartezeit mit. Behoben (wartet jetzt, solange der gesperrte Befehl lebt; Commit in `wt/lead2`), Wiederholung
   `$SP/jar8_prodserver.out` läuft. Ebenen, Probereise und golden.sh laufen in der Kette weiter (`$SP/jar8_*.out`).
+- **15.11. 09:40 UTC:** Jar-8-Prüfungen fertig: Ebenen 10/10, Probereise 3/3, Server sauber, golden.sh 385/386 (der
+  Läufer „verlor den Weg“ am Vorhang von Tiefe 1 in der Sekunde, in der der Abstieg ins Interview begann; die
+  GOLDENPATH-Prüfung fand golden.sh auf seinem Seed selbst wackelig, Bahn A behebt das Gerüst). LEADCAP-Korrekturen
+  (9 Funde, `b411c8d`) von der Leitung abgenommen. Neu von der Leitung (Worktree `wt/lead2`, Spieltests eingereiht
+  `$SP/lead_couch.sh`): (a) alles, was der Abstieg zu einem Kandidaten auf dem Weg zur Couch sagt (Regel-Hinweis,
+  Casting, Sponsoren, Ohrhörer, Erfolge, Fans), wartet bis nach dem Interview und folgt der Floor-Karte
+  (`Emcee.hold/deliver`, Phase `ShowFlow.COUCH` vor allen anderen Hörern von DESCENDED; Test
+  `the_next_floors_lines_wait_for_the_couch`) – im Golden-Log stand der Floor-2-Hinweis im Chat genau beim
+  Interview-Start; (b) Minecraft-eigene Toasts/Chatzeilen der Mod-Fortschritte aus (`stagedoor.py` erst mit den
+  Lang-Texten nach THEMES1 abgeglichen, sonst hätte es Texte zurückgedreht; Manor-Datei von Hand). Lehre:
+  Generator-Skripte vor dem Laufenlassen gegen den aktuellen Stand prüfen und `git diff` danach lesen.

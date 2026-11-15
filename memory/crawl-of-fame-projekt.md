@@ -644,3 +644,11 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   (Interview, Todesbildschirm) stehen jetzt im Auftrag UI2A.
 - Haupt-Checkout bleibt während Prüfketten unberührt; Leitungs-Code entsteht in `/home/user/wt/lead` und wird von dort
   gepusht (vorher `git fetch` + Rebase).
+- **15.11. 01:30 UTC:** Untertitel-Leiste der Etagen-Karte gepusht (`3c7fc8b`): Karte 4,6 s, dann Leiste am
+  Banner-Platz, Seiten aus ganzen Sätzen, umgeblättert mit der Stimme. Belege: `/home/user/shots/lead-caption` (Streifen
+  480x270 und 427x240), `lead-layers3` (10/10), Hörprobe `lead-caption2` (keine zwei Stimmen zugleich). **Lehre:**
+  `listen.py` braucht `beep` im Skript (Sync-Ton) und hört lange Lautsprecher-Zeilen oft nur halb (Hall): stückweise
+  nachhören mit `$SP/lead/hear_windows.py <game.wav> <start>:<länge>:<name> ...`. Die unabhängige Prüfung (LEADCAP,
+  Linsen layers und time) ist die Vorstufe von `crawl-builds1-b11.js` (neu erzeugt; alte Fassung
+  `$SP/wf/crawl-builds1-b11.before-leadcap.js`). Neue Funde für UI2A im Auftrag: Kärtchen über offenen Fenstern der
+  Show, Kärtchen zwei Etagen zu spät, Chat unter der Zauberleiste.

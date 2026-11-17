@@ -479,3 +479,5 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   `config/bettercombat/server.json5` mit `allow_attacking_thru_walls: true` (Server synchronisiert es an Clients;
   Nebenwirkung: Schläge treffen auch durch Wände in Waffenreichweite). Die Einmal-Datei
   `upgraded-iron-chests-client.properties` ist wieder raus, `ONE_VERSION_ONLY` in `tools/mkpack.py` ist leer.
+
+- **Outreach-Routine pausiert (17.11.2026, Wunsch des Nutzers):** geplante Aufgabe „Outreach werktags“ (trig_01CCt95NzvUNE8aKqaNFs2oi) ist deaktiviert, bis der Nutzer sie selbst wieder startet. Nicht eigenmächtig wieder einschalten.

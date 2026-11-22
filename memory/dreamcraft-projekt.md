@@ -481,3 +481,33 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   `upgraded-iron-chests-client.properties` ist wieder raus, `ONE_VERSION_ONLY` in `tools/mkpack.py` ist leer.
 
 - **Outreach-Routine pausiert (17.11.2026, Wunsch des Nutzers):** geplante Aufgabe „Outreach werktags“ (trig_01CCt95NzvUNE8aKqaNFs2oi) ist deaktiviert, bis der Nutzer sie selbst wieder startet. Nicht eigenmächtig wieder einschalten.
+
+## Stand 22.11.2026 – Wochen-Update 2 (alle sechs Projekte, Fabric 26.3, nur CurseForge)
+
+- **Auftrag (Nutzer):** einmal pro Woche ein Update aller Projekte für den CurseForge-Algorithmus; neuer Inhalt in den
+  Changelog, sonst nur Versionsnummer und „Bug fixes“; für Dreamcraft zusätzlich der Mod, mit dem man bei
+  Rezept-Konflikten das Ergebnis wählt (= **Polymorph+**, CurseForge 1586874, Fabric 26.3, Datei 9531235 = 1.5.0;
+  1.5.1 vom 22.11. bringt nur ein Theme für den Mod „minuit“, deshalb 1.5.0). Freigabe zum Hochladen erteilt.
+- **Mods:** Quest Icons 1.3.3+26.3 = 9762097 (nur Version), Challenge Craft 1.1.6 = 9762202 (nur Version, aus
+  `release/1.1.5`, ohne Bob; GitHub-Release v1.1.6 per `publish.yml`, Jar bytegleich mit lokalem Build; Branch `26.3`
+  des CC-Repos nicht angefasst), Beach Craft 3.4.4 = 9762099 und Tamacraft 1.3.2 = 9762100 (nur Version) und kurz
+  danach **Beach Craft 3.4.5 = 9762197** (Cutlass hatte dasselbe Rezept wie die Machete → Cutlass jetzt `  I`/`II `/`T  `)
+  und **Tamacraft 1.3.3 = 9762199** (Weizen + Kabeljau/Lachs ergab Fish Crackers UND Pet Kibble → Fish Crackers jetzt
+  zwei Weizen). Gefunden mit `/polymorph conflicts` (schreibt `logs/polymorph-conflicts.log`; die Liste ist
+  „potenziell“, viele Einträge sind unterschiedliche Muster; echte Doppelungen per Musterabgleich, siehe unten).
+- **Offen:** dieselben zwei Rezept-Doppelungen stecken auch in Beach Craft 1.21.1/NeoForge und Tamacraft
+  1.21.1/NeoForge (nicht angefasst).
+- **Dreamcraft V1.6.4:** Polymorph+ (+ `config/cardinal-components-api.properties`, weil Polymorph+ Cardinal Components
+  8.1.0 mitbringt und dessen erster Start sonst einen ERROR mit Stacktrace loggt), Quest Icons 1.3.3, Beach Craft 3.4.5,
+  Tamacraft 1.3.3. Getestet: Server-Pack frisch (64 s, 0 Fehler, 212 Mods), Client (Menü, neue Welt, Werkbank: vier
+  Kupferbarren → Polymorph-Knopf über dem Ergebnis, Auswahl Kupfer-Falltür / Dawn-of-Time-Kupferdachziegel wechselt
+  das Ergebnis). Modpack-Repo `26.3` = 796823e.
+- **Challenge-Craft-Modpack v4.4:** aus den v4.3-Zips (`$SP/we/ccpack/v43`) mit `mkpacks.py`; nur Manifest bzw. das
+  Jar geändert; Server-Pack-Start (mit Fabric-Launcher aus `$SP/srv`) 16 s, 56 Mods, 0 Fehler.
+- **Echte Rezept-Doppelungen im Pack (Musterabgleich über alle Jars):** Kupfer-Falltür/DoT-Kupferdachziegel,
+  Beautify-Seil/Beach-Craft-Seil, Macaw's-Brückenpfeiler/DoT-Schmiedeeisenzaun, Macaw's-Japanische-Fichtentür/DoT-
+  Papiertür, zwei Tech-Reborn-UU-Rezepte, BetterEnd-Neon-Kaktus-Stufen/-Treppen, BetterNether-Stalagnate-Stamm.
+  Polymorph+ löst sie im Pack; für die eigenen Mods lieber eindeutige Rezepte.
+- **Testen:** In einer neuen 26.3-Welt fragt Minecraft per „Friends List“-Dialog nach; der blockiert Eingaben, bis
+  „Turn OFF“ geklickt ist (bei 1920×1080 etwa (1113,624)). Werkbank-Raster bei GUI-Skala 2: erstes Feld (860,422),
+  36 px Abstand, Ergebnis (1046,458), Hotbar-Feld 0 (816,672); Polymorph-Knopf über dem Ergebnis (1047,415).

@@ -773,3 +773,16 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   Historie von main liegen damit auch die Jars 6–10 (je ~62 MB). Nutzer informiert und gefragt (behalten oder Revert).
   **Regel ab jetzt:** Archiv nur auf den Sitzungs-Branch pushen: `git fetch origin claude/determined-edison-xwiksi`,
   dann `git push origin claude/determined-edison-xwiksi`; nie `rebase origin/main`, nie `HEAD:main`.
+- **23.11. 18:40 UTC: ROOMS1 gebaut, Prüfungen laufen.** Bahn A lieferte ROOMS1 (`cec20d7`: Requisiten zum
+  Durchsuchen in jedem Raum, Tresore mit Schlüssel, Fallen aus der Kulisse, Set-Kills, Fertigkeit Stagecraft), meldete
+  aber `done: false` (volle Tests nicht neu, golden.sh nur Teil „path“ mit 5 Fehlern bei Treppenvorhängen/Hall of
+  Fame). Der Workflow brach deshalb vor den Prüfungen ab. Lösung: im Skript `if (!built) return` statt
+  `!built.done`, die offenen Prüfungen als Punkte (a)–(e) und zwei eigene Funde der Leitung (L1: auf den
+  „searched“-Bildern ist keine Requisite zu sehen, L2: Ölfleck nicht erkennbar) in den FIX-Auftrag, dann
+  `resumeFromRunId` (Ergebnisse von TEXTS und Bau aus dem Cache). Läuft als `w6adnzaqh`. Danach ORIGIN1.
+  Lehre: Wer einen laufenden Workflow ergänzen will, stoppt ihn sofort nach Beginn einer Prüfung (kaum Verlust)
+  und setzt ihn fort; Eingriffe von außen erreichen Workflow-Agenten nicht.
+- Stimmen 18:30: Haupt-Checkout war 53 Commits hinter origin (der Aufseher las alte Zeilen). `git pull --ff-only`,
+  `publish.sh` (55 neu/geändert, 6 entfernt), eine Sprechanweisung zitierte noch „choose wisely“ (build.py-Fehler,
+  dadurch Index veraltet, 23 Fehler im Audio-Check) → korrigiert, `f76abdb`. Regel: vor `publish.sh` den
+  Haupt-Checkout vorspulen; danach `build.py` und `check.py` lesen, nicht nur die letzte Zeile.

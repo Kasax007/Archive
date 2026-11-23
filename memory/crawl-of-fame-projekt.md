@@ -756,3 +756,14 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   wächst unter den Lampen nach (statt „bewegt sich nur unbeobachtet“), Begriffe vereinheitlicht. Eigener Auftrag
   ORIGIN1 (`crawl-origin1-a11.js`, Bahn A nach ROOMS1, vor ROOMS1B). Vier Skills ohne Wirkung → BUILDS1B, Alchemie/
   Basteln → WORKSHOP. ROOMS1B trägt die Golden-Brett-Korrektur.
+- **23.11. ~14:00 UTC: Frage des Nutzers nach dem Stand bis zur Beta** beantwortet (12 Orte, ~150 Monster, Show,
+  Rollen, Begleiter, Tutorial, ~1000 Sprachzeilen, 524 Tests; bis zur Beta ~25 Aufträge: ORIGIN1, Monster-Optik
+  für alle Casts, ROOMS1B/2A/2B, Builds inkl. Balance Tiefe 9 und neue Waffenarten, UI2A/2B, BROADCAST, CANTEEN,
+  WORKSHOP, zwei weitere Welten (Arcade Zero, The Toy Chest), Balance, Performance, Seitenbilder, Textprüfung,
+  Absturz Stachelfalle; geschätzt 2–3 Wochen wegen Wochenlimit). Der Nutzer kann anders gewichten.
+- **23.11. 16:30 UTC: Check.** LEADCOUCH abgeschlossen (10 Funde behoben, `d26fb30`/`fc1adda`, 8 Tests, 531/532 –
+  Spiegel-Test der Sun Tomb einmal unter Last rot). Entscheidungen der Leitung (`0b3ea37`): Couch-Zeit des Eröffners
+  bleibt bei der Etage (sonst Gratis-Minuten für Mitspieler), der Sprung der Uhr bekommt eine Anzeige „+0:45 couch“;
+  Freigabe nach der Couch getaktet (ca. 1 Zeile/s, Freischaltungen zusammengefasst, Chat weicht der Etagenkarte) →
+  Punkt 7 im UI2A-Auftrag; Spiegel-Test → Bahn C vor The Toy Chest (Skript ergänzt). Bahn B baut CREATURES1B, Bahn A
+  ROOMS1 (Golden-Lauf läuft), Bahn C Arcade-Zero-Korrekturen. Platte: alte Bilder (12.–14.11.) gelöscht, 8,8 GB frei.

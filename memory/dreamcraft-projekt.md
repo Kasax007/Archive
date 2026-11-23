@@ -519,7 +519,8 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   CurseForge verschwunden** (alle Dateien 404, Dateiliste leer; auf Modrinth noch da, Stand 20.11.). Der Mod ist aus dem
   Pack entfernt (packdb, `pack/mods.json`, `tools/selection.py`, Modliste, Beschreibung; Server-Update: Jar löschen).
   Vorher alle 253 übrigen Manifest-Einträge über die Download-Adresse geprüft: alle 307. Neu hochgeladen 23.11.
-  21:24 UTC: **Client 9781000, Server-Pack 9781048** (der Server-Upload direkt nach dem Client scheiterte einmal mit
+  21:24 UTC: **Client 9781000, Server-Pack 9781048** (freigegeben 21:27 bzw. 21:37 UTC; Server-Pack als Zusatzdatei,
+  `hasServerPack` false → Nutzer markiert) (der Server-Upload direkt nach dem Client scheiterte einmal mit
   „Invalid parentFileID“; eine Minute später ging es).
 - **Lehre:** Vor jedem Pack-Upload alle Manifest-Dateien prüfen (Download-Adresse, 307 = gültig); fremde Mods können
   jederzeit von CurseForge verschwinden. Eine Ablehnung sieht nur der Nutzer im Dashboard, es kommt keine Mail. und stand in keiner Liste; keine Mail von CurseForge. Bei der

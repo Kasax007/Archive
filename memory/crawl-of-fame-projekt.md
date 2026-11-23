@@ -786,3 +786,10 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   `publish.sh` (55 neu/geändert, 6 entfernt), eine Sprechanweisung zitierte noch „choose wisely“ (build.py-Fehler,
   dadurch Index veraltet, 23 Fehler im Audio-Check) → korrigiert, `f76abdb`. Regel: vor `publish.sh` den
   Haupt-Checkout vorspulen; danach `build.py` und `check.py` lesen, nicht nur die letzte Zeile.
+- **23.11. 19:00 UTC: CREATURES1B nur zum Teil.** Bahn B schaffte in einem Bau die sechs restlichen Understage-Arten
+  (`348449a`; Understage jetzt komplett mit 13 Arten; Absturz in `Abilities.dash` gefunden und behoben), nicht Prop
+  Storage, Backlot, Personen, Helfer. Gleiches Vorgehen wie ROOMS1: Prüfungen für den gelieferten Teil fortgesetzt
+  (`wdzjm5a81`), FIX mit Testpflicht für den Dash-Absturz, Rat King in die Boss-Spanne (Entscheidung der Leitung),
+  Strips der Understudy ohne Hinsehen. Rest aufgeteilt: CREATURES1C (Prop Storage), 1D (Backlot), 1E (Personen und
+  Helfer); CREATURES2/3 später je ein Ort pro Aufgabe (ein Bau schafft etwa sechs Arten mit Beweisen).
+  BROADCAST1/2 zu Bahn A nach WORKSHOP. Eigener Fund: Rudel zeigt zehn gestapelte Namensschilder → Punkt 8 in UI2A.

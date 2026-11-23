@@ -514,8 +514,15 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   der Prüfung abgefragt wurde). Dadurch gingen die Packs erst um 00:52 UTC hoch (Dreamcraft V1.6.4 = 9764254, Server-Pack
   9764260; Challenge-Craft-Modpack v4.4 = 9764262, Server-Pack 9764263).
 - **Freigaben 22./23.11.:** alle vier Mods 22:35–22:42 UTC, Challenge-Craft-Modpack v4.4 00:57 UTC (Server-Pack als
-  Zusatzdatei, `hasServerPack` noch false → Nutzer markiert). **Dreamcraft V1.6.4 (9764254) war um 09:00 UTC, acht Stunden
-  nach dem Upload, noch nicht freigegeben** (Abfrage dann beendet, Nutzer prüft das Dashboard) und stand in keiner Liste; keine Mail von CurseForge. Bei der
+  Zusatzdatei, `hasServerPack` noch false → Nutzer markiert). **Dreamcraft V1.6.4 (9764254) wurde abgelehnt:** „Invalid manifest.json file:
+  References invalid fileIDs: fileID: 9017226, projectID 634062 (No Chat Reports)“. **No Chat Reports ist komplett von
+  CurseForge verschwunden** (alle Dateien 404, Dateiliste leer; auf Modrinth noch da, Stand 20.11.). Der Mod ist aus dem
+  Pack entfernt (packdb, `pack/mods.json`, `tools/selection.py`, Modliste, Beschreibung; Server-Update: Jar löschen).
+  Vorher alle 253 übrigen Manifest-Einträge über die Download-Adresse geprüft: alle 307. Neu hochgeladen 23.11.
+  21:24 UTC: **Client 9781000, Server-Pack 9781048** (der Server-Upload direkt nach dem Client scheiterte einmal mit
+  „Invalid parentFileID“; eine Minute später ging es).
+- **Lehre:** Vor jedem Pack-Upload alle Manifest-Dateien prüfen (Download-Adresse, 307 = gültig); fremde Mods können
+  jederzeit von CurseForge verschwinden. Eine Ablehnung sieht nur der Nutzer im Dashboard, es kommt keine Mail. und stand in keiner Liste; keine Mail von CurseForge. Bei der
   nächsten Sitzung zuerst prüfen (Dateiliste); falls abgelehnt, steht der Grund im Autoren-Dashboard des Nutzers.
 - **Testen:** In einer neuen 26.3-Welt fragt Minecraft per „Friends List“-Dialog nach; der blockiert Eingaben, bis
   „Turn OFF“ geklickt ist (bei 1920×1080 etwa (1113,624)). Werkbank-Raster bei GUI-Skala 2: erstes Feld (860,422),

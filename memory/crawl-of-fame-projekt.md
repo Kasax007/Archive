@@ -724,3 +724,10 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   laufen (`$SP/jar9_chain.sh`). Vorbereitet: `crawl-rooms1-a10.js` (Spur A, neu erzeugt mit „three engineers“),
   `crawl-creatures1b-b12.js` (Spur B nach BUILDS1, PRE-Prüfung LEADCOUCH der Couch-Änderung:
   `delivered_LEADCOUCH.txt`, `lenses_LEADCOUCH.txt`). Nächster Check-in per `send_later` 03:39 UTC.
+- **23.11. 07:50 UTC: GOLDENPATH abgeschlossen** (`10c53a7`, 10 Funde behoben: Kämpfe bleiben im Raum, Bosse brauchen
+  den Schlag des Crawlers, der Flügel nur mit Tasten/Bildschirmen, Tode durch Monster; golden.sh PASS in allen drei
+  Teilen, von der Leitung mit `golden_report.py` nachgerechnet; 497 Spieltests). Entscheidungen in
+  `docs/reports/GOLDENPATH.md` (`c2178d2`): golden.sh ist ab jetzt die Freigabeprüfung vor Zwischenständen. Bahn A
+  startet `crawl-rooms1-a10.js` (Lauf `wf_1b322ad1-35a`, Aufgabe `wl8rsqnxe`: erst TEXTS-Prüfung, dann ROOMS1).
+  Bahn B hat BUILDS1-WIP schon auf origin (Regel „push finished parts early“), Bahn C hat The Sun Tomb gepusht
+  (`4739bf2`) und ist in den Prüfungen. Platte nach Aufräumen 8,6 GB (Golden-Ordner in /tmp gelöscht).

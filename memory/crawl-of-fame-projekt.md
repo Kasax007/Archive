@@ -731,3 +731,10 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   startet `crawl-rooms1-a10.js` (Lauf `wf_1b322ad1-35a`, Aufgabe `wl8rsqnxe`: erst TEXTS-Prüfung, dann ROOMS1).
   Bahn B hat BUILDS1-WIP schon auf origin (Regel „push finished parts early“), Bahn C hat The Sun Tomb gepusht
   (`4739bf2`) und ist in den Prüfungen. Platte nach Aufräumen 8,6 GB (Golden-Ordner in /tmp gelöscht).
+- **23.11. 08:05 UTC: The Sun Tomb (W2) abgenommen** (13 Prüf-Funde behoben, u. a. eigenes Treppenhaus mit Schleier statt
+  Studio-Vorhang, Schwarm nur auf Sand, Sonnenbahnen als eigener Block, Spiegel nicht mehr überschrieben; 501 Tests).
+  Entscheidungen in `docs/reports/W2.md` (`520190b`): Bezirk-Charakter folgt der Fraktion bleibt; offen: Lampenketten
+  wirken von fern wie Pfähle, Thronsaal dunkel, Vizier-Kampf 90–120 s, Bright King nicht simuliert (Handprobe vor
+  Release). Bahn C startet Arcade Zero (W3, `crawl-arcade-c2.js`, Lauf `wf_3648461f-e8a`, Aufgabe `wanv3kq45`);
+  `crawl-toychest-c3.js` (W4) liegt bereit. Haupt-Checkout auf `520190b` gezogen: der Aufseher nimmt die 28
+  Grab-Zeilen und die Kofferzeile auf.

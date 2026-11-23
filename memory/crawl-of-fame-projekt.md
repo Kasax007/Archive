@@ -749,3 +749,10 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   GOLDENPATH; Jar 9 entfernt). Prüfkette: 524/524 Tests, Produktion sauber, Ebenen 11/11, Probereise 3/3, golden.sh nur
   „home“ rot: das Hall-of-Fame-Brett sollte bei Pitch 40 aufs Wasser gesetzt werden (Bild `g11_d_hall_of_fame`) –
   Gerüstfehler, kein Spielfehler (Notiz für Bahn A: Brett nur auf festen Boden setzen).
+- **23.11. 13:50 UTC: TEXTS-Entscheidungen der Leitung** (`994ad77`): Die Prüfung sah im Zusammenspiel mehrerer Regeln
+  das Gerüst einer bestimmten Buchreihe (Klasse/Rasse auf Etage 3, Kisten nur im sicheren Raum, Boss-Leiter nach
+  Gebiet). Entschieden: Casting-Büro öffnet nach dem ersten Bezirksboss der Saison, Preiskisten öffnen überall nach
+  10 s „Band durchschneiden“ (im Green Room sofort), Boss-Ränge Guest Star / Special Guest / Headliner, Topiary Beast
+  wächst unter den Lampen nach (statt „bewegt sich nur unbeobachtet“), Begriffe vereinheitlicht. Eigener Auftrag
+  ORIGIN1 (`crawl-origin1-a11.js`, Bahn A nach ROOMS1, vor ROOMS1B). Vier Skills ohne Wirkung → BUILDS1B, Alchemie/
+  Basteln → WORKSHOP. ROOMS1B trägt die Golden-Brett-Korrektur.

@@ -718,3 +718,9 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   The Sun Tomb (W2, `crawl-suntomb-c1.js`, Lauf `wf_ee5a9c23-bd5`, Aufgabe `w8j5mtmeh`). `common.txt`: „one of three
   engineers“, ein Build-Lock für drei. `gen2.py` nimmt Bahn `c` (Pfad `/home/user/wt/c`, Zweig `lane-c`).
   Volle Spieltests der Leitung erneut eingereiht (`$SP/lead_couch2.sh`), danach Push der Couch-Änderung.
+- **23.11. 00:40 UTC: Zwischenstand-Jar 9 geliefert** (Stand `899d0c4`, 64,6 MB; Jar 8 entfernt). Couch-Änderung
+  gepusht (`4a05d74`): 444/444 Spieltests erst mit 3 GB Heap für den Testserver (`build.gradle`; mit 2 GB lief er am
+  Ende in OutOfMemory, die Testwelt hält alle Läufe). Produktionsprüfung Server+Client sauber; Ebenen und Probereise
+  laufen (`$SP/jar9_chain.sh`). Vorbereitet: `crawl-rooms1-a10.js` (Spur A, neu erzeugt mit „three engineers“),
+  `crawl-creatures1b-b12.js` (Spur B nach BUILDS1, PRE-Prüfung LEADCOUCH der Couch-Änderung:
+  `delivered_LEADCOUCH.txt`, `lenses_LEADCOUCH.txt`). Nächster Check-in per `send_later` 03:39 UTC.

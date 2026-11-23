@@ -738,3 +738,14 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   Release). Bahn C startet Arcade Zero (W3, `crawl-arcade-c2.js`, Lauf `wf_3648461f-e8a`, Aufgabe `wanv3kq45`);
   `crawl-toychest-c3.js` (W4) liegt bereit. Haupt-Checkout auf `520190b` gezogen: der Aufseher nimmt die 28
   Grab-Zeilen und die Kofferzeile auf.
+- **23.11. 09:10–09:30 UTC:** BUILDS1 abgenommen (`cdc2309`, 16 Funde behoben, 520 Tests; Entscheidungen `19d9725`).
+  Agility 1,5 % Angriffstempo je Punkt (`33924ab`, gemessen `5c23946`: Tiefe 1/5 im Band; die Zweihänder-Lücke in Tiefe
+  9 liegt an der Rüstungskurve und steht im BUILDS1B-Auftrag). Bahn B startete `crawl-creatures1b-b12.js`
+  (LEADCOUCH-Prüfung zuerst: Funde u. a. Abbruch auf der Couch verliert die Floor-Karte, Kollegen-Zeilen kommen als Block).
+- **23.11. ~10:30–13:00 UTC: Wochenlimit erneut** (alle drei Workflows: „weekly limit · resets 1pm (UTC)“), danach
+  Container-Neustart. 13:25 UTC: Aufseher neu, alle drei per `resumeFromRunId` fortgesetzt (A `w8yq6w5u7`,
+  B `ww9uoi8gh`, C `wcrsfw28c`; WIP-Commits lagen in allen Worktrees).
+- **23.11. 13:35 UTC: Zwischenstand-Jar 10 geliefert** (Stand `19d9725`, 66 MB: The Sun Tomb, BUILDS1-Techniken,
+  GOLDENPATH; Jar 9 entfernt). Prüfkette: 524/524 Tests, Produktion sauber, Ebenen 11/11, Probereise 3/3, golden.sh nur
+  „home“ rot: das Hall-of-Fame-Brett sollte bei Pitch 40 aufs Wasser gesetzt werden (Bild `g11_d_hall_of_fame`) –
+  Gerüstfehler, kein Spielfehler (Notiz für Bahn A: Brett nur auf festen Boden setzen).

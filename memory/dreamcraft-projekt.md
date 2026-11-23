@@ -513,6 +513,10 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   `…/files/<Datei>/download` lieferte aber noch 2 Stunden später 404 (vermutlich zwischengespeichert, weil sie während
   der Prüfung abgefragt wurde). Dadurch gingen die Packs erst um 00:52 UTC hoch (Dreamcraft V1.6.4 = 9764254, Server-Pack
   9764260; Challenge-Craft-Modpack v4.4 = 9764262, Server-Pack 9764263).
+- **Freigaben 22./23.11.:** alle vier Mods 22:35–22:42 UTC, Challenge-Craft-Modpack v4.4 00:57 UTC (Server-Pack als
+  Zusatzdatei, `hasServerPack` noch false → Nutzer markiert). **Dreamcraft V1.6.4 (9764254) war um 05:06 UTC, über vier
+  Stunden nach dem Upload, noch nicht freigegeben** und stand in keiner Liste; keine Mail von CurseForge. Bei der
+  nächsten Sitzung zuerst prüfen (Dateiliste); falls abgelehnt, steht der Grund im Autoren-Dashboard des Nutzers.
 - **Testen:** In einer neuen 26.3-Welt fragt Minecraft per „Friends List“-Dialog nach; der blockiert Eingaben, bis
   „Turn OFF“ geklickt ist (bei 1920×1080 etwa (1113,624)). Werkbank-Raster bei GUI-Skala 2: erstes Feld (860,422),
   36 px Abstand, Ergebnis (1046,458), Hotbar-Feld 0 (816,672); Polymorph-Knopf über dem Ergebnis (1047,415).

@@ -767,3 +767,9 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   Freigabe nach der Couch getaktet (ca. 1 Zeile/s, Freischaltungen zusammengefasst, Chat weicht der Etagenkarte) →
   Punkt 7 im UI2A-Auftrag; Spiegel-Test → Bahn C vor The Toy Chest (Skript ergänzt). Bahn B baut CREATURES1B, Bahn A
   ROOMS1 (Golden-Lauf läuft), Bahn C Arcade-Zero-Korrekturen. Platte: alte Bilder (12.–14.11.) gelöscht, 8,8 GB frei.
+- **23.11. 16:33 UTC: Push-Fehler im Archiv.** Ein `git rebase origin/main && git push origin HEAD:main` hat die
+  133 Archiv-Commits dieser Sitzung (seit 12.11. nur auf `claude/determined-edison-xwiksi`) auf `main` gebracht.
+  Inhalt nur additiv: `crawl-of-fame/`, `memory/crawl-of-fame-projekt.md`, zwei Zeilen in `CLAUDE.md`; in der
+  Historie von main liegen damit auch die Jars 6–10 (je ~62 MB). Nutzer informiert und gefragt (behalten oder Revert).
+  **Regel ab jetzt:** Archiv nur auf den Sitzungs-Branch pushen: `git fetch origin claude/determined-edison-xwiksi`,
+  dann `git push origin claude/determined-edison-xwiksi`; nie `rebase origin/main`, nie `HEAD:main`.

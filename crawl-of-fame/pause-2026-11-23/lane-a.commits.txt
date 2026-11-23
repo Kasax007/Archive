@@ -1,0 +1,8 @@
+4dffc99 ROOMS1 review: search rows keep clear of the Gaffer's announced line
+8deca22 ROOMS1 review: search rows pick their place by their own size, toasts keep above them; glints measured from the eyes
+ce5fd8f ROOMS1 review script: face each prop, empty hand
+0d16b92 ROOMS1 review: scripts kill the room's monsters as the player (L1), glints keep off the camera, rig and blast pictures frame the piece
+d27cc49 Golden harness: a hop into the stairwell's curtain that carries the player a moment later is no lost way
+3951e1c ROOMS1 review: readable oil slick, rig pictures from a player's spot, ignite and pose commands, review crawltest script, docs
+dc554b9 ROOMS1 review: steady loot budget measure, offering basket one roll; golden path sets the Hall of Fame board on dry ground
+256c9ab ROOMS1 review: pieces by hand and by a blow, rigs shootable, late keys, crate debris, honest loot budget, place skins, HUD chip steps aside

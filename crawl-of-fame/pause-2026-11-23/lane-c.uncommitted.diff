@@ -1,0 +1,103 @@
+diff --git a/docs/reports/W4.md b/docs/reports/W4.md
+index 59ac8ab..f4bd20c 100644
+--- a/docs/reports/W4.md
++++ b/docs/reports/W4.md
+@@ -1,44 +1,56 @@
+ # W4 – The Toy Chest (place: look, cast, rule Bedtime, content)
+ ## What exists
+-- **Place** `toy_chest` (`data/crawloffame/crawl/places`, depths 1–9, weight 10, 3 green rooms, shop, 2 inhabitant rooms,
+-  3 music rooms, 3 arrival lines); biome `toy_chest` (night-blue sky, violet fog, drifting dust), ambience
+-  `ambient.toy_chest` (a slow music-box pad, clock tick), a music-box sting on a floor's first arrival; advancement
+-  `crawl/toy_chest` ("Past Your Bedtime").
+-- **Look** (`world.block.ToyBlocks`, art `tools/content/world/toychest.py`, `theme.ToyTheme`, `paint.Toy`, `ToyLooks`,
+-  `ToyStages`): ~70 blocks drawn by script. **Three characters, each its faction's home**: the Playroom (walls of giant
+-  wooden blocks with star/moon/ring/triangle reliefs in four colours, rug roads, crayons in four colours, star lamps:
+-  the Regiment), Under the Bed (dark dusty boards, a slat lid low over the rooms with a strip of light at the edge,
+-  lost things, glow stars: the things under the bed), the Dollhouse (wallpaper, wainscot, basket-weave parquet, cornices,
+-  doll lamps, furniture a little too big: the Cuddlies). 12 combat looks (block tower, crossroads, toy town, the castle;
+-  lost and found, the slipper, dust drifts, shoe box; tea party, the bedroom, the parlour, the music room); stages:
+-  the General's top shelf (fort wall, cannon, towers), Old Buttons' bed (quilt, pillows), the Keeper's closet (double
+-  door, the hand lamp's place), the zone's playroom floor (rug-road cross, two railway lines). Stairwells: the chest's
+-  own dark mouth framed in crayons; corridors per character with waymarks. Great lamps over rooms (warm at play time,
+-  blue at bed time). Generation 0.166 ms per chunk.
+-- **Cast** (`mob.ToyMobs`, `ToyAbilities`, `tools/content/mob/toychest.py`, `toychest_anim.py`, 14 plans with painted
+-  skins and clips, voices in `tools/content/audio/toy_sounds.py`): Regiment – Tin Soldier (rank armour, cork volleys on
+-  order), Crank Box (tune, then springs down its marked line, stays open), Nutjaw (bites through a raised shield, orders
+-  the volley), **The General of the Top Shelf** (fort, marble cannon; marbles roll back off the wall onto his side).
+-  Cuddlies – Sock Puppet (gape, snap 4 blocks), Teddy Brute (opens its arms, holds and squeezes, two blows free),
+-  Patchwork (falls into 3 pieces that resew it after 8 s unless all are finished), **Old Buttons** (charges; dizzy with
+-  a thread out; pull it (use) and his seams open: armour off, ×1.5). Under the Bed – Lost Marble (rocks back, rolls
+-  straight), Underreacher (drums, then grabs an ankle from under furniture), Night Light Eater (patch of dark: darkness,
+-  bed things +33 % and ×0.67 damage taken), **Closet Keeper** (its own light/dark hours; in the closet untouchable, in
+-  the dark ×0.25, in the hand lamp's beam ×1.25). Zone boss **Sir Gallopwood** (a rocking-horse knight galloping down
+-  the rug roads after a 22-tick tell; the train knocks him off).
+-- **Rule Bedtime** (`rules.floors.ToyRule`, texts `tools/content/rules/toychest.py`): the hours cycle (play 55 s, dusk 6,
+-  bed 35, dawn 4) on the great lamps and the HUD. Play: toys +20 % speed, things from under the bed tucked away
+-  (unseen, out of reach). Bed: toys sleep frozen (sneak past; a blow on a sleeper ×(1.5+bite), wakes it), the things
+-  under the bed come out. Railway lines in most large rooms: throw the points lever and the engine runs the line,
+-  striking monsters (and bumping crawlers); fort blocks (use) topple onto monsters; music boxes (objectives): winding
+-  turns the hour and holds it 20 s; every box once opens the stairs. Softer at depths 1–2 (bite 0.6/0.8). HUD: hours
+-  strip, boxes, held/bed lines; card line, hints, Emcee lines.
+-- **Content**: uniques Rocking Lance (halberd), Winding Key (charm), Spare Button Eye (ring); Wendell Thimble (toy mender:
+-  "Mending Day", quieten eight Cuddlies) and Posy Larkspur (night-light keeper: "A Quiet Night", a district boss);
+-  8 achievements (Wake-Up Call, Points Taken, Wound Up and Ready, Loose Ends, Shelf Life Expired, Unstuffed, Nothing in
+-  the Closet, Off His Rocker); searchable toy box, biscuit tin, piggy bank, locked jewellery box; voice script lines
+-  (Emcee arrivals, rule, bosses; the network's hours; Wendell, Posy; recordings pending).
+-## Changes against WORLDS.md
+-The railway runs inside rooms (straight lines with a points lever) instead of linking districts and being ridden; the
+-rule is "Bedtime" (not "Lights Out"); renamed for originality: Crank Box, Nutjaw, Underreacher, Closet Keeper, Sir
+-Gallopwood; a music box turns the hour and holds it, and counts once; the Closet Keeper keeps its own hours.
++- **Place** `toy_chest` (depths 1–9, weight 10, 3 green rooms, shop, 2 inhabitant rooms, 3 music rooms, 3 arrival lines);
++  biome (night-blue sky, violet fog, dust), ambience `ambient.toy_chest`, music-box sting on a floor's first arrival,
++  advancement "Past Your Bedtime".
++- **Look** (`world.block.ToyBlocks`, art `tools/content/world/toychest.py`, `ToyTheme`, `paint.Toy`, `ToyLooks`, `ToyStages`):
++  ~70 scripted blocks. Three characters, each its faction's home: the Playroom (giant wooden blocks with reliefs in four
++  colours, rug roads, crayons, star lamps: the Regiment), Under the Bed (dusty boards, a slat lid low over the room, lost
++  things, glow stars: the things under the bed), the Dollhouse (wallpaper, wainscot, parquet, doll lamps, oversized
++  furniture: the Cuddlies). 12 combat looks; stages: the General's top shelf (fort wall, cannon, towers), Old Buttons' bed,
++  the Keeper's closet (double door, hand lamp's place), the zone's playroom floor (rug-road cross, two railway lines).
++  Own stairwell (the chest's dark mouth in crayons), corridors per character with waymarks, great lamps over rooms
++  (warm at play, blue at bed). Generation 0.166 ms per chunk.
++- **Cast** (`mob.ToyMobs`, `ToyAbilities`, `tools/content/mob/toychest.py`, `toychest_anim.py`, 14 painted plans with
++  clips, voices in `audio/toy_sounds.py`): Regiment – Tin Soldier (rank armour, cork volleys), Crank Box (tune, springs
++  down its marked line, stays open), Nutjaw (bites through a shield, orders the volley), **The General of the Top Shelf**
++  (fort, marble cannon; marbles roll back onto his side). Cuddlies – Sock Puppet (snap 4 blocks), Teddy Brute (hug that
++  holds; two blows free), Patchwork (3 pieces resew it after 8 s unless all are finished), **Old Buttons** (charge, dizzy
++  with a thread out: pull it, seams open ×1.5). Under the Bed – Lost Marble (rolls straight), Underreacher (drums, grabs
++  an ankle from under furniture), Night Light Eater (patch of dark: darkness, bed things stronger), **Closet Keeper** (own
++  light/dark hours; untouchable in the closet, ×0.25 in the dark, ×1.25 for 4 s in the hand lamp's beam, either hand).
++  Zone boss **Sir Gallopwood** (rocking-horse knight galloping the rug roads after a tell; the train knocks him off).
++- **Rule Bedtime** (`rules.floors.ToyRule`): hours cycle (play 55 s, dusk 6, bed 35, dawn 4) on the lamps and the HUD.
++  Play: toys +20 % speed, things under the bed tucked away. Bed: toys sleep frozen (sneak past; a blow on a sleeper
++  ×(1.5+bite) wakes it), the things under the bed come out. Railway lines in most large rooms: throw the points and the
++  engine runs its line, striking monsters; fort blocks topple onto monsters; music boxes: winding turns the hour and holds
++  it 20 s, every box once opens the stairs. Softer at depths 1–2. HUD: hours strip, boxes (with held/asleep prefix).
++- **Content**: uniques Rocking Lance, Winding Key, Spare Button Eye; Wendell Thimble ("Mending Day", eight Cuddlies) and
++  Posy Larkspur ("A Quiet Night", a district boss); 8 achievements; searchable toy box, biscuit tin, piggy bank, locked
++  jewellery box; voice script lines (Emcee arrivals, rule, bosses; the network's hours; Wendell, Posy).
++- **Against WORLDS.md**: rule named "Bedtime"; the railway runs inside rooms (not linking districts, not ridden); renamed
++  for originality: Crank Box, Nutjaw, Underreacher, Closet Keeper, Sir Gallopwood; a box turns and holds the hour.
++## Commands and checks
++```
++/crawl season set <d> toy_chest; /crawl toy hour play|bed | train | wind | pose 0|1
++python3 tools/content/mob/fit_check.py   # now also the toy chest (Sir Gallopwood 3.2 x 3.8, Night Light Eater 0.9 x 2.5)
++tools/dev/gametest.sh   # GT_TOTAL; ToyGameTests 35 (layouts x20 per size, pieces at 4 depths, stairwell, light incl.
++   # corridors, 14 kinds, each ability, rule over relog/restart, arena reset, 4 boss fights, stairs, seasons, wing x20)
++tools/crawltest/run.sh tools/crawltest/scripts/{tour,lineup,clips,card,play}_w4.txt <out>; listen_w4 with CT_AUDIO=1
++```
++**Balance** (`balance.sh "1@toy_chest:5:dungeon:<boss>,..."`, dungeon gear; damage taken of max health):
++| depth (level) | rooms | The General | Old Buttons | Closet Keeper (lamp) |
++| --- | --- | --- | --- | --- |
++| 1 (5) | 0–34 % | 151 % | 197 % | 97 % (without the lamp: timed out) |
++| 5 (22) | 0–16 % | 101 % | 118 % | 79 % |
++| 9 (38) | 0–25 % | 151 % | 186 % (one death) | 45 % |
++**Load** (`load.sh 4 5@toy_chest`): mean 2.35 ms per tick, median 1.75, p95 4.88, p99 12.06.
++## Shared changes
++mob `Ability` (+15), `Kind.Shot.CORK`, `CrawlMonster` (toy state hooks), `Abilities`, `Kinds`, `MobModule`, `Blows`; world
++`WorldModule`, `Themes`, `CombatLooks`, `Shell`, `CrackedWallBlock`; client `PlanModel`, `MobClient`, `Ambience`; rules
++`RulesModule`, `Floor1Rule`; setpiece `Kind`, `SearchBlock`, `SetpieceBlocks`, `PropSets`, `PiecePlacement`; `Uniques`,
++`People`; content scripts; gametest `BalanceSim` (the Keeper fought with the lamp), fabric.mod.json; `fit_check.py`.
++## Open points
++- Recordings of the new voice lines pending (the voice job). LISTEN_RESULT
++- Boss title cards at 480x270 not seen in `card_w4` (boss bars and floor card are; as W1–W3).
++- Old Buttons and the General at 150–200 % at depth 1: hand-play wanted. Pictures: /home/user/shots/W4.

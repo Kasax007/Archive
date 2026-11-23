@@ -1,0 +1,128 @@
+diff --git a/docs/reports/CREATURES1B.md b/docs/reports/CREATURES1B.md
+index 308a04c..beb23d2 100644
+--- a/docs/reports/CREATURES1B.md
++++ b/docs/reports/CREATURES1B.md
+@@ -7,22 +7,25 @@
+   (`understage_anim.py`: idle with a habit, walk and run with strides that hold the floor, an attack in three beats,
+   every ability it uses, hurt, stun, a death of its own, spawn; the bosses title, enrage, act2/act3 and held poses).
+   Merged into `cast.KINDS`, `cast_art.PAINTERS`, `anim.PLAN_CLIPS` (`anim._more()`); Java: `PlanModel.PLANS`.
+-- **Heavy blows** (`mob.Blows`, `mob_blows.py`): Rat King (sceptre, 12 ticks, radius 0.9, weight 2.0) and Grandmother
++- **Heavy blows** (`mob.Blows`, `mob_blows.py`): Rat King (sceptre, 12 ticks, radius 0.9, weight 2.2 since the review) and Grandmother
+   Lint (cane, 12 ticks, radius 0.9, weight 2.0). Light kinds land at their contact (3 ticks): gnawer, bunny,
+   understudy, heckler.
+ - **Deaths** (`mob.Deaths`): all six die their own death with particles and sounds at the clip's moments; both bosses
+   are scenes (loot, XP and gates after them) in which the arena reacts (below).
+-- **Frozen while watched**: `pose.frozen` names every part; the head stops following the crawler (`Animator`).
++- **Frozen while watched**: `pose.frozen` names every part; it snaps in and breaks the grab off; the head stays where the
++  server holds it (review F7-F9).
+ 
+ ## How each kind's idea reads now
+ 
+ - **Cable Gnawer** (a charged bite): a heavy singed rat chewing a cable with a glowing plug; before the bite the crest
+   stands and the plug swings round; it dies jerking in its own current (sparks, smoke), feet up.
+-- **Dust Bunny** (hit it, get two): a puff with two-jointed ears trailing its hops; it dies by pinching in two.
++- **Dust Bunny** (hit it, get two): a puff with two-jointed ears trailing its hops; it dies by pinching in two, and the
++  two halves pop out of it at the pop (small, springing up to size); a half dies a small death of its own (squashed, a puff).
+ - **Understudy** (freezes when watched): a lanky hopeful with a number card, creeping on tiptoe, hands up; watched, it
+   snaps into a star pose and holds it, eyes and all; it overplays its death and ends in a bow nobody applauds.
+-- **Heckler** (front row, brought produce): a stout punter in a loud check with a bag of tomatoes; boos, thumbs down,
+-  munches; the tomato is wound up behind his head before it flies, a new one comes out of the bag.
++- **Heckler** (front row, brought produce): a pear of a punter in a loud check and a bobble hat, belly first, a tomato
++  ready at his shoulder and the bag of tomatoes held out; boos, thumbs down, munches; the tomato is wound up behind his
++  head and leaves his hand at the release (the server throws it then), a new one comes out of the bag.
+ - **The Rat King of Row Z**: a fat rat sitting up in a velvet cape and gilt crown with a chair-leg sceptre. Title:
+   points the sceptre at the floor (bow!), raps it, opens his arms. Summons by banging the sceptre three times, charges
+   on all fours, shakes fleas out of the cape (cloud). Act two: a whirl of the cape, then hunched and sly; act three:
+@@ -39,7 +42,7 @@
+ 
+ - `old_new.png`, `silhouettes.png` (the six), `silhouettes_understage.png` (all twelve as black shapes at ten blocks),
+   `textures.png`; per kind `<kind>_front.png` and a sheet of every clip; `strips/` a picture per tick of every clip.
+-- `anim_tour_1b.txt` (from `gen_anim_tour.py --set 1b`): 31 checks pass. `lineup_1b.txt`: the Understage cast on a
++- `anim_tour_1b.txt` (from `gen_anim_tour.py --set 1b`): 38 checks pass (review). `lineup_1b.txt`: the Understage cast on a
+   plain stage at ten blocks, close and walking (`lineup_ten_full.png`). `anim_fight_1b.txt` (survival, 960x540, GUI 2):
+   the pack, the understudy frozen while watched, both bosses' wind-ups and deaths (`fight/`); 2 checks pass.
+ - Cost: forty of the new kinds 50.0 -> 50.1 ms per tick with its frame (none vs. forty walking), `animalloc` 0 bytes.
+@@ -57,4 +60,82 @@ hit, `Abilities.dash`); the season then plays to the end; open there: the wing's
+ 
+ - Not done (too large for one pass at this quality): Prop Storage and the Backlot (13 kinds each), the people (biped
+   plan still; only the Gaffer has clips) and the summoned helpers. Pattern: a place file of plans/painters, one of clips.
+-- Rat King below the band at level 6 (before and after this part); in-game understudy strips show its star pose.
++- Settled in the review below: the Rat King is in the band at levels 4 and 6; the understudy's strips are filmed by a
++  spectator. Left to their lane: loops of Arcade Zero and the Sun Tomb that `anim.loop` warns about (F2).
++
++## Review
++
++Twelve findings of the reviewers and the build's four open points, each settled with a test written against the code
++as it was (`CreaturesReviewGameTests`: all but the charge fail on the commit before these fixes, the charge on
++ef61de1^; `tools/dev/animcheck.sh`: all four checks fail on the old animator) or with pictures
++(`/home/user/shots/CREATURES1B`: `review/`, `fight/`, `strips/`, `sw/`). Commits: eceeac9 (server: releases, the split, the watched grab, crumbs; the game tests), dd60cd5 (animator: the frozen
++pose, the head, deaths of another kind; animcheck), 2c2b41d (clips and art: loops, the thumb, the heckler, elites),
++30b5655 (the Rat King's blow), f2feb01 and db9f518 (proof scripts, `sstrip`).
++
++- **F1 the bunny's copies before its pinch** (motion, wrong): fixed (eceeac9, db9f518). A kind that splits in its death clip splits at
++  the clip's pop (`Deaths.splitTick`: the last tick of the death), the halves start small with their spawn clip and hop
++  apart, one to each side, out of a small puff. Test `dustBunnySplitsAtItsPop`; pictures `fight/fight1b_bunny_split_*`
++  (the pinch, then the halves), `strips/dust_bunny_death.png`.
++- **F2 loops with too few keys** (motion, rough): fixed (2c2b41d) at the cause: `anim.loop` compares its keys with the poses
++  half-way between and refuses keys that flatten a wave (strict for the Understage's plans, a warning elsewhere). It found
++  the four named and four more of part 1a: the stage rat's jaw, the lurker's fangs, the Gaffer's point and thumb, the
++  Rat King's jaw in his rage and act three. All now have enough keys and move (`ratking idle whiskers` three key values
++  instead of one zero, the understudy's hands and forearms, the bunny's tuft and its stun squash). Proof: the build
++  (`python3 tools/content/mob/anim.py`), `sw/*_idle.png`. Arcade Zero and the Sun Tomb have loops it warns about
++  (glitch, hitbox, fan, masher, cursor, scarab, disc): left to their lane.
++- **F3 heckler like the rat wrangler** (motion, wrong): fixed (2c2b41d). A pear of a man: short legs, a belly wider than his
++  shoulders, a bobble hat with a pompom instead of the flat cap, a tomato ready at his shoulder (idle) and the bag held
++  out. Overlap as black shapes, aligned at the feet (`render.py`, three-quarter view): heckler/rat wrangler 0.73 -> 0.60
++  at rest, 0.61 in his idle; from the side about 0.5 before and after; his nearest is now the prompter at 0.64 (others
++  among the humanoids 0.69, the reviewer's figure for the next pair). Pictures
++  `silhouettes_understage_review.png`, `lineup_ten.png`, `heckler.png`.
++- **F4 the thumb's whole turn inside the clip** (motion, rough): fixed (2c2b41d); the thumb comes back up the way it went (largest
++  step at 60 fps 11 deg, was 327 deg), and the build refuses a key that turns a part back by a whole turn inside a clip.
++- **F5 proof pictures** (motion, rough): fixed (f2feb01, db9f518). `sw/` holds the software strips of every clip of the six kinds (103);
++  the tour films the understudy from a spectator (who does not count as watching) so its walk, run, habits, attack,
++  stun and spawn are its own, then its real frozen pose when the camera becomes a crawler (`strips/understudy_*`); the
++  fight script shows both bosses from the crawler's eyes in the open middle of a cleared room: the wind-up, the step out
++  of the mark, the whole death scene. Deaths are strips on the server's clock (`sstrip`: the server frozen and stepped
++  between pictures), so no body vanishes in the middle of its scene. Looked at frame by frame.
++- **F6 the tomato and the helpers before the gesture** (breaks, wrong): fixed (eceeac9). What comes out of a gesture comes at its
++  clip's contact (`Blows.RELEASE`, `mob_blows.py RELEASE`): the heckler's and Grandmother Lint's throws at 8 ticks, the
++  Rat King's rats on the third bang (17), Grandmother Lint's grandchildren on her call (14), and the same for part 1a's
++  wrangler (15) and Eternal Understudy (17); a daze in between breaks it, no blow starts over it. Tests
++  `tomatoFliesAtTheThrowsRelease`, `dazeBreaksAThrowBeforeItsRelease`, `ratsComeOnTheThirdBang`,
++  `clipsCoverReleasesAndElites` (clip contact = server release).
++- **F7 frozen mid-grab finishes the grab** (breaks, wrong): fixed (eceeac9, dd60cd5) on both sides: watched, the server breaks the grab and
++  ends its motion; the client snaps into the frozen pose in 0.12 s and drops the action. Test
++  `watchedUnderstudyDropsItsGrab`; animcheck `frozen breaks the grab` (star pose 0.17 s after freezing, was 0.67 s);
++  picture `fight/fight1b_understudy_freeze_*`.
++- **F8 head snap and star pose at a death or stun** (breaks, rough): fixed (dd60cd5); the frozen pose yields to a stun and to the
++  death, and the head is drawn with the look's weight. animcheck `frozen yields to the death` (largest head step 3.4
++  deg per frame, was 28; forearm_l follows the death, was 71 deg off); picture `strips/understudy_death.png` (killed
++  while watched).
++- **F9 stale head angle on a second client** (breaks, rough): fixed (dd60cd5) at the cause: nothing of the head is kept on the
++  client any more. The server holds a frozen monster's head (no AI step), so every client draws the synced head turn.
++  animcheck `frozen head shows the server's turn` (-14.0 deg as the server says, was 35.0).
++- **F10 elite gnawer shows nothing** (breaks, wrong): fixed (2c2b41d, dd60cd5). The cable gnawer and the heckler have the cast, charge,
++  leap, rage and the held rage, shield and dash; the golem got its cast and shield, the wrangler, lurker and prompter
++  their missing held poses; a rage without a clip falls back to the cast. Test `clipsCoverReleasesAndElites` (every
++  elite-capable kind of the Understage shows every elite ability and holds its three poses); strips
++  `strips/cable_gnawer_*`, `strips/heckler_*`, `sw/`.
++- **F11 halves die the split death** (breaks, rough): fixed (eceeac9, dd60cd5, 2c2b41d) together with F1; a split half dies its own small death
++  (`death.half`, sent as `Motion.DEATH`), nothing comes out of it. Test `dustBunnySplitsAtItsPop` (second half),
++  animcheck `a split half dies its own death`.
++- **F12 the Rat King's crumbs hang** (breaks, rough): fixed (eceeac9): the crumbs are falling dust (gravity, then a slow drift
++  down), of a bread and a biscuit colour; the Eternal Understudy's confetti had the same cause and falls now too.
++  Picture `fight/fight1b_rat_king_death_*` (camera tilted up).
++
++Open points of the build:
++
++- **(a) the charge's crash**: fixed before (ef61de1), now with a test (eceeac9): `chargeBrokenByItsOwnHitKeepsTheServerUp` (the Rat King charges into a crawler in
++  the sabre's stance; the riposte kills him and his death scene breaks the charge in the middle of the dash's hit). On
++  ef61de1^ it fails with the NullPointerException on `chargeDir`; it passes now.
++- **(b) the Rat King in the boss band**: done (30b5655). Depth 1, dungeon gear, the routine that does not dodge. Before (blow weight
++  2.0, three fights each): level 4 196-235 %, mean 221 %; level 6 138-178 %, mean 159 % (the build's single fights: 190 %
++  and 108 %). After (weight 2.2, eight fights each): level 4 161-288 %, mean 224 %; level 6 96-203 %, mean 163 %. Both
++  means are inside 150-250 %; the wind-up is unchanged (12 ticks, readable, can be stepped out of). Single fights vary
++  with the arena's tier (the boss's level): the low ones are tier 0-1 arenas, the high one at level 4 a tier 2.
++- **(c) the understudy's strips from the game**: taken from a spectator camera (F5) and looked at: it creeps on tiptoe,
++  bows, mouths its lines, pats its card; watched, it snaps into the star pose in two pictures.
++- **(d) golden.sh**: GOLDEN.

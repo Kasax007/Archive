@@ -1,0 +1,13 @@
+d81e844 Toy Chest: the boxes' count stays on the HUD line while the hour is held or the toys sleep
+f5b3efb Toy Chest: /kill reaches a hidden Keeper and tucked things
+f2178ad Toy Chest: the hand lamp shines from either hand and lights the Keeper for 4 s, the Keeper hides shorter; balance sim fights it with the lamp
+f4278d4 Toy Chest: a running train keeps its level by key, not the level itself
+aa8adfd Toy Chest: Sir Gallopwood and the Night Light Eater fit their boxes (fit_check covers the toy chest)
+393c12d Toy Chest: operator commands for pictures (wind, pose), crawltest scripts (line-up, clips, cards, play, listen)
+0bb0f40 Toy Chest: voice script lines (Emcee arrivals, rule, bosses; network hours; Wendell and Posy), test fixes, brighter glow stars
+246293b Toy Chest: world fixes (crayon colours, lamps), HUD total 0, game tests
+2bf2b3d W4 wip: uniques, Wendell and Posy with quests, achievements, searchable toys, pieces
+8e5e12d W4 wip: Bedtime rule (hours, lamps, music boxes, railway, fort blocks), texts, cues
+43c7fde W4 wip: toy chest sounds, cork, hand lamp, client plans
+dd5d0c6 W4 wip: Toy Chest cast (plans, paint, clips, kinds, abilities)
+39f2fd1 W4 wip: Toy Chest kit, theme, painters, looks, stages, place, biome

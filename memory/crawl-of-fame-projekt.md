@@ -813,3 +813,15 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   veröffentlicht, `publish.sh` behält ihn) bis ein neuer alle Prüfungen besteht, sonst kommt er zurück. Markieren nur
   mit `PAUSE` im work-Ordner. 47 Zeilen markiert (ohne die Markennamen Brrrisk/Smoulderby); der Supervisor nimmt sie
   auf, bei den Check-ins veröffentlichen. Platte: `/tmp/rvplace` und Roh-Takes gelöscht → 8,8 GB frei.
+- **23.11. 23:15 UTC: PAUSE auf Wunsch des Nutzers** („bei der nächsten Möglichkeit pausieren, bis ich wieder das Go
+  gebe“). Erst auf das Ende der laufenden Schritte gewartet (bis 23:14 hingen alle drei in langen Prüfläufen), dann
+  alle drei Workflows gestoppt: A ROOMS1-FIX (8 Commits nur auf `lane-a`), B CREATURES1B-FIX (Fixes bis `db9f518`
+  gepusht, `f780ddd` + Bericht nur lokal), C Toy-Chest-BUILD (13 Commits nur auf `lane-c`, Endkontrolle offen).
+  Alles nur Lokale als Git-Bundles und Diffs in `crawl-of-fame/pause-2026-11-23/` (README dort: wie man fortsetzt,
+  auch nach Container-Reset), Workflow-Journale dabei. Stimmen: 16 Retakes veröffentlicht (`3f8a90f`), 31 noch
+  markiert, Supervisor mit `PAUSE` angehalten; Sprecher-Referenzen und `state.json` gesichert in
+  `crawl-of-fame/voice-pipeline/work-backup-2026-11-23/` (lagen bisher nur im Scratchpad!). Check-in-Trigger aus.
+  Plan-Notiz `9db1409`. **Beim Go:** README im Pause-Ordner befolgen, `PAUSE` löschen, Trigger wieder an.
+- Lehre: Ein Agent im Abschluss eines Schritts kann noch Stunden brauchen (Golden-Läufe und volle Spieltests teilen
+  sich den Build-Lock). Für eine Pause „beim nächsten guten Moment“ lieber nach ~30 min hart stoppen und sichern.
+  Spur B nutzte `git stash` (gemeinsamer Stash aller Worktrees): in künftigen Aufträgen verbieten.

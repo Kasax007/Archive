@@ -106,7 +106,7 @@ const preFindings = preReviews.filter(x => x.result).flatMap(x => x.result.findi
 let preFixed = null
 if (preFindings.length) {
   phase('Fix ' + PRE.id)
-  preFixed = await agent(PRE.fix.replace('__FINDINGS__', JSON.stringify(preFindings, null, 1)), { label: PRE.id + ' fixes', phase: 'Fix ' + PRE.id, model: 'opus', effort: 'high', schema: FIXED })
+  preFixed = await agent(PRE.fix.replace('__FINDINGS__', JSON.stringify(preFindings, null, 1)).replace('__OPEN__', ''), { label: PRE.id + ' fixes', phase: 'Fix ' + PRE.id, model: 'opus', effort: 'high', schema: FIXED })
   log(`${PRE.id} fixes: ${preFixed && preFixed.done ? 'done' : 'NOT done'}`)
 }
 
@@ -114,7 +114,7 @@ if (preFindings.length) {
 s += '''phase('Build')
 const built = await agent(BUILD, { label: %s, phase: 'Build', model: 'opus', effort: 'high', schema: REPORT })
 log(`build: ${built && built.done ? 'done' : 'NOT done'}`)
-if (!built || !built.done) return { built, pre: typeof preFindings === 'undefined' ? null : { findings: preFindings, fixed: preFixed } }
+if (!built) return { built, pre: typeof preFindings === 'undefined' ? null : { findings: preFindings, fixed: preFixed } }
 
 phase('Review')
 const reviews = []
@@ -126,10 +126,11 @@ for (const lens of LENSES) {
   log(`review ${lens.key}: ${r ? r.findings.length + ' findings' : 'no result'}`)
 }
 const findings = reviews.filter(x => x.result).flatMap(x => x.result.findings.map(f => ({ lens: x.lens, ...f })))
-if (!findings.length) return { built, reviews, fixed: null, pre: typeof preFindings === 'undefined' ? null : { findings: preFindings, fixed: preFixed } }
+if (!findings.length && built.done) return { built, reviews, fixed: null, pre: typeof preFindings === 'undefined' ? null : { findings: preFindings, fixed: preFixed } }
 
 phase('Fix')
-const fixed = await agent(FIX.replace('__FINDINGS__', JSON.stringify(findings, null, 1)), { label: %s, phase: 'Fix', model: 'opus', effort: 'high', schema: FIXED })
+const openNote = built.done ? '' : "THE BUILD'S OPEN POINTS (the engineer did not count the build done; settle each like a finding, with a line in the Review section: finish it, or say exactly why it cannot be done in this task): " + built.open_points + "\\n\\n"
+const fixed = await agent(FIX.replace('__FINDINGS__', JSON.stringify(findings, null, 1)).replace('__OPEN__', openNote), { label: %s, phase: 'Fix', model: 'opus', effort: 'high', schema: FIXED })
 log(`fixes: ${fixed && fixed.done ? 'done' : 'NOT done'}`)
 return { built, findings, fixed, pre: typeof preFindings === 'undefined' ? null : { findings: preFindings, fixed: preFixed } }
 ''' % (json.dumps(tid + ' build'), json.dumps(tid + ' fixes'))

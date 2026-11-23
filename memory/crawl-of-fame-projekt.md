@@ -793,3 +793,7 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   Strips der Understudy ohne Hinsehen. Rest aufgeteilt: CREATURES1C (Prop Storage), 1D (Backlot), 1E (Personen und
   Helfer); CREATURES2/3 später je ein Ort pro Aufgabe (ein Bau schafft etwa sechs Arten mit Beweisen).
   BROADCAST1/2 zu Bahn A nach WORKSHOP. Eigener Fund: Rudel zeigt zehn gestapelte Namensschilder → Punkt 8 in UI2A.
+- `gen2.py`/`fix2.txt` geändert (23.11. 19:15): ein nicht fertig gemeldeter Bau wird trotzdem geprüft
+  (`if (!built) return`), und die offenen Punkte des Baus gehen als `__OPEN__` in den FIX-Auftrag; ohne Funde läuft
+  FIX trotzdem, wenn der Bau nicht fertig war. Bereits erzeugte Skripte (ORIGIN1, Toy Chest) gleich gepatcht, UI2A neu
+  erzeugt (`crawl-ui2a-b13.js`).

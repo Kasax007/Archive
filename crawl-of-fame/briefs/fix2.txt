@@ -5,7 +5,7 @@ WHERE: the worktree __WT__ (git branch __BRANCH__). Start with: cd __WT__ && git
 THE FINDINGS (JSON; "lens" names the reviewer):
 __FINDINGS__
 
-FOR EACH FINDING
+__OPEN__FOR EACH FINDING
 1. Reproduce it: where a game test can show it, write the failing test first; where only a picture can, take it. If it does not reproduce, it is refuted: keep the evidence (the test that passes, the code that shows why).
 2. Fix it at its cause, not at its symptom, and keep the test. If two findings share a cause, fix the cause once.
 3. If a fix would change what the owner asked for or needs a decision (a design question, a trade-off), do not guess: leave it open and say exactly what has to be decided.

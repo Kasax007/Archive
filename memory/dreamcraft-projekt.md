@@ -508,6 +508,11 @@ TikTok. Plan und Haken: `dreamcraft/PLAN.md`.
   Beautify-Seil/Beach-Craft-Seil, Macaw's-Brückenpfeiler/DoT-Schmiedeeisenzaun, Macaw's-Japanische-Fichtentür/DoT-
   Papiertür, zwei Tech-Reborn-UU-Rezepte, BetterEnd-Neon-Kaktus-Stufen/-Treppen, BetterNether-Stalagnate-Stamm.
   Polymorph+ löst sie im Pack; für die eigenen Mods lieber eindeutige Rezepte.
+- **Freigabe prüfen NUR über die Dateiliste** (`…/api/v1/mods/<Projekt>/files?…sort=dateCreated&sortDescending=true`,
+  `status` 4 = freigegeben). Am 22.11. waren alle sechs Mod-Dateien nach 4–6 Minuten freigegeben, die Download-Adresse
+  `…/files/<Datei>/download` lieferte aber noch 2 Stunden später 404 (vermutlich zwischengespeichert, weil sie während
+  der Prüfung abgefragt wurde). Dadurch gingen die Packs erst um 00:52 UTC hoch (Dreamcraft V1.6.4 = 9764254, Server-Pack
+  9764260; Challenge-Craft-Modpack v4.4 = 9764262, Server-Pack 9764263).
 - **Testen:** In einer neuen 26.3-Welt fragt Minecraft per „Friends List“-Dialog nach; der blockiert Eingaben, bis
   „Turn OFF“ geklickt ist (bei 1920×1080 etwa (1113,624)). Werkbank-Raster bei GUI-Skala 2: erstes Feld (860,422),
   36 px Abstand, Ergebnis (1046,458), Hotbar-Feld 0 (816,672); Polymorph-Knopf über dem Ergebnis (1047,415).

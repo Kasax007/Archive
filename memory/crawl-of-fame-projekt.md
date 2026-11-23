@@ -797,3 +797,10 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   (`if (!built) return`), und die offenen Punkte des Baus gehen als `__OPEN__` in den FIX-Auftrag; ohne Funde läuft
   FIX trotzdem, wenn der Bau nicht fertig war. Bereits erzeugte Skripte (ORIGIN1, Toy Chest) gleich gepatcht, UI2A neu
   erzeugt (`crawl-ui2a-b13.js`).
+- **23.11. 19:00 UTC: Arcade Zero (W3) fertig.** 14 Funde behoben (u. a. Kill Screen über seiner Hitbox, Attract Mode
+  wie ein bekanntes Jump'n'Run-Level → eigene Abendlandschaft, Bonusrunden-Farm, Motherboard-Kondensatoren als
+  Beschwörungen), 8 neue Tests, 590 Spieltests. Entscheidungen der Leitung im Bericht W3.md (`4399095`): beschworene
+  Monster zählen für keine Tötungsquest (Toy-Chest-Auftrag, eigener Commit), Balance-Streuung erst im Balance-Durchgang,
+  Kill-Screen-Pfeil von allen Seiten lesbar und Bild von Player One → erster Schritt von Far Lantern, Rezept-Toasts des
+  Spiels im Lauf weg → UI2A Punkt 9 (Skript neu erzeugt). Bahn C baut seit 19:05 The Toy Chest (`wgnuqatxg`,
+  `wf_c303beb1-2a0`). Jar 11 kommt, sobald ROOMS1 geprüft ist.

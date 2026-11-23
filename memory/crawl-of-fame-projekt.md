@@ -773,7 +773,7 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   Historie von main liegen damit auch die Jars 6–10 (je ~62 MB). Nutzer informiert und gefragt (behalten oder Revert).
   **Regel ab jetzt:** Archiv nur auf den Sitzungs-Branch pushen: `git fetch origin claude/determined-edison-xwiksi`,
   dann `git push origin claude/determined-edison-xwiksi`; nie `rebase origin/main`, nie `HEAD:main`.
-- **23.11. 18:40 UTC: ROOMS1 gebaut, Prüfungen laufen.** Bahn A lieferte ROOMS1 (`cec20d7`: Requisiten zum
+- **23.11. 18:25 UTC: ROOMS1 gebaut, Prüfungen laufen.** Bahn A lieferte ROOMS1 (`cec20d7`: Requisiten zum
   Durchsuchen in jedem Raum, Tresore mit Schlüssel, Fallen aus der Kulisse, Set-Kills, Fertigkeit Stagecraft), meldete
   aber `done: false` (volle Tests nicht neu, golden.sh nur Teil „path“ mit 5 Fehlern bei Treppenvorhängen/Hall of
   Fame). Der Workflow brach deshalb vor den Prüfungen ab. Lösung: im Skript `if (!built) return` statt
@@ -786,14 +786,14 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   `publish.sh` (55 neu/geändert, 6 entfernt), eine Sprechanweisung zitierte noch „choose wisely“ (build.py-Fehler,
   dadurch Index veraltet, 23 Fehler im Audio-Check) → korrigiert, `f76abdb`. Regel: vor `publish.sh` den
   Haupt-Checkout vorspulen; danach `build.py` und `check.py` lesen, nicht nur die letzte Zeile.
-- **23.11. 19:00 UTC: CREATURES1B nur zum Teil.** Bahn B schaffte in einem Bau die sechs restlichen Understage-Arten
+- **23.11. 18:30 UTC: CREATURES1B nur zum Teil.** Bahn B schaffte in einem Bau die sechs restlichen Understage-Arten
   (`348449a`; Understage jetzt komplett mit 13 Arten; Absturz in `Abilities.dash` gefunden und behoben), nicht Prop
   Storage, Backlot, Personen, Helfer. Gleiches Vorgehen wie ROOMS1: Prüfungen für den gelieferten Teil fortgesetzt
   (`wdzjm5a81`), FIX mit Testpflicht für den Dash-Absturz, Rat King in die Boss-Spanne (Entscheidung der Leitung),
   Strips der Understudy ohne Hinsehen. Rest aufgeteilt: CREATURES1C (Prop Storage), 1D (Backlot), 1E (Personen und
   Helfer); CREATURES2/3 später je ein Ort pro Aufgabe (ein Bau schafft etwa sechs Arten mit Beweisen).
   BROADCAST1/2 zu Bahn A nach WORKSHOP. Eigener Fund: Rudel zeigt zehn gestapelte Namensschilder → Punkt 8 in UI2A.
-- `gen2.py`/`fix2.txt` geändert (23.11. 19:15): ein nicht fertig gemeldeter Bau wird trotzdem geprüft
+- `gen2.py`/`fix2.txt` geändert (23.11. 18:35): ein nicht fertig gemeldeter Bau wird trotzdem geprüft
   (`if (!built) return`), und die offenen Punkte des Baus gehen als `__OPEN__` in den FIX-Auftrag; ohne Funde läuft
   FIX trotzdem, wenn der Bau nicht fertig war. Bereits erzeugte Skripte (ORIGIN1, Toy Chest) gleich gepatcht, UI2A neu
   erzeugt (`crawl-ui2a-b13.js`).

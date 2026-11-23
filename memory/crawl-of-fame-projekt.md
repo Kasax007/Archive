@@ -804,3 +804,12 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   Kill-Screen-Pfeil von allen Seiten lesbar und Bild von Player One → erster Schritt von Far Lantern, Rezept-Toasts des
   Spiels im Lauf weg → UI2A Punkt 9 (Skript neu erzeugt). Bahn C baut seit 19:05 The Toy Chest (`wgnuqatxg`,
   `wf_c303beb1-2a0`). Jar 11 kommt, sobald ROOMS1 geprüft ist.
+- **23.11. 20:35–21:00 (Check-in): Stimmen.** 49 Aufnahmen veröffentlicht (`133bcad`), alle 1046 Zeilen haben Ton.
+  Eigener Fund: die Sprachsynthese verschluckt manchmal den Anfang eines Ausrufs („Prop Storage“ → „Crop Storage“,
+  „Patch note“ → „Hatch note“ in 10 Zeilen, „Lights, camera“ → „It's camera“). Der Schnitt ist es nicht (30 ms Vorlauf,
+  2 ms Einblendung). Neu (`6497e51`): `synth.opening_ok` prüft die ersten Wörter einzeln (Laute davor, „The/A/Our“
+  und ein stummes h zählen nicht), der Erkenner hört 0,4 s Stille vor jedem Clip, `synth.py --openings` listet
+  Treffer, `synth.py --retake <keys>` markiert fertige Zeilen für neue Takes: der alte Take bleibt (auch
+  veröffentlicht, `publish.sh` behält ihn) bis ein neuer alle Prüfungen besteht, sonst kommt er zurück. Markieren nur
+  mit `PAUSE` im work-Ordner. 47 Zeilen markiert (ohne die Markennamen Brrrisk/Smoulderby); der Supervisor nimmt sie
+  auf, bei den Check-ins veröffentlichen. Platte: `/tmp/rvplace` und Roh-Takes gelöscht → 8,8 GB frei.

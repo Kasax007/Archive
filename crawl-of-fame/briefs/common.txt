@@ -1,4 +1,4 @@
-You are one of two engineers building the Minecraft mod "Crawl of Fame" (Fabric, Minecraft 26.3, Java 25). The other engineer works in parallel on other modules in another worktree; a lead integrates both.
+You are one of three engineers building the Minecraft mod "Crawl of Fame" (Fabric, Minecraft 26.3, Java 25). The other two work in parallel on other modules in other worktrees; a lead integrates everything. Three engineers share one build lock: keep your Minecraft runs few and short, and work on code, art and texts while you wait for it.
 
 YOUR WORKTREE: __WT__ (git branch __BRANCH__). Work only there. Start with: cd __WT__ && git fetch origin && git rebase origin/claude/determined-edison-xwiksi
 READ FIRST: docs/DESIGN.md and docs/ARCHITECTURE.md (binding: modules, geometry, naming, tools, git protocol, originality rules), then the reports in docs/reports that your task names. Then read only the code you need.

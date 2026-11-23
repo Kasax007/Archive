@@ -707,3 +707,14 @@ das Schwierigste. Effizient arbeiten (Wochenlimit).
   Interview-Start; (b) Minecraft-eigene Toasts/Chatzeilen der Mod-Fortschritte aus (`stagedoor.py` erst mit den
   Lang-Texten nach THEMES1 abgeglichen, sonst hätte es Texte zurückgedreht; Manor-Datei von Hand). Lehre:
   Generator-Skripte vor dem Laufenlassen gegen den aktuellen Stand prüfen und `git diff` danach lesen.
+- **15.11. 09:50 – 23.11. 00:00 UTC: Wochenlimit.** Beide Workflows brachen ab („weekly limit“: Bahn A im Fix-Schritt
+  von GOLDENPATH mit WIP `ba955d9` + 13 offenen Dateien, Bahn B im BUILDS1-Bau mit WIP-Commits). Volle Spieltests der
+  Leitung (Couch-Warteschlange) liefen noch: 441/443, rot nur `confetti_fires` und `ghost_only_shows_in_lamp_light`
+  (ohne Bezug zur Änderung, liefen vorher grün: wackelig unter Last). Container neu gestartet (Nr. 6, 7).
+- **23.11. 00:00 UTC: Der Nutzer erlaubt bis zu 3 Subagenten („Continue all development and use up to 3 subagents“).**
+  Aufseher neu gestartet; Bahn A (`crawl-golden-a9.js`, Fix-Auftrag um „FIRST, CHECK FOR EARLIER WORK“ ergänzt) und
+  Bahn B (`crawl-builds1-b11.js`) per `resumeFromRunId` fortgesetzt (Aufgaben `w1o23dw27`, `w4k2ls5y3`). **Bahn C neu:**
+  Worktree `/home/user/wt/c` (vorher `wt/lead`, Zweig `lane-c`), baut die neuen Orte aus `docs/WORLDS.md`, zuerst
+  The Sun Tomb (W2, `crawl-suntomb-c1.js`, Lauf `wf_ee5a9c23-bd5`, Aufgabe `w8j5mtmeh`). `common.txt`: „one of three
+  engineers“, ein Build-Lock für drei. `gen2.py` nimmt Bahn `c` (Pfad `/home/user/wt/c`, Zweig `lane-c`).
+  Volle Spieltests der Leitung erneut eingereiht (`$SP/lead_couch2.sh`), danach Push der Couch-Änderung.

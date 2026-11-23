@@ -13,3 +13,5 @@ DELIVER
 Keep what works: part 1's mechanics and numbers, loot value per room (gadgets come out of the same budget: say how), the looks' Spots and walkways.
 
 ACCEPTANCE: tools/dev/jc.sh passes; tools/dev/gametest.sh passes (all tests of all modules); pictures exist and were looked at; no error or warning from the mod in the logs; tools/dev/check_names.py passes; python3 tools/content/audio/check.py --quiet ends with OK; tools/dev/prod.sh passes; tools/dev/golden.sh passes if it exists.
+
+ALSO (a small find of the lead in the golden path, 23.11.): at home the path sets the Hall of Fame board down with the use key at pitch 40; when the crawler comes home facing the sea the crosshair hits water and the board is not placed ('the board stands' fails, picture g11_d_hall_of_fame of /tmp/golden). Let the path turn to solid ground before it places the board (face a solid block, or look for one within reach), and keep golden.sh green twice in a row.
